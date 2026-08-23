@@ -1,0 +1,18 @@
+# Normalize text files in the repository across Windows, macOS, and Linux.
+* text=auto
+
+# Keep binary assets out of text normalization.
+*.ipynb binary
+*.csv text
+*.json text
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary
+*.ppt binary
+*.pptx binary

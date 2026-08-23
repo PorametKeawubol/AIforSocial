@@ -1,0 +1,293 @@
+เริ่มต้น Medium แรกของเรา “แกะรอยData” ด้วยการแชร์วิธีทำ Web Scraping โดยใช้ Python และ Selenium ที่จะทำให้เราได้ข้อมูลจำนวนมหาศาลในโลกอินเทอร์เน็ตได้อย่างง่ายดายและรวดเร็ว ช่วยลดระยะเวลาและลดค่าใช้จ่ายในการจ้างคนมานั่ง Copy&Paste ข้อมูลที่เราต้องการกันครับ
+
+<อ้าว…วนลูปเข้าไป!!! ดึงๆๆๆๆ>
+
+Press enter or click to view image in full size
+
+Selenium คืออะไร??
+Selenium คือ ชุดเครื่องมือที่ใช้สำหรับการทดสอบเว็บไซต์ โดยเราจะสร้าง Browser จำลองขึ้นมาแล้วทำการควบคุมให้คลิกนู้นนี้นั้นแบบอัตโนมัติ , ควบคุมปรับเปลี่ยนตัวเลือกหรือใส่ค่าต่างๆที่จำเป็นแบบอัตโนมัติ รวมถึงสามารถแก้ไข Code HTML บางส่วนให้เป็นไปตามที่เราต้องการเพื่อทดสอบการแสดงผลของเว็บไซต์
+
+<อ่ะๆ… เริ่มเห็นไอเดียในการได้มาซึ่งข้อมูลรึยังนะ?>
+
+** ก่อนจะเข้าหัวข้อถัดไป ผมขอ Assume ว่าทุกท่านที่อ่านบทความนี้อยู่มีพื้นฐานการเขียน Python และพื้นฐานความเข้าใจ Code HTML อยู่ในระดับหนึ่งนะครับ ซึ่งถ้าอยากให้เพิ่มเติมตรงไหนก็สามารถ Comment บอกได้ครับ
+
+เริ่มต้น!! เตรียมอาวุธ… ดังนี้
+1. Python ***
+
+ลงผ่าน Anaconda : https://www.anaconda.com
+2. Selenium module และ Web driver (ตัวจำลอง Browser) **
+
+ศึกษาการใช้งาน Selenium ได้ที่ : https://selenium-python.readthedocs.io/
+โดยเราจะลง Selenium module ผ่าน Anaconda prompt ง่ายๆด้วย การพิมพ์
+pip install selenium
+Web driver ในบทความนี้เราจะใข้ ChromeDriver ในการควบคุมเว็บไซต์ ดาวน์โหลดได้ที่ : https://chromedriver.chromium.org/downloads
+โดยเราจะดาวน์โหลดเวอร์ชั่นเดียวกับ Chrome ที่ติดตั้งอยู่บนเครื่องเรา
+เข้าเช็คเวอร์ขั่น Chrome ที่เมนู Help > About Google Chrome
+Press enter or click to view image in full size
+
+3. หน้า Webpage ที่ต้องการดึงข้อมูล *
+
+ในที่นี้ผมจะใช้เว็บยอดฮิตในการฝึกดึงอย่าง IMDb : https://www.imdb.com/
+Press enter or click to view image in full size
+
+ปุจฉา : อยากได้ข้อมูลอะไรจาก Webpage นี้?
+ขึ้นอยู่กับคำถามในใจเราว่าเราอยากรู้อะไรบ้างเนาะ
+
+1. สมมติ เราอยากค้นหาหนังใหม่ๆในเรื่องที่เรายังไม่เคยดู ที่ได้คะแนน Rating สูงๆ
+
+เราจะดึงรายชื่อหนัง,คะแนน Rating และวันที่หนังออกฉาย
+2. สมมติ เราชื่นชอบนักแสดงหรือผู้กำกับบางคน อยากรู้เขาหนังใหม่ๆ Rating สูงๆ เขาได้แสดงเรื่องไหน หรือ กำกับเรื่องไหนอีกบ้าง แล้วเราพลาดไป
+
+เราจะดึงรายชื่อนักแสดงและผู้กำกับของหนังแต่เรื่องมาเพิ่มเติม
+3. สมมติ เราดันมีแนวเฉพาะๆที่เราชื่นชอบอีก เราชื่นชอบแค่แนวอาชญากรรม
+
+เราจะดึงประเภทหนังและโครงเรื่องของหนังแต่ละเรื่องมา
+4. บลาๆๆๆๆๆๆ
+
+มาเริ่มต้นกันเลย….!
+Import module ที่จำเป็น เราจะใช้ Method ที่ชื่อว่า Webdriver ใน selenium module เพื่อจำลอง Chrome มาเพื่อควบคุมเว็บไซต์และดึงข้อมูล จากนั้นจะใช้ pandas module เพื่อจัดการข้อมูลให้อยู่ในรูปแบบที่ต้องการ และใช้ os module ในการเซ็ต Directory (folder) ที่จะให้ระบบจัดเก็บงาน
+#Import modules
+from selenium import webdriver
+import pandas as pd
+import os
+2. Set directory(folder) ที่จะให้ระบบจัดเก็บข้อมูลที่ดึงมาซึ่งควรเป็น folder เดียวกับที่เราดาวน์โหลด ChromeWebdriver มาใส่ไว้ เพื่อให้ระบบรัน Chrome จำลองและจัดเก็บงานได้ในที่เดียว ป้องกันความสับสนในการสับเปลี่ยน directory
+
+Press enter or click to view image in full size
+
+#Set directory
+path = 'C:/Medium_selenium/' #กำหนด folder ที่จะให้ระบบทำงาน
+os.chdir(path) #รัน Code เพื่อสั่งให้ระบบทำงานบน folder ที่ต้องการ
+3. จำลอง Chrome ที่ต้องใช้ในการควบคุมออกมา และสั่งให้ไปยังเว็บไซต์ที่ต้องการ
+
+#Open webdriver 
+driver = webdriver.Chrome(path+"chromedriver.exe")
+driver.get('https://www.imdb.com/chart/top?sort=us,desc&mode=simple&page=1')
+Press enter or click to view image in full size
+
+4. เราจะดึงชื่อหนัง และ คะแนน Rating เราจะต้องรู้ก่อนว่า Location มันอยู่ตรงไหนของเว็บไซต์ เราจะกด F12 หรือ Ctrl+Shift+i เพื่อดู Code HTML จากนั้นกด Ctrl+F เพื่อค้นหาคีย์เวิร์ดที่เราต้องการเพื่อดูตำแหน่งบนเว็บไซต์ ในที่นี้ผมจะค้นหาคำว่า Joker เพื่อดูว่าชื่อหนังบนเว็บไซต์นี้เก็บไว้ที่ตำแหน่งไหน
+
+Press enter or click to view image in full size
+
+4.1 จากในภาพ จะพบว่าอยู่ใน <td class = ‘titleColumn’> ซึ่ง Selenium จะมี Method ในการช่วยในการดึงข้อมูลมากมาย ไม่ว่าจะให้ Chrome จำลองค้นหาจากตำแหน่งของ class , id , name แต่ผมนิยมใช้ xpath เนื่องจากลงในเฉพาะเจาะจงที่สุด ศึกษาเพิ่มเติมได้ที่ https://selenium-python.readthedocs.io/locating-elements.html เนื่องจากบทความนี้สำหรับ Beginner ดังนั้นเราจะดึงชื่อหนังออกมา โดยใช้ class เพื่อความสะดวกจะสามารถเขียน Code ได้ง่ายๆได้ดังนี้
+
+#Get location of movie names
+movienames = driver.find_elements_by_class_name('titleColumn')
+หากเราดูค่าที่เก็บไว้ในตัวแปร movienames จะพบว่าเก็บเป็น list ของตำแหน่งที่ Selenium ไปพบ หากจะแปลงเป็นข้อความ จะต้องดึงมาทีละค่า ต่อด้วย.text เพื่อเก็บข้อความ ดังนั้นเราจะใช้การวนลูปมาเพื่อเก็บชื่อหนังไว้ใน Movienames
+
+#Get movie names
+Movienames=[name.text for name in movienames]
+4.2 เราทำเหมือนเดิม ค้นหาว่า Rating บนเว็บไซต์นี้เก็บไว้ที่ตำแหน่งไหน จากในภาพด้านล่างจะพบว่าอยู่ใน <td class = ‘ratingColumn.imdbRating’>
+
+Press enter or click to view image in full size
+
+จะเห็นว่าลักษณะการได้มาซึ่งข้อมูลเหมือนเดิมผมจึงขออนุญาติรวบรับ Code ดังนี้
+
+#Get ratings
+ratings = driver.find_elements_by_class_name('ratingColumn.imdbRating')
+Ratings=[rating.text for rating in ratings]
+5. ข้อมูลที่เราได้มาจะถูกจัดเก็บเป็นรายการ (list) อยู่ในตัวแปร MovieNames และ Ratings เราสามารถรวบตัวแปรทั้งสองตัวให้อยู่ในตัวแปรเดียวในลักษณะหน้าตา Excel ที่เราคุ้นเคยผ่านการทำ Dataframe โดยใช้ pandas module ได้ดังนี้ครับ
+
+#Convert to table (DataFrame) ตั้งชื่อ Columns ว่า MovieNames และ Ratings
+DF_IMDb=pd.DataFrame({'MovieNames':Movienames , 'Ratings':Ratings})
+6. จากนั้นทดลองนำไฟล์ออกมาเป็น Excel เพื่อดูข้อมูล ด้วย Code ด้านล่าง
+
+#Export to Excel
+DF_IMDb.to_excel('DF_IMDb_Data.xlsx')
+Press enter or click to view image in full size
+
+7. ต่อไปเราอยากเก็บรายชื่อนักแสดงและบทบาทของแต่ละคน หากทำด้วยวิธีปกติ เราจะต้องเข้าไปทีละ link เพื่อ Copy และ Paste ออกมา เราก็ใช้วิธีเดียวกันเนี้ยละครับ แต่สั่งให้ระบบทำแทน
+
+Press enter or click to view image in full size
+
+7.1 เราต้องเก็บ link ในหนังแต่ละเรื่องออกมาก่อน เราก็ทำเหมือนเดิม หาตำแหน่งบนเว็บไซต์ที่เก็บที่อยู่ link
+
+Press enter or click to view image in full size
+
+จากภาพจะอยู่ที่ <td class= ‘titleColumn’> ในส่วน <a href = ‘…..’> ซึ่งโชคร้ายที่ทาง Selenium ไม่มีตัวช่วยพิเศษในการดึง link มาให้เหมือน class name เราจะใช้ xpath ในการกำหนดตำแหน่งให้ระบบดังนี้
+
+#Get location of links
+links=driver.find_elements_by_xpath("//td[@class='titleColumn']/a")
+จากนั้นจะใช้ method .get_attribute('href') ในการเก็บ link ออกมา ดังนี้
+
+#Get links
+Links = [link.get_attribute('href') for link in links]
+นำ link ที่ได้มาไปเก็บบน DataFrame กันลืมก่อนเนาะ
+
+DF_IMDb['Links']=Links
+7.2 หลังจากเราได้ link มาแล้ว เมื่อเข้าไปทีละลิ้งค์เราจะดึงอะไรออกมาได้บ้าง
+
+ชื่อผู้กำกับ (Director)
+รายชื่อนักแสดงและบทบาทที่แสดง (Cast)
+โครงเรื่อง (Storyline) และประเภทหนัง (Genres)
+ระยะเวลาของหนัง (Runtime)
+วันที่หนังฉาย (Release Date)
+รายได้รวมทั่วโลก ณ.ปัจจุบัน (Cumulative Worldwide Gross)
+ดึงมาให้หมดดดดดดด!!! อ้าวเริ่ม! ทำวนไป หาตำแหน่งและดึง text ออกมา!
+
+Get แกะรอยData’s stories in your inbox
+Join Medium for free to get updates from this writer.
+
+Enter your email
+Subscribe
+
+Remember me for faster sign in
+
+8. เราจะทดสอบการดึงเพียง 1 หน้าก่อนจะวนลูปดึงทุกหน้า เพื่อทดสอบ Code ให้มั่นใจก่อนสั่งการให้ระบบดึงทุกหน้า
+
+#Open first links
+driver.get(Links[0])
+#Get Director
+director = driver.find_element_by_xpath("//div[@class='credit_summary_item']/a").text
+#Get casts (ActorNames,CharactorNames)
+casts = driver.find_elements_by_xpath("//table[@class='cast_list']/tbody/tr")
+Actornames =[cast.text.split('...')[0] for cast in casts if str(cast.text.find('...')).isnumeric()]
+Characternames =[cast.text.split('...')[1] for cast in casts if str(cast.text.find('...')).isnumeric()]
+#Get storyline
+storyline = driver.find_element_by_xpath("//div[@class='inline canwrap']/p/span").text
+genres = driver.find_elements_by_xpath("//div[@id='titleStoryLine']/div[@class='see-more inline canwrap']")[1].text
+genres2 =  genres[genres.find(" ")+1:]
+Detail = driver.find_element_by_id("titleDetails").text
+#Get releasedate
+releasedate=Detail[Detail.find("Release Date:")+14:]
+releasedate2=releasedate[0:releasedate.find("See more")-1]
+#Get worldwidegross
+worldwidegross=Detail[Detail.find("Cumulative Worldwide Gross:")+28:]
+worldwidegross2=worldwidegross[0:worldwidegross.find("\n")]
+#Get runtime
+runtime=Detail[Detail.find("Runtime:")+9:]
+runtime2=runtime[0:runtime.find("min")-1]
+จาก Code ด้านบนจะเห็นว่าจะมี .find_elements_by_xpath() จะเห็นว่า element มีเติม ‘s’ หมายถึงดึง element ทุกตัวที่ถูกกำหนดโดย xpath ที่ตั้งค่าไว้ สำหรับ .find_element_by_xpath() ที่ไม่ได้เติม ‘s’ จะดึงเฉพาะตัวแรกที่เจอครับ
+
+9. เมื่อทดสอบสำหรับ link แรกผ่านแล้วเราจะทำการวนลูปเพื่อเข้าทุก link ดึงค่าออกมาตามที่กำหนดและเก็บค่าแต่ละเว็บไปเรื่อยๆ ดัง Code ด้านล่าง
+
+#Set List to keep data in each link
+Director=[]
+ActorNames =[]
+CharacterNames =[]
+Storyline=[]
+Runtime=[]
+Genres=[]
+Releasedate=[]
+Budget=[]
+Worldwidegross=[]
+#Loop Links
+for link in range(0,len(Links)):
+    driver.get(Links[link])
+    #Get Director
+    director = driver.find_element_by_xpath("//div[@class='credit_summary_item']/a").text
+    #Get casts (ActorNames,CharactorNames)
+    casts = driver.find_elements_by_xpath("//table[@class='cast_list']/tbody/tr")
+    Actornames =[cast.text.split('...')[0] for cast in casts if str(cast.text.find('...')).isnumeric()]
+    Characternames =[cast.text.split('...')[1] for cast in casts if str(cast.text.find('...')).isnumeric()]
+    #Get storyline
+    storyline = driver.find_element_by_xpath("//div[@class='inline canwrap']/p/span").text
+    genres = driver.find_elements_by_xpath("//div[@id='titleStoryLine']/div[@class='see-more inline canwrap']")[1].text
+    genres2 =  genres[genres.find(" ")+1:]
+    Detail = driver.find_element_by_id("titleDetails").text
+    #Get releasedate
+    releasedate=Detail[Detail.find("Release Date:")+14:]
+    releasedate2=releasedate[0:releasedate.find("See more")-1]
+    #Get worldwidegross
+    worldwidegross=Detail[Detail.find("Cumulative Worldwide Gross:")+28:]
+    worldwidegross2=worldwidegross[0:worldwidegross.find("\n")]
+    #Get runtime
+    runtime=Detail[Detail.find("Runtime:")+9:]
+    runtime2=runtime[0:runtime.find("min")-1]
+    #Collect data in each website 
+    Director.append(director)
+    ActorNames.append(Actornames)
+    CharacterNames.append(Characternames)
+    Storyline.append(storyline)
+    Runtime.append(runtime2)
+    Genres.append(genres2)
+    Releasedate.append(releasedate)
+    Worldwidegross.append(worldwidegross2)
+10. จัดการเก็บข้อมูลทั้งหมดลง DataFrame และ Export ออกมาเป็นไฟล์ Excel อย่างสวยงามเพื่อนำไปวิเคราะห์ต่อ
+
+#Collect all data to New DataFrame
+DF_IMDb2=pd.DataFrame({'Director':Director,'ActorNames':ActorNames,'CharacterNames':CharacterNames,'Storyline':Storyline,'Runtime':Runtime,'Genres':Genres,'Releasedate':Releasedate,'Worldwidegross':Worldwidegross})
+#Concatenate 2 DataFrame
+DF_IMDb=pd.concat([DF_IMDb, DF_IMDb2], axis=1)
+#Export to excel file
+DF_IMDb.to_excel('DF_IMDb_Data.xlsx')
+11. ส่องดูสิ ได้ข้อมูลออกมาครบไหมน้าาา?
+
+Press enter or click to view image in full size
+
+12. ข้อเสนอแนะ : ทุกท่านสามารถนำเอาวิธีการนี้ไปใช้ประโยชน์เพื่อดึงข้อมูลในแต่ละเว็บไซต์ที่แต่ละท่านมองว่าเป็นประโยชน์ต่อองค์กรต่อไปได้ อาทิเช่น ราคาสินค้าจากเว็บไซต์เปรียบเทียบราคาสินค้า , สาขาของบริษัทคู่ค้าที่แสดงบนหน้าเว็บไซต์ , รายละเอียดร้านอาหารบนเว็บไซต์รวบรวมร้านอาหาร , หัวข้อกระทู้และคอมเมนต์บนเว็บไซต์ที่เป็นบอร์ดแสดงความคิดเห็น เป็นต้น
+
+หวังว่าบทความนี้ จะช่วยนักทำข้อมูลทุกท่านมีวิธี Collect ข้อมูลได้อย่างหลากหลายช่องทางมากขึ้น เพราะบนโลกอินเทอร์เน็ตมีข้อมูลที่รอให้ทุกคนแกะรอย นำมาสร้างมูลค่าอยู่อีกมากมาย
+
+#บทความหน้า… เราจะมาแชร์วิธีดึงข้อมูลสำหรับเว็บไซต์ที่จะต้องเลือกตัวเลือก Dropdown และ ต้องใส่ค่าบางอย่างในเว็บไซต์ก่อน ถึงจะแสดงผลข้อมูล แล้วเราจะทำและวนลูปยังไงให้ได้ข้อมูล? เช่น ในเว็บไซต์เปรียบเทียบราคารถยนต์จะต้องเลือกยี่ห้อรถยนต์ , รุ่นรถยนต์ , ช่วงของราคารถยนต์ เราจะให้ระบบเลือกอัตโนมัติได้ยังไง…? พบกันที่บทความหน้าครับในระดับ <immediate> ครับ
+
+วันนี้… แกะรอยData ขอตัวไปปั่นงานก่อนครับ เจอกันใหม่บทความหน้า สวัสดีครับ…
+
+13. ผมขออนุญาติ รวบ Code ให้ตรงนี้นะครับ เพื่อความสะดวกในการคัดลอก
+
+#Import modules
+from selenium import webdriver
+import pandas as pd
+import os
+#Set directory
+path = 'C:/Medium_selenium/' #กำหนด folder ที่จะให้ระบบทำงาน
+os.chdir(path) #รัน Code เพื่อสั่งให้ระบบทำงานบน folder ที่ต้องการ
+#Open webdriver 
+driver = webdriver.Chrome(path+"chromedriver.exe")
+driver.get('https://www.imdb.com/chart/top?sort=us,desc&mode=simple&page=1')
+#Get MovieNames
+movienames=driver.find_elements_by_class_name('titleColumn')
+Movienames=[name.text for name in movienames] 
+#Get Ratings
+ratings = driver.find_elements_by_class_name('ratingColumn.imdbRating')
+Ratings=[rating.text for rating in ratings]
+DF_IMDb=pd.DataFrame({'MovieNames':Movienames , 'Ratings':Ratings})
+#Get links
+links=driver.find_elements_by_xpath("//td[@class='titleColumn']/a")
+Links = [link.get_attribute('href') for link in links]
+DF_IMDb['Links']=Links
+#Set List to keep data in each link
+Director=[]
+ActorNames =[]
+CharacterNames =[]
+Storyline=[]
+Runtime=[]
+Genres=[]
+Releasedate=[]
+Budget=[]
+Worldwidegross=[]
+#Loop Links
+for link in range(0,len(Links)):
+    driver.get(Links[link])
+    #Get Director
+    director = driver.find_element_by_xpath("//div[@class='credit_summary_item']/a").text
+    #Get casts (ActorNames,CharactorNames)
+    casts = driver.find_elements_by_xpath("//table[@class='cast_list']/tbody/tr")
+    Actornames =[cast.text.split('...')[0] for cast in casts if str(cast.text.find('...')).isnumeric()]
+    Characternames =[cast.text.split('...')[1] for cast in casts if str(cast.text.find('...')).isnumeric()]
+    #Get storyline
+    storyline = driver.find_element_by_xpath("//div[@class='inline canwrap']/p/span").text
+    genres = driver.find_elements_by_xpath("//div[@id='titleStoryLine']/div[@class='see-more inline canwrap']")[1].text
+    genres2 =  genres[genres.find(" ")+1:]
+    Detail = driver.find_element_by_id("titleDetails").text
+    #Get releasedate
+    releasedate=Detail[Detail.find("Release Date:")+14:]
+    releasedate2=releasedate[0:releasedate.find("See more")-1]
+    #Get worldwidegross
+    worldwidegross=Detail[Detail.find("Cumulative Worldwide Gross:")+28:]
+    worldwidegross2=worldwidegross[0:worldwidegross.find("\n")]
+    #Get runtime
+    runtime=Detail[Detail.find("Runtime:")+9:]
+    runtime2=runtime[0:runtime.find("min")-1]    
+    Director.append(director)
+    ActorNames.append(Actornames)
+    CharacterNames.append(Characternames)
+    Storyline.append(storyline)
+    Runtime.append(runtime2)
+    Genres.append(genres2)
+    Releasedate.append(releasedate)
+    Worldwidegross.append(worldwidegross2)
+#Collect all data and Export to excel
+DF_IMDb2=pd.DataFrame({'Director':Director,'ActorNames':ActorNames,'CharacterNames':CharacterNames,'Storyline':Storyline,'Runtime':Runtime,'Genres':Genres,'Releasedate':Releasedate,'Worldwidegross':Worldwidegross})
+DF_IMDb=pd.concat([DF_IMDb, DF_IMDb2], axis=1)
+DF_IMDb.to_excel('DF_IMDb_Data.xlsx')
+Writed_by = {‘Benz’ : ‘Marketing actuary , Data analyst and Strategy planner in somewhere which is in insurance industry’}

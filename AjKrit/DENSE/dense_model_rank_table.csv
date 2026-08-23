@@ -1,0 +1,4 @@
+﻿Query,Ground_Truth,E5-Small,E5-Large,BGE-M3,MPNet-Multi
+Q1,Doc 1,1,1,1,1
+Q2,Doc 3,1,1,1,1
+Q3,Doc 2,1,1,1,1

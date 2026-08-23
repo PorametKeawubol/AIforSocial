@@ -1,0 +1,15 @@
+ใบงานฝึกปฏิบัติ: การพัฒนาระบบค้นคืนข้อมูลภาษาไทยด้วย BM25 และ Hybrid RAG
+วัตถุประสงค์
+
+ปฏิบัติการตัดคำภาษาไทย (PyThaiNLP) เพื่อนำไปประมวลผลกับ Lexical Search
+
+เปรียบเทียบประสิทธิภาพการค้นหาข้อมูลระหว่าง TF-IDF และ BM25
+
+ประยุกต์ใช้ Reciprocal Rank Fusion (RRF) รวมคะแนน Lexical และ Semantic Search สำหรับงาน Thai RAG
+
+instruction_org,instruction,answer,__index_level_0__
+สตูดิโออัลบั้มแรกของโอเอซิสคืออัลบั้มใด,โอเอซิสเริ่มต้นในปีอะไร?,Definitely Maybe,2106,    Score  BM25/DENSE/RRF 
+
+Thai_Hybrid_Search_Blueprint.pdf Thai_Hybrid_Search_Blueprint.pdf17 August 2026, 1:02 PM
+thai_qa_paraphrase_15.csv thai_qa_paraphrase_15.csv17 August 2026, 2:50 PM
+thai_qa_utf8.json thai_qa_utf8.json

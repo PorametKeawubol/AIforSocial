@@ -1,0 +1,5 @@
+﻿Model,Model_Name,Top1_Correct,Total_Queries,Top1_Accuracy,Load_Time_sec,Document_Encode_sec,Avg_Query_Time_ms,Embedding_Dimension
+E5-Small,intfloat/multilingual-e5-small,3,3,1.0,9.835896399978083,0.06771920004393905,20.830466664241005,384
+E5-Large,intfloat/multilingual-e5-large,3,3,1.0,9.218442099983804,0.6399450000026263,179.6445666695945,1024
+BGE-M3,BAAI/bge-m3,3,3,1.0,437.56877920002444,1.2541844000224955,115.6292666758721,1024
+MPNet-Multi,sentence-transformers/paraphrase-multilingual-mpnet-base-v2,3,3,1.0,671.5225314999698,0.12762019998626783,34.40899999501804,768

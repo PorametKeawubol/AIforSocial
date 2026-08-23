@@ -1,16 +1,111 @@
-.hf_cache/
-env_*/
-*.log
-*.venv
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.code-workspace
 
-# Python generated files
+# Logs and runtime files
+*.log
+*.pid
+*.seed
+*.stackdump
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account*.json
+
+# Python generated files and virtual environments
 __pycache__/
 *.py[cod]
-
-# Virtual environments
+*$py.class
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
 .venv/
 .venv-*/
 venv/
+env/
+env_*/
+ENV/
 
-# Local model artifacts
+# JavaScript dependencies and build caches
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+.yarn/
+.pnpm-store/
+.next/
+.nuxt/
+.svelte-kit/
+coverage/
+
+# Notebook and ML caches/artifacts
+.ipynb_checkpoints/
+.hf_cache/
+.cache/
+wandb/
+mlruns/
+checkpoints/
+models/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.npy
+*.npz
+
+# Local vector databases and generated search indexes
+chroma_db/
+chroma_db_*/
+chroma_db*/
+*.sqlite
+*.sqlite3
+*.faiss
+*.index
+
+# Generated data and scratch output
+results/
+output/
+# Large local dataset copies; document how to obtain them instead of committing.
+thai_qa_utf8.json
+*.tmp
+*.bak
+*.swp
+*~
+~$*
+
+# Personal documents and large binary submissions
+*6610[0-9][0-9][0-9][0-9]*
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.exe
+
+# Project-specific local model artifact
 W1D2/bert_rocm_model/

@@ -1,0 +1,13 @@
+﻿Model,Model_Name,Query,Query_Type,Query_Text,Ground_Truth,Top1_Doc,Top1_Score,GT_Rank,GT_Score,Correct_Top1,Query_Time_ms,Embedding_Dimension
+E5-Small,intfloat/multilingual-e5-small,Q1,Synonym/Context,ลูกน้อยเสียวฟันเวลาทานของเย็นทำยังไงดี,Doc 1,Doc 1,0.8792749643325806,1,0.8792749643325806,True,22.008200001437217,384
+E5-Small,intfloat/multilingual-e5-small,Q2,Exact Code Match,รหัสเบิกประกันอุดฟัน D-9902,Doc 3,Doc 3,0.9119375944137573,1,0.9119375944137573,True,20.273100002668798,384
+E5-Small,intfloat/multilingual-e5-small,Q3,Hybrid Keyword & Intent,ยาลดปวด Ibuprofen กินแก้ปวดซี่ฟันได้ไหม,Doc 2,Doc 2,0.8903899192810059,1,0.8903899192810059,True,20.210099988617003,384
+E5-Large,intfloat/multilingual-e5-large,Q1,Synonym/Context,ลูกน้อยเสียวฟันเวลาทานของเย็นทำยังไงดี,Doc 1,Doc 1,0.8735800981521606,1,0.8735800981521606,True,180.14620000030845,1024
+E5-Large,intfloat/multilingual-e5-large,Q2,Exact Code Match,รหัสเบิกประกันอุดฟัน D-9902,Doc 3,Doc 3,0.9131288528442383,1,0.9131288528442383,True,185.75940001755953,1024
+E5-Large,intfloat/multilingual-e5-large,Q3,Hybrid Keyword & Intent,ยาลดปวด Ibuprofen กินแก้ปวดซี่ฟันได้ไหม,Doc 2,Doc 2,0.8809027671813965,1,0.8809027671813965,True,173.0280999909155,1024
+BGE-M3,BAAI/bge-m3,Q1,Synonym/Context,ลูกน้อยเสียวฟันเวลาทานของเย็นทำยังไงดี,Doc 1,Doc 1,0.7104423642158508,1,0.7104423642158508,True,111.96460004430264,1024
+BGE-M3,BAAI/bge-m3,Q2,Exact Code Match,รหัสเบิกประกันอุดฟัน D-9902,Doc 3,Doc 3,0.7618050575256348,1,0.7618050575256348,True,103.77379995770752,1024
+BGE-M3,BAAI/bge-m3,Q3,Hybrid Keyword & Intent,ยาลดปวด Ibuprofen กินแก้ปวดซี่ฟันได้ไหม,Doc 2,Doc 2,0.7590930461883545,1,0.7590930461883545,True,131.14940002560616,1024
+MPNet-Multi,sentence-transformers/paraphrase-multilingual-mpnet-base-v2,Q1,Synonym/Context,ลูกน้อยเสียวฟันเวลาทานของเย็นทำยังไงดี,Doc 1,Doc 1,0.6113376617431641,1,0.6113376617431641,True,33.80910004489124,768
+MPNet-Multi,sentence-transformers/paraphrase-multilingual-mpnet-base-v2,Q2,Exact Code Match,รหัสเบิกประกันอุดฟัน D-9902,Doc 3,Doc 3,0.8703004121780396,1,0.8703004121780396,True,32.71639999002218,768
+MPNet-Multi,sentence-transformers/paraphrase-multilingual-mpnet-base-v2,Q3,Hybrid Keyword & Intent,ยาลดปวด Ibuprofen กินแก้ปวดซี่ฟันได้ไหม,Doc 2,Doc 2,0.8032627105712891,1,0.8032627105712891,True,36.701499950140715,768
