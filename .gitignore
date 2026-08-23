@@ -88,8 +88,6 @@ chroma_db*/
 # Generated data and scratch output
 results/
 output/
-# Large local dataset copies; document how to obtain them instead of committing.
-thai_qa_utf8.json
 *.tmp
 *.bak
 *.swp
