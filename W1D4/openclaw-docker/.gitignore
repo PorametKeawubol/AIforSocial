@@ -1,0 +1,5 @@
+.env
+state/
+workspace/
+openclaw-src/
+ollama-local/

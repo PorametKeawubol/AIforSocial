@@ -1,0 +1,16 @@
+# Secrets and local runtime state
+.env
+.venv/
+.tools/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Generated scraper/browser output
+artifacts/
+data/*.npz
+data/*.html
+data/*.log
+*.log

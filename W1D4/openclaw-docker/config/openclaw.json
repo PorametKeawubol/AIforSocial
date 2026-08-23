@@ -1,0 +1,114 @@
+{
+  "gateway": {
+    "mode": "local",
+    "bind": "lan",
+    "auth": {
+      "mode": "token",
+      "token": "${OPENCLAW_GATEWAY_TOKEN}"
+    },
+    "controlUi": {
+      "allowedOrigins": [
+        "http://localhost:18789",
+        "http://127.0.0.1:18789"
+      ]
+    }
+  },
+  "models": {
+    "providers": {
+      "ollama": {
+        "api": "ollama",
+        "baseUrl": "http://host.docker.internal:11434",
+        "apiKey": "ollama-local",
+        "timeoutSeconds": 600,
+        "models": [
+          {
+            "id": "qwen3:8b",
+            "name": "qwen3:8b",
+            "input": [
+              "text"
+            ],
+            "compat": {
+              "supportsTools": true
+            },
+            "contextWindow": 14336,
+            "maxTokens": 1024,
+            "params": {
+              "num_ctx": 14336,
+              "keep_alive": "10m"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "workspace": "/home/node/.openclaw/workspace",
+      "model": {
+        "primary": "ollama/qwen3:8b"
+      },
+      "pdfModel": {
+        "primary": "ollama/qwen3:8b"
+      },
+      "timeoutSeconds": 600,
+      "userTimezone": "Asia/Bangkok",
+      "compaction": {
+        "reserveTokens": 4096,
+        "keepRecentTokens": 4096,
+        "reserveTokensFloor": 0,
+        "maxHistoryShare": 0.8,
+        "midTurnPrecheck": {
+          "enabled": false
+        },
+        "memoryFlush": {
+          "enabled": false
+        },
+        "postIndexSync": "off",
+        "notifyUser": false
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "identity": {
+          "name": "PSU Research Assistant",
+          "theme": "ช่วยอ่านและสรุปงานวิจัยเป็นรายงาน Markdown ภาษาไทย เมื่อได้รับข้อความตรงจาก Telegram หรือ CLI ให้ตอบกลับเป็นข้อความที่มองเห็นได้เสมอ ห้ามตอบ NO_REPLY เว้นแต่ผู้ใช้สั่งให้เงียบโดยตรง"
+        },
+        "tools": {
+          "allow": [
+            "read",
+            "write",
+            "exec"
+          ],
+          "deny": []
+        }
+      }
+    ]
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "botToken": "${TELEGRAM_BOT_TOKEN}",
+      "dmPolicy": "pairing",
+      "groupPolicy": "allowlist",
+      "groups": {
+        "*": {
+          "requireMention": true
+        }
+      }
+    }
+  },
+  "tools": {
+    "profile": "coding",
+    "exec": {
+      "node": "docker-node"
+    }
+  },
+  "messages": {
+    "visibleReplies": "automatic",
+    "groupChat": {
+      "visibleReplies": "message_tool",
+      "unmentionedInbound": "room_event"
+    }
+  }
+}

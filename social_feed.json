@@ -1,0 +1,20 @@
+[
+  {
+    "post_id": "P001",
+    "author": { "username": "@ai_expert", "verified": true },
+    "content": { "text": "Deep Learning is amazing! #AI #ML", "language": "en" },
+    "metrics": {
+      "engagement": { "likes": 1200, "comments": 85 },
+      "shares": 45
+    }
+  },
+  {
+    "post_id": "P002",
+    "author": { "username": "@data_sci", "verified": false },
+    "content": { "text": "Parsing messy data takes 80% of the time. #DataScience", "language": "en" },
+    "metrics": {
+      "engagement": { "likes": 450, "comments": 12 },
+      "shares": 8
+    }
+  }
+]

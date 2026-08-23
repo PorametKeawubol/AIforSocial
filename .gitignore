@@ -107,3 +107,4 @@ output/
 
 # Project-specific local model artifact
 W1D2/bert_rocm_model/
+W1D4/vllm-rocm-lab/system-libs/
