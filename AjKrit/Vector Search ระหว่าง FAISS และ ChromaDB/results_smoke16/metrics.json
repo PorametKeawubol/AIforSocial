@@ -1,0 +1,87 @@
+{
+  "dataset": {
+    "path": "thai_qa_utf8.json",
+    "source_rows_available": 41740,
+    "rows_indexed": 100,
+    "limit": 100,
+    "query_path": "thai_qa_paraphrase_15.csv",
+    "queries_used": 2
+  },
+  "embedding": {
+    "model": "BAAI/bge-m3",
+    "dimension": 1024,
+    "document_encode_seconds": 36.778031503999955,
+    "query_encode_seconds": 0.20786811100015257,
+    "normalised": true
+  },
+  "benchmark": {
+    "top_k": 5,
+    "repeats_per_query": 1,
+    "warmup_runs": 0,
+    "latency_scope": "retrieval only; query embeddings were prepared before timing"
+  },
+  "build": [
+    {
+      "engine": "FAISS",
+      "index_type": "IndexFlatIP (exact)",
+      "documents": 100,
+      "dimension": 1024,
+      "build_time_seconds": 0.0002868500000658969,
+      "vector_memory_mb": 0.390625,
+      "persisted_storage_mb": 0.0
+    },
+    {
+      "engine": "ChromaDB",
+      "index_type": "HNSW cosine (default collection index)",
+      "documents": 100,
+      "dimension": 1024,
+      "build_time_seconds": 0.19793173699963518,
+      "vector_memory_mb": 0.390625,
+      "persisted_storage_mb": 2.3888282775878906
+    }
+  ],
+  "latency": {
+    "FAISS": {
+      "mean_ms": 0.021694999986721086,
+      "median_ms": 0.021694999986721086,
+      "min_ms": 0.020777999907295452,
+      "max_ms": 0.02261200006614672,
+      "p95_ms": 0.02261200006614672,
+      "qps": 46093.569975205006,
+      "samples": 2.0
+    },
+    "ChromaDB": {
+      "mean_ms": 0.6910484999025357,
+      "median_ms": 0.6910484999025357,
+      "min_ms": 0.6815709998591046,
+      "max_ms": 0.7005259999459668,
+      "p95_ms": 0.7005259999459668,
+      "qps": 1447.076435504944,
+      "samples": 2.0
+    }
+  },
+  "metadata_filter_demo": {
+    "field": "source",
+    "value": "xquad",
+    "query": "first worksheet query",
+    "faiss_application_filter": [
+      "doc-00096",
+      "doc-00095",
+      "doc-00094",
+      "doc-00093",
+      "doc-00092"
+    ],
+    "chroma_where_filter": [
+      "doc-00092",
+      "doc-00093",
+      "doc-00094",
+      "doc-00095",
+      "doc-00096"
+    ],
+    "note": "FAISS filters after full ranking; ChromaDB applies where during collection query."
+  },
+  "score_convention": {
+    "FAISS": "inner-product similarity; higher is better",
+    "ChromaDB": "cosine distance; lower is better"
+  }
+}

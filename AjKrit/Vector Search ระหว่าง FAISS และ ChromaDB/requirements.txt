@@ -1,0 +1,6 @@
+faiss-cpu>=1.8
+chromadb>=0.5
+sentence-transformers>=3.0
+numpy>=1.26
+pandas>=2.2
+pytest>=8.0

@@ -1,0 +1,3 @@
+﻿engine,index_type,documents,dimension,build_time_seconds,vector_memory_mb,persisted_storage_mb
+FAISS,IndexFlatIP (exact),100,1024,0.00015055699986987747,0.390625,0.0
+ChromaDB,HNSW cosine (default collection index),100,1024,0.2040695699997741,0.390625,2.3849220275878906
