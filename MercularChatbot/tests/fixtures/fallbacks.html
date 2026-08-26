@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <script id="__NEXT_DATA__" type="application/json">
+      {
+        "props": {
+          "initialState": {
+            "renamedCatalogContainer": {
+              "categoryTitle": {"th": "เกมมิ่ง"},
+              "breadcrumbs": [{"title": {"th": "เกมมิ่ง"}}],
+              "results": [
+                {
+                  "productId": "changed-1",
+                  "productSku": "KEY-CHANGED-1",
+                  "productName": "Changed Shape Keyboard",
+                  "productUrl": "/changed-shape-keyboard",
+                  "imageUrl": "/images/changed-keyboard.png",
+                  "normalPrice": "3,490 บาท",
+                  "salePrice": "2,990 บาท",
+                  "available": true,
+                  "brand": {"name": "KeyBrand"}
+                },
+                {"title": [null, {}], "url": {"bad": true}}
+              ]
+            }
+          }
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Product",
+            "productID": "schema-1",
+            "sku": "MOUSE-SCHEMA-1",
+            "name": "Schema Gaming Mouse",
+            "url": "https://www.mercular.com/schema-gaming-mouse",
+            "image": ["https://cdn.example.com/mouse.png"],
+            "brand": {"@type": "Brand", "name": "MouseBrand"},
+            "category": "เมาส์เกมมิ่ง",
+            "description": "เมาส์น้ำหนักเบา",
+            "offers": {
+              "@type": "Offer",
+              "price": "1,590.00",
+              "priceCurrency": "THB",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          {"@type": "Product", "name": "Missing URL must be skipped"}
+        ]
+      }
+    </script>
+    <script type="application/ld+json">{"broken": </script>
+  </head>
+  <body>
+    <nav aria-label="breadcrumb">
+      <a href="/">หน้าหลัก</a><a href="/gaming">เกมมิ่ง</a>
+    </nav>
+
+    <!-- No product-related class name: detected from linked image + heading. -->
+    <a class="renamed-css-module-7f2" href="/semantic-headset">
+      <img data-src="https://cdn.example.com/semantic-headset.jpg" alt="Semantic Headset" />
+      <h3>Semantic Headset</h3>
+      <span class="money-now">฿2,490</span>
+    </a>
+
+    <article class="totally-new-product-tile" data-product-id="card-2" data-sku="CARD-2" data-brand="CardBrand">
+      <a href="/card-speaker"><img alt="Card Speaker" src="/images/card-speaker.jpg" /></a>
+      <div itemprop="name">Card Speaker</div>
+      <meta itemprop="price" content="990" />
+      <span>สินค้าหมด</span>
+    </article>
+  </body>
+</html>

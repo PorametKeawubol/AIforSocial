@@ -1,0 +1,126 @@
+# Assignment I scoring evidence
+
+This document maps the implementation to `../Assignment_I/Scoring_criteria.md`.
+Run all commands from `MercularChatbot/`.
+
+Latest release check (2026-08-24): 234 tests passed; the local NLP corpus passed
+all 135 cases; local p95 parse/retrieve/Flex latency was 24.872 ms; and the
+attributed snapshot contains 252 unique products from 13/13 successful category
+pages with no recorded fetch errors.
+
+## 1. Web Scraping & Data Pipeline — 25 points
+
+- Public Mercular category HTML is parsed from `__NEXT_DATA__`; Product JSON-LD
+  and tolerant HTML cards are fallback shapes.
+- Every record is normalized to `Product`: ID/SKU, name, brand, category path,
+  current/original price, image, URL, stock, source, and collection time.
+- HTTP timeout, retry/backoff, robots validation, a configurable delay, per-page
+  isolation, deduplication, missing-value handling, and atomic snapshots are
+  covered by `tests/test_scraper.py` and `tests/test_repository.py`.
+- The webhook reads a last-known-good local snapshot, so a source-site failure
+  cannot crash an active chat.
+
+Evidence:
+
+```bash
+pytest -q tests/test_scraper.py tests/test_repository.py
+python scraper.py --refresh
+```
+
+## 2. NLP Command Processing — 25 points
+
+- `ThaiCommandParser` returns an explicit intent, confidence, and entities for
+  category, brands, inclusive/strict minimum and maximum budget, stock, sort
+  order, and residual product query.
+- Normalization covers Thai digits, `k` notation, colloquial wording, aliases,
+  common typos, and combined constraints.
+- Price/discount sorting uses source fields. Requests for popularity/newness are
+  retained as preferences but the reply discloses that the current category
+  snapshot has no sales count or launch date and falls back to relevance.
+- The project-local labeled regression set includes basic, conversational, typo,
+  multi-condition, ambiguous, and no-match commands.
+
+Evidence and acceptance threshold:
+
+```bash
+python scripts/evaluate_nlp.py
+pytest -q tests/test_nlp.py
+```
+
+The evaluator exits non-zero unless both intent and entity metrics are strictly
+greater than 85%, and it reports parser latency.
+
+Latest measured evidence: [NLP_EVALUATION.md](NLP_EVALUATION.md).
+
+## 3. Random Top 5 Carousel — 20 points
+
+- Hard NLP filters are applied before ranking or random selection.
+- Selection is bounded and without replacement; it cannot loop forever.
+- Per-user/query recent history reduces repeated products and identical sets.
+- Fewer than five matches returns every valid match with a clear explanation.
+
+Evidence:
+
+```bash
+pytest -q tests/test_recommender.py
+```
+
+## 4. LINE Interface & Chat UX — 15 points
+
+- A valid Flex carousel renders at most five readable product bubbles.
+- Each card has a safe square image when available, wrapped text, current price,
+  detail postback, and direct Mercular product-page action.
+- Text replies include Quick Reply examples and useful no-result/data fallback.
+- A generated `2500×1686` MercuMate Rich Menu provides six clear entry points;
+  four discovery actions feed example natural-language commands into the same
+  NLP pipeline instead of bypassing retrieval.
+- Message Lab demonstrates Text, Text v2, Sticker, Image, Video, Audio,
+  Location, Coupon (configuration-gated), Imagemap, Template, and Flex one at
+  a time. Public media, tap geometry, required fields, and honest Coupon/
+  Location fallbacks have offline contract tests.
+- The navy/cyan visual system from the supplied MercuMate artwork is reused by
+  the Rich Menu, showcase Flex cards, and product action color.
+
+Evidence:
+
+```bash
+pytest -q tests/test_line_views.py tests/test_message_showcase.py \
+  tests/test_rich_menu.py tests/test_app.py
+```
+
+## 5. Code Quality & Performance — 15 points
+
+- Responsibilities are separated into models, scraper, repository, NLP,
+  recommender, LINE views, and the thin webhook app.
+- External I/O occurs during catalog refresh, not webhook handling.
+- Invalid signatures, duplicate deliveries, malformed events, corrupt snapshots,
+  missing values, and LINE API errors are contained and logged.
+- `/healthz` reports process health; `/readyz` additionally checks catalog and
+  LINE configuration.
+
+Full verification:
+
+```bash
+pytest -q
+python scripts/evaluate_nlp.py
+python scripts/benchmark.py
+```
+
+Latest measured evidence: [PERFORMANCE_REPORT.md](PERFORMANCE_REPORT.md).
+
+## Rubric test-case index
+
+| Rubric case | Automated evidence |
+|---|---|
+| TC-01 normal scrape | `test_scraper.py` |
+| TC-02 missing price | `test_scraper.py` |
+| TC-03 changed selector/shape | `test_scraper.py` |
+| TC-04 basic NLP | `test_nlp.py`, evaluator |
+| TC-05 colloquial NLP | `test_nlp.py`, evaluator |
+| TC-06 typo NLP | `test_nlp.py`, evaluator |
+| TC-07 combined conditions | `test_nlp.py`, `test_recommender.py` |
+| TC-08 latency | `scripts/benchmark.py` |
+| TC-09 repeated refresh | `test_recommender.py` |
+| TC-10 exactly five | `test_recommender.py`, `test_line_views.py` |
+| TC-11 Flex Message | `test_line_views.py`, `test_app.py` |
+| TC-12 unexpected input | `test_nlp.py`, `test_app.py` |

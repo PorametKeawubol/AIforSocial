@@ -1,0 +1,8 @@
+Flask>=3.0,<4
+# 3.25.0 is the tested Python 3.12-compatible v3 package; early 3.0.x wheels
+# lack generated webhook modules and cannot import this application.
+line-bot-sdk>=3.25,<4
+python-dotenv>=1.0,<2
+requests>=2.31,<3
+beautifulsoup4>=4.12,<5
+pytest>=8.0,<9
