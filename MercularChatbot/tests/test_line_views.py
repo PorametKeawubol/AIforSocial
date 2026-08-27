@@ -409,10 +409,45 @@ def test_product_detail_is_readable_safe_and_contains_quick_replies() -> None:
     assert "Mercular Test" in payload["text"]
     assert "฿1,991" in payload["text"]
     assert "สินค้าหมดชั่วคราว" in payload["text"]
-    assert "ภาพรวม: จอเกมมิ่ง 165Hz" in payload["text"]
+    assert "📝 ภาพรวม\nจอเกมมิ่ง 165Hz" in payload["text"]
     assert "พาเนล IPS" in payload["text"]
     assert "4.8/5 จาก 5 รีวิว" in payload["text"]
     assert "ประกันศูนย์ 3 ปี" in payload["text"]
+
+
+def test_product_detail_formats_flattened_overview_specs_and_hides_placeholders() -> None:
+    message = product_detail_message(
+        product(
+            name="Notebook Asus ROG Strix G16 G614FR-TS235W (Volt Green)",
+            brand="ASUS",
+            category="โน๊ตบุ๊คเล่นเกม",
+            overview=(
+                "คุณสมบัติ รายละเอียด Brand ASUS "
+                "Processor AMD Ryzen 9 9955HX3D (16C/32T) "
+                "Graphics NVIDIA GeForce RTX 5070 Ti (12GB GDDR7) "
+                'Display Screen 16.0" 2.5K IPS 300Hz '
+                "Main Memory 32GB DDR5-5600 "
+                "Storage 1TB PCIe 4.0 NVMe M.2 SSD "
+                "Wireless Wi-Fi 6E Bluetooth Bluetooth 5.3"
+            ),
+            highlights=("หน้าจอ 2.5K IPS 300Hz",),
+            specifications=(("ประเภทโน๊ตบุ๊ค", "โน๊ตบุ๊คเล่นเกม"),),
+            warranty="-",
+        )
+    )
+
+    text = message.text
+    assert "คุณสมบัติ รายละเอียด Brand" not in text
+    assert "⚙️ สเปกสำคัญ" in text
+    assert "• CPU: AMD Ryzen 9 9955HX3D (16C/32T)" in text
+    assert "• GPU: NVIDIA GeForce RTX 5070 Ti (12GB GDDR7)" in text
+    assert '• หน้าจอ: 16.0" 2.5K IPS 300Hz' in text
+    assert "• RAM: 32GB DDR5-5600" in text
+    assert "• ที่เก็บข้อมูล: 1TB PCIe 4.0 NVMe M.2 SSD" in text
+    assert "• Wi-Fi: Wi-Fi 6E" in text
+    assert "• Bluetooth: 5.3" in text
+    assert "🛡️ การรับประกัน" not in text
+    assert len(text) <= 5_000
 
 
 def test_product_comparison_reports_price_and_only_known_spec_differences() -> None:

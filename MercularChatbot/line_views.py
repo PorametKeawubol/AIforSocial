@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import ipaddress
 import json
+import re
 import unicodedata
 from collections.abc import Iterable, Sequence
 from typing import Any
@@ -48,6 +49,49 @@ _MUTED_COLOR = "#6B7280"
 _SUCCESS_COLOR = "#16803A"
 _OUT_OF_STOCK_COLOR = "#B42318"
 
+_OVERVIEW_SPEC_LABELS: tuple[tuple[str, str], ...] = (
+    ("Model", "รุ่น"),
+    ("Processor", "CPU"),
+    ("Graphics", "GPU"),
+    ("Display Screen", "หน้าจอ"),
+    ("Main Memory", "RAM"),
+    ("Storage", "ที่เก็บข้อมูล"),
+    ("Wireless", "Wi-Fi"),
+    ("Bluetooth", "Bluetooth"),
+    ("Network", "เครือข่าย"),
+    ("Audio Jack", "ช่องต่อเสียง"),
+    ("Speaker", "ลำโพง"),
+    ("Web Camera", "กล้อง"),
+    ("Sound Technology", "ระบบเสียง"),
+    ("Keyboard Type", "คีย์บอร์ด"),
+    ("Touchpad Support NumberPad", "ทัชแพด"),
+    ("Memory Slot", "สล็อตหน่วยความจำ"),
+    ("CardReader", "เครื่องอ่านการ์ด"),
+    ("Battery", "แบตเตอรี่"),
+    ("Weight", "น้ำหนัก"),
+    ("Brand", "แบรนด์"),
+    ("Chipset", "ชิปเซต"),
+    ("Optical Disk Drive", "ออปติคัลไดรฟ์"),
+)
+_OVERVIEW_SPEC_BY_SOURCE = {
+    source.casefold(): (source, display)
+    for source, display in _OVERVIEW_SPEC_LABELS
+}
+_OVERVIEW_SPEC_PATTERN = re.compile(
+    r"(?<![A-Za-z])(" 
+    + "|".join(
+        re.escape(source)
+        for source, _display in sorted(
+            _OVERVIEW_SPEC_LABELS,
+            key=lambda item: len(item[0]),
+            reverse=True,
+        )
+    )
+    + r")(?![A-Za-z])",
+    flags=re.IGNORECASE,
+)
+_EMPTY_DETAIL_VALUES = {"", "-", "—", "n/a", "na", "none", "null", "ไม่ระบุ"}
+
 
 def truncate_text(
     value: object | None,
@@ -69,6 +113,43 @@ def truncate_text(
 
     prefix = text[: limit - 1].rstrip()
     # A dangling combining vowel/tone mark is especially hard to read in Thai.
+    while prefix and unicodedata.category(prefix[-1]).startswith("M"):
+        prefix = prefix[:-1].rstrip()
+    return f"{prefix}…" if prefix else "…"
+
+
+def truncate_multiline_text(
+    value: object | None,
+    limit: int,
+    *,
+    fallback: str = "",
+) -> str:
+    """Normalize text while preserving intentional LINE message paragraphs."""
+
+    if limit < 1:
+        return ""
+
+    def normalize(candidate: object | None) -> str:
+        raw = str(candidate or "").replace("\r\n", "\n").replace("\r", "\n")
+        rendered: list[str] = []
+        blank_pending = False
+        for raw_line in raw.split("\n"):
+            line = " ".join(raw_line.replace("\xa0", " ").split())
+            if line:
+                if rendered and blank_pending:
+                    rendered.append("")
+                rendered.append(line)
+                blank_pending = False
+            elif rendered:
+                blank_pending = True
+        return "\n".join(rendered)
+
+    text = normalize(value) or normalize(fallback)
+    if len(text) <= limit:
+        return text
+    if limit == 1:
+        return "…"
+    prefix = text[: limit - 1].rstrip()
     while prefix and unicodedata.category(prefix[-1]).startswith("M"):
         prefix = prefix[:-1].rstrip()
     return f"{prefix}…" if prefix else "…"
@@ -766,7 +847,7 @@ def build_text_message_payload(
 ) -> dict[str, Any]:
     """Build a bounded text payload with optional Quick Reply dictionaries."""
 
-    safe_text = truncate_text(
+    safe_text = truncate_multiline_text(
         text,
         LINE_TEXT_LIMIT,
         fallback="ขออภัยครับ กรุณาลองใหม่อีกครั้ง",
@@ -801,7 +882,6 @@ def greeting_message(bot_name: object | None = "MercuMate") -> TextMessage:
     safe_name = truncate_text(bot_name, 40, fallback="MercuMate")
     return text_with_quick_replies(
         f"สวัสดีครับ 👋 ผม {safe_name} เป็นบอตสาธิตเพื่อการศึกษา "
-        "(ไม่ใช่ช่องทางทางการ) "
         "ช่วยค้นหาสินค้า Mercular จากชื่อ หมวดหมู่ แบรนด์ "
         "งบประมาณ และสถานะพร้อมส่งได้ ลองแตะตัวอย่างด้านล่างหรือพิมพ์สิ่งที่หาได้เลยครับ",
         include_refresh=False,
@@ -871,6 +951,51 @@ def refresh_message() -> TextMessage:
     )
 
 
+def _meaningful_detail(value: object | None, limit: int) -> str:
+    """Return presentation-worthy product text, excluding source placeholders."""
+
+    cleaned = truncate_text(value, limit)
+    return "" if cleaned.casefold() in _EMPTY_DETAIL_VALUES else cleaned
+
+
+def _overview_spec_points(value: object | None, *, limit: int = 8) -> tuple[str, ...]:
+    """Turn a common Mercular English spec dump into short readable rows.
+
+    Some product pages expose their specification table as one flattened overview
+    string.  This helper only reshapes fields whose labels are explicit in that
+    source text; it never infers a specification or changes its value.
+    """
+
+    overview = truncate_text(value, 2_000)
+    if not overview or limit < 1:
+        return ()
+    matches = list(_OVERVIEW_SPEC_PATTERN.finditer(overview))
+    # A prose sentence can contain one of these words by chance.  Reformat only
+    # a recognisable table dump with several explicit field labels.
+    if len(matches) < 3:
+        return ()
+
+    values: dict[str, str] = {}
+    for index, match in enumerate(matches):
+        source_key = match.group(1).casefold()
+        source, _display = _OVERVIEW_SPEC_BY_SOURCE[source_key]
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(overview)
+        detail = _meaningful_detail(overview[match.end() : end].strip(" :•-"), 240)
+        if detail and source not in values:
+            values[source] = detail
+
+    points: list[str] = []
+    # The tuple is ordered for a useful shopping summary rather than the source
+    # page's table order. Brand is already shown in the product header.
+    for source, display in _OVERVIEW_SPEC_LABELS:
+        if source == "Brand" or source not in values:
+            continue
+        points.append(f"• {display}: {values[source]}")
+        if len(points) == limit:
+            break
+    return tuple(points)
+
+
 def product_detail_payload(product: Product) -> dict[str, Any]:
     """Build a readable, bounded text detail for one catalog product."""
 
@@ -878,7 +1003,9 @@ def product_detail_payload(product: Product) -> dict[str, Any]:
         raise TypeError("product must be a Product")
     brand = truncate_text(product.brand, 120, fallback="ไม่ระบุแบรนด์")
     category = truncate_text(product.category, 160, fallback="ไม่ระบุหมวดหมู่")
-    description = truncate_text(product.description, 1_500)
+    description = _meaningful_detail(product.description, 700)
+    overview = _meaningful_detail(product.overview, 1_500)
+    overview_spec_points = _overview_spec_points(overview)
     stock = (
         "พร้อมส่ง"
         if product.in_stock is True
@@ -888,15 +1015,16 @@ def product_detail_payload(product: Product) -> dict[str, Any]:
     )
     lines = [
         f"🛍️ {truncate_text(product.name, 250)}",
+        "━━━━━━━━━━━━",
         f"🏷️ แบรนด์: {brand}",
         f"📂 หมวดหมู่: {category}",
         f"💰 ราคา: {truncate_text(product.display_price, 80)}",
         f"📦 สถานะ: {stock}",
     ]
     if description:
-        lines.extend(("", f"รายละเอียด: {description}"))
-    if product.overview:
-        lines.extend(("", f"ภาพรวม: {truncate_text(product.overview, 600)}"))
+        lines.extend(("", "📝 รายละเอียด", description))
+    if overview and not overview_spec_points:
+        lines.extend(("", "📝 ภาพรวม", truncate_text(overview, 600)))
     if product.rating is not None:
         review_suffix = (
             f" จาก {product.review_count:,} รีวิว"
@@ -908,30 +1036,36 @@ def product_detail_payload(product: Product) -> dict[str, Any]:
         lines.extend(
             (
                 "",
-                "คุณสมบัติเด่น:",
+                "✨ จุดเด่น",
                 *(
                     f"• {truncate_text(highlight, 220)}"
                     for highlight in product.highlights[:4]
                 ),
             )
         )
-    if product.specifications:
+    category_key = normalize_text(product.category)
+    structured_specs = tuple(
+        f"• {truncate_text(name, 120)}: {detail}"
+        for name, value in product.specifications[:8]
+        if (detail := _meaningful_detail(value, 220))
+        and normalize_text(detail) != category_key
+    )
+    combined_specs = (*overview_spec_points, *structured_specs)
+    if combined_specs:
         lines.extend(
             (
                 "",
-                "สเปก:",
-                *(
-                    f"• {truncate_text(name, 120)}: {truncate_text(value, 220)}"
-                    for name, value in product.specifications[:8]
-                ),
+                "⚙️ สเปกสำคัญ",
+                *combined_specs[:10],
             )
         )
-    if product.warranty:
-        lines.append(f"🛡️ ประกัน: {truncate_text(product.warranty, 500)}")
+    warranty = _meaningful_detail(product.warranty, 500)
+    if warranty:
+        lines.extend(("", "🛡️ การรับประกัน", warranty))
     product_url = normalize_https_url(product.product_url, mercular_only=True)
     if product_url:
-        lines.extend(("", f"ดู/ซื้อสินค้าที่ Mercular: {product_url}"))
-    lines.extend(("", "ราคาและสต็อกอาจเปลี่ยนแปลง โปรดยืนยันบนเว็บไซต์ก่อนซื้อ"))
+        lines.extend(("", "🔗 ดูสินค้าและตรวจสอบข้อมูลล่าสุด", product_url))
+    lines.extend(("", "ℹ️ ราคาและสต็อกอาจเปลี่ยนแปลง โปรดยืนยันบนเว็บไซต์ก่อนซื้อ"))
     return build_text_message_payload(
         "\n".join(lines),
         quick_reply_items=default_quick_reply_items(),
