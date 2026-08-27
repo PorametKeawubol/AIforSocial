@@ -177,6 +177,37 @@ def _category_alias_compacts(category: str) -> tuple[str, ...]:
 _MOUSE_TERMS = _normal_values(("เมาส์", "mouse", "mice"))
 _MOUSE_PRODUCT_TERMS = ("เมาส์", "mouse", "mice", "trackball", "แทร็กบอล")
 _KEYBOARD_TERMS = _normal_values(("คีย์บอร์ด", "keyboard", "แป้นพิมพ์"))
+_PHONE_TERMS = _normal_values(
+    ("โทรศัพท์", "โทรศัพท์มือถือ", "มือถือ", "สมาร์ทโฟน", "smartphone", "mobile phone")
+)
+_PHONE_LEAF_PREFIXES = _normal_values(
+    ("โทรศัพท์", "มือถือ", "สมาร์ทโฟน", "smartphone", "mobile phone")
+)
+_COMPUTER_TERMS = _normal_values(
+    ("คอมพิวเตอร์", "เครื่องคอมพิวเตอร์", "คอม", "คอมตั้งโต๊ะ", "desktop", "computer", "pc")
+)
+_COMPUTER_DEVICE_LEAF_PREFIXES = _normal_values(
+    (
+        "คอมพิวเตอร์ พีซี",
+        "คอมพิวเตอร์ ออลอินวัน",
+        "คอมพิวเตอร์เกมมิ่ง",
+        "มินิ คอมพิวเตอร์",
+        "Computer Set",
+        "ซูเปอร์คอมพิวเตอร์",
+    )
+)
+_COMPUTER_ACCESSORY_NAME_TERMS = (
+    "cable",
+    "adapter",
+    "stand",
+    "case",
+    "สายเชื่อมต่อ",
+    "สายพ่วง",
+    "อะแดปเตอร์",
+    "ขาตั้ง",
+    "กระเป๋า",
+    "เคส",
+)
 _GENERIC_ACCESSORY_TERMS = frozenset(
     _normal_values(("อุปกรณ์เสริม", *CATEGORY_ALIASES["อุปกรณ์เสริม"]))
 )
@@ -516,14 +547,60 @@ def _accessory_request_matches(product: Product, category: str, query: str) -> b
 
 
 def _base_product_identity_matches(product: Product, category: str, query: str) -> bool:
-    """Reject catalogue-taxonomy mistakes for an ordinary mouse request.
+    """Reject catalogue-taxonomy mistakes for ordinary base-product requests.
 
     The live mouse leaf currently also contains drawing tablets.  Treat the leaf as
     candidate discovery, then require product-name evidence for a base mouse.  An
     explicit accessory request keeps its existing specialised matching behaviour.
+    Phone accessory leaves can contain the word ``โทรศัพท์`` too, so a phone request
+    additionally requires a concrete phone leaf rather than a film/case/stand leaf.
     """
 
     requested_category = compact_text(category)
+    if any(term in requested_category for term in _PHONE_TERMS):
+        leaf_fields = tuple(
+            compact
+            for field in (
+                product.category,
+                product.category_path[-1] if product.category_path else "",
+            )
+            if (compact := compact_text(field))
+        )
+        return any(
+            field.startswith(prefix)
+            for field in leaf_fields
+            for prefix in _PHONE_LEAF_PREFIXES
+        )
+    if any(term == requested_category for term in _COMPUTER_TERMS):
+        # Normalise each leaf once.  The old nested expression repeated the same
+        # Unicode/regex work for every prefix and every product in the catalogue.
+        leaf_fields = tuple(
+            compact
+            for field in (
+                product.category,
+                product.category_path[-1] if product.category_path else "",
+            )
+            if (compact := compact_text(field))
+        )
+        is_computer_device = any(
+            field.startswith(prefix)
+            for field in leaf_fields
+            for prefix in _COMPUTER_DEVICE_LEAF_PREFIXES
+        )
+        if not is_computer_device:
+            return False
+        product_name = normalize_text(product.name)
+        excluded_product_terms = (
+            "notebook",
+            "laptop",
+            "โน้ตบุ๊ก",
+            "โน๊ตบุ๊ค",
+            *_COMPUTER_ACCESSORY_NAME_TERMS,
+        )
+        return not _contains_requested_alias(
+            product_name,
+            excluded_product_terms,
+        )
     if not any(term in requested_category for term in _MOUSE_TERMS):
         return True
     if _requested_accessory_kinds(category, query):
@@ -893,8 +970,12 @@ class ProductRecommender:
     @classmethod
     def _relevance(cls, product: Product, entities: CommandEntities) -> float:
         score = 0.0
-        haystack = normalize_text(product.search_text)
-        compact_haystack = compact_text(haystack)
+        query_groups = cls._query_groups(entities.query, entities.category or "")
+        # Product details can contain thousands of characters.  Only normalise that
+        # full text when there is an actual free-text query to score; a bare/category
+        # recommendation otherwise paid this cost for all 1,715 products needlessly.
+        haystack = normalize_text(product.search_text) if query_groups else ""
+        compact_haystack = compact_text(haystack) if haystack else ""
         # ``rank_products`` receives the hard-filtered set, so populated structured
         # constraints are already guaranteed.  Avoid repeating the full taxonomy
         # classifier for every candidate merely to award a constant base score.
@@ -904,7 +985,7 @@ class ProductRecommender:
             score += 5.0
         if entities.brands:
             score += 5.0
-        for group in cls._query_groups(entities.query, entities.category or ""):
+        for group in query_groups:
             exact_length = next(
                 (
                     len(compact_alias)
@@ -928,7 +1009,10 @@ class ProductRecommender:
                 default=0.0,
             )
         popular_hints = ("ขายดี", "ยอดนิยม", "bestseller", "best seller", "popular", "ฮิต")
-        if any(normalize_text(hint) in haystack for hint in popular_hints):
+        popularity_text = normalize_text(
+            " ".join((product.name, product.category, *product.tags))
+        )
+        if any(normalize_text(hint) in popularity_text for hint in popular_hints):
             score += 0.5
         score += _discount(product) * 0.25
         return score

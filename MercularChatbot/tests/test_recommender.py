@@ -718,6 +718,92 @@ def test_base_mouse_request_rejects_drawing_tablet_in_mislabeled_mouse_leaf() ->
     assert [product.id for product in results] == ["mouse"]
 
 
+def test_phone_request_excludes_phone_accessories_with_similar_category_names() -> None:
+    products = [
+        make_product(
+            "phone",
+            name="XIAOMI REDMI 17 5G",
+            category="โทรศัพท์แอนดรอยด์",
+            category_path=(
+                "Smartphone / Tablet / ACC",
+                "โทรศัพท์",
+                "โทรศัพท์แอนดรอยด์",
+            ),
+        ),
+        make_product(
+            "film",
+            name="FILM ANDROID PHONE",
+            category="ฟิล์มโทรศัพท์แอนดรอยด์",
+            category_path=(
+                "Smartphone / Tablet / ACC",
+                "เคส / ฟิล์ม",
+                "ฟิล์มโทรศัพท์แอนดรอยด์",
+            ),
+        ),
+        make_product(
+            "stand",
+            name="PHONE STAND",
+            category="ที่วางโทรศัพท์",
+            category_path=("จัดโต๊ะคอม", "ที่วางและชั้นวาง", "ที่วางโทรศัพท์"),
+        ),
+    ]
+
+    results = ProductRecommender().filter_products(
+        products,
+        search_command(category="โทรศัพท์"),
+    )
+
+    assert [product.id for product in results] == ["phone"]
+
+
+def test_computer_request_returns_devices_without_components_or_accessories() -> None:
+    products = [
+        make_product(
+            "desktop",
+            name="Desktop Asus ExpertCenter",
+            category="คอมพิวเตอร์ พีซี",
+            category_path=("คอมพิวเตอร์", "คอมพิวเตอร์ พีซี"),
+        ),
+        make_product(
+            "aio",
+            name="AIO HP 24",
+            category="คอมพิวเตอร์ ออลอินวัน",
+            category_path=("คอมพิวเตอร์", "คอมพิวเตอร์ ออลอินวัน"),
+        ),
+        make_product(
+            "ram",
+            name="RAM DDR5 32GB",
+            category="แรมพีซี (Ram PC)",
+            category_path=("คอมพิวเตอร์", "Components & Upgrades", "แรมพีซี (Ram PC)"),
+        ),
+        make_product(
+            "case",
+            name="ATX CASE",
+            category="เคสคอมพิวเตอร์",
+            category_path=("คอมพิวเตอร์", "Components & Upgrades", "เคสคอมพิวเตอร์"),
+        ),
+        make_product(
+            "misplaced-notebook",
+            name="Notebook Asus Expertbook",
+            category="คอมพิวเตอร์ พีซี",
+            category_path=("คอมพิวเตอร์", "คอมพิวเตอร์ พีซี"),
+        ),
+        make_product(
+            "misplaced-cable",
+            name="สายเชื่อมต่อพ่วง DGX SPARK MSI SAS Fiber Cable",
+            category="ซูเปอร์คอมพิวเตอร์ AI",
+            category_path=("คอมพิวเตอร์", "ซูเปอร์คอมพิวเตอร์ AI"),
+        ),
+    ]
+
+    results = ProductRecommender().filter_products(
+        products,
+        search_command(category="คอมพิวเตอร์"),
+    )
+
+    assert [product.id for product in results] == ["desktop", "aio"]
+
+
 def test_returns_all_available_when_fewer_than_five_and_deduplicates_ids() -> None:
     products = [make_product("a"), make_product("b"), make_product("c")]
     products.append(make_product("a", name="duplicate snapshot row"))

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from bert_nlp import (
     PhayaThaiBertCommandParser,
+    PhayaThaiBertIntentClassifier,
     PhayaThaiBertUnavailable,
     IntentPrediction,
 )
@@ -21,6 +22,16 @@ class FakeClassifier:
 class UnavailableClassifier:
     def predict(self, text: str) -> IntentPrediction:
         raise PhayaThaiBertUnavailable("model is not installed")
+
+
+def test_classifier_warm_up_loads_model_without_running_user_prediction(monkeypatch):
+    classifier = PhayaThaiBertIntentClassifier(local_files_only=True)
+    calls = []
+    monkeypatch.setattr(classifier, "_load", lambda: calls.append("loaded"))
+
+    classifier.warm_up()
+
+    assert calls == ["loaded"]
 
 
 def test_phayathaibert_routes_unknown_natural_language_intent():

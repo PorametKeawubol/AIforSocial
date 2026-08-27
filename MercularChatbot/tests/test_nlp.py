@@ -120,6 +120,37 @@ def test_common_typos_and_fuzzy_aliases(
     assert parsed.max_price == maximum
 
 
+@pytest.mark.parametrize(
+    "text",
+    (
+        "มือถือ",
+        "หามือถือ",
+        "สมาร์ทโฟน",
+        "โทรศัพท์",
+        "smartphone",
+        "มือถึอ",
+    ),
+)
+def test_phone_aliases_are_product_searches(parser: ThaiCommandParser, text: str) -> None:
+    parsed = parser.parse(text)
+
+    assert parsed.intent == INTENT_SEARCH
+    assert parsed.category == "โทรศัพท์"
+    assert parsed.query == ""
+
+
+@pytest.mark.parametrize(
+    "text",
+    ("คอม", "หาคอม", "คอมพิวเตอร์", "คอมตั้งโต๊ะ", "desktop", "pc"),
+)
+def test_computer_aliases_are_product_searches(parser: ThaiCommandParser, text: str) -> None:
+    parsed = parser.parse(text)
+
+    assert parsed.intent == INTENT_SEARCH
+    assert parsed.category == "คอมพิวเตอร์"
+    assert parsed.query == ""
+
+
 def test_requirement_typos_use_cases_and_promotions_are_structured_safely(
     parser: ThaiCommandParser,
 ) -> None:

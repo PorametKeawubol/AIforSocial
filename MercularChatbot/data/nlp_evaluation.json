@@ -173,5 +173,13 @@
   {"id":"user-subtype-01","kind":"typo","text":"แฟลชไดร์ฟ usb c ไม่เกินพันห้า","intent":"search","entities":{"category":"อุปกรณ์เสริม","max_price":1500,"query":"แฟลชไดร์ฟ usb c"}},
   {"id":"user-subtype-02","kind":"typo","text":"ยูเอสบีฮับพร้อมสง","intent":"search","entities":{"category":"อุปกรณ์เสริม","in_stock":true,"query":"ยูเอสบีฮับ"}},
   {"id":"user-subtype-03","kind":"typo","text":"สแกนเนอไม่เกิน 5k","intent":"search","entities":{"category":"เครื่องพิมพ์","max_price":5000,"query":"สแกนเนอ"}},
-  {"id":"user-subtype-04","kind":"typo","text":"ซาวบาร์ sony ราคาถูกสุด","intent":"search","entities":{"category":"ลำโพง","brands":["Sony"],"sort":"price_asc","query":"ซาวบาร์"}}
+  {"id":"user-subtype-04","kind":"typo","text":"ซาวบาร์ sony ราคาถูกสุด","intent":"search","entities":{"category":"ลำโพง","brands":["Sony"],"sort":"price_asc","query":"ซาวบาร์"}},
+  {"id":"phone-basic-01","kind":"basic","text":"มือถือ","intent":"search","entities":{"category":"โทรศัพท์"}},
+  {"id":"phone-basic-02","kind":"colloquial","text":"ขอดูสมาร์ทโฟนหน่อย","intent":"search","entities":{"category":"โทรศัพท์"}},
+  {"id":"phone-typo-01","kind":"typo","text":"หามือถึอไม่เกิน 10000","intent":"search","entities":{"category":"โทรศัพท์","max_price":10000}},
+  {"id":"phone-multi-01","kind":"multi_condition","text":"โทรศัพท์ Xiaomi ไม่เกิน 10000 ถูกสุด","intent":"search","entities":{"category":"โทรศัพท์","brands":["Xiaomi"],"max_price":10000,"sort":"price_asc"}},
+  {"id":"computer-basic-01","kind":"basic","text":"คอม","intent":"search","entities":{"category":"คอมพิวเตอร์"}},
+  {"id":"computer-basic-02","kind":"basic","text":"desktop","intent":"search","entities":{"category":"คอมพิวเตอร์"}},
+  {"id":"computer-colloquial-01","kind":"colloquial","text":"หาคอมตั้งโต๊ะไม่เกิน 30000","intent":"search","entities":{"category":"คอมพิวเตอร์","max_price":30000}},
+  {"id":"computer-typo-01","kind":"typo","text":"ขอคอมตังโตะ","intent":"search","entities":{"category":"คอมพิวเตอร์"}}
 ]

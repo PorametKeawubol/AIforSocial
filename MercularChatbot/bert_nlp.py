@@ -207,6 +207,11 @@ class PhayaThaiBertIntentClassifier:
         pooled = (hidden_states * mask).sum(dim=1) / mask.sum(dim=1).clamp(min=1e-9)
         return self._torch.nn.functional.normalize(pooled, p=2, dim=1)
 
+    def warm_up(self) -> None:
+        """Load the model and intent prototypes before the first user message."""
+
+        self._load()
+
     def predict(self, text: str) -> IntentPrediction:
         """Classify non-empty user text with PhayaThaiBERT semantic similarity."""
 

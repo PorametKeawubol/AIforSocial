@@ -293,6 +293,41 @@ def test_promotion_intent_reads_promotion_snapshot_without_product_search():
     assert "PAYDAY" in json.dumps(replies[0][1].to_dict(), ensure_ascii=False)
 
 
+def test_dynamic_parser_is_reused_until_catalogue_vocabulary_changes(monkeypatch):
+    import app as app_module
+
+    real_parser = app_module.ThaiCommandParser
+    builds = []
+
+    class CountingParser:
+        def __init__(self, *, brands, categories):
+            builds.append((tuple(brands), tuple(categories)))
+            self.delegate = real_parser(brands=brands, categories=categories)
+
+        def parse(self, text):
+            return self.delegate.parse(text)
+
+    monkeypatch.setattr(app_module, "ThaiCommandParser", CountingParser)
+    repository = FakeRepository([_product()])
+    app = app_module.create_app(
+        replace(_settings(), nlp_backend="rules"),
+        repository=repository,
+        recommender=FakeRecommender(),
+        reply_sender=lambda *_: None,
+    )
+    client = app.test_client()
+
+    assert _post(client, _event_body("หาหูฟัง", event_id="parser-cache-1")).status_code == 200
+    assert _post(client, _event_body("หาหูฟัง", event_id="parser-cache-2")).status_code == 200
+    assert len(builds) == 1
+
+    repository.products.append(
+        replace(_product(2), category="ลำโพง", category_path=("Audio", "ลำโพง"))
+    )
+    assert _post(client, _event_body("หาลำโพง", event_id="parser-cache-3")).status_code == 200
+    assert len(builds) == 2
+
+
 def test_product_list_question_opens_category_picker_instead_of_unknown_reply() -> None:
     replies = []
     parser = FakeParser()

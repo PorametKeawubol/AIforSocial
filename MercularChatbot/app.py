@@ -6,6 +6,8 @@ from dataclasses import replace
 import logging
 import math
 import os
+from threading import RLock
+import time
 from collections.abc import Callable
 from typing import Any
 
@@ -274,18 +276,29 @@ def create_app(
         else None
     )
 
-    def build_command_parser() -> ThaiCommandParser | PhayaThaiBertCommandParser:
+    def catalog_vocabulary() -> tuple[tuple[str, ...], tuple[str, ...]]:
+        return (
+            tuple(sorted(catalog.brands(), key=str.casefold)),
+            tuple(sorted(catalog.categories(), key=str.casefold)),
+        )
+
+    def build_command_parser(
+        vocabulary: tuple[tuple[str, ...], tuple[str, ...]],
+    ) -> ThaiCommandParser | PhayaThaiBertCommandParser:
+        brands, categories = vocabulary
         if settings.nlp_backend == "phayathaibert":
             return PhayaThaiBertCommandParser(
-                brands=catalog.brands(),
-                categories=catalog.categories(),
+                brands=brands,
+                categories=categories,
                 min_confidence=settings.phayathaibert_min_confidence,
                 classifier=phayathaibert_classifier,
             )
-        return ThaiCommandParser(brands=catalog.brands(), categories=catalog.categories())
+        return ThaiCommandParser(brands=brands, categories=categories)
 
-    command_parser = parser or build_command_parser()
+    parser_vocabulary = catalog_vocabulary() if parser is None else ((), ())
+    command_parser = parser or build_command_parser(parser_vocabulary)
     dynamic_catalog_parser = parser is None
+    parser_lock = RLock()
     selector = recommender or ProductRecommender(
         history_ttl_seconds=settings.history_ttl_seconds,
         history_size=settings.history_size,
@@ -301,6 +314,7 @@ def create_app(
         COMMAND_PARSER=command_parser,
         PRODUCT_RECOMMENDER=selector,
         PROMOTION_REPOSITORY=promotion_catalog,
+        PHAYATHAIBERT_CLASSIFIER=phayathaibert_classifier,
         WEBHOOK_EVENT_DEDUPLICATOR=RecentWebhookEvents(
             ttl_seconds=_env_number("WEBHOOK_EVENT_TTL_SECONDS", 600),
             max_entries=_env_number(
@@ -317,6 +331,22 @@ def create_app(
         ),
     )
 
+    def current_command_parser() -> ThaiCommandParser | PhayaThaiBertCommandParser:
+        """Reuse the parser until an atomically reloaded catalogue changes its vocabulary."""
+
+        nonlocal command_parser, parser_vocabulary
+        if not dynamic_catalog_parser:
+            return command_parser
+        current_vocabulary = catalog_vocabulary()
+        if current_vocabulary == parser_vocabulary:
+            return command_parser
+        with parser_lock:
+            if current_vocabulary != parser_vocabulary:
+                command_parser = build_command_parser(current_vocabulary)
+                parser_vocabulary = current_vocabulary
+                app.config["COMMAND_PARSER"] = command_parser
+        return command_parser
+
     # A placeholder keeps health endpoints available before credentials are set;
     # /callback still refuses traffic until both credentials exist.
     handler = WebhookHandler(settings.line_channel_secret or "missing-channel-secret")
@@ -324,6 +354,12 @@ def create_app(
         _env_number("LINE_REPLY_CONNECT_TIMEOUT_SECONDS", 2.0)
     )
     line_read_timeout = float(_env_number("LINE_REPLY_READ_TIMEOUT_SECONDS", 5.0))
+    line_api_client = (
+        ApiClient(Configuration(access_token=settings.line_channel_access_token))
+        if settings.line_channel_access_token and reply_sender is None
+        else None
+    )
+    line_messaging_api = MessagingApi(line_api_client) if line_api_client else None
 
     def send_reply(reply_token: str, message: object | list[object]) -> bool:
         messages = message if isinstance(message, list) else [message]
@@ -346,26 +382,28 @@ def create_app(
             return True
         if not settings.line_channel_access_token:
             raise RuntimeError("LINE_CHANNEL_ACCESS_TOKEN is not configured")
-        configuration = Configuration(access_token=settings.line_channel_access_token)
+        if line_messaging_api is None:
+            raise RuntimeError("LINE Messaging API client is unavailable")
 
         def submit(candidate_messages: list[object]) -> None:
-            with ApiClient(configuration) as api_client:
-                response = MessagingApi(api_client).reply_message(
-                    ReplyMessageRequest(
-                        reply_token=reply_token,
-                        messages=candidate_messages,
-                    ),
-                    _request_timeout=(line_connect_timeout, line_read_timeout),
-                )
-                # Keep enough evidence to distinguish a successful LINE API
-                # acceptance from a local webhook-only 200, without recording
-                # message text, user IDs, reply tokens, or other personal data.
-                sent_messages = getattr(response, "sent_messages", None) or []
-                LOGGER.info(
-                    "LINE accepted reply (requested_messages=%d, sent_messages=%d)",
-                    len(candidate_messages),
-                    len(sent_messages),
-                )
+            started = time.perf_counter()
+            response = line_messaging_api.reply_message(
+                ReplyMessageRequest(
+                    reply_token=reply_token,
+                    messages=candidate_messages,
+                ),
+                _request_timeout=(line_connect_timeout, line_read_timeout),
+            )
+            # Keep enough evidence to distinguish a successful LINE API
+            # acceptance from a local webhook-only 200, without recording
+            # message text, user IDs, reply tokens, or other personal data.
+            sent_messages = getattr(response, "sent_messages", None) or []
+            LOGGER.info(
+                "LINE accepted reply (requested_messages=%d, sent_messages=%d, api_ms=%.1f)",
+                len(candidate_messages),
+                len(sent_messages),
+                (time.perf_counter() - started) * 1_000,
+            )
 
         try:
             submit(outgoing)
@@ -546,12 +584,7 @@ def create_app(
                     normalize_text(text),
                 )
             else:
-                active_parser = (
-                    build_command_parser()
-                    if dynamic_catalog_parser
-                    else command_parser
-                )
-                parsed = active_parser.parse(text)
+                parsed = current_command_parser().parse(text)
 
             if is_alternative_request(text):
                 focused = catalog.get(focused_id) if focused_id else None
@@ -764,4 +797,16 @@ if __name__ == "__main__":
         level=getattr(logging, runtime_settings.log_level, logging.INFO),
         format="%(asctime)s %(levelname)s %(name)s %(message)s",
     )
+    classifier = app.config.get("PHAYATHAIBERT_CLASSIFIER")
+    if classifier is not None:
+        started = time.perf_counter()
+        try:
+            classifier.warm_up()
+        except PhayaThaiBertUnavailable as error:
+            LOGGER.warning("PhayaThaiBERT warm-up failed; rules remain available: %s", error)
+        else:
+            LOGGER.info(
+                "PhayaThaiBERT warmed before accepting LINE traffic (warmup_ms=%.1f)",
+                (time.perf_counter() - started) * 1_000,
+            )
     app.run(host="0.0.0.0", port=runtime_settings.port, debug=False)
