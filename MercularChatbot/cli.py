@@ -6,11 +6,13 @@ import argparse
 import json
 
 try:  # Package import from the repository root.
+    from .bert_nlp import PhayaThaiBertCommandParser
     from .config import Settings
     from .nlp import ThaiCommandParser
     from .recommender import ProductRecommender
     from .repository import ProductRepository
 except ImportError:  # pragma: no cover - direct execution from this folder.
+    from bert_nlp import PhayaThaiBertCommandParser
     from config import Settings
     from nlp import ThaiCommandParser
     from recommender import ProductRecommender
@@ -39,8 +41,16 @@ def main() -> int:
         )
         return 1
 
-    parser = ThaiCommandParser(
-        brands=repository.brands(), categories=repository.categories()
+    parser = (
+        PhayaThaiBertCommandParser(
+            brands=repository.brands(),
+            categories=repository.categories(),
+            model_name=settings.phayathaibert_model_name,
+            min_confidence=settings.phayathaibert_min_confidence,
+            local_files_only=settings.phayathaibert_local_files_only,
+        )
+        if settings.nlp_backend == "phayathaibert"
+        else ThaiCommandParser(brands=repository.brands(), categories=repository.categories())
     )
     parsed = parser.parse(args.message)
     selected = ProductRecommender().recommend(

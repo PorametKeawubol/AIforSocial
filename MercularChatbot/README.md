@@ -22,7 +22,7 @@
 
 ```text
 LINE webhook (app.py)
-  ├─ Thai intent + entities (nlp.py)
+  ├─ PhayaThaiBERT intent + exact Thai entities (bert_nlp.py + nlp.py)
   ├─ hard filters → relevance → fair random Top 5 (recommender.py)
   ├─ local last-known-good catalog (repository.py)
   └─ Flex / Quick Reply views (line_views.py)
@@ -45,6 +45,21 @@ cp .env.example .env
 
 ใส่ `LINE_CHANNEL_SECRET` และ `LINE_CHANNEL_ACCESS_TOKEN` ใน `.env` เท่านั้น
 ห้ามใส่ credential ลงใน source code หรือ commit `.env`
+
+### PhayaThaiBERT NLP
+
+MercuMate ใช้ `clicknext/phayathaibert` เพื่อช่วยจำแนก intent ภาษาไทยจากความหมาย
+ของประโยค และใช้ rule parser ควบคู่กันเพื่อดึงเงื่อนไขสินค้าที่ต้องแม่นยำ เช่น ราคา
+แบรนด์ สต็อก และการเรียงผลลัพธ์ หากโหลดโมเดลไม่ได้ บอตจะตอบด้วย rule parser เดิม
+โดยอัตโนมัติและไม่ทำให้ webhook ล่ม
+
+ค่าเริ่มต้นใน `.env` คือ `NLP_BACKEND=phayathaibert` โมเดลจะดาวน์โหลดจาก Hugging
+Face เมื่อได้รับข้อความครั้งแรก (ไฟล์ weights ราว 1.1 GB); สำหรับ production ควร
+pre-cache น้ำหนักโมเดลแล้วตั้ง `PHAYATHAIBERT_LOCAL_FILES_ONLY=true` หากต้องการปิด
+โมเดลชั่วคราว ให้ตั้ง `NLP_BACKEND=rules`.
+
+ค่า `PHAYATHAIBERT_MIN_CONFIDENCE` เริ่มต้นเป็น `0.30` ซึ่งเหมาะกับคะแนน semantic
+similarity ของ base model; เพิ่มค่านี้ได้หากต้องการให้ rule parser เป็นตัวตัดสินมากขึ้น.
 
 หากต้องการใช้ Image, Video, Audio, Imagemap หรือ Template demo ให้ใส่ origin
 HTTPS ที่ LINE เข้าถึงได้ด้วย เช่น:

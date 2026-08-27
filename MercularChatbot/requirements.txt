@@ -5,4 +5,9 @@ line-bot-sdk>=3.25,<4
 python-dotenv>=1.0,<2
 requests>=2.31,<3
 beautifulsoup4>=4.12,<5
+# PhayaThaiBERT semantic intent router.  Model weights download on first use (or can
+# be pre-cached with PHAYATHAIBERT_LOCAL_FILES_ONLY=true in production).
+torch>=2.2,<3
+transformers>=4.44,<5
+sentencepiece>=0.2,<1
 pytest>=8.0,<9

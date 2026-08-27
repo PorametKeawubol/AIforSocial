@@ -24,6 +24,7 @@ from linebot.v3.messaging import (
 from linebot.v3.webhooks import MessageEvent, PostbackEvent, TextMessageContent
 
 try:  # Package import for gunicorn/``python -m MercularChatbot.app``.
+    from .bert_nlp import PhayaThaiBertCommandParser, PhayaThaiBertIntentClassifier
     from .config import Settings
     from .line_views import (
         build_product_carousel_message,
@@ -46,6 +47,7 @@ try:  # Package import for gunicorn/``python -m MercularChatbot.app``.
     from .recommender import ProductRecommender
     from .repository import ProductRepository
 except ImportError:  # pragma: no cover - direct execution from this folder.
+    from bert_nlp import PhayaThaiBertCommandParser, PhayaThaiBertIntentClassifier
     from config import Settings
     from line_views import (
         build_product_carousel_message,
@@ -240,9 +242,26 @@ def create_app(
 
     settings = settings or Settings.from_env()
     catalog = repository or ProductRepository(settings.snapshot_path, settings=settings)
-    command_parser = parser or ThaiCommandParser(
-        brands=catalog.brands(), categories=catalog.categories()
+    phayathaibert_classifier = (
+        PhayaThaiBertIntentClassifier(
+            settings.phayathaibert_model_name,
+            local_files_only=settings.phayathaibert_local_files_only,
+        )
+        if parser is None and settings.nlp_backend == "phayathaibert"
+        else None
     )
+
+    def build_command_parser() -> ThaiCommandParser | PhayaThaiBertCommandParser:
+        if settings.nlp_backend == "phayathaibert":
+            return PhayaThaiBertCommandParser(
+                brands=catalog.brands(),
+                categories=catalog.categories(),
+                min_confidence=settings.phayathaibert_min_confidence,
+                classifier=phayathaibert_classifier,
+            )
+        return ThaiCommandParser(brands=catalog.brands(), categories=catalog.categories())
+
+    command_parser = parser or build_command_parser()
     dynamic_catalog_parser = parser is None
     selector = recommender or ProductRecommender(
         history_ttl_seconds=settings.history_ttl_seconds,
@@ -432,9 +451,7 @@ def create_app(
             # the lightweight parser vocabulary too, so newly scraped brands and
             # categories work without restarting the webhook process.
             active_parser = (
-                ThaiCommandParser(
-                    brands=catalog.brands(), categories=catalog.categories()
-                )
+                build_command_parser()
                 if dynamic_catalog_parser
                 else command_parser
             )

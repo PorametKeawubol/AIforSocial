@@ -43,3 +43,16 @@ def test_message_media_and_coupon_settings_are_optional(monkeypatch):
 
     assert settings.public_base_url == "https://mercumate.example"
     assert settings.line_coupon_id == "coupon-id"
+
+
+def test_phayathaibert_configuration_defaults_and_can_use_local_model_cache(monkeypatch):
+    monkeypatch.setenv("PHAYATHAIBERT_MODEL_NAME", "local-phayathaibert")
+    monkeypatch.setenv("PHAYATHAIBERT_MIN_CONFIDENCE", "0.83")
+    monkeypatch.setenv("PHAYATHAIBERT_LOCAL_FILES_ONLY", "true")
+
+    settings = Settings.from_env()
+
+    assert settings.nlp_backend == "phayathaibert"
+    assert settings.phayathaibert_model_name == "local-phayathaibert"
+    assert settings.phayathaibert_min_confidence == 0.83
+    assert settings.phayathaibert_local_files_only is True
