@@ -30,6 +30,7 @@ INTENT_THANKS = "thanks"
 INTENT_CONTACT = "contact"
 INTENT_ORDER = "order"
 INTENT_REFRESH = "refresh"
+INTENT_PROMOTION = "promotion"
 INTENT_UNKNOWN = "unknown"
 
 SUPPORTED_INTENTS = (
@@ -40,6 +41,7 @@ SUPPORTED_INTENTS = (
     INTENT_CONTACT,
     INTENT_ORDER,
     INTENT_REFRESH,
+    INTENT_PROMOTION,
     INTENT_UNKNOWN,
 )
 
@@ -116,12 +118,14 @@ CATEGORY_ALIASES: Mapping[str, tuple[str, ...]] = {
         "คีบอร์ด",
         "คีบอด",
         "คียบอด",
+        "คีย์บอด",
+        "คีย์บอด",
         "แป้นพิมพ์",
         "keyboard",
         "keybord",
         "keybaord",
     ),
-    "เมาส์": ("เมาส์", "เม้า", "เม้าส์", "mouse", "mice"),
+    "เมาส์": ("เมาส์", "เมาส", "เม้า", "เม้าส์", "mouse", "mice"),
     "ลำโพง": ("ลำโพง", "ลําโพง", "speaker", "speakers", "soundbar", "ซาวด์บาร์"),
     "ไมโครโฟน": ("ไมโครโฟน", "ไมค์", "ไมค", "microphone", "mic"),
     "จอคอม": (
@@ -141,8 +145,16 @@ CATEGORY_ALIASES: Mapping[str, tuple[str, ...]] = {
         "computer chair",
     ),
     "โต๊ะคอม": ("โต๊ะคอม", "โต๊ะเกมมิ่ง", "gaming desk", "computer desk"),
-    "เว็บแคม": ("เว็บแคม", "เว็ปแคม", "webcam", "web cam"),
-    "โน้ตบุ๊ก": ("โน้ตบุ๊ก", "โน๊ตบุ๊ค", "แล็ปท็อป", "laptop", "notebook"),
+    "เว็บแคม": ("เว็บแคม", "เว็ปแคม", "เวปแคม", "webcam", "web cam"),
+    "โน้ตบุ๊ก": (
+        "โน้ตบุ๊ก",
+        "โน๊ตบุ๊ค",
+        "โน้ตบุก",
+        "โน๊ตบุก",
+        "แล็ปท็อป",
+        "laptop",
+        "notebook",
+    ),
     "เครื่องพิมพ์": (
         "เครื่องพิมพ์",
         "เครื่องปริ้น",
@@ -166,7 +178,15 @@ CATEGORY_ALIASES: Mapping[str, tuple[str, ...]] = {
         "controller",
         "gamepad",
     ),
-    "พาวเวอร์แบงก์": ("พาวเวอร์แบงก์", "พาวเวอร์แบงค์", "แบตสำรอง", "powerbank", "power bank"),
+    "พาวเวอร์แบงก์": (
+        "พาวเวอร์แบงก์",
+        "พาวเวอร์แบงค์",
+        "พาวเวอแบง",
+        "พาวเวอร์แบง",
+        "แบตสำรอง",
+        "powerbank",
+        "power bank",
+    ),
     "อุปกรณ์คอมพิวเตอร์": (
         "อุปกรณ์คอมพิวเตอร์",
         "อุปกรณ์เสริมคอมพิวเตอร์",
@@ -210,10 +230,26 @@ BRAND_ALIASES: Mapping[str, tuple[str, ...]] = {
 # Feature groups are used by the recommender to preserve residual constraints such as
 # "wireless" even when the catalogue describes the feature in the other language.
 FEATURE_ALIASES: Mapping[str, tuple[str, ...]] = {
-    "gaming": ("gaming", "เกมมิ่ง", "เล่นเกม"),
+    "gaming": (
+        "gaming",
+        "เกมมิ่ง",
+        "เล่นเกม",
+        "เล่น fps",
+        "เกม fps",
+        "fps",
+        "เล่น valorant",
+        "valorant",
+    ),
     "conference": ("conference", "meeting", "ประชุม", "ไว้ประชุม", "work from home"),
-    "wireless": ("wireless", "ไร้สาย", "ไม่มีสาย"),
-    "bluetooth": ("bluetooth", "บลูทูธ", "บลูทูท", "bt"),
+    "wireless": ("wireless", "ไร้สาย", "ไรสาย", "วายเลส", "ไวเลส", "ไม่มีสาย"),
+    "bluetooth": (
+        "bluetooth",
+        "บลูทูธ",
+        "บลูทูท",
+        "บลูทูด",
+        "บลูทุธ",
+        "bt",
+    ),
     "noise_cancelling": (
         "noise cancelling",
         "noise canceling",
@@ -226,6 +262,18 @@ FEATURE_ALIASES: Mapping[str, tuple[str, ...]] = {
     "rgb": ("rgb", "ไฟ rgb", "ไฟรุ้ง"),
     "ergonomic": ("ergonomic", "ตามหลักสรีรศาสตร์", "เพื่อสุขภาพ"),
     "usb_c": ("usb c", "usb-c", "type c", "type-c", "ไทป์ซี"),
+    "layout_75": ("75 percent", "75 เปอร์เซ็นต์", "75"),
+    "lightweight": (
+        "lightweight",
+        "ultralight",
+        "superlight",
+        "น้ำหนักเบา",
+        "เน้นเบา",
+        "เบา",
+    ),
+    "micro_sd": ("micro sd card", "micro sd", "microsd"),
+    "white": ("white", "สีขาว", "ขาว"),
+    "black": ("black", "สีดำ", "ดำ"),
 }
 
 
@@ -240,9 +288,12 @@ _SUBTYPE_CATEGORY_HINTS: Mapping[str, str] = {
     "toner": "เครื่องพิมพ์",
     "scanner": "เครื่องพิมพ์",
     "สแกนเนอร์": "เครื่องพิมพ์",
+    "สแกนเนอ": "เครื่องพิมพ์",
     "flash drive": "อุปกรณ์เสริม",
     "แฟลชไดรฟ์": "อุปกรณ์เสริม",
+    "แฟลชไดร์ฟ": "อุปกรณ์เสริม",
     "usb hub": "อุปกรณ์เสริม",
+    "ยูเอสบีฮับ": "อุปกรณ์เสริม",
     "conference camera": "เว็บแคม",
     "กล้องประชุม": "เว็บแคม",
     "ขาไมค์": "ไมโครโฟน",
@@ -257,6 +308,7 @@ _SUBTYPE_CATEGORY_HINTS: Mapping[str, str] = {
     "เอียร์บัด": "หูฟัง",
     "soundbar": "ลำโพง",
     "ซาวด์บาร์": "ลำโพง",
+    "ซาวบาร์": "ลำโพง",
 }
 
 _SUBTYPE_QUERY_REPLACEMENTS: Mapping[str, str] = {
@@ -276,10 +328,14 @@ class CommandEntities:
 
     ``brands`` is an OR constraint: a product may belong to any requested brand.  All
     other populated fields are combined with AND semantics by the recommender.
+    ``category_path`` is reserved for exact catalogue navigation; ordinary NLP
+    commands continue to use the human-facing ``category`` field.
     """
 
     category: str | None = None
+    category_path: tuple[str, ...] = field(default_factory=tuple)
     brands: tuple[str, ...] = field(default_factory=tuple)
+    excluded_brands: tuple[str, ...] = field(default_factory=tuple)
     min_price: float | None = None
     max_price: float | None = None
     min_price_inclusive: bool = True
@@ -314,7 +370,9 @@ class CommandEntities:
 
     def to_dict(self) -> dict[str, Any]:
         result = asdict(self)
+        result["category_path"] = list(self.category_path)
         result["brands"] = list(self.brands)
+        result["excluded_brands"] = list(self.excluded_brands)
         return result
 
 
@@ -346,6 +404,10 @@ class ParsedCommand:
     @property
     def brands(self) -> tuple[str, ...]:
         return self.entities.brands
+
+    @property
+    def excluded_brands(self) -> tuple[str, ...]:
+        return self.entities.excluded_brands
 
     @property
     def min_price(self) -> float | None:
@@ -389,6 +451,7 @@ _AMOUNT_ATOM = r"(?:\d+(?:\.\d+)?|ศูนย์|หนึ่ง|สอง|ส�
 _THAI_DIGIT_WORD = r"(?:หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า)"
 _THAI_COMPOUND_AMOUNT = (
     rf"(?:{_THAI_DIGIT_WORD}\s*พัน\s*{_THAI_DIGIT_WORD}\s*ร้อย|"
+    rf"{_THAI_DIGIT_WORD}?\s*พัน\s*ห้า(?:\s*ร้อย)?|"
     rf"{_THAI_DIGIT_WORD}?\s*หมื่น\s*{_THAI_DIGIT_WORD}\s*พัน)"
 )
 _AMOUNT = rf"(?:{_THAI_COMPOUND_AMOUNT}|{_AMOUNT_ATOM}\s*(?:k|เค|พัน|หมื่น)?)"
@@ -397,6 +460,13 @@ _SPEC_UNIT = r"(?:นิ้ว|inch|inches|dpi|mah|hz|khz|mhz|ghz)"
 
 def _amount_value(value: str) -> float | None:
     normal_value = re.sub(r"\s+", "", normalize_text(value))
+    compound = re.fullmatch(
+        r"(หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า)?พันห้า(?:ร้อย)?",
+        normal_value,
+    )
+    if compound:
+        thousands = _THAI_NUMBER_WORDS.get(compound.group(1) or "หนึ่ง", 1)
+        return thousands * 1_000 + 500
     compound = re.fullmatch(
         r"(หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า)พัน"
         r"(หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า)ร้อย",
@@ -568,6 +638,12 @@ class ThaiCommandParser:
                 if not multiple:
                     break
 
+        # An exact category/brand phrase is always stronger than a fuzzy match
+        # from a dynamically discovered catalogue label (for example,
+        # ``soundbar`` must not become ``Sound Card``).
+        if matches and not multiple:
+            return tuple(matches)
+
         # A conservative single-token fuzzy pass catches unseen adjacent-key typos.
         tokens = tuple(re.finditer(r"[a-z0-9ก-๙]+", text))
         for token_match in tokens:
@@ -595,8 +671,24 @@ class ThaiCommandParser:
                 if not multiple:
                     break
 
-        matches.sort(key=lambda match: (match.start, match.canonical.casefold()))
-        return tuple(matches if multiple else matches[:1])
+        matches.sort(key=lambda match: (match.start, match.fuzzy, match.canonical.casefold()))
+        deduplicated: list[_AliasMatch] = []
+        for match in matches:
+            candidate = compact_text(match.canonical)
+            if any(
+                candidate == compact_text(existing.canonical)
+                or (
+                    match.fuzzy
+                    and SequenceMatcher(
+                        None, candidate, compact_text(existing.canonical)
+                    ).ratio()
+                    >= 0.84
+                )
+                for existing in deduplicated
+            ):
+                continue
+            deduplicated.append(match)
+        return tuple(deduplicated if multiple else deduplicated[:1])
 
     @staticmethod
     def _extract_prices(
@@ -734,6 +826,15 @@ class ThaiCommandParser:
             "เอาไว้",
             "เอาเฉพาะ",
             "เฉพาะ",
+            "อย่างเดียว",
+            "สำหรับ",
+            "ไม่เอา",
+            "ไม่รับ",
+            "ไม่ต้องการ",
+            "ยกเว้น",
+            "not",
+            "except",
+            "without",
             "เท่านั้น",
             "สินค้า",
             "รุ่น",
@@ -789,6 +890,7 @@ class ThaiCommandParser:
                 "looking for",
                 "recommend",
                 "i want",
+                "สำหรับ",
             )
         }
         suffix_fillers = {
@@ -906,15 +1008,25 @@ class ThaiCommandParser:
             minimum_inclusive,
             maximum_inclusive,
             price_spans,
-        ) = self._extract_prices(text)
+        ) = self._extract_prices(re.sub(r"(?<=\d)o(?=\b)", "0", text))
 
-        negative_brand = any(
-            re.search(
+        all_brand_matches = brand_matches
+        excluded_brand_matches = tuple(
+            match
+            for match in all_brand_matches
+            if re.search(
                 r"(?:ไม่เอา|ไม่รับ|ไม่ต้องการ|ยกเว้น|not|except|without)\s*$",
                 text[max(0, match.start - 24) : match.start],
             )
             is not None
-            for match in brand_matches
+        )
+        excluded_keys = {
+            (match.start, compact_text(match.canonical)) for match in excluded_brand_matches
+        }
+        brand_matches = tuple(
+            match
+            for match in all_brand_matches
+            if (match.start, compact_text(match.canonical)) not in excluded_keys
         )
 
         availability_true = (
@@ -927,6 +1039,7 @@ class ThaiCommandParser:
             "exclude sold out",
             "ของพร้อมส่ง",
             "พร้อมส่ง",
+            "พร้อมสง",
             "มีของ",
             "มีสต็อก",
             "ของพร้อม",
@@ -961,7 +1074,7 @@ class ThaiCommandParser:
             (SORT_PRICE_DESC, ("แพงสุด", "แพงที่สุด", "ราคาสูงสุด", "เรียงราคาแพง", "price high to low", "most expensive")),
             (SORT_NEWEST, ("ใหม่สุด", "ใหม่ล่าสุด", "รุ่นใหม่", "สินค้ามาใหม่", "newest", "latest")),
             (SORT_POPULAR, ("ยอดนิยม", "ขายดี", "ฮิต", "นิยมสุด", "popular", "best seller", "bestseller")),
-            (SORT_DISCOUNT, ("ลดเยอะสุด", "ส่วนลดสูงสุด", "คุ้มสุด", "ลดราคามากสุด", "biggest discount", "best discount")),
+            (SORT_DISCOUNT, ("ลดเยอะสุด", "ลดแรงสุด", "ส่วนลดสูงสุด", "คุ้มสุด", "ลดราคามากสุด", "biggest discount", "best discount")),
         )
         sort_value: str | None = None
         sort_match: tuple[str, int] | None = None
@@ -975,7 +1088,7 @@ class ThaiCommandParser:
             sort_match = (phrase, position)
 
         brand_label_spans: list[tuple[int, int]] = []
-        for match in brand_matches:
+        for match in all_brand_matches:
             before = text[: match.start]
             prefix = re.search(
                 r"(?:แบรนด์|(?<![a-z0-9])brand)\s*$",
@@ -994,7 +1107,7 @@ class ThaiCommandParser:
                 )
 
         removal_spans = [*price_spans, *brand_label_spans]
-        for match in brand_matches:
+        for match in all_brand_matches:
             removal_spans.append((match.start, match.start + len(match.alias)))
         for match in category_matches:
             match_span = (match.start, match.start + len(match.alias))
@@ -1030,9 +1143,11 @@ class ThaiCommandParser:
             else subtype_category
         )
         brands = tuple(match.canonical for match in brand_matches)
+        excluded_brands = tuple(match.canonical for match in excluded_brand_matches)
         entities = CommandEntities(
             category=category,
             brands=brands,
+            excluded_brands=excluded_brands,
             min_price=minimum,
             max_price=maximum,
             min_price_inclusive=minimum_inclusive,
@@ -1082,9 +1197,11 @@ class ThaiCommandParser:
             "ขอชุดใหม่",
             "ดูชุดใหม่",
             "ขออันอื่น",
+            "ขอดูอันอืน",
             "ดูอย่างอื่น",
             "มีตัวอื่นไหม",
             "เอาใหม่",
+            "สุ่มไหม่",
             "refresh",
             "show another",
             "show me another",
@@ -1093,9 +1210,11 @@ class ThaiCommandParser:
         )
         help_phrases = (
             "ช่วยเหลือ",
+            "ช้วยเหลือ",
             "ช่วยอะไรได้บ้าง",
             "ทำอะไรได้บ้าง",
             "ใช้งานยังไง",
+            "ใช้งานยงไง",
             "วิธีใช้งาน",
             "คำสั่งมีอะไรบ้าง",
             "ขอความช่วยเหลือ",
@@ -1103,9 +1222,34 @@ class ThaiCommandParser:
             "how to use",
             "what can you do",
         )
-        thanks_phrases = ("ขอบคุณ", "ขอบใจ", "ขอบพระคุณ", "thanks", "thank you", "thx")
+        promotion_phrases = (
+            "โปรโมชัน",
+            "โปรโมชั่น",
+            "โปรโมชั้น",
+            "โปรมชัน",
+            "โปรโมช่น",
+            "โปรล่าสุด",
+            "โปรอะไร",
+            "มีโปรอะไร",
+            "มีคูปองอะไร",
+            "มีคูปองลดไหม",
+            "คูปองล่าสุด",
+            "promotion",
+            "promotions",
+            "latest deals",
+        )
+        thanks_phrases = (
+            "ขอบคุณ",
+            "ขอบคุน",
+            "ขอบใจ",
+            "ขอบพระคุณ",
+            "thanks",
+            "thank you",
+            "thx",
+        )
         greeting_phrases = (
             "สวัสดี",
+            "สวัดดี",
             "หวัดดี",
             "ดีจ้า",
             "ฮัลโหล",
@@ -1156,6 +1300,7 @@ class ThaiCommandParser:
             (
                 category,
                 brands,
+                excluded_brands,
                 minimum is not None,
                 maximum is not None,
                 in_stock is not None,
@@ -1185,23 +1330,22 @@ class ThaiCommandParser:
             or re.fullmatch(r"refresh(?:\s+please)?", text) is not None
         )
         help_detected = self._first_phrase(text, help_phrases)[0] is not None
-        if negative_brand:
-            # Exclusion cannot be represented by the public entity schema.  Returning
-            # ``unknown`` prompts clarification instead of silently treating a rejected
-            # brand as a positive hard filter.
-            intent, confidence = INTENT_UNKNOWN, 0.35
-        elif order_detected:
+        promotion_detected = self._first_phrase(text, promotion_phrases)[0] is not None
+        if order_detected:
             intent, confidence = INTENT_ORDER, 0.97
         elif contact_detected:
             intent, confidence = INTENT_CONTACT, 0.97
         elif refresh_detected:
             intent, confidence = INTENT_REFRESH, 0.96
+        elif promotion_detected:
+            intent, confidence = INTENT_PROMOTION, 0.97
         elif has_entities or has_search_phrase or has_search_prefix or has_product_hint or has_model_token:
             intent = INTENT_SEARCH
             evidence = sum(
                 (
                     bool(category),
                     bool(brands),
+                    bool(excluded_brands),
                     minimum is not None or maximum is not None,
                     in_stock is not None,
                     sort_value is not None,
@@ -1257,6 +1401,7 @@ __all__ = [
     "INTENT_CONTACT",
     "INTENT_ORDER",
     "INTENT_REFRESH",
+    "INTENT_PROMOTION",
     "INTENT_UNKNOWN",
     "SORT_PRICE_ASC",
     "SORT_PRICE_DESC",

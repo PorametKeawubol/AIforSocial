@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T00:00:00+07:00",
+  "source": {
+    "name": "Mercular promotion articles",
+    "url": "https://www.mercular.com/category-review-article/promotion",
+    "attribution": "Initial current promotion verified from Mercular's public article on 2026-08-27."
+  },
+  "summary": {
+    "promotions": 1
+  },
+  "promotions": [
+    {
+      "id": "payday-shopping-fest-aug-2026",
+      "title": "PAYDAY SHOPPING FEST แจกคูปองลดสูงสุด 8,000.- ใครเล็งไอเทมไหนไว้ จัดด่วน! ที่ Mercular",
+      "summary": "คูปองส่วนลดกลาง 3%, 4% และ 5% พร้อมส่วนลดเฉพาะหมวดสำหรับโปรเจคเตอร์ แขนจับจอ เกมมิ่งเกียร์ จอมอนิเตอร์ และหูฟังที่ร่วมรายการ",
+      "image_url": "",
+      "article_url": "https://www.mercular.com/review-article/payday-shopping-fest-aug-2026",
+      "published_at": "2026-08-24",
+      "starts_at": "2026-08-24",
+      "ends_at": "2026-08-31",
+      "discount_summary": "ลดสูงสุด 8,000 บาท และดีลเฉพาะหมวดสูงสุด 50%",
+      "scraped_at": "2026-08-27T00:00:00+07:00"
+    }
+  ]
+}

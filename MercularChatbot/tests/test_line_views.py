@@ -12,9 +12,13 @@ from line_views import (
     LINE_ALT_TEXT_LIMIT,
     LINE_POSTBACK_DATA_LIMIT,
     MAX_CAROUSEL_PRODUCTS,
+    build_category_picker_message,
+    build_category_picker_payload,
     build_postback_data,
     build_product_carousel_message,
     build_product_carousel_payload,
+    build_promotion_bubble_payload,
+    build_promotion_carousel_message,
     contact_message,
     data_unavailable_message,
     default_quick_reply_items,
@@ -28,12 +32,15 @@ from line_views import (
     parse_product_postback,
     payload_is_json_serializable,
     product_carousel_message,
+    product_comparison_message,
     product_detail_message,
     refresh_message,
     text_with_quick_replies,
     truncate_text,
 )
+from catalog_navigation import CategoryMenu, CategoryOption
 from models import Product
+from promotions import Promotion
 
 
 def product(number: int = 1, **overrides: object) -> Product:
@@ -53,6 +60,19 @@ def product(number: int = 1, **overrides: object) -> Product:
     }
     values.update(overrides)
     return Product(**values)  # type: ignore[arg-type]
+
+
+def promotion() -> Promotion:
+    return Promotion(
+        id="payday",
+        title="PAYDAY ลดสูงสุด 8,000 บาท",
+        summary="คูปองทุกหมวดและดีลเฉพาะสินค้า",
+        image_url="https://cdn.example.com/promo.jpg",
+        article_url="https://www.mercular.com/review-article/payday",
+        starts_at="2026-08-24",
+        ends_at="2026-08-31",
+        discount_summary="ลดสูงสุด 8,000 บาท",
+    )
 
 
 def bubbles(payload: dict[str, object]) -> list[dict[str, object]]:
@@ -87,6 +107,38 @@ def test_exactly_five_products_are_rendered_and_a_sixth_is_not() -> None:
     encoded = json.dumps(payload, ensure_ascii=False, allow_nan=False)
     assert "หูฟังเกมมิ่ง" in encoded
     assert payload_is_json_serializable(payload)
+
+
+def test_category_picker_paginates_choices_into_tappable_flex_buttons() -> None:
+    options = tuple(
+        CategoryOption(
+            f"หมวดสินค้าที่ยาวมาก {index}",
+            index * 10,
+            f"เลือกหมวด: คอมพิวเตอร์ > หมวด {index}",
+            True,
+        )
+        for index in range(1, 8)
+    )
+    menu = CategoryMenu(("คอมพิวเตอร์",), 280, options)
+
+    payload = build_category_picker_payload(menu)
+    message = build_category_picker_message(menu)
+
+    assert isinstance(message, FlexMessage)
+    assert payload_is_json_serializable(payload)
+    assert len(bubbles(payload)) == 2
+    rendered_buttons = [
+        item
+        for bubble in bubbles(payload)
+        for item in bubble["body"]["contents"]  # type: ignore[index]
+        if item["type"] == "button"  # type: ignore[index]
+    ]
+    assert len(rendered_buttons) == 7
+    assert all(
+        len(button["action"]["label"]) <= LINE_ACTION_LABEL_LIMIT
+        and len(button["action"]["text"]) <= LINE_POSTBACK_DATA_LIMIT
+        for button in rendered_buttons
+    )
 
 
 def test_duplicates_are_not_assumed_away_and_later_unique_products_fill_five() -> None:
@@ -232,6 +284,18 @@ def test_flex_sdk_wrapper_round_trips_the_pure_payload() -> None:
     json.dumps(message.to_dict(), ensure_ascii=False, allow_nan=False)
 
 
+def test_promotion_card_has_only_safe_mercular_link_and_bounded_content() -> None:
+    bubble = build_promotion_bubble_payload(promotion())
+    message = build_promotion_carousel_message([promotion()])
+
+    assert bubble["footer"]["contents"][0]["action"]["uri"].startswith(
+        "https://www.mercular.com/review-article/"
+    )
+    assert "8,000" in bubble["body"]["contents"][2]["text"]
+    assert isinstance(message, FlexMessage)
+    assert len(message.to_dict()["contents"]["contents"]) == 1
+
+
 def test_thai_uri_paths_are_utf8_percent_encoded_for_line() -> None:
     payload = build_product_carousel_payload(
         [product(product_url="https://www.mercular.com/หูฟัง-รุ่นใหม่?q=สีดำ")]
@@ -283,13 +347,15 @@ def test_postback_parser_rejects_tampering_duplicates_and_unknown_actions() -> N
 def test_quick_replies_offer_nlp_examples_help_and_refresh() -> None:
     items = default_quick_reply_items()
 
-    assert 5 == len(items) <= 13
+    assert 7 == len(items) <= 13
     assert all(item["type"] == "action" for item in items)
     assert all(len(item["action"]["label"]) <= LINE_ACTION_LABEL_LIMIT for item in items)
     message_actions = [item["action"] for item in items if item["action"]["type"] == "message"]
-    assert len(message_actions) == 5
+    assert len(message_actions) == 7
+    assert any(action["text"] == "เลือกหมวดสินค้า" for action in message_actions)
     assert any("ราคา" in action["text"] for action in message_actions)
     assert any(action["text"] == "ช่วยเหลือ" for action in message_actions)
+    assert any("โปรโมชัน" in action["text"] for action in message_actions)
 
     refresh = items[-1]["action"]
     assert refresh == {"type": "message", "label": "สุ่มใหม่", "text": "สุ่มใหม่"}
@@ -325,7 +391,17 @@ def test_greeting_uses_configured_bot_name_safely() -> None:
 
 
 def test_product_detail_is_readable_safe_and_contains_quick_replies() -> None:
-    message = product_detail_message(product(in_stock=False))
+    message = product_detail_message(
+        product(
+            in_stock=False,
+            overview="จอเกมมิ่ง 165Hz",
+            highlights=("พาเนล IPS", "รีเฟรชเรต 165Hz"),
+            specifications=(("พาเนล", "IPS"), ("รีเฟรชเรต", "165Hz")),
+            rating=4.8,
+            review_count=5,
+            warranty="ประกันศูนย์ 3 ปี",
+        )
+    )
     payload = message.to_dict()
 
     assert isinstance(message, TextMessage)
@@ -333,6 +409,32 @@ def test_product_detail_is_readable_safe_and_contains_quick_replies() -> None:
     assert "Mercular Test" in payload["text"]
     assert "฿1,991" in payload["text"]
     assert "สินค้าหมดชั่วคราว" in payload["text"]
+    assert "ภาพรวม: จอเกมมิ่ง 165Hz" in payload["text"]
+    assert "พาเนล IPS" in payload["text"]
+    assert "4.8/5 จาก 5 รีวิว" in payload["text"]
+    assert "ประกันศูนย์ 3 ปี" in payload["text"]
+
+
+def test_product_comparison_reports_price_and_only_known_spec_differences() -> None:
+    first = product(
+        1,
+        name="Mouse Alpha",
+        price=1990,
+        specifications=(("น้ำหนัก", "59 กรัม"), ("DPI", "26000")),
+    )
+    second = product(
+        2,
+        name="Mouse Beta",
+        price=2490,
+        specifications=(("น้ำหนัก", "63 กรัม"), ("DPI", "26000")),
+    )
+
+    message = product_comparison_message(first, second)
+
+    assert "ถูกกว่า ฿500" in message.text
+    assert "น้ำหนัก" in message.text
+    assert "59 กรัม" in message.text and "63 กรัม" in message.text
+    assert "DPI" not in message.text
 
 
 def test_unknown_stock_is_disclosed_without_claiming_available_or_sold_out() -> None:

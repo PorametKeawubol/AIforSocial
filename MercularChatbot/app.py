@@ -2,11 +2,10 @@
 
 from __future__ import annotations
 
+from dataclasses import replace
 import logging
 import math
 import os
-import threading
-import time
 from collections.abc import Callable
 from typing import Any
 
@@ -25,9 +24,24 @@ from linebot.v3.webhooks import MessageEvent, PostbackEvent, TextMessageContent
 
 try:  # Package import for gunicorn/``python -m MercularChatbot.app``.
     from .bert_nlp import PhayaThaiBertCommandParser, PhayaThaiBertIntentClassifier
+    from .catalog_navigation import (
+        build_category_menu,
+        parse_category_navigation,
+    )
     from .config import Settings
+    from .conversation import (
+        cheaper_than,
+        comparison_queries,
+        find_named_product,
+        is_alternative_request,
+        is_cheaper_refinement,
+        is_product_question,
+        product_question_answer,
+    )
     from .line_views import (
+        build_category_picker_message,
         build_product_carousel_message,
+        build_promotion_carousel_message,
         contact_message,
         data_unavailable_message,
         greeting_message,
@@ -35,9 +49,30 @@ try:  # Package import for gunicorn/``python -m MercularChatbot.app``.
         no_results_message,
         parse_product_postback,
         product_detail_message,
+        product_comparison_message,
+        promotion_unavailable_message,
         text_with_quick_replies,
     )
-    from .nlp import SORT_NEWEST, SORT_POPULAR, ThaiCommandParser
+    from .nlp import (
+        INTENT_CONTACT,
+        INTENT_GREETING,
+        INTENT_HELP,
+        INTENT_ORDER,
+        INTENT_PROMOTION,
+        INTENT_REFRESH,
+        INTENT_SEARCH,
+        INTENT_THANKS,
+        INTENT_UNKNOWN,
+        SORT_NEWEST,
+        SORT_POPULAR,
+        SORT_DISCOUNT,
+        SORT_PRICE_ASC,
+        SORT_PRICE_DESC,
+        CommandEntities,
+        ParsedCommand,
+        ThaiCommandParser,
+        normalize_text,
+    )
     from .message_showcase import (
         IMAGEMAP_SIZES,
         build_showcase_message,
@@ -46,11 +81,28 @@ try:  # Package import for gunicorn/``python -m MercularChatbot.app``.
     )
     from .recommender import ProductRecommender
     from .repository import ProductRepository
+    from .promotions import PromotionRepository
+    from .session_state import RecentProducts, RecentQueries, RecentWebhookEvents
 except ImportError:  # pragma: no cover - direct execution from this folder.
     from bert_nlp import PhayaThaiBertCommandParser, PhayaThaiBertIntentClassifier
+    from catalog_navigation import (
+        build_category_menu,
+        parse_category_navigation,
+    )
     from config import Settings
+    from conversation import (
+        cheaper_than,
+        comparison_queries,
+        find_named_product,
+        is_alternative_request,
+        is_cheaper_refinement,
+        is_product_question,
+        product_question_answer,
+    )
     from line_views import (
+        build_category_picker_message,
         build_product_carousel_message,
+        build_promotion_carousel_message,
         contact_message,
         data_unavailable_message,
         greeting_message,
@@ -58,9 +110,30 @@ except ImportError:  # pragma: no cover - direct execution from this folder.
         no_results_message,
         parse_product_postback,
         product_detail_message,
+        product_comparison_message,
+        promotion_unavailable_message,
         text_with_quick_replies,
     )
-    from nlp import SORT_NEWEST, SORT_POPULAR, ThaiCommandParser
+    from nlp import (
+        INTENT_CONTACT,
+        INTENT_GREETING,
+        INTENT_HELP,
+        INTENT_ORDER,
+        INTENT_PROMOTION,
+        INTENT_REFRESH,
+        INTENT_SEARCH,
+        INTENT_THANKS,
+        INTENT_UNKNOWN,
+        SORT_NEWEST,
+        SORT_POPULAR,
+        SORT_DISCOUNT,
+        SORT_PRICE_ASC,
+        SORT_PRICE_DESC,
+        CommandEntities,
+        ParsedCommand,
+        ThaiCommandParser,
+        normalize_text,
+    )
     from message_showcase import (
         IMAGEMAP_SIZES,
         build_showcase_message,
@@ -69,9 +142,38 @@ except ImportError:  # pragma: no cover - direct execution from this folder.
     )
     from recommender import ProductRecommender
     from repository import ProductRepository
+    from promotions import PromotionRepository
+    from session_state import RecentProducts, RecentQueries, RecentWebhookEvents
 
 
 LOGGER = logging.getLogger(__name__)
+SEARCH_INTENTS = frozenset({INTENT_SEARCH, "product_search"})
+
+
+def _recommendation_summary(count: int, requested_count: int, sort: str | None) -> str:
+    """Describe the recommendation without exposing storage implementation details."""
+
+    sort_descriptions = {
+        SORT_PRICE_ASC: " โดยเรียงราคาจากต่ำไปสูง",
+        SORT_PRICE_DESC: " โดยเรียงราคาจากสูงไปต่ำ",
+        SORT_DISCOUNT: " โดยเรียงส่วนลดจากมากไปน้อย",
+    }
+    ordering = sort_descriptions.get(sort, "")
+    if count == requested_count:
+        lead = f"แนะนำสินค้า {count} รายการที่ตรงเงื่อนไขจากข้อมูลที่มี{ordering}ครับ"
+    else:
+        lead = (
+            f"จากข้อมูลที่มี พบสินค้าที่ตรงเงื่อนไข {count} รายการ "
+            f"จึงแนะนำทั้งหมดโดยไม่เติมสินค้าที่ไม่ตรงเงื่อนไข{ordering}ครับ"
+        )
+    freshness_note = "ราคาและสต็อกอาจเปลี่ยนแปลง โปรดตรวจสอบบนเว็บไซต์ก่อนซื้อ"
+    if sort in {SORT_NEWEST, SORT_POPULAR}:
+        return (
+            f"{lead}\n{freshness_note}\n"
+            "ข้อมูลที่มีไม่มีตัวเลขยอดขายหรือวันวางจำหน่าย "
+            "จึงจัดลำดับตามความเกี่ยวข้องครับ"
+        )
+    return f"{lead}\n{freshness_note}"
 
 
 class ReplyDeliveryError(RuntimeError):
@@ -106,87 +208,6 @@ def _retryable_line_error(exc: ApiException) -> bool:
     return status == 0 or status in {408, 425, 429} or status >= 500
 
 
-class RecentWebhookEvents:
-    """Bounded in-memory protection against duplicate LINE deliveries."""
-
-    def __init__(
-        self,
-        ttl_seconds: float = 600,
-        max_entries: int = 2_000,
-        *,
-        clock: Callable[[], float] = time.monotonic,
-    ) -> None:
-        self.ttl_seconds = max(1.0, float(ttl_seconds))
-        self.max_entries = max(1, int(max_entries))
-        self._clock = clock
-        self._events: dict[str, float] = {}
-        self._lock = threading.Lock()
-
-    def claim(self, event_id: str) -> bool:
-        if not event_id:
-            return True
-        now = self._clock()
-        with self._lock:
-            expired = [key for key, expiry in self._events.items() if expiry <= now]
-            for key in expired:
-                self._events.pop(key, None)
-            if event_id in self._events:
-                return False
-            while len(self._events) >= self.max_entries:
-                self._events.pop(next(iter(self._events)))
-            self._events[event_id] = now + self.ttl_seconds
-            return True
-
-    def release(self, event_id: str) -> None:
-        """Allow LINE redelivery when no reply could be submitted."""
-
-        if not event_id:
-            return
-        with self._lock:
-            self._events.pop(event_id, None)
-
-
-class RecentQueries:
-    """Remember a user's last product query so “สุ่มใหม่” keeps its filters."""
-
-    def __init__(
-        self,
-        ttl_seconds: float = 1_800,
-        max_entries: int = 2_000,
-        *,
-        clock: Callable[[], float] = time.monotonic,
-    ) -> None:
-        self.ttl_seconds = max(1.0, float(ttl_seconds))
-        self.max_entries = max(1, int(max_entries))
-        self._clock = clock
-        self._queries: dict[str, tuple[float, Any]] = {}
-        self._lock = threading.Lock()
-
-    def remember(self, user_id: str, parsed_command: Any) -> None:
-        if not user_id:
-            return
-        now = self._clock()
-        with self._lock:
-            self._prune(now)
-            while len(self._queries) >= self.max_entries:
-                self._queries.pop(next(iter(self._queries)))
-            self._queries[user_id] = (now + self.ttl_seconds, parsed_command)
-
-    def get(self, user_id: str) -> Any | None:
-        if not user_id:
-            return None
-        now = self._clock()
-        with self._lock:
-            self._prune(now)
-            value = self._queries.get(user_id)
-            return value[1] if value else None
-
-    def _prune(self, now: float) -> None:
-        for key, (expiry, _value) in list(self._queries.items()):
-            if expiry <= now:
-                self._queries.pop(key, None)
-
-
 def _configured(settings: Settings) -> bool:
     return bool(settings.line_channel_secret and settings.line_channel_access_token)
 
@@ -209,22 +230,22 @@ def _repository_flag(repository: object, name: str, default: bool = False) -> bo
 
 
 def _intent_reply(intent: str, *, bot_name: str = "MercuMate") -> object | None:
-    if intent == "greeting":
+    if intent == INTENT_GREETING:
         return greeting_message(bot_name)
-    if intent == "help":
+    if intent == INTENT_HELP:
         return help_message()
-    if intent == "thanks":
+    if intent == INTENT_THANKS:
         return text_with_quick_replies(
             "ยินดีครับ 😊 ถ้าอยากดูสินค้าอื่น ลองระบุประเภท แบรนด์ และงบได้เลย"
         )
-    if intent == "contact":
+    if intent == INTENT_CONTACT:
         return contact_message()
-    if intent == "order":
+    if intent == INTENT_ORDER:
         return text_with_quick_replies(
             "บอตสาธิตนี้ไม่รับคำสั่งซื้อหรือข้อมูลชำระเงินครับ "
             "กดปุ่ม “ซื้อที่ Mercular” บนการ์ดเพื่อยืนยันราคา สต็อก และสั่งซื้อบนเว็บไซต์ทางการ"
         )
-    if intent == "unknown":
+    if intent == INTENT_UNKNOWN:
         return text_with_quick_replies(
             "ผมยังไม่แน่ใจว่าต้องการสินค้าชนิดไหนครับ ลองบอกประเภท แบรนด์ หรืองบ เช่น “หูฟัง Xiaomi ไม่เกิน 3000”"
         )
@@ -236,12 +257,14 @@ def create_app(
     repository: ProductRepository | None = None,
     parser: ThaiCommandParser | None = None,
     recommender: ProductRecommender | None = None,
+    promotion_repository: PromotionRepository | None = None,
     reply_sender: Callable[[str, object | list[object]], Any] | None = None,
 ) -> Flask:
     """Create an injectable Flask app for production and offline tests."""
 
     settings = settings or Settings.from_env()
     catalog = repository or ProductRepository(settings.snapshot_path, settings=settings)
+    promotion_catalog = promotion_repository or PromotionRepository(settings=settings)
     phayathaibert_classifier = (
         PhayaThaiBertIntentClassifier(
             settings.phayathaibert_model_name,
@@ -277,6 +300,7 @@ def create_app(
         PRODUCT_REPOSITORY=catalog,
         COMMAND_PARSER=command_parser,
         PRODUCT_RECOMMENDER=selector,
+        PROMOTION_REPOSITORY=promotion_catalog,
         WEBHOOK_EVENT_DEDUPLICATOR=RecentWebhookEvents(
             ttl_seconds=_env_number("WEBHOOK_EVENT_TTL_SECONDS", 600),
             max_entries=_env_number(
@@ -284,6 +308,10 @@ def create_app(
             ),
         ),
         RECENT_QUERIES=RecentQueries(
+            ttl_seconds=settings.history_ttl_seconds,
+            max_entries=2_000,
+        ),
+        RECENT_PRODUCTS=RecentProducts(
             ttl_seconds=settings.history_ttl_seconds,
             max_entries=2_000,
         ),
@@ -395,9 +423,12 @@ def create_app(
             product = catalog.get(product_id) if product_id else None
             if product is None:
                 response = text_with_quick_replies(
-                    "ไม่พบสินค้านี้ใน snapshot ล่าสุดครับ ลองค้นหาใหม่อีกครั้ง"
+                    "ไม่พบสินค้านี้ในข้อมูลล่าสุดครับ ลองค้นหาใหม่อีกครั้ง"
                 )
             else:
+                app.config["RECENT_PRODUCTS"].focus(
+                    _event_user_key(event), product.id
+                )
                 response = product_detail_message(product)
             sent = send_reply(event.reply_token, response)
         except ReplyDeliveryError:
@@ -447,23 +478,163 @@ def create_app(
                 )
                 sent = send_reply(event.reply_token, response)
                 return
+            products = catalog.all()
+            navigation = parse_category_navigation(text)
+            if navigation is not None and not navigation.show_products:
+                menu = build_category_menu(products, navigation.path)
+                response = (
+                    build_category_picker_message(menu)
+                    if menu is not None and menu.options
+                    else text_with_quick_replies(
+                        "ยังไม่มีสินค้าในหมวดนี้จากข้อมูลล่าสุดครับ"
+                    )
+                )
+                sent = send_reply(event.reply_token, response)
+                return
+
+            compare_sides = comparison_queries(text)
+            if compare_sides is not None:
+                first = find_named_product(products, compare_sides[0])
+                second = find_named_product(products, compare_sides[1])
+                if first is None or second is None:
+                    missing = [
+                        query
+                        for query, product in zip(compare_sides, (first, second))
+                        if product is None
+                    ]
+                    sent = send_reply(
+                        event.reply_token,
+                        text_with_quick_replies(
+                            "ยังหาชื่อรุ่นนี้ในข้อมูลที่มีไม่เจอ: "
+                            + ", ".join(f"“{item}”" for item in missing)
+                            + "\nลองพิมพ์ชื่อรุ่นเต็มตามหน้า Mercular แล้วเทียบอีกครั้งครับ"
+                        ),
+                    )
+                    return
+                sent = send_reply(
+                    event.reply_token,
+                    product_comparison_message(first, second),
+                )
+                return
+
+            recent_products: RecentProducts = app.config["RECENT_PRODUCTS"]
+            recent_ids, focused_id = recent_products.get(user_id)
+            if is_product_question(text):
+                focused = catalog.get(focused_id) if focused_id else None
+                response_text = (
+                    product_question_answer(focused, text)
+                    if focused is not None
+                    else "ยังไม่ทราบว่าหมายถึงสินค้าตัวไหนครับ แตะ “ดูรายละเอียด” "
+                    "บนการ์ดสินค้าก่อน แล้วถามว่า ‘ตัวนี้ใช้ Bluetooth ได้ไหม’ ได้เลย"
+                )
+                sent = send_reply(
+                    event.reply_token,
+                    text_with_quick_replies(response_text),
+                )
+                return
             # The repository auto-reloads an atomically replaced snapshot.  Rebuild
             # the lightweight parser vocabulary too, so newly scraped brands and
             # categories work without restarting the webhook process.
-            active_parser = (
-                build_command_parser()
-                if dynamic_catalog_parser
-                else command_parser
-            )
-            parsed = active_parser.parse(text)
-            intent = getattr(parsed, "intent", "unknown")
+            if navigation is not None and navigation.show_products:
+                parsed = ParsedCommand(
+                    INTENT_SEARCH,
+                    1.0,
+                    CommandEntities(category_path=navigation.path),
+                    text,
+                    normalize_text(text),
+                )
+            else:
+                active_parser = (
+                    build_command_parser()
+                    if dynamic_catalog_parser
+                    else command_parser
+                )
+                parsed = active_parser.parse(text)
+
+            if is_alternative_request(text):
+                focused = catalog.get(focused_id) if focused_id else None
+                if focused is None:
+                    sent = send_reply(
+                        event.reply_token,
+                        text_with_quick_replies(
+                            "ยังไม่ทราบว่าหมายถึงตัวไหนครับ แตะ “ดูรายละเอียด” "
+                            "ของสินค้าต้นแบบก่อน แล้วขอตัวคล้ายกันที่ถูกกว่าได้เลย"
+                        ),
+                    )
+                    return
+                parsed = ParsedCommand(
+                    INTENT_SEARCH,
+                    1.0,
+                    CommandEntities(
+                        category=focused.category,
+                        max_price=focused.price,
+                        max_price_inclusive=False,
+                        sort=SORT_PRICE_ASC,
+                    ),
+                    text,
+                    normalize_text(text),
+                )
+            elif is_cheaper_refinement(text):
+                remembered = app.config["RECENT_QUERIES"].get(user_id)
+                shown = [
+                    product
+                    for identifier in recent_ids
+                    if (product := catalog.get(identifier)) is not None
+                ]
+                ceiling = cheaper_than(shown)
+                if remembered is None or ceiling is None:
+                    sent = send_reply(
+                        event.reply_token,
+                        text_with_quick_replies(
+                            "ยังไม่มีผลค้นหาก่อนหน้าให้ลดงบครับ ลองค้นหาสินค้าก่อน"
+                        ),
+                    )
+                    return
+                parsed = replace(
+                    remembered,
+                    entities=replace(
+                        remembered.entities,
+                        max_price=ceiling,
+                        max_price_inclusive=False,
+                        sort=SORT_PRICE_ASC,
+                    ),
+                    raw_text=text,
+                    normalized_text=normalize_text(text),
+                )
+            elif (
+                getattr(parsed, "intent", "") in SEARCH_INTENTS
+                and "อย่างเดียว" in normalize_text(text)
+                and getattr(parsed.entities, "brands", ())
+            ):
+                remembered = app.config["RECENT_QUERIES"].get(user_id)
+                if remembered is not None:
+                    parsed = replace(
+                        parsed,
+                        entities=replace(
+                            remembered.entities,
+                            brands=parsed.entities.brands,
+                            excluded_brands=parsed.entities.excluded_brands,
+                            query=parsed.entities.query or remembered.entities.query,
+                        ),
+                    )
+            intent = getattr(parsed, "intent", INTENT_UNKNOWN)
+
+            if intent == INTENT_PROMOTION:
+                promotions = promotion_catalog.current(limit=5)
+                response = (
+                    build_promotion_carousel_message(promotions)
+                    if promotions
+                    else promotion_unavailable_message()
+                )
+                sent = send_reply(event.reply_token, response)
+                return
 
             direct_reply = _intent_reply(intent, bot_name=settings.bot_name)
             if direct_reply is not None:
                 sent = send_reply(event.reply_token, direct_reply)
                 return
 
-            if intent == "refresh":
+            if intent == INTENT_REFRESH:
                 remembered = app.config["RECENT_QUERIES"].get(user_id)
                 if remembered is None:
                     sent = send_reply(
@@ -474,13 +645,12 @@ def create_app(
                     )
                     return
                 parsed = remembered
-            elif intent in {"product_search", "search"}:
+            elif intent in SEARCH_INTENTS:
                 app.config["RECENT_QUERIES"].remember(user_id, parsed)
             else:
                 sent = send_reply(event.reply_token, help_message())
                 return
 
-            products = catalog.all()
             if not products:
                 sent = send_reply(event.reply_token, data_unavailable_message())
                 return
@@ -491,23 +661,15 @@ def create_app(
                 top_k=settings.top_k,
             )
             if not selected:
-                sent = send_reply(event.reply_token, no_results_message())
+                sent = send_reply(event.reply_token, no_results_message(text))
                 return
+            recent_products.remember_results(user_id, selected)
 
-            count = len(selected)
-            qualifier = (
-                f"สุ่มสินค้า {count} รายการที่ตรงเงื่อนไขให้แล้วครับ"
-                if count == settings.top_k
-                else f"พบสินค้าที่ตรงเงื่อนไข {count} รายการ จึงแสดงทั้งหมดโดยไม่เติมสินค้าผิดเงื่อนไขครับ"
-            )
             summary = text_with_quick_replies(
-                f"{qualifier}\nราคาและสต็อกเป็นข้อมูลจาก snapshot โปรดตรวจสอบบนเว็บไซต์ก่อนซื้อ"
-                + (
-                    "\nsnapshot ไม่มีตัวเลขยอดขายหรือวันวางจำหน่าย "
-                    "จึงจัดชุดนี้ตามความเกี่ยวข้องของข้อมูลที่มีครับ"
-                    if getattr(getattr(parsed, "entities", None), "sort", None)
-                    in {SORT_NEWEST, SORT_POPULAR}
-                    else ""
+                _recommendation_summary(
+                    len(selected),
+                    settings.top_k,
+                    getattr(getattr(parsed, "entities", None), "sort", None),
                 )
             )
             carousel = build_product_carousel_message(selected)

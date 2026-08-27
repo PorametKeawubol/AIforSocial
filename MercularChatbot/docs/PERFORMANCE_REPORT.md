@@ -1,7 +1,7 @@
 # Performance report
 
-Measured on 2026-08-24 with Python 3.12.3 on an AMD Ryzen 7 7735HS
-(8 cores / 16 threads), using the checked-in 252-product Mercular snapshot:
+Measured on 2026-08-27 with Python 3.12.3 on an AMD Ryzen 7 7735HS
+(8 cores / 16 threads), using the checked-in 1,715-product Mercular snapshot:
 
 ```bash
 python scripts/benchmark.py
@@ -10,10 +10,10 @@ python scripts/benchmark.py
 | Metric | Result |
 |---|---:|
 | Iterations | 100 |
-| Mean | 19.648 ms |
-| p50 | 18.089 ms |
-| p95 | 24.872 ms |
-| Max | 37.763 ms |
+| Mean | 196.244 ms |
+| p50 | 148.533 ms |
+| p95 | 430.152 ms |
+| Max | 479.049 ms |
 | Rubric target | <=1,500 ms |
 
 The benchmark warms imports/caches, then measures the local user-command path:

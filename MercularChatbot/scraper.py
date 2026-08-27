@@ -255,6 +255,80 @@ def _snapshot_product_count(path: Path) -> int:
     return len(products) if isinstance(products, list) else 0
 
 
+def _preserve_product_details(
+    snapshot: Mapping[str, Any],
+    previous_path: Path,
+) -> dict[str, Any]:
+    """Carry product-page enrichment through a category/price refresh.
+
+    Product pages change much less often than price and stock.  The category
+    snapshot remains authoritative for those volatile fields, while detail fields
+    collected by the optional Playwright job are retained when the stable product
+    id is present in both snapshots.
+    """
+
+    try:
+        with previous_path.open(encoding="utf-8") as source:
+            previous = json.load(source)
+        previous_rows = previous.get("products", []) if isinstance(previous, Mapping) else []
+        old_by_id = {
+            product.id: product
+            for row in previous_rows
+            if isinstance(row, Mapping)
+            if (product := Product.from_dict(dict(row))).detail_updated_at
+        }
+    except (OSError, UnicodeError, json.JSONDecodeError, TypeError, ValueError):
+        return dict(snapshot)
+
+    current_rows = snapshot.get("products", [])
+    if not old_by_id or not isinstance(current_rows, list):
+        return dict(snapshot)
+
+    carried = 0
+    products: list[dict[str, Any]] = []
+    for row in current_rows:
+        if not isinstance(row, Mapping):
+            products.append(dict(row) if isinstance(row, Mapping) else row)
+            continue
+        try:
+            current = Product.from_dict(dict(row))
+        except (TypeError, ValueError):
+            products.append(dict(row))
+            continue
+        old = old_by_id.get(current.id)
+        if old is None:
+            products.append(dict(row))
+            continue
+        products.append(
+            replace(
+                current,
+                overview=old.overview,
+                highlights=old.highlights,
+                specifications=old.specifications,
+                rating=old.rating,
+                review_count=old.review_count,
+                recommended_count=old.recommended_count,
+                warranty=old.warranty,
+                service_notes=old.service_notes,
+                detail_updated_at=old.detail_updated_at,
+            ).to_dict()
+        )
+        carried += 1
+
+    result = dict(snapshot)
+    result["products"] = products
+    if carried:
+        source = dict(snapshot.get("source", {}))
+        previous_source = previous.get("source", {}) if isinstance(previous, Mapping) else {}
+        if isinstance(previous_source, Mapping) and previous_source.get("product_detail_enrichment"):
+            source["product_detail_enrichment"] = previous_source[
+                "product_detail_enrichment"
+            ]
+        source["preserved_product_details"] = carried
+        result["source"] = source
+    return result
+
+
 def _iter_strings(value: object) -> Iterator[str]:
     if isinstance(value, str):
         candidate = clean_text(value)
@@ -348,8 +422,14 @@ def _next_product(
     """Normalize one product from Mercular's current or nearby Next.js shape."""
 
     name = _localized_text(_first_value(raw, "title", "name", "productName"))
-    slug_or_url = _first_value(raw, "url", "productUrl", "href", "link", "slug")
-    product_url = _product_url(slug_or_url, base_url)
+    direct_url = _first_value(raw, "url", "productUrl", "href", "link")
+    # Mercular's Next.js category payload exposes a product ``slug`` rooted at
+    # ``/``.  Resolving a bare slug relative to a nested category creates a 404
+    # URL such as ``/audio/headphone/<product>`` instead of ``/<product>``.
+    product_url = _product_url(
+        direct_url if direct_url is not None else raw.get("slug"),
+        base_url if direct_url is not None else MERCULAR_ORIGIN,
+    )
     if not _valid_product_name(name) or not product_url:
         return None
 
@@ -894,6 +974,37 @@ def parse_html(
     )
 
 
+def category_page_is_explicitly_empty(html: str | bytes) -> bool:
+    """Return whether Mercular explicitly rendered an empty category result.
+
+    Both the canonical Next.js list and a visible empty-state phrase are required.
+    That prevents an unfamiliar page layout from being mislabeled as a valid empty
+    category merely because the current parser extracted zero products.
+    """
+
+    if isinstance(html, bytes):
+        html = html.decode("utf-8", errors="replace")
+    soup = BeautifulSoup(html or "", "html.parser")
+    next_node = soup.find("script", id="__NEXT_DATA__")
+    if next_node is None:
+        return False
+    try:
+        payload = json.loads(next_node.string or next_node.get_text() or "{}")
+    except (TypeError, ValueError, json.JSONDecodeError):
+        return False
+    primary: object = payload
+    for key in ("props", "pageProps", "pageProps", "productPageProps"):
+        primary = primary.get(key, {}) if isinstance(primary, Mapping) else {}
+    products = primary.get("products") if isinstance(primary, Mapping) else None
+    if not isinstance(products, list) or products:
+        return False
+    page_text = " ".join(soup.get_text(" ", strip=True).casefold().split())
+    return any(
+        phrase in page_text
+        for phrase in ("ไม่พบสินค้า", "ไม่มีสินค้า", "no products found")
+    )
+
+
 def _validate_category_url(url: object) -> str:
     candidate = clean_text(url, limit=2_048)
     parsed = urlparse(candidate)
@@ -921,6 +1032,8 @@ class MercularScraper:
         category_urls: Iterable[str] | None = None,
         taxonomy_paths: Mapping[str, Sequence[str]] | None = None,
         category_taxonomy: Mapping[str, Sequence[str]] | None = None,
+        collection_tags: Mapping[str, str] | None = None,
+        allow_empty_urls: Iterable[str] | None = None,
         session: requests.Session | None = None,
         sleeper: Callable[[float], None] = time.sleep,
         monotonic: Callable[[], float] = time.monotonic,
@@ -950,6 +1063,26 @@ class MercularScraper:
             }
             for url, path in sorted(category_taxonomy.items())
         )
+        collection_tags = collection_tags or {}
+        self.collection_tags: dict[str, str] = {}
+        for url, tag in collection_tags.items():
+            canonical_url = _validate_category_url(url)
+            if canonical_url not in self.category_urls:
+                raise InvalidCategoryURLError(
+                    "collection tag URL must be one of the configured category URLs"
+                )
+            cleaned_tag = clean_text(tag, limit=120)
+            if not cleaned_tag:
+                raise ValueError("collection tags must be non-empty strings")
+            self.collection_tags[canonical_url] = cleaned_tag
+
+        self.allow_empty_urls = frozenset(
+            _validate_category_url(url) for url in (allow_empty_urls or ())
+        )
+        if not self.allow_empty_urls.issubset(self.category_urls):
+            raise InvalidCategoryURLError(
+                "allow_empty_urls must be a subset of the configured category URLs"
+            )
         self.session = session or requests.Session()
         self.session.headers.update(
             {
@@ -1139,8 +1272,29 @@ class MercularScraper:
             try:
                 html = self.fetch_page(url)
                 parsed_products = parse_html(html, url, scraped_at=generated_at)
+                collection_tag = self.collection_tags.get(url, "")
+                if collection_tag:
+                    parsed_products = [
+                        replace(product, tags=_tag_names((*product.tags, collection_tag)))
+                        for product in parsed_products
+                    ]
                 page_products = parsed_products[: self.settings.max_products_per_category]
                 if not page_products:
+                    if url in self.allow_empty_urls or category_page_is_explicitly_empty(html):
+                        categories.append(
+                            {
+                                "url": url,
+                                "taxonomy_path": list(self.taxonomy_paths.get(url, ())),
+                                "collection_tag": collection_tag,
+                                "category": _category_name_from_url(url),
+                                "status": "empty",
+                                "products_found": 0,
+                                "products_kept": 0,
+                                "products_added": 0,
+                                "error": "",
+                            }
+                        )
+                        continue
                     raise MercularScraperError(
                         "category page contained no valid product records"
                     )
@@ -1151,6 +1305,7 @@ class MercularScraper:
                     {
                         "url": url,
                         "taxonomy_path": list(self.taxonomy_paths.get(url, ())),
+                        "collection_tag": collection_tag,
                         "category": (
                             page_products[0].category
                             if page_products and page_products[0].category
@@ -1175,6 +1330,7 @@ class MercularScraper:
                     {
                         "url": url,
                         "taxonomy_path": list(self.taxonomy_paths.get(url, ())),
+                        "collection_tag": self.collection_tags.get(url, ""),
                         "category": _category_name_from_url(url),
                         "status": "blocked" if isinstance(exc, RobotsDeniedError) else "error",
                         "products_found": 0,
@@ -1193,12 +1349,18 @@ class MercularScraper:
                 "attribution": "Product information from public Mercular category pages.",
                 "category_urls": list(self.category_urls),
                 "category_taxonomy": list(self.category_taxonomy),
+                "special_collections": [
+                    {"url": url, "tag": tag}
+                    for url, tag in self.collection_tags.items()
+                ],
                 "crawler": USER_AGENT,
                 "robots_checked": self.settings.verify_robots,
             },
             "summary": {
                 "categories_requested": len(self.category_urls),
-                "categories_succeeded": sum(item["status"] == "ok" for item in categories),
+                "categories_succeeded": sum(
+                    item["status"] in {"ok", "empty"} for item in categories
+                ),
                 "categories_failed": len(errors),
                 "products": len(collected),
             },
@@ -1259,6 +1421,7 @@ class MercularScraper:
                         "the last-known-good snapshot was preserved"
                     )
 
+        snapshot = _preserve_product_details(snapshot, destination)
         write_snapshot(snapshot, destination)
         return snapshot
 
@@ -1385,6 +1548,7 @@ __all__ = [
     "RobotsDeniedError",
     "SCHEMA_VERSION",
     "USER_AGENT",
+    "category_page_is_explicitly_empty",
     "deduplicate_products",
     "main",
     "parse_html",

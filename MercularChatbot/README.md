@@ -5,14 +5,14 @@
 `หาเมาส์ Logitech ไม่เกิน 3,000 บาท เอาเฉพาะของพร้อมส่ง` แล้วแสดงสินค้า
 ที่ตรงเงื่อนไขเป็น **Random Top 5 Flex Carousel**
 
-โปรเจกต์นี้ออกแบบตามเกณฑ์ใน `Assignment_I/Scoring_criteria.md` โดยตรง:
+โปรเจกต์นี้ออกแบบตามเกณฑ์ใน `Assignment_I/Scoring criteria.txt` โดยตรง:
 
 - ดึงและทำความสะอาด ชื่อ ราคา รูป แบรนด์ หมวดหมู่ สต็อก และ URL จากหน้าเว็บสาธารณะ
 - แยก Intent และ Entity หลายเงื่อนไข รองรับภาษาพูด ตัวเลขไทย และคำพิมพ์ผิดที่พบบ่อย
 - สุ่มจากกลุ่มสินค้าที่เกี่ยวข้องโดยไม่ซ้ำในชุดเดียว และจำผลล่าสุดแยกตามผู้ใช้
 - ส่ง Flex Carousel พร้อมปุ่ม `ดูรายละเอียด` / `ซื้อที่ Mercular` และ Quick Reply
-- มี Rich Menu ธีม MercuMate 6 ช่อง และ Message Lab สำหรับทดลองข้อความ LINE
-  11 ชนิดโดยไม่รบกวนเส้นทางค้นหาสินค้าหลัก
+- มี Rich Menu ธีม MercuMate 6 ช่องสำหรับค้นหา หมวดสินค้า โปรโมชัน และวิธีใช้
+- มี Message Lab แยกสำหรับทดลองข้อความ LINE 11 ชนิด โดยไม่ปะปนกับเมนูผู้ใช้จริง
 - ตอบจาก snapshot ในเครื่อง จึงไม่รอ scraping ระหว่าง webhook และรักษา latency ต่ำ
 
 > นี่คือโปรเจกต์เพื่อการศึกษาและไม่ได้เป็นบอตทางการของ Mercular ราคาและสต็อก
@@ -23,8 +23,10 @@
 ```text
 LINE webhook (app.py)
   ├─ PhayaThaiBERT intent + exact Thai entities (bert_nlp.py + nlp.py)
+  ├─ hierarchical category picker from breadcrumbs (catalog_navigation.py)
   ├─ hard filters → relevance → fair random Top 5 (recommender.py)
   ├─ local last-known-good catalog (repository.py)
+  ├─ bounded TTL context + webhook deduplication (session_state.py)
   └─ Flex / Quick Reply views (line_views.py)
 
 Scheduled/manual refresh
@@ -91,6 +93,11 @@ Mercular ก่อน เนื่องจากเงื่อนไขเว�
 stock observation หนึ่งรายการต่อสินค้า/วันลง SQLite. ค่า `--scope seed` คือ 13
 หน้า demo เดิม; `--scope sitemap-leaves` อ่าน category sitemap สาธารณะเพื่อเลือก
 leaf categories เช่น `audio/dap-dac-amp/dac-amplifiers` โดยไม่เรียก `/browse`.
+ทั้งสอง scope จะเพิ่มหน้า collection พิเศษ `flash-sale` และ `new-arrival` ต่อท้าย
+หมวดปกติด้วย สินค้าที่ซ้ำจะถูกเก็บเพียงรายการเดียว แต่ติด tag
+`collection:flash-sale` หรือ `collection:new-arrival` ไว้ใน snapshot. หน้า
+`new-arrival` อาจไม่มีสินค้าในบางช่วง จึงบันทึกเป็น collection ว่างโดยไม่ทำให้
+รอบ sync ล้มเหลว.
 โหมด sitemap ต้องใช้เฉพาะเมื่อได้รับอนุญาตให้สร้าง product index ในวงกว้างแล้ว:
 
 ```bash
@@ -99,12 +106,86 @@ python scripts/sync_catalog.py --scope seed
 
 # Authorized broad category sync; page-level cap ปรับได้ตามข้อตกลงของ source
 python scripts/sync_catalog.py --scope sitemap-leaves --max-products-per-category 100
+
+# Retry only paths that failed in the current snapshot; successful paths are untouched
+python scripts/sync_catalog.py --retry-failed
 ```
 
 ตั้ง cron ให้ทำวันละหนึ่งครั้ง ไม่ควรเรียกงานนี้จาก webhook:
 
 ```cron
 15 3 * * * cd /path/to/MercularChatbot && .venv/bin/python scripts/sync_catalog.py --scope sitemap-leaves >> catalog-sync.log 2>&1
+45 4 * * * cd /path/to/MercularChatbot && .venv/bin/python scripts/sync_promotions.py >> promotion-sync.log 2>&1
+```
+
+### Promotion articles
+
+`scripts/sync_promotions.py` อ่านการ์ดบทความจากหน้า
+`/category-review-article/promotion` วันละครั้งและเขียน
+`data/mercular_promotions.json` แบบ atomic. ถ้าหน้าเว็บตอบ 429, โครงสร้างเปลี่ยน
+หรือไม่พบรายการ ระบบจะไม่เขียนทับ last-known-good snapshot. ใน LINE พิมพ์
+`มีโปรโมชันอะไรบ้าง` หรือสะกดใกล้เคียงอย่าง `มีโปรโมชั้นอะไรบ้าง` เพื่อดูสูงสุด 5
+รายการพร้อมลิงก์บทความทางการ. ควรจัดเวลางานนี้ไม่ให้ชนกับ product detail job.
+
+### Functional-requirement coverage
+
+| Requirement | สถานะ | หมายเหตุ |
+| --- | --- | --- |
+| FR-01 Search | รองรับ | หมวด แบรนด์ งบ และ typo |
+| FR-02 Recommendation | รองรับ | use-case ที่มี alias เช่น FPS |
+| FR-03 Comparison | รองรับตามข้อมูล | ต้องพบชื่อทั้งสองรุ่นใน snapshot; ไม่เดารุ่นที่หาย |
+| FR-04 Constraint filtering | รองรับ | เงื่อนไขทั้งหมดเป็น AND; ไม่มีสินค้าตรงจริงจะแจ้งไม่พบ |
+| FR-05 Product Q&A | รองรับตามข้อมูล | แตะดูรายละเอียดก่อน; ตอบ Bluetooth/น้ำหนัก/สเปกจากข้อมูลที่ scrape เท่านั้น |
+| FR-06 Context | รองรับ | `ขอถูกกว่านี้` และ `เอา Logitech อย่างเดียว` ภายใน TTL |
+| FR-07 Alternative | รองรับ | หลังแตะสินค้าต้นแบบ หา category เดียวกันที่ราคาต่ำกว่า |
+| FR-08 Use case | รองรับบางชุด | FPS, Valorant และ lightweight มี alias; use-case ใหม่ต้องเพิ่ม/evaluate |
+| FR-09 Multi-constraint | รองรับ | รวม wireless, สี, งบ และ `ไม่เอา <brand>` |
+| FR-10 Carousel | รองรับ | สูงสุด 5 การ์ดพร้อมชื่อ ราคา รูป และลิงก์ |
+
+### Product-page details
+
+ข้อมูลหน้า category ไม่ได้มีสเปกทั้งหมด จึงมี job แยก
+`scripts/enrich_product_details.py` อ่าน `__NEXT_DATA__` ที่ server render อยู่ใน
+product page ด้วย HTTP ก่อน จึงไม่ต้องเปิด Chromium สำหรับสินค้าส่วนใหญ่; หากหน้าใด
+ไม่มี payload นี้จึงค่อย fallback ไป Playwright แบบ headless. ได้ข้อมูลภาพรวม,
+คุณสมบัติเด่น, ตารางสเปก, คะแนน/จำนวนรีวิวเมื่อหน้าแสดง, ประกัน และสิทธิ์บริการ
+ข้อมูลเหล่านี้ถูกเก็บใน snapshot และแสดงในข้อความ “ดูรายละเอียด” ของ LINE.
+ไม่เรียกจาก webhook และไม่เก็บบทความรีวิวเต็มหน้า.
+
+ติดตั้ง browser หนึ่งครั้งสำหรับ fallback แล้วทดลองจำนวนน้อยก่อน:
+
+```bash
+.venv/bin/playwright install chromium
+.venv/bin/python scripts/enrich_product_details.py --limit 5
+```
+
+คำสั่งจะข้ามสินค้าที่มี `detail_updated_at` แล้วโดยปริยาย จึงใช้รันทุกคืนเพื่อเติม
+เฉพาะสินค้าใหม่ได้; ใช้ `--refresh-existing` เมื่อต้องการอัปเดตรายละเอียดเดิมทั้งหมด.
+หาก source ตอบ `HTTP 429` job จะ checkpoint หน้าที่สำเร็จแล้วและหยุดทันที ไม่วน
+request ต่อ; ให้รอตาม `retry_after_seconds` (ถ้ามี) ก่อนรันใหม่.
+
+หากต้องเติมข้อมูลทั้งหมดบนเครื่องที่เปิดทิ้งไว้ได้ ให้ใช้ safe resume mode;
+มันดึงครั้งละ 5 หน้าและพัก 5 นาทีระหว่างทุก batch (รวมถึงเมื่อถูก rate-limit):
+
+```bash
+.venv/bin/python scripts/enrich_product_details.py --until-complete
+```
+
+จำกัดให้เก็บ detail เฉพาะหมวดหลักได้ เช่น คอมพิวเตอร์และ Smartphone / Tablet /
+ACC:
+
+```bash
+.venv/bin/python scripts/enrich_product_details.py --until-complete \
+  --category-scope computer --category-scope smartphone-tablet-acc
+```
+
+เมื่อทดสอบแล้วว่า source รับได้ ให้ใช้ HTTP mode ที่ default อยู่และคงช่วงห่างต่อหน้า
+อย่างน้อย 3 วินาทีเพื่อลดเวลาโดยไม่เพิ่ม browser concurrency; `429` จะพัก 5 นาทีเอง:
+
+```bash
+DETAIL_SCRAPER_DELAY_SECONDS=3 .venv/bin/python scripts/enrich_product_details.py \
+  --until-complete --batch-size 25 --between-batches-seconds 0 \
+  --category-scope computer --category-scope smartphone-tablet-acc
 ```
 
 ## รัน LINE webhook
@@ -127,10 +208,14 @@ curl -i http://127.0.0.1:5000/readyz
 
 ## Rich Menu และ Message Lab
 
-Rich Menu ขนาด `2500×1686` ใช้ภาพ mascot/cover ของ MercuMate และมี 6 action:
-ค้นหาสินค้า, เกมมิ่ง, ออดิโอ, แก็ดเจ็ต, Message Lab และช่วยเหลือ โดย action
-ค้นหาทั้งหมดยังส่งข้อความเข้า NLP ตัวเดิม จึงช่วยผู้ใช้เริ่มคำสั่งได้โดยไม่ทำทางลัด
-ข้ามระบบค้นหา
+Rich Menu v3 ขนาด `2500×1686` ใช้ภาพ mascot/cover ของ MercuMate และมี 6 action:
+สินค้าทั้งหมด, เกมมิ่ง, คอมพิวเตอร์, มือถือ/แท็บเล็ต, โปรโมชัน และช่วยเหลือ
+สี่ปุ่มแรกเปิด Flex category picker จาก breadcrumb ใน snapshot; หมวดที่ยังมีระดับย่อย
+จะเปิดให้เลือกต่อ และมี “ดูทั้งหมดในหมวดนี้” ก่อนเข้าสู่ Random Top 5 การค้นหาจาก
+picker ใช้ exact category-path constraint จึงไม่ปนสินค้าที่มีเพียงคำคล้ายกันในชื่อ
+ทุกปุ่มมี contract test ตั้งแต่ payload → navigation/intent → webhook response ใน
+`tests/test_rich_menu.py` และ `tests/test_app.py` ส่วน Message Lab ยังเรียกได้ด้วยข้อความ
+`เดโมข้อความ` แต่ไม่นำพื้นที่เมนูหลักของผู้ใช้ไปใช้
 
 ตรวจและติดตั้งเมนูแบบทำซ้ำได้:
 
@@ -153,6 +238,7 @@ Rich Menu แสดงบน LINE มือถือ แต่ไม่แสด
 
 ## ตัวอย่างข้อความ
 
+- `มีสินค้าอะไรบ้าง` — เปิดเมนูเลือกหมวดและหมวดย่อย
 - `มีสินค้าอะไรแนะนำบ้าง`
 - `หาหูฟัง Xiaomi ไม่เกิน 3000`
 - `อยากได้เม้าเกมมิ่ง logitec งบ 3k พร้อมส่ง` (ภาษาพูด + typo)

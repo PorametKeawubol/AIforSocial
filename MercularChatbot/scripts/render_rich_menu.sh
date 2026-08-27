@@ -4,8 +4,8 @@ set -euo pipefail
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 project_dir="$(cd "${script_dir}/.." && pwd)"
 menu_dir="${project_dir}/assets/rich_menu"
-source_svg="${menu_dir}/mercumate-rich-menu-v1.svg"
-output_image="${menu_dir}/mercumate-rich-menu-v1.jpg"
+source_svg="${menu_dir}/mercumate-rich-menu-v3.svg"
+output_image="${menu_dir}/mercumate-rich-menu-v3.jpg"
 render_tmp_dir="$(mktemp -d)"
 
 cleanup() {
@@ -23,11 +23,11 @@ convert "${render_tmp_dir}/base.png" \
   -pointsize 60 \
   -fill white \
   -gravity North \
-  -annotate -782+715 'ค้นหาสินค้า' \
+  -annotate -782+715 'สินค้าทั้งหมด' \
   -annotate +0+715 'เกมมิ่ง' \
-  -annotate +782+715 'ออดิโอ' \
-  -annotate -782+1275 'แก็ดเจ็ต' \
-  -annotate +0+1275 'เดโมข้อความ' \
+  -annotate +782+715 'คอมพิวเตอร์' \
+  -annotate -782+1275 'มือถือ/แท็บเล็ต' \
+  -annotate +0+1275 'โปรโมชัน' \
   -annotate +782+1275 'ช่วยเหลือ' \
   -strip \
   -interlace Plane \

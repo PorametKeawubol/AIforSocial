@@ -21,6 +21,7 @@ from nlp import (
     INTENT_GREETING,
     INTENT_HELP,
     INTENT_ORDER,
+    INTENT_PROMOTION,
     INTENT_REFRESH,
     INTENT_SEARCH,
     INTENT_THANKS,
@@ -117,6 +118,23 @@ def test_common_typos_and_fuzzy_aliases(
     assert parsed.category == category
     assert parsed.entities.brand == brand
     assert parsed.max_price == maximum
+
+
+def test_requirement_typos_use_cases_and_promotions_are_structured_safely(
+    parser: ThaiCommandParser,
+) -> None:
+    typo = parser.parse("หาเม้า logitehc ไม่เกิน 200O")
+    fps = parser.parse("แนะนำหูฟังเล่น FPS งบ 3,000")
+    valorant = parser.parse("อยากได้เมาส์สำหรับเล่น Valorant เน้นเบา ๆ")
+    promotion = parser.parse("มีโปรโมชั้นอะไรบ้าง")
+
+    assert typo.category == "เมาส์"
+    assert typo.brands == ("Logitech",)
+    assert typo.max_price == 2_000
+    assert typo.query == ""
+    assert fps.query == "เล่น fps"
+    assert valorant.query == "เล่น valorant เน้นเบา ๆ"
+    assert promotion.intent == INTENT_PROMOTION
 
 
 @pytest.mark.parametrize(
@@ -262,9 +280,10 @@ def test_stock_and_brand_negation_are_not_inverted(parser: ThaiCommandParser) ->
     assert stock.in_stock is True
     assert stock.query == ""
 
-    unsupported_exclusion = parser.parse("หูฟังไม่เอา Sony")
-    assert unsupported_exclusion.intent == INTENT_UNKNOWN
-    assert unsupported_exclusion.entities.brands == ()
+    exclusion = parser.parse("หูฟังไม่เอา Sony")
+    assert exclusion.intent == INTENT_SEARCH
+    assert exclusion.entities.brands == ()
+    assert exclusion.entities.excluded_brands == ("Sony",)
 
 
 @pytest.mark.parametrize(

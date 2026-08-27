@@ -47,6 +47,15 @@ class Product:
     product_url: str
     in_stock: bool | None
     description: str = ""
+    overview: str = ""
+    highlights: tuple[str, ...] = field(default_factory=tuple)
+    specifications: tuple[tuple[str, str], ...] = field(default_factory=tuple)
+    rating: float | None = None
+    review_count: int | None = None
+    recommended_count: int | None = None
+    warranty: str = ""
+    service_notes: tuple[str, ...] = field(default_factory=tuple)
+    detail_updated_at: str = ""
     tags: tuple[str, ...] = field(default_factory=tuple)
     source_url: str = ""
     scraped_at: str = ""
@@ -62,6 +71,14 @@ class Product:
             value = getattr(self, field_name)
             if value is not None and (not math.isfinite(value) or value < 0):
                 raise ValueError(f"{field_name} must be a finite, non-negative number")
+        if self.rating is not None and (
+            not math.isfinite(self.rating) or not 0 <= self.rating <= 5
+        ):
+            raise ValueError("rating must be a finite value between 0 and 5")
+        for field_name in ("review_count", "recommended_count"):
+            value = getattr(self, field_name)
+            if value is not None and (not isinstance(value, int) or value < 0):
+                raise ValueError(f"{field_name} must be a non-negative integer")
 
     @property
     def display_price(self) -> str:
@@ -78,6 +95,11 @@ class Product:
                 self.brand,
                 self.category,
                 *self.category_path,
+                self.overview,
+                *self.highlights,
+                *(f"{name} {value}" for name, value in self.specifications),
+                self.warranty,
+                *self.service_notes,
                 *self.tags,
                 self.description,
             )
@@ -87,6 +109,11 @@ class Product:
     def to_dict(self) -> dict[str, Any]:
         result = asdict(self)
         result["category_path"] = list(self.category_path)
+        result["highlights"] = list(self.highlights)
+        result["specifications"] = [
+            {"name": name, "value": value} for name, value in self.specifications
+        ]
+        result["service_notes"] = list(self.service_notes)
         result["tags"] = list(self.tags)
         return result
 
@@ -130,6 +157,52 @@ class Product:
                 return False
             return None
 
+        def score_or_none(raw: object) -> float | None:
+            if raw in (None, ""):
+                return None
+            try:
+                score = float(str(raw).replace(",", ""))
+            except (TypeError, ValueError):
+                return None
+            if not math.isfinite(score) or not 0 <= score <= 5:
+                raise ValueError("rating must be between 0 and 5")
+            return score
+
+        def count_or_none(raw: object, field_name: str) -> int | None:
+            if raw in (None, ""):
+                return None
+            if isinstance(raw, bool):
+                raise ValueError(f"{field_name} must be a non-negative integer")
+            try:
+                count = int(raw)
+            except (TypeError, ValueError) as error:
+                raise ValueError(f"{field_name} must be a non-negative integer") from error
+            if count < 0:
+                raise ValueError(f"{field_name} must be a non-negative integer")
+            return count
+
+        def specifications(raw: object) -> tuple[tuple[str, str], ...]:
+            if raw in (None, ""):
+                return ()
+            if not isinstance(raw, (list, tuple)):
+                raise ValueError("specifications must be an array")
+            result: list[tuple[str, str]] = []
+            seen: set[tuple[str, str]] = set()
+            for item in raw:
+                if isinstance(item, dict):
+                    name = clean_text(item.get("name", item.get("title")), limit=200)
+                    detail = clean_text(item.get("value", item.get("description")), limit=500)
+                elif isinstance(item, (list, tuple)) and len(item) == 2:
+                    name = clean_text(item[0], limit=200)
+                    detail = clean_text(item[1], limit=500)
+                else:
+                    raise ValueError("specifications must contain name/value pairs")
+                pair = (name, detail)
+                if name and detail and pair not in seen:
+                    seen.add(pair)
+                    result.append(pair)
+            return tuple(result)
+
         return cls(
             id=clean_text(value.get("id"), limit=120),
             sku=clean_text(value.get("sku"), limit=120),
@@ -143,6 +216,17 @@ class Product:
             product_url=https_url(value.get("product_url")),
             in_stock=bool_or_none(value.get("in_stock")),
             description=clean_text(value.get("description")),
+            overview=clean_text(value.get("overview")),
+            highlights=string_sequence(value.get("highlights", []), "highlights"),
+            specifications=specifications(value.get("specifications", [])),
+            rating=score_or_none(value.get("rating")),
+            review_count=count_or_none(value.get("review_count"), "review_count"),
+            recommended_count=count_or_none(
+                value.get("recommended_count"), "recommended_count"
+            ),
+            warranty=clean_text(value.get("warranty"), limit=1_000),
+            service_notes=string_sequence(value.get("service_notes", []), "service_notes"),
+            detail_updated_at=clean_text(value.get("detail_updated_at"), limit=80),
             tags=string_sequence(value.get("tags", []), "tags"),
             source_url=https_url(value.get("source_url")),
             scraped_at=clean_text(value.get("scraped_at"), limit=80),

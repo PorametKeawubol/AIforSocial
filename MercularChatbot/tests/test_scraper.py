@@ -14,6 +14,7 @@ from scraper import (
     MercularScraperError,
     RobotsDeniedError,
     USER_AGENT,
+    category_page_is_explicitly_empty,
     deduplicate_products,
     parse_html,
     write_snapshot,
@@ -112,6 +113,25 @@ def test_current_next_data_extracts_complete_fields_and_skips_malformed_item():
     assert sony.product_url == "https://www.mercular.com/sony-wh-1000xm5-wireless-headphones"
     assert sony.in_stock is True
     assert sony.tags == ("ไร้สาย", "ส่งฟรี")
+
+
+def test_next_slug_is_rooted_instead_of_becoming_a_nested_category_url():
+    html = """
+    <script id="__NEXT_DATA__" type="application/json">
+      {"props":{"pageProps":{"pageProps":{"productPageProps":{
+        "categoryTitle":"สาย Display", "breadcrumb":[], "products":[
+          {"id":"141531", "sku":"SKU-1", "title":"Cable DisplayPort",
+           "slug":"cable-displayport-to-displayport-1m-ugreen-25903", "price":100}
+        ]
+      }}}}}
+    </script>
+    """
+
+    products = parse_html(html, "https://www.mercular.com/accessories/cable/cable-display")
+
+    assert products[0].product_url == (
+        "https://www.mercular.com/cable-displayport-to-displayport-1m-ugreen-25903"
+    )
 
 
 def test_missing_price_and_image_are_kept_but_missing_name_or_url_is_not():
@@ -565,6 +585,96 @@ def test_zero_product_page_is_recorded_as_failure_not_false_success(tmp_path):
     assert snapshot["errors"][0]["type"] == "MercularScraperError"
 
 
+def test_special_collection_tag_survives_product_deduplication(tmp_path):
+    special_url = "https://www.mercular.com/flash-sale"
+    html = (FIXTURES / "next_category.html").read_text()
+    scraper = MercularScraper(
+        _settings(
+            tmp_path,
+            category_urls=(AUDIO_URL, special_url),
+            request_retries=0,
+        ),
+        category_urls=(AUDIO_URL, special_url),
+        collection_tags={special_url: "collection:flash-sale"},
+        session=FakeSession(
+            {
+                AUDIO_URL: [FakeResponse(html, url=AUDIO_URL)],
+                special_url: [FakeResponse(html, url=special_url)],
+            }
+        ),
+        sleeper=lambda _seconds: None,
+    )
+
+    snapshot = scraper.scrape()
+
+    assert len(snapshot["products"]) == 2
+    assert all("collection:flash-sale" in product["tags"] for product in snapshot["products"])
+    assert snapshot["categories"][1]["products_added"] == 0
+    assert snapshot["source"]["special_collections"] == [
+        {"url": special_url, "tag": "collection:flash-sale"}
+    ]
+
+
+def test_expected_empty_special_collection_is_not_a_failure(tmp_path):
+    special_url = "https://www.mercular.com/new-arrival"
+    scraper = MercularScraper(
+        _settings(tmp_path, category_urls=(special_url,), request_retries=0),
+        category_urls=(special_url,),
+        collection_tags={special_url: "collection:new-arrival"},
+        allow_empty_urls=(special_url,),
+        session=FakeSession(
+            {special_url: [FakeResponse("<html><body>empty</body></html>", url=special_url)]}
+        ),
+        sleeper=lambda _seconds: None,
+    )
+
+    snapshot = scraper.scrape()
+
+    assert snapshot["summary"] == {
+        "categories_requested": 1,
+        "categories_succeeded": 1,
+        "categories_failed": 0,
+        "products": 0,
+    }
+    assert snapshot["categories"][0]["status"] == "empty"
+    assert snapshot["errors"] == []
+
+
+def test_canonical_empty_state_is_success_but_unknown_empty_html_is_error(tmp_path):
+    explicit_html = """
+    <html><body><div>ไม่พบสินค้า</div>
+    <script id="__NEXT_DATA__" type="application/json">
+      {"props":{"pageProps":{"pageProps":{"productPageProps":{"products":[]}}}}}
+    </script></body></html>
+    """
+    unknown_html = "<html><body>layout changed</body></html>"
+    explicit_url = "https://www.mercular.com/computer/hdd-ssd-m-2/ssd"
+    unknown_url = "https://www.mercular.com/computer/unknown-layout"
+    scraper = MercularScraper(
+        _settings(
+            tmp_path,
+            category_urls=(explicit_url, unknown_url),
+            request_retries=0,
+        ),
+        category_urls=(explicit_url, unknown_url),
+        session=FakeSession(
+            {
+                explicit_url: [FakeResponse(explicit_html, url=explicit_url)],
+                unknown_url: [FakeResponse(unknown_html, url=unknown_url)],
+            }
+        ),
+        sleeper=lambda _seconds: None,
+    )
+
+    snapshot = scraper.scrape()
+
+    assert category_page_is_explicitly_empty(explicit_html)
+    assert not category_page_is_explicitly_empty(unknown_html)
+    assert [item["status"] for item in snapshot["categories"]] == ["empty", "error"]
+    assert snapshot["summary"]["categories_succeeded"] == 1
+    assert snapshot["summary"]["categories_failed"] == 1
+
+
 def test_partial_refresh_quality_gate_preserves_last_known_good(tmp_path):
     target = tmp_path / "snapshot.json"
     previous = '{"known": "good"}'
@@ -627,3 +737,42 @@ def test_large_product_count_drop_requires_explicit_override(tmp_path, monkeypat
     )
     refreshed = scraper.refresh()
     assert len(refreshed["products"]) == 2
+
+
+def test_refresh_preserves_existing_playwright_details_by_product_id(tmp_path):
+    target = tmp_path / "snapshot.json"
+    old_product = _product(
+        id="1001",
+        sku="SONY-WH1000XM5-B",
+        overview="รายละเอียดเดิม",
+        highlights=("ตัดเสียงรบกวน",),
+        specifications=(("ไดรเวอร์", "30mm"),),
+        warranty="ประกัน 1 ปี",
+        detail_updated_at="2026-08-27T00:00:00+00:00",
+    )
+    write_snapshot(
+        {
+            "schema_version": 1,
+            "generated_at": "2026-08-27T00:00:00+00:00",
+            "source": {
+                "product_detail_enrichment": {"method": "Playwright"},
+            },
+            "products": [old_product.to_dict()],
+        },
+        target,
+    )
+    html = (FIXTURES / "next_category.html").read_text()
+    scraper = MercularScraper(
+        _settings(tmp_path, snapshot_path=target, request_retries=0),
+        session=FakeSession({AUDIO_URL: [FakeResponse(html, url=AUDIO_URL)]}),
+        sleeper=lambda _seconds: None,
+    )
+
+    refreshed = scraper.refresh()
+    sony = next(item for item in refreshed["products"] if item["id"] == "1001")
+
+    assert sony["overview"] == "รายละเอียดเดิม"
+    assert sony["highlights"] == ["ตัดเสียงรบกวน"]
+    assert sony["specifications"] == [{"name": "ไดรเวอร์", "value": "30mm"}]
+    assert sony["warranty"] == "ประกัน 1 ปี"
+    assert refreshed["source"]["preserved_product_details"] == 1

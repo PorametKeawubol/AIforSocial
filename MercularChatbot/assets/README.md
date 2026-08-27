@@ -10,8 +10,12 @@
 
 The source files are kept unchanged. Final deliverables are versioned siblings:
 
-- `rich_menu/mercumate-rich-menu-v1.svg`: deterministic icons/English labels
+- `rich_menu/mercumate-rich-menu-v1.svg`: previous deterministic menu source
 - `rich_menu/mercumate-rich-menu-v1.jpg`: LINE-ready `2500×1686` image
+- `rich_menu/mercumate-rich-menu-v2.svg`: production menu with promotions
+- `rich_menu/mercumate-rich-menu-v2.jpg`: previous LINE-ready menu image
+- `rich_menu/mercumate-rich-menu-v3.svg`: hierarchical category-menu source
+- `rich_menu/mercumate-rich-menu-v3.jpg`: current LINE-ready `2500×1686` image
 - `rich_menu/mercumate-imagemap-v1.jpg`: `1040×520` Imagemap master
 
 Run `../scripts/render_rich_menu.sh` to rebuild the Rich Menu JPEG. It requires

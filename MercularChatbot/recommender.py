@@ -4,8 +4,8 @@ The recommender has three explicit stages:
 
 1. de-duplicate and hard-filter every structured/search constraint;
 2. rank the surviving products and bound the randomisation pool;
-3. sample without replacement while preferring products not recently shown for the
-   same user and normalised query.
+3. return the exact leading products for explicit price/discount ordering, otherwise
+   sample without replacement while preferring products not recently shown.
 
 Randomness and time are injectable, making both fairness and TTL behaviour fully
 deterministic in tests.  There are no random retry loops; an identical recent set is
@@ -175,6 +175,7 @@ def _category_alias_compacts(category: str) -> tuple[str, ...]:
 
 
 _MOUSE_TERMS = _normal_values(("เมาส์", "mouse", "mice"))
+_MOUSE_PRODUCT_TERMS = ("เมาส์", "mouse", "mice", "trackball", "แทร็กบอล")
 _KEYBOARD_TERMS = _normal_values(("คีย์บอร์ด", "keyboard", "แป้นพิมพ์"))
 _GENERIC_ACCESSORY_TERMS = frozenset(
     _normal_values(("อุปกรณ์เสริม", *CATEGORY_ALIASES["อุปกรณ์เสริม"]))
@@ -206,6 +207,14 @@ _ACCESSORY_REQUEST_ALIASES: Mapping[str, tuple[str, ...]] = {
     "mouse_bungee": ("mouse bungee", "บันจี้เมาส์", "บันจี้"),
     "mouse_grip": ("mouse grip", "grip tape", "กริปเมาส์", "กริป"),
     "mouse_skates": ("mouse skates", "mouse feet", "ฟีตเมาส์", "สเกตเมาส์"),
+    "mouse_receiver": (
+        "mouse receiver",
+        "usb receiver",
+        "wireless receiver",
+        "ตัวรับสัญญาณเมาส์",
+        "ตัวรับสัญญาณ",
+        "รีซีฟเวอร์",
+    ),
     "keycap": ("keyboard keycap", "keycap set", "key caps", "keycap", "คีย์แคป"),
     "keyboard_switch": (
         "keyboard switch",
@@ -245,7 +254,7 @@ _SUBTYPE_QUERY_ALIASES: Mapping[str, tuple[str, ...]] = {
         "tws",
         "enco",
     ),
-    "soundbar": ("soundbar", "sound bar", "ซาวด์บาร์", "ซาวด์บา"),
+    "soundbar": ("soundbar", "sound bar", "ซาวด์บาร์", "ซาวด์บา", "ซาวบาร์"),
     "printer": (
         "printer",
         "เครื่องพิมพ์",
@@ -261,7 +270,7 @@ _SUBTYPE_QUERY_ALIASES: Mapping[str, tuple[str, ...]] = {
         "หมึกพิมพ์",
         "หมึกปริ้นเตอร์",
     ),
-    "scanner": ("scanner", "สแกนเนอร์", "เครื่องสแกน"),
+    "scanner": ("scanner", "สแกนเนอร์", "สแกนเนอ", "เครื่องสแกน"),
     "mic_stand": (
         "microphone arm",
         "mic arm",
@@ -312,7 +321,13 @@ _SUBTYPE_QUERY_ALIASES: Mapping[str, tuple[str, ...]] = {
         "predator monitor",
     ),
     "ups": ("ups", "uninterruptible power supply", "เครื่องสำรองไฟ", "สำรองไฟ"),
-    "flash_drive": ("flash drive", "usb drive", "thumb drive", "แฟลชไดรฟ์"),
+    "flash_drive": (
+        "flash drive",
+        "usb drive",
+        "thumb drive",
+        "แฟลชไดรฟ์",
+        "แฟลชไดร์ฟ",
+    ),
     "usb_hub": ("usb hub", "usb-hub", "ยูเอสบีฮับ", "ฮับยูเอสบี"),
     "conference_camera": (
         "conference camera",
@@ -326,7 +341,14 @@ _MIC_ACCESSORY_SUBTYPES = frozenset(
     {"mic_stand", "mic_filter", "mic_cable", "mic_mount"}
 )
 _MOUSE_ACCESSORY_KINDS = frozenset(
-    {"mouse_pad", "wrist_rest", "mouse_bungee", "mouse_grip", "mouse_skates"}
+    {
+        "mouse_pad",
+        "wrist_rest",
+        "mouse_bungee",
+        "mouse_grip",
+        "mouse_skates",
+        "mouse_receiver",
+    }
 )
 _KEYBOARD_ACCESSORY_KINDS = frozenset(
     {"wrist_rest", "keycap", "keyboard_switch", "keyboard_case"}
@@ -336,6 +358,7 @@ _KIND_BASE_CONCEPTS: Mapping[str, tuple[str, ...]] = {
     "mouse_bungee": ("เมาส์",),
     "mouse_grip": ("เมาส์",),
     "mouse_skates": ("เมาส์",),
+    "mouse_receiver": ("เมาส์",),
     "keycap": ("คีย์บอร์ด",),
     "keyboard_switch": ("คีย์บอร์ด",),
     "keyboard_case": ("คีย์บอร์ด",),
@@ -436,6 +459,11 @@ def _literal_subtype_matches(
             return bool(requested_accessories & product_subtypes)
         if product_subtypes & _MIC_ACCESSORY_SUBTYPES:
             return False
+        leaf_evidence = " ".join(
+            (product.category, product.category_path[-1] if product.category_path else "")
+        )
+        if _contains_requested_alias(leaf_evidence, ("cable", "สาย")):
+            return False
         return _contains_requested_alias(
             " ".join((product.name, *product.tags)),
             ("microphone", "mic", "ไมโครโฟน", "ไมค์"),
@@ -451,8 +479,11 @@ def _literal_subtype_matches(
 
 
 def _product_accessory_kinds(product: Product) -> frozenset[str]:
+    # Product identity must come from product-level fields.  A broad category such
+    # as ``แผ่นรองเมาส์`` can contain both pads and wrist rests, so including the
+    # category path here would make a wrist rest satisfy a specific mouse-pad query.
     metadata = " ".join(
-        (product.name, product.category, *product.category_path, *product.tags, product.description)
+        (product.name, *product.tags, product.description)
     )
     return _accessory_kinds(metadata, request=False)
 
@@ -482,6 +513,27 @@ def _accessory_request_matches(product: Product, category: str, query: str) -> b
     if any(term in requested for term in _KEYBOARD_TERMS):
         return not bool(_product_accessory_kinds(product) & _KEYBOARD_ACCESSORY_KINDS)
     return True
+
+
+def _base_product_identity_matches(product: Product, category: str, query: str) -> bool:
+    """Reject catalogue-taxonomy mistakes for an ordinary mouse request.
+
+    The live mouse leaf currently also contains drawing tablets.  Treat the leaf as
+    candidate discovery, then require product-name evidence for a base mouse.  An
+    explicit accessory request keeps its existing specialised matching behaviour.
+    """
+
+    requested_category = compact_text(category)
+    if not any(term in requested_category for term in _MOUSE_TERMS):
+        return True
+    if _requested_accessory_kinds(category, query):
+        return True
+    normal_name = normalize_text(product.name)
+    compact_name = compact_text(normal_name)
+    return any(
+        _normal_contains_alias(normal_name, compact_name, term)
+        for term in _MOUSE_PRODUCT_TERMS
+    )
 
 
 def _discount(product: Product) -> float:
@@ -748,8 +800,25 @@ class ProductRecommender:
         """Return whether a product satisfies every populated command constraint."""
 
         entities = cls._entities(command)
+        if entities.category_path:
+            candidate_path = product.category_path
+            if len(candidate_path) < len(entities.category_path) or any(
+                normalize_text(actual) != normalize_text(expected)
+                for actual, expected in zip(
+                    candidate_path[: len(entities.category_path)],
+                    entities.category_path,
+                    strict=True,
+                )
+            ):
+                return False
         request_text = cls._request_text(command, entities)
         if not _accessory_request_matches(
+            product,
+            entities.category or "",
+            entities.query,
+        ):
+            return False
+        if not _base_product_identity_matches(
             product,
             entities.category or "",
             entities.query,
@@ -769,6 +838,10 @@ class ProductRecommender:
         ):
             return False
         if entities.brands and not cls._brand_matches(product, entities.brands):
+            return False
+        if entities.excluded_brands and cls._brand_matches(
+            product, entities.excluded_brands
+        ):
             return False
         if entities.min_price is not None:
             if product.price is None or (
@@ -827,19 +900,33 @@ class ProductRecommender:
         # classifier for every candidate merely to award a constant base score.
         if entities.category:
             score += 5.0
+        if entities.category_path:
+            score += 5.0
         if entities.brands:
             score += 5.0
         for group in cls._query_groups(entities.query, entities.category or ""):
-            best = 0.0
-            for alias in group:
-                compact_alias = compact_text(alias)
-                if not compact_alias:
-                    continue
-                if _contains_requested_alias(haystack, (alias,)):
-                    best = max(best, 3.0 + min(1.0, len(compact_alias) / 20))
-                else:
-                    best = max(best, SequenceMatcher(None, compact_alias, compact_haystack).ratio())
-            score += best
+            exact_length = next(
+                (
+                    len(compact_alias)
+                    for alias in group
+                    if (compact_alias := compact_text(alias))
+                    and _contains_requested_alias(haystack, (alias,))
+                ),
+                0,
+            )
+            if exact_length:
+                # Synonyms within one group are semantically equivalent; the first
+                # exact hit is enough and avoids normalising every remaining alias.
+                score += 3.0 + min(1.0, exact_length / 20)
+                continue
+            score += max(
+                (
+                    SequenceMatcher(None, compact_alias, compact_haystack).ratio()
+                    for alias in group
+                    if (compact_alias := compact_text(alias))
+                ),
+                default=0.0,
+            )
         popular_hints = ("ขายดี", "ยอดนิยม", "bestseller", "best seller", "popular", "ฮิต")
         if any(normalize_text(hint) in haystack for hint in popular_hints):
             score += 0.5
@@ -885,7 +972,11 @@ class ProductRecommender:
     def _signature(entities: CommandEntities) -> str:
         parts = (
             compact_text(entities.category or ""),
+            "/".join(compact_text(part) for part in entities.category_path),
             ",".join(sorted(compact_text(brand) for brand in entities.brands)),
+            ",".join(
+                sorted(compact_text(brand) for brand in entities.excluded_brands)
+            ),
             "" if entities.min_price is None else f"{entities.min_price:g}",
             "" if entities.max_price is None else f"{entities.max_price:g}",
             str(entities.min_price_inclusive),
@@ -961,8 +1052,8 @@ class ProductRecommender:
                 outgoing, incoming = replacement
                 chosen[chosen.index(outgoing)] = incoming
 
-        # Randomness changes the set, while catalogue relevance/sort determines display
-        # order.  This also makes ``price_asc`` and ``price_desc`` observable to users.
+        # Randomness changes the set; catalogue relevance still determines the display
+        # order for recommendations without an explicit extrema sort.
         rank_position = {product.id: index for index, product in enumerate(pool)}
         chosen.sort(key=lambda product: rank_position[product.id])
         return chosen
@@ -1008,7 +1099,14 @@ class ProductRecommender:
         with self._lock:
             self._prune_history(now)
             records = self._history.get(key, deque())
-            chosen = self._choose(pool, min(limit, len(pool)), tuple(records))
+            count = min(limit, len(pool))
+            if entities.sort in {SORT_PRICE_ASC, SORT_PRICE_DESC, SORT_DISCOUNT}:
+                # Explicit extrema must mean the actual first N ranked matches.  A
+                # random subset of a sorted pool can look ordered while omitting the
+                # cheapest, most expensive, or most discounted products.
+                chosen = list(pool[:count])
+            else:
+                chosen = self._choose(pool, count, tuple(records))
             target = self._history.setdefault(key, deque(maxlen=self.history_size))
             target.append(_HistoryRecord(now, tuple(product.id for product in chosen)))
         return chosen

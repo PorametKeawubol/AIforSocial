@@ -52,6 +52,13 @@ def _truthy(name: str, default: bool = False) -> bool:
     return value.strip().casefold() in {"1", "true", "yes", "on"}
 
 
+def _project_path(name: str, default_relative_path: str) -> Path:
+    """Resolve a configurable path consistently against the project directory."""
+
+    path = Path(os.getenv(name, str(PROJECT_DIR / default_relative_path))).expanduser()
+    return path if path.is_absolute() else PROJECT_DIR / path
+
+
 @dataclass(frozen=True, slots=True)
 class Settings:
     line_channel_secret: str
@@ -78,6 +85,12 @@ class Settings:
     phayathaibert_min_confidence: float = 0.30
     phayathaibert_local_files_only: bool = False
     price_history_path: Path = PROJECT_DIR / "data" / "mercular_price_history.sqlite3"
+    promotion_snapshot_path: Path = PROJECT_DIR / "data" / "mercular_promotions.json"
+    promotion_category_url: str = "https://www.mercular.com/category-review-article/promotion"
+    detail_scrape_timeout_seconds: float = 45.0
+    detail_scrape_delay_seconds: float = 5.0
+    detail_scrape_mode: str = "hybrid"
+    playwright_executable_path: str = ""
 
     @classmethod
     def from_env(cls) -> "Settings":
@@ -87,25 +100,21 @@ class Settings:
             for item in os.getenv("MERCULAR_CATEGORY_URLS", "").split(",")
             if item.strip()
         )
-        snapshot_path = Path(
-            os.getenv(
-                "MERCULAR_SNAPSHOT_PATH",
-                str(PROJECT_DIR / "data" / "mercular_products.json"),
-            )
-        ).expanduser()
-        if not snapshot_path.is_absolute():
-            snapshot_path = PROJECT_DIR / snapshot_path
-        price_history_path = Path(
-            os.getenv(
-                "MERCULAR_PRICE_HISTORY_PATH",
-                str(PROJECT_DIR / "data" / "mercular_price_history.sqlite3"),
-            )
-        ).expanduser()
-        if not price_history_path.is_absolute():
-            price_history_path = PROJECT_DIR / price_history_path
+        snapshot_path = _project_path(
+            "MERCULAR_SNAPSHOT_PATH", "data/mercular_products.json"
+        )
+        price_history_path = _project_path(
+            "MERCULAR_PRICE_HISTORY_PATH", "data/mercular_price_history.sqlite3"
+        )
+        promotion_snapshot_path = _project_path(
+            "MERCULAR_PROMOTION_SNAPSHOT_PATH", "data/mercular_promotions.json"
+        )
         nlp_backend = os.getenv("NLP_BACKEND", "phayathaibert").strip().casefold()
         if nlp_backend not in {"phayathaibert", "rules"}:
             nlp_backend = "phayathaibert"
+        detail_scrape_mode = os.getenv("DETAIL_SCRAPER_MODE", "hybrid").strip().casefold()
+        if detail_scrape_mode not in {"hybrid", "playwright"}:
+            detail_scrape_mode = "hybrid"
         return cls(
             line_channel_secret=os.getenv("LINE_CHANNEL_SECRET", "").strip(),
             line_channel_access_token=os.getenv("LINE_CHANNEL_ACCESS_TOKEN", "").strip(),
@@ -140,6 +149,22 @@ class Settings:
                 "PHAYATHAIBERT_LOCAL_FILES_ONLY", False
             ),
             price_history_path=price_history_path,
+            promotion_snapshot_path=promotion_snapshot_path,
+            promotion_category_url=(
+                os.getenv(
+                    "MERCULAR_PROMOTION_CATEGORY_URL",
+                    "https://www.mercular.com/category-review-article/promotion",
+                ).strip()
+                or "https://www.mercular.com/category-review-article/promotion"
+            ),
+            detail_scrape_timeout_seconds=_floating(
+                "DETAIL_SCRAPER_TIMEOUT_SECONDS", 45.0, 5.0
+            ),
+            detail_scrape_delay_seconds=_floating(
+                "DETAIL_SCRAPER_DELAY_SECONDS", 5.0, 0.25
+            ),
+            detail_scrape_mode=detail_scrape_mode,
+            playwright_executable_path=os.getenv("PLAYWRIGHT_CHROMIUM_EXECUTABLE", "").strip(),
         )
 
 

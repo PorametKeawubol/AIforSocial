@@ -14,9 +14,13 @@ from linebot.v3.messaging import (
     VideoMessage,
 )
 
-from app import RecentQueries, RecentWebhookEvents, create_app
+from app import _recommendation_summary, create_app
 from config import Settings
 from models import Product
+from nlp import SORT_PRICE_ASC, SORT_PRICE_DESC, ThaiCommandParser
+from promotions import Promotion
+from rich_menu import RICH_MENU_ACTIONS
+from session_state import RecentQueries, RecentWebhookEvents
 
 
 def _settings(secret="test-secret", token="test-token"):
@@ -87,6 +91,7 @@ class FakeParser:
             "ช่วยด้วย": "help",
             "สุ่มใหม่": "refresh",
             "???": "unknown",
+            "มีโปรโมชันอะไรบ้าง": "promotion",
         }
         return SimpleNamespace(
             intent=mapping.get(text, "product_search"),
@@ -102,6 +107,21 @@ class FakeRecommender:
     def recommend(self, products, parsed, **kwargs):
         self.calls.append((list(products), parsed, kwargs))
         return list(products)[: kwargs.get("top_k", 5)]
+
+
+class FakePromotionRepository:
+    def current(self, **_kwargs):
+        return [
+            Promotion(
+                id="payday",
+                title="PAYDAY ลดสูงสุด 8,000 บาท",
+                summary="คูปองล่าสุด",
+                image_url="",
+                article_url="https://www.mercular.com/review-article/payday",
+                starts_at="2026-08-24",
+                ends_at="2026-08-31",
+            )
+        ]
 
 
 def _signature(secret, body):
@@ -129,6 +149,28 @@ def _event_body(text="หาหูฟัง", event_id="evt-1", reply_token="rep
                         "quoteToken": "quote-token",
                         "text": text,
                     },
+                }
+            ],
+        },
+        separators=(",", ":"),
+        ensure_ascii=False,
+    )
+
+
+def _postback_body(product_id, event_id="evt-detail", reply_token="reply-detail"):
+    return json.dumps(
+        {
+            "destination": "Udestination",
+            "events": [
+                {
+                    "type": "postback",
+                    "mode": "active",
+                    "timestamp": 1787500000000,
+                    "source": {"type": "user", "userId": "Uuser"},
+                    "webhookEventId": event_id,
+                    "deliveryContext": {"isRedelivery": False},
+                    "replyToken": reply_token,
+                    "postback": {"data": f'action=product_detail&product_id={product_id}'},
                 }
             ],
         },
@@ -228,6 +270,277 @@ def test_product_query_sends_summary_and_exact_five_card_carousel():
     assert flex_payload["quickReply"]["items"][-1]["action"]["text"] == "สุ่มใหม่"
 
 
+def test_promotion_intent_reads_promotion_snapshot_without_product_search():
+    replies = []
+    recommender = FakeRecommender()
+    app = create_app(
+        _settings(),
+        repository=FakeRepository([_product()]),
+        parser=FakeParser(),
+        recommender=recommender,
+        promotion_repository=FakePromotionRepository(),
+        reply_sender=lambda token, message: replies.append((token, message)),
+    )
+
+    response = _post(
+        app.test_client(),
+        _event_body("มีโปรโมชันอะไรบ้าง", event_id="evt-promotion"),
+    )
+
+    assert response.status_code == 200
+    assert recommender.calls == []
+    assert isinstance(replies[0][1], FlexMessage)
+    assert "PAYDAY" in json.dumps(replies[0][1].to_dict(), ensure_ascii=False)
+
+
+def test_product_list_question_opens_category_picker_instead_of_unknown_reply() -> None:
+    replies = []
+    parser = FakeParser()
+    recommender = FakeRecommender()
+    app = create_app(
+        _settings(),
+        repository=FakeRepository([_product()]),
+        parser=parser,
+        recommender=recommender,
+        reply_sender=lambda token, message: replies.append((token, message)),
+    )
+
+    response = _post(
+        app.test_client(),
+        _event_body("มีสินค้าอะไรบ้าง", event_id="evt-category-picker"),
+    )
+
+    assert response.status_code == 200
+    assert parser.inputs == []
+    assert recommender.calls == []
+    assert isinstance(replies[0][1], FlexMessage)
+    assert "เลือกหมวดสินค้า" in replies[0][1].alt_text
+
+
+def test_every_rich_menu_button_reaches_its_real_webhook_function() -> None:
+    replies = []
+    products = [
+        replace(
+            _product(1),
+            category="เมาส์เกมมิ่ง",
+            category_path=("เกมมิ่ง", "เมาส์เกมมิ่ง"),
+        ),
+        replace(
+            _product(2),
+            category="โน๊ตบุ๊ค",
+            category_path=("คอมพิวเตอร์", "โน๊ตบุ๊ค"),
+        ),
+        replace(
+            _product(3),
+            category="โทรศัพท์",
+            category_path=("Smartphone / Tablet / ACC", "โทรศัพท์"),
+        ),
+    ]
+    recommender = FakeRecommender()
+    app = create_app(
+        _settings(),
+        repository=FakeRepository(products),
+        parser=ThaiCommandParser(brands=("Test",), categories=("หูฟัง",)),
+        recommender=recommender,
+        promotion_repository=FakePromotionRepository(),
+        reply_sender=lambda token, message: replies.append((token, message)),
+    )
+    client = app.test_client()
+
+    for index, item in enumerate(RICH_MENU_ACTIONS, start=1):
+        response = _post(
+            client,
+            _event_body(
+                item.message,
+                event_id=f"evt-menu-{item.key}",
+                reply_token=f"reply-menu-{index}",
+            ),
+        )
+        assert response.status_code == 200
+
+    outgoing_by_key = {
+        item.key: reply[1] for item, reply in zip(RICH_MENU_ACTIONS, replies, strict=True)
+    }
+    for key in ("all_products", "gaming", "computer", "mobile"):
+        assert isinstance(outgoing_by_key[key], FlexMessage)
+    assert isinstance(outgoing_by_key["promotion"], FlexMessage)
+    assert isinstance(outgoing_by_key["help"], TextMessage)
+    assert recommender.calls == []
+
+
+def test_category_leaf_selection_runs_top_five_product_recommendation() -> None:
+    replies = []
+    recommender = FakeRecommender()
+    app = create_app(
+        _settings(),
+        repository=FakeRepository([_product(index) for index in range(1, 7)]),
+        parser=ThaiCommandParser(),
+        recommender=recommender,
+        reply_sender=lambda token, message: replies.append((token, message)),
+    )
+
+    response = _post(
+        app.test_client(),
+        _event_body(
+            "ดูสินค้าหมวด: เกมมิ่ง > เมาส์เกมมิ่ง",
+            event_id="evt-category-products",
+        ),
+    )
+
+    assert response.status_code == 200
+    assert recommender.calls[0][1].entities.category_path == (
+        "เกมมิ่ง",
+        "เมาส์เกมมิ่ง",
+    )
+    assert recommender.calls[0][1].entities.query == ""
+    assert isinstance(replies[0][1], list)
+    assert isinstance(replies[0][1][1], FlexMessage)
+
+
+def test_explicit_comparison_uses_catalog_data_before_nlp_routing():
+    replies = []
+    parser = FakeParser()
+    products = [
+        replace(
+            _product(1),
+            name="MOUSE ALPHA X1",
+            price=1990,
+            specifications=(("น้ำหนัก", "59 กรัม"),),
+        ),
+        replace(
+            _product(2),
+            name="MOUSE BETA Z2",
+            price=2490,
+            specifications=(("น้ำหนัก", "63 กรัม"),),
+        ),
+    ]
+    app = create_app(
+        _settings(),
+        repository=FakeRepository(products),
+        parser=parser,
+        recommender=FakeRecommender(),
+        reply_sender=lambda token, message: replies.append((token, message)),
+    )
+
+    response = _post(
+        app.test_client(),
+        _event_body("Alpha X1 กับ Beta Z2 ต่างกันยังไง", event_id="evt-compare"),
+    )
+
+    assert response.status_code == 200
+    assert parser.inputs == []
+    assert "ถูกกว่า ฿500" in replies[0][1].text
+
+
+def test_detail_postback_sets_context_for_followup_spec_question():
+    replies = []
+    product = replace(
+        _product(7),
+        specifications=(("การเชื่อมต่อ", "Bluetooth 5.2"),),
+    )
+    app = create_app(
+        _settings(),
+        repository=FakeRepository([product]),
+        parser=FakeParser(),
+        recommender=FakeRecommender(),
+        reply_sender=lambda token, message: replies.append((token, message)),
+    )
+    client = app.test_client()
+
+    _post(client, _postback_body("7"))
+    response = _post(
+        client,
+        _event_body(
+            "ตัวนี้ใช้ Bluetooth ได้ไหม",
+            event_id="evt-question",
+            reply_token="reply-question",
+        ),
+    )
+
+    assert response.status_code == 200
+    assert "Bluetooth 5.2" in replies[-1][1].text
+
+
+def test_cheaper_followup_reuses_filters_and_sets_strict_lower_ceiling():
+    products = [_product(i) for i in range(1, 7)]
+    recommender = FakeRecommender()
+    parser = ThaiCommandParser(brands=["Logitech"], categories=["หูฟัง"])
+    app = create_app(
+        _settings(),
+        repository=FakeRepository(products),
+        parser=parser,
+        recommender=recommender,
+        reply_sender=lambda *_args: None,
+    )
+    client = app.test_client()
+
+    _post(client, _event_body("หาหูฟัง งบ 3000", "evt-first", "reply-first"))
+    response = _post(
+        client,
+        _event_body("ขอถูกกว่านี้", "evt-cheaper", "reply-cheaper"),
+    )
+
+    assert response.status_code == 200
+    followup = recommender.calls[-1][1]
+    assert followup.entities.category == "หูฟัง"
+    assert followup.entities.max_price == 1001
+    assert followup.entities.max_price_inclusive is False
+    assert followup.entities.sort == SORT_PRICE_ASC
+
+
+def test_brand_only_followup_merges_with_previous_category_and_budget():
+    recommender = FakeRecommender()
+    parser = ThaiCommandParser(brands=["Logitech"], categories=["หูฟัง"])
+    app = create_app(
+        _settings(),
+        repository=FakeRepository([_product(i) for i in range(1, 4)]),
+        parser=parser,
+        recommender=recommender,
+        reply_sender=lambda *_args: None,
+    )
+    client = app.test_client()
+
+    _post(client, _event_body("หาหูฟัง งบ 3000", "evt-base", "reply-base"))
+    _post(
+        client,
+        _event_body("เอา Logitech อย่างเดียว", "evt-brand", "reply-brand"),
+    )
+
+    followup = recommender.calls[-1][1]
+    assert followup.entities.category == "หูฟัง"
+    assert followup.entities.max_price == 3000
+    assert followup.entities.brands == ("Logitech",)
+
+
+def test_similar_but_cheaper_request_uses_the_opened_product_as_reference():
+    recommender = FakeRecommender()
+    source = replace(_product(7), category="เมาส์", price=3500)
+    app = create_app(
+        _settings(),
+        repository=FakeRepository([source, _product(1)]),
+        parser=ThaiCommandParser(categories=["เมาส์"]),
+        recommender=recommender,
+        reply_sender=lambda *_args: None,
+    )
+    client = app.test_client()
+
+    _post(client, _postback_body("7", "evt-focus", "reply-focus"))
+    response = _post(
+        client,
+        _event_body(
+            "มีตัวคล้าย ๆ ตัวนี้แต่ถูกกว่าไหม",
+            "evt-alternative",
+            "reply-alternative",
+        ),
+    )
+
+    assert response.status_code == 200
+    command = recommender.calls[-1][1]
+    assert command.entities.category == "เมาส์"
+    assert command.entities.max_price == 3500
+    assert command.entities.max_price_inclusive is False
+
+
 def test_configured_three_card_result_reports_three_not_five():
     settings = replace(_settings(), top_k=3)
     replies = []
@@ -241,8 +554,21 @@ def test_configured_three_card_result_reports_three_not_five():
 
     assert _post(app.test_client(), _event_body()).status_code == 200
     summary, carousel = replies[0][1]
-    assert "สุ่มสินค้า 3 รายการ" in summary.text
+    assert "แนะนำสินค้า 3 รายการ" in summary.text
+    assert "จากข้อมูลที่มี" in summary.text
+    assert "สุ่มสินค้า" not in summary.text
+    assert "snapshot" not in summary.text
     assert len(carousel.to_dict()["contents"]["contents"]) == 3
+
+
+def test_most_expensive_summary_describes_recommendation_and_ordering():
+    summary = _recommendation_summary(5, 5, SORT_PRICE_DESC)
+
+    assert "แนะนำสินค้า 5 รายการ" in summary
+    assert "จากข้อมูลที่มี" in summary
+    assert "เรียงราคาจากสูงไปต่ำ" in summary
+    assert "สุ่มสินค้า" not in summary
+    assert "snapshot" not in summary
 
 
 def test_duplicate_line_delivery_is_answered_only_once():

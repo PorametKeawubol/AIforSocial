@@ -21,6 +21,7 @@ try:  # Package import (``MercularChatbot.bert_nlp``).
     from .nlp import (
         CommandEntities,
         INTENT_SEARCH,
+        INTENT_PROMOTION,
         INTENT_UNKNOWN,
         ParsedCommand,
         ThaiCommandParser,
@@ -30,6 +31,7 @@ except ImportError:  # pragma: no cover - direct execution from project director
     from nlp import (
         CommandEntities,
         INTENT_SEARCH,
+        INTENT_PROMOTION,
         INTENT_UNKNOWN,
         ParsedCommand,
         ThaiCommandParser,
@@ -63,6 +65,12 @@ INTENT_EXAMPLES: Mapping[str, tuple[str, ...]] = {
     ),
     "order": ("สั่งซื้อสินค้า", "ซื้ออันนี้", "place an order", "buy this"),
     "refresh": ("สุ่มสินค้าใหม่", "ขอดูอีกชุด", "show more products", "refresh results"),
+    "promotion": (
+        "ตอนนี้มีโปรโมชันอะไรบ้าง",
+        "ขอดูคูปองล่าสุด",
+        "มีส่วนลดอะไรช่วงนี้",
+        "show me current promotions",
+    ),
 }
 
 
@@ -242,6 +250,11 @@ class PhayaThaiBertCommandParser:
         rule_result = self.rule_parser.parse(message)
         if not rule_result.normalized_text:
             return rule_result
+        # The encoder is a semantic fallback, not a second opinion on intents that
+        # deterministic rules already understand.  Returning here avoids needless
+        # model inference for Rich Menu commands such as promotions and help.
+        if rule_result.intent != INTENT_UNKNOWN:
+            return rule_result
         try:
             prediction = self.classifier.predict(rule_result.normalized_text)
         except PhayaThaiBertUnavailable as error:
@@ -253,9 +266,8 @@ class PhayaThaiBertCommandParser:
             LOGGER.exception("PhayaThaiBERT intent inference failed; using rule parser")
             return rule_result
 
-        # Rules remain authoritative once they recognize an intent or hard shopping
-        # constraints.  PhayaThaiBERT adds semantic coverage for unknown utterances.
-        if rule_result.intent != INTENT_UNKNOWN or prediction.confidence < self.min_confidence:
+        # PhayaThaiBERT adds semantic coverage only for unknown utterances.
+        if prediction.confidence < self.min_confidence:
             return rule_result
         if prediction.intent == INTENT_SEARCH:
             entities = CommandEntities(query=rule_result.normalized_text)

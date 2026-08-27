@@ -19,11 +19,19 @@ from linebot.v3.messaging import (  # noqa: E402
 )
 
 from config import Settings  # noqa: E402
+from catalog_navigation import (  # noqa: E402
+    COMPUTER_ROOT,
+    GAMING_ROOT,
+    MOBILE_ROOT,
+    build_category_menu,
+)
+from line_views import build_category_picker_message  # noqa: E402
 from message_showcase import (  # noqa: E402
     SHOWCASE_TYPES,
     build_showcase_message,
     showcase_hub_message,
 )
+from repository import ProductRepository  # noqa: E402
 
 
 def main() -> int:
@@ -45,6 +53,16 @@ def main() -> int:
         )
         for kind in SHOWCASE_TYPES
     )
+    products = ProductRepository(settings.snapshot_path, settings=settings).all()
+    for name, path in (
+        ("categories-all", ()),
+        ("categories-gaming", (GAMING_ROOT,)),
+        ("categories-computer", (COMPUTER_ROOT,)),
+        ("categories-mobile", (MOBILE_ROOT,)),
+    ):
+        menu = build_category_menu(products, path)
+        if menu is not None and menu.options:
+            named_messages.append((name, build_category_picker_message(menu)))
 
     configuration = Configuration(access_token=settings.line_channel_access_token)
     with ApiClient(configuration) as api_client:

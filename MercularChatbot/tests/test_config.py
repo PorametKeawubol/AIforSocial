@@ -62,3 +62,30 @@ def test_price_history_path_is_configurable(monkeypatch):
     monkeypatch.setenv("MERCULAR_PRICE_HISTORY_PATH", "data/history.sqlite3")
 
     assert Settings.from_env().price_history_path.name == "history.sqlite3"
+
+
+def test_promotion_snapshot_and_source_are_configurable(monkeypatch):
+    monkeypatch.setenv("MERCULAR_PROMOTION_SNAPSHOT_PATH", "data/promotions-test.json")
+    monkeypatch.setenv(
+        "MERCULAR_PROMOTION_CATEGORY_URL",
+        "https://www.mercular.com/category-review-article/promotion",
+    )
+
+    settings = Settings.from_env()
+
+    assert settings.promotion_snapshot_path.name == "promotions-test.json"
+    assert settings.promotion_category_url.endswith("/promotion")
+
+
+def test_playwright_detail_scraper_settings_are_environment_backed(monkeypatch):
+    monkeypatch.setenv("DETAIL_SCRAPER_TIMEOUT_SECONDS", "60")
+    monkeypatch.setenv("DETAIL_SCRAPER_DELAY_SECONDS", "2")
+    monkeypatch.setenv("DETAIL_SCRAPER_MODE", "playwright")
+    monkeypatch.setenv("PLAYWRIGHT_CHROMIUM_EXECUTABLE", "/usr/bin/chromium")
+
+    settings = Settings.from_env()
+
+    assert settings.detail_scrape_timeout_seconds == 60.0
+    assert settings.detail_scrape_delay_seconds == 2.0
+    assert settings.detail_scrape_mode == "playwright"
+    assert settings.playwright_executable_path == "/usr/bin/chromium"

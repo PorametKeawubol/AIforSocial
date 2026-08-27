@@ -5,7 +5,7 @@ from bert_nlp import (
     PhayaThaiBertUnavailable,
     IntentPrediction,
 )
-from nlp import INTENT_HELP, INTENT_SEARCH, INTENT_UNKNOWN
+from nlp import INTENT_HELP, INTENT_PROMOTION, INTENT_SEARCH, INTENT_UNKNOWN
 
 
 class FakeClassifier:
@@ -47,10 +47,11 @@ def test_phayathaibert_search_keeps_unknown_message_as_catalogue_query():
 
 
 def test_rule_parser_remains_authoritative_for_structured_search():
+    classifier = FakeClassifier(IntentPrediction(INTENT_HELP, 0.99))
     parser = PhayaThaiBertCommandParser(
         brands=["Sony"],
         categories=["หูฟัง"],
-        classifier=FakeClassifier(IntentPrediction(INTENT_HELP, 0.99)),
+        classifier=classifier,
     )
 
     parsed = parser.parse("หาหูฟัง Sony ไม่เกิน 3000 พร้อมส่ง")
@@ -59,6 +60,19 @@ def test_rule_parser_remains_authoritative_for_structured_search():
     assert parsed.entities.brands == ("Sony",)
     assert parsed.entities.max_price == 3000
     assert parsed.entities.in_stock is True
+    assert classifier.inputs == []
+
+
+def test_rule_promotion_typo_is_authoritative_over_model_prediction():
+    classifier = FakeClassifier(IntentPrediction(INTENT_SEARCH, 0.99))
+    parser = PhayaThaiBertCommandParser(
+        classifier=classifier,
+    )
+
+    parsed = parser.parse("มีโปรโมชั้นอะไรบ้าง")
+
+    assert parsed.intent == INTENT_PROMOTION
+    assert classifier.inputs == []
 
 
 def test_unavailable_phayathaibert_falls_back_without_changing_rule_result():

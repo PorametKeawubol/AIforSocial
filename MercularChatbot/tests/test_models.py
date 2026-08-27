@@ -23,7 +23,17 @@ def _product(**changes):
 
 
 def test_product_round_trip_and_display_price():
-    product = _product()
+    product = _product(
+        overview="จอเกมมิ่ง 165Hz",
+        highlights=("พาเนล IPS", "165Hz"),
+        specifications=(("พาเนล", "IPS"),),
+        rating=4.8,
+        review_count=5,
+        recommended_count=4,
+        warranty="ประกัน 3 ปี",
+        service_notes=("ส่งฟรี",),
+        detail_updated_at="2026-08-27T13:00:00+00:00",
+    )
 
     restored = Product.from_dict(product.to_dict())
 

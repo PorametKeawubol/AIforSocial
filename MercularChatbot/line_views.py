@@ -18,9 +18,15 @@ from urllib.parse import parse_qsl, quote, urlencode, urlsplit, urlunsplit
 from linebot.v3.messaging import FlexMessage, TextMessage
 
 try:  # Support both ``python app.py`` and package imports in offline tests.
+    from .catalog_navigation import ALL_CATEGORIES_COMMAND, CategoryMenu
     from .models import Product, clean_text
+    from .nlp import normalize_text
+    from .promotions import Promotion
 except ImportError:  # pragma: no cover - exercised when app.py is run directly
+    from catalog_navigation import ALL_CATEGORIES_COMMAND, CategoryMenu
     from models import Product, clean_text
+    from nlp import normalize_text
+    from promotions import Promotion
 
 
 MAX_CAROUSEL_PRODUCTS = 5
@@ -30,6 +36,7 @@ LINE_ACTION_LABEL_LIMIT = 20
 LINE_POSTBACK_DATA_LIMIT = 300
 LINE_URI_LIMIT = 1_000
 LINE_QUICK_REPLY_LIMIT = 13
+CATEGORY_OPTIONS_PER_BUBBLE = 5
 
 PRODUCT_DETAIL_ACTION = "product_detail"
 REFRESH_ACTION = "refresh"
@@ -473,13 +480,256 @@ def build_product_carousel_message(
 build_product_carousel = build_product_carousel_message
 
 
+def build_promotion_bubble_payload(promotion: Promotion) -> dict[str, Any]:
+    """Build one link-only promotion card from verified snapshot fields."""
+
+    if not isinstance(promotion, Promotion):
+        raise TypeError("promotion must be a Promotion")
+    article_url = normalize_https_url(promotion.article_url, mercular_only=True)
+    if not article_url:
+        raise ValueError("promotion has no safe Mercular article URL")
+    contents: list[dict[str, Any]] = [
+        {
+            "type": "text",
+            "text": "PROMOTION",
+            "size": "xs",
+            "weight": "bold",
+            "color": _ACCENT_COLOR,
+        },
+        {
+            "type": "text",
+            "text": truncate_text(promotion.title, 120, fallback="โปรโมชัน Mercular"),
+            "size": "md",
+            "weight": "bold",
+            "wrap": True,
+            "maxLines": 4,
+        },
+    ]
+    if promotion.discount_summary:
+        contents.append(
+            {
+                "type": "text",
+                "text": truncate_text(promotion.discount_summary, 100),
+                "size": "sm",
+                "weight": "bold",
+                "color": _OUT_OF_STOCK_COLOR,
+                "wrap": True,
+                "maxLines": 3,
+                "margin": "md",
+            }
+        )
+    if promotion.starts_at or promotion.ends_at:
+        period = " – ".join(
+            part for part in (promotion.starts_at[:10], promotion.ends_at[:10]) if part
+        )
+        contents.append(
+            {
+                "type": "text",
+                "text": f"ระยะเวลา: {period}",
+                "size": "xs",
+                "color": _MUTED_COLOR,
+                "wrap": True,
+                "maxLines": 2,
+                "margin": "sm",
+            }
+        )
+    if promotion.summary:
+        contents.append(
+            {
+                "type": "text",
+                "text": truncate_text(promotion.summary, 220),
+                "size": "xs",
+                "color": _MUTED_COLOR,
+                "wrap": True,
+                "maxLines": 5,
+                "margin": "md",
+            }
+        )
+    bubble: dict[str, Any] = {
+        "type": "bubble",
+        "size": "kilo",
+        "body": {
+            "type": "box",
+            "layout": "vertical",
+            "paddingAll": "18px",
+            "contents": contents,
+        },
+        "footer": {
+            "type": "box",
+            "layout": "vertical",
+            "paddingAll": "14px",
+            "contents": [
+                {
+                    "type": "button",
+                    "style": "primary",
+                    "height": "sm",
+                    "color": _ACCENT_COLOR,
+                    "action": {
+                        "type": "uri",
+                        "label": "ดูโปรโมชัน",
+                        "uri": article_url,
+                    },
+                }
+            ],
+        },
+        "styles": {"footer": {"separator": True}},
+    }
+    image_url = normalize_https_url(promotion.image_url, max_length=2_000)
+    if image_url:
+        bubble = {
+            "type": "bubble",
+            "hero": {
+                "type": "image",
+                "url": image_url,
+                "size": "full",
+                "aspectRatio": "20:13",
+                "aspectMode": "cover",
+                "action": {"type": "uri", "uri": article_url},
+            },
+            **{key: value for key, value in bubble.items() if key != "type"},
+        }
+    return bubble
+
+
+def build_promotion_carousel_message(promotions: Iterable[Promotion]) -> FlexMessage | TextMessage:
+    selected: list[Promotion] = []
+    seen: set[str] = set()
+    for promotion in promotions:
+        if not isinstance(promotion, Promotion) or promotion.id in seen:
+            continue
+        seen.add(promotion.id)
+        selected.append(promotion)
+        if len(selected) == MAX_CAROUSEL_PRODUCTS:
+            break
+    if not selected:
+        return promotion_unavailable_message()
+    return FlexMessage.from_dict(
+        {
+            "type": "flex",
+            "altText": truncate_text(
+                f"โปรโมชัน Mercular ล่าสุด {len(selected)} รายการ",
+                LINE_ALT_TEXT_LIMIT,
+            ),
+            "quickReply": {"items": default_quick_reply_items()},
+            "contents": {
+                "type": "carousel",
+                "contents": [build_promotion_bubble_payload(item) for item in selected],
+            },
+        }
+    )
+
+
+def build_category_picker_payload(menu: CategoryMenu) -> dict[str, Any]:
+    """Build a paginated Flex picker for one catalogue breadcrumb level."""
+
+    if not isinstance(menu, CategoryMenu):
+        raise TypeError("menu must be a CategoryMenu")
+    if not menu.options:
+        raise ValueError("category menu must contain at least one option")
+
+    pages = [
+        menu.options[index : index + CATEGORY_OPTIONS_PER_BUBBLE]
+        for index in range(0, len(menu.options), CATEGORY_OPTIONS_PER_BUBBLE)
+    ]
+    bubbles: list[dict[str, Any]] = []
+    for page_number, options in enumerate(pages, start=1):
+        buttons = [
+            {
+                "type": "button",
+                "style": "secondary",
+                "height": "sm",
+                "action": {
+                    "type": "message",
+                    "label": truncate_text(
+                        f"{option.label} ({option.product_count})",
+                        LINE_ACTION_LABEL_LIMIT,
+                    ),
+                    "text": truncate_text(
+                        option.command,
+                        LINE_POSTBACK_DATA_LIMIT,
+                    ),
+                },
+            }
+            for option in options
+        ]
+        bubbles.append(
+            {
+                "type": "bubble",
+                "size": "kilo",
+                "header": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "backgroundColor": "#07162E",
+                    "paddingAll": "18px",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "text": truncate_text(menu.title, 80),
+                            "color": "#FFFFFF",
+                            "weight": "bold",
+                            "size": "lg",
+                            "wrap": True,
+                            "maxLines": 2,
+                        },
+                        {
+                            "type": "text",
+                            "text": truncate_text(
+                                f"{menu.breadcrumb} · {menu.product_count} รายการ",
+                                120,
+                            ),
+                            "color": "#7FE9FF",
+                            "size": "xs",
+                            "wrap": True,
+                            "maxLines": 2,
+                        },
+                    ],
+                },
+                "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "spacing": "sm",
+                    "paddingAll": "14px",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "text": (
+                                f"{menu.prompt} · หน้า {page_number}/{len(pages)}"
+                            ),
+                            "size": "xs",
+                            "color": _MUTED_COLOR,
+                            "wrap": True,
+                        },
+                        *buttons,
+                    ],
+                },
+            }
+        )
+    return {
+        "type": "flex",
+        "altText": truncate_text(
+            f"เลือกหมวดสินค้า {menu.breadcrumb}",
+            LINE_ALT_TEXT_LIMIT,
+        ),
+        "quickReply": {"items": default_quick_reply_items(include_refresh=False)},
+        "contents": {"type": "carousel", "contents": bubbles},
+    }
+
+
+def build_category_picker_message(menu: CategoryMenu) -> FlexMessage:
+    """Convert a category menu to a LINE SDK Flex message."""
+
+    return FlexMessage.from_dict(build_category_picker_payload(menu))
+
+
 def default_quick_reply_items(*, include_refresh: bool = True) -> list[dict[str, Any]]:
-    """Example NLP searches plus help/refresh actions (five of LINE's 13 slots)."""
+    """Category/NLP shortcuts plus help and optional refresh actions."""
 
     examples = [
+        ("สินค้าทั้งหมด", ALL_CATEGORIES_COMMAND),
         ("เมาส์ Logitech งบ 3k", "หาเมาส์เกมมิ่ง Logitech ราคาไม่เกิน 3,000 บาท"),
         ("หูฟัง Xiaomi", "หาหูฟังแบรนด์ Xiaomi ไม่เกิน 3,000 บาท"),
         ("คีย์บอร์ดพร้อมส่ง", "แนะนำคีย์บอร์ดเกมมิ่ง เอาเฉพาะพร้อมส่ง"),
+        ("โปรโมชันล่าสุด", "มีโปรโมชันอะไรบ้าง"),
         ("ช่วยเหลือ", "ช่วยเหลือ"),
     ]
     items: list[dict[str, Any]] = [
@@ -561,10 +811,12 @@ def greeting_message(bot_name: object | None = "MercuMate") -> TextMessage:
 def help_message() -> TextMessage:
     return text_with_quick_replies(
         "วิธีค้นหา 🔎\n"
+        "• เลือกหมวดและหมวดย่อยจาก Rich Menu ได้โดยไม่ต้องพิมพ์\n"
         "• ระบุสินค้า/หมวดหมู่ เช่น หูฟัง หรือ earbuds\n"
         "• เพิ่มแบรนด์และงบ เช่น Xiaomi ไม่เกิน 3,000 บาท\n"
-        "• เพิ่ม ‘พร้อมส่ง’ หรือขอเรียงราคาก็ได้\n"
-        "• แตะ ‘สุ่มใหม่’ เพื่อเปลี่ยนชุดโดยคงเงื่อนไขเดิม\n"
+        "• เพิ่มสี คุณสมบัติ ‘พร้อมส่ง’ หรือแบรนด์ที่ไม่เอาได้\n"
+        "• พิมพ์ชื่อ 2 รุ่นเพื่อเปรียบเทียบ หรือถามสเปกหลังแตะ ‘ดูรายละเอียด’\n"
+        "• พิมพ์ ‘ขอถูกกว่านี้’ เพื่อใช้เงื่อนไขเดิม หรือดูโปรโมชันล่าสุดได้\n"
         "ตัวอย่าง: หาเมาส์เกมมิ่ง Logitech งบ 3k พร้อมส่ง",
     )
 
@@ -583,6 +835,14 @@ def data_unavailable_message() -> TextMessage:
     return text_with_quick_replies(
         "ขออภัยครับ ตอนนี้ยังอ่านข้อมูลสินค้า Mercular ล่าสุดไม่ได้ 🛠️ "
         "ระบบยังไม่เดาราคาหรือสต็อกให้ กรุณาลองอีกครั้งในภายหลัง",
+        include_refresh=False,
+    )
+
+
+def promotion_unavailable_message() -> TextMessage:
+    return text_with_quick_replies(
+        "ยังไม่มีข้อมูลโปรโมชันล่าสุดครับ "
+        "ตรวจสอบโปรโมชันปัจจุบันได้ที่เว็บไซต์ Mercular โดยตรง",
         include_refresh=False,
     )
 
@@ -635,6 +895,39 @@ def product_detail_payload(product: Product) -> dict[str, Any]:
     ]
     if description:
         lines.extend(("", f"รายละเอียด: {description}"))
+    if product.overview:
+        lines.extend(("", f"ภาพรวม: {truncate_text(product.overview, 600)}"))
+    if product.rating is not None:
+        review_suffix = (
+            f" จาก {product.review_count:,} รีวิว"
+            if product.review_count is not None
+            else ""
+        )
+        lines.append(f"⭐ คะแนน: {product.rating:.1f}/5{review_suffix}")
+    if product.highlights:
+        lines.extend(
+            (
+                "",
+                "คุณสมบัติเด่น:",
+                *(
+                    f"• {truncate_text(highlight, 220)}"
+                    for highlight in product.highlights[:4]
+                ),
+            )
+        )
+    if product.specifications:
+        lines.extend(
+            (
+                "",
+                "สเปก:",
+                *(
+                    f"• {truncate_text(name, 120)}: {truncate_text(value, 220)}"
+                    for name, value in product.specifications[:8]
+                ),
+            )
+        )
+    if product.warranty:
+        lines.append(f"🛡️ ประกัน: {truncate_text(product.warranty, 500)}")
     product_url = normalize_https_url(product.product_url, mercular_only=True)
     if product_url:
         lines.extend(("", f"ดู/ซื้อสินค้าที่ Mercular: {product_url}"))
@@ -649,6 +942,75 @@ def product_detail_message(product: Product) -> TextMessage:
     """Return one SDK ``TextMessage`` suitable for a detail postback reply."""
 
     return TextMessage.from_dict(product_detail_payload(product))
+
+
+def product_comparison_message(first: Product, second: Product) -> TextMessage:
+    """Compare two catalog records without inferring missing specifications."""
+
+    if not isinstance(first, Product) or not isinstance(second, Product):
+        raise TypeError("comparison requires two Product values")
+
+    def stock(product: Product) -> str:
+        if product.in_stock is True:
+            return "พร้อมส่ง"
+        if product.in_stock is False:
+            return "สินค้าหมด"
+        return "ไม่ทราบ"
+
+    lines = [
+        "🔍 เปรียบเทียบจากข้อมูลล่าสุด",
+        "",
+        f"A: {truncate_text(first.name, 220)}",
+        f"• ราคา {first.display_price} | {stock(first)}",
+        f"B: {truncate_text(second.name, 220)}",
+        f"• ราคา {second.display_price} | {stock(second)}",
+    ]
+    if first.price is not None and second.price is not None and first.price != second.price:
+        cheaper = first if first.price < second.price else second
+        lines.extend(
+            (
+                "",
+                f"💰 {truncate_text(cheaper.name, 120)} ถูกกว่า "
+                f"฿{abs(first.price - second.price):,.0f}",
+            )
+        )
+
+    first_specs = {
+        normalize_text(name): (name, value)
+        for name, value in first.specifications
+        if name and value
+    }
+    second_specs = {
+        normalize_text(name): (name, value)
+        for name, value in second.specifications
+        if name and value
+    }
+    differences = []
+    for key in first_specs.keys() & second_specs.keys():
+        name, first_value = first_specs[key]
+        second_value = second_specs[key][1]
+        if normalize_text(first_value) != normalize_text(second_value):
+            differences.append((name, first_value, second_value))
+    if differences:
+        lines.extend(("", "สเปกที่ต่างกัน:"))
+        for name, first_value, second_value in differences[:8]:
+            lines.append(
+                f"• {truncate_text(name, 90)}: A {truncate_text(first_value, 140)} | "
+                f"B {truncate_text(second_value, 140)}"
+            )
+    else:
+        lines.extend(
+            ("", "ยังไม่มีสเปกชื่อเดียวกันมากพอสำหรับสรุปความต่างเพิ่มเติมครับ")
+        )
+    lines.extend(
+        (
+            "",
+            f"A: {first.product_url}",
+            f"B: {second.product_url}",
+            "ราคา สต็อก และโปรโมชันอาจเปลี่ยนแปลง โปรดตรวจสอบบนเว็บไซต์ก่อนซื้อ",
+        )
+    )
+    return text_with_quick_replies(truncate_text("\n".join(lines), LINE_TEXT_LIMIT))
 
 
 def payload_is_json_serializable(payload: dict[str, Any]) -> bool:
@@ -666,10 +1028,14 @@ __all__ = [
     "PRODUCT_DETAIL_ACTION",
     "REFRESH_ACTION",
     "build_postback_data",
+    "build_category_picker_message",
+    "build_category_picker_payload",
     "build_product_bubble_payload",
     "build_product_carousel",
     "build_product_carousel_message",
     "build_product_carousel_payload",
+    "build_promotion_bubble_payload",
+    "build_promotion_carousel_message",
     "build_text_message_payload",
     "contact_message",
     "data_unavailable_message",
@@ -687,6 +1053,8 @@ __all__ = [
     "product_carousel_message",
     "product_detail_message",
     "product_detail_payload",
+    "product_comparison_message",
+    "promotion_unavailable_message",
     "refresh_message",
     "text_with_quick_replies",
     "truncate_text",

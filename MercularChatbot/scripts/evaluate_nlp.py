@@ -25,6 +25,7 @@ DEFAULT_DATASET = PROJECT_DIR / "data" / "nlp_evaluation.json"
 ENTITY_FIELDS = (
     "category",
     "brands",
+    "excluded_brands",
     "min_price",
     "max_price",
     "min_price_inclusive",
@@ -156,11 +157,12 @@ def _expected_entities(value: Mapping[str, Any]) -> dict[str, Any]:
         raise ValueError(f"unknown entity fields: {sorted(unknown)}")
     defaults.update(value)
     defaults["brands"] = list(defaults.get("brands") or [])
+    defaults["excluded_brands"] = list(defaults.get("excluded_brands") or [])
     return defaults
 
 
 def _comparable(field: str, value: Any) -> Any:
-    if field == "brands":
+    if field in {"brands", "excluded_brands"}:
         return tuple(sorted(compact_text(item) for item in (value or [])))
     if field in {"category", "query"}:
         return compact_text(value or "") or None
@@ -173,7 +175,7 @@ def _entity_atoms(entities: Mapping[str, Any]) -> set[tuple[str, Any]]:
     atoms: set[tuple[str, Any]] = set()
     for field in ENTITY_FIELDS:
         value = _comparable(field, entities.get(field))
-        if field == "brands":
+        if field in {"brands", "excluded_brands"}:
             atoms.update((field, brand) for brand in value)
         elif value not in (None, "", ()):
             atoms.add((field, value))
