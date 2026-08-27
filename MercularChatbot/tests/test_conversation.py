@@ -49,6 +49,58 @@ def test_comparison_accepts_common_chat_spelling_and_polite_suffixes():
         "alpha x1",
         "beta z2",
     )
+    assert comparison_queries("Alpha X1 บ Beta Z2 ต่างกันไง") == (
+        "alpha x1",
+        "beta z2",
+    )
+
+
+def test_exact_four_character_brand_can_match_one_unambiguous_product():
+    products = [
+        _product(
+            "sony",
+            "TRUE WIRELESS SONY WF-1000XM5",
+            brand="Sony",
+            category="หูฟังครอบหู & แนบหู",
+        ),
+        _product(
+            "sony-controller",
+            "CONTROLLER WIRELESS SONY DUALSENSE",
+            brand="Sony",
+            category="จอยเกม",
+        ),
+        _product(
+            "xiaomi-monitor",
+            "XIAOMI TEMPERATURE MONITOR PRO",
+            brand="Xiaomi",
+            category="สมาร์ทโฮม",
+        ),
+    ]
+
+    matched = find_named_product(products, "หูฟัง Sony")
+
+    assert matched is not None
+    assert matched.id == "sony"
+    assert find_named_product(products, "หูฟัง Xiaomi") is None
+
+
+def test_category_and_brand_query_does_not_choose_arbitrarily_between_models():
+    products = [
+        _product(
+            "sony-one",
+            "TRUE WIRELESS SONY WF-1000XM5",
+            brand="Sony",
+            category="หูฟัง",
+        ),
+        _product(
+            "sony-two",
+            "HEADSET SONY PULSE ELITE",
+            brand="Sony",
+            category="หูฟัง",
+        ),
+    ]
+
+    assert find_named_product(products, "หูฟัง Sony") is None
 
 
 def test_weak_partial_model_name_does_not_silently_select_wrong_product():

@@ -8,10 +8,10 @@ from typing import Iterable, Sequence
 
 try:
     from .models import Product, clean_text
-    from .nlp import compact_text, normalize_text
+    from .nlp import CATEGORY_ALIASES, compact_text, normalize_text
 except ImportError:  # pragma: no cover
     from models import Product, clean_text
-    from nlp import compact_text, normalize_text
+    from nlp import CATEGORY_ALIASES, compact_text, normalize_text
 
 
 _COMPARE_SUFFIX_RE = re.compile(
@@ -55,7 +55,11 @@ def comparison_queries(message: object | None) -> tuple[str, str] | None:
     if not text or not re.search(r"(?:ต่างกัน|เทียบ|เปรียบเทียบ|อันไหนดีกว่า|compare)", text):
         return None
     text = re.sub(r"^(?:ช่วย)?(?:เปรียบเทียบ|เทียบ|compare)\s*", "", text)
-    parts = re.split(r"\s+(?:เทียบกับ|กับ|กะ|vs\.?|versus)\s+", text, maxsplit=1)
+    parts = re.split(
+        r"\s+(?:เทียบกับ|กับ|กะ|กั|กบ|บ|vs\.?|versus)\s+",
+        text,
+        maxsplit=1,
+    )
     if len(parts) != 2:
         return None
     left = clean_text(parts[0], limit=250)
@@ -71,12 +75,45 @@ def _name_tokens(value: object) -> tuple[str, ...]:
     )
 
 
+def _contains_category_alias(text: str, alias: str) -> bool:
+    """Match a category phrase without letting short English aliases leak."""
+
+    normalized_alias = normalize_text(alias)
+    if not normalized_alias:
+        return False
+    if re.fullmatch(r"[a-z0-9 ]+", normalized_alias):
+        return bool(
+            re.search(
+                rf"(?<![a-z0-9]){re.escape(normalized_alias)}(?![a-z0-9])",
+                text,
+            )
+        )
+    return compact_text(normalized_alias) in compact_text(text)
+
+
+def _explicit_query_category_aliases(query_text: str) -> tuple[str, ...]:
+    """Return aliases for the most specific product category named in a query."""
+
+    matches: list[tuple[int, tuple[str, ...]]] = []
+    for canonical, configured_aliases in CATEGORY_ALIASES.items():
+        aliases = tuple(dict.fromkeys((canonical, *configured_aliases)))
+        matched_lengths = [
+            len(compact_text(alias))
+            for alias in aliases
+            if _contains_category_alias(query_text, alias)
+        ]
+        if matched_lengths:
+            matches.append((max(matched_lengths), aliases))
+    return max(matches, key=lambda item: item[0])[1] if matches else ()
+
+
 def find_named_product(products: Iterable[Product], query: object) -> Product | None:
     """Conservatively match a model phrase; ambiguous weak matches return ``None``."""
 
     query_text = normalize_text(query)
     query_compact = compact_text(query_text)
     tokens = _name_tokens(query_text)
+    category_aliases = _explicit_query_category_aliases(query_text)
     if not query_compact or not tokens:
         return None
     scored: list[tuple[float, int, str, Product]] = []
@@ -84,31 +121,54 @@ def find_named_product(products: Iterable[Product], query: object) -> Product | 
         name = normalize_text(product.name)
         name_compact = compact_text(name)
         name_tokens = _name_tokens(name)
+        if category_aliases:
+            category_text = normalize_text(
+                " ".join((product.name, product.category, *product.category_path))
+            )
+            if not any(
+                _contains_category_alias(category_text, alias)
+                for alias in category_aliases
+            ):
+                continue
         if query_compact in name_compact:
             score = 2.0 + len(query_compact) / max(1, len(name_compact))
             scored.append((score, -len(name_compact), product.id, product))
             continue
         matched = 0
-        long_matched = 0
+        distinctive_matched = 0
         for token in tokens:
+            exact_match = token in name_tokens
             best = max(
                 (SequenceMatcher(None, token, candidate).ratio() for candidate in name_tokens),
                 default=0.0,
             )
             if best >= 0.88:
                 matched += 1
-                long_matched += int(len(token) >= 5)
+                # Exact four-character model/brand tokens such as Sony are
+                # distinctive enough when only one catalog record wins. Fuzzy
+                # tokens still need at least five characters.
+                distinctive_matched += int(len(token) >= 5 or (exact_match and len(token) >= 4))
         coverage = matched / len(tokens)
-        if coverage >= 0.75 and long_matched:
+        if coverage >= 0.75 and distinctive_matched:
             scored.append((coverage, -len(name_compact), product.id, product))
     if not scored:
         return None
     scored.sort(key=lambda item: (-item[0], item[1], item[2]))
-    if len(scored) > 1 and scored[0][:2] == scored[1][:2]:
-        # Colour variants of one model are acceptable; unrelated ties are not.
-        first_core = re.sub(r"(?:black|white|สีดำ|สีขาว)", "", normalize_text(scored[0][3].name))
-        second_core = re.sub(r"(?:black|white|สีดำ|สีขาว)", "", normalize_text(scored[1][3].name))
-        if compact_text(first_core) != compact_text(second_core):
+    tied = [item for item in scored if item[0] == scored[0][0]]
+    if len(tied) > 1:
+        # Colour variants of one model are acceptable; equally strong matches
+        # across unrelated models mean the query is too broad to compare safely.
+        cores = {
+            compact_text(
+                re.sub(
+                    r"(?:black|white|สีดำ|สีขาว)",
+                    "",
+                    normalize_text(item[3].name),
+                )
+            )
+            for item in tied
+        }
+        if len(cores) != 1:
             return None
     return scored[0][3]
 
