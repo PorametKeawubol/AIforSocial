@@ -918,13 +918,37 @@ class MercularScraper:
         self,
         settings: Settings | None = None,
         *,
+        category_urls: Iterable[str] | None = None,
+        taxonomy_paths: Mapping[str, Sequence[str]] | None = None,
+        category_taxonomy: Mapping[str, Sequence[str]] | None = None,
         session: requests.Session | None = None,
         sleeper: Callable[[float], None] = time.sleep,
         monotonic: Callable[[], float] = time.monotonic,
     ) -> None:
         self.settings = settings or Settings.from_env()
-        self.category_urls = tuple(
-            dict.fromkeys(_validate_category_url(url) for url in self.settings.category_urls)
+        configured_urls = category_urls if category_urls is not None else self.settings.category_urls
+        self.category_urls = tuple(dict.fromkeys(_validate_category_url(url) for url in configured_urls))
+        taxonomy_paths = taxonomy_paths or {}
+        self.taxonomy_paths = {
+            _validate_category_url(url): tuple(
+                clean_text(part, limit=120) for part in path if clean_text(part, limit=120)
+            )
+            for url, path in taxonomy_paths.items()
+            if _validate_category_url(url) in self.category_urls
+        }
+        category_taxonomy = category_taxonomy or {}
+        self.category_taxonomy = tuple(
+            {
+                "url": _validate_category_url(url),
+                "path": list(
+                    dict.fromkeys(
+                        clean_text(part, limit=120)
+                        for part in path
+                        if clean_text(part, limit=120)
+                    )
+                ),
+            }
+            for url, path in sorted(category_taxonomy.items())
         )
         self.session = session or requests.Session()
         self.session.headers.update(
@@ -1126,6 +1150,7 @@ class MercularScraper:
                 categories.append(
                     {
                         "url": url,
+                        "taxonomy_path": list(self.taxonomy_paths.get(url, ())),
                         "category": (
                             page_products[0].category
                             if page_products and page_products[0].category
@@ -1149,6 +1174,7 @@ class MercularScraper:
                 categories.append(
                     {
                         "url": url,
+                        "taxonomy_path": list(self.taxonomy_paths.get(url, ())),
                         "category": _category_name_from_url(url),
                         "status": "blocked" if isinstance(exc, RobotsDeniedError) else "error",
                         "products_found": 0,
@@ -1166,6 +1192,7 @@ class MercularScraper:
                 "website": f"{MERCULAR_ORIGIN}/",
                 "attribution": "Product information from public Mercular category pages.",
                 "category_urls": list(self.category_urls),
+                "category_taxonomy": list(self.category_taxonomy),
                 "crawler": USER_AGENT,
                 "robots_checked": self.settings.verify_robots,
             },

@@ -77,6 +77,7 @@ class Settings:
     phayathaibert_model_name: str = "clicknext/phayathaibert"
     phayathaibert_min_confidence: float = 0.30
     phayathaibert_local_files_only: bool = False
+    price_history_path: Path = PROJECT_DIR / "data" / "mercular_price_history.sqlite3"
 
     @classmethod
     def from_env(cls) -> "Settings":
@@ -94,6 +95,14 @@ class Settings:
         ).expanduser()
         if not snapshot_path.is_absolute():
             snapshot_path = PROJECT_DIR / snapshot_path
+        price_history_path = Path(
+            os.getenv(
+                "MERCULAR_PRICE_HISTORY_PATH",
+                str(PROJECT_DIR / "data" / "mercular_price_history.sqlite3"),
+            )
+        ).expanduser()
+        if not price_history_path.is_absolute():
+            price_history_path = PROJECT_DIR / price_history_path
         nlp_backend = os.getenv("NLP_BACKEND", "phayathaibert").strip().casefold()
         if nlp_backend not in {"phayathaibert", "rules"}:
             nlp_backend = "phayathaibert"
@@ -130,6 +139,7 @@ class Settings:
             phayathaibert_local_files_only=_truthy(
                 "PHAYATHAIBERT_LOCAL_FILES_ONLY", False
             ),
+            price_history_path=price_history_path,
         )
 
 

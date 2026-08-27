@@ -85,11 +85,26 @@ Mercular ก่อน เนื่องจากเงื่อนไขเว�
 เก็บเพียง snapshot ขนาดเล็กที่จำเป็นสำหรับการสาธิต และไม่แตะ `/cart`, `/cms`,
 `/browse` หรือ `/my-account`
 
-แนะนำให้ refresh ด้วย cron หรืองานภายนอกวันละหนึ่งครั้ง ไม่ควรเรียก scraper
-จาก webhook:
+### Daily catalog and price history
+
+`scripts/sync_catalog.py` ทำงานนอก webhook เสมอ และเขียน price, discount และ
+stock observation หนึ่งรายการต่อสินค้า/วันลง SQLite. ค่า `--scope seed` คือ 13
+หน้า demo เดิม; `--scope sitemap-leaves` อ่าน category sitemap สาธารณะเพื่อเลือก
+leaf categories เช่น `audio/dap-dac-amp/dac-amplifiers` โดยไม่เรียก `/browse`.
+โหมด sitemap ต้องใช้เฉพาะเมื่อได้รับอนุญาตให้สร้าง product index ในวงกว้างแล้ว:
+
+```bash
+# Demo scope: refresh snapshot พร้อมบันทึกประวัติรายวัน
+python scripts/sync_catalog.py --scope seed
+
+# Authorized broad category sync; page-level cap ปรับได้ตามข้อตกลงของ source
+python scripts/sync_catalog.py --scope sitemap-leaves --max-products-per-category 100
+```
+
+ตั้ง cron ให้ทำวันละหนึ่งครั้ง ไม่ควรเรียกงานนี้จาก webhook:
 
 ```cron
-15 3 * * * cd /path/to/MercularChatbot && .venv/bin/python scraper.py --refresh
+15 3 * * * cd /path/to/MercularChatbot && .venv/bin/python scripts/sync_catalog.py --scope sitemap-leaves >> catalog-sync.log 2>&1
 ```
 
 ## รัน LINE webhook

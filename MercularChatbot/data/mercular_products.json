@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-23T17:50:07+00:00",
+  "generated_at": "2026-08-27T13:09:51+00:00",
   "source": {
     "name": "Mercular",
     "website": "https://www.mercular.com/",
@@ -20,6 +20,7 @@
       "https://www.mercular.com/printer-ing",
       "https://www.mercular.com/accessories"
     ],
+    "category_taxonomy": [],
     "crawler": "MercularSocialChatbot/1.0 (educational product-index refresh; +https://www.mercular.com/)",
     "robots_checked": true
   },
@@ -27,11 +28,12 @@
     "categories_requested": 13,
     "categories_succeeded": 13,
     "categories_failed": 0,
-    "products": 252
+    "products": 250
   },
   "categories": [
     {
       "url": "https://www.mercular.com/audio/headphone",
+      "taxonomy_path": [],
       "category": "หูฟัง",
       "status": "ok",
       "products_found": 20,
@@ -41,6 +43,7 @@
     },
     {
       "url": "https://www.mercular.com/audio/speaker",
+      "taxonomy_path": [],
       "category": "ลำโพง",
       "status": "ok",
       "products_found": 20,
@@ -50,6 +53,7 @@
     },
     {
       "url": "https://www.mercular.com/gaming/gaming-mouse",
+      "taxonomy_path": [],
       "category": "เมาส์เกมมิ่ง",
       "status": "ok",
       "products_found": 20,
@@ -59,6 +63,7 @@
     },
     {
       "url": "https://www.mercular.com/gaming/gaming-keyboard",
+      "taxonomy_path": [],
       "category": "คีย์บอร์ดเกมมิ่ง",
       "status": "ok",
       "products_found": 20,
@@ -68,15 +73,17 @@
     },
     {
       "url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
+      "taxonomy_path": [],
       "category": "หูฟังเกมมิ่งครอบหู",
       "status": "ok",
-      "products_found": 20,
-      "products_kept": 20,
-      "products_added": 20,
+      "products_found": 18,
+      "products_kept": 18,
+      "products_added": 18,
       "error": ""
     },
     {
       "url": "https://www.mercular.com/computer/computer-monitor",
+      "taxonomy_path": [],
       "category": "จอคอมพิวเตอร์",
       "status": "ok",
       "products_found": 20,
@@ -86,6 +93,7 @@
     },
     {
       "url": "https://www.mercular.com/computer/computer-accessories",
+      "taxonomy_path": [],
       "category": "อุปกรณ์คอมพิวเตอร์",
       "status": "ok",
       "products_found": 20,
@@ -95,6 +103,7 @@
     },
     {
       "url": "https://www.mercular.com/gaming/streaming/webcam",
+      "taxonomy_path": [],
       "category": "กล้อง Webcam",
       "status": "ok",
       "products_found": 13,
@@ -104,6 +113,7 @@
     },
     {
       "url": "https://www.mercular.com/professional-audio/microphone",
+      "taxonomy_path": [],
       "category": "ไมโครโฟนและอุปกรณ์เสริม",
       "status": "ok",
       "products_found": 20,
@@ -113,6 +123,7 @@
     },
     {
       "url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
+      "taxonomy_path": [],
       "category": "พาวเวอร์แบงค์",
       "status": "ok",
       "products_found": 19,
@@ -122,6 +133,7 @@
     },
     {
       "url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
+      "taxonomy_path": [],
       "category": "Smart Watch & Fitness Tracker",
       "status": "ok",
       "products_found": 20,
@@ -131,6 +143,7 @@
     },
     {
       "url": "https://www.mercular.com/printer-ing",
+      "taxonomy_path": [],
       "category": "เครื่องปริ้น / หมึก",
       "status": "ok",
       "products_found": 20,
@@ -140,6 +153,7 @@
     },
     {
       "url": "https://www.mercular.com/accessories",
+      "taxonomy_path": [],
       "category": "อุปกรณ์เสริม",
       "status": "ok",
       "products_found": 20,
@@ -150,6 +164,306 @@
   ],
   "errors": [],
   "products": [
+    {
+      "id": "143795",
+      "sku": "3000000172723",
+      "name": "True Wireless JBL (SENSE LITE) Black",
+      "brand": "JBL",
+      "category": "หูฟัง",
+      "category_path": [
+        "หูฟัง/ลำโพง",
+        "หูฟัง"
+      ],
+      "price": 3590.0,
+      "original_price": 3590.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0172723/A0172723OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/audio/true-wireless-jbl-sense-lite-black",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/audio/headphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143794",
+      "sku": "3000000182459",
+      "name": "True Wireless REMAX (OWS-07) Silver",
+      "brand": "Remax",
+      "category": "หูฟัง",
+      "category_path": [
+        "หูฟัง/ลำโพง",
+        "หูฟัง"
+      ],
+      "price": 1590.0,
+      "original_price": 1590.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182459/1.jpg",
+      "product_url": "https://www.mercular.com/audio/true-wireless-remax-ows-07-silver",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/audio/headphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143793",
+      "sku": "3000000182458",
+      "name": "True Wireless REMAX (OWS-07) Black",
+      "brand": "Remax",
+      "category": "หูฟัง",
+      "category_path": [
+        "หูฟัง/ลำโพง",
+        "หูฟัง"
+      ],
+      "price": 1590.0,
+      "original_price": 1590.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182458/1.jpg",
+      "product_url": "https://www.mercular.com/audio/true-wireless-remax-ows-07-black",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/audio/headphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143792",
+      "sku": "3000000182457",
+      "name": "True Wireless REMAX (OWS-20) White",
+      "brand": "Remax",
+      "category": "หูฟัง",
+      "category_path": [
+        "หูฟัง/ลำโพง",
+        "หูฟัง"
+      ],
+      "price": 339.0,
+      "original_price": 339.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182457/1.jpg",
+      "product_url": "https://www.mercular.com/audio/true-wireless-remax-ows-20-white",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/audio/headphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143791",
+      "sku": "3000000182461",
+      "name": "Small Talk Type-C REMAX (RM-06a) White",
+      "brand": "Remax",
+      "category": "หูฟัง",
+      "category_path": [
+        "หูฟัง/ลำโพง",
+        "หูฟัง"
+      ],
+      "price": 189.0,
+      "original_price": 189.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182461/A0182461OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/audio/small-talk-type-c-remax-rm-06a-white",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/audio/headphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143789",
+      "sku": "3000000182382",
+      "name": "Small Talk Type-C REMAX (RM-10a) Purple",
+      "brand": "Remax",
+      "category": "หูฟัง",
+      "category_path": [
+        "หูฟัง/ลำโพง",
+        "หูฟัง"
+      ],
+      "price": 129.0,
+      "original_price": 129.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182382/A0182382OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/audio/small-talk-type-c-remax-rm-10a-purple",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/audio/headphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143788",
+      "sku": "3000000182381",
+      "name": "Small Talk Type-C REMAX (RM-10a) Pink",
+      "brand": "Remax",
+      "category": "หูฟัง",
+      "category_path": [
+        "หูฟัง/ลำโพง",
+        "หูฟัง"
+      ],
+      "price": 129.0,
+      "original_price": 129.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182381/A0182381OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/audio/small-talk-type-c-remax-rm-10a-pink",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/audio/headphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143787",
+      "sku": "3000000182380",
+      "name": "Small Talk Type-C REMAX (RM-10a) Orange",
+      "brand": "Remax",
+      "category": "หูฟัง",
+      "category_path": [
+        "หูฟัง/ลำโพง",
+        "หูฟัง"
+      ],
+      "price": 129.0,
+      "original_price": 129.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182380/A0182380OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/audio/small-talk-type-c-remax-rm-10a-orange",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/audio/headphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143786",
+      "sku": "3000000182379",
+      "name": "Small Talk Type-C REMAX (RM-10a) Green",
+      "brand": "Remax",
+      "category": "หูฟัง",
+      "category_path": [
+        "หูฟัง/ลำโพง",
+        "หูฟัง"
+      ],
+      "price": 129.0,
+      "original_price": 129.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182379/A0182379OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/audio/small-talk-type-c-remax-rm-10a-green",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/audio/headphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143784",
+      "sku": "3000000182389",
+      "name": "Small Talk REMAX (RM-10) Yellow",
+      "brand": "Remax",
+      "category": "หูฟัง",
+      "category_path": [
+        "หูฟัง/ลำโพง",
+        "หูฟัง"
+      ],
+      "price": 129.0,
+      "original_price": 129.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182389/A0182389OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/audio/small-talk-remax-rm-10-yellow",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/audio/headphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143783",
+      "sku": "3000000182388",
+      "name": "Small Talk REMAX (RM-10) Purple",
+      "brand": "Remax",
+      "category": "หูฟัง",
+      "category_path": [
+        "หูฟัง/ลำโพง",
+        "หูฟัง"
+      ],
+      "price": 129.0,
+      "original_price": 129.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182388/A0182388OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/audio/small-talk-remax-rm-10-purple",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/audio/headphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143782",
+      "sku": "3000000182387",
+      "name": "Small Talk REMAX (RM-10) Pink",
+      "brand": "Remax",
+      "category": "หูฟัง",
+      "category_path": [
+        "หูฟัง/ลำโพง",
+        "หูฟัง"
+      ],
+      "price": 129.0,
+      "original_price": 129.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182387/A0182387OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/audio/small-talk-remax-rm-10-pink",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/audio/headphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143781",
+      "sku": "3000000182386",
+      "name": "Small Talk REMAX (RM-10) Orange",
+      "brand": "Remax",
+      "category": "หูฟัง",
+      "category_path": [
+        "หูฟัง/ลำโพง",
+        "หูฟัง"
+      ],
+      "price": 129.0,
+      "original_price": 129.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182386/A0182386OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/audio/small-talk-remax-rm-10-orange",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/audio/headphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143780",
+      "sku": "3000000182385",
+      "name": "Small Talk REMAX (RM-10) Green",
+      "brand": "Remax",
+      "category": "หูฟัง",
+      "category_path": [
+        "หูฟัง/ลำโพง",
+        "หูฟัง"
+      ],
+      "price": 129.0,
+      "original_price": 129.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182385/A0182385OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/audio/small-talk-remax-rm-10-green",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/audio/headphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143779",
+      "sku": "3000000182384",
+      "name": "Small Talk REMAX (RM-10) Blue",
+      "brand": "Remax",
+      "category": "หูฟัง",
+      "category_path": [
+        "หูฟัง/ลำโพง",
+        "หูฟัง"
+      ],
+      "price": 129.0,
+      "original_price": 129.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182384/A0182384OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/audio/small-talk-remax-rm-10-blue",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/audio/headphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
     {
       "id": "143064",
       "sku": "3000000184205",
@@ -168,7 +482,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143063",
@@ -188,7 +502,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143062",
@@ -200,7 +514,7 @@
         "หูฟัง/ลำโพง",
         "หูฟัง"
       ],
-      "price": 2349.0,
+      "price": 2229.0,
       "original_price": 2349.0,
       "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184211/A0184211OK_ORI_1.jpg",
       "product_url": "https://www.mercular.com/audio/redmi-buds-8-pro-cloud-white",
@@ -208,7 +522,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143061",
@@ -228,7 +542,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143060",
@@ -248,307 +562,47 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
-      "id": "143059",
-      "sku": "3000000184202",
-      "name": "REDMI Buds 8 Black",
-      "brand": "Xiaomi",
-      "category": "หูฟัง",
+      "id": "143894",
+      "sku": "3000000185585",
+      "name": "ลำโพง JBL PARTYBOX ON THE GO 2 PLUS BLACK",
+      "brand": "JBL",
+      "category": "ลำโพง",
       "category_path": [
         "หูฟัง/ลำโพง",
-        "หูฟัง"
+        "ลำโพง"
       ],
-      "price": 1299.0,
-      "original_price": 1299.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184202/A0184202OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/redmi-buds-8-black",
+      "price": 19900.0,
+      "original_price": 19900.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0185585/A0185585OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/audio/ลำโพง-jbl-partybox-on-the-go-2-plus-black",
       "in_stock": true,
       "description": "",
       "tags": [],
-      "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "source_url": "https://www.mercular.com/audio/speaker",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
-      "id": "143058",
-      "sku": "3000000184192",
-      "name": "REDMI Buds 6 Night Black",
-      "brand": "Xiaomi",
-      "category": "หูฟัง",
+      "id": "143893",
+      "sku": "3000000185192",
+      "name": "ลำโพง JBL JBL PARTYBOX 130 BLUETOOTH BLACK",
+      "brand": "JBL",
+      "category": "ลำโพง",
       "category_path": [
         "หูฟัง/ลำโพง",
-        "หูฟัง"
+        "ลำโพง"
       ],
-      "price": 999.0,
-      "original_price": 999.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184192/A0184192OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/redmi-buds-6-night-black",
+      "price": 19900.0,
+      "original_price": 19900.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0185192/A0185192OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/audio/ลำโพง-jbl-jbl-partybox-130-bluetooth-black",
       "in_stock": true,
       "description": "",
       "tags": [],
-      "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143057",
-      "sku": "3000000184193",
-      "name": "REDMI Buds 6 Coral Green",
-      "brand": "Xiaomi",
-      "category": "หูฟัง",
-      "category_path": [
-        "หูฟัง/ลำโพง",
-        "หูฟัง"
-      ],
-      "price": 999.0,
-      "original_price": 999.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184193/A0184193OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/redmi-buds-6-coral-green",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143056",
-      "sku": "3000000184189",
-      "name": "REDMI Buds 8 Lite Blue",
-      "brand": "Xiaomi",
-      "category": "หูฟัง",
-      "category_path": [
-        "หูฟัง/ลำโพง",
-        "หูฟัง"
-      ],
-      "price": 739.0,
-      "original_price": 739.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184189/A0184189OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/redmi-buds-8-lite-blue",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143055",
-      "sku": "3000000184190",
-      "name": "REDMI Buds 8 Lite White",
-      "brand": "Xiaomi",
-      "category": "หูฟัง",
-      "category_path": [
-        "หูฟัง/ลำโพง",
-        "หูฟัง"
-      ],
-      "price": 739.0,
-      "original_price": 739.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184190/A0184190OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/redmi-buds-8-lite-white",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143054",
-      "sku": "3000000184191",
-      "name": "REDMI Buds 8 Lite Black",
-      "brand": "Xiaomi",
-      "category": "หูฟัง",
-      "category_path": [
-        "หูฟัง/ลำโพง",
-        "หูฟัง"
-      ],
-      "price": 739.0,
-      "original_price": 739.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184191/A0184191OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/redmi-buds-8-lite-black",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143053",
-      "sku": "3000000184186",
-      "name": "REDMI Buds 8 Active Blue",
-      "brand": "Xiaomi",
-      "category": "หูฟัง",
-      "category_path": [
-        "หูฟัง/ลำโพง",
-        "หูฟัง"
-      ],
-      "price": 649.0,
-      "original_price": 649.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184186/A0184186OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/redmi-buds-8-active-blue",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143052",
-      "sku": "3000000184187",
-      "name": "REDMI Buds 8 Active White",
-      "brand": "Xiaomi",
-      "category": "หูฟัง",
-      "category_path": [
-        "หูฟัง/ลำโพง",
-        "หูฟัง"
-      ],
-      "price": 649.0,
-      "original_price": 649.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184187/A0184187OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/redmi-buds-8-active-white",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143051",
-      "sku": "3000000184188",
-      "name": "REDMI Buds 8 Active Black",
-      "brand": "Xiaomi",
-      "category": "หูฟัง",
-      "category_path": [
-        "หูฟัง/ลำโพง",
-        "หูฟัง"
-      ],
-      "price": 649.0,
-      "original_price": 649.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184188/A0184188OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/redmi-buds-8-active-black",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143050",
-      "sku": "3000000184182",
-      "name": "REDMI Buds 6 Play Pink",
-      "brand": "Xiaomi",
-      "category": "หูฟัง",
-      "category_path": [
-        "หูฟัง/ลำโพง",
-        "หูฟัง"
-      ],
-      "price": 329.0,
-      "original_price": 329.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184182/A0184182OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/redmi-buds-6-play-pink",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143049",
-      "sku": "3000000184183",
-      "name": "REDMI Buds 6 Play Blue",
-      "brand": "Xiaomi",
-      "category": "หูฟัง",
-      "category_path": [
-        "หูฟัง/ลำโพง",
-        "หูฟัง"
-      ],
-      "price": 329.0,
-      "original_price": 329.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184183/A0184183OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/redmi-buds-6-play-blue",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143048",
-      "sku": "3000000184184",
-      "name": "REDMI Buds 6 Play Black",
-      "brand": "Xiaomi",
-      "category": "หูฟัง",
-      "category_path": [
-        "หูฟัง/ลำโพง",
-        "หูฟัง"
-      ],
-      "price": 329.0,
-      "original_price": 329.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184184/A0184184OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/redmi-buds-6-play-black",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142553",
-      "sku": "3000000183205",
-      "name": "OPPO Enco Air 5s Starlight Purple",
-      "brand": "OPPO",
-      "category": "หูฟัง",
-      "category_path": [
-        "หูฟัง/ลำโพง",
-        "หูฟัง"
-      ],
-      "price": 2499.0,
-      "original_price": 2499.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183205/A0183205OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/oppo-enco-air-5s-starlight-purple",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142552",
-      "sku": "3000000183204",
-      "name": "OPPO Enco Air 5s Lunar White",
-      "brand": "OPPO",
-      "category": "หูฟัง",
-      "category_path": [
-        "หูฟัง/ลำโพง",
-        "หูฟัง"
-      ],
-      "price": 2499.0,
-      "original_price": 2499.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183204/A0183204OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/oppo-enco-air-5s-lunar-white",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142551",
-      "sku": "3000000183207",
-      "name": "OPPO Enco Air 5 Midnight Black",
-      "brand": "OPPO",
-      "category": "หูฟัง",
-      "category_path": [
-        "หูฟัง/ลำโพง",
-        "หูฟัง"
-      ],
-      "price": 1999.0,
-      "original_price": 1999.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183207/A0183207OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/oppo-enco-air-5-midnight-black",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/audio/headphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "source_url": "https://www.mercular.com/audio/speaker",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143741",
@@ -568,7 +622,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143740",
@@ -588,7 +642,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143739",
@@ -608,7 +662,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143738",
@@ -628,7 +682,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143319",
@@ -648,7 +702,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143318",
@@ -668,7 +722,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143317",
@@ -688,7 +742,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143316",
@@ -708,7 +762,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143122",
@@ -728,7 +782,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143121",
@@ -748,7 +802,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143110",
@@ -768,27 +822,47 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
-      "id": "143109",
-      "sku": "3000000184557",
-      "name": "ลำโพง Bluetooth MARSHALL (STOCKWELL III) BLACK AND BRASS",
-      "brand": "Marshall",
+      "id": "142607",
+      "sku": "3000000180653",
+      "name": "ลำโพง SAMSUNG MX-ST50F/XT Black",
+      "brand": "Samsung",
       "category": "ลำโพง",
       "category_path": [
         "หูฟัง/ลำโพง",
         "ลำโพง"
       ],
-      "price": 9990.0,
-      "original_price": 9990.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184557/A0184557OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/ลำโพง-bluetooth-marshall-stockwell-iii-black-and-brass",
+      "price": 15990.0,
+      "original_price": 15990.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0180653/A0180653OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/audio/ลำโพง-samsung-mx-st50f-xt-black",
       "in_stock": true,
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "142606",
+      "sku": "3000000180652",
+      "name": "ลำโพง SAMSUNG MX-ST40F/XT Black",
+      "brand": "Samsung",
+      "category": "ลำโพง",
+      "category_path": [
+        "หูฟัง/ลำโพง",
+        "ลำโพง"
+      ],
+      "price": 12990.0,
+      "original_price": 12990.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0180652/A0180652OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/audio/ลำโพง-samsung-mx-st40f-xt-black",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/audio/speaker",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141974",
@@ -808,7 +882,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141972",
@@ -828,7 +902,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141971",
@@ -848,7 +922,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141970",
@@ -860,15 +934,15 @@
         "หูฟัง/ลำโพง",
         "ลำโพง"
       ],
-      "price": 2190.0,
-      "original_price": 2190.0,
+      "price": 1999.0,
+      "original_price": 1999.0,
       "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182816/A0182816OK_ORI_1.jpg",
       "product_url": "https://www.mercular.com/audio/ลำโพง-bluetooth-tribit-stormbox-micro-3-blue",
       "in_stock": true,
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141969",
@@ -880,75 +954,55 @@
         "หูฟัง/ลำโพง",
         "ลำโพง"
       ],
-      "price": 2190.0,
-      "original_price": 2190.0,
+      "price": 1999.0,
+      "original_price": 1999.0,
       "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182815/A0182815OK_ORI_1.jpg",
       "product_url": "https://www.mercular.com/audio/ลำโพง-bluetooth-tribit-stormbox-micro-3-black",
       "in_stock": true,
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
-      "id": "141372",
-      "sku": "3000000182347",
-      "name": "ลำโพงปาร์ตี้ REMAX (RB-MB09) + MIC BLUETOOTH TARNISH",
-      "brand": "Remax",
-      "category": "ลำโพง",
+      "id": "143884",
+      "sku": "3000000185323",
+      "name": "MOUSE WIRELESS BLUETOOTH ACER PREDATOR RM525 WHITE (เมาส์สาย)",
+      "brand": "Acer",
+      "category": "เมาส์เกมมิ่ง",
       "category_path": [
-        "หูฟัง/ลำโพง",
-        "ลำโพง"
+        "เกมมิ่ง",
+        "เมาส์เกมมิ่ง"
       ],
-      "price": 5990.0,
-      "original_price": 5990.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182347/A0182347OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/ลำโพงปาร์ตี้-remax-rb-mb09-plus-mic-bluetooth-tarnish",
+      "price": 1890.0,
+      "original_price": 1890.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0185323/A0185323OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/gaming/mouse-wireless-bluetooth-acer-predator-rm525-white-เมาส์สาย-",
       "in_stock": true,
       "description": "",
       "tags": [],
-      "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "source_url": "https://www.mercular.com/gaming/gaming-mouse",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
-      "id": "141371",
-      "sku": "3000000182346",
-      "name": "ลำโพงปาร์ตี้ REMAX (RB-MB09) + MIC BLUETOOTH WHITE",
-      "brand": "Remax",
-      "category": "ลำโพง",
+      "id": "143883",
+      "sku": "3000000185322",
+      "name": "MOUSE WIRELESS BLUETOOTH ACER PREDATOR RM525 BLACK (เมาส์สาย)",
+      "brand": "Acer",
+      "category": "เมาส์เกมมิ่ง",
       "category_path": [
-        "หูฟัง/ลำโพง",
-        "ลำโพง"
+        "เกมมิ่ง",
+        "เมาส์เกมมิ่ง"
       ],
-      "price": 5990.0,
-      "original_price": 5990.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182346/A0182346OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/ลำโพงปาร์ตี้-remax-rb-mb09-plus-mic-bluetooth-white",
+      "price": 1890.0,
+      "original_price": 1890.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0185322/A0185322OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/gaming/mouse-wireless-bluetooth-acer-predator-rm525-black-เมาส์สาย-",
       "in_stock": true,
       "description": "",
       "tags": [],
-      "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "141223",
-      "sku": "3000000182278",
-      "name": "ลำโพง Bluetooth JBL GO 5 ORANGE",
-      "brand": "JBL",
-      "category": "ลำโพง",
-      "category_path": [
-        "หูฟัง/ลำโพง",
-        "ลำโพง"
-      ],
-      "price": 1990.0,
-      "original_price": 1990.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182278/A0182278OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/audio/ลำโพง-bluetooth-jbl-go-5-orange",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/audio/speaker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "source_url": "https://www.mercular.com/gaming/gaming-mouse",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "142986",
@@ -968,7 +1022,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "142532",
@@ -988,7 +1042,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "142531",
@@ -1008,7 +1062,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141850",
@@ -1028,7 +1082,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141849",
@@ -1048,7 +1102,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141362",
@@ -1068,7 +1122,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141361",
@@ -1088,7 +1142,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141263",
@@ -1108,7 +1162,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141262",
@@ -1128,7 +1182,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141261",
@@ -1148,7 +1202,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141260",
@@ -1168,7 +1222,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141259",
@@ -1188,7 +1242,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141258",
@@ -1208,7 +1262,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141257",
@@ -1228,7 +1282,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141256",
@@ -1248,7 +1302,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141255",
@@ -1268,7 +1322,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "140748",
@@ -1288,7 +1342,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "140742",
@@ -1300,7 +1354,7 @@
         "เกมมิ่ง",
         "เมาส์เกมมิ่ง"
       ],
-      "price": 4600.0,
+      "price": 4350.0,
       "original_price": 4600.0,
       "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0181418/A0181418OK_ORI_1.jpg",
       "product_url": "https://www.mercular.com/gaming/mouse-wireless-razer-viper-v4-pro-white-เมาส์ไร้สาย-",
@@ -1308,47 +1362,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "140741",
-      "sku": "3000000181417",
-      "name": "MOUSE WIRELESS RAZER VIPER V4 PRO BLACK (เมาส์ไร้สาย)",
-      "brand": "Razer",
-      "category": "เมาส์เกมมิ่ง",
-      "category_path": [
-        "เกมมิ่ง",
-        "เมาส์เกมมิ่ง"
-      ],
-      "price": 4600.0,
-      "original_price": 4600.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0181417/A0181417OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/gaming/mouse-wireless-razer-viper-v4-pro-black-เมาส์ไร้สาย-",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "140600",
-      "sku": "3000000180691",
-      "name": "MOUSE WIRELESS BLUETOOTH CORSAIR SABRE V2 PRO MG BLACK (เมาส์ไร้สาย)",
-      "brand": "Corsair",
-      "category": "เมาส์เกมมิ่ง",
-      "category_path": [
-        "เกมมิ่ง",
-        "เมาส์เกมมิ่ง"
-      ],
-      "price": 4290.0,
-      "original_price": 4290.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0180691/A0180691OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/gaming/mouse-wireless-bluetooth-corsair-sabre-v2-pro-mg-black-เมาส์ไร้สาย-",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/gaming/gaming-mouse",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "142549",
@@ -1368,7 +1382,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "142533",
@@ -1388,7 +1402,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141846",
@@ -1408,7 +1422,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141845",
@@ -1428,12 +1442,12 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
-      "id": "141844",
-      "sku": "3000000183041",
-      "name": "KEYBOARD LOGITECH G512 X 98 WHITE EN (TACTILE SWITCH คีย์บอร์ด)",
+      "id": "141843",
+      "sku": "3000000183040",
+      "name": "KEYBOARD LOGITECH G512 X 98 BLACK (TACTILE SWITCH คีย์บอร์ด)",
       "brand": "Logitech",
       "category": "คีย์บอร์ดเกมมิ่ง",
       "category_path": [
@@ -1442,13 +1456,13 @@
       ],
       "price": 5450.0,
       "original_price": 5450.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183041/A0183041OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/gaming/keyboard-logitech-g512-x-98-white-en-tactile-switch-คีย์บอร์ด-",
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183040/A0183040OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/gaming/keyboard-logitech-g512-x-98-black-tactile-switch-คีย์บอร์ด-",
       "in_stock": true,
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141713",
@@ -1468,7 +1482,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141705",
@@ -1488,7 +1502,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141576",
@@ -1508,7 +1522,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141391",
@@ -1528,7 +1542,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141390",
@@ -1548,7 +1562,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141370",
@@ -1568,7 +1582,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "140870",
@@ -1588,7 +1602,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "140745",
@@ -1608,7 +1622,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "140744",
@@ -1628,7 +1642,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "140605",
@@ -1648,7 +1662,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "140604",
@@ -1660,7 +1674,7 @@
         "เกมมิ่ง",
         "คีย์บอร์ดเกมมิ่ง"
       ],
-      "price": 7990.0,
+      "price": 6640.0,
       "original_price": 7990.0,
       "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0180690/A0180690OK_ORI_1.jpg",
       "product_url": "https://www.mercular.com/gaming/keyboard-corsair-makr-pro-75-rgb-black-en-mgx-hyperdrive-switch-คีย์บอร์ด-",
@@ -1668,7 +1682,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "140463",
@@ -1688,7 +1702,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "131266",
@@ -1708,7 +1722,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "131265",
@@ -1728,7 +1742,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "131264",
@@ -1748,7 +1762,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-keyboard",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141848",
@@ -1769,7 +1783,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141847",
@@ -1790,7 +1804,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141646",
@@ -1811,7 +1825,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "140462",
@@ -1832,7 +1846,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "131299",
@@ -1853,7 +1867,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "131298",
@@ -1874,7 +1888,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "131295",
@@ -1895,28 +1909,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "131292",
-      "sku": "3000000159117",
-      "name": "HEADSET CORSAIR HS35 SURROUND V2 BLACK (7.1)",
-      "brand": "Corsair",
-      "category": "หูฟังเกมมิ่งครอบหู",
-      "category_path": [
-        "เกมมิ่ง",
-        "หูฟังเกมมิ่ง & ลำโพงเกมมิ่ง",
-        "หูฟังเกมมิ่งครอบหู"
-      ],
-      "price": 990.0,
-      "original_price": 990.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0159117/A0159117OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/headset-corsair-hs35-surround-v2-black-71",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "131291",
@@ -1937,7 +1930,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "131275",
@@ -1958,7 +1951,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "116757",
@@ -1979,7 +1972,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "112124",
@@ -2000,28 +1993,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "110465",
-      "sku": "1516309000001",
-      "name": "HEADSET RAZER BLACKSHARK V2 X BLACK (7.1)",
-      "brand": "Razer",
-      "category": "หูฟังเกมมิ่งครอบหู",
-      "category_path": [
-        "เกมมิ่ง",
-        "หูฟังเกมมิ่ง & ลำโพงเกมมิ่ง",
-        "หูฟังเกมมิ่งครอบหู"
-      ],
-      "price": 1490.0,
-      "original_price": 1490.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0161503/A0161503OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/razer-blackshark-v2-x-usb-gaming-headset",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "106938",
@@ -2042,7 +2014,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "104833",
@@ -2063,7 +2035,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "104832",
@@ -2084,7 +2056,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "104094",
@@ -2105,7 +2077,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "95595",
@@ -2126,7 +2098,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "90721",
@@ -2147,7 +2119,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "84747",
@@ -2168,7 +2140,87 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/gaming-headphone-speaker/gaming-headset",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143921",
+      "sku": "3000000185466",
+      "name": "MONITOR 24'' SAMSUNG ESSENTIAL G3 G31H LS24HG310EEXXT (IPS, HDMI) 144Hz",
+      "brand": "Samsung",
+      "category": "จอคอมพิวเตอร์",
+      "category_path": [
+        "คอมพิวเตอร์",
+        "จอคอมพิวเตอร์"
+      ],
+      "price": 2950.0,
+      "original_price": 2950.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0185466/A0185466OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/computer/monitor-24-samsung-essential-g3-g31h-ls24hg310eexxt-ips-hdmi-144hz",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/computer/computer-monitor",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143908",
+      "sku": "3000000185468",
+      "name": "MONITOR 24'' SAMSUNG ODYSSE G30H LS24HG300EEXXT (IPS, HDMI) 200Hz",
+      "brand": "Samsung",
+      "category": "จอคอมพิวเตอร์",
+      "category_path": [
+        "คอมพิวเตอร์",
+        "จอคอมพิวเตอร์"
+      ],
+      "price": 3390.0,
+      "original_price": 3390.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0185468/A0185468OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/computer/monitor-24-samsung-odysse-g30h-ls24hg300eexxt-ips-hdmi-200hz",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/computer/computer-monitor",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143891",
+      "sku": "3000000185567",
+      "name": "MONITOR 27'' AOC 27G50F (IPS, HDMI, DP) 180Hz",
+      "brand": "AOC",
+      "category": "จอคอมพิวเตอร์",
+      "category_path": [
+        "คอมพิวเตอร์",
+        "จอคอมพิวเตอร์"
+      ],
+      "price": 3390.0,
+      "original_price": 3390.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0185567/A0185567OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/computer/monitor-27-aoc-27g50f-ips-hdmi-dp-180hz",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/computer/computer-monitor",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143890",
+      "sku": "3000000185566",
+      "name": "MONITOR 24.5'' AOC 25G50F (IPS, HDMI, DP) 180Hz",
+      "brand": "AOC",
+      "category": "จอคอมพิวเตอร์",
+      "category_path": [
+        "คอมพิวเตอร์",
+        "จอคอมพิวเตอร์"
+      ],
+      "price": 2890.0,
+      "original_price": 2890.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0185566/A0185566OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/computer/monitor-24-5-aoc-25g50f-ips-hdmi-dp-180hz",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/computer/computer-monitor",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143330",
@@ -2188,7 +2240,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143329",
@@ -2208,7 +2260,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143328",
@@ -2228,7 +2280,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143327",
@@ -2248,7 +2300,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143326",
@@ -2268,7 +2320,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143311",
@@ -2288,7 +2340,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143309",
@@ -2308,7 +2360,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143308",
@@ -2328,7 +2380,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143307",
@@ -2348,7 +2400,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143271",
@@ -2368,7 +2420,27 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143115",
+      "sku": "3000000184426",
+      "name": "MONITOR 24'' VIEWSONIC VX24G31A (IPS, HDMI, DP) 280Hz",
+      "brand": "ViewSonic",
+      "category": "จอคอมพิวเตอร์",
+      "category_path": [
+        "คอมพิวเตอร์",
+        "จอคอมพิวเตอร์"
+      ],
+      "price": 3700.0,
+      "original_price": 3700.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184426/A0184426OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/computer/monitor-24-viewsonic-vx24g31a-ips-hdmi-dp-280hz",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/computer/computer-monitor",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143065",
@@ -2388,7 +2460,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143036",
@@ -2408,7 +2480,27 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143032",
+      "sku": "3000000184229",
+      "name": "MONITOR 26.5'' ASUS ROG SWIFT OLED PG27AQWP-G EDITION 20 (OLED, DP, HDMI) 2K 540Hz",
+      "brand": "ASUS",
+      "category": "จอคอมพิวเตอร์",
+      "category_path": [
+        "คอมพิวเตอร์",
+        "จอคอมพิวเตอร์"
+      ],
+      "price": 43990.0,
+      "original_price": 43990.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184229/A0184229OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/computer/monitor-26-5-asus-rog-swift-oled-pg27aqwp-g-edition-20-oled-dp-hdmi-2k-540hz",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/computer/computer-monitor",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143029",
@@ -2428,7 +2520,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143023",
@@ -2440,155 +2532,115 @@
         "คอมพิวเตอร์",
         "จอคอมพิวเตอร์"
       ],
-      "price": 2700.0,
-      "original_price": 2700.0,
+      "price": 2650.0,
+      "original_price": 2650.0,
       "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184107/A0184107OK_ORI_1.jpg",
       "product_url": "https://www.mercular.com/computer/monitor-24-5-msi-pro-mp251-e14a-ips-hdmi-dp-vga-spk-120hz",
       "in_stock": true,
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
-      "id": "143022",
-      "sku": "3000000184105",
-      "name": "MONITOR 21.5'' AOC 22B40HM (VA, VGA, HDMI) 120Hz",
-      "brand": "AOC",
-      "category": "จอคอมพิวเตอร์",
-      "category_path": [
-        "คอมพิวเตอร์",
-        "จอคอมพิวเตอร์"
-      ],
-      "price": 1810.0,
-      "original_price": 1810.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184105/A0184105OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/computer/monitor-21-5-aoc-22b40hm-va-vga-hdmi-120hz",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143021",
-      "sku": "3000000184104",
-      "name": "MONITOR 24.5'' AOC 25B40HM/67 (VA, VGA, HDMI) 100Hz",
-      "brand": "AOC",
-      "category": "จอคอมพิวเตอร์",
-      "category_path": [
-        "คอมพิวเตอร์",
-        "จอคอมพิวเตอร์"
-      ],
-      "price": 2250.0,
-      "original_price": 2250.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184104/A0184104OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/computer/monitor-23-8-25b40hm-va-vga-hdmi-100hz",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142991",
-      "sku": "3000000183900",
-      "name": "MONITOR 27'' XIAOMI G PRO 27Qi 2026 (IPS, DP, HDMI) 2K 180Hz",
-      "brand": "Xiaomi",
-      "category": "จอคอมพิวเตอร์",
-      "category_path": [
-        "คอมพิวเตอร์",
-        "จอคอมพิวเตอร์"
-      ],
-      "price": 9900.0,
-      "original_price": 9900.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183900/A0183900OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/computer/monitor-27-xiaomi-g-pro-27qi-2026-ips-dp-hdmi-2k-180hz",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142990",
-      "sku": "3000000183902",
-      "name": "MONITOR 27'' XIAOMI G27Qi 2026 (IPS, DP, HDMI) 2K 200Hz",
-      "brand": "Xiaomi",
-      "category": "จอคอมพิวเตอร์",
-      "category_path": [
-        "คอมพิวเตอร์",
-        "จอคอมพิวเตอร์"
-      ],
-      "price": 5750.0,
-      "original_price": 5750.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183902/A0183902OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/computer/monitor-27-xiaomi-g27qi-2026-ips-dp-hdmi-2k-200hz",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142989",
-      "sku": "3000000183903",
-      "name": "MONITOR 27'' XIAOMI A27i 2026 (IPS, DP, HDMI) 144Hz",
-      "brand": "Xiaomi",
-      "category": "จอคอมพิวเตอร์",
-      "category_path": [
-        "คอมพิวเตอร์",
-        "จอคอมพิวเตอร์"
-      ],
-      "price": 3250.0,
-      "original_price": 3250.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183903/A0183903OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/computer/monitor-27-xiaomi-a27i-2026-ips-dp-hdmi-144hz",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142691",
-      "sku": "3000000183899",
-      "name": "MONITOR 24'' VIEWSONIC VA24G2-H (IPS, VGA, HDMI) 144Hz",
-      "brand": "ViewSonic",
-      "category": "จอคอมพิวเตอร์",
-      "category_path": [
-        "คอมพิวเตอร์",
-        "จอคอมพิวเตอร์"
-      ],
-      "price": 2650.0,
-      "original_price": 2650.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183899/A0183899OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/computer/monitor-24-viewsonic-va24g2-h-ips-vga-hdmi-144hz",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/computer/computer-monitor",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143596",
-      "sku": "3000000184891",
-      "name": "Router ASUS (RT-BE3600HP) Wireless BE3600 Dual Band Gigabit WiFi 7",
-      "brand": "ASUS",
+      "id": "143810",
+      "sku": "3000000182635",
+      "name": "POWER STATION ECOFLOW DELTA 3 MAX",
+      "brand": "ECOFLOW",
       "category": "อุปกรณ์คอมพิวเตอร์",
       "category_path": [
         "คอมพิวเตอร์",
         "อุปกรณ์คอมพิวเตอร์"
       ],
-      "price": 3590.0,
-      "original_price": 3590.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184891/A0184891OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/computer/router-asus-rt-be3600hp-wireless-be3600-dual-band-gigabit-wifi-7",
+      "price": 45990.0,
+      "original_price": 45990.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182635/A0182635OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/computer/power-station-ecoflow-delta-3-max",
       "in_stock": true,
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143809",
+      "sku": "3000000176942",
+      "name": "UPS 3000VA DELTA MX-SERIES MX-3000VA (3Y)",
+      "brand": "DeltaHub",
+      "category": "อุปกรณ์คอมพิวเตอร์",
+      "category_path": [
+        "คอมพิวเตอร์",
+        "อุปกรณ์คอมพิวเตอร์"
+      ],
+      "price": 17500.0,
+      "original_price": 17500.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0176942/A0176942OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/computer/ups-3000va-delta-mx-series-mx-3000va-3y-",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/computer/computer-accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143808",
+      "sku": "3000000175424",
+      "name": "UPS 2000VA DELTA MX-SERIES MX-2000VA (3Y)",
+      "brand": "DeltaHub",
+      "category": "อุปกรณ์คอมพิวเตอร์",
+      "category_path": [
+        "คอมพิวเตอร์",
+        "อุปกรณ์คอมพิวเตอร์"
+      ],
+      "price": 15900.0,
+      "original_price": 15900.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0175424/A0175424OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/computer/ups-2000va-delta-mx-series-mx-2000va-3y-",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/computer/computer-accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143807",
+      "sku": "3000000146710",
+      "name": "UPS 1000VA VERTIV PSA1000-SOHO",
+      "brand": "VERTIV",
+      "category": "อุปกรณ์คอมพิวเตอร์",
+      "category_path": [
+        "คอมพิวเตอร์",
+        "อุปกรณ์คอมพิวเตอร์"
+      ],
+      "price": 2890.0,
+      "original_price": 2890.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0146710/A0146710OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/computer/ups-1000va-vertiv-psa1000-soho",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/computer/computer-accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143806",
+      "sku": "3000000146708",
+      "name": "UPS 650VA VERTIV PSA650-SOHO",
+      "brand": "VERTIV",
+      "category": "อุปกรณ์คอมพิวเตอร์",
+      "category_path": [
+        "คอมพิวเตอร์",
+        "อุปกรณ์คอมพิวเตอร์"
+      ],
+      "price": 1750.0,
+      "original_price": 1750.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0146708/A0146708OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/computer/ups-650va-vertiv-psa650-soho",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/computer/computer-accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143562",
@@ -2608,7 +2660,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143359",
@@ -2620,35 +2672,35 @@
         "คอมพิวเตอร์",
         "อุปกรณ์คอมพิวเตอร์"
       ],
-      "price": 2250.0,
-      "original_price": 2250.0,
+      "price": 2275.0,
+      "original_price": 2275.0,
       "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184598/A0184598OK_ORI_1.jpg",
       "product_url": "https://www.mercular.com/computer/4g-router-mercusys-mb235-4g-wireless-ac1200-dual-band-gigabit",
       "in_stock": true,
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
-      "id": "143089",
-      "sku": "3000000146709",
-      "name": "UPS 850VA VERTIV PSA850-SOHO",
-      "brand": "VERTIV",
+      "id": "143081",
+      "sku": "3000000184227",
+      "name": "Access Point Outdoor TP-LINK (Omada EAP215-Bridge KIT)",
+      "brand": "TP-Link",
       "category": "อุปกรณ์คอมพิวเตอร์",
       "category_path": [
         "คอมพิวเตอร์",
         "อุปกรณ์คอมพิวเตอร์"
       ],
-      "price": 2190.0,
-      "original_price": 2190.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0146709/A0146709OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/computer/ups-850va-vertiv-psa850-soho",
+      "price": 4050.0,
+      "original_price": 4050.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184227/A0184227OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/computer/access-point-outdoor-tp-link-omada-eap215-bridge-kit-",
       "in_stock": true,
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143077",
@@ -2668,7 +2720,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143076",
@@ -2688,7 +2740,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143075",
@@ -2708,7 +2760,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143074",
@@ -2728,7 +2780,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143072",
@@ -2748,7 +2800,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143071",
@@ -2768,7 +2820,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143070",
@@ -2788,7 +2840,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143068",
@@ -2808,7 +2860,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143033",
@@ -2828,7 +2880,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143007",
@@ -2848,27 +2900,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142933",
-      "sku": "3000000163491",
-      "name": "UPS 2200VA EATON P-5A2200I-NEMA",
-      "brand": "Eaton",
-      "category": "อุปกรณ์คอมพิวเตอร์",
-      "category_path": [
-        "คอมพิวเตอร์",
-        "อุปกรณ์คอมพิวเตอร์"
-      ],
-      "price": 4650.0,
-      "original_price": 4650.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0163491/A0163491OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/computer/ups-2200va-eaton-p-5a2200i-nema",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "142932",
@@ -2888,7 +2920,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "142931",
@@ -2908,67 +2940,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142930",
-      "sku": "3000000160301",
-      "name": "UPS 1200VA EATON P-5A1200I-NEMA",
-      "brand": "Eaton",
-      "category": "อุปกรณ์คอมพิวเตอร์",
-      "category_path": [
-        "คอมพิวเตอร์",
-        "อุปกรณ์คอมพิวเตอร์"
-      ],
-      "price": 2290.0,
-      "original_price": 2290.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0160301/A0160301OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/computer/ups-1200va-eaton-p-5a1200i-nema",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142927",
-      "sku": "3000000182196",
-      "name": "UPS 900VA EATON P-5A900I-NEMA-LCD",
-      "brand": "Eaton",
-      "category": "อุปกรณ์คอมพิวเตอร์",
-      "category_path": [
-        "คอมพิวเตอร์",
-        "อุปกรณ์คอมพิวเตอร์"
-      ],
-      "price": 2040.0,
-      "original_price": 2040.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182196/A0182196OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/computer/ups-900va-eaton-p-5a900i-nema-lcd",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142926",
-      "sku": "3000000160300",
-      "name": "UPS 900VA EATON P-5A900I-NEMA",
-      "brand": "Eaton",
-      "category": "อุปกรณ์คอมพิวเตอร์",
-      "category_path": [
-        "คอมพิวเตอร์",
-        "อุปกรณ์คอมพิวเตอร์"
-      ],
-      "price": 1630.0,
-      "original_price": 1630.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0160300/A0160300OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/computer/ups-900va-eaton-p-5a900i-nema",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/computer/computer-accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "111718",
@@ -2989,11 +2961,11 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/streaming/webcam",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "111562",
-      "sku": "1532273000001",
+      "sku": "1532273000002",
       "name": "Webcam LOGITECH MX BRIO (PALEGREY)",
       "brand": "Logitech",
       "category": "กล้อง Webcam",
@@ -3004,13 +2976,13 @@
       ],
       "price": 7590.0,
       "original_price": 7590.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0160025/A0160025OK_ORI_1.jpg",
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0160026/A0160026OK_ORI_1.jpg",
       "product_url": "https://www.mercular.com/gaming/streaming/webcam-logitech-mx-brio",
       "in_stock": true,
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/streaming/webcam",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "111215",
@@ -3031,7 +3003,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/streaming/webcam",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "110645",
@@ -3052,7 +3024,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/streaming/webcam",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "110265",
@@ -3073,7 +3045,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/streaming/webcam",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "99184",
@@ -3094,7 +3066,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/streaming/webcam",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "93451",
@@ -3115,7 +3087,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/streaming/webcam",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "93269",
@@ -3136,7 +3108,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/streaming/webcam",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "87134",
@@ -3157,7 +3129,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/streaming/webcam",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "85265",
@@ -3178,7 +3150,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/streaming/webcam",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "85259",
@@ -3199,7 +3171,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/streaming/webcam",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "85256",
@@ -3220,7 +3192,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/streaming/webcam",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "52522",
@@ -3241,7 +3213,27 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/gaming/streaming/webcam",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143920",
+      "sku": "3000000182989",
+      "name": "Wireless Microphone BOYA BOYAMINI2-01",
+      "brand": "Boya",
+      "category": "ไมโครโฟนและอุปกรณ์เสริม",
+      "category_path": [
+        "เครื่องเสียงมืออาชีพ",
+        "ไมโครโฟนและอุปกรณ์เสริม"
+      ],
+      "price": 2190.0,
+      "original_price": 2190.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182989/A0182989OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/professional-audio/wireless-microphone-boya-boyamini2-01",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/professional-audio/microphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143335",
@@ -3261,7 +3253,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143334",
@@ -3281,7 +3273,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141510",
@@ -3301,7 +3293,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141509",
@@ -3321,27 +3313,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "141507",
-      "sku": "3000000182738",
-      "name": "Microphone Arm ELGATO WAVE LP (10AAN9901)",
-      "brand": "Elgato",
-      "category": "ไมโครโฟนและอุปกรณ์เสริม",
-      "category_path": [
-        "เครื่องเสียงมืออาชีพ",
-        "ไมโครโฟนและอุปกรณ์เสริม"
-      ],
-      "price": 3990.0,
-      "original_price": 3990.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182738/A0182738OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/professional-audio/microphone-arm-elgato-wave-lp-10aan9901-",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141506",
@@ -3361,7 +3333,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141505",
@@ -3381,7 +3353,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141504",
@@ -3401,7 +3373,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141503",
@@ -3421,7 +3393,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "123578",
@@ -3441,7 +3413,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "123577",
@@ -3461,27 +3433,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "123576",
-      "sku": "3000000178220",
-      "name": "Wireless Microphone BOYA BY-V4U",
-      "brand": "Boya",
-      "category": "ไมโครโฟนและอุปกรณ์เสริม",
-      "category_path": [
-        "เครื่องเสียงมืออาชีพ",
-        "ไมโครโฟนและอุปกรณ์เสริม"
-      ],
-      "price": 3990.0,
-      "original_price": 3990.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0178220/A0178220OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/professional-audio/wireless-microphone-boya-by-v4u",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "123573",
@@ -3501,7 +3453,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "123570",
@@ -3521,7 +3473,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "123568",
@@ -3541,7 +3493,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "117843",
@@ -3561,7 +3513,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "117842",
@@ -3581,7 +3533,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "112480",
@@ -3601,7 +3553,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "112040",
@@ -3621,7 +3573,27 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "101239",
+      "sku": "1095199000001",
+      "name": "Wireless Microphone JBL MICAS1 Black",
+      "brand": "JBL",
+      "category": "ไมโครโฟนและอุปกรณ์เสริม",
+      "category_path": [
+        "เครื่องเสียงมืออาชีพ",
+        "ไมโครโฟนและอุปกรณ์เสริม"
+      ],
+      "price": 3990.0,
+      "original_price": 3990.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0148208/A0148208OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/professional-audio/jbl-wireless-microphone-set",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/professional-audio/microphone",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "87206",
@@ -3641,7 +3613,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/professional-audio/microphone",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141946",
@@ -3653,15 +3625,15 @@
         "Smartphone / Tablet / ACC",
         "พาวเวอร์แบงค์"
       ],
-      "price": 1499.0,
-      "original_price": 1499.0,
+      "price": 1589.0,
+      "original_price": 1589.0,
       "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182421/A0182421OK_ORI_1.jpg",
       "product_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank-20000-mah-remax-cp-17-65w-gray",
       "in_stock": true,
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141945",
@@ -3681,7 +3653,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141944",
@@ -3701,7 +3673,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141943",
@@ -3721,7 +3693,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141942",
@@ -3741,7 +3713,27 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "141941",
+      "sku": "3000000182429",
+      "name": "POWER BANK 10000 mAh REMAX (FP-60,22.5W) White",
+      "brand": "Remax",
+      "category": "พาวเวอร์แบงค์",
+      "category_path": [
+        "Smartphone / Tablet / ACC",
+        "พาวเวอร์แบงค์"
+      ],
+      "price": 689.0,
+      "original_price": 689.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0182429/A0182429OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank-10000-mah-remax-fp-60-22-5w-white",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141940",
@@ -3761,7 +3753,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141939",
@@ -3781,7 +3773,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141938",
@@ -3801,7 +3793,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141937",
@@ -3821,7 +3813,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141936",
@@ -3841,7 +3833,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141935",
@@ -3861,7 +3853,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "141934",
@@ -3881,7 +3873,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "140569",
@@ -3901,7 +3893,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "140568",
@@ -3921,7 +3913,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "140567",
@@ -3941,7 +3933,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "140566",
@@ -3961,7 +3953,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "140551",
@@ -3981,7 +3973,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "140550",
@@ -4001,47 +3993,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "140549",
-      "sku": "3000000180767",
-      "name": "POWER BANK 10000 mAh VOLTME Hypercore Z (35W,B3045) Champagne Gold",
-      "brand": "VOLTME",
-      "category": "พาวเวอร์แบงค์",
-      "category_path": [
-        "Smartphone / Tablet / ACC",
-        "พาวเวอร์แบงค์"
-      ],
-      "price": 1490.0,
-      "original_price": 1490.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0180767/A0180767OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank-10000-mah-voltme-hypercore-z-35w-b3045-champagne-gold",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/smartphone-tablet-acc/power-bank",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143570",
-      "sku": "3000000183761",
-      "name": "Google Fitbit Air - Rye x Stephen Curry SE",
-      "brand": "Google Fitbit Air",
-      "category": "Smart Watch & Fitness Tracker",
-      "category_path": [
-        "แกดเจ็ต",
-        "Smart Watch & Fitness Tracker"
-      ],
-      "price": 6990.0,
-      "original_price": 6990.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183761/A0183761OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/smart-gadget/google-fitbit-air-rye-x-stephen-curry-se",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143569",
@@ -4061,7 +4013,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143568",
@@ -4081,27 +4033,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143567",
-      "sku": "3000000183758",
-      "name": "Google Fitbit Air - Lavender",
-      "brand": "Google Fitbit Air",
-      "category": "Smart Watch & Fitness Tracker",
-      "category_path": [
-        "แกดเจ็ต",
-        "Smart Watch & Fitness Tracker"
-      ],
-      "price": 6190.0,
-      "original_price": 6190.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183758/A0183758OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/smart-gadget/google-fitbit-air-lavender",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143566",
@@ -4121,7 +4053,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143047",
@@ -4141,7 +4073,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143045",
@@ -4161,7 +4093,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143044",
@@ -4181,7 +4113,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143043",
@@ -4201,7 +4133,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143042",
@@ -4221,7 +4153,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143041",
@@ -4241,7 +4173,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "142919",
@@ -4261,7 +4193,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "142918",
@@ -4281,7 +4213,27 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "142917",
+      "sku": "3000000175620",
+      "name": "สาย Apple Watch PANTHERA 46mm Denim Light Jeans",
+      "brand": "PANTHERA",
+      "category": "Smart Watch & Fitness Tracker",
+      "category_path": [
+        "แกดเจ็ต",
+        "Smart Watch & Fitness Tracker"
+      ],
+      "price": 390.0,
+      "original_price": 390.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0175620/A0175620OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/smart-gadget/สาย-apple-watch-panthera-46mm-denim-light-jeans",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "142903",
@@ -4301,7 +4253,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "142902",
@@ -4321,7 +4273,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "142901",
@@ -4341,7 +4293,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "142900",
@@ -4361,7 +4313,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "142887",
@@ -4381,7 +4333,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "142886",
@@ -4401,7 +4353,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "142881",
@@ -4421,7 +4373,160 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "142880",
+      "sku": "3000000175588",
+      "name": "สาย Apple Watch PANTHERA 46mm Liquid Silicone Blue",
+      "brand": "PANTHERA",
+      "category": "Smart Watch & Fitness Tracker",
+      "category_path": [
+        "แกดเจ็ต",
+        "Smart Watch & Fitness Tracker"
+      ],
+      "price": 290.0,
+      "original_price": 290.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0175588/A0175588OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/smart-gadget/สาย-apple-watch-panthera-46mm-liquid-silicone-blue",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/smart-gadget/smart-watch-fitness-tracker",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143821",
+      "sku": "3000000183735",
+      "name": "3D PRINTER Bambu Lab X2D Combo",
+      "brand": "Bambu Lab",
+      "category": "เครื่องปริ้น / หมึก",
+      "category_path": [
+        "เครื่องปริ้น / หมึก"
+      ],
+      "price": 40900.0,
+      "original_price": 40900.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183735/A0183735OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/3d-printer-bambu-lab-x2d-combo",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/printer-ing",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143820",
+      "sku": "3000000181604",
+      "name": "3D PRINTER Bambu Lab P2S Combo",
+      "brand": "Bambu Lab",
+      "category": "เครื่องปริ้น / หมึก",
+      "category_path": [
+        "เครื่องปริ้น / หมึก"
+      ],
+      "price": 34900.0,
+      "original_price": 34900.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0181604/A0181604OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/3d-printer-bambu-lab-p2s-combo",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/printer-ing",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143819",
+      "sku": "3000000181605",
+      "name": "3D PRINTER Bambu Lab P2S",
+      "brand": "Bambu Lab",
+      "category": "เครื่องปริ้น / หมึก",
+      "category_path": [
+        "เครื่องปริ้น / หมึก"
+      ],
+      "price": 23900.0,
+      "original_price": 23900.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0181605/A0181605OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/3d-printer-bambu-lab-p2s",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/printer-ing",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143818",
+      "sku": "3000000183756",
+      "name": "3D PRINTER Bambu Lab A1 Combo",
+      "brand": "Bambu Lab",
+      "category": "เครื่องปริ้น / หมึก",
+      "category_path": [
+        "เครื่องปริ้น / หมึก"
+      ],
+      "price": 15900.0,
+      "original_price": 15900.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183756/A0183756OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/3d-printer-bambu-lab-a1-combo",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/printer-ing",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143815",
+      "sku": "3000000183736",
+      "name": "3D PRINTER CREALITY K2 Pro",
+      "brand": "CREALITY",
+      "category": "เครื่องปริ้น / หมึก",
+      "category_path": [
+        "เครื่องปริ้น / หมึก"
+      ],
+      "price": 31900.0,
+      "original_price": 31900.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183736/A0183736OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/3d-printer-creality-k2-pro",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/printer-ing",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143814",
+      "sku": "3000000178630",
+      "name": "3D PRINTER CREALITY K2 Combo",
+      "brand": "CREALITY",
+      "category": "เครื่องปริ้น / หมึก",
+      "category_path": [
+        "เครื่องปริ้น / หมึก"
+      ],
+      "price": 24900.0,
+      "original_price": 24900.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0178630/A0178630OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/3d-printer-creality-k2-combo",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/printer-ing",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143813",
+      "sku": "3000000180352",
+      "name": "3D PRINTER SPARKX i7 Color Combo",
+      "brand": "CREALITY",
+      "category": "เครื่องปริ้น / หมึก",
+      "category_path": [
+        "เครื่องปริ้น / หมึก"
+      ],
+      "price": 16000.0,
+      "original_price": 16000.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0180352/A0180352OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/3d-printer-sparkx-i7-color-combo",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/printer-ing",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143241",
@@ -4440,45 +4545,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143240",
-      "sku": "3000000132767",
-      "name": "SCANNER CANON LIDE 400",
-      "brand": "Canon",
-      "category": "เครื่องปริ้น / หมึก",
-      "category_path": [
-        "เครื่องปริ้น / หมึก"
-      ],
-      "price": 3090.0,
-      "original_price": 3090.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0132767/A0132767OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/scanner-canon-lide-400",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143239",
-      "sku": "3000000118913",
-      "name": "SCANNER CANON LIDE 300",
-      "brand": "Canon",
-      "category": "เครื่องปริ้น / หมึก",
-      "category_path": [
-        "เครื่องปริ้น / หมึก"
-      ],
-      "price": 1680.0,
-      "original_price": 1680.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0118913/A0118913OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/scanner-canon-lide-300",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143238",
@@ -4497,7 +4564,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143237",
@@ -4516,7 +4583,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143236",
@@ -4535,7 +4602,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143235",
@@ -4554,7 +4621,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143234",
@@ -4573,7 +4640,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143233",
@@ -4592,7 +4659,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143232",
@@ -4611,7 +4678,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143231",
@@ -4630,7 +4697,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143230",
@@ -4649,7 +4716,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143229",
@@ -4668,7 +4735,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143228",
@@ -4687,7 +4754,7 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
       "id": "143227",
@@ -4706,482 +4773,387 @@
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
-      "id": "143226",
-      "sku": "3000000117075",
-      "name": "TONER-ORIGINAL BROTHER TN-2460",
-      "brand": "Brother",
-      "category": "เครื่องปริ้น / หมึก",
-      "category_path": [
-        "เครื่องปริ้น / หมึก"
-      ],
-      "price": 1170.0,
-      "original_price": 1170.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0117075/A0117075OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/toner-original-brother-tn-2460",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143225",
-      "sku": "3000000156414",
-      "name": "TONER-ORIGINAL BROTHER TN-269 Y",
-      "brand": "Brother",
-      "category": "เครื่องปริ้น / หมึก",
-      "category_path": [
-        "เครื่องปริ้น / หมึก"
-      ],
-      "price": 1990.0,
-      "original_price": 1990.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0156414/A0156414OK_BIG_1.jpg",
-      "product_url": "https://www.mercular.com/toner-original-brother-tn-269-y",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143224",
-      "sku": "3000000156413",
-      "name": "TONER-ORIGINAL BROTHER TN-269 M",
-      "brand": "Brother",
-      "category": "เครื่องปริ้น / หมึก",
-      "category_path": [
-        "เครื่องปริ้น / หมึก"
-      ],
-      "price": 1990.0,
-      "original_price": 1990.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0156413/A0156413OK_BIG_1.jpg",
-      "product_url": "https://www.mercular.com/toner-original-brother-tn-269-m",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143223",
-      "sku": "3000000156412",
-      "name": "TONER-ORIGINAL BROTHER TN-269 C",
-      "brand": "Brother",
-      "category": "เครื่องปริ้น / หมึก",
-      "category_path": [
-        "เครื่องปริ้น / หมึก"
-      ],
-      "price": 1990.0,
-      "original_price": 1990.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0156412/A0156412OK_BIG_1.jpg",
-      "product_url": "https://www.mercular.com/toner-original-brother-tn-269-c",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143222",
-      "sku": "3000000156411",
-      "name": "TONER-ORIGINAL BROTHER TN-269 BK",
-      "brand": "Brother",
-      "category": "เครื่องปริ้น / หมึก",
-      "category_path": [
-        "เครื่องปริ้น / หมึก"
-      ],
-      "price": 1750.0,
-      "original_price": 1750.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0156411/A0156411OK_BIG_1.jpg",
-      "product_url": "https://www.mercular.com/toner-original-brother-tn-269-bk",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/printer-ing",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143607",
-      "sku": "3000000158240",
-      "name": "512GB Flash Drive SANDISK Ultra Curve (SDCZ550) Green",
-      "brand": "Sandisk",
-      "category": "อุปกรณ์เสริม",
-      "category_path": [
-        "อุปกรณ์เสริม"
-      ],
-      "price": 2990.0,
-      "original_price": 2990.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0158240/A0158240OK_BIG_1.jpg",
-      "product_url": "https://www.mercular.com/512gb-flash-drive-sandisk-ultra-curve-sdcz550-green",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "143038",
-      "sku": "3000000164136",
-      "name": "64GB Flash Drive ADATA (AUV150-64G-RBK) Black",
-      "brand": "ADATA",
-      "category": "อุปกรณ์เสริม",
-      "category_path": [
-        "อุปกรณ์เสริม"
-      ],
-      "price": 230.0,
-      "original_price": 230.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0164136/A0164136OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/64gb-flash-drive-adata-auv150-64g-rbk-black",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142992",
-      "sku": "3000000168779",
-      "name": "4 Port USB HUB v3.0 UNITEK (H1208A) Grey",
-      "brand": "Unitek",
-      "category": "อุปกรณ์เสริม",
-      "category_path": [
-        "อุปกรณ์เสริม"
-      ],
-      "price": 220.0,
-      "original_price": 220.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0168779/A0168779OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/4-port-usb-hub-v3-0-unitek-h1208a-grey",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142954",
-      "sku": "3000000153533",
-      "name": "16GB Flash Drive HIKSEMI (M200S) U3 Black",
-      "brand": "HIKSEMI",
-      "category": "อุปกรณ์เสริม",
-      "category_path": [
-        "อุปกรณ์เสริม"
-      ],
-      "price": 220.0,
-      "original_price": 220.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0153533/A0153533OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/16gb-flash-drive-hiksemi-m200s-u3-black",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142953",
-      "sku": "3000000119755",
-      "name": "16GB Flash Drive LEXAR (V40) Black",
-      "brand": "Lexar",
-      "category": "อุปกรณ์เสริม",
-      "category_path": [
-        "อุปกรณ์เสริม"
-      ],
-      "price": 199.0,
-      "original_price": 199.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0119755/A0119755OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/16gb-flash-drive-lexar-v40-black",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142798",
-      "sku": "3000000179881",
-      "name": "512GB Micro SD Card SANDISK Express SDSQXFN-512G-GN4NN (880MB/s.)",
-      "brand": "Sandisk",
-      "category": "อุปกรณ์เสริม",
-      "category_path": [
-        "อุปกรณ์เสริม"
-      ],
-      "price": 4590.0,
-      "original_price": 4590.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0179881/A0179881OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/512gb-micro-sd-card-sandisk-express-sdsqxfn-512g-gn4nn-880mb-s-",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142797",
-      "sku": "3000000179916",
-      "name": "512GB Micro SD Card LEXAR Play Pro Express LXR-LMSXPS0512G (900MB/s.)",
-      "brand": "Lexar",
-      "category": "อุปกรณ์เสริม",
-      "category_path": [
-        "อุปกรณ์เสริม"
-      ],
-      "price": 4490.0,
-      "original_price": 4490.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0179916/A0179916OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/512gb-micro-sd-card-lexar-play-pro-express-lxr-lmsxps0512g-900mb-s-",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142795",
-      "sku": "3000000183478",
-      "name": "512GB Micro SD Card SANDISK Ultra GO SDSQUGN-512G-GN6MN (190MB/s.)",
-      "brand": "Sandisk",
-      "category": "อุปกรณ์เสริม",
-      "category_path": [
-        "อุปกรณ์เสริม"
-      ],
-      "price": 4190.0,
-      "original_price": 4190.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183478/A0183478OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/512gb-micro-sd-card-sandisk-ultra-go-sdsqugn-512g-gn6mn-190mb-s-",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142794",
-      "sku": "3000000173372",
-      "name": "512GB Micro SD Card KINGSTON Canvas Select Plus SDCS3 (150MB/s.)",
-      "brand": "Kingston",
-      "category": "อุปกรณ์เสริม",
-      "category_path": [
-        "อุปกรณ์เสริม"
-      ],
-      "price": 2690.0,
-      "original_price": 2690.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0173372/A0173372OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/512gb-micro-sd-card-kingston-canvas-select-plus-sdcs3-150mb-s-",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142793",
-      "sku": "3000000183477",
-      "name": "256GB Micro SD Card SANDISK Ultra GO SDSQUGN-256G-GN6MN (190MB/s.)",
-      "brand": "Sandisk",
-      "category": "อุปกรณ์เสริม",
-      "category_path": [
-        "อุปกรณ์เสริม"
-      ],
-      "price": 2150.0,
-      "original_price": 2150.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183477/A0183477OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/256gb-micro-sd-card-sandisk-ultra-go-sdsqugn-256g-gn6mn-190mb-s-",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142792",
-      "sku": "3000000173373",
-      "name": "256GB Micro SD Card KINGSTON Canvas Select Plus SDCS3 (150MB/s.)",
-      "brand": "Kingston",
-      "category": "อุปกรณ์เสริม",
-      "category_path": [
-        "อุปกรณ์เสริม"
-      ],
-      "price": 1450.0,
-      "original_price": 1450.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0173373/A0173373OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/256gb-micro-sd-card-kingston-canvas-select-plus-sdcs3-150mb-s-",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142790",
-      "sku": "3000000173374",
-      "name": "128GB Micro SD Card KINGSTON Canvas Select Plus SDCS3 (150MB/s.)",
-      "brand": "Kingston",
-      "category": "อุปกรณ์เสริม",
-      "category_path": [
-        "อุปกรณ์เสริม"
-      ],
-      "price": 795.0,
-      "original_price": 795.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0173374/A0173374OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/128gb-micro-sd-card-kingston-canvas-select-plus-sdcs3-150mb-s-",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142789",
-      "sku": "3000000173375",
-      "name": "64GB Micro SD Card KINGSTON Canvas Select Plus SDCS3 (100MB/s.)",
-      "brand": "Kingston",
-      "category": "อุปกรณ์เสริม",
-      "category_path": [
-        "อุปกรณ์เสริม"
-      ],
-      "price": 490.0,
-      "original_price": 490.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0173375/A0173375OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/64gb-micro-sd-card-kingston-canvas-select-plus-sdcs3-100mb-s-",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142788",
-      "sku": "3000000181586",
-      "name": "64GB Micro SD Card ACER MSC100 (100MB/s.)",
-      "brand": "Acer",
-      "category": "อุปกรณ์เสริม",
-      "category_path": [
-        "อุปกรณ์เสริม"
-      ],
-      "price": 455.0,
-      "original_price": 455.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0181586/A0181586OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/64gb-micro-sd-card-acer-msc100-100mb-s-",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142787",
-      "sku": "3000000177278",
-      "name": "64GB Micro SD Card APACER (100MB/s.)",
-      "brand": "Apacer",
-      "category": "อุปกรณ์เสริม",
-      "category_path": [
-        "อุปกรณ์เสริม"
-      ],
-      "price": 455.0,
-      "original_price": 455.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0177278/A0177278OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/64gb-micro-sd-card-apacer-100mb-s-",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142786",
-      "sku": "3000000183474",
-      "name": "32GB Micro SD Card SANDISK Ultra GO SDSQUGN-032G-GN6MN (120MB/s.)",
-      "brand": "Sandisk",
-      "category": "อุปกรณ์เสริม",
-      "category_path": [
-        "อุปกรณ์เสริม"
-      ],
-      "price": 650.0,
-      "original_price": 650.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183474/A0183474OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/32gb-micro-sd-card-sandisk-ultra-go-sdsqugn-032g-gn6mn-120mb-s-",
-      "in_stock": true,
-      "description": "",
-      "tags": [],
-      "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
-    },
-    {
-      "id": "142785",
-      "sku": "3000000181585",
-      "name": "32GB Micro SD Card ACER MSC100 (100MB/s.)",
-      "brand": "Acer",
+      "id": "143882",
+      "sku": "3000000146739",
+      "name": "Cable POWER AC (1.8M) POWERMAX C19 3 รูแบน (มอก.)",
+      "brand": "POWERMAX",
       "category": "อุปกรณ์เสริม",
       "category_path": [
         "อุปกรณ์เสริม"
       ],
       "price": 360.0,
       "original_price": 360.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0181585/A0181585OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/32gb-micro-sd-card-acer-msc100-100mb-s-",
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0146739/A0146739OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/cable-power-ac-1-8m-powermax-c19-3-รูแบน-มอก-",
       "in_stock": true,
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
-      "id": "142784",
-      "sku": "3000000169033",
-      "name": "32GB Micro SD Card APACER (100MB/s.)",
-      "brand": "Apacer",
+      "id": "143881",
+      "sku": "3000000141486",
+      "name": "Cable POWER AC (1.8M) POWERMAX 3 รูแบน หนา 0.75mm (มอก.)",
+      "brand": "POWERMAX",
       "category": "อุปกรณ์เสริม",
       "category_path": [
         "อุปกรณ์เสริม"
       ],
-      "price": 310.0,
-      "original_price": 310.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0169033/A0169033OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/32gb-micro-sd-card-apacer-100mb-s-",
+      "price": 250.0,
+      "original_price": 250.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0141486/A0141486OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/cable-power-ac-1-8m-powermax-3-รูแบน-หนา-0-75mm-มอก-",
       "in_stock": true,
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
-      "id": "142782",
-      "sku": "3000000153552",
-      "name": "256GB Flash Drive HIKSEMI (Dual Slim) OTG Type-C Grey",
-      "brand": "HIKSEMI",
+      "id": "143880",
+      "sku": "3000000152323",
+      "name": "Cable POWER AC (1M) POWERMAX 3 รูแบน (มอก.)",
+      "brand": "POWERMAX",
       "category": "อุปกรณ์เสริม",
       "category_path": [
         "อุปกรณ์เสริม"
       ],
-      "price": 1170.0,
-      "original_price": 1170.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0153552/A0153552OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/256gb-flash-drive-hiksemi-dual-slim-otg-type-c-grey",
+      "price": 185.0,
+      "original_price": 185.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0152323/A0152323OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/cable-power-ac-1m-powermax-3-รูแบน-มอก-",
       "in_stock": true,
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     },
     {
-      "id": "142777",
-      "sku": "3000000177746",
-      "name": "64GB Flash Drive ACER Dual Drive (UT300) Type-C Metal",
-      "brand": "Acer",
+      "id": "143879",
+      "sku": "3000000141485",
+      "name": "Cable POWER AC (1.8M) POWERMAX 3 รูกลม หนา 1mm (มอก.)",
+      "brand": "POWERMAX",
       "category": "อุปกรณ์เสริม",
       "category_path": [
         "อุปกรณ์เสริม"
       ],
-      "price": 490.0,
-      "original_price": 490.0,
-      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0177746/A0177746OK_ORI_1.jpg",
-      "product_url": "https://www.mercular.com/64gb-flash-drive-acer-dual-drive-ut300-type-c-metal",
+      "price": 200.0,
+      "original_price": 200.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0141485/A0141485OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/cable-power-ac-1-8m-powermax-3-รูกลม-หนา-1mm-มอก-",
       "in_stock": true,
       "description": "",
       "tags": [],
       "source_url": "https://www.mercular.com/accessories",
-      "scraped_at": "2026-08-23T17:50:07+00:00"
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143878",
+      "sku": "3000000102614",
+      "name": "Cable POWER AC (1.5M) SKYHORSE 3 รูกลม",
+      "brand": "SKYHORSE",
+      "category": "อุปกรณ์เสริม",
+      "category_path": [
+        "อุปกรณ์เสริม"
+      ],
+      "price": 75.0,
+      "original_price": 75.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0102614/A0102614OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/cable-power-ac-1-5m-skyhorse-3-รูกลม",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143877",
+      "sku": "3000000152324",
+      "name": "Cable POWER AC (1M) POWERMAX 3 รูกลม (มอก.)",
+      "brand": "POWERMAX",
+      "category": "อุปกรณ์เสริม",
+      "category_path": [
+        "อุปกรณ์เสริม"
+      ],
+      "price": 145.0,
+      "original_price": 145.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0152324/A0152324OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/cable-power-ac-1m-powermax-3-รูกลม-มอก-",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143876",
+      "sku": "3000000141788",
+      "name": "Cable POWER AC (1.8M) POWERMAX 2 รูกลม หนา 0.75mm (มอก.)",
+      "brand": "POWERMAX",
+      "category": "อุปกรณ์เสริม",
+      "category_path": [
+        "อุปกรณ์เสริม"
+      ],
+      "price": 140.0,
+      "original_price": 140.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0141788/A0141788OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/cable-power-ac-1-8m-powermax-2-รูกลม-หนา-0-75mm-มอก-",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143861",
+      "sku": "3000000168115",
+      "name": "7 Port USB HUB v3.0 MAGICTECH (DM506)",
+      "brand": "MAGICTECH",
+      "category": "อุปกรณ์เสริม",
+      "category_path": [
+        "อุปกรณ์เสริม"
+      ],
+      "price": 790.0,
+      "original_price": 790.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0168115/A0168115OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/7-port-usb-hub-v3-0-magictech-dm506-",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143860",
+      "sku": "3000000109014",
+      "name": "4 Port USB HUB v3.0 + USB Charger 1P MAGICTECH (MT-26) Black",
+      "brand": "MAGICTECH",
+      "category": "อุปกรณ์เสริม",
+      "category_path": [
+        "อุปกรณ์เสริม"
+      ],
+      "price": 400.0,
+      "original_price": 400.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0109014/A0109014OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/4-port-usb-hub-v3-0-plus-usb-charger-1p-magictech-mt-26-black",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143858",
+      "sku": "3000000139189",
+      "name": "Converter Lightning TO HDMI MAGICTECH (A5-10) White",
+      "brand": "Magic The Gathering",
+      "category": "อุปกรณ์เสริม",
+      "category_path": [
+        "อุปกรณ์เสริม"
+      ],
+      "price": 290.0,
+      "original_price": 290.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0139189/A0139189OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/converter-lightning-to-hdmi-magictech-a5-10-white",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143857",
+      "sku": "3000000184429",
+      "name": "Cable POWER AC (3M) JP 3 รูแบน หนา 0.75mm (มอก.)",
+      "brand": "JP Automate",
+      "category": "อุปกรณ์เสริม",
+      "category_path": [
+        "อุปกรณ์เสริม"
+      ],
+      "price": 105.0,
+      "original_price": 105.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0184429/A0184429OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/cable-power-ac-3m-jp-3-รูแบน-หนา-0-75mm-มอก-",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143855",
+      "sku": "3000000183852",
+      "name": "Cable POWER AC (3M) GLINK GP1032 3 รูกลม (มอก.)",
+      "brand": "Glink",
+      "category": "อุปกรณ์เสริม",
+      "category_path": [
+        "อุปกรณ์เสริม"
+      ],
+      "price": 120.0,
+      "original_price": 120.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183852/A0183852OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/cable-power-ac-3m-glink-gp1032-3-รูกลม-มอก-",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143852",
+      "sku": "3000000165182",
+      "name": "Power Bar BLL B73 (10M) White",
+      "brand": "BLL",
+      "category": "อุปกรณ์เสริม",
+      "category_path": [
+        "อุปกรณ์เสริม"
+      ],
+      "price": 369.0,
+      "original_price": 369.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0165182/A0165182OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/power-bar-bll-b73-10m-white",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143851",
+      "sku": "3000000162073",
+      "name": "Power Bar BLL B79 (5M) White",
+      "brand": "BLL",
+      "category": "อุปกรณ์เสริม",
+      "category_path": [
+        "อุปกรณ์เสริม"
+      ],
+      "price": 399.0,
+      "original_price": 399.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0162073/A0162073OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/power-bar-bll-b79-5m-white",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143850",
+      "sku": "3000000183725",
+      "name": "Power Bar ANITECH H2155 (5M) White",
+      "brand": "Anitech",
+      "category": "อุปกรณ์เสริม",
+      "category_path": [
+        "อุปกรณ์เสริม"
+      ],
+      "price": 390.0,
+      "original_price": 390.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183725/A0183725OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/power-bar-anitech-h2155-5m-white",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143849",
+      "sku": "3000000152922",
+      "name": "Power Bar BLL B75 (5M) White",
+      "brand": "BLL",
+      "category": "อุปกรณ์เสริม",
+      "category_path": [
+        "อุปกรณ์เสริม"
+      ],
+      "price": 295.0,
+      "original_price": 295.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0152922/A0152922OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/power-bar-bll-b75-5m-white",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143848",
+      "sku": "3000000146500",
+      "name": "Power Bar BLL B57 (5M) White",
+      "brand": "BLL",
+      "category": "อุปกรณ์เสริม",
+      "category_path": [
+        "อุปกรณ์เสริม"
+      ],
+      "price": 240.0,
+      "original_price": 240.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0146500/A0146500OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/power-bar-bll-b57-5m-white",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143846",
+      "sku": "3000000183722",
+      "name": "Power Bar ANITECH H2145 (5M) White",
+      "brand": "Anitech",
+      "category": "อุปกรณ์เสริม",
+      "category_path": [
+        "อุปกรณ์เสริม"
+      ],
+      "price": 350.0,
+      "original_price": 350.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0183722/A0183722OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/power-bar-anitech-h2145-5m-white",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143845",
+      "sku": "3000000180516",
+      "name": "Power Bar BLL B92 (3M) Black",
+      "brand": "BLL",
+      "category": "อุปกรณ์เสริม",
+      "category_path": [
+        "อุปกรณ์เสริม"
+      ],
+      "price": 529.0,
+      "original_price": 529.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0180516/A0180516OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/power-bar-bll-b92-3m-black",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
+    },
+    {
+      "id": "143844",
+      "sku": "3000000180515",
+      "name": "Power Bar BLL B91 (3M) White",
+      "brand": "BLL",
+      "category": "อุปกรณ์เสริม",
+      "category_path": [
+        "อุปกรณ์เสริม"
+      ],
+      "price": 459.0,
+      "original_price": 459.0,
+      "image_url": "https://img.advice.co.th/images_nas/pic_product4/A0180515/A0180515OK_ORI_1.jpg",
+      "product_url": "https://www.mercular.com/power-bar-bll-b91-3m-white",
+      "in_stock": true,
+      "description": "",
+      "tags": [],
+      "source_url": "https://www.mercular.com/accessories",
+      "scraped_at": "2026-08-27T13:09:51+00:00"
     }
   ]
 }

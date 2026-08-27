@@ -6,4 +6,6 @@ __pycache__/
 *.log
 data/*.tmp
 data/*.lock
+data/*.sqlite3
+data/*.sqlite3-*
 artifacts/

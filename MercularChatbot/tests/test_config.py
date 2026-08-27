@@ -56,3 +56,9 @@ def test_phayathaibert_configuration_defaults_and_can_use_local_model_cache(monk
     assert settings.phayathaibert_model_name == "local-phayathaibert"
     assert settings.phayathaibert_min_confidence == 0.83
     assert settings.phayathaibert_local_files_only is True
+
+
+def test_price_history_path_is_configurable(monkeypatch):
+    monkeypatch.setenv("MERCULAR_PRICE_HISTORY_PATH", "data/history.sqlite3")
+
+    assert Settings.from_env().price_history_path.name == "history.sqlite3"
