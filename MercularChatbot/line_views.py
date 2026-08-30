@@ -229,15 +229,6 @@ def normalize_https_url(
     return result if len(result) <= max_length else ""
 
 
-def is_safe_https_url(value: object | None, *, mercular_only: bool = False) -> bool:
-    """Whether ``value`` is already a valid public HTTPS URL."""
-
-    candidate = str(value or "").strip()
-    return candidate.casefold().startswith("https://") and bool(
-        normalize_https_url(candidate, mercular_only=mercular_only)
-    )
-
-
 def build_postback_data(action: str, **parameters: object) -> str:
     """Build bounded query-string postback data accepted by LINE."""
 
@@ -555,10 +546,6 @@ def build_product_carousel_message(
 
     message = product_carousel_message(products, alt_text=alt_text)
     return message if message is not None else no_results_message()
-
-
-# Short integration-friendly alias used by the webhook.
-build_product_carousel = build_product_carousel_message
 
 
 def build_promotion_bubble_payload(promotion: Promotion) -> dict[str, Any]:
@@ -1165,7 +1152,6 @@ __all__ = [
     "build_category_picker_message",
     "build_category_picker_payload",
     "build_product_bubble_payload",
-    "build_product_carousel",
     "build_product_carousel_message",
     "build_product_carousel_payload",
     "build_promotion_bubble_payload",
@@ -1178,7 +1164,6 @@ __all__ = [
     "greeting_message",
     "help_message",
     "is_refresh_postback",
-    "is_safe_https_url",
     "no_results_message",
     "normalize_https_url",
     "parse_postback_data",

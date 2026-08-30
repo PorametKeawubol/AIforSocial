@@ -405,10 +405,6 @@ class CommandEntities:
         return result
 
 
-# A less app-specific name is handy for external users and old notebooks.
-SearchEntities = CommandEntities
-
-
 @dataclass(frozen=True, slots=True)
 class ParsedCommand:
     """Intent prediction plus the constraints needed to retrieve products."""
@@ -563,21 +559,6 @@ def category_aliases_for(category: str) -> tuple[str, ...]:
             # directional matcher will not let the broad parent ``เกมมิ่ง`` satisfy it.
             return _unique_clean((category, *candidates))
     return _unique_clean((category,))
-
-
-@lru_cache(maxsize=256)
-def feature_aliases_for(term: str) -> tuple[str, ...]:
-    """Expand a residual feature term into equivalent Thai/English spellings."""
-
-    target = compact_text(term)
-    for canonical, aliases in FEATURE_ALIASES.items():
-        candidates = (canonical, *aliases)
-        compact_candidates = {compact_text(item) for item in candidates}
-        if target in compact_candidates or any(
-            candidate and candidate in target for candidate in compact_candidates
-        ):
-            return _unique_clean(candidates)
-    return _unique_clean((term,))
 
 
 class ThaiCommandParser:
@@ -1441,7 +1422,6 @@ __all__ = [
     "CATEGORY_ALIASES",
     "FEATURE_ALIASES",
     "CommandEntities",
-    "SearchEntities",
     "ParsedCommand",
     "ThaiCommandParser",
     "SUPPORTED_INTENTS",
@@ -1462,6 +1442,5 @@ __all__ = [
     "normalize_text",
     "compact_text",
     "category_aliases_for",
-    "feature_aliases_for",
     "parse_command",
 ]

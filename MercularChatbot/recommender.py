@@ -1222,27 +1222,8 @@ def re_tokens(value: str) -> tuple[str, ...]:
     return tuple(re.findall(r"[a-z0-9ก-๙][a-z0-9ก-๙._-]*", normalize_text(value)))
 
 
-def recommend_products(
-    products: Iterable[Product],
-    command: ParsedCommand | CommandEntities,
-    *,
-    user_id: str = "anonymous",
-    top_k: int = MAX_TOP_K,
-    rng: RandomSource | None = None,
-) -> list[Product]:
-    """Stateless convenience API; use :class:`ProductRecommender` for repeat avoidance."""
-
-    return ProductRecommender(rng=rng).recommend(
-        products,
-        command,
-        user_id=user_id,
-        top_k=top_k,
-    )
-
-
 __all__ = [
     "MAX_TOP_K",
     "MAX_CANDIDATE_POOL",
     "ProductRecommender",
-    "recommend_products",
 ]
