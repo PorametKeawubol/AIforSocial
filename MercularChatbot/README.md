@@ -5,7 +5,7 @@
 `หาเมาส์ Logitech ไม่เกิน 3,000 บาท เอาเฉพาะของพร้อมส่ง` แล้วแสดงสินค้า
 ที่ตรงเงื่อนไขเป็น **Random Top 5 Flex Carousel**
 
-โปรเจกต์นี้ออกแบบตามเกณฑ์ใน `Assignment_I/Scoring criteria.txt` โดยตรง:
+โปรเจกต์นี้ออกแบบตามเกณฑ์
 
 - ดึงและทำความสะอาด ชื่อ ราคา รูป แบรนด์ หมวดหมู่ สต็อก และ URL จากหน้าเว็บสาธารณะ
 - แยก Intent และ Entity หลายเงื่อนไข รองรับภาษาพูด ตัวเลขไทย และคำพิมพ์ผิดที่พบบ่อย
@@ -119,18 +119,18 @@ python scripts/sync_catalog.py --retry-failed
 
 ### Functional-requirement coverage
 
-| Requirement | สถานะ | หมายเหตุ |
-| --- | --- | --- |
-| FR-01 Search | รองรับ | หมวด แบรนด์ งบ และ typo |
-| FR-02 Recommendation | รองรับ | use-case ที่มี alias เช่น FPS |
-| FR-03 Comparison | รองรับตามข้อมูล | ต้องพบชื่อทั้งสองรุ่นใน snapshot; ไม่เดารุ่นที่หาย |
-| FR-04 Constraint filtering | รองรับ | เงื่อนไขทั้งหมดเป็น AND; ไม่มีสินค้าตรงจริงจะแจ้งไม่พบ |
-| FR-05 Product Q&A | รองรับตามข้อมูล | แตะดูรายละเอียดก่อน; ตอบ Bluetooth/น้ำหนัก/สเปกจากข้อมูลที่ scrape เท่านั้น |
-| FR-06 Context | รองรับ | `ขอถูกกว่านี้` และ `เอา Logitech อย่างเดียว` ภายใน TTL |
-| FR-07 Alternative | รองรับ | หลังแตะสินค้าต้นแบบ หา category เดียวกันที่ราคาต่ำกว่า |
-| FR-08 Use case | รองรับบางชุด | FPS, Valorant และ lightweight มี alias; use-case ใหม่ต้องเพิ่ม/evaluate |
-| FR-09 Multi-constraint | รองรับ | รวม wireless, สี, งบ และ `ไม่เอา <brand>` |
-| FR-10 Carousel | รองรับ | สูงสุด 5 การ์ดพร้อมชื่อ ราคา รูป และลิงก์ |
+| Requirement                | สถานะ                     | หมายเหตุ                                                                                                                 |
+| -------------------------- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| FR-01 Search               | รองรับ                   | หมวด แบรนด์ งบ และ typo                                                                                           |
+| FR-02 Recommendation       | รองรับ                   | use-case ที่มี alias เช่น FPS                                                                                           |
+| FR-03 Comparison           | รองรับตามข้อมูล | ต้องพบชื่อทั้งสองรุ่นใน snapshot; ไม่เดารุ่นที่หาย                                        |
+| FR-04 Constraint filtering | รองรับ                   | เงื่อนไขทั้งหมดเป็น AND; ไม่มีสินค้าตรงจริงจะแจ้งไม่พบ                           |
+| FR-05 Product Q&A          | รองรับตามข้อมูล | แตะดูรายละเอียดก่อน; ตอบ Bluetooth/น้ำหนัก/สเปกจากข้อมูลที่ scrape เท่านั้น |
+| FR-06 Context              | รองรับ                   | `ขอถูกกว่านี้` และ `เอา Logitech อย่างเดียว` ภายใน TTL                                      |
+| FR-07 Alternative          | รองรับ                   | หลังแตะสินค้าต้นแบบ หา category เดียวกันที่ราคาต่ำกว่า                                |
+| FR-08 Use case             | รองรับบางชุด       | FPS, Valorant และ lightweight มี alias; use-case ใหม่ต้องเพิ่ม/evaluate                                        |
+| FR-09 Multi-constraint     | รองรับ                   | รวม wireless, สี, งบ และ`ไม่เอา <brand>`                                                                       |
+| FR-10 Carousel             | รองรับ                   | สูงสุด 5 การ์ดพร้อมชื่อ ราคา รูป และลิงก์                                                     |
 
 ### Product-page details
 
