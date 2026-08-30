@@ -78,6 +78,7 @@ class CategoryMenu:
 _DIRECT_REQUESTS = {
     normalize_text(ALL_CATEGORIES_COMMAND): CategoryNavigationRequest(),
     normalize_text("มีสินค้าอะไรบ้าง"): CategoryNavigationRequest(),
+    normalize_text("มีอะไรบ้าง"): CategoryNavigationRequest(),
     normalize_text("มีสินค้าอะไรแนะนำบ้าง"): CategoryNavigationRequest(),
     normalize_text("สินค้าทั้งหมด"): CategoryNavigationRequest(),
     normalize_text("ดูสินค้าทั้งหมด"): CategoryNavigationRequest(),

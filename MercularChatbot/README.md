@@ -12,7 +12,6 @@
 - สุ่มจากกลุ่มสินค้าที่เกี่ยวข้องโดยไม่ซ้ำในชุดเดียว และจำผลล่าสุดแยกตามผู้ใช้
 - ส่ง Flex Carousel พร้อมปุ่ม `ดูรายละเอียด` / `ซื้อที่ Mercular` และ Quick Reply
 - มี Rich Menu ธีม MercuMate 6 ช่องสำหรับค้นหา หมวดสินค้า โปรโมชัน และวิธีใช้
-- มี Message Lab แยกสำหรับทดลองข้อความ LINE 11 ชนิด โดยไม่ปะปนกับเมนูผู้ใช้จริง
 - ตอบจาก snapshot ในเครื่อง จึงไม่รอ scraping ระหว่าง webhook และรักษา latency ต่ำ
 
 > นี่คือโปรเจกต์เพื่อการศึกษาและไม่ได้เป็นบอตทางการของ Mercular ราคาและสต็อก
@@ -63,13 +62,6 @@ pre-cache น้ำหนักโมเดลแล้วตั้ง `PHAYATHA
 ค่า `PHAYATHAIBERT_MIN_CONFIDENCE` เริ่มต้นเป็น `0.30` ซึ่งเหมาะกับคะแนน semantic
 similarity ของ base model; เพิ่มค่านี้ได้หากต้องการให้ rule parser เป็นตัวตัดสินมากขึ้น.
 
-หากต้องการใช้ Image, Video, Audio, Imagemap หรือ Template demo ให้ใส่ origin
-HTTPS ที่ LINE เข้าถึงได้ด้วย เช่น:
-
-```dotenv
-PUBLIC_BASE_URL=https://your-current-tunnel.ngrok-free.app
-```
-
 ## เตรียม catalog
 
 ตัว scraper อ่านเฉพาะหน้า category/product สาธารณะที่ robots.txt อนุญาต ใช้
@@ -79,7 +71,6 @@ timeout + retry/backoff เว้นช่วง request และบันท�
 
 ```bash
 python scraper.py --refresh
-python cli.py "หาเมาส์เกมมิ่งไม่เกิน 3000 พร้อมส่ง"
 ```
 
 ก่อนใช้งานกับข้อมูลจำนวนมากหรือเผยแพร่จริง ควรขออนุญาต/official feed จาก
@@ -87,11 +78,10 @@ Mercular ก่อน เนื่องจากเงื่อนไขเว�
 เก็บเพียง snapshot ขนาดเล็กที่จำเป็นสำหรับการสาธิต และไม่แตะ `/cart`, `/cms`,
 `/browse` หรือ `/my-account`
 
-### Daily catalog and price history
+### Daily catalog refresh
 
-`scripts/sync_catalog.py` ทำงานนอก webhook เสมอ และเขียน price, discount และ
-stock observation หนึ่งรายการต่อสินค้า/วันลง SQLite. ค่า `--scope seed` คือ 13
-หน้า demo เดิม; `--scope sitemap-leaves` อ่าน category sitemap สาธารณะเพื่อเลือก
+`scripts/sync_catalog.py` ทำงานนอก webhook เสมอเพื่ออัปเดต snapshot สินค้า. ค่า
+`--scope seed` คือ 13 หน้า demo เดิม; `--scope sitemap-leaves` อ่าน category sitemap สาธารณะเพื่อเลือก
 leaf categories เช่น `audio/dap-dac-amp/dac-amplifiers` โดยไม่เรียก `/browse`.
 ทั้งสอง scope จะเพิ่มหน้า collection พิเศษ `flash-sale` และ `new-arrival` ต่อท้าย
 หมวดปกติด้วย สินค้าที่ซ้ำจะถูกเก็บเพียงรายการเดียว แต่ติด tag
@@ -101,7 +91,7 @@ leaf categories เช่น `audio/dap-dac-amp/dac-amplifiers` โดยไม�
 โหมด sitemap ต้องใช้เฉพาะเมื่อได้รับอนุญาตให้สร้าง product index ในวงกว้างแล้ว:
 
 ```bash
-# Demo scope: refresh snapshot พร้อมบันทึกประวัติรายวัน
+# Demo scope: refresh snapshot
 python scripts/sync_catalog.py --scope seed
 
 # Authorized broad category sync; page-level cap ปรับได้ตามข้อตกลงของ source
@@ -206,7 +196,7 @@ curl -i http://127.0.0.1:5000/readyz
 `https://<tunnel>.trycloudflare.com/callback` จากนั้นกด Verify, เปิด Use webhook,
 และปิด Auto-response ใน LINE Official Account Manager เพื่อไม่ให้ตอบซ้ำ
 
-## Rich Menu และ Message Lab
+## Rich Menu
 
 Rich Menu v3 ขนาด `2500×1686` ใช้ภาพ mascot/cover ของ MercuMate และมี 6 action:
 สินค้าทั้งหมด, เกมมิ่ง, คอมพิวเตอร์, มือถือ/แท็บเล็ต, โปรโมชัน และช่วยเหลือ
@@ -214,27 +204,15 @@ Rich Menu v3 ขนาด `2500×1686` ใช้ภาพ mascot/cover ของ
 จะเปิดให้เลือกต่อ และมี “ดูทั้งหมดในหมวดนี้” ก่อนเข้าสู่ Random Top 5 การค้นหาจาก
 picker ใช้ exact category-path constraint จึงไม่ปนสินค้าที่มีเพียงคำคล้ายกันในชื่อ
 ทุกปุ่มมี contract test ตั้งแต่ payload → navigation/intent → webhook response ใน
-`tests/test_rich_menu.py` และ `tests/test_app.py` ส่วน Message Lab ยังเรียกได้ด้วยข้อความ
-`เดโมข้อความ` แต่ไม่นำพื้นที่เมนูหลักของผู้ใช้ไปใช้
+`tests/test_app.py`
 
-ตรวจและติดตั้งเมนูแบบทำซ้ำได้:
+ตรวจ payload ของ category picker กับ LINE ได้ด้วย:
 
 ```bash
-./scripts/render_rich_menu.sh
 python scripts/validate_line_messages.py
-python scripts/setup_rich_menu.py --dry-run
-python scripts/setup_rich_menu.py
 ```
 
-Message Lab รองรับ Text, Text v2, Sticker, Image, Video, Audio, Location,
-Coupon, Imagemap, Template และ Flex โดยส่งทีละชนิดเพื่อไม่เกินข้อจำกัด 5 message
-objects ต่อหนึ่ง reply หากต้องการส่ง `CouponMessage` จริง ต้องสร้าง Coupon ที่ได้รับ
-อนุญาตใน LINE Official Account Manager แล้วใส่ `LINE_COUPON_ID`; หากยังไม่มี
-ระบบจะแสดง Flex demo ที่ระบุชัดว่าไม่มีส่วนลดจริง
-
-ไฟล์สื่อสำเร็จรูปอยู่ใน `static/` ส่วน source/renderable assets อยู่ใน `assets/`.
-Rich Menu แสดงบน LINE มือถือ แต่ไม่แสดงบน LINE PC และ URL tunnel ชั่วคราวต้อง
-อัปเดต `PUBLIC_BASE_URL` เมื่อเปลี่ยน
+Rich Menu แสดงบน LINE มือถือ แต่ไม่แสดงบน LINE PC
 
 ## ตัวอย่างข้อความ
 
@@ -269,8 +247,8 @@ python scripts/benchmark.py
 [`NLP`](docs/NLP_EVALUATION.md) และ [`performance`](docs/PERFORMANCE_REPORT.md)
 ที่รันซ้ำได้
 
-`scripts/validate_line_messages.py` และ `scripts/setup_rich_menu.py --dry-run`
-เป็น optional live validation จึงไม่ถูกรวมใน offline test suite
+`scripts/validate_line_messages.py` เป็น optional live validation จึงไม่ถูกรวมใน
+offline test suite
 
 ## การดูแลข้อมูลและความปลอดภัย
 

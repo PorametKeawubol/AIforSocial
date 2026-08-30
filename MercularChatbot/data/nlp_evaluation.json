@@ -181,5 +181,7 @@
   {"id":"computer-basic-01","kind":"basic","text":"คอม","intent":"search","entities":{"category":"คอมพิวเตอร์"}},
   {"id":"computer-basic-02","kind":"basic","text":"desktop","intent":"search","entities":{"category":"คอมพิวเตอร์"}},
   {"id":"computer-colloquial-01","kind":"colloquial","text":"หาคอมตั้งโต๊ะไม่เกิน 30000","intent":"search","entities":{"category":"คอมพิวเตอร์","max_price":30000}},
-  {"id":"computer-typo-01","kind":"typo","text":"ขอคอมตังโตะ","intent":"search","entities":{"category":"คอมพิวเตอร์"}}
+  {"id":"computer-typo-01","kind":"typo","text":"ขอคอมตังโตะ","intent":"search","entities":{"category":"คอมพิวเตอร์"}},
+  {"id":"discovery-colloquial-01","kind":"colloquial","text":"มีอะไรแนะนำ","intent":"search","entities":{}},
+  {"id":"discovery-colloquial-02","kind":"colloquial","text":"มีอะไรบ้าง","intent":"search","entities":{}}
 ]

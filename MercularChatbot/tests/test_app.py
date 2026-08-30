@@ -4,6 +4,7 @@ import hashlib
 import hmac
 import json
 from pathlib import Path
+from threading import Event
 from types import SimpleNamespace
 
 from linebot.v3.messaging import (
@@ -11,7 +12,6 @@ from linebot.v3.messaging import (
     FlexMessage,
     MessagingApi,
     TextMessage,
-    VideoMessage,
 )
 
 from app import _recommendation_summary, create_app
@@ -19,7 +19,6 @@ from config import Settings
 from models import Product
 from nlp import SORT_PRICE_ASC, SORT_PRICE_DESC, ThaiCommandParser
 from promotions import Promotion
-from rich_menu import RICH_MENU_ACTIONS
 from session_state import RecentQueries, RecentWebhookEvents
 
 
@@ -352,57 +351,6 @@ def test_product_list_question_opens_category_picker_instead_of_unknown_reply() 
     assert "เลือกหมวดสินค้า" in replies[0][1].alt_text
 
 
-def test_every_rich_menu_button_reaches_its_real_webhook_function() -> None:
-    replies = []
-    products = [
-        replace(
-            _product(1),
-            category="เมาส์เกมมิ่ง",
-            category_path=("เกมมิ่ง", "เมาส์เกมมิ่ง"),
-        ),
-        replace(
-            _product(2),
-            category="โน๊ตบุ๊ค",
-            category_path=("คอมพิวเตอร์", "โน๊ตบุ๊ค"),
-        ),
-        replace(
-            _product(3),
-            category="โทรศัพท์",
-            category_path=("Smartphone / Tablet / ACC", "โทรศัพท์"),
-        ),
-    ]
-    recommender = FakeRecommender()
-    app = create_app(
-        _settings(),
-        repository=FakeRepository(products),
-        parser=ThaiCommandParser(brands=("Test",), categories=("หูฟัง",)),
-        recommender=recommender,
-        promotion_repository=FakePromotionRepository(),
-        reply_sender=lambda token, message: replies.append((token, message)),
-    )
-    client = app.test_client()
-
-    for index, item in enumerate(RICH_MENU_ACTIONS, start=1):
-        response = _post(
-            client,
-            _event_body(
-                item.message,
-                event_id=f"evt-menu-{item.key}",
-                reply_token=f"reply-menu-{index}",
-            ),
-        )
-        assert response.status_code == 200
-
-    outgoing_by_key = {
-        item.key: reply[1] for item, reply in zip(RICH_MENU_ACTIONS, replies, strict=True)
-    }
-    for key in ("all_products", "gaming", "computer", "mobile"):
-        assert isinstance(outgoing_by_key[key], FlexMessage)
-    assert isinstance(outgoing_by_key["promotion"], FlexMessage)
-    assert isinstance(outgoing_by_key["help"], TextMessage)
-    assert recommender.calls == []
-
-
 def test_category_leaf_selection_runs_top_five_product_recommendation() -> None:
     replies = []
     recommender = FakeRecommender()
@@ -622,6 +570,72 @@ def test_duplicate_line_delivery_is_answered_only_once():
     assert len(replies) == 1
 
 
+def test_one_to_one_message_starts_five_second_loading_animation() -> None:
+    loading_started = Event()
+    calls = []
+
+    def record_loading(chat_id, seconds):
+        calls.append((chat_id, seconds))
+        loading_started.set()
+
+    app = create_app(
+        _settings(),
+        repository=FakeRepository([_product()]),
+        parser=FakeParser(),
+        recommender=FakeRecommender(),
+        reply_sender=lambda *_: None,
+        loading_sender=record_loading,
+    )
+
+    assert _post(app.test_client(), _event_body()).status_code == 200
+    assert loading_started.wait(timeout=1)
+    assert calls == [("Uuser", 5)]
+
+
+def test_loading_animation_is_not_requested_for_group_chat() -> None:
+    calls = []
+    payload = json.loads(_event_body())
+    payload["events"][0]["source"] = {
+        "type": "group",
+        "groupId": "Ggroup",
+        "userId": "Uuser",
+    }
+    body = json.dumps(payload, separators=(",", ":"), ensure_ascii=False)
+    app = create_app(
+        _settings(),
+        repository=FakeRepository([_product()]),
+        parser=FakeParser(),
+        recommender=FakeRecommender(),
+        reply_sender=lambda *_: None,
+        loading_sender=lambda *args: calls.append(args),
+    )
+
+    assert _post(app.test_client(), body).status_code == 200
+    assert calls == []
+
+
+def test_loading_animation_failure_never_blocks_reply() -> None:
+    attempted = Event()
+    replies = []
+
+    def fail_loading(_chat_id, _seconds):
+        attempted.set()
+        raise RuntimeError("loading endpoint unavailable")
+
+    app = create_app(
+        _settings(),
+        repository=FakeRepository([_product()]),
+        parser=FakeParser(),
+        recommender=FakeRecommender(),
+        reply_sender=lambda token, message: replies.append((token, message)),
+        loading_sender=fail_loading,
+    )
+
+    assert _post(app.test_client(), _event_body()).status_code == 200
+    assert attempted.wait(timeout=1)
+    assert len(replies) == 1
+
+
 def test_failed_reply_returns_500_and_releases_event_for_redelivery():
     attempts = []
     app = create_app(
@@ -782,62 +796,6 @@ def test_empty_catalog_returns_data_unavailable_fallback():
     assert _post(app.test_client(), _event_body()).status_code == 200
     assert isinstance(replies[0][1], TextMessage)
     assert "ข้อมูลสินค้า" in replies[0][1].text
-
-
-def test_message_lab_bypasses_nlp_and_returns_showcase_hub():
-    replies = []
-    parser = FakeParser()
-    app = create_app(
-        replace(_settings(), public_base_url="https://mercumate.example"),
-        repository=FakeRepository([_product()]),
-        parser=parser,
-        recommender=FakeRecommender(),
-        reply_sender=lambda token, message: replies.append((token, message)),
-    )
-
-    response = _post(app.test_client(), _event_body("เดโมข้อความ"))
-
-    assert response.status_code == 200
-    assert parser.inputs == []
-    assert isinstance(replies[0][1], FlexMessage)
-    assert len(replies[0][1].to_dict()["contents"]["contents"]) == 3
-
-
-def test_message_lab_can_send_public_video_message():
-    replies = []
-    app = create_app(
-        replace(_settings(), public_base_url="https://mercumate.example"),
-        repository=FakeRepository([_product()]),
-        parser=FakeParser(),
-        recommender=FakeRecommender(),
-        reply_sender=lambda token, message: replies.append((token, message)),
-    )
-
-    response = _post(
-        app.test_client(),
-        _event_body("เดโม:video", event_id="evt-video", reply_token="reply-video"),
-    )
-
-    assert response.status_code == 200
-    assert isinstance(replies[0][1], VideoMessage)
-    assert replies[0][1].original_content_url.startswith("https://")
-
-
-def test_imagemap_route_serves_only_required_sizes_as_jpeg():
-    app = create_app(
-        _settings(),
-        repository=FakeRepository([_product()]),
-        parser=FakeParser(),
-        recommender=FakeRecommender(),
-        reply_sender=lambda *_: None,
-    )
-    client = app.test_client()
-
-    response = client.get("/media/imagemap/mercumate/1040")
-    assert response.status_code == 200
-    assert response.mimetype == "image/jpeg"
-    assert response.data[:3] == b"\xff\xd8\xff"
-    assert client.get("/media/imagemap/mercumate/999").status_code == 404
 
 
 def test_detail_postback_looks_up_product_and_returns_safe_detail_message():

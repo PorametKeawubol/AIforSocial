@@ -78,13 +78,10 @@ class Settings:
     verify_robots: bool
     bot_name: str = "MercuMate"
     line_channel_id: str = ""
-    public_base_url: str = ""
-    line_coupon_id: str = ""
     nlp_backend: str = "phayathaibert"
     phayathaibert_model_name: str = "clicknext/phayathaibert"
     phayathaibert_min_confidence: float = 0.30
     phayathaibert_local_files_only: bool = False
-    price_history_path: Path = PROJECT_DIR / "data" / "mercular_price_history.sqlite3"
     promotion_snapshot_path: Path = PROJECT_DIR / "data" / "mercular_promotions.json"
     promotion_category_url: str = "https://www.mercular.com/category-review-article/promotion"
     detail_scrape_timeout_seconds: float = 45.0
@@ -102,9 +99,6 @@ class Settings:
         )
         snapshot_path = _project_path(
             "MERCULAR_SNAPSHOT_PATH", "data/mercular_products.json"
-        )
-        price_history_path = _project_path(
-            "MERCULAR_PRICE_HISTORY_PATH", "data/mercular_price_history.sqlite3"
         )
         promotion_snapshot_path = _project_path(
             "MERCULAR_PROMOTION_SNAPSHOT_PATH", "data/mercular_promotions.json"
@@ -135,8 +129,6 @@ class Settings:
             verify_robots=_truthy("SCRAPER_VERIFY_ROBOTS", True),
             bot_name=os.getenv("BOT_NAME", "MercuMate").strip() or "MercuMate",
             line_channel_id=os.getenv("LINE_CHANNEL_ID", "").strip(),
-            public_base_url=os.getenv("PUBLIC_BASE_URL", "").strip(),
-            line_coupon_id=os.getenv("LINE_COUPON_ID", "").strip(),
             nlp_backend=nlp_backend,
             phayathaibert_model_name=(
                 os.getenv("PHAYATHAIBERT_MODEL_NAME", "clicknext/phayathaibert").strip()
@@ -148,7 +140,6 @@ class Settings:
             phayathaibert_local_files_only=_truthy(
                 "PHAYATHAIBERT_LOCAL_FILES_ONLY", False
             ),
-            price_history_path=price_history_path,
             promotion_snapshot_path=promotion_snapshot_path,
             promotion_category_url=(
                 os.getenv(

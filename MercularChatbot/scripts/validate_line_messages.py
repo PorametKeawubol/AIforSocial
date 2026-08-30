@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate every MercuMate demo payload with LINE without sending it."""
+"""Validate MercuMate category-picker payloads with LINE without sending them."""
 
 from __future__ import annotations
 
@@ -26,11 +26,6 @@ from catalog_navigation import (  # noqa: E402
     build_category_menu,
 )
 from line_views import build_category_picker_message  # noqa: E402
-from message_showcase import (  # noqa: E402
-    SHOWCASE_TYPES,
-    build_showcase_message,
-    showcase_hub_message,
-)
 from repository import ProductRepository  # noqa: E402
 
 
@@ -38,21 +33,8 @@ def main() -> int:
     settings = Settings.from_env()
     if not settings.line_channel_access_token:
         raise RuntimeError("LINE_CHANNEL_ACCESS_TOKEN is not configured")
-    if not settings.public_base_url:
-        raise RuntimeError("PUBLIC_BASE_URL is not configured")
 
-    named_messages = [("hub", showcase_hub_message())]
-    named_messages.extend(
-        (
-            kind,
-            build_showcase_message(
-                kind,
-                public_base_url=settings.public_base_url,
-                coupon_id=settings.line_coupon_id,
-            ),
-        )
-        for kind in SHOWCASE_TYPES
-    )
+    named_messages = []
     products = ProductRepository(settings.snapshot_path, settings=settings).all()
     for name, path in (
         ("categories-all", ()),

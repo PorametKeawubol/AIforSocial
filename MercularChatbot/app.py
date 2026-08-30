@@ -6,12 +6,12 @@ from dataclasses import replace
 import logging
 import math
 import os
-from threading import RLock
+from threading import RLock, Thread
 import time
 from collections.abc import Callable
 from typing import Any
 
-from flask import Flask, abort, jsonify, request, send_from_directory
+from flask import Flask, abort, jsonify, request
 from linebot.v3 import WebhookHandler
 from linebot.v3.exceptions import InvalidSignatureError
 from linebot.v3.messaging import (
@@ -20,6 +20,7 @@ from linebot.v3.messaging import (
     Configuration,
     MessagingApi,
     ReplyMessageRequest,
+    ShowLoadingAnimationRequest,
     TextMessage,
 )
 from linebot.v3.webhooks import MessageEvent, PostbackEvent, TextMessageContent
@@ -74,12 +75,6 @@ try:  # Package import for gunicorn/``python -m MercularChatbot.app``.
         ParsedCommand,
         ThaiCommandParser,
         normalize_text,
-    )
-    from .message_showcase import (
-        IMAGEMAP_SIZES,
-        build_showcase_message,
-        parse_showcase_command,
-        showcase_hub_message,
     )
     from .recommender import ProductRecommender
     from .repository import ProductRepository
@@ -136,12 +131,6 @@ except ImportError:  # pragma: no cover - direct execution from this folder.
         ThaiCommandParser,
         normalize_text,
     )
-    from message_showcase import (
-        IMAGEMAP_SIZES,
-        build_showcase_message,
-        parse_showcase_command,
-        showcase_hub_message,
-    )
     from recommender import ProductRecommender
     from repository import ProductRepository
     from promotions import PromotionRepository
@@ -195,6 +184,13 @@ def _env_number(name: str, default: float, *, integer: bool = False) -> float | 
     return int(value) if integer else value
 
 
+def _env_enabled(name: str, default: bool = True) -> bool:
+    value = os.getenv(name)
+    if value is None:
+        return default
+    return value.strip().casefold() in {"1", "true", "yes", "on"}
+
+
 def _event_is_standby(event: object) -> bool:
     mode = getattr(event, "mode", "active")
     # LINE SDK v3 models this as an Enum; older versions may expose a string.
@@ -221,6 +217,17 @@ def _event_user_key(event: object) -> str:
         if value:
             return str(value)
     return "anonymous"
+
+
+def _event_direct_user_id(event: object) -> str:
+    """Return a user ID only for a one-on-one chat supported by LINE loading."""
+
+    source = getattr(event, "source", None)
+    source_type = getattr(source, "type", "")
+    source_type = getattr(source_type, "value", source_type)
+    if str(source_type).casefold() != "user":
+        return ""
+    return str(getattr(source, "user_id", "") or "")
 
 
 def _repository_flag(repository: object, name: str, default: bool = False) -> bool:
@@ -261,6 +268,7 @@ def create_app(
     recommender: ProductRecommender | None = None,
     promotion_repository: PromotionRepository | None = None,
     reply_sender: Callable[[str, object | list[object]], Any] | None = None,
+    loading_sender: Callable[[str, int], Any] | None = None,
 ) -> Flask:
     """Create an injectable Flask app for production and offline tests."""
 
@@ -360,6 +368,55 @@ def create_app(
         else None
     )
     line_messaging_api = MessagingApi(line_api_client) if line_api_client else None
+    loading_api_client = (
+        ApiClient(Configuration(access_token=settings.line_channel_access_token))
+        if settings.line_channel_access_token and reply_sender is None
+        else None
+    )
+    loading_messaging_api = (
+        MessagingApi(loading_api_client) if loading_api_client else None
+    )
+    loading_animation_enabled = _env_enabled(
+        "LINE_LOADING_ANIMATION_ENABLED", True
+    )
+
+    def start_loading_animation(event: object) -> None:
+        """Start LINE's indicator without adding another network wait to the reply."""
+
+        if not loading_animation_enabled:
+            return
+        chat_id = _event_direct_user_id(event)
+        if not chat_id or (loading_sender is None and loading_messaging_api is None):
+            return
+
+        def submit() -> None:
+            started = time.perf_counter()
+            try:
+                if loading_sender is not None:
+                    loading_sender(chat_id, 5)
+                else:
+                    assert loading_messaging_api is not None
+                    loading_messaging_api.show_loading_animation(
+                        ShowLoadingAnimationRequest(
+                            chatId=chat_id,
+                            loadingSeconds=5,
+                        ),
+                        _request_timeout=(line_connect_timeout, line_read_timeout),
+                    )
+            except Exception as exc:
+                # Loading is cosmetic.  It must never suppress or delay the answer.
+                LOGGER.info("LINE loading animation unavailable: %s", type(exc).__name__)
+                return
+            LOGGER.info(
+                "LINE loading animation accepted (api_ms=%.1f)",
+                (time.perf_counter() - started) * 1_000,
+            )
+
+        Thread(
+            target=submit,
+            name="line-loading-animation",
+            daemon=True,
+        ).start()
 
     def send_reply(reply_token: str, message: object | list[object]) -> bool:
         messages = message if isinstance(message, list) else [message]
@@ -455,6 +512,7 @@ def create_app(
         if not deduplicator.claim(event_id):
             LOGGER.info("Ignoring duplicate LINE postback event")
             return
+        start_loading_animation(event)
         sent = False
         try:
             product_id = parse_product_postback(getattr(event.postback, "data", ""))
@@ -498,24 +556,12 @@ def create_app(
         if not deduplicator.claim(event_id):
             LOGGER.info("Ignoring duplicate LINE message event")
             return
+        start_loading_animation(event)
         sent = False
         try:
             # LINE text can be unexpectedly large; cap work and do not log it.
             text = (getattr(event.message, "text", "") or "").strip()[:2_000]
             user_id = _event_user_key(event)
-            showcase_kind = parse_showcase_command(text)
-            if showcase_kind is not None:
-                response = (
-                    showcase_hub_message()
-                    if showcase_kind == "hub"
-                    else build_showcase_message(
-                        showcase_kind,
-                        public_base_url=settings.public_base_url,
-                        coupon_id=settings.line_coupon_id,
-                    )
-                )
-                sent = send_reply(event.reply_token, response)
-                return
             products = catalog.all()
             navigation = parse_category_navigation(text)
             if navigation is not None and not navigation.show_products:
@@ -752,19 +798,6 @@ def create_app(
             "catalog_stale": _repository_flag(catalog, "is_stale", True),
         }
         return jsonify(payload), 200 if ready else 503
-
-    @app.get("/media/imagemap/mercumate/<int:size>")
-    def mercumate_imagemap(size: int):
-        """Serve the five extensionless image URLs required by LINE Imagemap."""
-
-        if size not in IMAGEMAP_SIZES:
-            abort(404)
-        return send_from_directory(
-            os.path.join(app.root_path, "static", "imagemap", "mercumate"),
-            f"{size}.jpg",
-            mimetype="image/jpeg",
-            max_age=86_400,
-        )
 
     @app.post("/")
     @app.post("/callback")

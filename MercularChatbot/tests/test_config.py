@@ -35,16 +35,6 @@ def test_channel_identity_is_loaded_without_affecting_credentials(monkeypatch):
     assert settings.line_channel_id == "2011217828"
 
 
-def test_message_media_and_coupon_settings_are_optional(monkeypatch):
-    monkeypatch.setenv("PUBLIC_BASE_URL", "https://mercumate.example")
-    monkeypatch.setenv("LINE_COUPON_ID", "coupon-id")
-
-    settings = Settings.from_env()
-
-    assert settings.public_base_url == "https://mercumate.example"
-    assert settings.line_coupon_id == "coupon-id"
-
-
 def test_phayathaibert_configuration_defaults_and_can_use_local_model_cache(monkeypatch):
     monkeypatch.setenv("PHAYATHAIBERT_MODEL_NAME", "local-phayathaibert")
     monkeypatch.setenv("PHAYATHAIBERT_MIN_CONFIDENCE", "0.83")
@@ -56,12 +46,6 @@ def test_phayathaibert_configuration_defaults_and_can_use_local_model_cache(monk
     assert settings.phayathaibert_model_name == "local-phayathaibert"
     assert settings.phayathaibert_min_confidence == 0.83
     assert settings.phayathaibert_local_files_only is True
-
-
-def test_price_history_path_is_configurable(monkeypatch):
-    monkeypatch.setenv("MERCULAR_PRICE_HISTORY_PATH", "data/history.sqlite3")
-
-    assert Settings.from_env().price_history_path.name == "history.sqlite3"
 
 
 def test_promotion_snapshot_and_source_are_configurable(monkeypatch):

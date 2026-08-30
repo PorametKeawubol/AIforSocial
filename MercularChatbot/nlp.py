@@ -890,6 +890,11 @@ class ThaiCommandParser:
             "budget",
             "มีสินค้าอะไรแนะนำบ้าง",
             "มีอะไรแนะนำบ้าง",
+            "มีอะไรแนะนำ",
+            "มีอะไรน่าสนใจ",
+            "มีอะไรบ้าง",
+            "แนะนำอะไรหน่อย",
+            "แนะนำหน่อย",
             "สินค้าอะไรแนะนำบ้าง",
             "ตัวไหนบ้าง",
             "มีไหม",
@@ -1299,6 +1304,10 @@ class ThaiCommandParser:
             "มีอะไรขาย",
             "มีสินค้าอะไรแนะนำบ้าง",
             "มีอะไรแนะนำบ้าง",
+            "มีอะไรแนะนำ",
+            "มีอะไรน่าสนใจ",
+            "แนะนำอะไรหน่อย",
+            "แนะนำหน่อย",
             "สินค้าอะไรแนะนำบ้าง",
             "มีรุ่นไหน",
             "หาให้หน่อย",
@@ -1337,6 +1346,9 @@ class ThaiCommandParser:
             )
         )
         has_search_phrase = self._first_phrase(text, search_phrases)[0] is not None
+        # Keep this exact: a substring match would turn “คำสั่งมีอะไรบ้าง” from
+        # the help intent into a product search.
+        has_general_discovery = text == normalize_text("มีอะไรบ้าง")
         has_search_prefix = bool(
             re.match(r"^(?:หา|find|search(?:\s+for)?)\s+\S", text)
         )
@@ -1368,7 +1380,14 @@ class ThaiCommandParser:
             intent, confidence = INTENT_REFRESH, 0.96
         elif promotion_detected:
             intent, confidence = INTENT_PROMOTION, 0.97
-        elif has_entities or has_search_phrase or has_search_prefix or has_product_hint or has_model_token:
+        elif (
+            has_entities
+            or has_search_phrase
+            or has_general_discovery
+            or has_search_prefix
+            or has_product_hint
+            or has_model_token
+        ):
             intent = INTENT_SEARCH
             evidence = sum(
                 (
@@ -1378,7 +1397,10 @@ class ThaiCommandParser:
                     minimum is not None or maximum is not None,
                     in_stock is not None,
                     sort_value is not None,
-                    has_search_phrase or has_search_prefix or has_product_hint,
+                    has_search_phrase
+                    or has_general_discovery
+                    or has_search_prefix
+                    or has_product_hint,
                     bool(residual),
                 )
             )

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run an out-of-webhook Mercular category refresh and record daily history.
+"""Run an out-of-webhook Mercular category refresh.
 
 The default ``seed`` scope refreshes the small demonstration set configured in
 ``Settings``.  ``sitemap-leaves`` discovers public category URLs from Mercular's
@@ -26,7 +26,6 @@ if str(PROJECT_DIR) not in sys.path:
 
 from config import Settings  # noqa: E402
 from models import Product, utc_now_iso  # noqa: E402
-from price_history import PriceHistoryStore  # noqa: E402
 from scraper import (  # noqa: E402
     MercularScraper,
     MercularScraperError,
@@ -61,9 +60,8 @@ def refresh_catalog(
     *,
     scope: str = "seed",
     max_products_per_category: int | None = None,
-    record_history: bool = True,
 ) -> dict[str, object]:
-    """Refresh one category scope, then save a daily price/stock observation."""
+    """Refresh one category scope and atomically replace its local snapshot."""
 
     active_settings = (
         replace(
@@ -100,21 +98,12 @@ def refresh_catalog(
         raise ValueError(f"unsupported sync scope: {scope!r}")
 
     snapshot = scraper.refresh(active_settings.snapshot_path)
-    history_count = 0
-    if record_history:
-        products = [Product.from_dict(value) for value in snapshot["products"]]
-        history_count = PriceHistoryStore(active_settings.price_history_path).record_snapshot(
-            products,
-            observed_at=snapshot["generated_at"],
-        )
     return {
         "scope": scope,
         "categories_requested": snapshot["summary"]["categories_requested"],
         "products": len(snapshot["products"]),
-        "history_observations": history_count,
         "special_collections": list(SPECIAL_COLLECTIONS),
         "snapshot_path": str(active_settings.snapshot_path),
-        "history_path": str(active_settings.price_history_path),
     }
 
 
@@ -193,8 +182,6 @@ def _merge_category_retry(
 
 def retry_failed_categories(
     settings: Settings,
-    *,
-    record_history: bool = True,
 ) -> dict[str, object]:
     """Retry only failed category URLs and atomically merge their outcome."""
 
@@ -218,7 +205,6 @@ def retry_failed_categories(
             "categories_resolved": 0,
             "categories_remaining": 0,
             "products": len(existing.get("products", [])),
-            "history_observations": 0,
             "snapshot_path": str(snapshot_path),
         }
 
@@ -239,15 +225,6 @@ def retry_failed_categories(
     ).scrape()
     merged = _merge_category_retry(existing, retry)
     write_snapshot(merged, snapshot_path)
-    products = [Product.from_dict(item) for item in merged["products"]]
-    history_count = (
-        PriceHistoryStore(settings.price_history_path).record_snapshot(
-            products,
-            observed_at=str(merged["generated_at"]),
-        )
-        if record_history
-        else 0
-    )
     resolved = sum(
         item.get("status") in {"ok", "empty"}
         for item in retry.get("categories", [])
@@ -257,8 +234,7 @@ def retry_failed_categories(
         "categories_retried": len(failed_urls),
         "categories_resolved": resolved,
         "categories_remaining": len(failed_urls) - resolved,
-        "products": len(products),
-        "history_observations": history_count,
+        "products": len(merged["products"]),
         "snapshot_path": str(snapshot_path),
     }
 
@@ -277,11 +253,6 @@ def main(argv: Sequence[str] | None = None) -> int:
         help="cap parsed products per category page (defaults to MAX_PRODUCTS_PER_CATEGORY)",
     )
     parser.add_argument(
-        "--no-history",
-        action="store_true",
-        help="refresh the catalog without writing price and stock observations",
-    )
-    parser.add_argument(
         "--retry-failed",
         action="store_true",
         help="retry only category URLs marked error/blocked in the current snapshot",
@@ -294,13 +265,12 @@ def main(argv: Sequence[str] | None = None) -> int:
     )
     try:
         result = (
-            retry_failed_categories(settings, record_history=not args.no_history)
+            retry_failed_categories(settings)
             if args.retry_failed
             else refresh_catalog(
                 settings,
                 scope=args.scope,
                 max_products_per_category=args.max_products_per_category,
-                record_history=not args.no_history,
             )
         )
     except (OSError, ValueError, MercularScraperError, requests.RequestException) as error:

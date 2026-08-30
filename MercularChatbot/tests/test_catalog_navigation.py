@@ -31,6 +31,7 @@ def _product(identifier: str, path: tuple[str, ...]) -> Product:
 def test_common_product_list_phrases_open_the_root_picker() -> None:
     for message in (
         "มีสินค้าอะไรบ้าง",
+        "มีอะไรบ้าง",
         "มีสินค้าอะไรแนะนำบ้าง",
         "สินค้าทั้งหมด",
         "เลือกหมวดสินค้า",

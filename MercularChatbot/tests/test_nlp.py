@@ -222,6 +222,19 @@ def test_live_audit_regressions(parser: ThaiCommandParser) -> None:
     assert discovery.intent == INTENT_SEARCH
     assert discovery.query == ""
 
+    for text in (
+        "มีอะไรบ้าง",
+        "มีอะไรแนะนำ",
+        "มีอะไรน่าสนใจ",
+        "แนะนำอะไรหน่อย",
+        "แนะนำหน่อย",
+    ):
+        recommendation = parser.parse(text)
+        assert recommendation.intent == INTENT_SEARCH
+        assert recommendation.query == ""
+
+    assert parser.parse("คำสั่งมีอะไรบ้าง").intent == INTENT_HELP
+
     ranged = parser.parse("คีย์บอร์ดราคา 1000 ถึง 3500 เรียงถูกสุด")
     assert ranged.entities.min_price == 1_000
     assert ranged.entities.max_price == 3_500
