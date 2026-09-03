@@ -1,0 +1,59 @@
+{
+  "query": "ที่ทำการออฟฟิศอยู่ที่ไหน?",
+  "device": "cpu",
+  "normalization": "L2 normalization applied to corpus and query vectors",
+  "formula": "cosine = 1 - squared_l2_distance / 2",
+  "results": [
+    {
+      "Model": "WangchanBERTa",
+      "Model Path": "kornwtp/ConGen-model-wangchanberta",
+      "Vector Dimension": 768,
+      "Matched Text": "สำนักงานใหญ่ของคุณตั้งอยู่ที่ไหน?",
+      "Matched Category": "location",
+      "IP Index": 0,
+      "L2 Index": 0,
+      "Indexes Agree": true,
+      "Cosine (Actual)": 0.8887447714805603,
+      "L2 Dist (Actual)": 0.47170999875816566,
+      "Cosine (Calc from L2)": 0.8887448385357857,
+      "L2 Dist (Calc from Cos)": 0.47171014091164015,
+      "Cosine Absolute Error": 6.705522537231445e-08,
+      "L2 Absolute Error": 1.421534744916464e-07,
+      "Elapsed Seconds": 53.377020968000124
+    },
+    {
+      "Model": "PhayaThaiBERT",
+      "Model Path": "kornwtp/SCT-model-phayathaibert",
+      "Vector Dimension": 768,
+      "Matched Text": "สำนักงานใหญ่ของคุณตั้งอยู่ที่ไหน?",
+      "Matched Category": "location",
+      "IP Index": 0,
+      "L2 Index": 0,
+      "Indexes Agree": true,
+      "Cosine (Actual)": 0.9154537916183472,
+      "L2 Dist (Actual)": 0.41120877323068483,
+      "Cosine (Calc from L2)": 0.9154536724090576,
+      "L2 Dist (Calc from Cos)": 0.41120848333090804,
+      "Cosine Absolute Error": 1.1920928955078125e-07,
+      "L2 Absolute Error": 2.898997767952771e-07,
+      "Elapsed Seconds": 83.54659533800009
+    },
+    {
+      "Model": "Multilingual-MPNet",
+      "Model Path": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+      "Vector Dimension": 768,
+      "Matched Text": "สำนักงานใหญ่ของคุณตั้งอยู่ที่ไหน?",
+      "Matched Category": "location",
+      "IP Index": 0,
+      "L2 Index": 0,
+      "Indexes Agree": true,
+      "Cosine (Actual)": 0.8460286855697632,
+      "L2 Dist (Actual)": 0.5549261627396811,
+      "Cosine (Calc from L2)": 0.8460284769535065,
+      "L2 Dist (Calc from Cos)": 0.5549257868043921,
+      "Cosine Absolute Error": 2.086162567138672e-07,
+      "L2 Absolute Error": 3.7593528900981e-07,
+      "Elapsed Seconds": 8.69629129100008
+    }
+  ]
+}

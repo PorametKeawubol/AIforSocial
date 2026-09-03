@@ -1,0 +1,47 @@
+{
+  "question": "According to the knowledge base, what transport protocol does HTTP/3 use?",
+  "direct_llm": {
+    "model": "llama3.2:1b",
+    "answer": "HTTP/3 uses TCP (Transmission Control Protocol) as its underlying transport protocol. It is a new version of the HTTP protocol that provides several improvements over the previous versions, including faster and more reliable data transfer.",
+    "wall_seconds": 1.895837672000198,
+    "total_seconds": 1.880375135,
+    "load_seconds": 1.528977059,
+    "prompt_tokens": 40,
+    "generated_tokens": 43,
+    "generation_seconds": 0.324427,
+    "tokens_per_second": 132.54137294368223,
+    "peak_vram_mib": null
+  },
+  "rag": {
+    "question": "According to the knowledge base, what transport protocol does HTTP/3 use?",
+    "retrieved_ids": [
+      "doc_2",
+      "doc_0",
+      "doc_4"
+    ],
+    "retrieved_documents": [
+      "HTTP/3 uses QUIC as its transport protocol.",
+      "HTTP/2 uses TCP as its transport protocol.",
+      "HTTP/3 can reduce the impact of head-of-line blocking."
+    ],
+    "retrieval_distances": [
+      0.27942055463790894,
+      0.30530303716659546,
+      0.41274094581604004
+    ],
+    "retrieval_seconds": 0.00778904399885505,
+    "end_to_end_seconds": 1.6607931479993567,
+    "answer": "HTTP/3 uses TCP.",
+    "generation_metrics": {
+      "model": "llama3.2:1b",
+      "wall_seconds": 1.6530041040005017,
+      "total_seconds": 1.637372061,
+      "load_seconds": 1.542980548,
+      "prompt_tokens": 158,
+      "generated_tokens": 7,
+      "generation_seconds": 0.049539,
+      "tokens_per_second": 141.30281192595731,
+      "peak_vram_mib": null
+    }
+  }
+}

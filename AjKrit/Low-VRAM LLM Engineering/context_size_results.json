@@ -1,0 +1,45 @@
+{
+  "model": "llama3.2:1b",
+  "prompt": "Explain HTTP/3 in simple terms, in no more than three sentences.",
+  "results": [
+    {
+      "num_ctx": 512,
+      "model": "llama3.2:1b",
+      "answer": "HTTP/3 is a new version of the standard that allows for faster and more efficient communication between web servers and clients by using multiple layers of encryption and compression to reduce latency and improve overall performance. It also introduces a new protocol called QUIC (Quick UDP Internet Connections) which enables real-time communication over IP networks, making it possible to transfer large amounts of data in a single request. This results in faster page loads, improved responsiveness, and better user experience for online applications.",
+      "wall_seconds": 2.780105851999906,
+      "total_seconds": 2.615620811,
+      "load_seconds": 1.850663187,
+      "prompt_tokens": 41,
+      "generated_tokens": 96,
+      "generation_seconds": 0.736796,
+      "tokens_per_second": 130.293866959104,
+      "peak_vram_mib": 2253.62109375
+    },
+    {
+      "num_ctx": 1024,
+      "model": "llama3.2:1b",
+      "answer": "HTTP/3 is a new version of the standard that allows for faster and more efficient communication between web servers and clients by using multiple layers of encryption and compression to reduce latency and improve overall performance. It also introduces a new protocol called QUIC (Quick UDP Internet Connections) which enables real-time communication over IP networks, making it possible to transfer large amounts of data in a single request. This results in faster page loads, improved responsiveness, and better user experience for online applications.",
+      "wall_seconds": 2.462289704999421,
+      "total_seconds": 2.317886019,
+      "load_seconds": 1.556356996,
+      "prompt_tokens": 41,
+      "generated_tokens": 96,
+      "generation_seconds": 0.734263,
+      "tokens_per_second": 130.74334400616672,
+      "peak_vram_mib": 2269.546875
+    },
+    {
+      "num_ctx": 2048,
+      "model": "llama3.2:1b",
+      "answer": "HTTP/3 is a new version of the standard that allows for faster and more efficient communication between web servers and clients by using multiple layers of encryption and compression to reduce latency and improve overall performance. It also introduces a new protocol called QUIC (Quick UDP Internet Connections) which enables real-time communication over IP networks, making it possible to transfer large amounts of data in a single request. This results in faster page loads, improved responsiveness, and better user experience for online applications.",
+      "wall_seconds": 2.4543132779999723,
+      "total_seconds": 2.330433974,
+      "load_seconds": 1.571969735,
+      "prompt_tokens": 41,
+      "generated_tokens": 96,
+      "generation_seconds": 0.731597,
+      "tokens_per_second": 131.21978356936947,
+      "peak_vram_mib": 2303.48046875
+    }
+  ]
+}

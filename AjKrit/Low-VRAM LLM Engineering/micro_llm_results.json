@@ -1,0 +1,50 @@
+{
+  "prompt": "Explain the difference between HTTP/2 and HTTP/3.",
+  "results": [
+    {
+      "label": "Qwen2.5",
+      "parameters": "0.5B",
+      "num_ctx": 1024,
+      "model": "qwen2.5:0.5b",
+      "answer": "HTTP/2 and HTTP/3 are both versions of the Hypertext Transfer Protocol (HTTP) that were developed to improve performance and security in web browsers.\nHTTP/2 introduced several changes, including:\n- Improved support for streaming media\n- Increased throughput capacity\n- Support for new features like multi-part requests and large file downloads\n- Better handling of concurrent connections\n- Improved error handling and response codes\n- Added support for new protocols like WebSockets\nHTTP/3 is a newer version of HTTP that was developed to address the limitations of HTTP/2. It introduced several changes, including:\n- Improved support for streaming media\n- Increased throughput capacity\n- Support for new features like multi-part requests and large file downloads\n- Better handling of concurrent connections\n- Improved error handling and response codes\n- Added support for new protocols like WebSockets\nThe main difference between HTTP/2 and HTTP/3 is that HTTP/3 uses a more efficient data transfer protocol called TCP, which allows for better performance in high-bandwidth environments. HTTP/2, on the other hand, uses a simpler and less efficient data transfer protocol called UDP.\nIn summary, HTTP/2 introduced new features like streaming media, increased throughput capacity, and support for new protocols, while HTTP/3 improved performance and security by using TCP instead of UDP.",
+      "wall_seconds": 3.100908086000345,
+      "total_seconds": 2.943132639,
+      "load_seconds": 1.275769424,
+      "prompt_tokens": 42,
+      "generated_tokens": 269,
+      "generation_seconds": 1.614721,
+      "tokens_per_second": 166.5922472055544,
+      "peak_vram_mib": 1343.625
+    },
+    {
+      "label": "Llama 3.2",
+      "parameters": "1B",
+      "num_ctx": 1024,
+      "model": "llama3.2:1b",
+      "answer": "HTTP/2 (H2) and HTTP/3 are two different versions of the Hypertext Transfer Protocol (HTTP), which is used for transferring data over the web. The main differences between them lie in their architecture, features, and functionality.\n\n**HTTP/1**\n\nHTTP/1 was the first version of HTTP, introduced in 1996. It uses a single TCP connection to transfer data between the client and server. Each request and response is sent over a single connection, which can lead to performance issues if many requests are made simultaneously.\n\nHere's an example of how HTTP/1 works:\n\n1. Client sends a request (e.g., GET /index.html).\n2. Server processes the request and returns a response.\n3. The client receives the response and sends it back over the same connection.\n4. If another request is sent, the process repeats.\n\n**HTTP/2**\n\nHTTP/2 was introduced in 2015 as an upgrade to HTTP/1. It uses multiple TCP connections for each request-response cycle, which improves performance by reducing latency and increasing throughput. Each connection is dedicated to a specific request or response, allowing for faster data transfer and better resource utilization.\n\nHere's an example of how HTTP/2 works:\n\n1. Client sends a request (e.g., GET /index.html).\n2. Server processes the request and returns a response.\n3. The client receives the response and sends it back over two separate TCP connections:\n\t* One connection for the initial request-response cycle.\n\t* Another connection for any subsequent requests or responses.\n\n**Key differences**\n\n1. **Multiple connections**: HTTP/2 uses multiple TCP connections, while HTTP/1 uses a single connection.\n2. **Request-response cycles**: HTTP/2 processes each request and response in separate cycles, while HTTP/1 processes them concurrently over the same connection.\n3. **Latency reduction**: HTTP/2's multiple connections reduce latency by allowing for faster data transfer and better resource utilization.\n4. **Throughput improvement**: HTTP/2 can improve throughput by up to 50% compared to HTTP/1.\n\n**HTTP/3**\n\nHTTP/3 is a more recent version of the protocol, introduced in 2020 as an upgrade to HTTP/2. It builds upon the concepts of HTTP/2 and adds several new features, including:\n\n1. **Multiplexing**: Multiple requests can be sent over a single connection.\n2. **Connection-oriented**: Connections are established before data is sent, allowing for better resource utilization.\n3. **HTTP/3 protocol**: A new protocol that provides additional features, such as multiplexing and connection-oriented behavior.\n\nHere's an example of how HTTP/3 works:\n\n1. Client sends a request (e.g., GET /index.html).\n2. Server processes the request and returns a response.\n3. The client receives the response and sends it back over two separate TCP connections:\n\t* One connection for the initial request-response cycle.\n\t* Another connection for any subsequent requests or responses.\n\n**Key differences**\n\n1. **Multiplexing**: HTTP/3 allows multiple requests to be sent over a single connection, while HTTP/2 uses separate cycles for each request-response pair.\n2. **Connection-oriented**: Connections are established before data is sent, allowing for better resource utilization and improved performance.\n3. **New protocol**: HTTP/3 builds upon the concepts of HTTP/2 and introduces new features, such as multiplexing and connection-oriented behavior.\n\nIn summary, HTTP/2 and HTTP/3 are two different versions of the Hypertext Transfer Protocol (HTTP), each with its own strengths and weaknesses. While HTTP/1 is a more basic version of HTTP that uses a single TCP connection, HTTP/2 and HTTP/3 offer improved performance and throughput through their multiple connections, request-response cycles, and connection-oriented behavior.",
+      "wall_seconds": 7.719805067999914,
+      "total_seconds": 7.623755709,
+      "load_seconds": 1.797939485,
+      "prompt_tokens": 38,
+      "generated_tokens": 778,
+      "generation_seconds": 5.789062,
+      "tokens_per_second": 134.39137463029417,
+      "peak_vram_mib": 2265.83984375
+    },
+    {
+      "label": "SmolLM2",
+      "parameters": "1.7B",
+      "num_ctx": 1024,
+      "model": "smollm2:1.7b",
+      "answer": "HTTP/2 is an upgrade to the original HTTP protocol that was released in 1997. It's designed to improve performance over the existing HTTP protocol by allowing multiple requests to be sent over a single connection, reducing overhead from opening new connections for each request. This means faster page loads and improved responsiveness on websites.\n\nHTTP/3 is an upgrade to HTTP/2 that was released in 2019. It's designed to improve security and performance even further by using the QUIC protocol instead of TCP. QUIC provides a connection-oriented transport layer service for multiple bidirectional streams, multiplexing multiple requests over a single connection, and providing low latency and high throughput.\n\nIn summary, HTTP/2 is an upgrade that improves performance by allowing multiple requests to be sent over a single connection, while HTTP/3 takes this further with the QUIC protocol which provides even better security and performance.",
+      "wall_seconds": 3.519546775998606,
+      "total_seconds": 3.429118587,
+      "load_seconds": 1.480516467,
+      "prompt_tokens": 41,
+      "generated_tokens": 187,
+      "generation_seconds": 1.909543,
+      "tokens_per_second": 97.92919038743825,
+      "peak_vram_mib": 2908.3984375
+    }
+  ]
+}

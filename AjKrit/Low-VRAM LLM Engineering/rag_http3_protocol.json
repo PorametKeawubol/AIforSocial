@@ -1,0 +1,32 @@
+{
+  "question": "HTTP/3 ใช้ Transport Protocol อะไร?",
+  "retrieved_ids": [
+    "doc_2",
+    "doc_0",
+    "doc_4"
+  ],
+  "retrieved_documents": [
+    "HTTP/3 uses QUIC as its transport protocol.",
+    "HTTP/2 uses TCP as its transport protocol.",
+    "HTTP/3 can reduce the impact of head-of-line blocking."
+  ],
+  "retrieval_distances": [
+    0.3147573471069336,
+    0.33789360523223877,
+    0.46457982063293457
+  ],
+  "retrieval_seconds": 0.008149934999892139,
+  "end_to_end_seconds": 1.6772282989986707,
+  "answer": "HTTP/3 ใช้ Transport Protocol TCP.",
+  "generation_metrics": {
+    "model": "llama3.2:1b",
+    "wall_seconds": 1.6690783639987785,
+    "total_seconds": 1.65296314,
+    "load_seconds": 1.537118925,
+    "prompt_tokens": 154,
+    "generated_tokens": 10,
+    "generation_seconds": 0.071606,
+    "tokens_per_second": 139.65310169538864,
+    "peak_vram_mib": null
+  }
+}

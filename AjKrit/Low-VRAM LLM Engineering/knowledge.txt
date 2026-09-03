@@ -1,0 +1,11 @@
+HTTP/2 uses TCP as its transport protocol.
+
+HTTP/2 supports multiplexing multiple streams over a single TCP connection.
+
+HTTP/3 uses QUIC as its transport protocol.
+
+QUIC is built on top of UDP.
+
+HTTP/3 can reduce the impact of head-of-line blocking.
+
+QUIC provides encrypted transport and supports faster connection establishment.

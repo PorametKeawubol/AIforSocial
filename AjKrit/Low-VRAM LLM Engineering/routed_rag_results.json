@@ -1,0 +1,22 @@
+[
+  {
+    "query": "Hi there! Can you write a quick 3-line poem about coffee?",
+    "route": "SIMPLE",
+    "raw_router_answer": "KNOWLEDGE",
+    "guardrail_applied": true,
+    "retrieved_documents": [],
+    "answer": "Sure, here's a quick 3-line poem about coffee:\n\nCoffee beans from the land of Yemen,\nA blend of flavors that never fails to please.\nSip on this cup and let your day be bright."
+  },
+  {
+    "query": "What transport protocol does HTTP/3 use and why?",
+    "route": "KNOWLEDGE",
+    "raw_router_answer": "KNOWLEDGE",
+    "guardrail_applied": false,
+    "retrieved_documents": [
+      "HTTP/3 uses QUIC as its transport protocol.",
+      "HTTP/2 uses TCP as its transport protocol.",
+      "HTTP/3 can reduce the impact of head-of-line blocking."
+    ],
+    "answer": "HTTP/3 uses TCP as its transport protocol."
+  }
+]

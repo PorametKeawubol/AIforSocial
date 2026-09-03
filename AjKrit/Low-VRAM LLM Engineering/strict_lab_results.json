@@ -1,0 +1,152 @@
+{
+  "lab_settings": {
+    "activity_1_prompt": "Explain the difference between HTTP/2 and HTTP/3.",
+    "activity_2_prompt": "Explain Retrieval-Augmented Generation.",
+    "step_9_prompt": "Explain HTTP/3 in simple terms.",
+    "retrieval_k": 3,
+    "knowledge_file": "knowledge.txt"
+  },
+  "activity_1": [
+    {
+      "model": "Qwen2.5",
+      "parameter": "0.5B",
+      "answer": "HTTP/2 and HTTP/3 are both variants of HTTP (Hypertext Transfer Protocol), which is used for transmitting web pages on the internet. Here's an explanation of their differences:\n\n1. **Protocol Version:**\n   - HTTP/2 uses TLS 1.2 as its transport layer protocol, while HTTP/3 also supports TLS 1.2.\n   - This difference makes HTTP/2 and HTTP/3 compatible with TLS 1.2 but is not required.\n\n2. **Multi-Part Content Transfer:**\n   - HTTP/2 introduces a new feature called multi-part content transfer, which allows for the efficient transmission of large amounts of data over multiple parts.\n   - This means that each part of a request can be stored in memory and sent only when needed, rather than waiting to send all parts at once.\n\n3. **Session Cookie Support:**\n   - HTTP/2 supports session cookies by default but has some limitations:\n     - It uses the `Cookie` header instead of using `Authorization`.\n     - Session cookie management is handled by the browser itself, not through the transport layer.\n     - The use of a single `session` header can lead to fragmentation issues when handling large amounts of data.\n\n4. **Data Compression:**\n   - HTTP/2 allows for dynamic compression of data and supports various protocols (e.g., gzip, deflate) that are used by HTTP/3.\n   - This means that the server can dynamically encode and decompress data without waiting for the client to send all its content.\n\n5. **Frame Handling:**\n   - The way HTTP/2 handles frames differs from HTTP/3. In HTTP/2, a new frame type (`frame-negotiation`) is introduced to control how parts are handled.\n   - This allows more fine-grained control over how data chunks (frames) are sent and received by the server.\n\n6. **Frame Header:**\n   - In HTTP/1.x, the `frame-head` field was used to store additional metadata about a frame but not necessary in modern versions of HTTP/2.\n   - HTTP/3 adds this feature as part of its new headers structure, which is essential for maintaining backward compatibility with older clients.\n\n7. **Error Handling:**\n   - HTTP/2 and HTTP/3 both support error handling using keep-alive connections and different error codes (e.g., 104-199), but they differ in terms of their implementation and default behavior.\n   \n8. **Security:**\n   - Security features in HTTP/2 are more flexible and can handle larger chunks than in older versions, while support for security measures like TLS 1.3 is not present in modern versions.\n\n9. **Browser Support:**\n   - Most modern browsers have support for both HTTP/2 and HTTP/3, although some older browsers may not be fully compatible or do not offer all features of newer versions.\n   - Some edge cases where one version might be preferred are:\n     - Edge clients (e.g., Windows 8/9, Chrome 40+): Use HTTP/1.1 for better performance and fewer restrictions.\n     - Older browsers: Use HTTP/2 for more advanced features and security.\n\nIn summary, while both HTTP/2 and HTTP/3 aim to provide improved performance by allowing larger chunks of data to be transmitted over a single connection, they differ in their design, support, and intended use cases.",
+      "response_time_seconds": 5.479378928000187,
+      "generated_tokens": 699,
+      "tokens_per_second": 169.72210978908083,
+      "peak_vram_mib": 1131.82421875
+    },
+    {
+      "model": "Llama 3.2",
+      "parameter": "1B",
+      "answer": "HTTP/2 (HTTP over TCP Protocol Version 2) and HTTP/3 are two different versions of the HTTP protocol, designed to improve performance, reliability, and scalability.\n\n**HTTP/1.x**\n\nThe original HTTP protocol, first released in 1996, uses a sequential communication model, where requests and responses are sent independently. This means that the client (browser or server) initiates a request, sends the request to the server, receives the response, and then processes it. The entire process involves multiple layers of headers, which can lead to overhead and inefficiencies.\n\n**HTTP/2**\n\nHTTP/2, released in 2015, addresses these limitations by introducing a new communication model. HTTP/2 uses a unidirectional, low-latency protocol that enables:\n\n1. **Single request-response flow**: Both the client and server send messages together, reducing latency and overhead.\n2. **Connection-oriented**: The connection is established before sending requests, allowing for better usage of resources (e.g., bandwidth).\n3. **Message-based data transfer**: HTTP/2 uses a fixed-length message format to ensure efficient and reliable data transfer.\n\n**Key differences**\n\nHere are the main differences between HTTP/1.x and HTTP/2:\n\n* **Request-response flow**: HTTP/2 has a single request-response flow, while HTTP/1.x has multiple layers of headers.\n* **Connection establishment**: In HTTP/2, the connection is established before sending requests. In HTTP/1.x, connections are established on-the-fly as needed.\n* **Message format**: HTTP/2 uses a fixed-length message format, while HTTP/1.x uses variable-length headers and messages.\n* **Throughput**: HTTP/2 can achieve better throughput due to its connection-oriented approach and reduced overhead.\n\n**HTTP/3**\n\nIn 2019, the Internet Engineering Task Force (IETF) released HTTP/3, which is a major upgrade to the existing protocol. HTTP/3 builds upon the foundation of HTTP/2, adding new features such as:\n\n* **Multiplexing**: Multiple TCP connections can be used to handle multiple requests simultaneously.\n* **Connection reuse**: Connections can be reused after idle time, reducing overhead and improving performance.\n\n**Key differences**\n\nHere are the main differences between HTTP/3 and HTTP/2:\n\n* **Multiplexing**: HTTP/3 allows for multiplexing of multiple TCP connections, enabling better usage of resources (e.g., bandwidth).\n* **Connection reuse**: Connections can be reused after idle time, reducing overhead.\n* **Throughput**: HTTP/3 achieves improved throughput due to its connection-oriented approach and reduced overhead.\n\n**When to use each**\n\nHTTP/2 is suitable for:\n\n* Legacy systems or applications with existing infrastructure.\n* Applications that require a simple, sequential request-response flow.\n* Use cases where low latency and efficient data transfer are prioritized (e.g., real-time communication).\n\nHTTP/3 is suitable for:\n\n* Newer systems or applications requiring improved performance and throughput.\n* Use cases where connection multiplexing and reuse are beneficial (e.g., web servers, cloud services).\n* Applications that require a high level of security and reliability.\n\nIn summary, HTTP/2 improves upon the original protocol by introducing a single request-response flow, connection-oriented approach, and fixed-length message format. However, it still requires connections to be established before sending requests. HTTP/3 builds upon this foundation, adding new features such as multiplexing and connection reuse, while improving throughput and reducing overhead.",
+      "response_time_seconds": 7.078273650000028,
+      "generated_tokens": 710,
+      "tokens_per_second": 133.51275441701563,
+      "peak_vram_mib": 2114.515625
+    },
+    {
+      "model": "SmolLM2",
+      "parameter": "1.7B",
+      "answer": "HTTP/2 is an extension of HTTP 1.1 that aims to improve performance and efficiency over the original protocol. HTTP/3 is also designed as a replacement for HTTP 1.1, but with additional security features and improved privacy settings.\n\n1. HTTP/2:\n   - Offers multiplexing, which allows multiple requests to be sent over a single connection. This reduces overhead since only one request needs to be handled at a time.\n   - Supports header compression, reducing the size of headers in each packet. This saves bandwidth and improves performance.\n   - Uses binary framing instead of plain text to make the protocol more efficient.\n\n2. HTTP/3:\n   - Built on top of QUIC (Quick UDP Internet Connections), which is a transport layer protocol that encapsulates data within UDP packets. This makes it highly scalable, faster, and less prone to network congestion than traditional TCP.\n   - Uses encryption by default at the transport layer, providing end-to-end encryption for data in transit. This ensures privacy and security without requiring changes to the application itself.\n   - Offers a client-auth TLS extension, which allows clients to authenticate server certificates with the goal of preventing man-in-the-middle attacks.\n\nIn summary, HTTP/2 is focused on performance through multiplexing and header compression, while HTTP/3 aims at improving privacy and security by utilizing QUIC and encryption.",
+      "response_time_seconds": 4.460163175999696,
+      "generated_tokens": 287,
+      "tokens_per_second": 97.01727651208355,
+      "peak_vram_mib": 3236.890625
+    }
+  ],
+  "activity_2": {
+    "model": "llama3.2:1b",
+    "prompt": "Explain Retrieval-Augmented Generation.",
+    "before_run_mib": 473.75,
+    "model_loaded_mib": 2114.2578125,
+    "during_generate_peak_mib": 2114.2578125,
+    "after_bye_mib": 473.75,
+    "answer": "Retrieval-Augmented Generation (RAG) is a machine learning approach that combines the strengths of both retrieval-based and generation-based methods in natural language processing tasks, such as question answering, text summarization, and information extraction.\n\n**Key Components:**\n\n1. **Retrieval**: This involves searching for relevant documents or entities to answer a query. The goal is to find the most relevant document or entity that matches the user's search criteria.\n2. **Augmentation**: This step involves enhancing or manipulating the retrieved documents or entities to generate additional text, answers, or insights.\n\n**How it works:**\n\n1. A user submits a query, and the system retrieves relevant documents or entities from a knowledge graph or database.\n2. The system then augments each retrieved document or entity with new information or text generated by a neural network model.\n3. The augmented document or entity is then used to answer the original question or generate additional text.\n\n**Benefits:**\n\n1. **Improved accuracy**: RAG can improve the accuracy of retrieval-based systems by providing additional context and insights that are not directly related to the query.\n2. **Increased efficiency**: By generating new text, RAG can reduce the time it takes to retrieve relevant information and answer a question.\n3. **Enhanced creativity**: The augmented output can encourage more creative and diverse responses compared to traditional generation-based approaches.\n\n**Types of RAG:**\n\n1. **Text Retrieval-Augmented Generation (TRAG)**: This involves retrieving documents or entities and then generating new text using a neural network model.\n2. **Question Answering with Retrieval Augmentation**: This approach involves retrieving relevant information and then generating new answers based on that information.\n\n**Applications:**\n\n1. Question answering systems\n2. Text summarization tools\n3. Information extraction techniques\n4. Chatbots and virtual assistants\n\nBy combining the strengths of retrieval-based and generation-based methods, RAG can lead to more accurate and effective natural language processing tasks."
+  },
+  "activity_4": [
+    {
+      "num_ctx": 512,
+      "response_time_seconds": 4.858130101999905,
+      "peak_vram_mib": 1998.328125,
+      "answer": "HTTP/3 is a new version of the internet protocol that allows for faster, more efficient, and more secure communication over the web. Here's how it works in simple terms:\n\n**Problem with current HTTP:**\n\nThe current HTTP (Hypertext Transfer Protocol) version has some limitations when it comes to transferring data quickly across the internet. It uses a lot of overhead from retransmissions, causing delays and making the connection slower.\n\n**HTTP/3 solution:**\n\nHTTP/3 solves this problem by introducing several new features:\n\n1. **Multiple connections:** Instead of using a single connection for all requests, HTTP/3 uses multiple streams to reduce latency.\n2. **Prioritization:** Each stream has its own priority level, allowing for faster transmission of critical data (like financial transactions) and slower transmission of less important data.\n3. **Connection keepalive:** When a client sends an \"Keep-alive\" request, the server can reuse the connection more efficiently.\n\n**How it works:**\n\nHere's a simplified example:\n\n1. A client (e.g., your web browser) sends an HTTP/3 request to a server.\n2. The request is broken down into multiple streams (e.g., for HTML, CSS, and JavaScript).\n3. Each stream is prioritized based on its importance.\n4. As the client receives data from each stream, it can reuse the connection more efficiently.\n\n**Key benefits:**\n\n1. **Faster page loads:** By reducing latency and minimizing retransmissions, HTTP/3 enables faster loading times for web pages.\n2. **Improved performance:** With prioritized streams, critical data like financial transactions or scientific simulations can be transmitted quickly without interruption.\n3. **Reduced congestion:** By enabling more efficient use of connections, HTTP/3 reduces the likelihood of congestion and other connectivity issues.\n\n**Notable implementations:**\n\nHTTP/3 is currently being developed by various organizations, including:\n\n* Google\n* Mozilla\n* Microsoft\n* IBM\n\nThese companies are experimenting with different implementations, but one thing's for sure – HTTP/3 has the potential to revolutionize the way we interact online!"
+    },
+    {
+      "num_ctx": 1024,
+      "response_time_seconds": 4.695581360999768,
+      "peak_vram_mib": 2014.30078125,
+      "answer": "HTTP/3 is a new version of the HyperText Transfer Protocol (HTTP) that was introduced by the Internet Engineering Task Force (IETF). In simple terms, it's an upgrade to the existing HTTP protocol.\n\nHere are some key things you need to know about HTTP/3:\n\n**What's changing?**\n\n* **New protocol**: HTTP/3 is a new protocol with its own rules and syntax. It replaces the traditional HTTP protocol used for over 20 years.\n* **Improved performance**: HTTP/3 aims to improve performance by reducing latency, increasing throughput, and providing better support for real-time applications.\n\n**Key features:**\n\n* **Multiplexing**: One of the main changes is that HTTP/3 allows you to multiplex multiple protocols (e.g., TCP, UDP) over a single connection. This means you can use multiple protocols simultaneously without having to switch between them.\n* **Compression**: HTTP/3 includes built-in support for end-to-end encryption and compression, making it more efficient than traditional HTTP.\n* **Server push**: Servers in HTTP/3 can send data directly to clients, bypassing the need for requests. This is known as server push.\n* **Client connection pool**: Clients can now use a pool of connections to reduce overhead and improve performance.\n\n**What's new?**\n\n* **New headers**: HTTP/3 includes new headers that provide additional information about the request or response, such as support for multiplexing and compression.\n* **Request methods**: Request methods like POST, PUT, and PATCH are redefined in HTTP/3 to provide better support for real-time applications.\n\n**When will it be widely adopted?**\n\nHTTP/3 is currently being implemented by some major network providers and cloud vendors. However, it's not yet widely adopted across the entire internet. It's expected that HTTP/3 will become a de facto standard in the near future."
+    },
+    {
+      "num_ctx": 2048,
+      "response_time_seconds": 4.317735061999883,
+      "peak_vram_mib": 2048.296875,
+      "answer": "HTTP/3 is a new version of the standard that replaces HTTP/2. It was introduced by the Internet Engineering Task Force (IETF) in November 2019.\n\nImagine you're sending data over the internet, like a message from your phone to another device. HTTP/3 is like a faster, more efficient way of doing this.\n\nHere's how it works:\n\n1. **New protocol**: HTTP/3 uses a new protocol called Transport Layer Security (TLS) for encryption and other security features.\n2. **Streamed data**: Instead of sending the whole message at once, you send \"chunks\" or \"payloads\" that are broken down into smaller pieces. This makes it easier to handle big files and large amounts of data.\n3. **Multiple messages**: You can send multiple messages over a single connection, which is called a \"stream\". Each stream has its own headers (the message before the data), payload (the actual data), and response.\n4. **Data compression**: HTTP/3 uses compression to reduce the amount of data being sent, making it faster for both sender and receiver.\n\nThe benefits of HTTP/3 are:\n\n* Faster data transfer times\n* Better handling of big files\n* Increased efficiency in handling multiple requests\n\nHowever, there are also some changes that might require adjustments on the client-side (the device you're using to send the request):\n\n* You'll need a modern browser or a specific server that supports HTTP/3.\n* Some websites might not support HTTP/3, so it's best to check their documentation before trying it out.\n\nOverall, HTTP/3 is designed to provide faster and more efficient data transfer over the internet, while also improving security features."
+    }
+  ],
+  "activity_5": [
+    {
+      "question": "HTTP/3 ใช้ Transport Protocol อะไร?",
+      "requested_retrieval_k": 3,
+      "effective_retrieval_k": 3,
+      "retrieved_docs": [
+        "HTTP/3 uses QUIC as its transport protocol.",
+        "HTTP/2 uses TCP as its transport protocol.",
+        "HTTP/3 can reduce the impact of head-of-line blocking."
+      ],
+      "answer": "HTTP/3 ใช้ Transport Protocol TCP.",
+      "response_time_seconds": 1.6688351349998811
+    },
+    {
+      "question": "HTTP/2 และ HTTP/3 แตกต่างกันอย่างไร?",
+      "requested_retrieval_k": 3,
+      "effective_retrieval_k": 3,
+      "retrieved_docs": [
+        "HTTP/3 can reduce the impact of head-of-line blocking.",
+        "HTTP/3 uses QUIC as its transport protocol.",
+        "HTTP/2 uses TCP as its transport protocol."
+      ],
+      "answer": "HTTP/2 และ HTTP/3 แตกต่างกันในเรื่องของการรับส่งข้อมูลและลดความเสี่ยงจากขั้วต่อ (head-of-line blocking) โดยเฉพาะอย่างยิ่ง.",
+      "response_time_seconds": 2.232695222000075
+    },
+    {
+      "question": "QUIC มีความเกี่ยวข้องกับ HTTP/3 อย่างไร?",
+      "requested_retrieval_k": 3,
+      "effective_retrieval_k": 3,
+      "retrieved_docs": [
+        "HTTP/3 uses QUIC as its transport protocol.",
+        "QUIC is built on top of UDP.",
+        "QUIC provides encrypted transport and supports faster connection establishment."
+      ],
+      "answer": "HTTP/3 เป็นเทคนิคการเชื่อมต่อที่ใช้QUICในการส่งรูปภาพและพัสดุ",
+      "response_time_seconds": 1.8293165560003217
+    }
+  ],
+  "activity_6": {
+    "question": "According to the knowledge base, what transport protocol does HTTP/3 use?",
+    "llm": {
+      "answer": "HTTP/3 uses TCP (Transmission Control Protocol). It is a replacement for HTTP/2 and is designed to provide better performance, reliability, and scalability.",
+      "response_time_seconds": 1.837616799999978,
+      "generated_tokens": 32,
+      "tokens_per_second": 131.2529737001854,
+      "peak_vram_mib": null
+    },
+    "rag": {
+      "question": "According to the knowledge base, what transport protocol does HTTP/3 use?",
+      "requested_retrieval_k": 3,
+      "effective_retrieval_k": 3,
+      "retrieved_docs": [
+        "HTTP/3 uses QUIC as its transport protocol.",
+        "HTTP/2 uses TCP as its transport protocol.",
+        "HTTP/3 can reduce the impact of head-of-line blocking."
+      ],
+      "answer": "HTTP/3 uses QUIC as its transport protocol.",
+      "response_time_seconds": 1.697990774000118
+    }
+  },
+  "activity_7": [
+    {
+      "query": "Hi there! Can you write a quick 3-line poem about coffee?",
+      "decision": "KNOWLEDGE",
+      "raw_answer": "KNOWLEDGE",
+      "retrieved_docs": [
+        "HTTP/3 can reduce the impact of head-of-line blocking.",
+        "HTTP/2 supports multiplexing multiple streams over a single TCP connection.",
+        "HTTP/3 uses QUIC as its transport protocol."
+      ],
+      "answer": "I can't help with writing poems about specific topics or products, especially without more context. Would you like to explore other writing-related questions?"
+    },
+    {
+      "query": "What transport protocol does HTTP/3 use and why?",
+      "decision": "KNOWLEDGE",
+      "raw_answer": "KNOWLEDGE",
+      "retrieved_docs": [
+        "HTTP/3 uses QUIC as its transport protocol.",
+        "HTTP/2 uses TCP as its transport protocol.",
+        "HTTP/3 can reduce the impact of head-of-line blocking."
+      ],
+      "answer": "HTTP/3 uses TCP as its transport protocol."
+    }
+  ],
+  "total_elapsed_seconds": 62.35112657400032
+}

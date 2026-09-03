@@ -1,0 +1,32 @@
+{
+  "question": "HTTP/2 และ HTTP/3 แตกต่างกันอย่างไร?",
+  "retrieved_ids": [
+    "doc_4",
+    "doc_2",
+    "doc_0"
+  ],
+  "retrieved_documents": [
+    "HTTP/3 can reduce the impact of head-of-line blocking.",
+    "HTTP/3 uses QUIC as its transport protocol.",
+    "HTTP/2 uses TCP as its transport protocol."
+  ],
+  "retrieval_distances": [
+    0.5256754159927368,
+    0.5326856374740601,
+    0.5527733564376831
+  ],
+  "retrieval_seconds": 0.008800879999398603,
+  "end_to_end_seconds": 2.7323878219995095,
+  "answer": "HTTP/2 และ HTTP/3 แตกต่างกันในเรื่องของการรับข้อมูลและความสามารถในการจัดการกับการส่งแบบคลาสสิก (TCP) ใน HTTP/2 การใช้ TCP ทำให้สามารถรับข้อมูลได้อย่างรวดเร็วมากขึ้น เนื่องจากไม่ต้องใช้เวลาในการสร้างตัวแปรที่จำเป็นสำหรับการส่งแบบคลาสสิก ในขณะที่ HTTP/3 ใช้ QUIC ซึ่งเป็นเทคนิคการเชื่อมต่อที่มีความเร็วสูงกว่า ทำให้สามารถรับข้อมูลได้อย่างรวดเร็วมากขึ้น",
+  "generation_metrics": {
+    "model": "llama3.2:1b",
+    "wall_seconds": 2.723586942000111,
+    "total_seconds": 2.707408092,
+    "load_seconds": 1.533387889,
+    "prompt_tokens": 158,
+    "generated_tokens": 150,
+    "generation_seconds": 1.128778,
+    "tokens_per_second": 132.8870690250873,
+    "peak_vram_mib": null
+  }
+}

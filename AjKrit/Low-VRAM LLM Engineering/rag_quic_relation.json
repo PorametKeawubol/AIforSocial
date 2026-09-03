@@ -1,0 +1,32 @@
+{
+  "question": "QUIC มีความเกี่ยวข้องกับ HTTP/3 อย่างไร?",
+  "retrieved_ids": [
+    "doc_2",
+    "doc_3",
+    "doc_5"
+  ],
+  "retrieved_documents": [
+    "HTTP/3 uses QUIC as its transport protocol.",
+    "QUIC is built on top of UDP.",
+    "QUIC provides encrypted transport and supports faster connection establishment."
+  ],
+  "retrieval_distances": [
+    0.3021587133407593,
+    0.5442579388618469,
+    0.5681757926940918
+  ],
+  "retrieval_seconds": 0.008032023999476223,
+  "end_to_end_seconds": 2.100519858999178,
+  "answer": "QUIC มีความเกี่ยวข้องกับ HTTP/3 ในฐานะเทคโนโลยีที่ใช้สำหรับการส่งข้อมูลระหว่างเว็บเซิร์ฟเวอร์และลูกค้าผ่านการเชื่อมต่อที่มีการรักษาความปลอดภัยและความเร็วสูง.",
+  "generation_metrics": {
+    "model": "llama3.2:1b",
+    "wall_seconds": 2.0924878349997016,
+    "total_seconds": 2.076706747,
+    "load_seconds": 1.533995778,
+    "prompt_tokens": 156,
+    "generated_tokens": 65,
+    "generation_seconds": 0.497785,
+    "tokens_per_second": 130.5784625892705,
+    "peak_vram_mib": null
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "model": "llama3.2:1b",
+  "prompt": "Explain Retrieval-Augmented Generation in two short sentences.",
+  "before_mib": 727.2421875,
+  "loaded_after_generate_mib": 2269.5390625,
+  "peak_during_generation_mib": 2269.5390625,
+  "after_stop_mib": 723.2265625,
+  "generation": {
+    "model": "llama3.2:1b",
+    "answer": "Retrieval-Augmented Generation is a technique used in natural language processing that combines the strengths of both retrieval and generation methods, allowing models to learn from their own performance on retrieving relevant information and then use this knowledge to generate new text. This approach enables models to improve their ability to understand and respond to user queries while also generating coherent and contextually relevant output.",
+    "wall_seconds": 2.5291469719995803,
+    "total_seconds": 2.438396314,
+    "load_seconds": 1.85227183,
+    "prompt_tokens": 37,
+    "generated_tokens": 73,
+    "generation_seconds": 0.559091,
+    "tokens_per_second": 130.56908446031147,
+    "peak_vram_mib": 2269.5390625
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "created_at_utc": "2026-08-31T14:52:31.387485+00:00",
+  "dataset": "/home/porametk/Desktop/AIforSocial/AIforSocial/AjKrit/DENSE/thai_qa_utf8.json",
+  "dataset_rows_indexed": 10000,
+  "document_field": "input",
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "embedding_dimension": 384,
+  "embedding_normalized": true,
+  "faiss_index": "IndexFlatIP",
+  "similarity": "cosine (inner product over L2-normalized embeddings)",
+  "device_used": "cuda"
+}
