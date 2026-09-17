@@ -1,0 +1,129 @@
+ปรับเพิ่มความเข้มงวดของเกณฑ์การประเมิน ขยายรายละเอียดเชิงเทคนิค (Technical Granularity) ให้ลึกและชัดเจนยิ่งขึ้น โดยขยับมาตรฐาน Grade B ให้ต้องมี Hybrid Search และ Pipeline ที่สมบูรณ์เป็นพื้นฐาน ส่วน Grade A จะยกระดับไปถึงขั้น Production-Grade (มี Re-ranking, Fusion Algorithm, dynamic Optimization และ Advanced Metrics)
+
+ตาราง Rubric Score สำหรับตรวจโปรเจกต์ RAG (ยกระดับเกณฑ์และรายละเอียด)
+เกณฑ์การประเมิน (น้ำหนัก)	ดีเยี่ยม / Production-Grade (4 คะแนน)	ดีมาก / Passed Standards (3 คะแนน)	พอใช้ / Basic RAG (2 คะแนน)	ต้องปรับปรุง / Incomplete (1 คะแนน)
+1. PDF Ingestion & Advanced Chunking Strategy
+
+
+(น้ำหนัก 15%)
+• รองรับ PDF ทั้ง Text และ Layout/Table (เช่น PDFPlumber/Unstructured)
+
+
+• ใช้ Advanced Chunking เช่น Semantic Chunking หรือ Parent-Document Retriever
+
+
+• จัดการ Metadata, Header, Footer และ Overlap ได้อย่างแม่นยำ ไม่หลงเหลือ Formatting ขยะ
+• ดึงข้อความจาก PDF ได้ถูกต้อง
+
+
+• ใช้ Recursive Character Splitting พร้อมตั้งค่า Chunk Size และ Overlap สอดคล้องกับ Context Window
+
+
+• ขยะใน Text หลุดมารวมไม่เกิน 5%
+• ใช้ Fixed-size Chunking แบบเรียบง่าย ไม่พิจารณาโครงสร้างเอกสาร/ประโยค
+
+
+• มีปัญหาการตัดประโยคขาด หรือมีข้อความขยะ/สัญลักษณ์แปลกปลอมปนใน Chunk
+• ใช้ Library พื้นฐานที่ดึงข้อความจาก PDF ไม่สมบูรณ์ (ข้อความขาดหาย/ภาษาไทยอ่านไม่รู้เรื่อง)
+
+
+• ไม่มีการทำ Chunking หรือตัดข้อความมั่วซั่ว
+2. Hybrid Retrieval & Fusion Engine (FAISS/Chroma + BM25)
+
+
+(น้ำหนัก 25%)
+• รวม Dense Vector (ChromaDB/FAISS) + Sparse (BM25) เป็น Hybrid Search สมบูรณ์
+• ใช้ Fusion Algorithm เช่น Reciprocal Rank Fusion (RRF) หรือ Relative Score Fusion
+• มี Cross-Encoder Re-ranking ยกระดับ Relevance ของ Context
+• รวม Dense + Sparse (BM25) ทำงานร่วมกันได้สมบูรณ์
+• มีการปรับถ่วงน้ำหนัก Score (Convex Combination / Weighted Sum) ระหว่าง Dense และ BM25 ชัดเจน
+• ดึงข้อมูลได้ทั้งคำค้นตรงตัว (Keyword) และความหมาย (Semantic)
+• ใช้เฉพาะ Dense Vector Store (ChromaDB/FAISS) หรือ BM25 อย่างใดอย่างหนึ่งเท่านั้น (ไม่มี Hybrid)
+• ค้นหาข้อมูลที่มีศัพท์เฉพาะ/รหัส/ชื่อเฉพาะ ไม่พบ
+• ระบบ Search ทำงานผิดพลาด Vector Store คืนค่าผลลัพธ์ไม่ตรงกับคำถามอย่างรุนแรง
+• ไม่มีการใช้ BM25 และ Vector Store ขาดประสิทธิภาพ
+3. Dynamic Top-k & Embedding Optimization
+
+
+(น้ำหนัก 15%)
+• เลือกใช้ SBERT/BERT (เช่น BGE, Multilingual-E5) ที่ Fine-tuned/เหมาะกับโดเมนและภาษาไทย
+• ปรับค่า Top-k แบบ Dynamic ตามความยาว/ความซับซ้อนของคำถาม
+• มี Token Budget Management ป้องกัน Context ล้น
+• เลือกใช้ SBERT/BERT Embedding เหมาะสมกับภาษา
+• ปรับค่า Top-k (Static) ที่ผ่านการทดลองหาค่า Optimal Value (เช่น k=3 ถึง k=5)
+• จัดการ Context Length ได้ดี ไม่เกิน Limit ของ LLM
+• ใช้ General/Default Embedding Model (เช่น OpenAI text-embedding-ada หรือ All-MiniLM) ที่ไม่รองรับภาษาไทย/โดเมนดีพอ
+• กำหนดค่า Top-k แบบสุ่ม สั้นเกินไปหรือยาวเกินไป
+• เลือกใช้ Embedding ไม่ตรงกับภาษา (เช่น English-only model กับเอกสารไทย)
+• ค่า Top-k ทำให้ LLMContext Overflow หรือได้บริบทไม่เพียงพอ
+4. Prompt Engineering & Guardrail Integration
+
+
+(น้ำหนัก 20%)
+• โครงสร้าง System Prompt รัดกุม ใช้เทคนิค Few-Shot / Chain-of-Thought (CoT)
+• มี Strict Fallback / Guardrails บังคับให้ LLM ตอบเฉพาะข้อมูลใน Context เท่านั้น (Zero Hallucination Control)
+• คืนค่า Citation/Source Reference ได้
+• โครงสร้าง Prompt ชัดเจน (System Role + Retrieved Context + Query)
+• มีคำสั่งจำกัด Scope การตอบเพื่อป้องกัน Hallucination
+• LLM ตอบตรงประเด็น นำ Context มาสังเคราะห์คำตอบได้ดี
+• Prompt จัดโครงสร้างแบบพื้นฐาน ขาด Instructions ในการจำกัดการตอบ
+• LLM ตอบคำถามโดยใช้ความรู้ภายนอก (Hallucination) ปะปนกับ Context
+• LLM ไม่ใช้ Context ที่ดึงมาในการตอบ หรือตอบออกนอกเรื่องอย่างรุนแรง
+• Prompt สับสน หรือสร้างคำตอบที่ไม่ตรงกับความจริงใน PDF
+5. SBERT/BERT Quantitative Evaluation
+
+
+(น้ำหนัก 15%)
+• สร้าง Test Dataset (Q&A Pairs) สำหรับทดสอบระบบ
+• ประเมินด้วย SBERT Cosine Similarity, BERTScore (Precision, Recall, F1) และ RAG Metrics (Faithfulness, Answer Relevance)
+• มีตารางวิเคราะห์ผลเปรียบเทียบ
+• ประเมินผลความแม่นยำด้วย BERTScore หรือ SBERT Cosine Similarity กับชุดข้อมูลทดสอบอย่าง
+
+
+ 
+• ประเมินผลด้วยการเปรียบเทียบเชิงคุณภาพ (Manual Testing) สุ่มถาม-ตอบ
+• ขาดการใช้ SBERT/BERT Metric ในการวัดผลเชิงปริมาณ
+• ไม่มีส่วนการประเมินผลประสิทธิภาพของระบบ RAG ใดๆ
+• ไม่สามารถพิสูจน์ความถูกต้องของระบบได้
+6. Code Architecture & MLOps Reproducibility
+
+
+(น้ำหนัก 10%)
+• ออกแบบเป็น Modular / OOP Architecture ปรับเปลี่ยน Component ได้ง่าย
+• มีการบริหารจัดการ Config (เช่น .env หรือ YAML)
+• มี Environment File ครบถ้วน (requirements.txt/Docker) 
+• โค้ดแบ่งฟังก์ชัน/คลาสชัดเจน มี Docstring สื่อความหมาย
+• มีไฟล์ requirements.txt ที่ Pin Version ของ Library สำคัญ (ChromaDB, Transformers)
+• รันง่าย Reproduce ได้โดยไม่มี Error
+• การแยก Module ที่ชัดเจน
+• ขาดคำอธิบายโค้ด แต่ยังสามารถรันตั้งแต่ต้นจนจบได้
+• โค้ดสับสน ขาด Dependency file (รันแล้วเจอ ModuleNotFoundError)
+• ไม่สามารถ Reproduce ผลลัพธ์ได้
+เกณฑ์การตัดสินและตัดเกรดภาพรวม (Adjusted Grade Cut-offs)
+ระดับ A (85.0% – 100%): Production-Grade Hybrid RAG
+คุณลักษณะ: เป็นระบบ RAG ที่พร้อมนำไปใช้งานจริง มี Hybrid Search (Dense + Sparse) + RRF / Re-ranking
+ข้อกำหนดบังคับ:
+
+ใช้ Advanced Chunking หรือ Semantic Chunking ในการจัดการ PDF
+มีการทำ Hybrid Search ร่วมระหว่าง FAISS/ChromaDB และ BM25
+มีระบบ Prompt Guardrail ป้องกัน Hallucination และอ้างอิง Source ได้
+ประเมินผลด้วย BERTScore / SBERT Metric ร่วมกับตัววัดความถูกต้องของบริบท (Faithfulness) บนชุด Test Set
+ระดับ B (70.0% – 84.9%): Standard Hybrid RAG (Passed All Core Requirements)
+คุณลักษณะ: ระบบทำงานได้ครบทุก Component ตามโจทย์ที่กำหนดอย่างถูกต้อง ต้องมี Hybrid Search (ChromaDB/FAISS + BM25) แต่ขาดการ Tuning ขั้นสูง
+ข้อกำหนดบังคับ:
+
+ต้องดึงข้อมูลจาก PDF และทำ Chunking ด้วย Recursive Character Splitter ได้ถูกต้อง
+ต้องมี Hybrid Search (Dense + Sparse/BM25) และผสม Score ได้ (แม้อาจยังไม่มี Cross-Encoder Re-ranker)
+เลือกใช้ SBERT/BERT Embedding ที่เหมาะสม และตั้งค่า Top-k ได้อย่างสมเหตุสมผล
+LLM ตอบตรงคำถามโดยอิงจาก Context เป็นหลัก
+มีการวัดผลเชิงปริมาณด้วย SBERT หรือ BERTScore แม้ชุดทดสอบอาจมีขนาดเล็ก
+ระดับ C (55.0% – 69.9%): Basic Vector Search (Incomplete Hybrid / Partial System)
+คุณลักษณะ: ระบบทำงานได้ในระดับพื้นฐาน ขาดชิ้นส่วนสำคัญตามโจทย์ (เช่น ไม่มี BM25 หรือขาดการประเมินผลเชิงปริมาณ)
+เงื่อนไขที่ตกมาเกรด C:
+
+ใช้เฉพาะ Vector Search (FAISS/ChromaDB) หรือ BM25 เพียงอย่างใดอย่างหนึ่ง (ไม่ทำ Hybrid)
+ใช้ Fixed-size Chunking แบบตัดบรรทัดโดยไม่สนใจบริบทภาษา
+ขาดการวัดผลด้วย SBERT/BERT Metric (ใช้เพียง Manual สุ่มตรวจด้วยตาเปล่า)
+LLM ยังมีอาการ Hallucination ปะปนมาในการตอบ
+ระดับ F (น้อยกว่า 55.0%): Non-Functional / Severe Failure
+คุณลักษณะ: ระบบไม่สามารถทำงานได้ตามข้อกำหนด ไม่สามารถดึงข้อความจาก PDF ได้ถูกต้อง, โค้ดรันไม่ผ่าน, LLM ตอบออกนอกบริบทเอกสาร หรือไม่มีการเชื่อมต่อ Vector Store / BM25 เลย

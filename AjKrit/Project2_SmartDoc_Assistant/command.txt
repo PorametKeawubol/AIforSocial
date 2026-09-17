@@ -1,0 +1,170 @@
+SmartDoc Assistant — คำสั่งรัน RAG + LINE UX + Chat History
+
+รันใช้งานประจำ: Terminal 1 เปิด Ollama → Terminal 2 เปิด webhook → Terminal 3 เปิด tunnel
+ไม่ต้อง build index หรือติดตั้ง Rich Menu ใหม่ทุกครั้ง
+ไฟล์นี้เป็นคู่มือ ให้คัดลอกเฉพาะคำสั่ง ไม่ใช่สคริปต์สำหรับ bash command.txt
+
+1. เข้า project — ใช้ absolute path นี้ในแต่ละ terminal เพื่อไม่เจอปัญหา cd ซ้ำ:
+cd /home/porametk/Desktop/AIforSocial/AIforSocial/AjKrit/Project2_SmartDoc_Assistant
+
+ติดตั้ง dependencies เฉพาะเมื่อจำเป็น:
+.venv/bin/pip install -r requirements.txt
+.venv/bin/pip check
+
+ถ้ายังไม่มี .venv ให้สร้างก่อน:
+python3 -m venv .venv
+จากนั้นติดตั้ง dependencies ตามคำสั่งข้างบน
+ตรวจว่า .env มี CHANNEL_SECRET และ CHANNEL_ACCESS_TOKEN แล้ว ห้ามนำค่าจริงไปเผยแพร่
+
+2. Build index และทดสอบ — index ปัจจุบัน build แล้ว รันใหม่เมื่อเปลี่ยน PDF/chunking:
+.venv/bin/python build_index.py \
+  --chunk-size 900 \
+  --overlap 120 \
+  --parent-size 2400
+
+.venv/bin/python -m unittest discover -s tests -p 'test*.py' -v
+
+3. Terminal 1: เปิด Ollama — เปิดค้างไว้:
+ollama serve
+ถ้า Ollama ทำงานเป็น service อยู่แล้ว ไม่ต้องเปิดซ้ำ
+ตรวจว่า Ollama พร้อม และดูโมเดลที่มี (จาก terminal อีกอัน):
+curl http://127.0.0.1:11434/api/tags
+ollama list
+
+ดาวน์โหลดเฉพาะโมเดลที่ยังไม่มี — เลือกตัวที่จะใช้:
+ollama pull hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M
+ollama pull qwen3.5:9b
+คำสั่งดาวน์โหลดโมเดลต้องมีอินเทอร์เน็ตและพื้นที่ดิสก์เพียงพอ
+
+4. Terminal ทดสอบ: ทดลองถาม (CLI แต่ละคำสั่งเป็นคำถามเดี่ยว ไม่เก็บ chat history)
+# ค้นเอกสารอย่างเดียว
+.venv/bin/python cli.py "เพื่อนหายตัวไปทำไง" --retrieve-only --json
+
+# ตอบด้วยโมเดล production ตาม .env ซึ่งตอนนี้เป็น qwen3.5:9b
+.venv/bin/python cli.py "เพื่อนหายตัวไปทำไง"
+
+# ทดลอง 9B
+OLLAMA_MODEL=qwen3.5:9b \
+  .venv/bin/python cli.py "เพื่อนหายตัวไปทำไง"
+
+5. Evaluation
+# Retrieval 18 ข้อ
+.venv/bin/python evaluate.py \
+  --out artifacts/evaluation_retrieval.json
+
+# Full evaluation 9B รวม BERTScore และ LLM judge
+OLLAMA_MODEL=qwen3.5:9b \
+OLLAMA_TIMEOUT_SECONDS=180 \
+MAX_ANSWER_TOKENS=240 \
+  .venv/bin/python evaluate.py \
+  --run-llm --bert-score --llm-judge \
+  --out artifacts/evaluation_9b.json
+
+# Full evaluation 27B — ใช้เวลานานมาก
+OLLAMA_MODEL=hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M \
+OLLAMA_TIMEOUT_SECONDS=600 \
+  .venv/bin/python evaluate.py \
+  --run-llm --bert-score --llm-judge \
+  --out artifacts/evaluation_27b.json
+แต่ละ evaluation จะสร้าง JSON, CSV และตาราง Markdown ตามชื่อ output
+ต้องเปิด Ollama ก่อน full evaluation; ไม่ควรรันพร้อมรับแชต LINE บนเครื่องเดียวกัน
+
+6. Terminal 2: เปิด LINE webhook — เลือกหนึ่งคำสั่ง แล้วเปิดค้างไว้:
+# ตอนนี้ webhook รันเป็น transient user-service smartdoc-webhook อยู่ ไม่ต้องเปิด uvicorn ซ้ำ
+# หลังแก้ .env ให้ใช้ restart; ดู log ด้วย journalctl; ไม่ได้ตั้งให้เปิดอัตโนมัติหลังบูต
+systemctl --user status smartdoc-webhook.service --no-pager
+systemctl --user restart smartdoc-webhook.service
+journalctl --user -u smartdoc-webhook.service -n 50 --no-pager
+# ถ้าจะกลับไปรันแบบ terminal ตามคำสั่งข้างล่าง ให้หยุด service ก่อน
+systemctl --user stop smartdoc-webhook.service
+
+# ใช้โมเดลตาม OLLAMA_MODEL ใน .env
+.venv/bin/uvicorn app:app --host 127.0.0.1 --port 8000
+
+# หรือทดลอง 27B ชั่วคราว โดยไม่เปลี่ยน .env
+OLLAMA_MODEL=hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M \
+  .venv/bin/uvicorn app:app --host 127.0.0.1 --port 8000
+
+ปรับ history ได้ใน .env:
+HISTORY_MAX_TURNS=4
+HISTORY_TTL_SECONDS=86400
+หลังแก้ .env หรือโค้ด ให้กด Ctrl+C ที่ terminal webhook แล้วรันใหม่
+ไม่ต้องเปิด webhook สองตัวบน port 8000 พร้อมกัน
+
+7. Terminal 3: เปิด Cloudflare tunnel
+cloudflared tunnel --url http://127.0.0.1:8000
+นำ URL ใหม่ที่แสดงมาต่อท้าย /callback แล้วใส่ใน LINE Developers เช่น:
+https://xxxxx.trycloudflare.com/callback
+ต้องใช้ /callback ไม่ใช่ / และเปิด Use webhook ใน LINE Developers
+กด Verify หลัง webhook กับ tunnel ทำงานแล้ว
+Quick Tunnel จะได้ URL ใหม่เมื่อเปิดรอบใหม่ จึงต้องอัปเดต Webhook URL ด้วย
+ตรวจ server จาก terminal อีกอัน:
+curl http://127.0.0.1:8000/health
+
+8. LINE UX — ตรวจรูปแบบข้อความ / ติดตั้ง Rich Menu (ไม่ต้อง build index ใหม่):
+# ตรวจด้วย LINE API โดยไม่เปลี่ยนเมนู และไม่ส่งข้อความหาผู้ใช้
+.venv/bin/python setup_richmenu.py --validate-only
+
+# ติดตั้งเป็น default Rich Menu; ใช้ซ้ำเมนูที่ตรงกัน และไม่ลบเมนูเดิม
+.venv/bin/python setup_richmenu.py
+Rich Menu ติดตั้งแล้ว รันอีกเมื่อเปลี่ยนรูป/พื้นที่กด/การทำงานของปุ่ม
+สคริปต์อ่าน assets/richmenu_thaipol.png และแปลงรูปสำหรับอัปโหลดโดยไม่แก้ไฟล์ต้นฉบับ
+ผู้ใช้ที่มี per-user Rich Menu อาจยังเห็นเมนูเดิมแทน default
+หลังเปลี่ยนโค้ด ให้รีสตาร์ต uvicorn แล้วเปิดแชต LINE ใหม่
+เลือกหมวดเพื่อดู Flex Carousel หรือพิมพ์คำถามได้เลย
+กด Quick Reply หรือถามต่อ เช่น ต้องเตรียมอะไร / ไปที่ไหน
+พิมพ์ ล้างประวัติ เพื่อเริ่มเรื่องใหม่
+history เก็บเฉพาะคำตอบที่มีหลักฐานและส่งสำเร็จ ค่าเริ่มต้นสูงสุด 4 รอบ อายุ 24 ชั่วโมง
+เก็บใน artifacts/chat_history.sqlite3 แยกผู้ใช้และห้องแชต; ไม่ต้องมี Knowledge Graph
+ข้อมูลที่หมดอายุถูกลบเมื่อมีการเข้าถึง history ไม่ใช่ background timer
+ไฟล์ history มีข้อความส่วนตัว ห้ามนำไปแนบส่งงานหรือเผยแพร่
+การกดเลือกหมวดยังไม่เปลี่ยนบริบท ต้องเลือกหัวข้อย่อยหรือถามเรื่องใหม่ก่อน
+
+9. ลอง UX ใน LINE ตามลำดับ:
+สวัสดี → ได้ข้อความแนะนำและ Quick Reply ไม่เรียก RAG
+กด ขั้นตอนและเอกสาร → ได้ Flex Carousel หัวข้อย่อย
+เลือก แจ้งความคนหาย → ได้คำตอบพร้อมที่มาและ Quick Reply
+พิมพ์ ต้องเตรียมอะไร / ไปที่ไหน → ถามต่อจากหัวข้อเดิม
+กด Quick Reply → ส่งคำถามที่ระบุหัวข้อครบเข้า RAG
+พิมพ์ รถหายทำไง → เปลี่ยนเรื่องไปค้นข้อมูลรถหาย
+พิมพ์ ล้างประวัติ → ล้างบริบทของผู้ใช้ในห้องแชตนี้
+พิมพ์ ไปที่ไหน หลังล้างประวัติ → ระบบถามกลับว่าหมายถึงเรื่องอะไร
+
+10. ปิดระบบ:
+กด Ctrl+C ใน terminal tunnel และ webhook
+ถ้า webhook รันเป็น user-service ให้หยุดด้วย:
+systemctl --user stop smartdoc-webhook.service
+ถ้าเปิด ollama serve เอง ให้กด Ctrl+C ใน terminal นั้นด้วย
+ไม่จำเป็นต้องลบ index, Rich Menu หรือ history เพื่อปิดระบบ
+
+11. เปรียบเทียบโมเดล — ไม่เปลี่ยน .env หรือ index ของ LINE:
+# ดาวน์โหลด LLM เพิ่มจาก Mistral (ครั้งแรกเท่านั้น)
+ollama pull ministral-3:8b
+
+# Embedding 3 ตัว: BGE-M3 / multilingual-e5-large / Qwen3-Embedding-0.6B
+# CPU FP32, 512 tokens; dense กับ hybrid RRF ไม่มี reranker; 3 รอบ latency ต่อคำถาม
+.venv/bin/python benchmark_models.py --stage embeddings
+
+# LLM 3 ตัว: Qwen 27B / Qwen 9B / Ministral 3 8B
+# ลำดับรัน: Ministral 8B → Qwen 9B → Qwen 27B
+# เปิด Ollama ก่อน ใช้ frozen context เดียวกัน + SBERT scorer เดียวกัน + BERTScore
+# ใช้เวลานาน โดยเฉพาะ 27B; งดถาม LINE ระหว่างรันเพื่อไม่รบกวนเวลาแฝง
+.venv/bin/python benchmark_models.py --stage llms
+
+# เปลี่ยน comparator จาก Gemma เป็น Ministral โดยใช้ผล Qwen และหลักฐานเดิม:
+# ย้าย summary ของ Gemma ไป archived_llms; ไฟล์คำตอบเก่าไม่ถูกลบ
+.venv/bin/python benchmark_models.py --stage llms \
+  --llm-models ministral-3:8b --archive-llm gemma3:4b
+
+# หรือรันทั้งสองขั้นตอนต่อกัน
+.venv/bin/python benchmark_models.py --stage all
+
+# หากหยุดกลางทาง รันคำสั่งเดิมซ้ำได้ จะอ่าน checkpoint และทำต่อ
+# หากเปลี่ยนชุดคำถามหรือพารามิเตอร์ ให้แยก output ใหม่ เช่น
+.venv/bin/python benchmark_models.py --stage all --out artifacts/model_benchmark_v2
+
+ผลลัพธ์: artifacts/model_benchmark/comparison.md, comparison.json, embeddings.csv, llms.csv
+rows.json และ *_answers.json เก็บผลรายคำถาม; frozen_contexts.json เก็บหลักฐานร่วม
+Recall@k แบบ section เท่ากับ Hit@k เพราะชุดคำถามมี 1 target_section ต่อข้อ
+Retrieval F1 ไม่ใช่ BERTScore F1; cosine ต่างโมเดลมีสเกลต่างกัน อย่าจัดอันดับด้วย cosine อย่างเดียว
+p95 ของ LLM เป็นผล 18 คำถาม 1 รอบ ยังเป็นผลเบื้องต้น ไม่ใช่ SLA
