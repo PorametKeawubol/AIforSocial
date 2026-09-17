@@ -1,0 +1,118 @@
+{
+  "fingerprint": "b7f7bb8b3a5910c522741152",
+  "version": "sections-v2.1",
+  "section": "1.12",
+  "embedding": {
+    "embedding": "BAAI/bge-m3",
+    "cache_fingerprint": "1c7299b69943dd6662be8fb7",
+    "aggregation": "max of existing per-page ontology hints across section pages",
+    "hints": [
+      "เอกสารประกอบการแจ้งความ",
+      "หลักฐานเกี่ยวกับเหตุการณ์",
+      "หน่วยงานรับแจ้งเรื่อง",
+      "เจ้าหน้าที่รับผิดชอบ"
+    ]
+  },
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "seconds": 27.899023021000176,
+  "attempt": 1,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T16:54:48.486953659Z",
+    "message": {
+      "content": "{\"edges\":[[\"HAS_SUPPORTING_EVIDENCE\",\"หลักฐานแสดงการเป็นเจ้าของหรือผู้ครอบครองทรัพย์\",\"Evidence\",\"ผู้เสียหาย\",\"\",144,145],[\"HAS_SUPPORTING_EVIDENCE\",\"หลักฐานหรือสิ่งของที่เสียหายเท่าที่มีหรือเท่าที่นำไปได้\",\"Evidence\",\"ผู้เสียหาย\",\"\",146,147]]}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 27898265856,
+    "load_duration": 204009452,
+    "prompt_eval_count": 866,
+    "prompt_eval_duration": 5712403000,
+    "eval_count": 70,
+    "eval_duration": 21637073000
+  },
+  "parse_ok": true,
+  "truncated": false,
+  "accepted": [
+    {
+      "section": "1.12",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "หลักฐานหรือสิ่งของที่เสียหายเท่าที่มีหรือเท่าที่นำไปได้",
+      "raw_name": "หลักฐานหรือสิ่งของที่เสียหายเท่าที่มีหรือเท่าที่นำไปได้",
+      "type": "Evidence",
+      "owner": "ผู้เสียหาย",
+      "condition": "",
+      "start_line": 146,
+      "end_line": 147,
+      "evidence": "(2) หลักฐานหรือสิ่งของที่เสียหายเท่าที่มี\nหรือเท่าที่นำไปได้",
+      "pdf_pages": [
+        28
+      ],
+      "printed_pages": [
+        15
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context",
+        "check_compound_entity"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    }
+  ],
+  "rejected": [
+    {
+      "row": [
+        "HAS_SUPPORTING_EVIDENCE",
+        "หลักฐานแสดงการเป็นเจ้าของหรือผู้ครอบครองทรัพย์",
+        "Evidence",
+        "ผู้เสียหาย",
+        "",
+        144,
+        145
+      ],
+      "reason": "entity_not_in_evidence"
+    }
+  ],
+  "initial_validation": {
+    "accepted": [
+      {
+        "section": "1.12",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "หลักฐานหรือสิ่งของที่เสียหายเท่าที่มีหรือเท่าที่นำไปได้",
+        "raw_name": "หลักฐานหรือสิ่งของที่เสียหายเท่าที่มีหรือเท่าที่นำไปได้",
+        "type": "Evidence",
+        "owner": "ผู้เสียหาย",
+        "condition": "",
+        "start_line": 146,
+        "end_line": 147,
+        "evidence": "(2) หลักฐานหรือสิ่งของที่เสียหายเท่าที่มี\nหรือเท่าที่นำไปได้",
+        "pdf_pages": [
+          28
+        ],
+        "printed_pages": [
+          15
+        ],
+        "review_flags": [
+          "check_condition_context",
+          "check_compound_entity"
+        ],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      }
+    ],
+    "rejected": [
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "หลักฐานแสดงการเป็นเจ้าของหรือผู้ครอบครองทรัพย์",
+          "Evidence",
+          "ผู้เสียหาย",
+          "",
+          144,
+          145
+        ],
+        "reason": "entity_not_in_evidence"
+      }
+    ]
+  },
+  "validator_version": "v2.2-unique-nearby-grounding-repair"
+}

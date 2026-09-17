@@ -1,0 +1,11 @@
+{
+  "page": 15,
+  "content": "{\n  \"facts\": [\n    {\n      \"subject\": \"ดิน\",\n      \"subject_type\": \"Topic\",\n      \"relation\": \"RELATED_TO\",\n      \"object\": \"จุลินทรีย์ที่ไม่เป็นประโยชน์\",\n      \"object_type\": \"Pathogen\",\n      \"evidence\": \"พ่นลงดิน เพื่อฆ่าเชื้อจุลินทรีย์ ที่ไม่เป็นประโยชน์\"\n    },\n    {\n      \"subject\": \"ดิน\",\n      \"subject_type\": \"Topic\",\n      \"relation\": \"RELATED_TO\",\n      \"object\": \"แมลงในดิน\",\n      \"object_type\": \"Pathogen\",\n      \"evidence\": \"พ่นลงดิน เพื่อฆ่าเชื้อจุลินทรีย์ ที่ไม่เป็นประโยชน์ และแมลงในดิน\"\n    },\n    {\n      \"subject\": \"การปลูกพืช\",\n      \"subject_type\": \"Topic\",\n      \"relation\": \"RELATED_TO\",\n      \"object\": \"การทำก่อนการปลูก 10 วัน\",\n      \"object_type\": \"Treatment\",\n      \"evidence\": \"ทำก่อนการปลูก พ่นลงดิน เพื่อฆ่าเชื้อจุลินทรีย์\"\n    },\n    {\n      \"subject\": \"พืช\",\n      \"subject_type\": \"Crop\",\n      \"relation\": \"HAS_DISEASE\",\n      \"object\": \"โรครา\",\n      \"object_type\": \"Disease\",\n      \"evidence\": \"ราดโคนต้น รักษาโรครา โรคเน่า\"\n    },\n    {\n      \"subject\": \"พืช\",\n      \"subject_type\": \"Crop\",\n      \"relation\": \"HAS_DISEASE\",\n      \"object\": \"โรคเน่า\",\n      \"object_type\": \"Disease\",\n      \"evidence\": \"ราดโคนต้น รักษาโรครา โรคเน่า\"\n    },\n    {\n      \"subject\": \"พืช\",\n      \"subject_type\": \"Crop\",\n      \"relation\": \"HAS_DISEASE\",\n      \"object\": \"เชื้อรา\",\n      \"object_type\": \"Disease\",\n      \"evidence\": \"พ่นใส่ใบ และดินรอบๆ ต้น ไล่แมลง ป้องกันเชื้อรา\"\n    },\n    {\n      \"subject\": \"พืช\",\n      \"subject_type\": \"Crop\",\n      \"relation\": \"HAS_DISEASE\",\n      \"object\": \"แมลงวางไข่\",\n      \"object_type\": \"Disease\",\n      \"evidence\": \"ป้องกัน แมลงวางไข่\"\n    },\n    {\n      \"subject\": \"การเก็บเกี่ยว\",\n      \"subject_type\": \"Topic\",\n      \"relation\": \"RELATED_TO\",\n      \"object\": \"เพิ่มน้ำตาลในผลไม้ 20 วันก่อนเก็บเกี่ยว\",\n      \"object_type\": \"Treatment\",\n      \"evidence\": \"พ่นอีกครั้ง ก่อนเก็บเกี่ยว 20 วัน เพื่อเพิ่มน้ำตาลในผลไม้\"\n    }\n  ]\n}",
+  "timing": {
+    "seconds": 20.043,
+    "model": "qwen3.5:9b",
+    "eval_count": 627,
+    "eval_duration": 19045960000,
+    "prompt_eval_count": 654
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "page": 24,
+  "facts": [
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อรา",
+      "object_type": "Pathogen",
+      "evidence": "สาเหตุมาจากเชื้อรา"
+    },
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "จุดฉ่ำน้ำรูปวงรีหรือรูปไข่",
+      "object_type": "Symptom",
+      "evidence": "ข้อสังเกต คือ พริกจะเป็นจุดฉ่ำน้ำรูปวงรีหรือรูปไข่"
+    },
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "แผลบุ๋มลึกเป็นสีน้ำตาล",
+      "object_type": "Symptom",
+      "evidence": "และแผลจะบุ๋มลึก เป็นสีน้ำตาล"
+    },
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "จุดสีดำเรียงซ้อนกันในแผล",
+      "object_type": "Symptom",
+      "evidence": "และมีจุดสีดำเรียงซ้อนกันในแผล"
+    },
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "เมือกสีส้มอ่อน",
+      "object_type": "Symptom",
+      "evidence": "และแผลอาจมีเมือกสีส้มอ่อน"
+    },
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ผลพริกโค้งงอหรือหดย่นคล้ายกุ้งแห้ง",
+      "object_type": "Symptom",
+      "evidence": "ผลพริกจะโค้งงอ หรือหดย่นคล้ายกุ้งแห้ง"
+    },
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "สารแมนโคเซบ",
+      "object_type": "Treatment",
+      "evidence": "คลุกเมล็ดพันธุ์ ด้วยสารเคมี เช่น สารแมนโคเซบ"
+    },
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "น้ำหมักสมุนไพร",
+      "object_type": "Treatment",
+      "evidence": "ควรพ่นสารเคมีหรือน้ำหมักสมุนไพรป้องกันโรค"
+    }
+  ],
+  "timing": {
+    "seconds": 21.899,
+    "model": "qwen3.5:9b",
+    "eval_count": 672,
+    "eval_duration": 20766332000,
+    "prompt_eval_count": 820
+  }
+}

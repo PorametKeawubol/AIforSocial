@@ -1,0 +1,23 @@
+/* Entity-kind labels are added to all worksheet variants before exporting. */
+node.Crop { color: #2E8B57; size: 65px; caption: '{name}'; font-size: 12px; }
+node.Disease { color: #D9534F; size: 65px; caption: '{name}'; font-size: 12px; }
+node.Pathogen { color: #8E5BB7; size: 65px; caption: '{name}'; font-size: 12px; }
+node.Symptom { color: #E69F00; size: 65px; caption: '{name}'; font-size: 12px; }
+node.Treatment { color: #2878B5; size: 65px; caption: '{name}'; font-size: 12px; }
+node.Topic { color: #718096; size: 65px; caption: '{name}'; font-size: 12px; }
+
+/* ThaiNameTagger classes used by Model II. */
+node.PERSON { color: #E76F51; size: 65px; caption: '{name}'; font-size: 12px; }
+node.LOCATION { color: #2A9D8F; size: 65px; caption: '{name}'; font-size: 12px; }
+node.TIME { color: #457B9D; size: 65px; caption: '{name}'; font-size: 12px; }
+node.ORGANIZATION { color: #9B5DE5; size: 65px; caption: '{name}'; font-size: 12px; }
+node.PERCENT { color: #F4A261; size: 65px; caption: '{name}'; font-size: 12px; }
+node.LAW { color: #6D597A; size: 65px; caption: '{name}'; font-size: 12px; }
+node.MONEY { color: #BC6C25; size: 65px; caption: '{name}'; font-size: 12px; }
+node.URL { color: #3A86FF; size: 65px; caption: '{name}'; font-size: 12px; }
+node.LEN { color: #A8DADC; size: 65px; caption: '{name}'; font-size: 12px; }
+relationship {
+  caption: '<type>';
+  font-size: 10px;
+  shaft-width: 2px;
+}

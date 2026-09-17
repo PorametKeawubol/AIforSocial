@@ -1,0 +1,11 @@
+{
+  "page": 34,
+  "content": "{\n  \"facts\": [\n    {\n      \"subject\": \"โรคใบจุดตากบ\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"CAUSED_BY\",\n      \"object\": \"เชื้อรา\",\n      \"object_type\": \"Pathogen\",\n      \"evidence\": \"มีเชื้อสาเหตุคือเชื้อรา\"\n    },\n    {\n      \"subject\": \"โรคใบจุดตากบ\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"EXHIBITS\",\n      \"object\": \"แผลวงกลมหรือทางยาว\",\n      \"object_type\": \"Symptom\",\n      \"evidence\": \"ทำให้เกิดแผลวงกลมหรือทางยาว\"\n    },\n    {\n      \"subject\": \"โรคใบจุดตากบ\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"EXHIBITS\",\n      \"object\": \"ขอบแผลสีน้ำตาลเข้ม\",\n      \"object_type\": \"Symptom\",\n      \"evidence\": \"มีขอบแผลสีน้ำตาลเข้ม\"\n    },\n    {\n      \"subject\": \"โรคใบจุดตากบ\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"EXHIBITS\",\n      \"object\": \"เนื้อแผลสีน้ำตาลอ่อน\",\n      \"object_type\": \"Symptom\",\n      \"evidence\": \"เนื้อแผลสีน้ำตาลอ่อน\"\n    },\n    {\n      \"subject\": \"โรคใบจุดตากบ\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"EXHIBITS\",\n      \"object\": \"กลางแผลสีเทา หรือขาว\",\n      \"object_type\": \"Symptom\",\n      \"evidence\": \"กลางแผลสีเทา หรือขาว\"\n    },\n    {\n      \"subject\": \"โรคใบจุดตากบ\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"TREATED_BY\",\n      \"object\": \"สารแมนโคเซบ\",\n      \"object_type\": \"Treatment\",\n      \"evidence\": \"พ่นสารเคมีป้องกันและกำจัดโรค เช่น สารแมนโคเซบ\"\n    },\n    {\n      \"subject\": \"โรคใบจุดตากบ\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"TREATED_BY\",\n      \"object\": \"น้ำหมักสมุนไพร\",\n      \"object_type\": \"Treatment\",\n      \"evidence\": \"หรือสารเบโนมิล หรือน้ำหมักสมุนไพร\"\n    },\n    {\n      \"subject\": \"การปลูกพริก\",\n      \"subject_type\": \"Topic\",\n      \"relation\": \"RELATED_TO\",\n      \"object\": \"อากาศถ่ายเทได้สะดวก\",\n      \"object_type\": \"Topic\",\n      \"evidence\": \"เพื่อให้อากาศถ่ายเทได้สะดวก\"\n    }\n  ]\n}",
+  "timing": {
+    "seconds": 20.054,
+    "model": "qwen3.5:9b",
+    "eval_count": 620,
+    "eval_duration": 18771770000,
+    "prompt_eval_count": 734
+  }
+}

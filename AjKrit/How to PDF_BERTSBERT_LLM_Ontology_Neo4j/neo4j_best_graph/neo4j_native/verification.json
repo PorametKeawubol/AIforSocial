@@ -1,0 +1,15 @@
+{
+  "neo4j_version": [
+    "5.26.30"
+  ],
+  "uri": "bolt://localhost:7688",
+  "database": "neo4j",
+  "nodes": 266,
+  "relationships": 879,
+  "semantic_nodes": 207,
+  "semantic_relationships": 263,
+  "node_ids_match": true,
+  "all_node_properties_match": true,
+  "all_relationship_properties_match": true,
+  "native_export_files": 10
+}

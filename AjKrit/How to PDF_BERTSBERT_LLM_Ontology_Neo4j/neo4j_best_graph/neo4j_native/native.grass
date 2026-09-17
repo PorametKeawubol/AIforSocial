@@ -1,0 +1,27 @@
+node.Activity { color: #698896; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Application { color: #698896; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Benefit { color: #698896; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Biocontrol { color: #00a6a1; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Chemical { color: #9e67a5; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Condition { color: #698896; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Crop { color: #15956a; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Disease { color: #df6470; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.DiseaseGroup { color: #bd536b; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Document { color: #254353; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Duration { color: #698896; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Environment { color: #688a9b; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Fertilizer { color: #698896; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.GrowthStage { color: #698896; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Material { color: #a87b4f; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Page { color: #698896; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Pathogen { color: #8d72c7; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Pest { color: #d67832; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Preparation { color: #698896; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Purpose { color: #698896; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Season { color: #799c50; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Section { color: #587287; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Soil { color: #926b47; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Symptom { color: #dfa52d; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Treatment { color: #397cce; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+node.Variety { color: #698896; size: 70px; diameter: 70px; caption: '{name}'; font-size: 13px; }
+relationship { caption: '<type>'; font-size: 11px; shaft-width: 2px; }

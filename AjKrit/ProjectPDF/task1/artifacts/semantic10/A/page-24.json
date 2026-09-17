@@ -1,0 +1,65 @@
+{
+  "fingerprint": "c86cb3dfee9894b04fdcd153",
+  "pdf_page": 24,
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "embedding": "BAAI/bge-m3",
+  "seconds": 49.987696170806885,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T14:48:13.574448005Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\"edges\":[[\"1.3\",\"HANDLED_BY\",\"สถานีตำรวจท้องที่ที่หาย\",\"Organization\",\"\",\"ต่อสถานีตำรวจท้องที่ที่หาย\"],[\"1.3\",\"HANDLED_BY\",\"เจ้าพนักงานตำรวจ\",\"PersonRole\",\"\",\"เจ้าพนักงานตำรวจจะสอบสวนว่า หายจริงหรือไม่ แล้วลงบันทึกประจำวันไว้เป็นหลักฐาน\"],[\"1.3\",\"HAS_SUPPORTING_EVIDENCE\",\"บันทึกประจำวัน\",\"Evidence\",\"\",\"ลงบันทึกประจำวันไว้เป็นหลักฐาน\"],[\"1.3\",\"HAS_SUPPORTING_EVIDENCE\",\"หลักฐานการแจ้งความเอกสารหาย\",\"Document\",\"\",\"เจ้าพนักงานตำรวจจะออกหลักฐาน การแจ้งความเอกสารหายไปให้ท่านนำไปยังหน่วยงาน ที่เกี่ยวข้องเพื่อดำเนินการต่อไป\"]]}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 49986000595,
+    "load_duration": 200944145,
+    "prompt_eval_count": 739,
+    "prompt_eval_duration": 6018756000,
+    "eval_count": 131,
+    "eval_duration": 43471894000
+  },
+  "accepted": [
+    [
+      "1.3",
+      "HANDLED_BY",
+      "สถานีตำรวจท้องที่ที่หาย",
+      "Organization",
+      "",
+      "ต่อสถานีตำรวจท้องที่ที่หาย"
+    ],
+    [
+      "1.3",
+      "HANDLED_BY",
+      "เจ้าพนักงานตำรวจ",
+      "PersonRole",
+      "",
+      "เจ้าพนักงานตำรวจจะสอบสวนว่า หายจริงหรือไม่ แล้วลงบันทึกประจำวันไว้เป็นหลักฐาน"
+    ],
+    [
+      "1.3",
+      "HAS_SUPPORTING_EVIDENCE",
+      "บันทึกประจำวัน",
+      "Evidence",
+      "",
+      "ลงบันทึกประจำวันไว้เป็นหลักฐาน"
+    ]
+  ],
+  "rejected": [
+    {
+      "row": [
+        "1.3",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หลักฐานการแจ้งความเอกสารหาย",
+        "Document",
+        "",
+        "เจ้าพนักงานตำรวจจะออกหลักฐาน การแจ้งความเอกสารหายไปให้ท่านนำไปยังหน่วยงาน ที่เกี่ยวข้องเพื่อดำเนินการต่อไป"
+      ],
+      "reason": "evidence_not_in_source"
+    }
+  ],
+  "parse_ok": true,
+  "status": "requires_semantic_review",
+  "truncated": false
+}

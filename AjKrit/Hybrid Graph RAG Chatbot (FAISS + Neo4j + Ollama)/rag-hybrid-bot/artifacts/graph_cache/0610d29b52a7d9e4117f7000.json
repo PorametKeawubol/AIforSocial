@@ -1,0 +1,76 @@
+{
+  "page": 20,
+  "facts": [
+    {
+      "subject": "โรคร้าย",
+      "subject_type": "Disease",
+      "relation": "HAS_DISEASE",
+      "object": "โรคแคงเกอร์",
+      "object_type": "Disease",
+      "evidence": "ปราบโรคแคงเกอร์\nโรคร้ายในมะนาว"
+    },
+    {
+      "subject": "โรคแคงเกอร์",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อแบคทีเรีย",
+      "object_type": "Pathogen",
+      "evidence": "โรคแคงเกอร์ เป็นโรคที่เกิดจากเชื้อแบคทีเรียเข้าทำลาย"
+    },
+    {
+      "subject": "โรคร้ายในมะนาว",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ผลผลิตลดลง",
+      "object_type": "Symptom",
+      "evidence": "ถ้าระบาด\nมากๆ อาจทำให้ผลผลิตลดลง"
+    },
+    {
+      "subject": "โรคแคงเกอร์",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ขายไม่ได้ราคา",
+      "object_type": "Symptom",
+      "evidence": "ถ้าระบาด\nมากๆ อาจทำให้ผลผลิตลดลง ขายไม่ได้ราคา"
+    },
+    {
+      "subject": "โรคแคงเกอร์ในมะนาว",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "วิธีที่ 1 และ วิธีที่ 2",
+      "object_type": "Treatment",
+      "evidence": "แนะนำ 2 วิธีที่ใช้ใน\nการปราบโรคนี้"
+    },
+    {
+      "subject": "โรคร้ายในมะนาว",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ระบาดมากในช่วงที่มีลมฝนแรง",
+      "object_type": "Symptom",
+      "evidence": "ซึ่งระบาด\nมากๆ ในช่วงที่มีลมฝนแรง"
+    },
+    {
+      "subject": "โรคแคงเกอร์ในมะนาว",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "การระบาดในช่วงแรกๆ ของโรค",
+      "object_type": "Symptom",
+      "evidence": "โดย 2 วิธีนี้จะใช้ได้ผลกับการระบาด\nในช่วงแรกๆ ของโรคแคงเกอร์ในมะนาว"
+    },
+    {
+      "subject": "โรคร้ายในมะนาว",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ทางบาดแผลของพืช",
+      "object_type": "Symptom",
+      "evidence": "เข้าทำลาย\nทางบาดแผลของพืช"
+    }
+  ],
+  "timing": {
+    "seconds": 21.18,
+    "model": "qwen3.5:9b",
+    "eval_count": 670,
+    "eval_duration": 20230630000,
+    "prompt_eval_count": 642
+  }
+}

@@ -1,0 +1,10 @@
+node { diameter: 35px; caption: '{name}'; font-size: 12px; }
+node.Case { color: #4C8EDA; border-color: #1D4ED8; text-color-internal: #FFFFFF; diameter: 65px; }
+node.Chapter { color: #6D5BD0; border-color: #4338CA; text-color-internal: #FFFFFF; diameter: 70px; }
+node.Document { color: #8DCC93; border-color: #059669; diameter: 45px; }
+node.Evidence { color: #F79767; border-color: #059669; diameter: 45px; }
+node.Contact { color: #C990C0; border-color: #9333EA; diameter: 40px; }
+node.Organization { color: #57C7E3; border-color: #EA580C; diameter: 50px; }
+node.PersonRole { color: #FFE081; border-color: #D97706; diameter: 45px; }
+node.SourceDocument { color: #F16667; border-color: #B91C1C; text-color-internal: #FFFFFF; diameter: 72px; }
+relationship { color: #94A3B8; shaft-width: 1px; font-size: 9px; caption: '<type>'; }

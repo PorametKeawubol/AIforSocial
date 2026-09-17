@@ -1,0 +1,18 @@
+node {
+  diameter: 65px;
+  caption: '{name}';
+  font-size: 12px;
+}
+relationship {
+  caption: '<type>';
+  font-size: 10px;
+  shaft-width: 2px;
+}
+node.Crop { color: #15956a; }
+node.Disease { color: #df6470; }
+node.DiseaseGroup { color: #bd536b; }
+node.Pathogen { color: #8d72c7; }
+node.Symptom { color: #dfa52d; }
+node.Treatment { color: #397cce; }
+node.Biocontrol { color: #00a6a1; }
+node.Pest { color: #d67832; }

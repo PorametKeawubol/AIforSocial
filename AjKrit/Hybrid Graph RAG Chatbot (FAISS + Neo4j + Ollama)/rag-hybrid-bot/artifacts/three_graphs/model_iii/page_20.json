@@ -1,0 +1,11 @@
+{
+  "page": 20,
+  "raw": "{\"entities\": []}",
+  "timing": {
+    "seconds": 1.154,
+    "model": "qwen3.5:9b",
+    "eval_count": 6,
+    "eval_duration": 153234000,
+    "prompt_eval_count": 497
+  }
+}

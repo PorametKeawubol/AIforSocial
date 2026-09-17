@@ -1,0 +1,76 @@
+{
+  "page": 19,
+  "facts": [
+    {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "ไวรัส",
+      "object_type": "Pathogen",
+      "evidence": "สาเหตุเกิดจาก “ไวรัส”"
+    },
+    {
+      "subject": "ข้าวโพด",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "ใบด่างลายเขียวซีดสลับเขียวเข้ม",
+      "object_type": "Symptom",
+      "evidence": "ข้าวโพดจะแสดงอาการใบด่างลายเขียวซีดสลับเขียวเข้ม"
+    },
+    {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ประจุดเหลือง",
+      "object_type": "Symptom",
+      "evidence": "หรืออาการด่างประจุดเหลือง"
+    },
+    {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ประร่วมกับใบและยอดไหม้",
+      "object_type": "Symptom",
+      "evidence": "หรืออาการประร่วมกับใบและยอดไหม้"
+    },
+    {
+      "subject": "ข้าวโพดที่โตแล้ว",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "ฝักที่ไม่สมบูรณ์",
+      "object_type": "Symptom",
+      "evidence": "ต้นข้าวโพดที่โตแล้วจะให้ฝักที่ไม่สมบูรณ์"
+    },
+    {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "กำจัดเพลี้ยอ่อนซึ่งเป็นตัวแมลงพาหะนำโรค",
+      "object_type": "Treatment",
+      "evidence": "การป้องกัน ให้กำจัดเพลี้ยอ่อนซึ่งเป็นตัวแมลงพาหะนำโรค"
+    },
+    {
+      "subject": "ข้าวโพด",
+      "subject_type": "Crop",
+      "relation": "PREVENTED_BY",
+      "object": "ปลูกข้าวโพดพันธุ์ต้านทาน",
+      "object_type": "Treatment",
+      "evidence": "ปลูกข้าวโพดพันธุ์ต้านทาน"
+    },
+    {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "ปลูกพืชหมุนเวียน",
+      "object_type": "Treatment",
+      "evidence": "ปลูกพืชหมุนเวียน"
+    }
+  ],
+  "timing": {
+    "seconds": 20.319,
+    "model": "qwen3.5:9b",
+    "eval_count": 638,
+    "eval_duration": 19332249000,
+    "prompt_eval_count": 581
+  }
+}

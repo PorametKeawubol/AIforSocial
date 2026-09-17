@@ -1,0 +1,285 @@
+{
+  "fingerprint": "3e26517e7300dd5b387144e4",
+  "version": "sections-v2.1",
+  "section": "1.4",
+  "embedding": {
+    "embedding": "BAAI/bge-m3",
+    "cache_fingerprint": "1c7299b69943dd6662be8fb7",
+    "aggregation": "max of existing per-page ontology hints across section pages",
+    "hints": [
+      "เอกสารประกอบการแจ้งความ",
+      "หน่วยงานรับแจ้งเรื่อง",
+      "ช่องทางโทรศัพท์ติดต่อ",
+      "หลักฐานเกี่ยวกับเหตุการณ์"
+    ]
+  },
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "seconds": 80.10584337699947,
+  "attempt": 1,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T16:46:55.884385646Z",
+    "message": {
+      "content": "{\n\"edges\": [\n[\"HAS_SUPPORTING_EVIDENCE\", \"บัตรประจำตัวผู้หาย\", \"Document\", \"ผู้หาย\", \"ถ้ามี\", 80, 80],\n[\"HAS_SUPPORTING_EVIDENCE\", \"สำเนาทะเบียนบ้าน\", \"Document\", \"ผู้หาย\", \"ถ้ามี\", 81, 81],\n[\"HAS_SUPPORTING_EVIDENCE\", \"ภาพถ่ายคนหาย\", \"Evidence\", \"ผู้หาย\", \"ปัจจุบัน\", 82, 82],\n[\"HAS_SUPPORTING_EVIDENCE\", \"ใบเกิด\", \"Document\", \"ผู้หาย\", \"ถ้ามี\", 83, 84],\n[\"HAS_SUPPORTING_EVIDENCE\", \"ใบสำคัญทหาร\", \"Document\", \"ผู้หาย\", \"ถ้ามี\", 83, 84],\n[\"CONTACT_VIA\", \"08 0775 2673\", \"Contact\", \"ศูนย์ข้อมูลคนหาย มูลนิธิกระจกเงา\", \"\", 85, 86]\n]\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 80105078307,
+    "load_duration": 210665147,
+    "prompt_eval_count": 1000,
+    "prompt_eval_duration": 7113313000,
+    "eval_count": 222,
+    "eval_duration": 72458893000
+  },
+  "parse_ok": true,
+  "truncated": false,
+  "accepted": [
+    {
+      "section": "1.4",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "บัตรประจำตัวผู้หาย",
+      "raw_name": "บัตรประจำตัวผู้หาย",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "ถ้ามี",
+      "start_line": 80,
+      "end_line": 80,
+      "evidence": "(1) บัตรประจำตัวผู้หาย (ถ้ามี)",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.4",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "สำเนาทะเบียนบ้าน",
+      "raw_name": "สำเนาทะเบียนบ้าน",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "ถ้ามี",
+      "start_line": 81,
+      "end_line": 81,
+      "evidence": "(2) สำเนาทะเบียนบ้านของผู้หาย (ถ้ามี)",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.4",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "ภาพถ่าย",
+      "raw_name": "ภาพถ่ายคนหาย",
+      "type": "Evidence",
+      "owner": "ผู้หาย",
+      "condition": "ปัจจุบัน",
+      "start_line": 82,
+      "end_line": 82,
+      "evidence": "(3) ภาพถ่ายคนหาย (ภาพถ่ายทีเ่ ป็นปัจจุบนั )",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.4",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "สูติบัตร",
+      "raw_name": "ใบเกิด",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "ถ้ามี",
+      "start_line": 83,
+      "end_line": 84,
+      "evidence": "(4) ใบสำคัญทางราชการ เช่น ใบเกิด,\nใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.4",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "ใบสำคัญทหาร",
+      "raw_name": "ใบสำคัญทหาร",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "ถ้ามี",
+      "start_line": 83,
+      "end_line": 84,
+      "evidence": "(4) ใบสำคัญทางราชการ เช่น ใบเกิด,\nใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.4",
+      "relation": "CONTACT_VIA",
+      "name": "0807752673",
+      "raw_name": "08 0775 2673",
+      "type": "Contact",
+      "owner": "ศูนย์ข้อมูลคนหาย มูลนิธิกระจกเงา",
+      "condition": "",
+      "start_line": 85,
+      "end_line": 86,
+      "evidence": "ศู น ย์ ข ้ อ มู ล คนหาย มู ล นิ ธิ ก ระจกเงา\nโทร. 08 0775 2673",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    }
+  ],
+  "rejected": [],
+  "initial_validation": {
+    "accepted": [
+      {
+        "section": "1.4",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "บัตรประจำตัวผู้หาย",
+        "raw_name": "บัตรประจำตัวผู้หาย",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "ถ้ามี",
+        "start_line": 80,
+        "end_line": 80,
+        "evidence": "(1) บัตรประจำตัวผู้หาย (ถ้ามี)",
+        "pdf_pages": [
+          25
+        ],
+        "printed_pages": [
+          12
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.4",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "สำเนาทะเบียนบ้าน",
+        "raw_name": "สำเนาทะเบียนบ้าน",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "ถ้ามี",
+        "start_line": 81,
+        "end_line": 81,
+        "evidence": "(2) สำเนาทะเบียนบ้านของผู้หาย (ถ้ามี)",
+        "pdf_pages": [
+          25
+        ],
+        "printed_pages": [
+          12
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.4",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "ภาพถ่าย",
+        "raw_name": "ภาพถ่ายคนหาย",
+        "type": "Evidence",
+        "owner": "ผู้หาย",
+        "condition": "ปัจจุบัน",
+        "start_line": 82,
+        "end_line": 82,
+        "evidence": "(3) ภาพถ่ายคนหาย (ภาพถ่ายทีเ่ ป็นปัจจุบนั )",
+        "pdf_pages": [
+          25
+        ],
+        "printed_pages": [
+          12
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.4",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "สูติบัตร",
+        "raw_name": "ใบเกิด",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "ถ้ามี",
+        "start_line": 83,
+        "end_line": 84,
+        "evidence": "(4) ใบสำคัญทางราชการ เช่น ใบเกิด,\nใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)",
+        "pdf_pages": [
+          25
+        ],
+        "printed_pages": [
+          12
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.4",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "ใบสำคัญทหาร",
+        "raw_name": "ใบสำคัญทหาร",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "ถ้ามี",
+        "start_line": 83,
+        "end_line": 84,
+        "evidence": "(4) ใบสำคัญทางราชการ เช่น ใบเกิด,\nใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)",
+        "pdf_pages": [
+          25
+        ],
+        "printed_pages": [
+          12
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.4",
+        "relation": "CONTACT_VIA",
+        "name": "0807752673",
+        "raw_name": "08 0775 2673",
+        "type": "Contact",
+        "owner": "ศูนย์ข้อมูลคนหาย มูลนิธิกระจกเงา",
+        "condition": "",
+        "start_line": 85,
+        "end_line": 86,
+        "evidence": "ศู น ย์ ข ้ อ มู ล คนหาย มู ล นิ ธิ ก ระจกเงา\nโทร. 08 0775 2673",
+        "pdf_pages": [
+          25
+        ],
+        "printed_pages": [
+          12
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      }
+    ],
+    "rejected": []
+  },
+  "validator_version": "v2.2-unique-nearby-grounding-repair"
+}

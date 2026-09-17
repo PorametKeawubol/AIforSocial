@@ -1,0 +1,11 @@
+{
+  "page": 46,
+  "raw": "{\n  \"entities\": [\n    {\n      \"crop\": \"ทุเรียน\",\n      \"disease\": \"โรครากเน่าโคนเน่า\"\n    }\n  ]\n}",
+  "timing": {
+    "seconds": 2.5,
+    "model": "qwen3.5:9b",
+    "eval_count": 44,
+    "eval_duration": 1279968000,
+    "prompt_eval_count": 621
+  }
+}

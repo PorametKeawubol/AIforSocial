@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "nodes": 79,
+  "relationships": 97,
+  "labels": {
+    "Case": 16,
+    "Document": 34,
+    "Organization": 4,
+    "PersonRole": 4,
+    "Evidence": 17,
+    "Contact": 3,
+    "SourceDocument": 1
+  },
+  "relationship_types": {
+    "HAS_SUPPORTING_EVIDENCE": 64,
+    "HANDLED_BY": 6,
+    "NOT_HANDLED_BY": 1,
+    "ISSUES": 1,
+    "CONTACT_VIA": 3,
+    "CERTIFIED_BY": 3,
+    "ABOUT_DOCUMENT": 3,
+    "HAS_SECTION": 16
+  },
+  "connected_components": [
+    79
+  ],
+  "model_candidate_relation_matches": 58,
+  "source_reviewed_relations": 81,
+  "caution": "Model match means an entity-relation candidate was found; final owner, condition and evidence are source-reviewed."
+}

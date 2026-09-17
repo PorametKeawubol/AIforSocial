@@ -1,0 +1,32 @@
+{
+  "pdf_pages": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "printed_pages": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "scope": "Sections 1.1 through 1.16; police contact, documents and reporting procedures",
+  "excluded": "Section 1.17 begins on PDF page 30 and continues outside selection; excluded from extraction",
+  "source_edition": "July 2558 BE; extract historical document facts only",
+  "comparison": "Same ten source pages for BGE-M3 and multilingual-e5-large, same local Qwen3.8-27B LLM",
+  "status": "Reviewed graph imported into Neo4j; independent raw LLM A/B extraction is resumable, inspect page files for current progress",
+  "boundary_policy": "Carry section context across pages; preserve evidence page numbers; do not infer that every mentioned document is mandatory"
+}

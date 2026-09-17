@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "completed_at": "2026-09-14T15:34:41.265025+00:00",
+  "user_authorization": "ลบเลย",
+  "deleted": {
+    "nodes": 10245,
+    "relationships": 27558
+  },
+  "remaining": {
+    "nodes": 78,
+    "relationships": 81
+  },
+  "retained_graph_properties_unchanged": true,
+  "backup": "unrelated-backup.pickle.gz",
+  "backup_sha256": "3ecd48b4806b12ac390a2dcf0d2a807c86d39158798bd4aaf9129b4a75eca1fa"
+}

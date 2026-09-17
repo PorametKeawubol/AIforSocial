@@ -1,0 +1,76 @@
+{
+  "page": 28,
+  "facts": [
+    {
+      "subject": "โรคเหี่ยว",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อแบคทีเรีย",
+      "object_type": "Pathogen",
+      "evidence": "โรคเหี่ยวที่เกิดจากเชื้อแบคทีเรีย"
+    },
+    {
+      "subject": "พืชหมุนเวียน",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ข้าวโพด",
+      "object_type": "Crop",
+      "evidence": "ปลูกพืชหมุนเวียน เช่น ข้าวโพด"
+    },
+    {
+      "subject": "พืชหมุนเวียน",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ถั่ว",
+      "object_type": "Crop",
+      "evidence": "ปลูกพืชหมุนเวียน เช่น ข้าวโพด หรือพืชตระกูลถั่ว"
+    },
+    {
+      "subject": "โรคเหี่ยว",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "อาการเหียวเขียวกระจายเป็นกลุ่มๆ",
+      "object_type": "Symptom",
+      "evidence": "ทำให้เกิดอาการเหี่ยวเขียว กระจายเป็นกลุ่มๆ"
+    },
+    {
+      "subject": "โรคเหี่ยว",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ยอดและกิ่งใบจะลู่ลงในช่วงกลางวัน และฟื้นตัวในช่วงกลางคืน",
+      "object_type": "Symptom",
+      "evidence": "ยอดและกิ่งใบจะลู่ลงในช่วง กลางวัน และฟื้นตัวในช่วงกลางคืน"
+    },
+    {
+      "subject": "โรคเหี่ยว",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ยืนต้นตายขณะที่ใบยังเขียวอยู่ได้ภายใน 2 ถึง 3 วัน",
+      "object_type": "Symptom",
+      "evidence": "จะเหี่ยวและยืนต้นตายขณะที่ใบยังเขียวอยู่ได้ ภายใน 2 ถึง 3 วัน"
+    },
+    {
+      "subject": "โรคเหี่ยว",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "การถอนต้นที่เป็นโรคออกไปทำลายด้วยการเผาไถตากดิน",
+      "object_type": "Treatment",
+      "evidence": "ถอนต้นที่เป็นโรคออกไปทำลายด้วย การเผาไถตากดิน"
+    },
+    {
+      "subject": "โรคเหี่ยว",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "การใส่ปุ๋ยอินทรีย์เพื่อเพิ่มปริมาณจุลินทรีย์แข่งขันในดิน",
+      "object_type": "Treatment",
+      "evidence": "ใส่ปุ๋ยอินทรีย์ เพื่อเพิ่มปริมาณจุลินทรีย์แข่งขันในดิน"
+    }
+  ],
+  "timing": {
+    "seconds": 21.809,
+    "model": "qwen3.5:9b",
+    "eval_count": 685,
+    "eval_duration": 20671704000,
+    "prompt_eval_count": 664
+  }
+}

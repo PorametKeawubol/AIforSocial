@@ -1,0 +1,33 @@
+{
+  "javascript_errors": [],
+  "views": [
+    {
+      "view": "01_overview",
+      "nodes": 31,
+      "edges": 30
+    },
+    {
+      "view": "02_chili_virus_detail",
+      "nodes": 18,
+      "edges": 32
+    },
+    {
+      "view": "03_durian_detail",
+      "nodes": 15,
+      "edges": 14
+    },
+    {
+      "view": "04_shared_biocontrol",
+      "nodes": 8,
+      "edges": 8
+    },
+    {
+      "view": "05_full_semantic",
+      "nodes": 207,
+      "edges": 263
+    }
+  ],
+  "search_test": "passed",
+  "section_search_test": "passed",
+  "edge_evidence_test": "passed"
+}

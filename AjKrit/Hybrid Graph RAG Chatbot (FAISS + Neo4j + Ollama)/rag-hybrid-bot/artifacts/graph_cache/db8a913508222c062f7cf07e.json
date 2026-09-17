@@ -1,0 +1,76 @@
+{
+  "page": 48,
+  "facts": [
+    {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคเข้าทำลายรุนแรง",
+      "object_type": "Disease",
+      "evidence": "กรณีโรคเข้าทำลายรุนแรง ให้เกษตรกรถากหรือขูดผิวเปลือกบริเวณที่เป็นโรคออก"
+    },
+    {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "มอดเจาะกิ่ง",
+      "object_type": "Disease",
+      "evidence": "ถ้าพบกิ่งแห้งที่มีรอยเจาะทำลายของมอด ให้ตัดไปเผาไฟทิ้ง"
+    },
+    {
+      "subject": "โรคเข้าทำลายรุนแรง",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "ฟอสอีทิล-อะลูมิเนียม 80% ดับเบิลยูพี",
+      "object_type": "Treatment",
+      "evidence": "จากนั้นทาแผลด้วยสารป้องกันกำจัดโรคพืชฟอสอีทิล-อะลูมิเนียม 80% ดับเบิลยูพี"
+    },
+    {
+      "subject": "โรคเข้าทำลายรุนแรง",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "เมทาแลกซิล 25% ดับเบิลยูพี",
+      "object_type": "Treatment",
+      "evidence": "หรือสารเมทาแลกซิล 25% ดับเบิลยูพี อัตรา 50-60 กรัมต่อน้ำ 1 ลิตร"
+    },
+    {
+      "subject": "โรคเข้าทำลายรุนแรง",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "เมทาแลกซิล+แมนโคเซบ 65% ดับเบิลยูพี",
+      "object_type": "Treatment",
+      "evidence": "หรือสารเมทาแลกซิล+แมนโคเซบ 65% ดับเบิลยูพี อัตรา 100 กรัมต่อน้ำ 1 ลิตร"
+    },
+    {
+      "subject": "โรคเข้าทำลายรุนแรง",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ใบเหลืองทั้งต้น",
+      "object_type": "Symptom",
+      "evidence": "หากพบใบเหลืองทั้งต้น ให้ราดดินด้วยสารป้องกันกำจัดโรคพืชฟอสอีทิล-อะลูมิเนียม 80% ดับเบิลยูพี"
+    },
+    {
+      "subject": "มอดเจาะกิ่ง",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "คลอร์ไพริฟอส 40% อีซี",
+      "object_type": "Treatment",
+      "evidence": "ให้พ่นบนกิ่งใหญ่หรือลำต้นที่มีรูมอดเจาะด้วยสารฆ่าแมลง คลอร์ไพริฟอส 40% อีซี"
+    },
+    {
+      "subject": "โรคเข้าทำลายรุนแรงมาก",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "การขุดและเผาทำลายต้นทุเรียน",
+      "object_type": "Treatment",
+      "evidence": "ส่วนต้นทุเรียนที่เป็นโรครุนแรงมากหรือยืนต้นแห้งตาย ให้ขุดออก แล้วนำไปเผาทำลายนอกแปลง"
+    }
+  ],
+  "timing": {
+    "seconds": 25.874,
+    "model": "qwen3.5:9b",
+    "eval_count": 807,
+    "eval_duration": 24239381000,
+    "prompt_eval_count": 941
+  }
+}

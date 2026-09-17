@@ -1,0 +1,109 @@
+{
+  "fingerprint": "7c0b263ce095aba9773fc74d",
+  "pdf_page": 21,
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "embedding": "BAAI/bge-m3",
+  "seconds": 121.73602247238159,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T14:43:56.17845357Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\"edges\":[[\"1.1\",\"HAS_SUPPORTING_EVIDENCE\",\"บัตรประจำตัวประชาชน\",\"Document\",\"\",\"บัตรประจำตัวประชาชน\"],[\"1.1\",\"HAS_SUPPORTING_EVIDENCE\",\"ใบแทนฯ\",\"Document\",\"\",\"ใบแทนฯ\"],[\"1.1\",\"HAS_SUPPORTING_EVIDENCE\",\"บัตรประจำตัวข้าราชการ\",\"Document\",\"\",\"บัตรประจำตัวข้าราชการ\"],[\"1.1\",\"HAS_SUPPORTING_EVIDENCE\",\"ใบสำคัญประจำตัวคนต่างด้าว\",\"Document\",\"\",\"ใบสำคัญประจำตัวคนต่างด้าว\"],[\"1.1\",\"HAS_SUPPORTING_EVIDENCE\",\"หนังสือเดินทาง (Passport)\",\"Document\",\"\",\"หนังสือเดินทาง (Passport) สำหรับ ชาวต่างประเทศที่เดินทางเข้ามาภายในประเทศ\"],[\"1.1\",\"HAS_SUPPORTING_EVIDENCE\",\"สำเนาทะเบียนบ้าน\",\"Document\",\"\",\"สำเนาทะเบียนบ้าน\"],[\"1.1\",\"HAS_SUPPORTING_EVIDENCE\",\"ใบสำคัญแสดงการเป็นผู้แทนโดยชอบธรรมของผู้เยาว์\",\"Document\",\"\",\"ใบสำ คั ญ แสดงการเป็ น ผู ้ แ ทน โดยชอบธรรมของผู้เยาว์\"],[\"1.1\",\"HAS_SUPPORTING_EVIDENCE\",\"ใบสำคัญแสดงการเป็นผู้อนุบาลของผู้ไร้ความสามารถ (ตามคำสั่งศาล)\",\"Document\",\"\",\"ใบสำคัญแสดงการเป็นผู้อนุบาลของ ผู้ไร้ความสามารถ (ตามคำสั่งศาล)\"],[\"1.1\",\"HAS_SUPPORTING_EVIDENCE\",\"สูติบัตร\",\"Document\",\"\",\"สูติบัตร, ใบทะเบียนสมรส\"],[\"1.1\",\"HAS_SUPPORTING_EVIDENCE\",\"ใบทะเบียนสมรส\",\"Document\",\"\",\"สูติบัตร, ใบทะเบียนสมรส\"]]}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 121720156199,
+    "load_duration": 12131045210,
+    "prompt_eval_count": 697,
+    "prompt_eval_duration": 8962247000,
+    "eval_count": 317,
+    "eval_duration": 100586987000
+  },
+  "accepted": [
+    [
+      "1.1",
+      "HAS_SUPPORTING_EVIDENCE",
+      "บัตรประจำตัวประชาชน",
+      "Document",
+      "",
+      "บัตรประจำตัวประชาชน"
+    ],
+    [
+      "1.1",
+      "HAS_SUPPORTING_EVIDENCE",
+      "ใบแทนฯ",
+      "Document",
+      "",
+      "ใบแทนฯ"
+    ],
+    [
+      "1.1",
+      "HAS_SUPPORTING_EVIDENCE",
+      "บัตรประจำตัวข้าราชการ",
+      "Document",
+      "",
+      "บัตรประจำตัวข้าราชการ"
+    ],
+    [
+      "1.1",
+      "HAS_SUPPORTING_EVIDENCE",
+      "ใบสำคัญประจำตัวคนต่างด้าว",
+      "Document",
+      "",
+      "ใบสำคัญประจำตัวคนต่างด้าว"
+    ],
+    [
+      "1.1",
+      "HAS_SUPPORTING_EVIDENCE",
+      "หนังสือเดินทาง (Passport)",
+      "Document",
+      "",
+      "หนังสือเดินทาง (Passport) สำหรับ ชาวต่างประเทศที่เดินทางเข้ามาภายในประเทศ"
+    ],
+    [
+      "1.1",
+      "HAS_SUPPORTING_EVIDENCE",
+      "สำเนาทะเบียนบ้าน",
+      "Document",
+      "",
+      "สำเนาทะเบียนบ้าน"
+    ],
+    [
+      "1.1",
+      "HAS_SUPPORTING_EVIDENCE",
+      "ใบสำคัญแสดงการเป็นผู้แทนโดยชอบธรรมของผู้เยาว์",
+      "Document",
+      "",
+      "ใบสำ คั ญ แสดงการเป็ น ผู ้ แ ทน โดยชอบธรรมของผู้เยาว์"
+    ],
+    [
+      "1.1",
+      "HAS_SUPPORTING_EVIDENCE",
+      "ใบสำคัญแสดงการเป็นผู้อนุบาลของผู้ไร้ความสามารถ (ตามคำสั่งศาล)",
+      "Document",
+      "",
+      "ใบสำคัญแสดงการเป็นผู้อนุบาลของ ผู้ไร้ความสามารถ (ตามคำสั่งศาล)"
+    ],
+    [
+      "1.1",
+      "HAS_SUPPORTING_EVIDENCE",
+      "สูติบัตร",
+      "Document",
+      "",
+      "สูติบัตร, ใบทะเบียนสมรส"
+    ],
+    [
+      "1.1",
+      "HAS_SUPPORTING_EVIDENCE",
+      "ใบทะเบียนสมรส",
+      "Document",
+      "",
+      "สูติบัตร, ใบทะเบียนสมรส"
+    ]
+  ],
+  "rejected": [],
+  "parse_ok": true,
+  "status": "requires_semantic_review",
+  "truncated": false
+}

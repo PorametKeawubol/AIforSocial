@@ -1,0 +1,385 @@
+{
+  "fingerprint": "2d442edf765de12eb60f9e29",
+  "version": "sections-v2.1",
+  "section": "1.5",
+  "embedding": {
+    "embedding": "intfloat/multilingual-e5-large",
+    "cache_fingerprint": "9b882512de0f253f50f6018d",
+    "aggregation": "max of existing per-page ontology hints across section pages",
+    "hints": [
+      "เอกสารประกอบการแจ้งความ",
+      "หน่วยงานรับแจ้งเรื่อง",
+      "เจ้าหน้าที่รับผิดชอบ",
+      "หลักฐานเกี่ยวกับเหตุการณ์"
+    ]
+  },
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "seconds": 119.62519686100131,
+  "attempt": 1,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T17:06:34.242298053Z",
+    "message": {
+      "content": "{\n\"edges\": [\n[\"CONTACT_VIA\", \"191\", \"Contact\", \"ผู้แจ้งความ\", \"\", 88, 88],\n[\"CONTACT_VIA\", \"1192\", \"Contact\", \"ผู้แจ้งความ\", \"\", 88, 88],\n[\"HANDLED_BY\", \"เจ้าหน้าที่ตำรวจ\", \"PersonRole\", \"ผู้แจ้งความ\", \"\", 89, 89],\n[\"HAS_SUPPORTING_EVIDENCE\", \"ใบทะเบียนรถยนต์ รถจักรยานยนต์ เรือ หรือพาหนะอื่น ๆ ที่หาย\", \"Document\", \"ผู้แจ้งความ\", \"\", 90, 91],\n[\"HAS_SUPPORTING_EVIDENCE\", \"ใบเสร็จรับเงินหรือสัญญาซื้อขายเท่าที่มี\", \"Document\", \"ผู้แจ้งความ\", \"\", 92, 92],\n[\"HAS_SUPPORTING_EVIDENCE\", \"หนังสือมอบอำนาจจากเจ้าของหรือผู้จัดการของห้างร้าน บริษัทนั้นๆ\", \"Document\", \"ตัวแทนนิติบุคคล\", \"ถ้ายานพาหนะดังกล่าวเป็นของนิติบุคคล เป็นตัวแทนห้างร้าน บริษัท\", 93, 95],\n[\"HAS_SUPPORTING_EVIDENCE\", \"หนังสือรับรองบริษัท\", \"Document\", \"ตัวแทนนิติบุคคล\", \"ถ้ายานพาหนะดังกล่าวเป็นของนิติบุคคล เป็นตัวแทนห้างร้าน บริษัท\", 96, 96],\n[\"HAS_SUPPORTING_EVIDENCE\", \"หนังสือเกี่ยวกับการติดต่อหรือเอกสารที่จะใช้เป็นพยานหลักฐานได้\", \"Document\", \"ผู้แจ้งความ\", \"ถ้ามี\", 97, 98],\n[\"HAS_SUPPORTING_EVIDENCE\", \"หนังสือคู่มือประจำตัวรถ หรือยานพาหนะ (เรือ) ที่ทางบริษัท ห้างร้านจ่ายให้เป็นคู่มือ\", \"Document\", \"ผู้แจ้งความ\", \"\", 99, 100]\n]\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 119624318038,
+    "load_duration": 200932993,
+    "prompt_eval_count": 1166,
+    "prompt_eval_duration": 8449648999,
+    "eval_count": 378,
+    "eval_duration": 110593351000
+  },
+  "parse_ok": true,
+  "truncated": false,
+  "accepted": [
+    {
+      "section": "1.5",
+      "relation": "CONTACT_VIA",
+      "name": "191",
+      "raw_name": "191",
+      "type": "Contact",
+      "owner": "ผู้แจ้งความ",
+      "condition": "",
+      "start_line": 88,
+      "end_line": 88,
+      "evidence": "แจ้งทาง 191 หรือ แจ้ง 1192 แล้วจึงนำหลักฐาน",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.5",
+      "relation": "CONTACT_VIA",
+      "name": "1192",
+      "raw_name": "1192",
+      "type": "Contact",
+      "owner": "ผู้แจ้งความ",
+      "condition": "",
+      "start_line": 88,
+      "end_line": 88,
+      "evidence": "แจ้งทาง 191 หรือ แจ้ง 1192 แล้วจึงนำหลักฐาน",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.5",
+      "relation": "HANDLED_BY",
+      "name": "เจ้าหน้าที่ตำรวจ",
+      "raw_name": "เจ้าหน้าที่ตำรวจ",
+      "type": "PersonRole",
+      "owner": "ผู้แจ้งความ",
+      "condition": "",
+      "start_line": 89,
+      "end_line": 89,
+      "evidence": "ไปแจ้งความต่อเจ้าหน้าที่ตำรวจ คือ",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.5",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "ใบทะเบียนรถยนต์รถจักรยานยนต์เรือหรือพาหนะอื่นๆที่หาย",
+      "raw_name": "ใบทะเบียนรถยนต์ รถจักรยานยนต์ เรือ หรือพาหนะอื่น ๆ ที่หาย",
+      "type": "Document",
+      "owner": "ผู้แจ้งความ",
+      "condition": "",
+      "start_line": 90,
+      "end_line": 91,
+      "evidence": "(1) ใบทะเบียนรถยนต์ รถจักรยานยนต์ เรือ \nหรือพาหนะอื่น ๆ ที่หาย",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context",
+        "check_compound_entity"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.5",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "หนังสือรับรองบริษัท",
+      "raw_name": "หนังสือรับรองบริษัท",
+      "type": "Document",
+      "owner": "ตัวแทนนิติบุคคล",
+      "condition": "ถ้ายานพาหนะดังกล่าวเป็นของนิติบุคคล เป็นตัวแทนห้างร้าน บริษัท",
+      "start_line": 96,
+      "end_line": 96,
+      "evidence": "นั้นๆ ไป รวมทั้งหนังสือรับรองบริษัทด้วย",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.5",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "หนังสือเกี่ยวกับการติดต่อหรือเอกสารที่จะใช้เป็นพยานหลักฐานได้",
+      "raw_name": "หนังสือเกี่ยวกับการติดต่อหรือเอกสารที่จะใช้เป็นพยานหลักฐานได้",
+      "type": "Document",
+      "owner": "ผู้แจ้งความ",
+      "condition": "ถ้ามี",
+      "start_line": 97,
+      "end_line": 98,
+      "evidence": "(4) หนังสือเกี่ยวกับการติดต่อหรือเอกสาร\nที่จะใช้เป็นพยานหลักฐานได้ (ถ้ามี)",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_compound_entity"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    }
+  ],
+  "rejected": [
+    {
+      "row": [
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบเสร็จรับเงินหรือสัญญาซื้อขายเท่าที่มี",
+        "Document",
+        "ผู้แจ้งความ",
+        "",
+        92,
+        92
+      ],
+      "reason": "entity_not_in_evidence"
+    },
+    {
+      "row": [
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือมอบอำนาจจากเจ้าของหรือผู้จัดการของห้างร้าน บริษัทนั้นๆ",
+        "Document",
+        "ตัวแทนนิติบุคคล",
+        "ถ้ายานพาหนะดังกล่าวเป็นของนิติบุคคล เป็นตัวแทนห้างร้าน บริษัท",
+        93,
+        95
+      ],
+      "reason": "entity_not_in_evidence"
+    },
+    {
+      "row": [
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือคู่มือประจำตัวรถ หรือยานพาหนะ (เรือ) ที่ทางบริษัท ห้างร้านจ่ายให้เป็นคู่มือ",
+        "Document",
+        "ผู้แจ้งความ",
+        "",
+        99,
+        100
+      ],
+      "reason": "entity_not_in_evidence"
+    }
+  ],
+  "initial_validation": {
+    "accepted": [
+      {
+        "section": "1.5",
+        "relation": "CONTACT_VIA",
+        "name": "191",
+        "raw_name": "191",
+        "type": "Contact",
+        "owner": "ผู้แจ้งความ",
+        "condition": "",
+        "start_line": 88,
+        "end_line": 88,
+        "evidence": "แจ้งทาง 191 หรือ แจ้ง 1192 แล้วจึงนำหลักฐาน",
+        "pdf_pages": [
+          25
+        ],
+        "printed_pages": [
+          12
+        ],
+        "review_flags": [
+          "check_condition_context"
+        ],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.5",
+        "relation": "CONTACT_VIA",
+        "name": "1192",
+        "raw_name": "1192",
+        "type": "Contact",
+        "owner": "ผู้แจ้งความ",
+        "condition": "",
+        "start_line": 88,
+        "end_line": 88,
+        "evidence": "แจ้งทาง 191 หรือ แจ้ง 1192 แล้วจึงนำหลักฐาน",
+        "pdf_pages": [
+          25
+        ],
+        "printed_pages": [
+          12
+        ],
+        "review_flags": [
+          "check_condition_context"
+        ],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.5",
+        "relation": "HANDLED_BY",
+        "name": "เจ้าหน้าที่ตำรวจ",
+        "raw_name": "เจ้าหน้าที่ตำรวจ",
+        "type": "PersonRole",
+        "owner": "ผู้แจ้งความ",
+        "condition": "",
+        "start_line": 89,
+        "end_line": 89,
+        "evidence": "ไปแจ้งความต่อเจ้าหน้าที่ตำรวจ คือ",
+        "pdf_pages": [
+          25
+        ],
+        "printed_pages": [
+          12
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.5",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "ใบทะเบียนรถยนต์รถจักรยานยนต์เรือหรือพาหนะอื่นๆที่หาย",
+        "raw_name": "ใบทะเบียนรถยนต์ รถจักรยานยนต์ เรือ หรือพาหนะอื่น ๆ ที่หาย",
+        "type": "Document",
+        "owner": "ผู้แจ้งความ",
+        "condition": "",
+        "start_line": 90,
+        "end_line": 91,
+        "evidence": "(1) ใบทะเบียนรถยนต์ รถจักรยานยนต์ เรือ \nหรือพาหนะอื่น ๆ ที่หาย",
+        "pdf_pages": [
+          25
+        ],
+        "printed_pages": [
+          12
+        ],
+        "review_flags": [
+          "check_condition_context",
+          "check_compound_entity"
+        ],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.5",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "หนังสือรับรองบริษัท",
+        "raw_name": "หนังสือรับรองบริษัท",
+        "type": "Document",
+        "owner": "ตัวแทนนิติบุคคล",
+        "condition": "ถ้ายานพาหนะดังกล่าวเป็นของนิติบุคคล เป็นตัวแทนห้างร้าน บริษัท",
+        "start_line": 96,
+        "end_line": 96,
+        "evidence": "นั้นๆ ไป รวมทั้งหนังสือรับรองบริษัทด้วย",
+        "pdf_pages": [
+          26
+        ],
+        "printed_pages": [
+          13
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.5",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "หนังสือเกี่ยวกับการติดต่อหรือเอกสารที่จะใช้เป็นพยานหลักฐานได้",
+        "raw_name": "หนังสือเกี่ยวกับการติดต่อหรือเอกสารที่จะใช้เป็นพยานหลักฐานได้",
+        "type": "Document",
+        "owner": "ผู้แจ้งความ",
+        "condition": "ถ้ามี",
+        "start_line": 97,
+        "end_line": 98,
+        "evidence": "(4) หนังสือเกี่ยวกับการติดต่อหรือเอกสาร\nที่จะใช้เป็นพยานหลักฐานได้ (ถ้ามี)",
+        "pdf_pages": [
+          26
+        ],
+        "printed_pages": [
+          13
+        ],
+        "review_flags": [
+          "check_compound_entity"
+        ],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      }
+    ],
+    "rejected": [
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "ใบเสร็จรับเงินหรือสัญญาซื้อขายเท่าที่มี",
+          "Document",
+          "ผู้แจ้งความ",
+          "",
+          92,
+          92
+        ],
+        "reason": "entity_not_in_evidence"
+      },
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "หนังสือมอบอำนาจจากเจ้าของหรือผู้จัดการของห้างร้าน บริษัทนั้นๆ",
+          "Document",
+          "ตัวแทนนิติบุคคล",
+          "ถ้ายานพาหนะดังกล่าวเป็นของนิติบุคคล เป็นตัวแทนห้างร้าน บริษัท",
+          93,
+          95
+        ],
+        "reason": "entity_not_in_evidence"
+      },
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "หนังสือคู่มือประจำตัวรถ หรือยานพาหนะ (เรือ) ที่ทางบริษัท ห้างร้านจ่ายให้เป็นคู่มือ",
+          "Document",
+          "ผู้แจ้งความ",
+          "",
+          99,
+          100
+        ],
+        "reason": "entity_not_in_evidence"
+      }
+    ]
+  },
+  "validator_version": "v2.2-unique-nearby-grounding-repair"
+}

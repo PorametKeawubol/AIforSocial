@@ -1,0 +1,5 @@
+networkx==3.6.1
+pythainlp==5.3.7
+Pillow==12.3.0
+playwright==1.62.0
+neo4j==6.3.0

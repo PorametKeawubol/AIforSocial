@@ -1,0 +1,17 @@
+{
+  "application": "Neo4j Browser",
+  "url": "http://localhost:7474/browser/",
+  "dataset_label": "FinalTask1",
+  "capture_method": "Playwright page screenshot; no image editing",
+  "focus": {
+    "file": "neo4j-focus.png",
+    "sections": ["1.4", "1.5", "1.13"],
+    "nodes": 22,
+    "relationships": 24
+  },
+  "overview": {
+    "file": "neo4j-overview.png",
+    "nodes": 79,
+    "relationships": 97
+  }
+}

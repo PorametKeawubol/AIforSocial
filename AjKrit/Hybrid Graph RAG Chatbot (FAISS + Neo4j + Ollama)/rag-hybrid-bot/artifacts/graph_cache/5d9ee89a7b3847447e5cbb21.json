@@ -1,0 +1,76 @@
+{
+  "page": 25,
+  "facts": [
+    {
+      "subject": "เน่าเปียก",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อรา",
+      "object_type": "Pathogen",
+      "evidence": "โรคนี้มีเชื้อราเป็นสาเหตุ"
+    },
+    {
+      "subject": "เน่าเปียก",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "เนื้อเยื่อของยอดอ่อน ใบอ่อน ตาดอก และดอกเน่าเละ เป็นสีน้ำตาลดำ",
+      "object_type": "Symptom",
+      "evidence": "ทำให้เนื้อเยื่อของ ยอดอ่อน ใบอ่อน ตาดอก และดอกเน่าเละ เป็น สีน้ำตาลดำ"
+    },
+    {
+      "subject": "เน่าเปียก",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ใบไหม้ มีสีน้ำตาลดำอย่างรวดเร็ว",
+      "object_type": "Symptom",
+      "evidence": "ใบจะไหม้ มีสีน้ำตาลดำอย่างรวดเร็ว"
+    },
+    {
+      "subject": "เน่าเปียก",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ลุกลามจากยอดลงมา และลุกลามไปยัง ส่วนอื่นๆ",
+      "object_type": "Symptom",
+      "evidence": "โดยลุกลามจากยอดลงมา ใบจะไหม้ มีสีน้ำตาลดำอย่างรวดเร็ว และลุกลามไปยัง ส่วนอื่นๆ"
+    },
+    {
+      "subject": "เน่าเปียก",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "เว้นระยะปลูกที่เหมาะสม ไม่ปลูกต้นพริกชิดกันจนเกินไป ทำให้การระบายอากาศดี และมีความชื้นต่ำ",
+      "object_type": "Treatment",
+      "evidence": "เว้นระยะปลูกที่เหมาะสม ไม่ปลูก ต้นพริกชิดกันจนเกินไป ทำให้การระบาย อากาศไม่ดี และมีความชื้นสูง"
+    },
+    {
+      "subject": "เน่าเปียก",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "ดูแลตัดแต่งทรงพุ่มของต้นพริกให้ดูโปร่ง และไม่แน่นทึบจนเกินไป",
+      "object_type": "Treatment",
+      "evidence": "ดูแลตัดแต่งทรงพุ่มของต้นพริกให้ ดูโปร่ง และ ไม่แน่นทึบจนเกินไป"
+    },
+    {
+      "subject": "เน่าเปียก",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "สารไตรโฟรีน สารประกอบทองแดง หรือสารไทอะเบนดาโซล ฉีดพ่นกำจัดโรค",
+      "object_type": "Treatment",
+      "evidence": "แล้วใช้สารเคมี เช่น สารไตรโฟรีน สารประกอบทองแดง หรือสารไทอะเบน ดาโซล ฉีดพ่นกำจัดโรค"
+    },
+    {
+      "subject": "เน่าเปียก",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "น้ำหมักสมุนไพร",
+      "object_type": "Treatment",
+      "evidence": "หรือใช้น้ำหมัก สมุนไพรกำจัด"
+    }
+  ],
+  "timing": {
+    "seconds": 24.344,
+    "model": "qwen3.5:9b",
+    "eval_count": 767,
+    "eval_duration": 23362674000,
+    "prompt_eval_count": 687
+  }
+}

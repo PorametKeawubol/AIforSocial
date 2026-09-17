@@ -1,0 +1,323 @@
+{
+  "fingerprint": "3a9a411c577a509c22a0f827",
+  "version": "sections-v2.1",
+  "section": "1.3",
+  "embedding": {
+    "embedding": "intfloat/multilingual-e5-large",
+    "cache_fingerprint": "9b882512de0f253f50f6018d",
+    "aggregation": "max of existing per-page ontology hints across section pages",
+    "hints": [
+      "เอกสารประกอบการแจ้งความ",
+      "หน่วยงานรับแจ้งเรื่อง",
+      "เจ้าหน้าที่รับผิดชอบ",
+      "หลักฐานเกี่ยวกับเหตุการณ์"
+    ]
+  },
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "seconds": 67.13970546000019,
+  "attempt": 1,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T17:03:35.251412704Z",
+    "message": {
+      "content": "{\n\"edges\": [\n[\"ABOUT_DOCUMENT\", \"ใบอนุญาตขับขี่รถยนต์\", \"Document\", \"ผู้หาย\", \"\", 65, 65],\n[\"ABOUT_DOCUMENT\", \"ใบอนุญาตขับขี่จักรยานยนต์\", \"Document\", \"ผู้หาย\", \"\", 65, 66],\n[\"ABOUT_DOCUMENT\", \"โฉนดที่ดิน\", \"Document\", \"ผู้หาย\", \"\", 66, 66],\n[\"ABOUT_DOCUMENT\", \"ใบสำคัญประจำตัวคนต่างด้าว\", \"Document\", \"ผู้หาย\", \"\", 66, 66],\n[\"HANDLED_BY\", \"สถานีตำรวจท้องที่ที่หาย\", \"Organization\", \"ผู้หาย\", \"\", 68, 69],\n[\"ISSUES\", \"บันทึกประจำวัน\", \"Document\", \"เจ้าพนักงานตำรวจ\", \"\", 70, 71],\n[\"ISSUES\", \"หลักฐานการแจ้งความเอกสารหาย\", \"Document\", \"เจ้าพนักงานตำรวจ\", \"\", 72, 74]\n]\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 67138874417,
+    "load_duration": 201987292,
+    "prompt_eval_count": 929,
+    "prompt_eval_duration": 5866453000,
+    "eval_count": 208,
+    "eval_duration": 60548461000
+  },
+  "parse_ok": true,
+  "truncated": false,
+  "accepted": [
+    {
+      "section": "1.3",
+      "relation": "ABOUT_DOCUMENT",
+      "name": "ใบอนุญาตขับรถ",
+      "raw_name": "ใบอนุญาตขับขี่รถยนต์",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "",
+      "start_line": 65,
+      "end_line": 65,
+      "evidence": "เช่น ใบอนุญาตขับขี่รถยนต์, จักรยานยนต์, ",
+      "pdf_pages": [
+        24
+      ],
+      "printed_pages": [
+        11
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.3",
+      "relation": "ABOUT_DOCUMENT",
+      "name": "โฉนดที่ดิน",
+      "raw_name": "โฉนดที่ดิน",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "",
+      "start_line": 66,
+      "end_line": 66,
+      "evidence": "โฉนดที่ดิน, ใบสำคัญประจำตัวคนต่างด้าว ฯลฯ ",
+      "pdf_pages": [
+        24
+      ],
+      "printed_pages": [
+        11
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.3",
+      "relation": "ABOUT_DOCUMENT",
+      "name": "ใบสำคัญประจำตัวคนต่างด้าว",
+      "raw_name": "ใบสำคัญประจำตัวคนต่างด้าว",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "",
+      "start_line": 66,
+      "end_line": 66,
+      "evidence": "โฉนดที่ดิน, ใบสำคัญประจำตัวคนต่างด้าว ฯลฯ ",
+      "pdf_pages": [
+        24
+      ],
+      "printed_pages": [
+        11
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.3",
+      "relation": "HANDLED_BY",
+      "name": "สถานีตำรวจท้องที่ที่หาย",
+      "raw_name": "สถานีตำรวจท้องที่ที่หาย",
+      "type": "Organization",
+      "owner": "ผู้หาย",
+      "condition": "",
+      "start_line": 68,
+      "end_line": 69,
+      "evidence": "(1) ยื่นคำร้องแจ้งว่าเอกสารดังกล่าวหาย\nต่อสถานีตำรวจท้องที่ที่หาย",
+      "pdf_pages": [
+        24
+      ],
+      "printed_pages": [
+        11
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.3",
+      "relation": "ISSUES",
+      "name": "บันทึกประจำวัน",
+      "raw_name": "บันทึกประจำวัน",
+      "type": "Document",
+      "owner": "เจ้าพนักงานตำรวจ",
+      "condition": "",
+      "start_line": 70,
+      "end_line": 71,
+      "evidence": "(2) เจ้ า พนั ก งานตำ รวจจะสอบสวนว่ า\nหายจริงหรือไม่ แล้วลงบันทึกประจำวันไว้เป็นหลักฐาน",
+      "pdf_pages": [
+        24
+      ],
+      "printed_pages": [
+        11
+      ],
+      "review_flags": [
+        "check_condition_context"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.3",
+      "relation": "ISSUES",
+      "name": "หลักฐานการแจ้งความเอกสารหาย",
+      "raw_name": "หลักฐานการแจ้งความเอกสารหาย",
+      "type": "Document",
+      "owner": "เจ้าพนักงานตำรวจ",
+      "condition": "",
+      "start_line": 72,
+      "end_line": 74,
+      "evidence": "(3) เจ้าพนักงานตำรวจจะออกหลักฐาน\nการแจ้งความเอกสารหายเพือ่ ให้ทา่ นนำไปยังหน่วยงาน\nที่เกี่ยวข้องเพื่อดำเนินการต่อไป",
+      "pdf_pages": [
+        24
+      ],
+      "printed_pages": [
+        11
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    }
+  ],
+  "rejected": [
+    {
+      "row": [
+        "ABOUT_DOCUMENT",
+        "ใบอนุญาตขับขี่จักรยานยนต์",
+        "Document",
+        "ผู้หาย",
+        "",
+        65,
+        66
+      ],
+      "reason": "entity_not_in_evidence"
+    }
+  ],
+  "initial_validation": {
+    "accepted": [
+      {
+        "section": "1.3",
+        "relation": "ABOUT_DOCUMENT",
+        "name": "ใบอนุญาตขับรถ",
+        "raw_name": "ใบอนุญาตขับขี่รถยนต์",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "",
+        "start_line": 65,
+        "end_line": 65,
+        "evidence": "เช่น ใบอนุญาตขับขี่รถยนต์, จักรยานยนต์, ",
+        "pdf_pages": [
+          24
+        ],
+        "printed_pages": [
+          11
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.3",
+        "relation": "ABOUT_DOCUMENT",
+        "name": "โฉนดที่ดิน",
+        "raw_name": "โฉนดที่ดิน",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "",
+        "start_line": 66,
+        "end_line": 66,
+        "evidence": "โฉนดที่ดิน, ใบสำคัญประจำตัวคนต่างด้าว ฯลฯ ",
+        "pdf_pages": [
+          24
+        ],
+        "printed_pages": [
+          11
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.3",
+        "relation": "ABOUT_DOCUMENT",
+        "name": "ใบสำคัญประจำตัวคนต่างด้าว",
+        "raw_name": "ใบสำคัญประจำตัวคนต่างด้าว",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "",
+        "start_line": 66,
+        "end_line": 66,
+        "evidence": "โฉนดที่ดิน, ใบสำคัญประจำตัวคนต่างด้าว ฯลฯ ",
+        "pdf_pages": [
+          24
+        ],
+        "printed_pages": [
+          11
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.3",
+        "relation": "HANDLED_BY",
+        "name": "สถานีตำรวจท้องที่ที่หาย",
+        "raw_name": "สถานีตำรวจท้องที่ที่หาย",
+        "type": "Organization",
+        "owner": "ผู้หาย",
+        "condition": "",
+        "start_line": 68,
+        "end_line": 69,
+        "evidence": "(1) ยื่นคำร้องแจ้งว่าเอกสารดังกล่าวหาย\nต่อสถานีตำรวจท้องที่ที่หาย",
+        "pdf_pages": [
+          24
+        ],
+        "printed_pages": [
+          11
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.3",
+        "relation": "ISSUES",
+        "name": "บันทึกประจำวัน",
+        "raw_name": "บันทึกประจำวัน",
+        "type": "Document",
+        "owner": "เจ้าพนักงานตำรวจ",
+        "condition": "",
+        "start_line": 70,
+        "end_line": 71,
+        "evidence": "(2) เจ้ า พนั ก งานตำ รวจจะสอบสวนว่ า\nหายจริงหรือไม่ แล้วลงบันทึกประจำวันไว้เป็นหลักฐาน",
+        "pdf_pages": [
+          24
+        ],
+        "printed_pages": [
+          11
+        ],
+        "review_flags": [
+          "check_condition_context"
+        ],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.3",
+        "relation": "ISSUES",
+        "name": "หลักฐานการแจ้งความเอกสารหาย",
+        "raw_name": "หลักฐานการแจ้งความเอกสารหาย",
+        "type": "Document",
+        "owner": "เจ้าพนักงานตำรวจ",
+        "condition": "",
+        "start_line": 72,
+        "end_line": 74,
+        "evidence": "(3) เจ้าพนักงานตำรวจจะออกหลักฐาน\nการแจ้งความเอกสารหายเพือ่ ให้ทา่ นนำไปยังหน่วยงาน\nที่เกี่ยวข้องเพื่อดำเนินการต่อไป",
+        "pdf_pages": [
+          24
+        ],
+        "printed_pages": [
+          11
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      }
+    ],
+    "rejected": [
+      {
+        "row": [
+          "ABOUT_DOCUMENT",
+          "ใบอนุญาตขับขี่จักรยานยนต์",
+          "Document",
+          "ผู้หาย",
+          "",
+          65,
+          66
+        ],
+        "reason": "entity_not_in_evidence"
+      }
+    ]
+  },
+  "validator_version": "v2.2-unique-nearby-grounding-repair"
+}

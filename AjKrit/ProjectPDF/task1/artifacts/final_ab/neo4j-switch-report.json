@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "active_container": "neo4j-Project2-AB",
+  "active_volume": "neo4j_project2_ab_data",
+  "browser": "http://localhost:7474/browser/",
+  "database_contents": "Only Project 2 reviewed graphs A and B",
+  "old_container": "neo4j-GraphRAG",
+  "old_container_status": "stopped; retained only as a recovery backup",
+  "groups": [
+    {
+      "group": "A",
+      "nodes": 81,
+      "relationships": 99
+    },
+    {
+      "group": "B",
+      "nodes": 81,
+      "relationships": 99
+    }
+  ],
+  "total": {
+    "nodes": 162,
+    "relationships": 198
+  },
+  "labels": [
+    "Case",
+    "Chapter",
+    "Contact",
+    "Document",
+    "Evidence",
+    "Organization",
+    "PersonRole",
+    "SourceDocument"
+  ],
+  "reachable_within_4_hops": {
+    "A": 81,
+    "B": 81
+  }
+}

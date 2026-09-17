@@ -1,0 +1,76 @@
+{
+  "page": 33,
+  "facts": [
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคใบด่างจากเชื้อไวรัส CVMV",
+      "object_type": "Disease",
+      "evidence": "ป้องกันและกำจัดโรคด้วยวิธีเดียวกันกับ โรคใบด่างที่เกิดจากเชื้อไวรัส CVMV"
+    },
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรควัณโรค (implied by context of virus)",
+      "object_type": "Disease",
+      "evidence": "กำจัดวัชพืชที่เป็นแหล่งอาศัยและสะสม ของเชื้อไวรัส"
+    },
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคใบด่างจากเชื้อไวรัส CVMV",
+      "object_type": "Disease",
+      "evidence": "ป้องกันและกำจัดด้วยวิธีเดียวกับ โรคใบด่างจากเชื้อไวรัส CVMV"
+    },
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรควัณโรค (implied by context of virus)",
+      "object_type": "Disease",
+      "evidence": "ใช้แผ่นพลาสติกสีบรอนซ์คลุมแปลงเพื่อไล่แมลงและลดการระบาดของแมลงพาหะ"
+    },
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรควัณโรค (implied by context of virus)",
+      "object_type": "Disease",
+      "evidence": "กำจัดวัชพืชที่เป็นแหล่งอาศัยและสะสม ของเชื้อไวรัส"
+    },
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรควัณโรค (implied by context of virus)",
+      "object_type": "Disease",
+      "evidence": "ใช้แผ่นพลาสติกสีบรอนซ์คลุมแปลงเพื่อไล่แมลงและลดการระบาดของแมลงพาหะ"
+    },
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรควัณโรค (implied by context of virus)",
+      "object_type": "Disease",
+      "evidence": "กำจัดวัชพืชที่เป็นแหล่งอาศัยและสะสม ของเชื้อไวรัส"
+    },
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรควัณโรค (implied by context of virus)",
+      "object_type": "Disease",
+      "evidence": "ใช้แผ่นพลาสติกสีบรอนซ์คลุมแปลงเพื่อไล่แมลงและลดการระบาดของแมลงพาหะ"
+    }
+  ],
+  "timing": {
+    "seconds": 23.346,
+    "model": "qwen3.5:9b",
+    "eval_count": 730,
+    "eval_duration": 22041288000,
+    "prompt_eval_count": 769
+  }
+}

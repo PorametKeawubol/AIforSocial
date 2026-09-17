@@ -1,0 +1,76 @@
+{
+  "page": 47,
+  "facts": [
+    {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "เชื้อราไตรโคเดอร์มาฮาร์เซียนัม",
+      "object_type": "Pathogen",
+      "evidence": "ใช้จุลินทรีย์ปฏิปักษ์แบบใช้เชื้อราไตรโคเดอร์มา ฮาร์เซียนัม นำหัวเชื้อมาเพิ่มปริมาณในข้าวสุก"
+    },
+    {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "แบคทีเรียบาซิลลัส ซับทีลิส",
+      "object_type": "Pathogen",
+      "evidence": "แบบใช้เชื้อแบคทีเรียบาซิลลัส ซับทีลิส ให้ใช้เข็มฉีดยาใส่สารละลายของเชื้อ"
+    },
+    {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคเข้าทำลายไม่รุนแรง",
+      "object_type": "Disease",
+      "evidence": "กรณีโรคเข้าทำลายไม่รุนแรง ใช้จุลินทรีย์ปฏิปักษ์แบบใช้เชื้อราไตรโคเดอร์มา ฮาร์เซียนัม"
+    },
+    {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "TREATED_BY",
+      "object": "สารฟอสโฟนิก แอซิด 40% เอสแอล ผสมน้ำสะอาด อัตรา 1:1",
+      "object_type": "Treatment",
+      "evidence": "หากพบโรคให้ตัดแต่งส่วนที่เป็นโรค นำไปเผาทำลายนอกแปลงปลูก จากนั้นให้ฉีดด้วยสารฟอสโฟนิก แอซิด 40% เอสแอล ผสมน้ำสะอาด"
+    },
+    {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "TREATED_BY",
+      "object": "สารป้องกันกำจัดโรคพืชฟอสอีทิล-อะลูมิเนียม 80% ดับเบิลยูพี",
+      "object_type": "Treatment",
+      "evidence": "จากนั้นพ่นให้ทั่วทรงพุ่มด้วยสารป้องกันกำจัดโรคพืชฟอสอีทิล-อะลูมิเนียม 80% ดับเบิลยูพี"
+    },
+    {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "TREATED_BY",
+      "object": "สารเมทาแลกซิล 25% ดับเบิลยูพี",
+      "object_type": "Treatment",
+      "evidence": "ใช้สลับกับสารเมทาแลกซิล 25% ดับเบิลยูพี อัตรา 30-50 กรัมต่อน้ำ 20 ลิตร"
+    },
+    {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "TREATED_BY",
+      "object": "ผงเชื้อแบคทีเรียบาซิลลัส ซับทีลิสผสมสารจับใบ",
+      "object_type": "Treatment",
+      "evidence": "โดยจะต้องผสมสารจับใบ อัตรา 5 ซีซีต่อน้ำ 20 ลิตร ราดดินบริเวณโคนต้นด้วยผงเชื้อ"
+    },
+    {
+      "subject": "การควบคุมในเบื้องต้น",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ตัดแต่งส่วนที่เป็นโรค นำไปเผาทำลายนอกแปลงปลูก",
+      "object_type": "Treatment",
+      "evidence": "หากพบโรคให้ตัดแต่งส่วนที่เป็นโรค นำไปเผาทำลายนอกแปลงปลูก"
+    }
+  ],
+  "timing": {
+    "seconds": 27.025,
+    "model": "qwen3.5:9b",
+    "eval_count": 846,
+    "eval_duration": 25429066000,
+    "prompt_eval_count": 981
+  }
+}

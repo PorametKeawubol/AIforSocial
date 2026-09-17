@@ -1,0 +1,254 @@
+{
+  "fingerprint": "bf4937c8f4a88a86d9eda0d6",
+  "version": "sections-v2.1",
+  "section": "1.11",
+  "embedding": {
+    "embedding": "BAAI/bge-m3",
+    "cache_fingerprint": "1c7299b69943dd6662be8fb7",
+    "aggregation": "max of existing per-page ontology hints across section pages",
+    "hints": [
+      "เอกสารประกอบการแจ้งความ",
+      "หลักฐานเกี่ยวกับเหตุการณ์",
+      "หน่วยงานรับแจ้งเรื่อง",
+      "เจ้าหน้าที่รับผิดชอบ"
+    ]
+  },
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "seconds": 70.99200726100025,
+  "attempt": 1,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T16:54:20.582443773Z",
+    "message": {
+      "content": "{\"edges\":[[\"HAS_SUPPORTING_EVIDENCE\",\"สัญญาเช่าซื้อ\",\"Document\",\"ผู้เสียหาย\",\"\",138,139],[\"HAS_SUPPORTING_EVIDENCE\",\"สำเนาสัญญาเช่าซื้อ\",\"Document\",\"ผู้เสียหาย\",\"\",138,139],[\"HAS_SUPPORTING_EVIDENCE\",\"ใบสำคัญติดต่อซื้อขาย\",\"Document\",\"ผู้เสียหาย\",\"\",139,140],[\"HAS_SUPPORTING_EVIDENCE\",\"ใบสำคัญติดต่อเช่า\",\"Document\",\"ผู้เสียหาย\",\"\",139,140],[\"HAS_SUPPORTING_EVIDENCE\",\"ใบสำคัญติดต่อยืม\",\"Document\",\"ผู้เสียหาย\",\"\",139,140],[\"HAS_SUPPORTING_EVIDENCE\",\"ใบสำคัญติดต่อฝาก\",\"Document\",\"ผู้เสียหาย\",\"\",139,140],[\"HAS_SUPPORTING_EVIDENCE\",\"ใบสำคัญที่บริษัทห้างร้านออกให้\",\"Document\",\"ผู้เสียหาย\",\"ระบุรูปพรรณ ยี่ห้อ สี ขนาด น้ำหนัก และเลขหมายประจำตัวทรัพย์\",140,142]]}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 70991186815,
+    "load_duration": 216203050,
+    "prompt_eval_count": 829,
+    "prompt_eval_duration": 4991840000,
+    "eval_count": 211,
+    "eval_duration": 65736189000
+  },
+  "parse_ok": true,
+  "truncated": false,
+  "accepted": [
+    {
+      "section": "1.11",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "ใบสำคัญติดต่อซื้อขาย",
+      "raw_name": "ใบสำคัญติดต่อซื้อขาย",
+      "type": "Document",
+      "owner": "ผู้เสียหาย",
+      "condition": "",
+      "start_line": 139,
+      "end_line": 140,
+      "evidence": "ใบสำคัญติดต่อซื้อ ขาย เช่า ยืม หรือฝาก\n(2) ใบสำ คั ญ ที่ บ ริ ษั ท ห้ า งร้ า นออกให้",
+      "pdf_pages": [
+        28
+      ],
+      "printed_pages": [
+        15
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.11",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "ใบสำคัญที่บริษัทห้างร้านออกให้",
+      "raw_name": "ใบสำคัญที่บริษัทห้างร้านออกให้",
+      "type": "Document",
+      "owner": "ผู้เสียหาย",
+      "condition": "ระบุรูปพรรณ ยี่ห้อ สี ขนาด น้ำหนัก และเลขหมายประจำตัวทรัพย์",
+      "start_line": 140,
+      "end_line": 142,
+      "evidence": "(2) ใบสำ คั ญ ที่ บ ริ ษั ท ห้ า งร้ า นออกให้\nโดยระบุรปู พรรณ ยีห่ อ้ สี ขนาด นำ้ หนัก และเลขหมาย\nประจำตัวทรัพย์นั้น",
+      "pdf_pages": [
+        28
+      ],
+      "printed_pages": [
+        15
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    }
+  ],
+  "rejected": [
+    {
+      "row": [
+        "HAS_SUPPORTING_EVIDENCE",
+        "สัญญาเช่าซื้อ",
+        "Document",
+        "ผู้เสียหาย",
+        "",
+        138,
+        139
+      ],
+      "reason": "entity_not_in_evidence"
+    },
+    {
+      "row": [
+        "HAS_SUPPORTING_EVIDENCE",
+        "สำเนาสัญญาเช่าซื้อ",
+        "Document",
+        "ผู้เสียหาย",
+        "",
+        138,
+        139
+      ],
+      "reason": "entity_not_in_evidence"
+    },
+    {
+      "row": [
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบสำคัญติดต่อเช่า",
+        "Document",
+        "ผู้เสียหาย",
+        "",
+        139,
+        140
+      ],
+      "reason": "entity_not_in_evidence"
+    },
+    {
+      "row": [
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบสำคัญติดต่อยืม",
+        "Document",
+        "ผู้เสียหาย",
+        "",
+        139,
+        140
+      ],
+      "reason": "entity_not_in_evidence"
+    },
+    {
+      "row": [
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบสำคัญติดต่อฝาก",
+        "Document",
+        "ผู้เสียหาย",
+        "",
+        139,
+        140
+      ],
+      "reason": "entity_not_in_evidence"
+    }
+  ],
+  "initial_validation": {
+    "accepted": [
+      {
+        "section": "1.11",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "ใบสำคัญติดต่อซื้อขาย",
+        "raw_name": "ใบสำคัญติดต่อซื้อขาย",
+        "type": "Document",
+        "owner": "ผู้เสียหาย",
+        "condition": "",
+        "start_line": 139,
+        "end_line": 140,
+        "evidence": "ใบสำคัญติดต่อซื้อ ขาย เช่า ยืม หรือฝาก\n(2) ใบสำ คั ญ ที่ บ ริ ษั ท ห้ า งร้ า นออกให้",
+        "pdf_pages": [
+          28
+        ],
+        "printed_pages": [
+          15
+        ],
+        "review_flags": [
+          "check_condition_context"
+        ],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.11",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "ใบสำคัญที่บริษัทห้างร้านออกให้",
+        "raw_name": "ใบสำคัญที่บริษัทห้างร้านออกให้",
+        "type": "Document",
+        "owner": "ผู้เสียหาย",
+        "condition": "ระบุรูปพรรณ ยี่ห้อ สี ขนาด น้ำหนัก และเลขหมายประจำตัวทรัพย์",
+        "start_line": 140,
+        "end_line": 142,
+        "evidence": "(2) ใบสำ คั ญ ที่ บ ริ ษั ท ห้ า งร้ า นออกให้\nโดยระบุรปู พรรณ ยีห่ อ้ สี ขนาด นำ้ หนัก และเลขหมาย\nประจำตัวทรัพย์นั้น",
+        "pdf_pages": [
+          28
+        ],
+        "printed_pages": [
+          15
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      }
+    ],
+    "rejected": [
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "สัญญาเช่าซื้อ",
+          "Document",
+          "ผู้เสียหาย",
+          "",
+          138,
+          139
+        ],
+        "reason": "entity_not_in_evidence"
+      },
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "สำเนาสัญญาเช่าซื้อ",
+          "Document",
+          "ผู้เสียหาย",
+          "",
+          138,
+          139
+        ],
+        "reason": "entity_not_in_evidence"
+      },
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "ใบสำคัญติดต่อเช่า",
+          "Document",
+          "ผู้เสียหาย",
+          "",
+          139,
+          140
+        ],
+        "reason": "entity_not_in_evidence"
+      },
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "ใบสำคัญติดต่อยืม",
+          "Document",
+          "ผู้เสียหาย",
+          "",
+          139,
+          140
+        ],
+        "reason": "entity_not_in_evidence"
+      },
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "ใบสำคัญติดต่อฝาก",
+          "Document",
+          "ผู้เสียหาย",
+          "",
+          139,
+          140
+        ],
+        "reason": "entity_not_in_evidence"
+      }
+    ]
+  },
+  "validator_version": "v2.2-unique-nearby-grounding-repair"
+}

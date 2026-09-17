@@ -1,0 +1,3825 @@
+{
+  "group": "B",
+  "dataset": "police-manual-B-source-reviewed-v1",
+  "embedding_model": "intfloat/multilingual-e5-large",
+  "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "raw_v2_candidate_relationships": 67,
+  "model_candidate_relation_matches": 58,
+  "source_reviewed_content_relationships": 82,
+  "nodes": [
+    {
+      "id": "07e2d6a53ce44091c0828a9f",
+      "type": "Case",
+      "section": "1.1",
+      "name": "เอกสารสำหรับติดต่อสถานีตำรวจ",
+      "display": "1.1 เอกสารสำหรับติดต่อสถานีตำรวจ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        21,
+        22
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "procedure_topic",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "187bfa46dd7be33e8fdf449c",
+      "type": "Case",
+      "section": "1.2",
+      "name": "บัตรประจำตัวประชาชนหายหรือถูกทำลาย",
+      "display": "1.2 บัตรประจำตัวประชาชนหายหรือถูกทำลาย",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        22,
+        23,
+        24
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "procedure_topic",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "b129573416c6c60dc6a2a435",
+      "type": "Case",
+      "section": "1.3",
+      "name": "แจ้งความเอกสารสำคัญหาย",
+      "display": "1.3 แจ้งความเอกสารสำคัญหาย",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        24
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "procedure_topic",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "d0d7eaacde8b6826fe82f7b0",
+      "type": "Case",
+      "section": "1.4",
+      "name": "แจ้งความคนหาย",
+      "display": "1.4 แจ้งความคนหาย",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        25
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "procedure_topic",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "7a1311eed1b62c588a536bfc",
+      "type": "Case",
+      "section": "1.5",
+      "name": "แจ้งความรถหรือเรือหาย",
+      "display": "1.5 แจ้งความรถหรือเรือหาย",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        25,
+        26
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "procedure_topic",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "5a33a4161a31f420ce09522b",
+      "type": "Case",
+      "section": "1.6",
+      "name": "แจ้งความอาวุธปืนหาย",
+      "display": "1.6 แจ้งความอาวุธปืนหาย",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        26
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "procedure_topic",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "a66bf2cd051919a060905739",
+      "type": "Case",
+      "section": "1.7",
+      "name": "แจ้งความทรัพย์สินหาย",
+      "display": "1.7 แจ้งความทรัพย์สินหาย",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        26,
+        27
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "procedure_topic",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "2d14d3b1d24663f38022290a",
+      "type": "Case",
+      "section": "1.8",
+      "name": "แจ้งความถูกปลอมแปลงเอกสาร",
+      "display": "1.8 แจ้งความถูกปลอมแปลงเอกสาร",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        27
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "procedure_topic",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "e5ba30cfab6a1ab124d4e01d",
+      "type": "Case",
+      "section": "1.9",
+      "name": "แจ้งความถูกฉ้อโกงทรัพย์",
+      "display": "1.9 แจ้งความถูกฉ้อโกงทรัพย์",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        27
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "procedure_topic",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "ace775f9067618b93f2bdccb",
+      "type": "Case",
+      "section": "1.10",
+      "name": "แจ้งความถูกยักยอกทรัพย์",
+      "display": "1.10 แจ้งความถูกยักยอกทรัพย์",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        27,
+        28
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "procedure_topic",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "6f31af29f476c77ebdd29349",
+      "type": "Case",
+      "section": "1.11",
+      "name": "แจ้งความถูกยักยอกทรัพย์เกี่ยวกับการเช่าซื้อ",
+      "display": "1.11 แจ้งความถูกยักยอกทรัพย์เกี่ยวกับการเช่าซื้อ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        28
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "procedure_topic",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "5ec1434b82144ae603296c03",
+      "type": "Case",
+      "section": "1.12",
+      "name": "แจ้งความทำให้เสียทรัพย์",
+      "display": "1.12 แจ้งความทำให้เสียทรัพย์",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        28
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "procedure_topic",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "8b60d5f5585f38c904850ce6",
+      "type": "Case",
+      "section": "1.13",
+      "name": "แจ้งความพรากผู้เยาว์",
+      "display": "1.13 แจ้งความพรากผู้เยาว์",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        29
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "procedure_topic",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "151a0eb8c2ee40010f6dada3",
+      "type": "Case",
+      "section": "1.14",
+      "name": "แจ้งความถูกข่มขืนกระทำชำเรา",
+      "display": "1.14 แจ้งความถูกข่มขืนกระทำชำเรา",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        29
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "procedure_topic",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "ea0852846f8ff21e1eeecd51",
+      "type": "Case",
+      "section": "1.15",
+      "name": "แจ้งความถูกทำร้ายร่างกายและเหตุฆ่าคนตาย",
+      "display": "1.15 แจ้งความถูกทำร้ายร่างกายและเหตุฆ่าคนตาย",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        29,
+        30
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "procedure_topic",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "fb8d008d16db968e19761548",
+      "type": "Case",
+      "section": "1.16",
+      "name": "แจ้งความจ่ายเช็คโดยไม่มีเงิน",
+      "display": "1.16 แจ้งความจ่ายเช็คโดยไม่มีเงิน",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        30
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "procedure_topic",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "c6f5cdce9b76ca832bc847ae",
+      "type": "Document",
+      "name": "บัตรประจำตัวประชาชน",
+      "display": "บัตรประจำตัวประชาชน",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        21,
+        29
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "a62608b85c317633640c0083",
+      "type": "Document",
+      "name": "ใบแทนบัตรประจำตัวประชาชน",
+      "display": "ใบแทนบัตรประจำตัวประชาชน",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        21
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "3a04630b66af4941cfba72b8",
+      "type": "Document",
+      "name": "บัตรประจำตัวข้าราชการ",
+      "display": "บัตรประจำตัวข้าราชการ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        21
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "3b7677293c6836b7c4cf5a39",
+      "type": "Document",
+      "name": "ใบสำคัญประจำตัวคนต่างด้าว",
+      "display": "ใบสำคัญประจำตัวคนต่างด้าว",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        21,
+        24
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "65e51705da62140c709ef39e",
+      "type": "Document",
+      "name": "หนังสือเดินทาง",
+      "display": "หนังสือเดินทาง",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        21,
+        22
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "afd0b8e35905597e533f31f9",
+      "type": "Document",
+      "name": "สำเนาทะเบียนบ้าน",
+      "display": "สำเนาทะเบียนบ้าน",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        21,
+        22,
+        25,
+        29
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "8b658ae71cf0c3882d2bbb0b",
+      "type": "Document",
+      "name": "ใบสำคัญแสดงการเป็นผู้แทนโดยชอบธรรมของผู้เยาว์",
+      "display": "ใบสำคัญแสดงการเป็นผู้แทนโดยชอบธรรมของผู้เยาว์",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        21
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "60a9b52bd57f1ddef3725653",
+      "type": "Document",
+      "name": "ใบสำคัญแสดงการเป็นผู้อนุบาล",
+      "display": "ใบสำคัญแสดงการเป็นผู้อนุบาล",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        21
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "8182e92bef5f8e6be1e2d8b2",
+      "type": "Document",
+      "name": "สูติบัตร",
+      "display": "สูติบัตร",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        21,
+        25,
+        29
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "2ad6b54a463b06546aed08f2",
+      "type": "Document",
+      "name": "ใบทะเบียนสมรส",
+      "display": "ใบทะเบียนสมรส",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        21
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "714b91803c6b1155f1444784",
+      "type": "Document",
+      "name": "ใบสำคัญแสดงการอนุญาตของสามีหรือภรรยา",
+      "display": "ใบสำคัญแสดงการอนุญาตของสามีหรือภรรยา",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        22
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "1a338097d2adb65c548979c5",
+      "type": "Document",
+      "name": "หนังสือมอบอำนาจ",
+      "display": "หนังสือมอบอำนาจ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        22,
+        25,
+        26
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "826acef9a171ec5aaed1a34f",
+      "type": "Document",
+      "name": "หนังสือรับรองนิติบุคคล",
+      "display": "หนังสือรับรองนิติบุคคล",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        22
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "e54995cb359f2f0dd960c9f9",
+      "type": "Organization",
+      "name": "สำนักงานทะเบียน",
+      "display": "สำนักงานทะเบียน",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        22
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "named_reference",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "9c317f85624c4f9fd7d6d0ba",
+      "type": "PersonRole",
+      "name": "เจ้าหน้าที่ตำรวจ",
+      "display": "เจ้าหน้าที่ตำรวจ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        22,
+        25,
+        30
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "named_reference",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "48f727923c30901dbc56de58",
+      "type": "Document",
+      "name": "ใบอนุญาตขับรถ",
+      "display": "ใบอนุญาตขับรถ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        22,
+        24
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "9aa22741e89e52a503ebecd0",
+      "type": "Document",
+      "name": "ใบสุทธิ",
+      "display": "ใบสุทธิ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        22
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "93b9f441becff0cbb2ef7a5a",
+      "type": "Organization",
+      "name": "ที่ว่าการอำเภอ",
+      "display": "ที่ว่าการอำเภอ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        23
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "named_reference",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "f93fc94f7b518fab04e61d50",
+      "type": "Organization",
+      "name": "เทศบาล",
+      "display": "เทศบาล",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        23
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "named_reference",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "bbc6dc85df8ff41978c9f686",
+      "type": "Organization",
+      "name": "สถานีตำรวจ",
+      "display": "สถานีตำรวจ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        24
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "named_reference",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "02b5a19ac57b95bd6570c5d9",
+      "type": "Document",
+      "name": "หลักฐานการแจ้งความเอกสารหาย",
+      "display": "หลักฐานการแจ้งความเอกสารหาย",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        24
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "b4f89ca08e4c47fd644f23ee",
+      "type": "Document",
+      "name": "บัตรประจำตัวผู้หาย",
+      "display": "บัตรประจำตัวผู้หาย",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        25
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "8294756a4230e378bc5995ce",
+      "type": "Evidence",
+      "name": "ภาพถ่าย",
+      "display": "ภาพถ่าย",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        25,
+        29
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "63807f5982cea7e04b040bb9",
+      "type": "Document",
+      "name": "ใบสำคัญทหาร",
+      "display": "ใบสำคัญทหาร",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        25
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "e9b6a73d8b45950ade2609af",
+      "type": "Contact",
+      "name": "0807752673",
+      "display": "0807752673",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        25
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "named_reference",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "6a18dd233b333fb1c778de46",
+      "type": "Contact",
+      "name": "191",
+      "display": "191",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        25
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "named_reference",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "815c9e59ae609dd066c5ddec",
+      "type": "Contact",
+      "name": "1192",
+      "display": "1192",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        25
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "named_reference",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "47ec24efe0963f6086a041ca",
+      "type": "Document",
+      "name": "ใบทะเบียนยานพาหนะ",
+      "display": "ใบทะเบียนยานพาหนะ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        25
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "5fa3cb90215640519edb28b1",
+      "type": "Document",
+      "name": "ใบเสร็จรับเงิน",
+      "display": "ใบเสร็จรับเงิน",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        25,
+        26
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "248323dfed4a77dee54e320a",
+      "type": "Document",
+      "name": "สัญญาซื้อขาย",
+      "display": "สัญญาซื้อขาย",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        25,
+        30
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "b794043d851ce158ed76613d",
+      "type": "Document",
+      "name": "หนังสือรับรองบริษัท",
+      "display": "หนังสือรับรองบริษัท",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        26
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "b6d908dd7315ef1a9f2f8b29",
+      "type": "Document",
+      "name": "หนังสือเกี่ยวกับการติดต่อ",
+      "display": "หนังสือเกี่ยวกับการติดต่อ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        26
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "11d392b505c2fe83773457c7",
+      "type": "Document",
+      "name": "หนังสือคู่มือประจำตัวรถ",
+      "display": "หนังสือคู่มือประจำตัวรถ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        26
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "928df9f0e9c7c01a5ab63123",
+      "type": "Document",
+      "name": "ทะเบียนใบอนุญาตอาวุธปืน",
+      "display": "ทะเบียนใบอนุญาตอาวุธปืน",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        26
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "1d2dfb8ea8ca79ad0d7399d0",
+      "type": "Evidence",
+      "name": "รูปพรรณทรัพย์สิน",
+      "display": "รูปพรรณทรัพย์สิน",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        26
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "e9c3b76602f57764639c29b3",
+      "type": "Evidence",
+      "name": "ตำหนิหรือลักษณะพิเศษ",
+      "display": "ตำหนิหรือลักษณะพิเศษ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        26
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "a216f6b63086269895996e9b",
+      "type": "Document",
+      "name": "เอกสารที่เกี่ยวข้อง",
+      "display": "เอกสารที่เกี่ยวข้อง",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        26
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "5be0e6e7b637414310efa8b3",
+      "type": "Document",
+      "name": "ใบสำคัญตัวจริง",
+      "display": "ใบสำคัญตัวจริง",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        27
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "5dc74cb7c6d20645110070f6",
+      "type": "Document",
+      "name": "หนังสือที่ปลอมแปลง",
+      "display": "หนังสือที่ปลอมแปลง",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        27
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "93cdb369341b2904d7ef4f45",
+      "type": "Evidence",
+      "name": "ตัวอย่างตราประทับหรือลายเซ็น",
+      "display": "ตัวอย่างตราประทับหรือลายเซ็น",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        27
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "a2e2d26e2931df20fe0fe19f",
+      "type": "Evidence",
+      "name": "หลักฐานการถูกฉ้อโกง",
+      "display": "หลักฐานการถูกฉ้อโกง",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        27
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "7b557ce760d1cc4fa7813a4a",
+      "type": "Evidence",
+      "name": "หลักฐานความเป็นเจ้าของหรือผู้ครอบครองทรัพย์",
+      "display": "หลักฐานความเป็นเจ้าของหรือผู้ครอบครองทรัพย์",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        27,
+        28
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "6a69b0fc1843efa573e744a5",
+      "type": "Evidence",
+      "name": "หลักฐานการมอบหมายทรัพย์",
+      "display": "หลักฐานการมอบหมายทรัพย์",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        27
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "e262f7a8bab0b3fce1f8240c",
+      "type": "Evidence",
+      "name": "หลักฐานความเป็นเจ้าของทรัพย์",
+      "display": "หลักฐานความเป็นเจ้าของทรัพย์",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        27
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "26455a5af8e530e6e81af253",
+      "type": "Document",
+      "name": "คำสั่งศาลหรือพินัยกรรม",
+      "display": "คำสั่งศาลหรือพินัยกรรม",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        28
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "fd3067fcce13c1165ee0c763",
+      "type": "Document",
+      "name": "สัญญาเช่าซื้อ",
+      "display": "สัญญาเช่าซื้อ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        28
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "806e49e03d338ae424476c0a",
+      "type": "Document",
+      "name": "ใบสำคัญระบุรูปพรรณทรัพย์",
+      "display": "ใบสำคัญระบุรูปพรรณทรัพย์",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        28
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "9a9ad7c19084b2e66dd027a3",
+      "type": "Evidence",
+      "name": "สิ่งของที่เสียหาย",
+      "display": "สิ่งของที่เสียหาย",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        28
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "a83428cacf4b030875d3efdb",
+      "type": "Evidence",
+      "name": "หลักฐานเกี่ยวกับผู้เยาว์",
+      "display": "หลักฐานเกี่ยวกับผู้เยาว์",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        29
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "a3d937b71717592b7efc250b",
+      "type": "Evidence",
+      "name": "เสื้อผ้าที่มีร่องรอยเหตุการณ์",
+      "display": "เสื้อผ้าที่มีร่องรอยเหตุการณ์",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        29
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "f27b215783fc03c91ad0c8ae",
+      "type": "Evidence",
+      "name": "สิ่งของผู้ต้องหาในที่เกิดเหตุ",
+      "display": "สิ่งของผู้ต้องหาในที่เกิดเหตุ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        29
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "72657c4aac775fc25a908bd4",
+      "type": "Evidence",
+      "name": "ที่อยู่ผู้ต้องสงสัย",
+      "display": "ที่อยู่ผู้ต้องสงสัย",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        29
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "f18be098e4680cfa6fdbffde",
+      "type": "Evidence",
+      "name": "พยานหลักฐานในที่เกิดเหตุ",
+      "display": "พยานหลักฐานในที่เกิดเหตุ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        30
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "750341033dc471d56d75159d",
+      "type": "Document",
+      "name": "เช็ค",
+      "display": "เช็ค",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        30
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "fb8b27481015b2dd4d7de668",
+      "type": "Document",
+      "name": "หนังสือธนาคารปฏิเสธการจ่ายเงิน",
+      "display": "หนังสือธนาคารปฏิเสธการจ่ายเงิน",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        30
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "702078f5875d85650d137ea3",
+      "type": "PersonRole",
+      "name": "เจ้าบ้าน",
+      "display": "เจ้าบ้าน",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        22
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "named_reference",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "f65c78a3a7d79643711c0394",
+      "type": "PersonRole",
+      "name": "กำนัน",
+      "display": "กำนัน",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        22
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "named_reference",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "b3ad5b1a20c36739978a4841",
+      "type": "PersonRole",
+      "name": "ผู้ใหญ่บ้าน",
+      "display": "ผู้ใหญ่บ้าน",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        22
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "named_reference",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "df3c410b040158784e411f35",
+      "type": "Document",
+      "name": "โฉนดที่ดิน",
+      "display": "โฉนดที่ดิน",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        24
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "858cbab38af1039aeaf6e762",
+      "type": "Evidence",
+      "name": "รูปพรรณยานพาหนะ",
+      "display": "รูปพรรณยานพาหนะ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        26
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "77e9e1dc7a1636b11623ce5b",
+      "type": "Evidence",
+      "name": "หลักฐานอื่นเกี่ยวกับเหตุการณ์",
+      "display": "หลักฐานอื่นเกี่ยวกับเหตุการณ์",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        29
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "9ad05297237a8ea40b26b5fe",
+      "type": "Evidence",
+      "name": "รายละเอียดเหตุการณ์",
+      "display": "รายละเอียดเหตุการณ์",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "pdf_pages": [
+        30
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "kind": "concept_type",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "d1a073a45ae7787d3432940a",
+      "type": "SourceDocument",
+      "name": "คู่มือประชาชน สำนักงานตำรวจแห่งชาติ.pdf",
+      "display": "คู่มือประชาชน — ชุด B",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "pdf_pages": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "printed_pages": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_metadata"
+    },
+    {
+      "id": "bc3b76cb0ca130596b8b7025",
+      "type": "Chapter",
+      "number": "1",
+      "name": "คำแนะนำในการไปติดต่อที่สถานีตำรวจ",
+      "display": "1. คำแนะนำในการไปติดต่อที่สถานีตำรวจ",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "pdf_pages": [
+        21
+      ],
+      "printed_pages": [
+        8
+      ],
+      "review_status": "source_structure_verified"
+    },
+    {
+      "id": "17235ebe9dedd764612e823e",
+      "type": "Organization",
+      "name": "ศูนย์ข้อมูลคนหาย มูลนิธิกระจกเงา",
+      "display": "ศูนย์ข้อมูลคนหาย มูลนิธิกระจกเงา",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "review_status": "source_reviewed",
+      "kind": "named_reference"
+    }
+  ],
+  "edges": [
+    {
+      "id": "cb8900783ea2f3a3564e1dc2",
+      "source": "07e2d6a53ce44091c0828a9f",
+      "target": "c6f5cdce9b76ca832bc847ae",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.1",
+      "condition": "เอกสารระบุตัวตนทางเลือก",
+      "owner": "",
+      "evidence": "บัตรประจำตัวประชาชน หรือใบแทนฯ",
+      "pdf_pages": [
+        21
+      ],
+      "printed_pages": [
+        8
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"บัตรประจำตัวประชาชน\", \"owner\": \"ผู้แจ้ง\", \"condition\": \"\", \"evidence\": \"(1) บัตรประจำตัวประชาชน หรือใบแทนฯ \", \"pdf_pages\": [21]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "a452dcd650a1bb3de172cce4",
+      "source": "07e2d6a53ce44091c0828a9f",
+      "target": "a62608b85c317633640c0083",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.1",
+      "condition": "เอกสารระบุตัวตนทางเลือก",
+      "owner": "",
+      "evidence": "บัตรประจำตัวประชาชน หรือใบแทนฯ",
+      "pdf_pages": [
+        21
+      ],
+      "printed_pages": [
+        8
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ใบแทนบัตรประจำตัวประชาชน\", \"owner\": \"ผู้แจ้ง\", \"condition\": \"\", \"evidence\": \"(1) บัตรประจำตัวประชาชน หรือใบแทนฯ \", \"pdf_pages\": [21]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "f4571af892d9b861ef94e1ce",
+      "source": "07e2d6a53ce44091c0828a9f",
+      "target": "3a04630b66af4941cfba72b8",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.1",
+      "condition": "เอกสารระบุตัวตนทางเลือก",
+      "owner": "",
+      "evidence": "หรือบัตรประจำตัวข้าราชการ",
+      "pdf_pages": [
+        21
+      ],
+      "printed_pages": [
+        8
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"บัตรประจำตัวข้าราชการ\", \"owner\": \"ผู้แจ้ง\", \"condition\": \"\", \"evidence\": \"หรือบัตรประจำตัวข้าราชการ หรือใบสำคัญประจำตัว\", \"pdf_pages\": [21]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "5b41371817ed18488c6364b0",
+      "source": "07e2d6a53ce44091c0828a9f",
+      "target": "3b7677293c6836b7c4cf5a39",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.1",
+      "condition": "เอกสารระบุตัวตนทางเลือก",
+      "owner": "",
+      "evidence": "หรือใบสำคัญประจำตัว\nคนต่างด้าว",
+      "pdf_pages": [
+        21
+      ],
+      "printed_pages": [
+        8
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ใบสำคัญประจำตัวคนต่างด้าว\", \"owner\": \"ผู้แจ้ง\", \"condition\": \"\", \"evidence\": \"หรือบัตรประจำตัวข้าราชการ หรือใบสำคัญประจำตัว\\nคนต่างด้าว หรือหนังสือเดินทาง (Passport) สำหรับ\", \"pdf_pages\": [21]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "d2cd2c0bbd0456063390993d",
+      "source": "07e2d6a53ce44091c0828a9f",
+      "target": "65e51705da62140c709ef39e",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.1",
+      "condition": "สำหรับชาวต่างประเทศ; เอกสารระบุตัวตนทางเลือก",
+      "owner": "",
+      "evidence": "หรือหนังสือเดินทาง (Passport) สำหรับ\nชาวต่างประเทศที่เดินทางเข้ามาภายในประเทศ",
+      "pdf_pages": [
+        21
+      ],
+      "printed_pages": [
+        8
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"หนังสือเดินทาง\", \"owner\": \"ชาวต่างประเทศที่เดินทางเข้ามาภายในประเทศ\", \"condition\": \"\", \"evidence\": \"คนต่างด้าว หรือหนังสือเดินทาง (Passport) สำหรับ\\nชาวต่างประเทศที่เดินทางเข้ามาภายในประเทศ\", \"pdf_pages\": [21]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "5f45a739ea3f878761a6ee96",
+      "source": "07e2d6a53ce44091c0828a9f",
+      "target": "afd0b8e35905597e533f31f9",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.1",
+      "condition": "",
+      "owner": "",
+      "evidence": "(2) สำเนาทะเบียนบ้าน",
+      "pdf_pages": [
+        21
+      ],
+      "printed_pages": [
+        8
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"สำเนาทะเบียนบ้าน\", \"owner\": \"ผู้แจ้ง\", \"condition\": \"\", \"evidence\": \"(2) สำเนาทะเบียนบ้าน\", \"pdf_pages\": [21]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "d952c100eab620b364b20ba2",
+      "source": "07e2d6a53ce44091c0828a9f",
+      "target": "8b658ae71cf0c3882d2bbb0b",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.1",
+      "condition": "กรณีร้องทุกข์แทนผู้เยาว์",
+      "owner": "",
+      "evidence": "ใบสำ คั ญ แสดงการเป็ น ผู ้ แ ทน\nโดยชอบธรรมของผู้เยาว์ หรือ",
+      "pdf_pages": [
+        21
+      ],
+      "printed_pages": [
+        8
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ใบสำคัญแสดงการเป็นผู้แทนโดยชอบธรรมของผู้เยาว์\", \"owner\": \"ตัวแทนของผู้อื่น\", \"condition\": \"ในกรณีร้องทุกข์ (แจ้งความ) โดยเป็นตัวแทนของผู้อื่น\", \"evidence\": \"(3) ในกรณีร้องทุกข์ (แจ้งความ) โดยเป็น\\nตัวแทนของผู้อื่น ให้นำหลักฐานติดตัวไปด้วย คือ\\n- ใบสำ คั ญ แสดงการเป็ น ผู ้ แ ทน\\nโดยชอบธรรมของผู้เยาว์ หรือ\", \"pdf_pages\": [21]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "d995df21b1827a0e059e402e",
+      "source": "07e2d6a53ce44091c0828a9f",
+      "target": "60a9b52bd57f1ddef3725653",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.1",
+      "condition": "กรณีร้องทุกข์แทนผู้ไร้ความสามารถ",
+      "owner": "",
+      "evidence": "ใบสำคัญแสดงการเป็นผู้อนุบาลของ\nผู้ไร้ความสามารถ (ตามคำสั่งศาล)",
+      "pdf_pages": [
+        21
+      ],
+      "printed_pages": [
+        8
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ใบสำคัญแสดงการเป็นผู้อนุบาลของผู้ไร้ความสามารถ\", \"owner\": \"ตัวแทนของผู้อื่น\", \"condition\": \"ในกรณีร้องทุกข์ (แจ้งความ) โดยเป็นตัวแทนของผู้อื่น\", \"evidence\": \"(3) ในกรณีร้องทุกข์ (แจ้งความ) โดยเป็น\\nตัวแทนของผู้อื่น ให้นำหลักฐานติดตัวไปด้วย คือ\\n- ใบสำ คั ญ แสดงการเป็ น ผู ้ แ ทน\\nโดยชอบธรรมของผู้เยาว์ หรือ\\n- ใบสำคัญแสดงการเป็นผู้อนุบาลของ\\nผู้ไร้ความสามารถ (ตามคำสั่งศาล)\", \"pdf_pages\": [21]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "b4193c45a7999564e5349cb3",
+      "source": "07e2d6a53ce44091c0828a9f",
+      "target": "8182e92bef5f8e6be1e2d8b2",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.1",
+      "condition": "ผู้เสียหายถึงตายหรือบาดเจ็บจนจัดการเองไม่ได้; หลักฐานความสัมพันธ์",
+      "owner": "",
+      "evidence": "ภรรยา (ซึ่งได้จดทะเบียน, สูติบัตร, ใบทะเบียนสมรส",
+      "pdf_pages": [
+        21
+      ],
+      "printed_pages": [
+        8
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"สูติบัตร\", \"owner\": \"บุพการีหรือผู้สืบสันดานหรือสามีหรือภรรยา\", \"condition\": \"กรณีที่ผู้เสียหายถูกทำร้ายถึงตายหรือบาดเจ็บจนไม่สามารถจัดการเองได้\", \"evidence\": \"- ในกรณีที่ผู้เสียหายถูกทำร้ายถึงตาย\\nหรือบาดเจ็บจนไม่สามารถจัดการเองได้ ให้นำ� หลักฐาน\\nซึ่งแสดงว่าเป็นบุพการีหรือผู้สืบสันดานหรือสามีหรือ\\nภรรยา (ซึ่งได้จดทะเบียน, สูติบัตร, ใบทะเบียนสมรส\", \"pdf_pages\": [21]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "fe05262fe98442969ca13c3e",
+      "source": "07e2d6a53ce44091c0828a9f",
+      "target": "2ad6b54a463b06546aed08f2",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.1",
+      "condition": "ผู้เสียหายถึงตายหรือบาดเจ็บจนจัดการเองไม่ได้; หลักฐานความสัมพันธ์",
+      "owner": "",
+      "evidence": "ภรรยา (ซึ่งได้จดทะเบียน, สูติบัตร, ใบทะเบียนสมรส",
+      "pdf_pages": [
+        21
+      ],
+      "printed_pages": [
+        8
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ใบทะเบียนสมรส\", \"owner\": \"สามีหรือภรรยา\", \"condition\": \"กรณีที่ผู้เสียหายถูกทำร้ายถึงตายหรือบาดเจ็บจนไม่สามารถจัดการเองได้\", \"evidence\": \"- ในกรณีที่ผู้เสียหายถูกทำร้ายถึงตาย\\nหรือบาดเจ็บจนไม่สามารถจัดการเองได้ ให้นำ� หลักฐาน\\nซึ่งแสดงว่าเป็นบุพการีหรือผู้สืบสันดานหรือสามีหรือ\\nภรรยา (ซึ่งได้จดทะเบียน, สูติบัตร, ใบทะเบียนสมรส\\nฯลฯ) มาแสดงต่อเจ้าหน้าที่ตำรวจ\", \"pdf_pages\": [21]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "fca9e1ad298b35e9f59a9c5a",
+      "source": "07e2d6a53ce44091c0828a9f",
+      "target": "714b91803c6b1155f1444784",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.1",
+      "condition": "ร้องทุกข์แทน แล้วแต่กรณี",
+      "owner": "",
+      "evidence": "ใบสำคัญแสดงการอนุญาตของสามี\nหรือภรรยา แล้วแต่กรณี ให้ร้องทุกข์แทน",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "60d0311d8f1f42d3deedee2a",
+      "source": "07e2d6a53ce44091c0828a9f",
+      "target": "1a338097d2adb65c548979c5",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.1",
+      "condition": "ผู้แทนของนิติบุคคล",
+      "owner": "",
+      "evidence": "ในกรณีที่เป็นผู้แทนของนิติบุคคล\nให้นำหนังสือมอบอำนาจของนิติบุคคลเป็นหลักฐาน",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"หนังสือมอบอำนาจของนิติบุคคล\", \"owner\": \"ผู้แทนของนิติบุคคล\", \"condition\": \"ในกรณีที่เป็นผู้แทนของนิติบุคคล\", \"evidence\": \"- ในกรณีที่เป็นผู้แทนของนิติบุคคล\\nให้นำหนังสือมอบอำนาจของนิติบุคคลเป็นหลักฐาน\\nรวมทั้งติดอากรแสตมป์ 5 บาท และหนังสือรับรอง\", \"pdf_pages\": [22]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "cb1c13e4b4791dd600d83bf8",
+      "source": "07e2d6a53ce44091c0828a9f",
+      "target": "826acef9a171ec5aaed1a34f",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.1",
+      "condition": "ผู้แทนของนิติบุคคล",
+      "owner": "",
+      "evidence": "รวมทั้งติดอากรแสตมป์ 5 บาท และหนังสือรับรอง\nนิติบุคคลนั้นของกระทรวงพาณิชย์",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "60c0d6fc7a96b1685f9e3e8b",
+      "source": "187bfa46dd7be33e8fdf449c",
+      "target": "e54995cb359f2f0dd960c9f9",
+      "relation": "HANDLED_BY",
+      "section": "1.2",
+      "condition": "",
+      "owner": "",
+      "evidence": "ให้แจ้งต่อ\nพนักงานเจ้าหน้าที่ที่สำนักงานทะเบียนที่ประสงค์\nจะทำบัตร",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"สำนักงานทะเบียน\", \"owner\": \"ผู้หาย\", \"condition\": \"\", \"evidence\": \"(1) เมื่อบัตรหายหรือถูกทำลาย ให้แจ้งต่อ\\nพนักงานเจ้าหน้าที่ที่สำนักงานทะเบียนที่ประสงค์\\nจะทำบัตร (ไม่ต้องแจ้งความต่อเจ้าหน้าที่ตำรวจ)\", \"pdf_pages\": [22]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "a4cbfe48f91f766f017f1370",
+      "source": "187bfa46dd7be33e8fdf449c",
+      "target": "9c317f85624c4f9fd7d6d0ba",
+      "relation": "NOT_HANDLED_BY",
+      "section": "1.2",
+      "condition": "เฉพาะการแจ้งบัตรหาย/ถูกทำลายเพื่อทำบัตร",
+      "owner": "",
+      "evidence": "ไม่ต้องแจ้งความต่อเจ้าหน้าที่ตำรวจ",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"เจ้าหน้าที่ตำรวจ\", \"owner\": \"ผู้หาย\", \"condition\": \"\", \"evidence\": \"จะทำบัตร (ไม่ต้องแจ้งความต่อเจ้าหน้าที่ตำรวจ)\", \"pdf_pages\": [22]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "3e714888dc1375ae4e95782c",
+      "source": "187bfa46dd7be33e8fdf449c",
+      "target": "afd0b8e35905597e533f31f9",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.2",
+      "condition": "",
+      "owner": "",
+      "evidence": "หลักฐานที่ต้องนำไปแสดงต่อเจ้าหน้าที่\nสำนักงานทะเบียน\n - สำเนาทะเบียนบ้าน",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"สำเนาทะเบียนบ้าน\", \"owner\": \"ผู้หาย\", \"condition\": \"\", \"evidence\": \"(2) หลักฐานที่ต้องนำไปแสดงต่อเจ้าหน้าที่\\nสำนักงานทะเบียน\\n- สำเนาทะเบียนบ้าน\", \"pdf_pages\": [22]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "e383edb508cd918fb9b42c75",
+      "source": "187bfa46dd7be33e8fdf449c",
+      "target": "48f727923c30901dbc56de58",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.2",
+      "condition": "ตัวอย่างเอกสารมีรูปถ่าย ถ้ามี",
+      "owner": "",
+      "evidence": "ใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี)",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ใบอนุญาตขับรถ\", \"owner\": \"ผู้หาย\", \"condition\": \"ถ้ามี\", \"evidence\": \"- เอกสารทีม่ รี ปู ถ่ายของผูข้ อมีบตั ร เช่น\\nใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี) หาก\", \"pdf_pages\": [22]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "248515f796590ca3f27cf222",
+      "source": "187bfa46dd7be33e8fdf449c",
+      "target": "9aa22741e89e52a503ebecd0",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.2",
+      "condition": "ตัวอย่างเอกสารมีรูปถ่าย ถ้ามี",
+      "owner": "",
+      "evidence": "ใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี)",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ใบสุทธิ\", \"owner\": \"ผู้หาย\", \"condition\": \"ถ้ามี\", \"evidence\": \"- เอกสารทีม่ รี ปู ถ่ายของผูข้ อมีบตั ร เช่น\\nใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี) หาก\", \"pdf_pages\": [22]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "2f3bf62907095ef87e5cbb10",
+      "source": "187bfa46dd7be33e8fdf449c",
+      "target": "65e51705da62140c709ef39e",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.2",
+      "condition": "ตัวอย่างเอกสารมีรูปถ่าย ถ้ามี",
+      "owner": "",
+      "evidence": "ใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี)",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"หนังสือเดินทาง\", \"owner\": \"ผู้หาย\", \"condition\": \"ถ้ามี\", \"evidence\": \"- เอกสารทีม่ รี ปู ถ่ายของผูข้ อมีบตั ร เช่น\\nใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี) หาก\", \"pdf_pages\": [22]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "90f7df9411ccb922a8fe8da6",
+      "source": "187bfa46dd7be33e8fdf449c",
+      "target": "93b9f441becff0cbb2ef7a5a",
+      "relation": "HANDLED_BY",
+      "section": "1.2",
+      "condition": "สถานที่ทำบัตร ทางเลือก",
+      "owner": "",
+      "evidence": "สามารถทำได้ที่ที่ว่าการอำเภอ และ\nเทศบาลทั่วประเทศ",
+      "pdf_pages": [
+        23
+      ],
+      "printed_pages": [
+        10
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "6efe8ff394b2c69676f09558",
+      "source": "187bfa46dd7be33e8fdf449c",
+      "target": "f93fc94f7b518fab04e61d50",
+      "relation": "HANDLED_BY",
+      "section": "1.2",
+      "condition": "สถานที่ทำบัตร ทางเลือก",
+      "owner": "",
+      "evidence": "สามารถทำได้ที่ที่ว่าการอำเภอ และ\nเทศบาลทั่วประเทศ",
+      "pdf_pages": [
+        23
+      ],
+      "printed_pages": [
+        10
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "628da9ce48b62af7c44d2b23",
+      "source": "b129573416c6c60dc6a2a435",
+      "target": "bbc6dc85df8ff41978c9f686",
+      "relation": "HANDLED_BY",
+      "section": "1.3",
+      "condition": "สถานีตำรวจท้องที่ที่เอกสารหาย",
+      "owner": "",
+      "evidence": "ยื่นคำร้องแจ้งว่าเอกสารดังกล่าวหาย\nต่อสถานีตำรวจท้องที่ที่หาย",
+      "pdf_pages": [
+        24
+      ],
+      "printed_pages": [
+        11
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"สถานีตำรวจท้องที่ที่หาย\", \"owner\": \"ผู้หาย\", \"condition\": \"\", \"evidence\": \"(1) ยื่นคำร้องแจ้งว่าเอกสารดังกล่าวหาย\\nต่อสถานีตำรวจท้องที่ที่หาย\", \"pdf_pages\": [24]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "145ae31aa17cf16b998b646f",
+      "source": "b129573416c6c60dc6a2a435",
+      "target": "02b5a19ac57b95bd6570c5d9",
+      "relation": "ISSUES",
+      "section": "1.3",
+      "condition": "เอกสารผลลัพธ์จากการแจ้งความ",
+      "owner": "",
+      "evidence": "เจ้าพนักงานตำรวจจะออกหลักฐาน\nการแจ้งความเอกสารหาย",
+      "pdf_pages": [
+        24
+      ],
+      "printed_pages": [
+        11
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"หลักฐานการแจ้งความเอกสารหาย\", \"owner\": \"เจ้าพนักงานตำรวจ\", \"condition\": \"\", \"evidence\": \"(3) เจ้าพนักงานตำรวจจะออกหลักฐาน\\nการแจ้งความเอกสารหายเพือ่ ให้ทา่ นนำไปยังหน่วยงาน\\nที่เกี่ยวข้องเพื่อดำเนินการต่อไป\", \"pdf_pages\": [24]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "7abc80f1a4f5c77c260cca77",
+      "source": "d0d7eaacde8b6826fe82f7b0",
+      "target": "b4f89ca08e4c47fd644f23ee",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.4",
+      "condition": "ถ้ามี",
+      "owner": "ผู้หาย",
+      "evidence": "บัตรประจำตัวผู้หาย (ถ้ามี)",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"บัตรประจำตัวผู้หาย\", \"owner\": \"ผู้หาย\", \"condition\": \"ถ้ามี\", \"evidence\": \"(1) บัตรประจำตัวผู้หาย (ถ้ามี)\", \"pdf_pages\": [25]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "d42c073f936549791cb61164",
+      "source": "d0d7eaacde8b6826fe82f7b0",
+      "target": "afd0b8e35905597e533f31f9",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.4",
+      "condition": "ถ้ามี",
+      "owner": "ผู้หาย",
+      "evidence": "สำเนาทะเบียนบ้านของผู้หาย (ถ้ามี)",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"สำเนาทะเบียนบ้าน\", \"owner\": \"ผู้หาย\", \"condition\": \"ถ้ามี\", \"evidence\": \"(2) สำเนาทะเบียนบ้านของผู้หาย (ถ้ามี)\", \"pdf_pages\": [25]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "57b311de694864c0702d3296",
+      "source": "d0d7eaacde8b6826fe82f7b0",
+      "target": "8294756a4230e378bc5995ce",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.4",
+      "condition": "ภาพถ่ายที่เป็นปัจจุบัน",
+      "owner": "ผู้หาย",
+      "evidence": "ภาพถ่ายคนหาย (ภาพถ่ายทีเ่ ป็นปัจจุบนั )",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ภาพถ่าย\", \"owner\": \"ผู้หาย\", \"condition\": \"ปัจจุบัน\", \"evidence\": \"(3) ภาพถ่ายคนหาย (ภาพถ่ายทีเ่ ป็นปัจจุบนั )\", \"pdf_pages\": [25]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "54f48f796db3eb4e142b0f34",
+      "source": "d0d7eaacde8b6826fe82f7b0",
+      "target": "8182e92bef5f8e6be1e2d8b2",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.4",
+      "condition": "ตัวอย่างใบสำคัญทางราชการ ถ้ามี",
+      "owner": "ผู้หาย",
+      "evidence": "ใบสำคัญทางราชการ เช่น ใบเกิด,\nใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"สูติบัตร\", \"owner\": \"ผู้หาย\", \"condition\": \"ถ้ามี\", \"evidence\": \"(4) ใบสำคัญทางราชการ เช่น ใบเกิด,\\nใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)\", \"pdf_pages\": [25]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "ab25e6bb05386d7ada4970e3",
+      "source": "d0d7eaacde8b6826fe82f7b0",
+      "target": "63807f5982cea7e04b040bb9",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.4",
+      "condition": "ถ้ามี",
+      "owner": "ผู้หาย",
+      "evidence": "ใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ใบสำคัญทหาร\", \"owner\": \"ผู้หาย\", \"condition\": \"ถ้ามี\", \"evidence\": \"(4) ใบสำคัญทางราชการ เช่น ใบเกิด,\\nใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)\", \"pdf_pages\": [25]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "f4af72a4d064428fa3a7fefc",
+      "source": "7a1311eed1b62c588a536bfc",
+      "target": "6a18dd233b333fb1c778de46",
+      "relation": "CONTACT_VIA",
+      "section": "1.5",
+      "condition": "191 หรือ 1192 แล้วจึงนำหลักฐานไปแจ้งตำรวจ",
+      "owner": "",
+      "evidence": "แจ้งทาง 191 หรือ แจ้ง 1192 แล้วจึงนำหลักฐาน",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"191\", \"owner\": \"ผู้แจ้งความ\", \"condition\": \"\", \"evidence\": \"แจ้งทาง 191 หรือ แจ้ง 1192 แล้วจึงนำหลักฐาน\", \"pdf_pages\": [25]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "5e19cb41c3145c2f1728b78d",
+      "source": "7a1311eed1b62c588a536bfc",
+      "target": "815c9e59ae609dd066c5ddec",
+      "relation": "CONTACT_VIA",
+      "section": "1.5",
+      "condition": "191 หรือ 1192 แล้วจึงนำหลักฐานไปแจ้งตำรวจ",
+      "owner": "",
+      "evidence": "แจ้งทาง 191 หรือ แจ้ง 1192 แล้วจึงนำหลักฐาน",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"1192\", \"owner\": \"ผู้แจ้งความ\", \"condition\": \"\", \"evidence\": \"แจ้งทาง 191 หรือ แจ้ง 1192 แล้วจึงนำหลักฐาน\", \"pdf_pages\": [25]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "2b580e8b3be4e06897fa8d3d",
+      "source": "7a1311eed1b62c588a536bfc",
+      "target": "9c317f85624c4f9fd7d6d0ba",
+      "relation": "HANDLED_BY",
+      "section": "1.5",
+      "condition": "",
+      "owner": "",
+      "evidence": "ไปแจ้งความต่อเจ้าหน้าที่ตำรวจ",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"เจ้าหน้าที่ตำรวจ\", \"owner\": \"ผู้แจ้งความ\", \"condition\": \"\", \"evidence\": \"ไปแจ้งความต่อเจ้าหน้าที่ตำรวจ คือ\", \"pdf_pages\": [25]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "303be30f7b4d331598400c53",
+      "source": "7a1311eed1b62c588a536bfc",
+      "target": "47ec24efe0963f6086a041ca",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.5",
+      "condition": "ตามประเภทพาหนะที่หาย",
+      "owner": "",
+      "evidence": "ใบทะเบียนรถยนต์ รถจักรยานยนต์ เรือ \nหรือพาหนะอื่น ๆ ที่หาย",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ใบทะเบียนรถยนต์รถจักรยานยนต์เรือหรือพาหนะอื่นๆที่หาย\", \"owner\": \"ผู้แจ้งความ\", \"condition\": \"\", \"evidence\": \"(1) ใบทะเบียนรถยนต์ รถจักรยานยนต์ เรือ \\nหรือพาหนะอื่น ๆ ที่หาย\", \"pdf_pages\": [25]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "a01d963fe993a99b96b15741",
+      "source": "7a1311eed1b62c588a536bfc",
+      "target": "5fa3cb90215640519edb28b1",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.5",
+      "condition": "หรือสัญญาซื้อขาย เท่าที่มี",
+      "owner": "",
+      "evidence": "ใบเสร็จรับเงินหรือสัญญาซือ้ ขายเท่าทีม่ ี",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "38925a0339df0082f3b67f0b",
+      "source": "7a1311eed1b62c588a536bfc",
+      "target": "248323dfed4a77dee54e320a",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.5",
+      "condition": "หรือใบเสร็จรับเงิน เท่าที่มี",
+      "owner": "",
+      "evidence": "ใบเสร็จรับเงินหรือสัญญาซือ้ ขายเท่าทีม่ ี",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "c033990a28f4948fdc9ca0e7",
+      "source": "7a1311eed1b62c588a536bfc",
+      "target": "1a338097d2adb65c548979c5",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.5",
+      "condition": "กรณีเป็นยานพาหนะของนิติบุคคล/ตัวแทนห้างร้านบริษัท",
+      "owner": "",
+      "evidence": "มอบอำนาจจากเจ้าของหรือผูจ้ ดั การของห้างร้าน บริษทั",
+      "pdf_pages": [
+        25,
+        26
+      ],
+      "printed_pages": [
+        12,
+        13
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "469448baedacba8138c79c39",
+      "source": "7a1311eed1b62c588a536bfc",
+      "target": "b794043d851ce158ed76613d",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.5",
+      "condition": "กรณีนิติบุคคล ต่อจาก PDF 25",
+      "owner": "",
+      "evidence": "นั้นๆ ไป รวมทั้งหนังสือรับรองบริษัทด้วย",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"หนังสือรับรองบริษัท\", \"owner\": \"ตัวแทนนิติบุคคล\", \"condition\": \"ถ้ายานพาหนะดังกล่าวเป็นของนิติบุคคล เป็นตัวแทนห้างร้าน บริษัท\", \"evidence\": \"นั้นๆ ไป รวมทั้งหนังสือรับรองบริษัทด้วย\", \"pdf_pages\": [26]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "7beae0850329586c12d11e9b",
+      "source": "7a1311eed1b62c588a536bfc",
+      "target": "b6d908dd7315ef1a9f2f8b29",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.5",
+      "condition": "ถ้ามี",
+      "owner": "",
+      "evidence": "หนังสือเกี่ยวกับการติดต่อหรือเอกสาร\nที่จะใช้เป็นพยานหลักฐานได้ (ถ้ามี)",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"หนังสือเกี่ยวกับการติดต่อหรือเอกสารที่จะใช้เป็นพยานหลักฐานได้\", \"owner\": \"ผู้แจ้งความ\", \"condition\": \"ถ้ามี\", \"evidence\": \"(4) หนังสือเกี่ยวกับการติดต่อหรือเอกสาร\\nที่จะใช้เป็นพยานหลักฐานได้ (ถ้ามี)\", \"pdf_pages\": [26]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "8517c00be361539e4c53d86f",
+      "source": "7a1311eed1b62c588a536bfc",
+      "target": "11d392b505c2fe83773457c7",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.5",
+      "condition": "ถ้ามี; ถ้าไม่มีให้จำข้อมูลรูปพรรณและหมายเลขตามข้อความ",
+      "owner": "",
+      "evidence": "หนังสือคูม่ อื ประจำตัวรถ หรือยานพาหนะ",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "4be9ae6f96a028baad3c08cf",
+      "source": "5a33a4161a31f420ce09522b",
+      "target": "928df9f0e9c7c01a5ab63123",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.6",
+      "condition": "",
+      "owner": "",
+      "evidence": "ทะเบียนใบอนุญาตอาวุธปืน",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ทะเบียนใบอนุญาตอาวุธปืน\", \"owner\": \"ผู้แจ้งความ\", \"condition\": \"\", \"evidence\": \"(1) ทะเบียนใบอนุญาตอาวุธปืน\", \"pdf_pages\": [26]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "7dec57dee9b9d699f707339e",
+      "source": "5a33a4161a31f420ce09522b",
+      "target": "5fa3cb90215640519edb28b1",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.6",
+      "condition": "จากผู้ขายปืน ถ้ามี",
+      "owner": "",
+      "evidence": "ใบเสร็จรับเงินที่บริษัทห้างร้านขายปืน\nออกให้ (ถ้ามี)",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ใบเสร็จรับเงินที่บริษัทห้างร้านขายปืนออกให้\", \"owner\": \"ผู้แจ้งความ\", \"condition\": \"ถ้ามี\", \"evidence\": \"(2) ใบเสร็จรับเงินที่บริษัทห้างร้านขายปืน\\nออกให้ (ถ้ามี)\", \"pdf_pages\": [26]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "06b23c9c70180b5512b6aa21",
+      "source": "a66bf2cd051919a060905739",
+      "target": "5fa3cb90215640519edb28b1",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.7",
+      "condition": "หรือหลักฐานแสดงการซื้อขาย",
+      "owner": "",
+      "evidence": "ใบเสร็จรับเงินซื้อขาย หรือหลักฐาน\nการแสดงการซื้อขายทรัพย์สินนั้น",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ใบเสร็จรับเงินซื้อขาย\", \"owner\": \"ผู้หาย\", \"condition\": \"\", \"evidence\": \"(1) ใบเสร็จรับเงินซื้อขาย หรือหลักฐาน\\nการแสดงการซื้อขายทรัพย์สินนั้น\", \"pdf_pages\": [26]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "00356fe37908d0f2c8ed10b5",
+      "source": "a66bf2cd051919a060905739",
+      "target": "1d2dfb8ea8ca79ad0d7399d0",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.7",
+      "condition": "ถ้ามี",
+      "owner": "",
+      "evidence": "รูปพรรณทรัพย์สนิ นัน้ ๆ เช่น หมายเลข\nเครื่อง ฯลฯ (ถ้ามี)",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"รูปพรรณทรัพย์\", \"owner\": \"ผู้หาย\", \"condition\": \"ถ้ามี\", \"evidence\": \"(2) รูปพรรณทรัพย์สนิ นัน้ ๆ เช่น หมายเลข\\nเครื่อง ฯลฯ (ถ้ามี)\", \"pdf_pages\": [26]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "1ccf8d866dcb6ecd29898cbc",
+      "source": "a66bf2cd051919a060905739",
+      "target": "e9c3b76602f57764639c29b3",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.7",
+      "condition": "",
+      "owner": "",
+      "evidence": "ตำหนิหรือลักษณะพิเศษต่าง ๆ",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ตำหนิหรือลักษณะพิเศษต่างๆ\", \"owner\": \"ผู้หาย\", \"condition\": \"\", \"evidence\": \"(3) ตำหนิหรือลักษณะพิเศษต่าง ๆ\", \"pdf_pages\": [26]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "e37b8a750cc414110e0f90e2",
+      "source": "a66bf2cd051919a060905739",
+      "target": "a216f6b63086269895996e9b",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.7",
+      "condition": "เท่าที่มี",
+      "owner": "",
+      "evidence": "เอกสารสำคัญต่าง ๆ ที่เกี่ยวข้องเท่าที่มี",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"เอกสารสำคัญต่างๆที่เกี่ยวข้อง\", \"owner\": \"ผู้หาย\", \"condition\": \"เท่าที่มี\", \"evidence\": \"(4) เอกสารสำคัญต่าง ๆ ที่เกี่ยวข้องเท่าที่มี\", \"pdf_pages\": [26]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "899929329711537492c7e5a7",
+      "source": "2d14d3b1d24663f38022290a",
+      "target": "5be0e6e7b637414310efa8b3",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.8",
+      "condition": "ตัวอย่างตามประเภทเอกสารที่ถูกปลอมแปลง",
+      "owner": "",
+      "evidence": "ใบสำคัญตัวจริง เช่น โฉนด แบบ น.ส.3 \nแบบ ส.ค.1 หนังสือสัญญา ใบเสร็จรับเงิน เป็นต้น",
+      "pdf_pages": [
+        27
+      ],
+      "printed_pages": [
+        14
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "365b8d19ca8b95f102e06d81",
+      "source": "2d14d3b1d24663f38022290a",
+      "target": "5dc74cb7c6d20645110070f6",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.8",
+      "condition": "",
+      "owner": "",
+      "evidence": "หนังสือที่ปลอมแปลง",
+      "pdf_pages": [
+        27
+      ],
+      "printed_pages": [
+        14
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"หนังสือที่ปลอมแปลง\", \"owner\": \"ผู้เสียหาย\", \"condition\": \"\", \"evidence\": \"(2) หนังสือที่ปลอมแปลง\", \"pdf_pages\": [27]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "311deaeeadf4ec7a6afed526",
+      "source": "2d14d3b1d24663f38022290a",
+      "target": "93cdb369341b2904d7ef4f45",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.8",
+      "condition": "",
+      "owner": "",
+      "evidence": "ตัวอย่างตราที่ใช้ประทับหรือลายเซ็น\nในหนังสือ",
+      "pdf_pages": [
+        27
+      ],
+      "printed_pages": [
+        14
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "9ebece6ef23cec5cc99f9e1f",
+      "source": "e5ba30cfab6a1ab124d4e01d",
+      "target": "a2e2d26e2931df20fe0fe19f",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.9",
+      "condition": "",
+      "owner": "",
+      "evidence": "หนังสือหรือหลักฐานต่างๆ ที่เกี่ยวกับ\nการถูกฉ้อโกง",
+      "pdf_pages": [
+        27
+      ],
+      "printed_pages": [
+        14
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"หนังสือหรือหลักฐานต่างๆที่เกี่ยวกับการถูกฉ้อโกง\", \"owner\": \"ผู้เสียหาย\", \"condition\": \"\", \"evidence\": \"(1) หนังสือหรือหลักฐานต่างๆ ที่เกี่ยวกับ\\nการถูกฉ้อโกง\", \"pdf_pages\": [27]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "63a970c7e56b86b24ce8781c",
+      "source": "e5ba30cfab6a1ab124d4e01d",
+      "target": "7b557ce760d1cc4fa7813a4a",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.9",
+      "condition": "",
+      "owner": "",
+      "evidence": "หลักฐานแสดงการเป็นเจ้าของหรือ\nผู้ครอบครองทรัพย์",
+      "pdf_pages": [
+        27
+      ],
+      "printed_pages": [
+        14
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"หลักฐานแสดงการเป็นเจ้าของหรือผู้ครอบครองทรัพย์\", \"owner\": \"ผู้เสียหาย\", \"condition\": \"\", \"evidence\": \"(2) หลักฐานแสดงการเป็นเจ้าของหรือ\\nผู้ครอบครองทรัพย์\", \"pdf_pages\": [27]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "103b0a69d28c42af39e6c8b5",
+      "source": "ace775f9067618b93f2bdccb",
+      "target": "6a69b0fc1843efa573e744a5",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.10",
+      "condition": "",
+      "owner": "",
+      "evidence": "หนังสือสำคัญหรือหลักฐานที่แสดงว่า\nได้มกี ารมอบหมายทรัพย์ให้ไปจัดการอย่างใดอย่างหนึง่",
+      "pdf_pages": [
+        27
+      ],
+      "printed_pages": [
+        14
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "56d527baad082df51ead7c4b",
+      "source": "ace775f9067618b93f2bdccb",
+      "target": "e262f7a8bab0b3fce1f8240c",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.10",
+      "condition": "",
+      "owner": "",
+      "evidence": "ใบสำคัญแสดงการเป็นเจ้าของทรัพย์สนิ",
+      "pdf_pages": [
+        27
+      ],
+      "printed_pages": [
+        14
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "b623f0916dbffb6fbf752293",
+      "source": "ace775f9067618b93f2bdccb",
+      "target": "26455a5af8e530e6e81af253",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.10",
+      "condition": "กรณีผู้กระทำผิดเป็นผู้จัดการทรัพย์ตามคำสั่งศาลหรือพินัยกรรม",
+      "owner": "",
+      "evidence": "สำเนาหรือคำสั่งศาล หรือพินัยกรรม\nในกรณีผู้กระทำผิดเป็นผู้จัดการทรัพย์สินผู้อื่นตาม\nคำสั่งของศาลหรือพินัยกรรม",
+      "pdf_pages": [
+        28
+      ],
+      "printed_pages": [
+        15
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"สำเนาหรือคำสั่งศาลหรือพินัยกรรม\", \"owner\": \"ผู้เสียหาย\", \"condition\": \"ในกรณีผู้กระทำผิดเป็นผู้จัดการทรัพย์สินผู้อื่นตามคำสั่งของศาลหรือพินัยกรรม\", \"evidence\": \"(3) สำเนาหรือคำสั่งศาล หรือพินัยกรรม\\nในกรณีผู้กระทำผิดเป็นผู้จัดการทรัพย์สินผู้อื่นตาม\\nคำสั่งของศาลหรือพินัยกรรม\", \"pdf_pages\": [28]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "a9a0da4f126840922382e78f",
+      "source": "6f31af29f476c77ebdd29349",
+      "target": "fd3067fcce13c1165ee0c763",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.11",
+      "condition": "ต้นฉบับหรือสำเนาหรือใบสำคัญติดต่อซื้อขายเช่ายืมฝาก",
+      "owner": "",
+      "evidence": "สั ญ ญาใบเช่ า ซื้ อ หรื อ สำ เนา หรื อ",
+      "pdf_pages": [
+        28
+      ],
+      "printed_pages": [
+        15
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "887185d597cfc8da84ec30c6",
+      "source": "6f31af29f476c77ebdd29349",
+      "target": "806e49e03d338ae424476c0a",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.11",
+      "condition": "รายละเอียดรูปพรรณ ยี่ห้อ สี ขนาด น้ำหนัก เลขหมายประจำตัวทรัพย์",
+      "owner": "",
+      "evidence": "ใบสำ คั ญ ที่ บ ริ ษั ท ห้ า งร้ า นออกให้",
+      "pdf_pages": [
+        28
+      ],
+      "printed_pages": [
+        15
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ใบสำคัญที่บริษัทห้างร้านออกให้\", \"owner\": \"ผู้เสียหาย\", \"condition\": \"ระบุรูปพรรณ ยี่ห้อ สี ขนาด น้ำหนัก และเลขหมายประจำตัวทรัพย์\", \"evidence\": \"(2) ใบสำ คั ญ ที่ บ ริ ษั ท ห้ า งร้ า นออกให้\\nโดยระบุรปู พรรณ ยีห่ อ้ สี ขนาด นำ้ หนัก และเลขหมาย\\nประจำตัวทรัพย์นั้น\", \"pdf_pages\": [28]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "ed94ff3d1a0bb8133d420a65",
+      "source": "5ec1434b82144ae603296c03",
+      "target": "7b557ce760d1cc4fa7813a4a",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.12",
+      "condition": "",
+      "owner": "",
+      "evidence": "หลักฐานต่าง ๆ แสดงการเป็นเจ้าของ\nหรือผู้ครอบครองทรัพย์นั้น",
+      "pdf_pages": [
+        28
+      ],
+      "printed_pages": [
+        15
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "417e15d91bfa1128a5fc7ce3",
+      "source": "5ec1434b82144ae603296c03",
+      "target": "9a9ad7c19084b2e66dd027a3",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.12",
+      "condition": "เท่าที่มีหรือนำไปได้; ของใหญ่/เคลื่อนที่ไม่ได้ให้เก็บรักษา",
+      "owner": "",
+      "evidence": "หลักฐานหรือสิ่งของที่เสียหายเท่าที่มี\nหรือเท่าที่นำไปได้",
+      "pdf_pages": [
+        28
+      ],
+      "printed_pages": [
+        15
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"หลักฐานหรือสิ่งของที่เสียหายเท่าที่มีหรือเท่าที่นำไปได้\", \"owner\": \"ผู้เสียหาย\", \"condition\": \"\", \"evidence\": \"(2) หลักฐานหรือสิ่งของที่เสียหายเท่าที่มี\\nหรือเท่าที่นำไปได้\", \"pdf_pages\": [28]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "9e7f8a911d14338302a4ac9c",
+      "source": "8b60d5f5585f38c904850ce6",
+      "target": "afd0b8e35905597e533f31f9",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.13",
+      "condition": "",
+      "owner": "ผู้เยาว์",
+      "evidence": "สำเนาทะเบียนบ้านของผู้เยาว์",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"สำเนาทะเบียนบ้าน\", \"owner\": \"ผู้เยาว์\", \"condition\": \"\", \"evidence\": \"(1) สำเนาทะเบียนบ้านของผู้เยาว์\", \"pdf_pages\": [29]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "00d05f947b608d23aa69d6bc",
+      "source": "8b60d5f5585f38c904850ce6",
+      "target": "8182e92bef5f8e6be1e2d8b2",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.13",
+      "condition": "",
+      "owner": "ผู้เยาว์",
+      "evidence": "ใบเกิดของผู้เยาว์ (สูติบัตร)",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"สูติบัตร\", \"owner\": \"ผู้เยาว์\", \"condition\": \"\", \"evidence\": \"(2) ใบเกิดของผู้เยาว์ (สูติบัตร)\", \"pdf_pages\": [29]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "cc85d65c2b9b0021e58337ad",
+      "source": "8b60d5f5585f38c904850ce6",
+      "target": "8294756a4230e378bc5995ce",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.13",
+      "condition": "",
+      "owner": "ผู้เยาว์",
+      "evidence": "รูปถ่ายของผู้เยาว์",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ภาพถ่าย\", \"owner\": \"ผู้เยาว์\", \"condition\": \"\", \"evidence\": \"(3) รูปถ่ายของผู้เยาว์\", \"pdf_pages\": [29]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "b043ab7798b2458236db9359",
+      "source": "8b60d5f5585f38c904850ce6",
+      "target": "a83428cacf4b030875d3efdb",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.13",
+      "condition": "ถ้ามี",
+      "owner": "ผู้เยาว์",
+      "evidence": "หลักฐานสำคัญอื่น ๆ ที่เกี่ยวกับผู้เยาว์ \n(ถ้ามี)",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"หลักฐานสำคัญอื่นๆที่เกี่ยวกับผู้เยาว์\", \"owner\": \"ผู้เยาว์\", \"condition\": \"ถ้ามี\", \"evidence\": \"(4) หลักฐานสำคัญอื่น ๆ ที่เกี่ยวกับผู้เยาว์ \\n(ถ้ามี)\", \"pdf_pages\": [29]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "318110b748ade8008cb950fe",
+      "source": "151a0eb8c2ee40010f6dada3",
+      "target": "a3d937b71717592b7efc250b",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.14",
+      "condition": "ตามที่ปรากฏในเอกสาร",
+      "owner": "ผู้เสียหาย",
+      "evidence": "เสื้อผ้าของผู้ที่ถูกข่มขืนฯ ซึ่งมีคราบ\nอสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืน",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"เสื้อผ้าของผู้ที่ถูกข่มขืนฯซึ่งมีคราบอสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืน\", \"owner\": \"ผู้เสียหาย\", \"condition\": \"\", \"evidence\": \"(1) เสื้อผ้าของผู้ที่ถูกข่มขืนฯ ซึ่งมีคราบ\\nอสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืนและ\", \"pdf_pages\": [29]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "694eecd90c3fa797ec69b27f",
+      "source": "151a0eb8c2ee40010f6dada3",
+      "target": "f27b215783fc03c91ad0c8ae",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.14",
+      "condition": "",
+      "owner": "",
+      "evidence": "สิ่งของต่างๆ ของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"สิ่งของต่างๆของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ\", \"owner\": \"ผู้เสียหาย\", \"condition\": \"\", \"evidence\": \"สิ่งของต่างๆ ของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ\\n(2) บัตรประจำตัวประชาชนและสำเนา\", \"pdf_pages\": [29]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "611bad69733ca7af2ff41b1c",
+      "source": "151a0eb8c2ee40010f6dada3",
+      "target": "c6f5cdce9b76ca832bc847ae",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.14",
+      "condition": "",
+      "owner": "ผู้เสียหาย",
+      "evidence": "บัตรประจำตัวประชาชนและสำเนา\nทะเบียนบ้านของผู้เสียหาย",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"บัตรประจำตัวประชาชน\", \"owner\": \"ผู้เสียหาย\", \"condition\": \"\", \"evidence\": \"(2) บัตรประจำตัวประชาชนและสำเนา\\nทะเบียนบ้านของผู้เสียหาย\", \"pdf_pages\": [29]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "89a2d9ee8fbabb0e0853042f",
+      "source": "151a0eb8c2ee40010f6dada3",
+      "target": "afd0b8e35905597e533f31f9",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.14",
+      "condition": "",
+      "owner": "ผู้เสียหาย",
+      "evidence": "บัตรประจำตัวประชาชนและสำเนา\nทะเบียนบ้านของผู้เสียหาย",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"สำเนาทะเบียนบ้าน\", \"owner\": \"ผู้เสียหาย\", \"condition\": \"\", \"evidence\": \"(2) บัตรประจำตัวประชาชนและสำเนา\\nทะเบียนบ้านของผู้เสียหาย\", \"pdf_pages\": [29]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "afd9f836c324f9431259f594",
+      "source": "151a0eb8c2ee40010f6dada3",
+      "target": "8294756a4230e378bc5995ce",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.14",
+      "condition": "รูปถ่ายหรือที่อยู่ ถ้ามี",
+      "owner": "ผู้ต้องสงสัย",
+      "evidence": "รูปถ่าย หรือที่อยู่ของผู้ต้องสงสัย \nตลอดจนหลักฐานอื่น ๆ (ถ้ามี)",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "0f14763f145c7e8a43a3c209",
+      "source": "151a0eb8c2ee40010f6dada3",
+      "target": "72657c4aac775fc25a908bd4",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.14",
+      "condition": "รูปถ่ายหรือที่อยู่ ถ้ามี",
+      "owner": "ผู้ต้องสงสัย",
+      "evidence": "รูปถ่าย หรือที่อยู่ของผู้ต้องสงสัย \nตลอดจนหลักฐานอื่น ๆ (ถ้ามี)",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ที่อยู่ของผู้ต้องสงสัย\", \"owner\": \"ผู้เสียหาย\", \"condition\": \"ถ้ามี\", \"evidence\": \"(3) รูปถ่าย หรือที่อยู่ของผู้ต้องสงสัย \\nตลอดจนหลักฐานอื่น ๆ (ถ้ามี)\", \"pdf_pages\": [29]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "2b9cf6b8e8c059d435b9523c",
+      "source": "ea0852846f8ff21e1eeecd51",
+      "target": "f18be098e4680cfa6fdbffde",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.15",
+      "condition": "กรณีหลักฐานเสี่ยงสูญหาย/เสียหาย ให้แจ้งหรือนำมามอบตำรวจ",
+      "owner": "",
+      "evidence": "ที่คนร้ายทิ้งไว้ในสถานที่เกิดเหตุ ตลอดจนพยาน\nหลักฐานต่างๆ ที่ตกอยู่ในที่เกิดเหตุหากปล่อยทิ้งไว้จะ\nสูญหาย",
+      "pdf_pages": [
+        30
+      ],
+      "printed_pages": [
+        17
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "f407a4d6308008a9c041c6ba",
+      "source": "ea0852846f8ff21e1eeecd51",
+      "target": "9c317f85624c4f9fd7d6d0ba",
+      "relation": "HANDLED_BY",
+      "section": "1.15",
+      "condition": "",
+      "owner": "",
+      "evidence": "เจ้าหน้าที่ตำรวจ",
+      "pdf_pages": [
+        30
+      ],
+      "printed_pages": [
+        17
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "0dad93b538b012bcf25de395",
+      "source": "fb8d008d16db968e19761548",
+      "target": "750341033dc471d56d75159d",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.16",
+      "condition": "",
+      "owner": "",
+      "evidence": "เช็คที่ยึดไว้",
+      "pdf_pages": [
+        30
+      ],
+      "printed_pages": [
+        17
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"เช็ค\", \"owner\": \"ผู้เสียหาย\", \"condition\": \"\", \"evidence\": \"(1) เช็คที่ยึดไว้\", \"pdf_pages\": [30]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "817ebe6dc31a473926bda254",
+      "source": "fb8d008d16db968e19761548",
+      "target": "fb8b27481015b2dd4d7de668",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.16",
+      "condition": "",
+      "owner": "",
+      "evidence": "หนังสือทีธ่ นาคารแจ้งขัดข้องหรือปฏิเสธ\nการจ่ายเงิน",
+      "pdf_pages": [
+        30
+      ],
+      "printed_pages": [
+        17
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "eda5ed5f5e835d21cf4ceafb",
+      "source": "fb8d008d16db968e19761548",
+      "target": "248323dfed4a77dee54e320a",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.16",
+      "condition": "ตัวอย่างหลักฐานมูลหนี้ที่มาของการจ่ายเช็ค",
+      "owner": "",
+      "evidence": "หลักฐานหรือเอกสารซึง่ เป็นมูลหนีแ้ หล่ง\nที่มาของการจ่ายเช็ค เช่น หนังสือสัญญาซื้อขาย ฯลฯ",
+      "pdf_pages": [
+        30
+      ],
+      "printed_pages": [
+        17
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "f1732064b865640e9bbac69f",
+      "source": "187bfa46dd7be33e8fdf449c",
+      "target": "702078f5875d85650d137ea3",
+      "relation": "CERTIFIED_BY",
+      "section": "1.2",
+      "condition": "กรณีไม่มีเอกสารมีรูปถ่าย; บุคคลรับรองทางเลือก",
+      "owner": "",
+      "evidence": "ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน\nผู้ใหญ่บ้าน ไปให้การรับรอง",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"เจ้าบ้าน\", \"owner\": \"ผู้หาย\", \"condition\": \"หากไม่มีเอกสารที่มีรูปถ่าย\", \"evidence\": \"ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน\\nผู้ใหญ่บ้าน ไปให้การรับรอง\", \"pdf_pages\": [22]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "077043eb05ef499e698aaf54",
+      "source": "187bfa46dd7be33e8fdf449c",
+      "target": "f65c78a3a7d79643711c0394",
+      "relation": "CERTIFIED_BY",
+      "section": "1.2",
+      "condition": "กรณีไม่มีเอกสารมีรูปถ่าย; บุคคลรับรองทางเลือก",
+      "owner": "",
+      "evidence": "ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน\nผู้ใหญ่บ้าน ไปให้การรับรอง",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"กำนัน\", \"owner\": \"ผู้หาย\", \"condition\": \"หากไม่มีเอกสารที่มีรูปถ่าย\", \"evidence\": \"ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน\\nผู้ใหญ่บ้าน ไปให้การรับรอง\", \"pdf_pages\": [22]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "85195909c943d9b9a9340cea",
+      "source": "187bfa46dd7be33e8fdf449c",
+      "target": "b3ad5b1a20c36739978a4841",
+      "relation": "CERTIFIED_BY",
+      "section": "1.2",
+      "condition": "กรณีไม่มีเอกสารมีรูปถ่าย; บุคคลรับรองทางเลือก",
+      "owner": "",
+      "evidence": "ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน\nผู้ใหญ่บ้าน ไปให้การรับรอง",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ผู้ใหญ่บ้าน\", \"owner\": \"ผู้หาย\", \"condition\": \"หากไม่มีเอกสารที่มีรูปถ่าย\", \"evidence\": \"ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน\\nผู้ใหญ่บ้าน ไปให้การรับรอง\", \"pdf_pages\": [22]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "8604c4b9e05a6e5dbd23b027",
+      "source": "b129573416c6c60dc6a2a435",
+      "target": "48f727923c30901dbc56de58",
+      "relation": "ABOUT_DOCUMENT",
+      "section": "1.3",
+      "condition": "ตัวอย่างเอกสารที่หาย ไม่ใช่เอกสารที่ต้องนำไป",
+      "owner": "",
+      "evidence": "ใบอนุญาตขับขี่รถยนต์, จักรยานยนต์",
+      "pdf_pages": [
+        24
+      ],
+      "printed_pages": [
+        11
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ใบอนุญาตขับรถ\", \"owner\": \"ผู้หาย\", \"condition\": \"\", \"evidence\": \"เช่น ใบอนุญาตขับขี่รถยนต์, จักรยานยนต์, \", \"pdf_pages\": [24]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "1471d65ab6835d5441d4bf8d",
+      "source": "b129573416c6c60dc6a2a435",
+      "target": "df3c410b040158784e411f35",
+      "relation": "ABOUT_DOCUMENT",
+      "section": "1.3",
+      "condition": "ตัวอย่างเอกสารที่หาย ไม่ใช่เอกสารที่ต้องนำไป",
+      "owner": "",
+      "evidence": "โฉนดที่ดิน",
+      "pdf_pages": [
+        24
+      ],
+      "printed_pages": [
+        11
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"โฉนดที่ดิน\", \"owner\": \"ผู้หาย\", \"condition\": \"\", \"evidence\": \"โฉนดที่ดิน, ใบสำคัญประจำตัวคนต่างด้าว ฯลฯ \", \"pdf_pages\": [24]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "cc4d97590ae2b3fdb2cf38ce",
+      "source": "b129573416c6c60dc6a2a435",
+      "target": "3b7677293c6836b7c4cf5a39",
+      "relation": "ABOUT_DOCUMENT",
+      "section": "1.3",
+      "condition": "ตัวอย่างเอกสารที่หาย ไม่ใช่เอกสารที่ต้องนำไป",
+      "owner": "",
+      "evidence": "ใบสำคัญประจำตัวคนต่างด้าว",
+      "pdf_pages": [
+        24
+      ],
+      "printed_pages": [
+        11
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": true,
+      "model_candidates_json": "[{\"name\": \"ใบสำคัญประจำตัวคนต่างด้าว\", \"owner\": \"ผู้หาย\", \"condition\": \"\", \"evidence\": \"โฉนดที่ดิน, ใบสำคัญประจำตัวคนต่างด้าว ฯลฯ \", \"pdf_pages\": [24]}]",
+      "review_action": "model_candidate_normalized_and_source_verified"
+    },
+    {
+      "id": "c7bc8927976f2d5045f78c4c",
+      "source": "7a1311eed1b62c588a536bfc",
+      "target": "858cbab38af1039aeaf6e762",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.5",
+      "condition": "กรณีไม่มีหนังสือคู่มือรถ; ตามข้อมูลที่มี",
+      "owner": "",
+      "evidence": "คู่มือรถให้จำยี่ห้อ สี แบบ หมายเลขประจำเครื่องและ\nตัวรถไปด้วย (ถ้ามี)",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "89a294ab67a20652965d2bc0",
+      "source": "151a0eb8c2ee40010f6dada3",
+      "target": "77e9e1dc7a1636b11623ce5b",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.14",
+      "condition": "ถ้ามี",
+      "owner": "",
+      "evidence": "ตลอดจนหลักฐานอื่น ๆ (ถ้ามี)",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "44b7502069ba3affbda455df",
+      "source": "ea0852846f8ff21e1eeecd51",
+      "target": "9ad05297237a8ea40b26b5fe",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "section": "1.15",
+      "condition": "เท่าที่สามารถแจ้งได้",
+      "owner": "",
+      "evidence": "รายละเอียดต่าง ๆ เท่าที่สามารถบอก\nให้เจ้าหน้าที่ตำรวจได้ทราบ",
+      "pdf_pages": [
+        30
+      ],
+      "printed_pages": [
+        17
+      ],
+      "source_sha256": "a73034b8f586727ca91d3390ccbb3fb1575e575a4f0afc4cdef0f2d732e1975f",
+      "review_status": "source_reviewed",
+      "provenance": "manual_reference_not_llm_output",
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_or_corrected_during_source_review"
+    },
+    {
+      "id": "07ccccc1e5f48a5786606d29",
+      "source": "d1a073a45ae7787d3432940a",
+      "target": "bc3b76cb0ca130596b8b7025",
+      "relation": "HAS_CHAPTER",
+      "evidence": "1. คำแนะนำในการไปติดต่อที่สถานีตำรวจ",
+      "pdf_pages": [
+        21
+      ],
+      "printed_pages": [
+        8
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "755ff9112d16bee424b069a5",
+      "source": "bc3b76cb0ca130596b8b7025",
+      "target": "07e2d6a53ce44091c0828a9f",
+      "relation": "HAS_SECTION",
+      "section": "1.1",
+      "evidence": "1.1 เอกสารสำคัญที่ต้องนำติดตัวไป",
+      "pdf_pages": [
+        21
+      ],
+      "printed_pages": [
+        8
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "ac3b2511713ebb2d5bd83874",
+      "source": "bc3b76cb0ca130596b8b7025",
+      "target": "187bfa46dd7be33e8fdf449c",
+      "relation": "HAS_SECTION",
+      "section": "1.2",
+      "evidence": "1.2 กรณีบตั รประจำตัวประชาชนหายหรือบัตร\nถูกทำลาย",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "e82d66311200de7804923040",
+      "source": "bc3b76cb0ca130596b8b7025",
+      "target": "b129573416c6c60dc6a2a435",
+      "relation": "HAS_SECTION",
+      "section": "1.3",
+      "evidence": "1.3 แจ้งความเอกสารสำคัญหาย",
+      "pdf_pages": [
+        24
+      ],
+      "printed_pages": [
+        11
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "3ac50b22150e71c8722c1eca",
+      "source": "bc3b76cb0ca130596b8b7025",
+      "target": "d0d7eaacde8b6826fe82f7b0",
+      "relation": "HAS_SECTION",
+      "section": "1.4",
+      "evidence": "1.4 แจ้งความคนหาย",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "7b49732673473e8b35f7dfb2",
+      "source": "bc3b76cb0ca130596b8b7025",
+      "target": "7a1311eed1b62c588a536bfc",
+      "relation": "HAS_SECTION",
+      "section": "1.5",
+      "evidence": "1.5 แจ้งความรถหรือเรือหาย",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "878378681790a343d0f77f0c",
+      "source": "bc3b76cb0ca130596b8b7025",
+      "target": "5a33a4161a31f420ce09522b",
+      "relation": "HAS_SECTION",
+      "section": "1.6",
+      "evidence": "1.6 แจ้งความอาวุธปืนหาย",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "833f14b679f2ca344d6d7923",
+      "source": "bc3b76cb0ca130596b8b7025",
+      "target": "a66bf2cd051919a060905739",
+      "relation": "HAS_SECTION",
+      "section": "1.7",
+      "evidence": "1.7 แจ้งความทรัพย์สินหาย",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "be833d0f76263c1ec9eefb87",
+      "source": "bc3b76cb0ca130596b8b7025",
+      "target": "2d14d3b1d24663f38022290a",
+      "relation": "HAS_SECTION",
+      "section": "1.8",
+      "evidence": "1.8 แจ้งความถูกปลอมแปลงเอกสาร",
+      "pdf_pages": [
+        27
+      ],
+      "printed_pages": [
+        14
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "b0f8de5fbec13d491b58d0c9",
+      "source": "bc3b76cb0ca130596b8b7025",
+      "target": "e5ba30cfab6a1ab124d4e01d",
+      "relation": "HAS_SECTION",
+      "section": "1.9",
+      "evidence": "1.9 แจ้งความถูกฉ้อโกงทรัพย์",
+      "pdf_pages": [
+        27
+      ],
+      "printed_pages": [
+        14
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "afd3bac0b8ce0c8d5b94a04f",
+      "source": "bc3b76cb0ca130596b8b7025",
+      "target": "ace775f9067618b93f2bdccb",
+      "relation": "HAS_SECTION",
+      "section": "1.10",
+      "evidence": "1.10 แจ้งความถูกยักยอกทรัพย์",
+      "pdf_pages": [
+        27
+      ],
+      "printed_pages": [
+        14
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "6d633693ed2eab12a4f9cb51",
+      "source": "bc3b76cb0ca130596b8b7025",
+      "target": "6f31af29f476c77ebdd29349",
+      "relation": "HAS_SECTION",
+      "section": "1.11",
+      "evidence": "1.11 แจ้งความถูกยักยอกทรัพย์ในส่วนทีเ่ กีย่ วกับ\nการเช่าซื้อ",
+      "pdf_pages": [
+        28
+      ],
+      "printed_pages": [
+        15
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "a239e20fade53a215ae63c4f",
+      "source": "bc3b76cb0ca130596b8b7025",
+      "target": "5ec1434b82144ae603296c03",
+      "relation": "HAS_SECTION",
+      "section": "1.12",
+      "evidence": "1.12 แจ้งความทำให้เสียทรัพย์",
+      "pdf_pages": [
+        28
+      ],
+      "printed_pages": [
+        15
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "889a559c4b9308bddd085bf9",
+      "source": "bc3b76cb0ca130596b8b7025",
+      "target": "8b60d5f5585f38c904850ce6",
+      "relation": "HAS_SECTION",
+      "section": "1.13",
+      "evidence": "1.13 แจ้งความพรากผู้เยาว์",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "2900fca00d7a8f08f40caa98",
+      "source": "bc3b76cb0ca130596b8b7025",
+      "target": "151a0eb8c2ee40010f6dada3",
+      "relation": "HAS_SECTION",
+      "section": "1.14",
+      "evidence": "1.14 แจ้งความถูกข่มขืนกระทำชำเรา",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "a4a5a776aa29a0e3df5ee893",
+      "source": "bc3b76cb0ca130596b8b7025",
+      "target": "ea0852846f8ff21e1eeecd51",
+      "relation": "HAS_SECTION",
+      "section": "1.15",
+      "evidence": "1.15 แจ้งความถูกทำร้ายร่างกายและเหตุฆา่ คนตาย",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "0b39a1531953749710c83ffd",
+      "source": "bc3b76cb0ca130596b8b7025",
+      "target": "fb8d008d16db968e19761548",
+      "relation": "HAS_SECTION",
+      "section": "1.16",
+      "evidence": "1.16 แจ้งความจ่ายเช็คโดยไม่มีเงิน",
+      "pdf_pages": [
+        30
+      ],
+      "printed_pages": [
+        17
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "review_status": "source_structure_verified",
+      "review_action": "added_from_document_heading_structure",
+      "model_candidate_found": false
+    },
+    {
+      "id": "63419b4aecfedbb6c1bb8cec",
+      "source": "d0d7eaacde8b6826fe82f7b0",
+      "target": "17235ebe9dedd764612e823e",
+      "relation": "CONTACT_ORGANIZATION",
+      "section": "1.4",
+      "condition": "ช่องทางเพิ่มเติมที่ระบุในคู่มือ",
+      "owner": "",
+      "evidence": "ศู น ย์ ข ้ อ มู ล คนหาย มู ล นิ ธิ ก ระจกเงา",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_during_source_review",
+      "review_status": "source_reviewed"
+    },
+    {
+      "id": "a986018b7536e5489c2b5617",
+      "source": "17235ebe9dedd764612e823e",
+      "target": "e9b6a73d8b45950ade2609af",
+      "relation": "HAS_CONTACT",
+      "section": "1.4",
+      "condition": "ช่องทางเพิ่มเติมที่ระบุในคู่มือ",
+      "owner": "ศูนย์ข้อมูลคนหาย มูลนิธิกระจกเงา",
+      "evidence": "ศู น ย์ ข ้ อ มู ล คนหาย มู ล นิ ธิ ก ระจกเงา\nโทร. 08 0775 2673",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "dataset": "police-manual-B-source-reviewed-v1",
+      "group": "B",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "llm_model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "model_candidate_found": false,
+      "model_candidates_json": "[]",
+      "review_action": "added_during_source_review",
+      "review_status": "source_reviewed"
+    }
+  ]
+}

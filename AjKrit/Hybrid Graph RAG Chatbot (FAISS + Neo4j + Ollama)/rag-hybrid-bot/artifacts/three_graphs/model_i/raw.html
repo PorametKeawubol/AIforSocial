@@ -1,0 +1,1961 @@
+<!doctype html><meta charset="utf-8"><style>body{font-family:"Noto Sans Thai",Tahoma,sans-serif;background:#eff5f2;color:#17352d;margin:0;padding:40px;line-height:1.7}main{max-width:1200px;margin:auto}h1{font-size:32px}h2{color:#207359}article{background:white;padding:28px;border-radius:18px;margin:22px 0;border:1px solid #d9e6df}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}table{width:100%;border-collapse:collapse}td,th{border-bottom:1px solid #d9e6df;padding:10px;text-align:left}.tag{color:#267454;font-weight:bold}a{color:#207359}</style><main><h1>Model I · langchain_neo4j.Neo4jGraph · Raw JSON</h1><pre>{
+  &quot;metadata&quot;: {
+    &quot;title&quot;: &quot;Model I · langchain_neo4j.Neo4jGraph&quot;,
+    &quot;method&quot;: &quot;Actual Neo4jGraph.query ingestion; cached Qwen3.5 9B extraction from all pages. Adapted schema-controlled extraction replaces LLMGraphTransformer. No source-review additions.&quot;,
+    &quot;model&quot;: &quot;qwen3.5:9b&quot;
+  },
+  &quot;nodes&quot;: [
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;PVY&quot;,
+      &quot;id&quot;: &quot;8e4b21f8f8b4bfd45936a069&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;TEV (Tobacco etch virus)&quot;,
+      &quot;id&quot;: &quot;d551361c36fd5bb08c520d9e&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;กรดจัด&quot;,
+      &quot;id&quot;: &quot;968b02bb8e9e0df305c7998f&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;กลางแผลสีเทา หรือขาว&quot;,
+      &quot;id&quot;: &quot;45801be96bb64ff58e843de2&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;กลุ่มเชื้อราเป็นผงสีขาวหรือเทา&quot;,
+      &quot;id&quot;: &quot;6814aa8f6ae53e00ddac82c7&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;การควบคุมในเบื้องต้น&quot;,
+      &quot;id&quot;: &quot;373fa42ff05e696fa0ae3d01&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;การปรับปรุงดินก่อนการเพาะปลูก&quot;,
+      &quot;id&quot;: &quot;50c702c482fd7d68a8825aff&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;การปลูกพริก&quot;,
+      &quot;id&quot;: &quot;859df953e0bcef98ea76f515&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;การป้องกันและกำจัด&quot;,
+      &quot;id&quot;: &quot;7fcbb764ea25901dca866634&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;การห่มดิน&quot;,
+      &quot;id&quot;: &quot;f94c158b63a84565383d0f0e&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;การห่มดิน&quot;,
+      &quot;id&quot;: &quot;5bd175bfa0996ad1d5756ccb&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;การแก้ปัญหาดินเค็ม&quot;,
+      &quot;id&quot;: &quot;c0e03ef19b67b427ee8d69f8&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;การใช้พรมใยปาล์มซึ่งทำมาจากปาล์มที่ผ่านการรีดน้ำมันแล้ว&quot;,
+      &quot;id&quot;: &quot;9f1ac49292a6a7c64e8da30e&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;การใช้สารเคมี&quot;,
+      &quot;id&quot;: &quot;036a08d2be240f724ae8af37&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;กำจัดเพลี้ยอ่อน&quot;,
+      &quot;id&quot;: &quot;622e70eb65a83b056f3929af&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;ขอบแผลสีน้ำตาลเข้ม&quot;,
+      &quot;id&quot;: &quot;c76e6a8a6b503b7aa520f858&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Crop&quot;,
+      &quot;name&quot;: &quot;ข้าวโพด&quot;,
+      &quot;id&quot;: &quot;c5d5b1b95fb072bf5d2add59&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;ความเค็มของดิน&quot;,
+      &quot;id&quot;: &quot;c4a11be05e12c69c17a1959d&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;ความเป็นกรดเป็นด่างของดิน&quot;,
+      &quot;id&quot;: &quot;cc3ba5f08427c397ad0cd774&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;จุดฉ่ำน้ำรูปวงรีหรือรูปไข่&quot;,
+      &quot;id&quot;: &quot;3ec7b796d7e704e0a1280f9a&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;จุดสีดำเรียงซ้อนกันในแผล&quot;,
+      &quot;id&quot;: &quot;a4feae66e99493f560fc686d&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;จุลินทรีย์ตาย&quot;,
+      &quot;id&quot;: &quot;11a2ad9b68099025985b08b6&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;จุลินทรีย์ที่ไม่เป็นประโยชน์&quot;,
+      &quot;id&quot;: &quot;1c1fd0484974f9f0214542f3&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;จุลินทรีย์ในดิน&quot;,
+      &quot;id&quot;: &quot;272986670f7fc46e0ca306fb&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;จุลินทรีย์ในดิน&quot;,
+      &quot;id&quot;: &quot;45fa0b2ea4a8630d155f99b5&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;ช่วยคลุมหน้าดินไม่ให้วัชพืชขึ้นรบกวนต้นไม้พืชหลัก&quot;,
+      &quot;id&quot;: &quot;12181b2ca355b0ce1ecdf204&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;ดอกตัวผู้จะหงิกงอ ไม่เจริญเต็มที่&quot;,
+      &quot;id&quot;: &quot;ce2db968342cd8a04d91e61f&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;ดาวเรืองและงา&quot;,
+      &quot;id&quot;: &quot;411474151b1a864132701ca0&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;ดิน&quot;,
+      &quot;id&quot;: &quot;98db94e8bf7dc8d0a6acd977&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;ดินเปรี้ยว&quot;,
+      &quot;id&quot;: &quot;38f09999ea39ab02bd7a3352&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;ดินเปรี้ยวหรือดินเค็ม&quot;,
+      &quot;id&quot;: &quot;4a8eef81b3e095852f2075e9&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;ดินเปรี้ยวหรือดินเป็นกรด&quot;,
+      &quot;id&quot;: &quot;431dd9d20a96f9c554f2410f&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;ตัดแต่งส่วนที่เป็นโรค นำไปเผาทำลายนอกแปลงปลูก&quot;,
+      &quot;id&quot;: &quot;9dba120b2872efe97b5d5ac2&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;ต้นตายได้&quot;,
+      &quot;id&quot;: &quot;ea574ccf0a060a7fe13fc97f&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Crop&quot;,
+      &quot;name&quot;: &quot;ต้นพริก&quot;,
+      &quot;id&quot;: &quot;5f6a5e2aa650727ef05a5120&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;ต้นแคระแกร็น&quot;,
+      &quot;id&quot;: &quot;6507b47d0015ef5b3100f440&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;ต้นแห้งตาย&quot;,
+      &quot;id&quot;: &quot;3bb95e689ae5748a93784373&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;ถอนต้นและกำจัดเศษซากต้นพริกที่เป็นโรคไปเผาทำลาย กำจัดวัชพืชไม่ให้เป็นแหล่งอาศัยของเพลี้ยอ่อน&quot;,
+      &quot;id&quot;: &quot;f3966b9208e027e9048ef2ea&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Crop&quot;,
+      &quot;name&quot;: &quot;ถั่ว&quot;,
+      &quot;id&quot;: &quot;93a78ed335a4093b5eec3f0d&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;ทฤษฏีการห่มดิน&quot;,
+      &quot;id&quot;: &quot;db296e1caeb5caa39197c4bc&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Crop&quot;,
+      &quot;name&quot;: &quot;ทุเรียน&quot;,
+      &quot;id&quot;: &quot;2d784ef56a6763c2af821f27&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;นาข้าว&quot;,
+      &quot;id&quot;: &quot;9237270c3da335d11cc6efd9&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;น้ำมันทาร์&quot;,
+      &quot;id&quot;: &quot;049ad54d39f36e880abf1157&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;น้ำมันเบา&quot;,
+      &quot;id&quot;: &quot;e21414cb616f57d48885ee83&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;น้ำส้มควันไม้&quot;,
+      &quot;id&quot;: &quot;d8dac12a442757598e65c9c6&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;น้ำส้มไม้&quot;,
+      &quot;id&quot;: &quot;028ea2124575cb227f85672e&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;น้ำหมักสมุนไพร&quot;,
+      &quot;id&quot;: &quot;413ee79851eab71e24326d5c&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;น้ำหมักสมุนไพรรสจืด&quot;,
+      &quot;id&quot;: &quot;604bc0fdb8d91b097e9cb564&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;ประจุดเหลือง&quot;,
+      &quot;id&quot;: &quot;0685670e66a510ace17aa64f&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;ปลูกข้าวโพดพันธุ์ต้านทาน&quot;,
+      &quot;id&quot;: &quot;9df8f070a8f9824458308e98&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;ปลูกพืชหมุนเวียน&quot;,
+      &quot;id&quot;: &quot;d3e1883070e9f88bda73cc37&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;ปี 2558&quot;,
+      &quot;id&quot;: &quot;b243d0dd865e8263da6e3502&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;ปีแห่งดินสากล&quot;,
+      &quot;id&quot;: &quot;0485e1149c8e0c5db90cfa46&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;ปุ๋ยเคมี&quot;,
+      &quot;id&quot;: &quot;5d950581baa0f796293cf872&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;ผงคล้ายแป้งสีขาวปกคลุมใบแก่&quot;,
+      &quot;id&quot;: &quot;739a2dffed22c8d7c2bf03bd&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;ผงสปอร์สีขาวๆ เป็นจำนวนมากบริเวณใต้ใบ&quot;,
+      &quot;id&quot;: &quot;5c213df2461a7a3145d327c9&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Crop&quot;,
+      &quot;name&quot;: &quot;พริก&quot;,
+      &quot;id&quot;: &quot;c7bcfc6855e30e737b7870bb&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Crop&quot;,
+      &quot;name&quot;: &quot;พืช&quot;,
+      &quot;id&quot;: &quot;64cd1c4c64bf95519f3abe08&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;พืชตระกูลถั่ว เช่น ถั่วลิสง หรือปอเทือง&quot;,
+      &quot;id&quot;: &quot;d63f7a5abb23eb071bc9f809&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;พืชหมุนเวียน&quot;,
+      &quot;id&quot;: &quot;9c575dee8d41163be7e6ffaf&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;พ่นห่างกัน 7 วัน ไม่ควรใช้สารชนิดเดียวกันเกิน 3 ครั้ง เพราะจะทำให้เชื้อสาเหตุเกิดการดื้อยา&quot;,
+      &quot;id&quot;: &quot;119a3d0e6fed6c26ee5480cf&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;ฟอสอีทิล-อะลูมิเนียม 80% ดับเบิลยูพี&quot;,
+      &quot;id&quot;: &quot;6594203ec8453591cb3e773d&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;มีสีเขียวอ่อนสลับสีเขียวเข้ม หรือ สีเหลือง หรือจุดเหลืองกระจายตามใบ ต้นแคระแกร็น ไม่ออกดอก ใบเล็กลง ผลมีจุดสีเหลืองซีด ผิวผลหยาบ ผลมีรูปร่างผิดปกติ&quot;,
+      &quot;id&quot;: &quot;73b577982c7ada971b59d90b&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;มีแผลขนาดเล็กสีคล้ายฟางข้าวบนใบข้าวโพด และขยายใหญ่ขึ้นเป็นสีเทาหรือสีน้ำตาลอ่อน ยาวตามใบข้าวโพด ทำให้ ใบข้าวโพดแห้งตาย&quot;,
+      &quot;id&quot;: &quot;ba6922c697d629712f186f27&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;มูลวัวควาย&quot;,
+      &quot;id&quot;: &quot;32afdcc9e94ae9184fb5d877&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;ยอดข้าวโพดมีสีซีด เหี่ยวเฉา ต่อมาจะไหม้ลุกลามเป็นยอดเน่า&quot;,
+      &quot;id&quot;: &quot;065f8bd6f5de8ef9c7f3dec6&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;ยอดและกิ่งใบจะลู่ลงในช่วงกลางวัน และฟื้นตัวในช่วงกลางคืน&quot;,
+      &quot;id&quot;: &quot;fe0f607013b8801decd444f7&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;ยืนต้นตายขณะที่ใบยังเขียวอยู่ได้ภายใน 2 ถึง 3 วัน&quot;,
+      &quot;id&quot;: &quot;517061ac7af39da3b650d567&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;รอยไหม้สีดำบริเวณลำต้น&quot;,
+      &quot;id&quot;: &quot;ebb58a88073738d276b3ed0d&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;รากเป็นปมและเน่า&quot;,
+      &quot;id&quot;: &quot;777c362a38e5da79f204ff18&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;ราเมล็ดผักกาด&quot;,
+      &quot;id&quot;: &quot;9bb65c1c95f47e87889123f2&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;ราเม็ดผักกาด&quot;,
+      &quot;id&quot;: &quot;3b19e9406b9f283a096e0779&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;ฤดูฝน&quot;,
+      &quot;id&quot;: &quot;7c677f01be6453210352fdb3&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;ลายเขียวซีดสลับเขียวเข้ม&quot;,
+      &quot;id&quot;: &quot;693112a13c1fcba38c6b7b74&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;วัชพืช&quot;,
+      &quot;id&quot;: &quot;6b6d21081b0d10da2e17bfc1&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;วันดินโลก&quot;,
+      &quot;id&quot;: &quot;1a7f47de2b02914cfc629b3c&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;วันที่ 5 ธันวาคมของทุกปี&quot;,
+      &quot;id&quot;: &quot;80cf4dca4247330e7d91b23a&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;สารชีวภาพ&quot;,
+      &quot;id&quot;: &quot;b1895868d75dec72ca00e9b3&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;สารดับกลิ่นตัว&quot;,
+      &quot;id&quot;: &quot;581426b096e55ecb0c80c02f&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;สารปรับปรุงดิน&quot;,
+      &quot;id&quot;: &quot;1b98739b6d832a60fe6aab37&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;สารป้องกันกำจัดโรคพืช อะโซซิสโตรบิน+ ไดฟีโนโคนาโซล อัตรา 15 ซีซี/น้ำ 20 ลิตร โพรพิโคนาโซล อัตรา 20 ซีซี/น้ำ 20 ลิตร โพรพิโคนาโซล+ไดฟีโนโคนาโซล อัตรา 5 ซีซี/น้ำ 20 ลิตร&quot;,
+      &quot;id&quot;: &quot;5252e1a3558448b53e6cd2d1&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;สารฟอสฟอริกแอซิด&quot;,
+      &quot;id&quot;: &quot;173f37c8dd4f1b25445d58c7&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;สารเมตาแลกซิลหรือสารอีทริไดอะโซล หรือสารพีซีเอ็นบีผสมอีทริไดอะโซล หรือสารชีวภัณฑ์ราดดินบริเวณที่ถอนต้นออกไป&quot;,
+      &quot;id&quot;: &quot;4bddb99f582b4fa285ec3c12&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;สารเมทาแลกซิล หรือสารฟอสอีทิล-อะลูมิเนียม&quot;,
+      &quot;id&quot;: &quot;797b6ed835d9d60f9528b805&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;สารแมนโคเซบ&quot;,
+      &quot;id&quot;: &quot;36bbdafcac06b850ef5cf287&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;สารไดพีโนโคนาโซล 25% อัตรา 20-30 ซีซี ต่อ น้ำ 20 ลิตร หรือแมนโคเซบ 80% อัตรา 40 กรัม ต่อน้ำ 20 ลิตร พ่นทุก 7 วัน จำนวน 2-4 ครั้ง&quot;,
+      &quot;id&quot;: &quot;d46f77ee13fe167e809de4d8&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;สารไดเมโทมอร์ฟ อัตรา 20 กรัม/เมล็ด 1 กิโลกรัม&quot;,
+      &quot;id&quot;: &quot;e164027b2a023b45e7eb801c&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;สารไดโนแคป ไตรโฟรีน และเบโนมิล&quot;,
+      &quot;id&quot;: &quot;03ac9916f4a5b448ae817efb&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;สูตรน้ำส้มสายชู&quot;,
+      &quot;id&quot;: &quot;5ef34b1bd3cd01710866f469&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;สูตรน้ำหัวผักกาด&quot;,
+      &quot;id&quot;: &quot;29921bb6558fbde474777b85&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;หลังใบจะเป็นสีเหลืองและเปลี่ยนเป็นสีน้ำตาลมีลักษณะเหลี่ยม&quot;,
+      &quot;id&quot;: &quot;e50bcc9bc863f03af0b59040&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;อากาศถ่ายเทได้สะดวก&quot;,
+      &quot;id&quot;: &quot;99bff5c3f645ddff5fdba290&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;อินทรียวัตถุ&quot;,
+      &quot;id&quot;: &quot;a612df97816ced43e2f2c651&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;เชื้อรา&quot;,
+      &quot;id&quot;: &quot;54839d8a4a394732f6bd111b&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;เชื้อราพิเทียม&quot;,
+      &quot;id&quot;: &quot;620a0b9a3f9ed0a1ca5db1ba&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;เชื้อราฟูซาเรียม&quot;,
+      &quot;id&quot;: &quot;f8ead107f6409a313f13fe98&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;เชื้อราฟูซาเรียม ออกซิสปอรัม&quot;,
+      &quot;id&quot;: &quot;9915bac6822ec88555d50419&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;เชื้อราสเคลอโรเทียม&quot;,
+      &quot;id&quot;: &quot;8fb6d521ebdff43fffddd81d&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;เชื้อราไตรโคเดอร์มา&quot;,
+      &quot;id&quot;: &quot;05c7ea31222c7c9a79a8513c&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;เชื้อราไตรโคเดอร์มา&quot;,
+      &quot;id&quot;: &quot;c12aec4cd7d67d6b1589bab0&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;เชื้อราไรซ็อกโทเนีย&quot;,
+      &quot;id&quot;: &quot;00f03a4349e0d241721c3661&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;เชื้อแบคทีเรีย&quot;,
+      &quot;id&quot;: &quot;faa9ac0b39b172d940068aab&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;เนื้อแผลสีน้ำตาลอ่อน&quot;,
+      &quot;id&quot;: &quot;126d2e9895c6bc1b62a375d0&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;เปลือยดินไว้&quot;,
+      &quot;id&quot;: &quot;9ef0264f637f3c940ddf8e3a&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;เพลี้ยอ่อน&quot;,
+      &quot;id&quot;: &quot;23811d8b22b04a76f21fa8c6&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Topic&quot;,
+      &quot;name&quot;: &quot;เพิ่มอินทรียวัตถุให้กับดิน&quot;,
+      &quot;id&quot;: &quot;bcc948bdd630206ba940c108&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;เมทาแลกซิล 25% ดับเบิลยูพี&quot;,
+      &quot;id&quot;: &quot;df77d561e3c033a9148e59fc&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;เมทาแลกซิล+แมนโคเซบ 65% ดับเบิลยูพี&quot;,
+      &quot;id&quot;: &quot;1d1e04f00f78e1d89ea501eb&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;เมือกสีส้มอ่อน&quot;,
+      &quot;id&quot;: &quot;7e909de24a58de8b0cbac708&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;เส้นใบบวม ใส ใบด่าง หดย่น ต้นแคระแกร็น&quot;,
+      &quot;id&quot;: &quot;3068964de597bc7ec003d696&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;แผลวงกลมหรือทางยาว&quot;,
+      &quot;id&quot;: &quot;1040108d3a312bead45e5912&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;แมลงในดิน&quot;,
+      &quot;id&quot;: &quot;a8ade713c58eb1b5920ef1f7&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;โคนต้นและรากจะเน่าเกิดอาการเหี่ยวในระยะติดผล ผลมีลักษณะฉ่ำน้ำ เนื้อผลเป็นสีดำ ในขั้นรุนแรงจะเข้าทำลายเมล็ด และยืนต้นตาย&quot;,
+      &quot;id&quot;: &quot;160a355f74f2c1f6012ca6a4&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคกล้าไหม้&quot;,
+      &quot;id&quot;: &quot;24e4b3fcc1aee7eb7b8aaba7&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคยอดเน่า&quot;,
+      &quot;id&quot;: &quot;c3a6d6d53388e23619c04b7c&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรครา&quot;,
+      &quot;id&quot;: &quot;cb53576c5fa1acf405ae2897&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรครากปม&quot;,
+      &quot;id&quot;: &quot;127ad4bbe4d4417cbe754b5c&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรครากเน่าและโคนเน่า&quot;,
+      &quot;id&quot;: &quot;0db8d79813e18fb386ab3029&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรครากเน่าโคนเน่า&quot;,
+      &quot;id&quot;: &quot;603e8d9a7dcfaf41defe26ab&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคราน้ำค้าง&quot;,
+      &quot;id&quot;: &quot;4d60f5020607fa10d868e97b&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคราน้ำค้างหรือโรคใบลาย&quot;,
+      &quot;id&quot;: &quot;e62e67d653167a60b3af8f17&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคราสนิม&quot;,
+      &quot;id&quot;: &quot;19b88c82c65174d498c584ca&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคราแป้ง&quot;,
+      &quot;id&quot;: &quot;2f44f1cdea8b3259da15d936&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคลำต้นไหม้&quot;,
+      &quot;id&quot;: &quot;4182997fb0d397cc070e86e7&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคเข้าทำลายรุนแรง&quot;,
+      &quot;id&quot;: &quot;b7f0dccb22178363aa5f0fbc&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคเชื้อรา&quot;,
+      &quot;id&quot;: &quot;8c93beddc04c428844b7767a&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคเน่า&quot;,
+      &quot;id&quot;: &quot;55765f221c3d25f384948f09&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคเน่าคอดิน&quot;,
+      &quot;id&quot;: &quot;16e2047c061e3e32cb84bbe6&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคเหี่ยว&quot;,
+      &quot;id&quot;: &quot;c967dbf956deab5a63c3a81e&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม ออกซิสปอรัม&quot;,
+      &quot;id&quot;: &quot;4af19b039e35fa0be770e076&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคเหี่ยวในพืชผัก&quot;,
+      &quot;id&quot;: &quot;428bd52dbfbdfd6947ab7f69&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคเหี่ยวในไม้ดอก&quot;,
+      &quot;id&quot;: &quot;f88a93930d27588253202be2&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคแคงเกอร์&quot;,
+      &quot;id&quot;: &quot;74ea51304667f7f39370d476&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคแอนแทรกโนส&quot;,
+      &quot;id&quot;: &quot;7d82f271141b1aff959d42c2&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคแอนแทร็กโนส&quot;,
+      &quot;id&quot;: &quot;8ec4959e00aa02f58fa00e13&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคโคนเน่า&quot;,
+      &quot;id&quot;: &quot;753f60bf079221455bcbe250&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคใบจุด&quot;,
+      &quot;id&quot;: &quot;800fb71945393ce79d60732d&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคใบจุดตากบ&quot;,
+      &quot;id&quot;: &quot;e781e27971d331c366b2fc40&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคใบด่าง&quot;,
+      &quot;id&quot;: &quot;6e4006337867fd11f7bbb7bf&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคใบด่างจากเชื้อไวรัส CVMV&quot;,
+      &quot;id&quot;: &quot;19a9f18a7e5bcc335434ce0f&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคใบด่างที่เกิดจากเชื้อไวรัส CMV (Cucumber mosaic virus)&quot;,
+      &quot;id&quot;: &quot;760f8b00dcb3c33574733b6c&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคใบหงิกเหลือง&quot;,
+      &quot;id&quot;: &quot;50f6a005ccdf583dadf9b870&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Disease&quot;,
+      &quot;name&quot;: &quot;โรคใบไหม้แผลใหญ่&quot;,
+      &quot;id&quot;: &quot;2d5c19f35ea193d636da23e3&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;ใบข้าวโพดจะเป็นจุดนูนบนใบและใต้ใบ มีสีน้ำตาลอ่อนและเปลี่ยนเป็นน้ำตาลแดง เมื่อจุดนูนแตกมีผงสีคล้ายสนิม&quot;,
+      &quot;id&quot;: &quot;fa6d3618129174d84b882391&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;ใบเหลือง&quot;,
+      &quot;id&quot;: &quot;fd0ae6d120423be911d726aa&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;ใบเหลือง เหี่ยว ร่วง และยืนต้นตาย&quot;,
+      &quot;id&quot;: &quot;957c633032c59d7b71e4ef6a&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Symptom&quot;,
+      &quot;name&quot;: &quot;ใบเหลืองทั้งต้น&quot;,
+      &quot;id&quot;: &quot;d5e4708f324d32959dc676c4&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;ใส่ปุ๋ย ไนโตรเจนปริมาณสูง&quot;,
+      &quot;id&quot;: &quot;88d94e9c604ea604c20172c1&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Treatment&quot;,
+      &quot;name&quot;: &quot;ไนโตรเจน ฟอสฟอรัส โพแทสเซียม&quot;,
+      &quot;id&quot;: &quot;171e32b287942519325d6d13&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;Pathogen&quot;,
+      &quot;name&quot;: &quot;ไส้เดือนฝอย&quot;,
+      &quot;id&quot;: &quot;0856ec5726af9b0854989a7c&quot;
+    }
+  ],
+  &quot;relationships&quot;: [
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;การห่มดินถือเป็นวิธีการที่เพิ่มอินทรีย\nวัตถุให้กับดิน หรือเป็นการปรับปรุงดินก่อน\nการเพาะปลูก&quot;,
+      &quot;page&quot;: 6,
+      &quot;source&quot;: &quot;50c702c482fd7d68a8825aff&quot;,
+      &quot;target&quot;: &quot;bcc948bdd630206ba940c108&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;การปรับปรุงดินก่อนการเพาะปลูก&quot;,
+      &quot;object&quot;: &quot;เพิ่มอินทรียวัตถุให้กับดิน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เช่น ใช้ฟางและ \nเศษใบไม้มาห่มดิน การใช้พรมใยปาล์มซึ่งทำ \nมาจากปาล์มที่ผ่านการรีดน้ำมันแล้ว&quot;,
+      &quot;page&quot;: 6,
+      &quot;source&quot;: &quot;f94c158b63a84565383d0f0e&quot;,
+      &quot;target&quot;: &quot;9f1ac49292a6a7c64e8da30e&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;การห่มดิน&quot;,
+      &quot;object&quot;: &quot;การใช้พรมใยปาล์มซึ่งทำมาจากปาล์มที่ผ่านการรีดน้ำมันแล้ว&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;นอกจากประโยชน์ที่กล่าวไปแล้ว การห่มดิน\nยังจะช่วยคลุมหน้าดินไม่ให้วัชพืชขึ้นรบกวน\nต้นไม้พืชหลักอีกด้วย&quot;,
+      &quot;page&quot;: 6,
+      &quot;source&quot;: &quot;f94c158b63a84565383d0f0e&quot;,
+      &quot;target&quot;: &quot;12181b2ca355b0ce1ecdf204&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;การห่มดิน&quot;,
+      &quot;object&quot;: &quot;ช่วยคลุมหน้าดินไม่ให้วัชพืชขึ้นรบกวนต้นไม้พืชหลัก&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;และต่อมาในปี 2558 กำหนด \nให้เป็น “ปีแห่งดินสากล”&quot;,
+      &quot;page&quot;: 6,
+      &quot;source&quot;: &quot;0485e1149c8e0c5db90cfa46&quot;,
+      &quot;target&quot;: &quot;b243d0dd865e8263da6e3502&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;ปีแห่งดินสากล&quot;,
+      &quot;object&quot;: &quot;ปี 2558&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เมื่อปี 2556 ที่ประชุมใหญ่สมัชชา \nสหประชาชาติ มีมติให้วันที่ 5 ธันวาคมของทุกปี \nเป็น “วันดินโลก”&quot;,
+      &quot;page&quot;: 6,
+      &quot;source&quot;: &quot;1a7f47de2b02914cfc629b3c&quot;,
+      &quot;target&quot;: &quot;80cf4dca4247330e7d91b23a&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;วันดินโลก&quot;,
+      &quot;object&quot;: &quot;วันที่ 5 ธันวาคมของทุกปี&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;การห่มดินเพื่อให้\nจุลินทรีย์ในดินมีความอุดมสมบูรณ์&quot;,
+      &quot;page&quot;: 7,
+      &quot;source&quot;: &quot;5bd175bfa0996ad1d5756ccb&quot;,
+      &quot;target&quot;: &quot;272986670f7fc46e0ca306fb&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;การห่มดิน&quot;,
+      &quot;object&quot;: &quot;จุลินทรีย์ในดิน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;การแก้ปัญหาดินเค็มด้วยทฤษฏีการห่มดิน&quot;,
+      &quot;page&quot;: 7,
+      &quot;source&quot;: &quot;c0e03ef19b67b427ee8d69f8&quot;,
+      &quot;target&quot;: &quot;db296e1caeb5caa39197c4bc&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;การแก้ปัญหาดินเค็ม&quot;,
+      &quot;object&quot;: &quot;ทฤษฏีการห่มดิน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ถ้าเปลือย \nดินไว้ จะทำให้จุลินทรีย์ตาย&quot;,
+      &quot;page&quot;: 7,
+      &quot;source&quot;: &quot;9ef0264f637f3c940ddf8e3a&quot;,
+      &quot;target&quot;: &quot;11a2ad9b68099025985b08b6&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;เปลือยดินไว้&quot;,
+      &quot;object&quot;: &quot;จุลินทรีย์ตาย&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ดินเปรี้ยวหรือดินเป็นกรดเกิดจากเกษตรกร \nมีการใช้ปุ๋ยเคมีในแปลงการเกษตรมากขึ้น&quot;,
+      &quot;page&quot;: 10,
+      &quot;source&quot;: &quot;38f09999ea39ab02bd7a3352&quot;,
+      &quot;target&quot;: &quot;5d950581baa0f796293cf872&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;ดินเปรี้ยว&quot;,
+      &quot;object&quot;: &quot;ปุ๋ยเคมี&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;แล้วเปลี่ยนมาใช้ปุ๋ยอินทรีย์ \nสารชีวภาพในการกำจัดแมลง&quot;,
+      &quot;page&quot;: 10,
+      &quot;source&quot;: &quot;38f09999ea39ab02bd7a3352&quot;,
+      &quot;target&quot;: &quot;b1895868d75dec72ca00e9b3&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;ดินเปรี้ยว&quot;,
+      &quot;object&quot;: &quot;สารชีวภาพ&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;กรณีที่ดินเปรี้ยวหรือดินเค็มเกิดจากการมี\nอินทรียวัตถุมากเกินไป ทำให้ดินย่อยสลายไม่ทัน เช่น \nบริเวณที่มีวัวหรือควายลงไปนอน จะทำให้มีมูลวัวควาย \nจำนวนมาก&quot;,
+      &quot;page&quot;: 10,
+      &quot;source&quot;: &quot;4a8eef81b3e095852f2075e9&quot;,
+      &quot;target&quot;: &quot;32afdcc9e94ae9184fb5d877&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;ดินเปรี้ยวหรือดินเค็ม&quot;,
+      &quot;object&quot;: &quot;มูลวัวควาย&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ซึ่งในปุ๋ยนั้น\nจะประกอบไปด้วย ไนโตรเจน ฟอสฟอรัส โพแทสเซียม  \nโดยสารเคมีเหล่านี้ล้วนแต่มีคุณสมบัติเป็นกรดทั้งสิ้น&quot;,
+      &quot;page&quot;: 10,
+      &quot;source&quot;: &quot;431dd9d20a96f9c554f2410f&quot;,
+      &quot;target&quot;: &quot;171e32b287942519325d6d13&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;ดินเปรี้ยวหรือดินเป็นกรด&quot;,
+      &quot;object&quot;: &quot;ไนโตรเจน ฟอสฟอรัส โพแทสเซียม&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;การแก้ปัญหาดินเปรี้ยว ให้ทำการล้างดินด้วย \nน้ำหมักสมุนไพรรสจืดผสมน้ำ&quot;,
+      &quot;page&quot;: 10,
+      &quot;source&quot;: &quot;604bc0fdb8d91b097e9cb564&quot;,
+      &quot;target&quot;: &quot;38f09999ea39ab02bd7a3352&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;น้ำหมักสมุนไพรรสจืด&quot;,
+      &quot;object&quot;: &quot;ดินเปรี้ยว&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เพื่อชะล้างความเปรี้ยวและความเค็มของดิน \nให้ลดหรือเจือจางลง&quot;,
+      &quot;page&quot;: 10,
+      &quot;source&quot;: &quot;604bc0fdb8d91b097e9cb564&quot;,
+      &quot;target&quot;: &quot;c4a11be05e12c69c17a1959d&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;น้ำหมักสมุนไพรรสจืด&quot;,
+      &quot;object&quot;: &quot;ความเค็มของดิน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;การสังเกตดินเปรี้ยวหรือเป็นกรดจัด&quot;,
+      &quot;page&quot;: 11,
+      &quot;source&quot;: &quot;38f09999ea39ab02bd7a3352&quot;,
+      &quot;target&quot;: &quot;968b02bb8e9e0df305c7998f&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;ดินเปรี้ยว&quot;,
+      &quot;object&quot;: &quot;กรดจัด&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เพราะถ้าดินมีความอุดมสมบูรณ์ \nการใช้สารเคมีก็ไม่จำเป็นนัก&quot;,
+      &quot;page&quot;: 11,
+      &quot;source&quot;: &quot;38f09999ea39ab02bd7a3352&quot;,
+      &quot;target&quot;: &quot;036a08d2be240f724ae8af37&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;ดินเปรี้ยว&quot;,
+      &quot;object&quot;: &quot;การใช้สารเคมี&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เมื่อนำไปใช้\nประโยชน์ทางการเกษตรจะมีคุณสมบัติ เช่น เป็นสารปรับปรุงดิน&quot;,
+      &quot;page&quot;: 13,
+      &quot;source&quot;: &quot;98db94e8bf7dc8d0a6acd977&quot;,
+      &quot;target&quot;: &quot;1b98739b6d832a60fe6aab37&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;ดิน&quot;,
+      &quot;object&quot;: &quot;สารปรับปรุงดิน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;แยกตัวเป็น 3 ชั้น คือ น้ำมันเบา (ลอยอยู่ผิวน้ำ) น้ำส้มไม้ และ\nน้ำมันทาร์&quot;,
+      &quot;page&quot;: 13,
+      &quot;source&quot;: &quot;049ad54d39f36e880abf1157&quot;,
+      &quot;target&quot;: &quot;d8dac12a442757598e65c9c6&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;น้ำมันทาร์&quot;,
+      &quot;object&quot;: &quot;น้ำส้มควันไม้&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;แยกตัวเป็น 3 ชั้น คือ น้ำมันเบา (ลอยอยู่ผิวน้ำ) น้ำส้มไม้ และ\nน้ำมันทาร์&quot;,
+      &quot;page&quot;: 13,
+      &quot;source&quot;: &quot;e21414cb616f57d48885ee83&quot;,
+      &quot;target&quot;: &quot;d8dac12a442757598e65c9c6&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;น้ำมันเบา&quot;,
+      &quot;object&quot;: &quot;น้ำส้มควันไม้&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;แยกตัวเป็น 3 ชั้น คือ น้ำมันเบา (ลอยอยู่ผิวน้ำ) น้ำส้มไม้ และ\nน้ำมันทาร์&quot;,
+      &quot;page&quot;: 13,
+      &quot;source&quot;: &quot;028ea2124575cb227f85672e&quot;,
+      &quot;target&quot;: &quot;d8dac12a442757598e65c9c6&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;น้ำส้มไม้&quot;,
+      &quot;object&quot;: &quot;น้ำส้มควันไม้&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;มีการนำน้ำส้มควันไม้ไปใช้ประโยชน์ในอุตสาหกรรม เช่น ใช้ผลิต \nสารดับกลิ่นตัว&quot;,
+      &quot;page&quot;: 13,
+      &quot;source&quot;: &quot;581426b096e55ecb0c80c02f&quot;,
+      &quot;target&quot;: &quot;d8dac12a442757598e65c9c6&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;สารดับกลิ่นตัว&quot;,
+      &quot;object&quot;: &quot;น้ำส้มควันไม้&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;พ่นลงดิน\nเพื่อฆ่าเชื้อจุลินทรีย์\nที่ไม่เป็นประโยชน์&quot;,
+      &quot;page&quot;: 15,
+      &quot;source&quot;: &quot;98db94e8bf7dc8d0a6acd977&quot;,
+      &quot;target&quot;: &quot;1c1fd0484974f9f0214542f3&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;ดิน&quot;,
+      &quot;object&quot;: &quot;จุลินทรีย์ที่ไม่เป็นประโยชน์&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;พ่นลงดิน\nเพื่อฆ่าเชื้อจุลินทรีย์\nที่ไม่เป็นประโยชน์\nและแมลงในดิน&quot;,
+      &quot;page&quot;: 15,
+      &quot;source&quot;: &quot;98db94e8bf7dc8d0a6acd977&quot;,
+      &quot;target&quot;: &quot;a8ade713c58eb1b5920ef1f7&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;ดิน&quot;,
+      &quot;object&quot;: &quot;แมลงในดิน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ราดโคนต้น\nรักษาโรครา โรคเน่า&quot;,
+      &quot;page&quot;: 15,
+      &quot;source&quot;: &quot;64cd1c4c64bf95519f3abe08&quot;,
+      &quot;target&quot;: &quot;cb53576c5fa1acf405ae2897&quot;,
+      &quot;relation&quot;: &quot;HAS_DISEASE&quot;,
+      &quot;subject&quot;: &quot;พืช&quot;,
+      &quot;object&quot;: &quot;โรครา&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ราดโคนต้น\nรักษาโรครา โรคเน่า&quot;,
+      &quot;page&quot;: 15,
+      &quot;source&quot;: &quot;64cd1c4c64bf95519f3abe08&quot;,
+      &quot;target&quot;: &quot;55765f221c3d25f384948f09&quot;,
+      &quot;relation&quot;: &quot;HAS_DISEASE&quot;,
+      &quot;subject&quot;: &quot;พืช&quot;,
+      &quot;object&quot;: &quot;โรคเน่า&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;อาการ คือ ใบข้าวโพดจะเป็นจุดนูนบนใบ \nและใต้ใบ มีสีน้ำตาลอ่อนและเปลี่ยนเป็น\nน้ำตาลแดง เมื่อจุดนูนแตกมีผงสีคล้ายสนิม&quot;,
+      &quot;page&quot;: 17,
+      &quot;source&quot;: &quot;19b88c82c65174d498c584ca&quot;,
+      &quot;target&quot;: &quot;fa6d3618129174d84b882391&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคราสนิม&quot;,
+      &quot;object&quot;: &quot;ใบข้าวโพดจะเป็นจุดนูนบนใบและใต้ใบ มีสีน้ำตาลอ่อนและเปลี่ยนเป็นน้ำตาลแดง เมื่อจุดนูนแตกมีผงสีคล้ายสนิม&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ซึ่งโรคนี้มักระบาดในฤดูฝน&quot;,
+      &quot;page&quot;: 17,
+      &quot;source&quot;: &quot;19b88c82c65174d498c584ca&quot;,
+      &quot;target&quot;: &quot;7c677f01be6453210352fdb3&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;โรคราสนิม&quot;,
+      &quot;object&quot;: &quot;ฤดูฝน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ให้พ่นด้วยสาร\nไดพีโนโคนาโซล 25% อัตรา 20-30 ซีซี ต่อ \nน้ำ 20 ลิตร หรือแมนโคเซบ 80% อัตรา 40 กรัม \nต่อน้ำ 20 ลิตร พ่นทุก 7 วัน จำนวน 2-4 ครั้ง&quot;,
+      &quot;page&quot;: 17,
+      &quot;source&quot;: &quot;19b88c82c65174d498c584ca&quot;,
+      &quot;target&quot;: &quot;d46f77ee13fe167e809de4d8&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคราสนิม&quot;,
+      &quot;object&quot;: &quot;สารไดพีโนโคนาโซล 25% อัตรา 20-30 ซีซี ต่อ น้ำ 20 ลิตร หรือแมนโคเซบ 80% อัตรา 40 กรัม ต่อน้ำ 20 ลิตร พ่นทุก 7 วัน จำนวน 2-4 ครั้ง&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;มีสาเหตุมาจากเชื้อรา&quot;,
+      &quot;page&quot;: 17,
+      &quot;source&quot;: &quot;2d5c19f35ea193d636da23e3&quot;,
+      &quot;target&quot;: &quot;54839d8a4a394732f6bd111b&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคใบไหม้แผลใหญ่&quot;,
+      &quot;object&quot;: &quot;เชื้อรา&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;อาการเริ่ม คือ \nมีแผลขนาดเล็กสีคล้ายฟางข้าวบนใบ\nข้าวโพด และขยายใหญ่ขึ้นเป็นสีเทาหรือ \nสีน้ำตาลอ่อน ยาวตามใบข้าวโพด  ทำให้ \nใบข้าวโพดแห้งตาย&quot;,
+      &quot;page&quot;: 17,
+      &quot;source&quot;: &quot;2d5c19f35ea193d636da23e3&quot;,
+      &quot;target&quot;: &quot;ba6922c697d629712f186f27&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคใบไหม้แผลใหญ่&quot;,
+      &quot;object&quot;: &quot;มีแผลขนาดเล็กสีคล้ายฟางข้าวบนใบข้าวโพด และขยายใหญ่ขึ้นเป็นสีเทาหรือสีน้ำตาลอ่อน ยาวตามใบข้าวโพด ทำให้ ใบข้าวโพดแห้งตาย&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;วิธีป้องกัน คือ ใส่ปุ๋ย \nไนโตรเจนปริมาณสูง&quot;,
+      &quot;page&quot;: 17,
+      &quot;source&quot;: &quot;2d5c19f35ea193d636da23e3&quot;,
+      &quot;target&quot;: &quot;88d94e9c604ea604c20172c1&quot;,
+      &quot;relation&quot;: &quot;PREVENTED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคใบไหม้แผลใหญ่&quot;,
+      &quot;object&quot;: &quot;ใส่ปุ๋ย ไนโตรเจนปริมาณสูง&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เมื่อพบโรคให้พ่นด้วย \nสารป้องกันกำจัดโรคพืช อะโซซิสโตรบิน+ \nไดฟีโนโคนาโซล อัตรา 15 ซีซี/น้ำ 20 ลิตร \nโพรพิโคนาโซล อัตรา 20 ซีซี/น้ำ 20 ลิตร \nโพรพิโคนาโซล+ไดฟีโนโคนาโซล อัตรา \n5 ซีซี/น้ำ 20 ลิตร&quot;,
+      &quot;page&quot;: 17,
+      &quot;source&quot;: &quot;2d5c19f35ea193d636da23e3&quot;,
+      &quot;target&quot;: &quot;5252e1a3558448b53e6cd2d1&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคใบไหม้แผลใหญ่&quot;,
+      &quot;object&quot;: &quot;สารป้องกันกำจัดโรคพืช อะโซซิสโตรบิน+ ไดฟีโนโคนาโซล อัตรา 15 ซีซี/น้ำ 20 ลิตร โพรพิโคนาโซล อัตรา 20 ซีซี/น้ำ 20 ลิตร โพรพิโคนาโซล+ไดฟีโนโคนาโซล อัตรา 5 ซีซี/น้ำ 20 ลิตร&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;พ่น 3 ครั้ง พ่นห่างกัน 7 วัน \nไม่ควรใช้สารชนิดเดียวกันเกิน 3 ครั้ง \nเพราะจะทำให้เชื้อสาเหตุเกิดการดื้อยา&quot;,
+      &quot;page&quot;: 17,
+      &quot;source&quot;: &quot;2d5c19f35ea193d636da23e3&quot;,
+      &quot;target&quot;: &quot;119a3d0e6fed6c26ee5480cf&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคใบไหม้แผลใหญ่&quot;,
+      &quot;object&quot;: &quot;พ่นห่างกัน 7 วัน ไม่ควรใช้สารชนิดเดียวกันเกิน 3 ครั้ง เพราะจะทำให้เชื้อสาเหตุเกิดการดื้อยา&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;โรคราน้ำค้างหรือโรคใบลาย \n\t ใบข้าวโพดจะมีลายสีเขียวอ่อนหรือสีเหลือง\nอ่อนสลับกับสีเขียวแก่เป็นทาง&quot;,
+      &quot;page&quot;: 18,
+      &quot;source&quot;: &quot;c5d5b1b95fb072bf5d2add59&quot;,
+      &quot;target&quot;: &quot;e62e67d653167a60b3af8f17&quot;,
+      &quot;relation&quot;: &quot;HAS_DISEASE&quot;,
+      &quot;subject&quot;: &quot;ข้าวโพด&quot;,
+      &quot;object&quot;: &quot;โรคราน้ำค้างหรือโรคใบลาย&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ในเวลาเช้าที่อากาศ\nค่อนข้างเย็นจะพบผงสปอร์สีขาวๆ เป็นจำนวนมาก\nบริเวณใต้ใบ&quot;,
+      &quot;page&quot;: 18,
+      &quot;source&quot;: &quot;e62e67d653167a60b3af8f17&quot;,
+      &quot;target&quot;: &quot;5c213df2461a7a3145d327c9&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคราน้ำค้างหรือโรคใบลาย&quot;,
+      &quot;object&quot;: &quot;ผงสปอร์สีขาวๆ เป็นจำนวนมากบริเวณใต้ใบ&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ดอกตัวผู้จะหงิกงอ ไม่เจริญเต็มที่ ส่วน\nดอกตัวเมียจะไม่เจริญเติบโตหรือเติบโตมากเกินไป&quot;,
+      &quot;page&quot;: 18,
+      &quot;source&quot;: &quot;e62e67d653167a60b3af8f17&quot;,
+      &quot;target&quot;: &quot;ce2db968342cd8a04d91e61f&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคราน้ำค้างหรือโรคใบลาย&quot;,
+      &quot;object&quot;: &quot;ดอกตัวผู้จะหงิกงอ ไม่เจริญเต็มที่&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;หรือสารไดเมโทมอร์ฟ อัตรา \n20 กรัม/เมล็ด 1 กิโลกรัม ก่อนปลูก&quot;,
+      &quot;page&quot;: 18,
+      &quot;source&quot;: &quot;e62e67d653167a60b3af8f17&quot;,
+      &quot;target&quot;: &quot;e164027b2a023b45e7eb801c&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคราน้ำค้างหรือโรคใบลาย&quot;,
+      &quot;object&quot;: &quot;สารไดเมโทมอร์ฟ อัตรา 20 กรัม/เมล็ด 1 กิโลกรัม&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;สังเกตได้จากอาการใบไหม้บริเวณปลายใบมาที่โคนใบ ยอด\nข้าวโพดมีสีซีด เหี่ยวเฉา&quot;,
+      &quot;page&quot;: 18,
+      &quot;source&quot;: &quot;753f60bf079221455bcbe250&quot;,
+      &quot;target&quot;: &quot;065f8bd6f5de8ef9c7f3dec6&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคโคนเน่า&quot;,
+      &quot;object&quot;: &quot;ยอดข้าวโพดมีสีซีด เหี่ยวเฉา ต่อมาจะไหม้ลุกลามเป็นยอดเน่า&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ให้กำจัดเพลี้ยอ่อนซึ่ง\nเป็นตัวแมลงพาหะนำโรค&quot;,
+      &quot;page&quot;: 19,
+      &quot;source&quot;: &quot;23811d8b22b04a76f21fa8c6&quot;,
+      &quot;target&quot;: &quot;6e4006337867fd11f7bbb7bf&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;เพลี้ยอ่อน&quot;,
+      &quot;object&quot;: &quot;โรคใบด่าง&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ข้าวโพดจะแสดงอาการใบด่างลายเขียวซีด\nสลับเขียวเข้ม&quot;,
+      &quot;page&quot;: 19,
+      &quot;source&quot;: &quot;6e4006337867fd11f7bbb7bf&quot;,
+      &quot;target&quot;: &quot;693112a13c1fcba38c6b7b74&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคใบด่าง&quot;,
+      &quot;object&quot;: &quot;ลายเขียวซีดสลับเขียวเข้ม&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;หรืออาการด่างประจุดเหลือง&quot;,
+      &quot;page&quot;: 19,
+      &quot;source&quot;: &quot;6e4006337867fd11f7bbb7bf&quot;,
+      &quot;target&quot;: &quot;0685670e66a510ace17aa64f&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคใบด่าง&quot;,
+      &quot;object&quot;: &quot;ประจุดเหลือง&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ถ้าอาการโรครุนแรงต้นข้าวโพด\nจะแห้งตายขณะยังเล็ก&quot;,
+      &quot;page&quot;: 19,
+      &quot;source&quot;: &quot;6e4006337867fd11f7bbb7bf&quot;,
+      &quot;target&quot;: &quot;6507b47d0015ef5b3100f440&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคใบด่าง&quot;,
+      &quot;object&quot;: &quot;ต้นแคระแกร็น&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;การป้องกัน ให้กำจัดเพลี้ยอ่อนซึ่ง\nเป็นตัวแมลงพาหะนำโรค&quot;,
+      &quot;page&quot;: 19,
+      &quot;source&quot;: &quot;6e4006337867fd11f7bbb7bf&quot;,
+      &quot;target&quot;: &quot;622e70eb65a83b056f3929af&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคใบด่าง&quot;,
+      &quot;object&quot;: &quot;กำจัดเพลี้ยอ่อน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ปลูกข้าวโพดพันธุ์ต้านทาน&quot;,
+      &quot;page&quot;: 19,
+      &quot;source&quot;: &quot;6e4006337867fd11f7bbb7bf&quot;,
+      &quot;target&quot;: &quot;9df8f070a8f9824458308e98&quot;,
+      &quot;relation&quot;: &quot;PREVENTED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคใบด่าง&quot;,
+      &quot;object&quot;: &quot;ปลูกข้าวโพดพันธุ์ต้านทาน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ปลูกพืชหมุนเวียน&quot;,
+      &quot;page&quot;: 19,
+      &quot;source&quot;: &quot;6e4006337867fd11f7bbb7bf&quot;,
+      &quot;target&quot;: &quot;d3e1883070e9f88bda73cc37&quot;,
+      &quot;relation&quot;: &quot;PREVENTED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคใบด่าง&quot;,
+      &quot;object&quot;: &quot;ปลูกพืชหมุนเวียน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;โรคแคงเกอร์ เป็นโรคที่เกิดจากเชื้อแบคทีเรียเข้าทำลาย&quot;,
+      &quot;page&quot;: 20,
+      &quot;source&quot;: &quot;74ea51304667f7f39370d476&quot;,
+      &quot;target&quot;: &quot;faa9ac0b39b172d940068aab&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคแคงเกอร์&quot;,
+      &quot;object&quot;: &quot;เชื้อแบคทีเรีย&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;สาเหตุมาจากเชื้อรา&quot;,
+      &quot;page&quot;: 24,
+      &quot;source&quot;: &quot;8ec4959e00aa02f58fa00e13&quot;,
+      &quot;target&quot;: &quot;54839d8a4a394732f6bd111b&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคแอนแทร็กโนส&quot;,
+      &quot;object&quot;: &quot;เชื้อรา&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ข้อสังเกต คือ พริกจะ\nเป็นจุดฉ่ำน้ำรูปวงรีหรือรูปไข่&quot;,
+      &quot;page&quot;: 24,
+      &quot;source&quot;: &quot;8ec4959e00aa02f58fa00e13&quot;,
+      &quot;target&quot;: &quot;3ec7b796d7e704e0a1280f9a&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคแอนแทร็กโนส&quot;,
+      &quot;object&quot;: &quot;จุดฉ่ำน้ำรูปวงรีหรือรูปไข่&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;และมีจุดสีดำเรียงซ้อนกันในแผล&quot;,
+      &quot;page&quot;: 24,
+      &quot;source&quot;: &quot;8ec4959e00aa02f58fa00e13&quot;,
+      &quot;target&quot;: &quot;a4feae66e99493f560fc686d&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคแอนแทร็กโนส&quot;,
+      &quot;object&quot;: &quot;จุดสีดำเรียงซ้อนกันในแผล&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;และแผลอาจมีเมือกสีส้มอ่อน&quot;,
+      &quot;page&quot;: 24,
+      &quot;source&quot;: &quot;8ec4959e00aa02f58fa00e13&quot;,
+      &quot;target&quot;: &quot;7e909de24a58de8b0cbac708&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคแอนแทร็กโนส&quot;,
+      &quot;object&quot;: &quot;เมือกสีส้มอ่อน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;คลุกเมล็ดพันธุ์ \nด้วยสารเคมี เช่น สารแมนโคเซบ&quot;,
+      &quot;page&quot;: 24,
+      &quot;source&quot;: &quot;8ec4959e00aa02f58fa00e13&quot;,
+      &quot;target&quot;: &quot;36bbdafcac06b850ef5cf287&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคแอนแทร็กโนส&quot;,
+      &quot;object&quot;: &quot;สารแมนโคเซบ&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ควรพ่นสารเคมีหรือน้ำหมักสมุนไพร\nป้องกันโรค&quot;,
+      &quot;page&quot;: 24,
+      &quot;source&quot;: &quot;8ec4959e00aa02f58fa00e13&quot;,
+      &quot;target&quot;: &quot;413ee79851eab71e24326d5c&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคแอนแทร็กโนส&quot;,
+      &quot;object&quot;: &quot;น้ำหมักสมุนไพร&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม \n\t ออกซิสปอรัม&quot;,
+      &quot;page&quot;: 26,
+      &quot;source&quot;: &quot;c7bcfc6855e30e737b7870bb&quot;,
+      &quot;target&quot;: &quot;4af19b039e35fa0be770e076&quot;,
+      &quot;relation&quot;: &quot;HAS_DISEASE&quot;,
+      &quot;subject&quot;: &quot;พริก&quot;,
+      &quot;object&quot;: &quot;โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม ออกซิสปอรัม&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม \n\t ออกซิสปอรัม&quot;,
+      &quot;page&quot;: 26,
+      &quot;source&quot;: &quot;4af19b039e35fa0be770e076&quot;,
+      &quot;target&quot;: &quot;9915bac6822ec88555d50419&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม ออกซิสปอรัม&quot;,
+      &quot;object&quot;: &quot;เชื้อราฟูซาเรียม ออกซิสปอรัม&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ใช้สารเมตาแลกซิลหรือสารอีทริไดอะโซล \nหรือสารพีซีเอ็นบีผสมอีทริไดอะโซล หรือสารชีวภัณฑ์\nราดดินบริเวณที่ถอนต้นออกไป&quot;,
+      &quot;page&quot;: 26,
+      &quot;source&quot;: &quot;4af19b039e35fa0be770e076&quot;,
+      &quot;target&quot;: &quot;4bddb99f582b4fa285ec3c12&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม ออกซิสปอรัม&quot;,
+      &quot;object&quot;: &quot;สารเมตาแลกซิลหรือสารอีทริไดอะโซล หรือสารพีซีเอ็นบีผสมอีทริไดอะโซล หรือสารชีวภัณฑ์ราดดินบริเวณที่ถอนต้นออกไป&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เพิ่มจุลินทรีย์ในดิน\nด้วยการใส่ปูนขาว&quot;,
+      &quot;page&quot;: 27,
+      &quot;source&quot;: &quot;98db94e8bf7dc8d0a6acd977&quot;,
+      &quot;target&quot;: &quot;45fa0b2ea4a8630d155f99b5&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;ดิน&quot;,
+      &quot;object&quot;: &quot;จุลินทรีย์ในดิน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ปรับสภาพความเป็นกรดเป็นด่าง\nของดิน&quot;,
+      &quot;page&quot;: 27,
+      &quot;source&quot;: &quot;98db94e8bf7dc8d0a6acd977&quot;,
+      &quot;target&quot;: &quot;cc3ba5f08427c397ad0cd774&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;ดิน&quot;,
+      &quot;object&quot;: &quot;ความเป็นกรดเป็นด่างของดิน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;และใส่อินทรียวัตถุในอัตรา 2 ถึง 4 ตันต่อไร่&quot;,
+      &quot;page&quot;: 27,
+      &quot;source&quot;: &quot;98db94e8bf7dc8d0a6acd977&quot;,
+      &quot;target&quot;: &quot;a612df97816ced43e2f2c651&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;ดิน&quot;,
+      &quot;object&quot;: &quot;อินทรียวัตถุ&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ผสมเชื้อจุลินทรีย์\nปฏิปักษ์ เช่น เชื้อราไตรโคเดอร์มา&quot;,
+      &quot;page&quot;: 27,
+      &quot;source&quot;: &quot;98db94e8bf7dc8d0a6acd977&quot;,
+      &quot;target&quot;: &quot;05c7ea31222c7c9a79a8513c&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;ดิน&quot;,
+      &quot;object&quot;: &quot;เชื้อราไตรโคเดอร์มา&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;หลีกเลี่ยงการปลูกพริกซ้ำที่เดิมเป็นเวลานาน&quot;,
+      &quot;page&quot;: 27,
+      &quot;source&quot;: &quot;c7bcfc6855e30e737b7870bb&quot;,
+      &quot;target&quot;: &quot;c967dbf956deab5a63c3a81e&quot;,
+      &quot;relation&quot;: &quot;HAS_DISEASE&quot;,
+      &quot;subject&quot;: &quot;พริก&quot;,
+      &quot;object&quot;: &quot;โรคเหี่ยว&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ลักษณะอาการของโรค โคนต้นและรากจะเน่า \nเกิดอาการเหี่ยวในระยะติดผล ผลมีลักษณะฉ่ำน้ำ \nเนื้อผลเป็นสีดำ ในขั้นรุนแรงจะเข้าทำลายเมล็ด และ\nยืนต้นตาย&quot;,
+      &quot;page&quot;: 27,
+      &quot;source&quot;: &quot;c967dbf956deab5a63c3a81e&quot;,
+      &quot;target&quot;: &quot;160a355f74f2c1f6012ca6a4&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคเหี่ยว&quot;,
+      &quot;object&quot;: &quot;โคนต้นและรากจะเน่าเกิดอาการเหี่ยวในระยะติดผล ผลมีลักษณะฉ่ำน้ำ เนื้อผลเป็นสีดำ ในขั้นรุนแรงจะเข้าทำลายเมล็ด และยืนต้นตาย&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;และพ่นสารเคมีป้องกัน\nกำจัดโรค เช่น สารเมทาแลกซิล หรือสารฟอสอีทิล-\nอะลูมิเนียม&quot;,
+      &quot;page&quot;: 27,
+      &quot;source&quot;: &quot;c967dbf956deab5a63c3a81e&quot;,
+      &quot;target&quot;: &quot;797b6ed835d9d60f9528b805&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคเหี่ยว&quot;,
+      &quot;object&quot;: &quot;สารเมทาแลกซิล หรือสารฟอสอีทิล-อะลูมิเนียม&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ปลูกพืชหมุนเวียน\nเช่น ข้าวโพด&quot;,
+      &quot;page&quot;: 28,
+      &quot;source&quot;: &quot;9c575dee8d41163be7e6ffaf&quot;,
+      &quot;target&quot;: &quot;c5d5b1b95fb072bf5d2add59&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;พืชหมุนเวียน&quot;,
+      &quot;object&quot;: &quot;ข้าวโพด&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ปลูกพืช\nหมุนเวียน เช่น ข้าวโพด หรือพืชตระกูลถั่ว&quot;,
+      &quot;page&quot;: 28,
+      &quot;source&quot;: &quot;9c575dee8d41163be7e6ffaf&quot;,
+      &quot;target&quot;: &quot;93a78ed335a4093b5eec3f0d&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;พืชหมุนเวียน&quot;,
+      &quot;object&quot;: &quot;ถั่ว&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;โรคเหี่ยวที่เกิดจากเชื้อแบคทีเรีย&quot;,
+      &quot;page&quot;: 28,
+      &quot;source&quot;: &quot;c967dbf956deab5a63c3a81e&quot;,
+      &quot;target&quot;: &quot;faa9ac0b39b172d940068aab&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคเหี่ยว&quot;,
+      &quot;object&quot;: &quot;เชื้อแบคทีเรีย&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ยอดและกิ่งใบจะลู่ลงในช่วง\nกลางวัน และฟื้นตัวในช่วงกลางคืน&quot;,
+      &quot;page&quot;: 28,
+      &quot;source&quot;: &quot;c967dbf956deab5a63c3a81e&quot;,
+      &quot;target&quot;: &quot;fe0f607013b8801decd444f7&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคเหี่ยว&quot;,
+      &quot;object&quot;: &quot;ยอดและกิ่งใบจะลู่ลงในช่วงกลางวัน และฟื้นตัวในช่วงกลางคืน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;จะเหี่ยวและยืนต้นตายขณะที่ใบยังเขียวอยู่ได้\nภายใน 2 ถึง 3 วัน&quot;,
+      &quot;page&quot;: 28,
+      &quot;source&quot;: &quot;c967dbf956deab5a63c3a81e&quot;,
+      &quot;target&quot;: &quot;517061ac7af39da3b650d567&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคเหี่ยว&quot;,
+      &quot;object&quot;: &quot;ยืนต้นตายขณะที่ใบยังเขียวอยู่ได้ภายใน 2 ถึง 3 วัน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;โรคนี้มีสาเหตุเกิดจากราเมล็ด \nผักกาด&quot;,
+      &quot;page&quot;: 29,
+      &quot;source&quot;: &quot;0db8d79813e18fb386ab3029&quot;,
+      &quot;target&quot;: &quot;9bb65c1c95f47e87889123f2&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรครากเน่าและโคนเน่า&quot;,
+      &quot;object&quot;: &quot;ราเมล็ดผักกาด&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ทำให้ต้นกล้าเน่า หรือทำให้ต้น\nที่เจริญเติบโตแล้วเกิดอาการใบเหลือง \nเหี่ยว ร่วง และยืนต้นตาย&quot;,
+      &quot;page&quot;: 29,
+      &quot;source&quot;: &quot;0db8d79813e18fb386ab3029&quot;,
+      &quot;target&quot;: &quot;957c633032c59d7b71e4ef6a&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรครากเน่าและโคนเน่า&quot;,
+      &quot;object&quot;: &quot;ใบเหลือง เหี่ยว ร่วง และยืนต้นตาย&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ถอนต้นและกำจัดเศษ\nซากต้นพริกที่เป็นโรคไปเผาทำลาย กำจัดวัชพืชไม่ให้เป็น\nแหล่งอาศัยของเพลี้ยอ่อน&quot;,
+      &quot;page&quot;: 31,
+      &quot;source&quot;: &quot;7fcbb764ea25901dca866634&quot;,
+      &quot;target&quot;: &quot;f3966b9208e027e9048ef2ea&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;การป้องกันและกำจัด&quot;,
+      &quot;object&quot;: &quot;ถอนต้นและกำจัดเศษซากต้นพริกที่เป็นโรคไปเผาทำลาย กำจัดวัชพืชไม่ให้เป็นแหล่งอาศัยของเพลี้ยอ่อน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;โรคใบด่างที่เกิดจากเชื้อไวรัส PVY \n\t (Potato virus Y)&quot;,
+      &quot;page&quot;: 31,
+      &quot;source&quot;: &quot;6e4006337867fd11f7bbb7bf&quot;,
+      &quot;target&quot;: &quot;8e4b21f8f8b4bfd45936a069&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคใบด่าง&quot;,
+      &quot;object&quot;: &quot;PVY&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เริ่มจากเส้นใบบวม ใส ใบด่าง หดย่น ต้นแคระแกร็น&quot;,
+      &quot;page&quot;: 31,
+      &quot;source&quot;: &quot;6e4006337867fd11f7bbb7bf&quot;,
+      &quot;target&quot;: &quot;3068964de597bc7ec003d696&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคใบด่าง&quot;,
+      &quot;object&quot;: &quot;เส้นใบบวม ใส ใบด่าง หดย่น ต้นแคระแกร็น&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ทำให้ใบด่าง มีสีเขียวอ่อนสลับสีเขียวเข้ม หรือ \nสีเหลือง หรือจุดเหลืองกระจายตามใบ ต้นแคระแกร็น \nไม่ออกดอก ใบเล็กลง ผลมีจุดสีเหลืองซีด ผิวผลหยาบ \nผลมีรูปร่างผิดปกติ&quot;,
+      &quot;page&quot;: 31,
+      &quot;source&quot;: &quot;760f8b00dcb3c33574733b6c&quot;,
+      &quot;target&quot;: &quot;73b577982c7ada971b59d90b&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคใบด่างที่เกิดจากเชื้อไวรัส CMV (Cucumber mosaic virus)&quot;,
+      &quot;object&quot;: &quot;มีสีเขียวอ่อนสลับสีเขียวเข้ม หรือ สีเหลือง หรือจุดเหลืองกระจายตามใบ ต้นแคระแกร็น ไม่ออกดอก ใบเล็กลง ผลมีจุดสีเหลืองซีด ผิวผลหยาบ ผลมีรูปร่างผิดปกติ&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เกิดจากเชื้อไวรัสใบหงิกเหลือง ที่ทำให้\nใบพริกด่างเหลือง&quot;,
+      &quot;page&quot;: 32,
+      &quot;source&quot;: &quot;5f6a5e2aa650727ef05a5120&quot;,
+      &quot;target&quot;: &quot;50f6a005ccdf583dadf9b870&quot;,
+      &quot;relation&quot;: &quot;HAS_DISEASE&quot;,
+      &quot;subject&quot;: &quot;ต้นพริก&quot;,
+      &quot;object&quot;: &quot;โรคใบหงิกเหลือง&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;พบระบาดมากในช่วงฤดูแล้ง โดยมีพืชอาศัย\nหลายชนิด เช่น กระเจี๊ยบมอญ แตงกวา พืช\nตระกูลถั่วบางชนิด บวบเหลี่ยม พริก ฟักเขียว&quot;,
+      &quot;page&quot;: 32,
+      &quot;source&quot;: &quot;c7bcfc6855e30e737b7870bb&quot;,
+      &quot;target&quot;: &quot;50f6a005ccdf583dadf9b870&quot;,
+      &quot;relation&quot;: &quot;HAS_DISEASE&quot;,
+      &quot;subject&quot;: &quot;พริก&quot;,
+      &quot;object&quot;: &quot;โรคใบหงิกเหลือง&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;โรคใบด่างที่เกิดจากเชื้อไวรัส TEV&quot;,
+      &quot;page&quot;: 32,
+      &quot;source&quot;: &quot;6e4006337867fd11f7bbb7bf&quot;,
+      &quot;target&quot;: &quot;d551361c36fd5bb08c520d9e&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคใบด่าง&quot;,
+      &quot;object&quot;: &quot;TEV (Tobacco etch virus)&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ป้องกันและกำจัดด้วยวิธีเดียวกับ\nโรคใบด่างจากเชื้อไวรัส CVMV&quot;,
+      &quot;page&quot;: 33,
+      &quot;source&quot;: &quot;c7bcfc6855e30e737b7870bb&quot;,
+      &quot;target&quot;: &quot;19a9f18a7e5bcc335434ce0f&quot;,
+      &quot;relation&quot;: &quot;HAS_DISEASE&quot;,
+      &quot;subject&quot;: &quot;พริก&quot;,
+      &quot;object&quot;: &quot;โรคใบด่างจากเชื้อไวรัส CVMV&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ป้องกันและกำจัดโรคด้วยวิธีเดียวกันกับ\nโรคใบด่างที่เกิดจากเชื้อไวรัส CVMV&quot;,
+      &quot;page&quot;: 33,
+      &quot;source&quot;: &quot;c7bcfc6855e30e737b7870bb&quot;,
+      &quot;target&quot;: &quot;19a9f18a7e5bcc335434ce0f&quot;,
+      &quot;relation&quot;: &quot;HAS_DISEASE&quot;,
+      &quot;subject&quot;: &quot;พริก&quot;,
+      &quot;object&quot;: &quot;โรคใบด่างจากเชื้อไวรัส CVMV&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เพื่อให้\nอากาศถ่ายเทได้สะดวก&quot;,
+      &quot;page&quot;: 34,
+      &quot;source&quot;: &quot;859df953e0bcef98ea76f515&quot;,
+      &quot;target&quot;: &quot;99bff5c3f645ddff5fdba290&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;การปลูกพริก&quot;,
+      &quot;object&quot;: &quot;อากาศถ่ายเทได้สะดวก&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;มีเชื้อสาเหตุคือเชื้อรา&quot;,
+      &quot;page&quot;: 34,
+      &quot;source&quot;: &quot;e781e27971d331c366b2fc40&quot;,
+      &quot;target&quot;: &quot;54839d8a4a394732f6bd111b&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคใบจุดตากบ&quot;,
+      &quot;object&quot;: &quot;เชื้อรา&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;พ่นสารเคมีป้องกันและกำจัดโรค เช่น \nสารแมนโคเซบ&quot;,
+      &quot;page&quot;: 34,
+      &quot;source&quot;: &quot;e781e27971d331c366b2fc40&quot;,
+      &quot;target&quot;: &quot;36bbdafcac06b850ef5cf287&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคใบจุดตากบ&quot;,
+      &quot;object&quot;: &quot;สารแมนโคเซบ&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;หรือสาร\nเบโนมิล หรือน้ำหมักสมุนไพร&quot;,
+      &quot;page&quot;: 34,
+      &quot;source&quot;: &quot;e781e27971d331c366b2fc40&quot;,
+      &quot;target&quot;: &quot;413ee79851eab71e24326d5c&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคใบจุดตากบ&quot;,
+      &quot;object&quot;: &quot;น้ำหมักสมุนไพร&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ทำให้เกิดแผล\nวงกลมหรือทางยาว&quot;,
+      &quot;page&quot;: 34,
+      &quot;source&quot;: &quot;e781e27971d331c366b2fc40&quot;,
+      &quot;target&quot;: &quot;1040108d3a312bead45e5912&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคใบจุดตากบ&quot;,
+      &quot;object&quot;: &quot;แผลวงกลมหรือทางยาว&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;มีขอบแผลสีน้ำตาลเข้ม&quot;,
+      &quot;page&quot;: 34,
+      &quot;source&quot;: &quot;e781e27971d331c366b2fc40&quot;,
+      &quot;target&quot;: &quot;c76e6a8a6b503b7aa520f858&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคใบจุดตากบ&quot;,
+      &quot;object&quot;: &quot;ขอบแผลสีน้ำตาลเข้ม&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เนื้อ\nแผลสีน้ำตาลอ่อน&quot;,
+      &quot;page&quot;: 34,
+      &quot;source&quot;: &quot;e781e27971d331c366b2fc40&quot;,
+      &quot;target&quot;: &quot;126d2e9895c6bc1b62a375d0&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคใบจุดตากบ&quot;,
+      &quot;object&quot;: &quot;เนื้อแผลสีน้ำตาลอ่อน&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;กลางแผลสีเทา หรือขาว&quot;,
+      &quot;page&quot;: 34,
+      &quot;source&quot;: &quot;e781e27971d331c366b2fc40&quot;,
+      &quot;target&quot;: &quot;45801be96bb64ff58e843de2&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคใบจุดตากบ&quot;,
+      &quot;object&quot;: &quot;กลางแผลสีเทา หรือขาว&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;โรคนี้เป็นอีกโรคหนึ่งที่มีเชื้อราเป็นสาเหตุของ\nโรค&quot;,
+      &quot;page&quot;: 35,
+      &quot;source&quot;: &quot;4182997fb0d397cc070e86e7&quot;,
+      &quot;target&quot;: &quot;54839d8a4a394732f6bd111b&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคลำต้นไหม้&quot;,
+      &quot;object&quot;: &quot;เชื้อรา&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;อาการเริ่มจากรอยไหม้สีดำบริเวณลำต้น&quot;,
+      &quot;page&quot;: 35,
+      &quot;source&quot;: &quot;4182997fb0d397cc070e86e7&quot;,
+      &quot;target&quot;: &quot;ebb58a88073738d276b3ed0d&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคลำต้นไหม้&quot;,
+      &quot;object&quot;: &quot;รอยไหม้สีดำบริเวณลำต้น&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;หรือสารฟอสฟอริกแอซิด&quot;,
+      &quot;page&quot;: 35,
+      &quot;source&quot;: &quot;4182997fb0d397cc070e86e7&quot;,
+      &quot;target&quot;: &quot;173f37c8dd4f1b25445d58c7&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคลำต้นไหม้&quot;,
+      &quot;object&quot;: &quot;สารฟอสฟอริกแอซิด&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เกิดจากไส้เดือนฝอยใช้ปากแทง\nเนื้อเยื่อแล้วดูดน้ำเลี้ยงจากรากเป็น\nอาหาร&quot;,
+      &quot;page&quot;: 36,
+      &quot;source&quot;: &quot;127ad4bbe4d4417cbe754b5c&quot;,
+      &quot;target&quot;: &quot;0856ec5726af9b0854989a7c&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรครากปม&quot;,
+      &quot;object&quot;: &quot;ไส้เดือนฝอย&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ทำให้ต้นพริกชะงักการเจริญ\nเติบโต ผลผลิตลดลงและขนาดเล็กลง \nรากเป็นปมและเน่า&quot;,
+      &quot;page&quot;: 36,
+      &quot;source&quot;: &quot;127ad4bbe4d4417cbe754b5c&quot;,
+      &quot;target&quot;: &quot;777c362a38e5da79f204ff18&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรครากปม&quot;,
+      &quot;object&quot;: &quot;รากเป็นปมและเน่า&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;รากเป็นปมและเน่า ต้นแคระแกร็น \nเหี่ยว ใบเหลือง&quot;,
+      &quot;page&quot;: 36,
+      &quot;source&quot;: &quot;127ad4bbe4d4417cbe754b5c&quot;,
+      &quot;target&quot;: &quot;fd0ae6d120423be911d726aa&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรครากปม&quot;,
+      &quot;object&quot;: &quot;ใบเหลือง&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;จุลินทรีย์ที่เป็นสาเหตุ\nของโรคอื่นๆ เข้าทำลายต้น และต้นตาย\nได้&quot;,
+      &quot;page&quot;: 36,
+      &quot;source&quot;: &quot;127ad4bbe4d4417cbe754b5c&quot;,
+      &quot;target&quot;: &quot;ea574ccf0a060a7fe13fc97f&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรครากปม&quot;,
+      &quot;object&quot;: &quot;ต้นตายได้&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เกิดจากเชื้อรา มักระบาดในฤดูหนาว&quot;,
+      &quot;page&quot;: 36,
+      &quot;source&quot;: &quot;2f44f1cdea8b3259da15d936&quot;,
+      &quot;target&quot;: &quot;54839d8a4a394732f6bd111b&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคราแป้ง&quot;,
+      &quot;object&quot;: &quot;เชื้อรา&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;สังเกตเห็นอาการเริ่มต้น มีผงคล้ายแป้งสีขาว\nปกคลุมใบแก่&quot;,
+      &quot;page&quot;: 36,
+      &quot;source&quot;: &quot;2f44f1cdea8b3259da15d936&quot;,
+      &quot;target&quot;: &quot;739a2dffed22c8d7c2bf03bd&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคราแป้ง&quot;,
+      &quot;object&quot;: &quot;ผงคล้ายแป้งสีขาวปกคลุมใบแก่&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;และดูดน้ำเลี้ยงทำให้เหลืองและต้นแห้งตาย&quot;,
+      &quot;page&quot;: 36,
+      &quot;source&quot;: &quot;2f44f1cdea8b3259da15d936&quot;,
+      &quot;target&quot;: &quot;3bb95e689ae5748a93784373&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคราแป้ง&quot;,
+      &quot;object&quot;: &quot;ต้นแห้งตาย&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;และใช้สารไดโนแคป ไตรโฟรีน และเบโนมิล \nกำจัดเชื้อรา&quot;,
+      &quot;page&quot;: 36,
+      &quot;source&quot;: &quot;2f44f1cdea8b3259da15d936&quot;,
+      &quot;target&quot;: &quot;03ac9916f4a5b448ae817efb&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคราแป้ง&quot;,
+      &quot;object&quot;: &quot;สารไดโนแคป ไตรโฟรีน และเบโนมิล&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ปลูกพืชตระกูลถั่ว \nเช่น ถั่วลิสง หรือปอเทือง ปลูกดาวเรือง\nและงา สลับกับพริก&quot;,
+      &quot;page&quot;: 37,
+      &quot;source&quot;: &quot;c7bcfc6855e30e737b7870bb&quot;,
+      &quot;target&quot;: &quot;d63f7a5abb23eb071bc9f809&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;พริก&quot;,
+      &quot;object&quot;: &quot;พืชตระกูลถั่ว เช่น ถั่วลิสง หรือปอเทือง&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ปลูกพืชตระกูลถั่ว \nเช่น ถั่วลิสง หรือปอเทือง ปลูกดาวเรือง\nและงา สลับกับพริก&quot;,
+      &quot;page&quot;: 37,
+      &quot;source&quot;: &quot;c7bcfc6855e30e737b7870bb&quot;,
+      &quot;target&quot;: &quot;411474151b1a864132701ca0&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;พริก&quot;,
+      &quot;object&quot;: &quot;ดาวเรืองและงา&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;วิธีการสังเกตง่ายๆ ว่าพืชของเราติดโรค \nราน้ำค้างหรือไม่ ให้ดูที่ใบของพืชจะมีกลุ่ม \nเชื้อราเป็นผงสีขาวหรือเทา&quot;,
+      &quot;page&quot;: 39,
+      &quot;source&quot;: &quot;4d60f5020607fa10d868e97b&quot;,
+      &quot;target&quot;: &quot;6814aa8f6ae53e00ddac82c7&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคราน้ำค้าง&quot;,
+      &quot;object&quot;: &quot;กลุ่มเชื้อราเป็นผงสีขาวหรือเทา&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;วิธีการสังเกตง่ายๆ ว่าพืชของเราติดโรค \nราน้ำค้างหรือไม่ ให้ดูที่ใบของพืชจะมีกลุ่ม \nเชื้อราเป็นผงสีขาวหรือเทา และหลังใบจะเป็น\nสีเหลือง และเปลี่ยนเป็นสีน้ำตาลมีลักษณะ\nเหลี่ยม&quot;,
+      &quot;page&quot;: 39,
+      &quot;source&quot;: &quot;4d60f5020607fa10d868e97b&quot;,
+      &quot;target&quot;: &quot;e50bcc9bc863f03af0b59040&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคราน้ำค้าง&quot;,
+      &quot;object&quot;: &quot;หลังใบจะเป็นสีเหลืองและเปลี่ยนเป็นสีน้ำตาลมีลักษณะเหลี่ยม&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;หลังล้างใบพืชแล้ว ควรฉีดพ่นน้ำส้ม\nควันไม้ อัตรา 100 ซีซี ต่อน้ำเปล่า 12 \nลิตร&quot;,
+      &quot;page&quot;: 40,
+      &quot;source&quot;: &quot;4d60f5020607fa10d868e97b&quot;,
+      &quot;target&quot;: &quot;d8dac12a442757598e65c9c6&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคราน้ำค้าง&quot;,
+      &quot;object&quot;: &quot;น้ำส้มควันไม้&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เชื้อรา \nสเคลอโรเทียม ทำให้เกิดโรคกล้าไหม้&quot;,
+      &quot;page&quot;: 41,
+      &quot;source&quot;: &quot;24e4b3fcc1aee7eb7b8aaba7&quot;,
+      &quot;target&quot;: &quot;8fb6d521ebdff43fffddd81d&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคกล้าไหม้&quot;,
+      &quot;object&quot;: &quot;เชื้อราสเคลอโรเทียม&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เช่น เชื้อรา\nพิเทียม ทำให้เกิดรากเน่า โคนเน่า โรคยอดเน่าของต้นกล้าในพืชไร่&quot;,
+      &quot;page&quot;: 41,
+      &quot;source&quot;: &quot;c3a6d6d53388e23619c04b7c&quot;,
+      &quot;target&quot;: &quot;620a0b9a3f9ed0a1ca5db1ba&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคยอดเน่า&quot;,
+      &quot;object&quot;: &quot;เชื้อราพิเทียม&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เชื้อราไรซ็อกโทเนีย \nทำให้เกิดโรคเน่าคอดิน&quot;,
+      &quot;page&quot;: 41,
+      &quot;source&quot;: &quot;16e2047c061e3e32cb84bbe6&quot;,
+      &quot;target&quot;: &quot;00f03a4349e0d241721c3661&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคเน่าคอดิน&quot;,
+      &quot;object&quot;: &quot;เชื้อราไรซ็อกโทเนีย&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ราเม็ดผักกาด โรคเหี่ยวในพืชผัก&quot;,
+      &quot;page&quot;: 41,
+      &quot;source&quot;: &quot;428bd52dbfbdfd6947ab7f69&quot;,
+      &quot;target&quot;: &quot;3b19e9406b9f283a096e0779&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคเหี่ยวในพืชผัก&quot;,
+      &quot;object&quot;: &quot;ราเม็ดผักกาด&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;เชื้อราฟูซาเรียม ทำให้เกิดโรคเหี่ยวในไม้ดอก&quot;,
+      &quot;page&quot;: 41,
+      &quot;source&quot;: &quot;f88a93930d27588253202be2&quot;,
+      &quot;target&quot;: &quot;f8ead107f6409a313f13fe98&quot;,
+      &quot;relation&quot;: &quot;CAUSED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคเหี่ยวในไม้ดอก&quot;,
+      &quot;object&quot;: &quot;เชื้อราฟูซาเรียม&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ควรระวัง \nโรคราแป้ง&quot;,
+      &quot;page&quot;: 42,
+      &quot;source&quot;: &quot;64cd1c4c64bf95519f3abe08&quot;,
+      &quot;target&quot;: &quot;2f44f1cdea8b3259da15d936&quot;,
+      &quot;relation&quot;: &quot;HAS_DISEASE&quot;,
+      &quot;subject&quot;: &quot;พืช&quot;,
+      &quot;object&quot;: &quot;โรคราแป้ง&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ควรระวัง \nโรคราแป้ง โรคราน้ำค้าง โรคใบจุด&quot;,
+      &quot;page&quot;: 42,
+      &quot;source&quot;: &quot;64cd1c4c64bf95519f3abe08&quot;,
+      &quot;target&quot;: &quot;800fb71945393ce79d60732d&quot;,
+      &quot;relation&quot;: &quot;HAS_DISEASE&quot;,
+      &quot;subject&quot;: &quot;พืช&quot;,
+      &quot;object&quot;: &quot;โรคใบจุด&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ควรระวัง \nโรคราแป้ง โรคราน้ำค้าง โรคใบจุด\nและโรคแอนแทรกโนส&quot;,
+      &quot;page&quot;: 42,
+      &quot;source&quot;: &quot;64cd1c4c64bf95519f3abe08&quot;,
+      &quot;target&quot;: &quot;7d82f271141b1aff959d42c2&quot;,
+      &quot;relation&quot;: &quot;HAS_DISEASE&quot;,
+      &quot;subject&quot;: &quot;พืช&quot;,
+      &quot;object&quot;: &quot;โรคแอนแทรกโนส&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;พืช \nของท่านก็จะปลอดภัยต่อโรคเชื้อรา\nที่มากับฤดูฝน&quot;,
+      &quot;page&quot;: 42,
+      &quot;source&quot;: &quot;7c677f01be6453210352fdb3&quot;,
+      &quot;target&quot;: &quot;8c93beddc04c428844b7767a&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;ฤดูฝน&quot;,
+      &quot;object&quot;: &quot;โรคเชื้อรา&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;ถ้าเป็นไม่มาก ใช้เชื้อราไตรโคเดอร์มา&quot;,
+      &quot;page&quot;: 42,
+      &quot;source&quot;: &quot;603e8d9a7dcfaf41defe26ab&quot;,
+      &quot;target&quot;: &quot;c12aec4cd7d67d6b1589bab0&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรครากเน่าโคนเน่า&quot;,
+      &quot;object&quot;: &quot;เชื้อราไตรโคเดอร์มา&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;บริเวณที่ต้องการกำจัดหญ้าหรือวัชพืช&quot;,
+      &quot;page&quot;: 44,
+      &quot;source&quot;: &quot;5ef34b1bd3cd01710866f469&quot;,
+      &quot;target&quot;: &quot;6b6d21081b0d10da2e17bfc1&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;สูตรน้ำส้มสายชู&quot;,
+      &quot;object&quot;: &quot;วัชพืช&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;โดยใช้ในนาข้าวเมื่อข้าวยังเล็ก&quot;,
+      &quot;page&quot;: 44,
+      &quot;source&quot;: &quot;29921bb6558fbde474777b85&quot;,
+      &quot;target&quot;: &quot;9237270c3da335d11cc6efd9&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;สูตรน้ำหัวผักกาด&quot;,
+      &quot;object&quot;: &quot;นาข้าว&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;หากพบโรคให้ตัดแต่งส่วนที่เป็นโรค นำไปเผา\nทำลายนอกแปลงปลูก&quot;,
+      &quot;page&quot;: 47,
+      &quot;source&quot;: &quot;373fa42ff05e696fa0ae3d01&quot;,
+      &quot;target&quot;: &quot;9dba120b2872efe97b5d5ac2&quot;,
+      &quot;relation&quot;: &quot;RELATED_TO&quot;,
+      &quot;subject&quot;: &quot;การควบคุมในเบื้องต้น&quot;,
+      &quot;object&quot;: &quot;ตัดแต่งส่วนที่เป็นโรค นำไปเผาทำลายนอกแปลงปลูก&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;กรณีโรคเข้าทำลายรุนแรง\n\t ให้เกษตรกรถากหรือขูดผิวเปลือกบริเวณที่เป็น\nโรคออก&quot;,
+      &quot;page&quot;: 48,
+      &quot;source&quot;: &quot;2d784ef56a6763c2af821f27&quot;,
+      &quot;target&quot;: &quot;b7f0dccb22178363aa5f0fbc&quot;,
+      &quot;relation&quot;: &quot;HAS_DISEASE&quot;,
+      &quot;subject&quot;: &quot;ทุเรียน&quot;,
+      &quot;object&quot;: &quot;โรคเข้าทำลายรุนแรง&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;จากนั้นทาแผลด้วยสารป้องกันกำจัดโรคพืช\nฟอสอีทิล-อะลูมิเนียม 80% ดับเบิลยูพี&quot;,
+      &quot;page&quot;: 48,
+      &quot;source&quot;: &quot;b7f0dccb22178363aa5f0fbc&quot;,
+      &quot;target&quot;: &quot;6594203ec8453591cb3e773d&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคเข้าทำลายรุนแรง&quot;,
+      &quot;object&quot;: &quot;ฟอสอีทิล-อะลูมิเนียม 80% ดับเบิลยูพี&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;หรือสารเมทาแลกซิล 25% ดับเบิลยูพี \nอัตรา 50-60 กรัมต่อน้ำ 1 ลิตร&quot;,
+      &quot;page&quot;: 48,
+      &quot;source&quot;: &quot;b7f0dccb22178363aa5f0fbc&quot;,
+      &quot;target&quot;: &quot;df77d561e3c033a9148e59fc&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคเข้าทำลายรุนแรง&quot;,
+      &quot;object&quot;: &quot;เมทาแลกซิล 25% ดับเบิลยูพี&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;หรือสารเมทาแลกซิล+ \nแมนโคเซบ 65% ดับเบิลยูพี อัตรา 100 กรัมต่อน้ำ \n1 ลิตร&quot;,
+      &quot;page&quot;: 48,
+      &quot;source&quot;: &quot;b7f0dccb22178363aa5f0fbc&quot;,
+      &quot;target&quot;: &quot;1d1e04f00f78e1d89ea501eb&quot;,
+      &quot;relation&quot;: &quot;TREATED_BY&quot;,
+      &quot;subject&quot;: &quot;โรคเข้าทำลายรุนแรง&quot;,
+      &quot;object&quot;: &quot;เมทาแลกซิล+แมนโคเซบ 65% ดับเบิลยูพี&quot;
+    },
+    {
+      &quot;method&quot;: &quot;Qwen3.5 structured extraction, filtered&quot;,
+      &quot;evidence&quot;: &quot;หากพบใบเหลืองทั้งต้น ให้ราดดินด้วยสารป้องกัน\nกำจัดโรคพืชฟอสอีทิล-อะลูมิเนียม 80% ดับเบิลยูพี&quot;,
+      &quot;page&quot;: 48,
+      &quot;source&quot;: &quot;b7f0dccb22178363aa5f0fbc&quot;,
+      &quot;target&quot;: &quot;d5e4708f324d32959dc676c4&quot;,
+      &quot;relation&quot;: &quot;EXHIBITS&quot;,
+      &quot;subject&quot;: &quot;โรคเข้าทำลายรุนแรง&quot;,
+      &quot;object&quot;: &quot;ใบเหลืองทั้งต้น&quot;
+    }
+  ]
+}</pre></main>

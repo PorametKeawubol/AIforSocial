@@ -1,0 +1,185 @@
+{
+  "fingerprint": "2fd5b59ba462f3c76828a30d",
+  "version": "sections-v2.1",
+  "section": "1.13",
+  "embedding": {
+    "embedding": "BAAI/bge-m3",
+    "cache_fingerprint": "1c7299b69943dd6662be8fb7",
+    "aggregation": "max of existing per-page ontology hints across section pages",
+    "hints": [
+      "เอกสารประกอบการแจ้งความ",
+      "หน่วยงานรับแจ้งเรื่อง",
+      "หลักฐานเกี่ยวกับเหตุการณ์",
+      "ช่องทางโทรศัพท์ติดต่อ"
+    ]
+  },
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "seconds": 48.919475444001364,
+  "attempt": 1,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T16:55:37.411899885Z",
+    "message": {
+      "content": "{\"edges\":[[\"HAS_SUPPORTING_EVIDENCE\",\"สำเนาทะเบียนบ้าน\",\"Document\",\"ผู้เยาว์\",153,153,\"HAS_SUPPORTING_EVIDENCE\"],[\"HAS_SUPPORTING_EVIDENCE\",\"ใบเกิด\",\"Document\",\"ผู้เยาว์\",154,154,\"HAS_SUPPORTING_EVIDENCE\"],[\"HAS_SUPPORTING_EVIDENCE\",\"รูปถ่าย\",\"Evidence\",\"ผู้เยาว์\",155,155,\"HAS_SUPPORTING_EVIDENCE\"],[\"HAS_SUPPORTING_EVIDENCE\",\"หลักฐานสำคัญอื่น ๆ ที่เกี่ยวกับผู้เยาว์\",\"Document\",\"ผู้เยาว์\",\"ถ้ามี\",156,157]]}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 48918832136,
+    "load_duration": 200091025,
+    "prompt_eval_count": 741,
+    "prompt_eval_duration": 4870714000,
+    "eval_count": 137,
+    "eval_duration": 43487147000
+  },
+  "parse_ok": true,
+  "truncated": false,
+  "accepted": [
+    {
+      "section": "1.13",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "สำเนาทะเบียนบ้าน",
+      "raw_name": "สำเนาทะเบียนบ้าน",
+      "type": "Document",
+      "owner": "ผู้เยาว์",
+      "condition": "HAS_SUPPORTING_EVIDENCE",
+      "start_line": 153,
+      "end_line": 153,
+      "evidence": "(1) สำเนาทะเบียนบ้านของผู้เยาว์",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization",
+      "schema_repair": "condition moved before the two integer line IDs; raw row preserved in response"
+    },
+    {
+      "section": "1.13",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "สูติบัตร",
+      "raw_name": "ใบเกิด",
+      "type": "Document",
+      "owner": "ผู้เยาว์",
+      "condition": "HAS_SUPPORTING_EVIDENCE",
+      "start_line": 154,
+      "end_line": 154,
+      "evidence": "(2) ใบเกิดของผู้เยาว์ (สูติบัตร)",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization",
+      "schema_repair": "condition moved before the two integer line IDs; raw row preserved in response"
+    },
+    {
+      "section": "1.13",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "ภาพถ่าย",
+      "raw_name": "รูปถ่าย",
+      "type": "Evidence",
+      "owner": "ผู้เยาว์",
+      "condition": "HAS_SUPPORTING_EVIDENCE",
+      "start_line": 155,
+      "end_line": 155,
+      "evidence": "(3) รูปถ่ายของผู้เยาว์",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization",
+      "schema_repair": "condition moved before the two integer line IDs; raw row preserved in response"
+    },
+    {
+      "section": "1.13",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "หลักฐานสำคัญอื่นๆที่เกี่ยวกับผู้เยาว์",
+      "raw_name": "หลักฐานสำคัญอื่น ๆ ที่เกี่ยวกับผู้เยาว์",
+      "type": "Document",
+      "owner": "ผู้เยาว์",
+      "condition": "ถ้ามี",
+      "start_line": 156,
+      "end_line": 157,
+      "evidence": "(4) หลักฐานสำคัญอื่น ๆ ที่เกี่ยวกับผู้เยาว์ \n(ถ้ามี)",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    }
+  ],
+  "rejected": [],
+  "initial_validation": {
+    "accepted": [
+      {
+        "section": "1.13",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "หลักฐานสำคัญอื่นๆที่เกี่ยวกับผู้เยาว์",
+        "raw_name": "หลักฐานสำคัญอื่น ๆ ที่เกี่ยวกับผู้เยาว์",
+        "type": "Document",
+        "owner": "ผู้เยาว์",
+        "condition": "ถ้ามี",
+        "start_line": 156,
+        "end_line": 157,
+        "evidence": "(4) หลักฐานสำคัญอื่น ๆ ที่เกี่ยวกับผู้เยาว์ \n(ถ้ามี)",
+        "pdf_pages": [
+          29
+        ],
+        "printed_pages": [
+          16
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      }
+    ],
+    "rejected": [
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "สำเนาทะเบียนบ้าน",
+          "Document",
+          "ผู้เยาว์",
+          153,
+          153,
+          "HAS_SUPPORTING_EVIDENCE"
+        ],
+        "reason": "schema"
+      },
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "ใบเกิด",
+          "Document",
+          "ผู้เยาว์",
+          154,
+          154,
+          "HAS_SUPPORTING_EVIDENCE"
+        ],
+        "reason": "schema"
+      },
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "รูปถ่าย",
+          "Evidence",
+          "ผู้เยาว์",
+          155,
+          155,
+          "HAS_SUPPORTING_EVIDENCE"
+        ],
+        "reason": "schema"
+      }
+    ]
+  },
+  "validator_version": "v2.2-unique-nearby-grounding-repair"
+}

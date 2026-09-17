@@ -1,0 +1,19 @@
+{
+  "nodes": 266,
+  "relationships": 879,
+  "semantic_nodes": 207,
+  "semantic_relationships": 263,
+  "semantic_components": 7,
+  "semantic_largest_component": 165,
+  "full_graph_components": 1,
+  "isolated_semantic_nodes": 0,
+  "chapters": 10,
+  "pdf_pages": 48,
+  "relationship_page_reference_coverage": 1.0,
+  "duplicate_node_keys": 0,
+  "dangling_relationships": 0,
+  "neo4j_live_import": true,
+  "neo4j_version": [
+    "5.26.30"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "page": 37,
+  "facts": [
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "ไส้เดือนฝอย",
+      "object_type": "Disease",
+      "evidence": "หากพบการระบาดของไส้เดือนฝอย"
+    },
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "TREATED_BY",
+      "object": "ปุ๋ยอินทรีย์ เช่น ปุ๋ยหมักหรือปุ๋ยคอก",
+      "object_type": "Treatment",
+      "evidence": "ใส่ปุ๋ยอินทรีย์ เช่น ปุ๋ยหมักหรือปุ๋ยคอก ช่วยลดปริมาณไส้เดือนฝอย"
+    },
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "PREVENTED_BY",
+      "object": "การไถพลิกหน้าดิน ตากแดดทิ้งไว้ 7 วัน และเผาแกลบหรือฟางแห้งนาน 8 ชั่วโมง",
+      "object_type": "Treatment",
+      "evidence": "ก่อนและหลังปลูกควรไถพลิกหน้าดิน ทากแดดทิ้งไว้อย่างน้อย 7 วัน"
+    },
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "RELATED_TO",
+      "object": "พืชตระกูลถั่ว เช่น ถั่วลิสง หรือปอเทือง",
+      "object_type": "Topic",
+      "evidence": "ปลูกพืชตระกูลถั่ว เช่น ถั่วลิสง หรือปอเทือง ปลูกดาวเรืองและงา สลับกับพริก"
+    },
+    {
+      "subject": "ไส้เดือนฝอย",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "การไม่ไถพลิกหน้าดินและไม่ตากแดดทิ้งไว้ 7 วัน",
+      "object_type": "Topic",
+      "evidence": "หากพบการระบาดของไส้เดือนฝอย"
+    },
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคพืชทั่วไป",
+      "object_type": "Disease",
+      "evidence": "หมั่นสำรวจแปลงปลูก หากพบต้นที่เป็นโรค ให้ถอนไปเผาทำลาย"
+    },
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "TREATED_BY",
+      "object": "การถอนและเผาทำลาย",
+      "object_type": "Treatment",
+      "evidence": "หากพบต้นที่เป็นโรค ให้ถอนไปเผาทำลาย"
+    },
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "RELATED_TO",
+      "object": "ดาวเรืองและงา",
+      "object_type": "Topic",
+      "evidence": "ปลูกพืชตระกูลถั่ว เช่น ถั่วลิสง หรือปอเทือง ปลูกดาวเรืองและงา สลับกับพริก"
+    }
+  ],
+  "timing": {
+    "seconds": 22.929,
+    "model": "qwen3.5:9b",
+    "eval_count": 715,
+    "eval_duration": 21539847000,
+    "prompt_eval_count": 797
+  }
+}

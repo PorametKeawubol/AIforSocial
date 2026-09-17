@@ -1,0 +1,11 @@
+{
+  "page": 24,
+  "raw": "{\n  \"entities\": [\n    {\n      \"crop\": \"พริก\",\n      \"disease\": \"โรคแอนแทร็กโนส หรือ โรคกุ้งแห้ง\",\n      \"pathogen\": null,\n      \"symptom\": null,\n      \"treatment\": null\n    }\n  ]\n}",
+  "timing": {
+    "seconds": 3.258,
+    "model": "qwen3.5:9b",
+    "eval_count": 69,
+    "eval_duration": 2010042000,
+    "prompt_eval_count": 675
+  }
+}

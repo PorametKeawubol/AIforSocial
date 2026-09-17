@@ -1,0 +1,137 @@
+{
+  "fingerprint": "a4bd350c4cdcb63a5721d7f2",
+  "version": "sections-v2.1",
+  "section": "1.16",
+  "embedding": {
+    "embedding": "BAAI/bge-m3",
+    "cache_fingerprint": "1c7299b69943dd6662be8fb7",
+    "aggregation": "max of existing per-page ontology hints across section pages",
+    "hints": [
+      "เอกสารประกอบการแจ้งความ",
+      "หลักฐานเกี่ยวกับเหตุการณ์",
+      "หน่วยงานรับแจ้งเรื่อง",
+      "เงื่อนไขและข้อยกเว้น"
+    ]
+  },
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "seconds": 32.92000077400007,
+  "attempt": 1,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T16:57:41.196325639Z",
+    "message": {
+      "content": "{\"edges\":[[\"HAS_SUPPORTING_EVIDENCE\",\"เช็ค\",\"Document\",\"ผู้เสียหาย\",\"\",178,178],[\"HAS_SUPPORTING_EVIDENCE\",\"หนังสือธนาคารแจ้งขัดข้องหรือปฏิเสธการจ่ายเงิน\",\"Document\",\"ผู้เสียหาย\",\"\",179,180],[\"HAS_SUPPORTING_EVIDENCE\",\"หลักฐานหรือเอกสารที่เป็นมูลหนี้แหล่งที่มาของการจ่ายเช็ค\",\"Document\",\"ผู้เสียหาย\",\"\",181,182]]}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 32919350393,
+    "load_duration": 199011882,
+    "prompt_eval_count": 744,
+    "prompt_eval_duration": 4306181000,
+    "eval_count": 92,
+    "eval_duration": 28093518000
+  },
+  "parse_ok": true,
+  "truncated": false,
+  "accepted": [
+    {
+      "section": "1.16",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "เช็ค",
+      "raw_name": "เช็ค",
+      "type": "Document",
+      "owner": "ผู้เสียหาย",
+      "condition": "",
+      "start_line": 178,
+      "end_line": 178,
+      "evidence": "(1) เช็คที่ยึดไว้",
+      "pdf_pages": [
+        30
+      ],
+      "printed_pages": [
+        17
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    }
+  ],
+  "rejected": [
+    {
+      "row": [
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือธนาคารแจ้งขัดข้องหรือปฏิเสธการจ่ายเงิน",
+        "Document",
+        "ผู้เสียหาย",
+        "",
+        179,
+        180
+      ],
+      "reason": "entity_not_in_evidence"
+    },
+    {
+      "row": [
+        "HAS_SUPPORTING_EVIDENCE",
+        "หลักฐานหรือเอกสารที่เป็นมูลหนี้แหล่งที่มาของการจ่ายเช็ค",
+        "Document",
+        "ผู้เสียหาย",
+        "",
+        181,
+        182
+      ],
+      "reason": "entity_not_in_evidence"
+    }
+  ],
+  "initial_validation": {
+    "accepted": [
+      {
+        "section": "1.16",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "เช็ค",
+        "raw_name": "เช็ค",
+        "type": "Document",
+        "owner": "ผู้เสียหาย",
+        "condition": "",
+        "start_line": 178,
+        "end_line": 178,
+        "evidence": "(1) เช็คที่ยึดไว้",
+        "pdf_pages": [
+          30
+        ],
+        "printed_pages": [
+          17
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      }
+    ],
+    "rejected": [
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "หนังสือธนาคารแจ้งขัดข้องหรือปฏิเสธการจ่ายเงิน",
+          "Document",
+          "ผู้เสียหาย",
+          "",
+          179,
+          180
+        ],
+        "reason": "entity_not_in_evidence"
+      },
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "หลักฐานหรือเอกสารที่เป็นมูลหนี้แหล่งที่มาของการจ่ายเช็ค",
+          "Document",
+          "ผู้เสียหาย",
+          "",
+          181,
+          182
+        ],
+        "reason": "entity_not_in_evidence"
+      }
+    ]
+  },
+  "validator_version": "v2.2-unique-nearby-grounding-repair"
+}

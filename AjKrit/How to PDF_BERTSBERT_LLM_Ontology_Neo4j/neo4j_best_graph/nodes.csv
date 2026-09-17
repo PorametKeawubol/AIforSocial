@@ -1,0 +1,267 @@
+﻿id,name,kind,dataset
+52740d0bcf75cf5cc36d,ดินเค็ม,Soil,PlantGuide2019Reviewed
+46988814267246048b52,การห่มดิน,Treatment,PlantGuide2019Reviewed
+a0794dae37381a457a7f,พรวนหน้าดิน,Activity,PlantGuide2019Reviewed
+7a5525f5580233afd30d,โรยเมล็ดถั่วเขียว,Activity,PlantGuide2019Reviewed
+1452a32e8d85aa4d5e26,ปลูกพืชทนเค็ม,Activity,PlantGuide2019Reviewed
+43a65940b71f6c5d7171,คลุมดินด้วยวัสดุธรรมชาติ,Activity,PlantGuide2019Reviewed
+5a7486b90ef9a5072d16,เติมปุ๋ยอินทรีย์บนวัสดุคลุมดิน,Activity,PlantGuide2019Reviewed
+120722fae13ea814ed63,ฟางข้าว,Material,PlantGuide2019Reviewed
+748c393d31589b794592,เศษใบไม้,Material,PlantGuide2019Reviewed
+733ea8fe3bbe5d798910,พรมใยปาล์ม,Material,PlantGuide2019Reviewed
+a039f10698b975fe83b1,รักษาความชื้นในดิน,Benefit,PlantGuide2019Reviewed
+f092eff255517a14784e,ลดวัชพืช,Benefit,PlantGuide2019Reviewed
+25838db0a2b722b38a53,เพิ่มอินทรียวัตถุ,Benefit,PlantGuide2019Reviewed
+ba5661d7e1a5440dd463,ถั่วเขียว,Crop,PlantGuide2019Reviewed
+8025e0380f4893b36f40,ข้าวหอมมะลิ 105,Variety,PlantGuide2019Reviewed
+8f0bfcb0719a9772c8e7,ข้าวแดงน้อย,Variety,PlantGuide2019Reviewed
+627ec6a443c7aaba3f63,ปุ๋ยอินทรีย์,Fertilizer,PlantGuide2019Reviewed
+111331f67cf967d523cb,ดินเปรี้ยว,Soil,PlantGuide2019Reviewed
+891c0e746a62a3cff98c,ลดการใช้ปุ๋ยเคมี,Treatment,PlantGuide2019Reviewed
+463da41f8a0049c343b2,เปลี่ยนมาใช้ปุ๋ยอินทรีย์,Treatment,PlantGuide2019Reviewed
+b55d64f46919378858b7,ล้างดินด้วยน้ำหมักสมุนไพรรสจืด,Treatment,PlantGuide2019Reviewed
+9ab8c5de0cc3bb1c0d82,น้ำส้มควันไม้,Material,PlantGuide2019Reviewed
+e09485a6de6c403a9c47,พักให้ตกตะกอนและแยกชั้น,Preparation,PlantGuide2019Reviewed
+98ae2d527e1d91fee166,ประมาณ 3 เดือน,Duration,PlantGuide2019Reviewed
+9926af3b467bb660a02e,การใช้น้ำส้มควันไม้ 1:20,Application,PlantGuide2019Reviewed
+f9708522bf6b0b9e2b15,พ่นดินก่อนปลูกเพื่อจัดการจุลินทรีย์และแมลง,Purpose,PlantGuide2019Reviewed
+deba4f6faaece715ea8e,การใช้น้ำส้มควันไม้ 1:50,Application,PlantGuide2019Reviewed
+c695204ec7f3cb2dce17,พ่นดินเพื่อจัดการจุลินทรีย์ที่ทำลายพืช,Purpose,PlantGuide2019Reviewed
+696eb467f04fc4fcd470,การใช้น้ำส้มควันไม้ 1:100,Application,PlantGuide2019Reviewed
+64bdd37dc813c905aa0f,ราดโคนเพื่อจัดการโรคราและโรคเน่า,Purpose,PlantGuide2019Reviewed
+6b7451cb4ead0bf43ea7,การใช้น้ำส้มควันไม้ 1:200,Application,PlantGuide2019Reviewed
+41ca68a87b9e70d351ba,พ่นใบและดินเพื่อไล่แมลงและป้องกันเชื้อรา,Purpose,PlantGuide2019Reviewed
+3ebf116bf3bcf0091675,การใช้น้ำส้มควันไม้ 1:500,Application,PlantGuide2019Reviewed
+957f2b62af7964395858,พ่นผลอ่อนและก่อนเก็บเกี่ยว,Purpose,PlantGuide2019Reviewed
+f2b16263d23855fdafc5,การใช้น้ำส้มควันไม้ 1:1000,Application,PlantGuide2019Reviewed
+3378cdfb6b9345f1e663,ใช้เป็นสารจับใบ,Purpose,PlantGuide2019Reviewed
+e2aa29dddbb4d24f2e2d,ข้าวโพด,Crop,PlantGuide2019Reviewed
+a26fe636893bed3cb608,โรคใบไหม้แผลใหญ่ (ข้าวโพด),Disease,PlantGuide2019Reviewed
+0f05c1c05cf27f618927,เชื้อรา,Pathogen,PlantGuide2019Reviewed
+91403dd8f1cddda090fa,แผลยาวสีเทาหรือน้ำตาลอ่อนบนใบข้าวโพด,Symptom,PlantGuide2019Reviewed
+73e27cb5c2df266bf8da,พ่นสารป้องกันกำจัดโรคใบไหม้แผลใหญ่,Treatment,PlantGuide2019Reviewed
+22dcff3a95aa99dca106,โรคราสนิม (ข้าวโพด),Disease,PlantGuide2019Reviewed
+81709273f9847d2e1bde,จุดนูนแตกเป็นผงสีสนิมบนใบข้าวโพด,Symptom,PlantGuide2019Reviewed
+9fca1998bb33d4f00e5e,พ่นสารป้องกันกำจัดโรคราสนิม,Treatment,PlantGuide2019Reviewed
+cc39385a612b02d195eb,ฤดูฝน,Season,PlantGuide2019Reviewed
+da9b502fcb5361a3a0df,โรคราน้ำค้าง (ข้าวโพด),Disease,PlantGuide2019Reviewed
+ee6fd88f2184f91d2dfe,ใบลายเขียวอ่อนหรือเหลืองสลับเขียวแก่และผงขาวใต้ใบ,Symptom,PlantGuide2019Reviewed
+fe272c7b4786f2075cf1,คลุกเมล็ดด้วยสารป้องกันโรคราน้ำค้าง,Treatment,PlantGuide2019Reviewed
+dc2c5ed3d880521e7692,ถอนต้นที่เป็นโรคไปเผาทำลาย,Treatment,PlantGuide2019Reviewed
+0f3f642d6d39dc78990e,โรคโคนเน่า (ข้าวโพด),Disease,PlantGuide2019Reviewed
+3c9a29591b063bdf11cc,ท่อลำเลียงสีน้ำตาล มีน้ำเมือกและกลิ่นเหม็น,Symptom,PlantGuide2019Reviewed
+736e105e630e205d55dd,จัดระบบระบายน้ำไม่ให้ท่วมขัง,Treatment,PlantGuide2019Reviewed
+059758ad35e4fa30f3d7,ปลูกพืชหมุนเวียน,Treatment,PlantGuide2019Reviewed
+b852be891c15ea08e40f,ใส่ปูนขาวบริเวณที่พบโรค,Treatment,PlantGuide2019Reviewed
+a208ed4126674eb3cf39,โรคใบด่าง (ข้าวโพด),Disease,PlantGuide2019Reviewed
+5802f9581f29bca390ea,ไวรัส,Pathogen,PlantGuide2019Reviewed
+660e8a0eb208cf65af91,ใบด่างลายเขียวซีดสลับเขียวเข้มและต้นแคระแกร็น,Symptom,PlantGuide2019Reviewed
+0a6d50e8b7c193552fdf,ควบคุมเพลี้ยอ่อน,Treatment,PlantGuide2019Reviewed
+7c645c5212650f701956,ปลูกข้าวโพดพันธุ์ต้านทาน,Treatment,PlantGuide2019Reviewed
+c012baab816f8a654a88,เพลี้ยอ่อน,Pest,PlantGuide2019Reviewed
+d517b7a7fce8754db4a1,มะนาว,Crop,PlantGuide2019Reviewed
+7482e57a34bc2957cfaa,โรคแคงเกอร์ (มะนาว),Disease,PlantGuide2019Reviewed
+33ccd6a910651546e498,เชื้อแบคทีเรีย,Pathogen,PlantGuide2019Reviewed
+682c5be7566b78ab0ad9,ลมฝนแรง,Environment,PlantGuide2019Reviewed
+d193de7cc5e34a4ed868,ทาน้ำปูนกินหมากบริเวณลำต้น,Treatment,PlantGuide2019Reviewed
+980e2907189150393567,ฉีดพ่นน้ำปูนใส,Treatment,PlantGuide2019Reviewed
+66ae133b4cb49d985619,ปูนกินหมาก,Material,PlantGuide2019Reviewed
+072661cd83ece5626b60,ปูนขาวก่อสร้าง,Material,PlantGuide2019Reviewed
+e5277aace3f1120f43d2,ส้มเขียวหวาน,Crop,PlantGuide2019Reviewed
+de4c9dd13b2e9bda3bf7,โรคแคงเกอร์ (ส้มเขียวหวาน),Disease,PlantGuide2019Reviewed
+af0f58156a4e4e2fd502,ส้มโอ,Crop,PlantGuide2019Reviewed
+15abab51da1d61037d28,โรคแคงเกอร์ (ส้มโอ),Disease,PlantGuide2019Reviewed
+d3ade042c987dde9d20b,พริก,Crop,PlantGuide2019Reviewed
+6801fd6f677ab6940196,โรคแอนแทร็กโนส (พริก),Disease,PlantGuide2019Reviewed
+0729e82c161b454bd0d3,แผลบุ๋มสีน้ำตาล ผลหดย่นคล้ายกุ้งแห้ง,Symptom,PlantGuide2019Reviewed
+1f00fd632847d97dc686,เว้นระยะปลูกให้อากาศถ่ายเท,Treatment,PlantGuide2019Reviewed
+6a581b01a438cef2e838,เลือกเมล็ดพันธุ์ปลอดโรค,Treatment,PlantGuide2019Reviewed
+fa7905c9dd97f56ffacd,แช่เมล็ดในน้ำอุ่น,Treatment,PlantGuide2019Reviewed
+4d62944bc4b47939be1a,ตัดกิ่งและผลที่เป็นโรคไปเผาทำลาย,Treatment,PlantGuide2019Reviewed
+c03ab29dc3cb1868412b,อุณหภูมิ 27–30 °C,Environment,PlantGuide2019Reviewed
+8462acfd097b15f82fbd,50 °C นาน 30 นาที,Condition,PlantGuide2019Reviewed
+6690d1b9afebee9b5895,โรคเน่าเปียก (พริก),Disease,PlantGuide2019Reviewed
+b93aae7a5cc61427b05d,ยอด ใบอ่อน และดอกเน่าเละสีน้ำตาลดำ,Symptom,PlantGuide2019Reviewed
+461947bd5d0ce15e4deb,ตัดแต่งทรงพุ่มให้โปร่ง,Treatment,PlantGuide2019Reviewed
+f9dda9fa32b929ec6d50,ตัดกิ่งที่เป็นโรคไปเผาทำลาย,Treatment,PlantGuide2019Reviewed
+07632d644536d47ae33e,ความชื้นสูง,Environment,PlantGuide2019Reviewed
+f8741ec5409888a8ea0c,โรคเหี่ยวจากฟูซาเรียม (พริก),Disease,PlantGuide2019Reviewed
+7c6254d078cd60ca1468,ฟูซาเรียม ออกซิสปอรัม,Pathogen,PlantGuide2019Reviewed
+aa5e25351f56acfcf8f8,รากเน่า ใบล่างเหลืองลามขึ้นบน เหี่ยวและร่วง,Symptom,PlantGuide2019Reviewed
+5002edc4ec69ffe96e9c,ไถพลิกและตากดิน,Treatment,PlantGuide2019Reviewed
+64e01a514b01bc74aa92,ปรับสภาพดินด้วยปูนขาวและอินทรียวัตถุ,Treatment,PlantGuide2019Reviewed
+180734d9eeb9dd32683e,ออกดอกและติดผล,GrowthStage,PlantGuide2019Reviewed
+73bf41c07e452fb82aa3,โรคเหี่ยวจากไฟทอฟทอรา (พริก),Disease,PlantGuide2019Reviewed
+a2d461afd532485ef5db,ไฟทอฟทอรา แคพไซไค,Pathogen,PlantGuide2019Reviewed
+1230d7a2390000c0beb0,โคนและรากเน่า ผลฉ่ำน้ำ เนื้อผลสีดำ,Symptom,PlantGuide2019Reviewed
+e47132b7322d5ccc47bb,รองก้นหลุมด้วยจุลินทรีย์ปฏิปักษ์,Treatment,PlantGuide2019Reviewed
+d1c04e7a195cd7b28ea6,ระยะติดผล,GrowthStage,PlantGuide2019Reviewed
+aa34ab184d32301e5bbc,ไตรโคเดอร์มา,Biocontrol,PlantGuide2019Reviewed
+4b3a8a16aebeb0051fe2,บาซิลลัส,Biocontrol,PlantGuide2019Reviewed
+0ae33d2a0a5c7a14b854,โรคเหี่ยวจากแบคทีเรีย (พริก),Disease,PlantGuide2019Reviewed
+a3c5f050ea06b1b266db,เหี่ยวกลางวัน ฟื้นกลางคืน และเหี่ยวตายทั้งที่ใบเขียว,Symptom,PlantGuide2019Reviewed
+cc25bc90769aa68cae86,ใส่ปุ๋ยอินทรีย์,Treatment,PlantGuide2019Reviewed
+e82b8999b1112b10edf1,โรครากเน่าโคนเน่า (พริก),Disease,PlantGuide2019Reviewed
+e44436f4fcd07efd0b0d,ราเมล็ดผักกาด,Pathogen,PlantGuide2019Reviewed
+374adb7dcba8af4da5f2,ต้นกล้าเน่า ใบเหลือง เหี่ยว ร่วง และยืนต้นตาย,Symptom,PlantGuide2019Reviewed
+99de386333b09464238f,กำจัดซากพืชและวัชพืช,Treatment,PlantGuide2019Reviewed
+76f57a16b238e5b4ee49,รองก้นหลุมด้วยชีวภัณฑ์,Treatment,PlantGuide2019Reviewed
+2ead91cf84836c67225d,ไตรโคเดอร์มา ฮาร์เซียนัม,Biocontrol,PlantGuide2019Reviewed
+744177458271510d0a58,บาซิลลัส ซับทีลิส,Biocontrol,PlantGuide2019Reviewed
+bce6f796876f17dd2bcb,โรคใบด่าง CVMV (พริก),Disease,PlantGuide2019Reviewed
+cd93f4e9f5bfe43db405,CVMV,Pathogen,PlantGuide2019Reviewed
+f65b16562b9e5e85035e,ใบด่างเขียวซีด ใบยอดหดสั้น ผลบิดเบี้ยว,Symptom,PlantGuide2019Reviewed
+edd453cf86aa2084efda,ลำโพง,Crop,PlantGuide2019Reviewed
+d7ad1c2aaccff0406d28,ยาสูบ,Crop,PlantGuide2019Reviewed
+9002327250a00b25dc2b,มะเขือเทศ,Crop,PlantGuide2019Reviewed
+7f5d9182cb395ae38712,โรคใบด่าง PVY (พริก),Disease,PlantGuide2019Reviewed
+7ab8e8ed95b1426724b1,PVY,Pathogen,PlantGuide2019Reviewed
+4c7e8439a7f5ea553f6c,เส้นใบบวมใส ใบด่างหดย่น ต้นแคระแกร็น,Symptom,PlantGuide2019Reviewed
+7b70ec3811f264a70eca,โรคใบด่าง CMV (พริก),Disease,PlantGuide2019Reviewed
+73ac57dc92561697e522,CMV,Pathogen,PlantGuide2019Reviewed
+80834b7069f36a2c18a8,ใบด่างเขียวสลับเหลือง ผลผิดรูป ไม่ออกดอก,Symptom,PlantGuide2019Reviewed
+2390c4cc22efdab60a8b,โรคใบด่าง TEV (พริก),Disease,PlantGuide2019Reviewed
+7f86853a60b40d634cdf,TEV,Pathogen,PlantGuide2019Reviewed
+c49bde823c60610a10ed,เส้นใบใส ใบและผลด่างเป็นวงซ้อน,Symptom,PlantGuide2019Reviewed
+9864aeec606b7af4e59f,สารสกัดสะเดา,Material,PlantGuide2019Reviewed
+d30c831c26664ca597f7,สารสกัดหางไหล,Material,PlantGuide2019Reviewed
+d009b8281743af3740b4,สารสกัดสาบเสือ,Material,PlantGuide2019Reviewed
+403f84607272e6817167,สารสกัดตะไคร้หอม,Material,PlantGuide2019Reviewed
+f3a31f4322bd3ade8b6f,สารสกัดดาวเรือง,Material,PlantGuide2019Reviewed
+0aa67960104972fb004d,โรคใบหงิกเหลือง (พริก),Disease,PlantGuide2019Reviewed
+f5cef9052483ef6fdd15,ไวรัสใบหงิกเหลือง,Pathogen,PlantGuide2019Reviewed
+3d550244b679bd6eac12,ใบด่างเหลือง ใบโค้งรูปถ้วย กลางใบหงิกย่น,Symptom,PlantGuide2019Reviewed
+a2f7866ab3016e62a5b3,ฤดูแล้ง,Season,PlantGuide2019Reviewed
+e46311232e0d088ebd33,แมลงหวี่ขาว,Pest,PlantGuide2019Reviewed
+44cd22a470212c05d97b,ควบคุมแมลงหวี่ขาว,Treatment,PlantGuide2019Reviewed
+cc77846a23c0a710166f,ใช้กับดักกาวเหนียว,Treatment,PlantGuide2019Reviewed
+48607a7a857da9afae27,ใช้พลาสติกสีบรอนซ์คลุมแปลง,Treatment,PlantGuide2019Reviewed
+0521dc42fa3b71519d13,โรคใบจุดตากบ (พริก),Disease,PlantGuide2019Reviewed
+2dc5ed18b327dff4c3cd,แผลขอบน้ำตาลเข้ม กลางแผลเทาหรือขาว,Symptom,PlantGuide2019Reviewed
+eb8ace8bfad4b16cfb7b,ลดการให้น้ำ,Treatment,PlantGuide2019Reviewed
+32f41630649efa2d29e2,พ่นสารป้องกันกำจัดโรคใบจุดตากบ,Treatment,PlantGuide2019Reviewed
+e07c0e81b0ba8a2e5c4c,อากาศร้อนชื้น,Environment,PlantGuide2019Reviewed
+b15c4a252bdf4a8a795e,โรคลำต้นไหม้ (พริก),Disease,PlantGuide2019Reviewed
+caa14e11f6a3cb0358b6,รอยไหม้สีดำบริเวณลำต้น,Symptom,PlantGuide2019Reviewed
+9add9ea26d23660fd5a9,ใช้จุลินทรีย์ปฏิปักษ์,Treatment,PlantGuide2019Reviewed
+f33f94cef840cda08369,โรคกุ้งแห้งเทียม (พริก),Disease,PlantGuide2019Reviewed
+8787e26d1148f032490d,ผลซีดแห้งและเส้นใยดำคล้ายกำมะหยี่,Symptom,PlantGuide2019Reviewed
+177f1e1f5d5158e28e2a,ให้ธาตุอาหารครบถ้วน,Treatment,PlantGuide2019Reviewed
+4201a184caf40d55d23c,โรครากปม (พริก),Disease,PlantGuide2019Reviewed
+0196ced04d7afb52e5d4,ไส้เดือนฝอย,Pathogen,PlantGuide2019Reviewed
+ea33be9808aa94468b94,รากเป็นปมและเน่า ต้นแคระแกร็น ใบเหลือง,Symptom,PlantGuide2019Reviewed
+6a9a8d2f983290b1a26f,แยกเครื่องมือจากพื้นที่ระบาด,Treatment,PlantGuide2019Reviewed
+951522d5d9f1e1e0fa45,ปลูกพืชสลับเพื่อตัดวงจรไส้เดือนฝอย,Treatment,PlantGuide2019Reviewed
+22f79d1f053518a01cca,ถั่วลิสง,Crop,PlantGuide2019Reviewed
+5530f236d0f721c9413d,ปอเทือง,Crop,PlantGuide2019Reviewed
+dc4e774ad69b7425f197,ดาวเรือง,Crop,PlantGuide2019Reviewed
+2b40b88509d976b19c16,งา,Crop,PlantGuide2019Reviewed
+6fee9f136f157965ed81,โรคราแป้ง (พริก),Disease,PlantGuide2019Reviewed
+0e4e5a7ec5f9df19b1fc,ผงสีขาวคล้ายแป้งปกคลุมใบแก่,Symptom,PlantGuide2019Reviewed
+a53710db6dcb8171f61b,พ่นสารป้องกันกำจัดโรคราแป้ง,Treatment,PlantGuide2019Reviewed
+5b73a2a6b5b40ff6dc80,ฤดูหนาว,Season,PlantGuide2019Reviewed
+bc5d71380ecf9908a5b7,พืชตระกูลแตง,Crop,PlantGuide2019Reviewed
+341baa2ad419fbead741,กลุ่มโรคราน้ำค้าง,DiseaseGroup,PlantGuide2019Reviewed
+b2414023da52d9a7969e,พืชตระกูลกะหล่ำ,Crop,PlantGuide2019Reviewed
+18120c265d8af4791e5c,ข้าวโพดหวาน,Crop,PlantGuide2019Reviewed
+57a47dfaaaa5f605441e,ไม้ดอก,Crop,PlantGuide2019Reviewed
+d173c6adf6237069881d,ผงขาวหรือเทาบนใบ ใบเหลืองเปลี่ยนเป็นน้ำตาล,Symptom,PlantGuide2019Reviewed
+b5685994dac1374cdde0,ล้างใบพืชในตอนเช้า,Treatment,PlantGuide2019Reviewed
+6ad87b805b8bdd23f1b9,พ่นน้ำส้มควันไม้หลังล้างใบ,Treatment,PlantGuide2019Reviewed
+f20872132dfdc53560e7,โรครากเน่า โคนเน่า และยอดเน่าในต้นกล้าพืชไร่,DiseaseGroup,PlantGuide2019Reviewed
+56524a367c2da262d588,พิเทียม,Pathogen,PlantGuide2019Reviewed
+a28a8207e80a5e644acb,โรครากเน่าโคนเน่าในไม้ผล,DiseaseGroup,PlantGuide2019Reviewed
+792830d8fc41e2ea1b77,ไฟทอฟทอรา,Pathogen,PlantGuide2019Reviewed
+49ae33db49474ed29b14,โรคกล้าไหม้ ราเม็ดผักกาด และเหี่ยวในพืชผัก,DiseaseGroup,PlantGuide2019Reviewed
+d54e29ffbf45f9f67dc7,สเคลอโรเทียม,Pathogen,PlantGuide2019Reviewed
+39dc769586db1edb9283,โรคเหี่ยวในไม้ดอก,DiseaseGroup,PlantGuide2019Reviewed
+f697a72b3784c0d84c0d,ฟูซาเรียม,Pathogen,PlantGuide2019Reviewed
+b0bdcae1446a65deb8bf,โรคเน่าคอดิน,DiseaseGroup,PlantGuide2019Reviewed
+cb52c48af19a16a21fa9,ไรซ็อกโทเนีย,Pathogen,PlantGuide2019Reviewed
+48714c2185f3fa8f7a48,การจัดการเชื้อราฤดูฝน,Treatment,PlantGuide2019Reviewed
+49584e57c85913c33705,จัดโรงเรือนให้อากาศถ่ายเท,Treatment,PlantGuide2019Reviewed
+8d24395c842540fa53bf,เก็บผลและตัดกิ่งที่เป็นโรคไปทำลาย,Treatment,PlantGuide2019Reviewed
+3881adc0d83b666584d4,ใช้ไตรโคเดอร์มารอบโคนต้น,Treatment,PlantGuide2019Reviewed
+0950659a3333fb8733b4,วัชพืช,Pest,PlantGuide2019Reviewed
+09088231016bc46ff1bc,สูตรน้ำส้มสายชู,Treatment,PlantGuide2019Reviewed
+d78bb08c9af945d881dc,น้ำส้มสายชู,Material,PlantGuide2019Reviewed
+823b7c9ccc744776f837,เกลือแกง,Material,PlantGuide2019Reviewed
+9737e663de82e3876b7d,น้ำยาล้างจาน,Material,PlantGuide2019Reviewed
+69d253304d601735b0f4,สูตรน้ำหัวผักกาด,Treatment,PlantGuide2019Reviewed
+4b30edd881f782dbe05e,น้ำหัวผักกาด,Material,PlantGuide2019Reviewed
+3e71b96dbe18130983aa,น้ำมะพร้าวอ่อน,Material,PlantGuide2019Reviewed
+ed3bb5bc0655ed174c1b,ผงกลูโคส,Material,PlantGuide2019Reviewed
+0f42f2dcaf35d7a9ecd9,สูตรเกลือ,Treatment,PlantGuide2019Reviewed
+c52a6eca42c3d8f18b60,ปุ๋ย 21-0-0,Fertilizer,PlantGuide2019Reviewed
+62bc9008f6762859cb96,น้ำ,Material,PlantGuide2019Reviewed
+15bb94c23d5130d3b6e3,ข้าว,Crop,PlantGuide2019Reviewed
+69528787471dffef88b3,ทุเรียน,Crop,PlantGuide2019Reviewed
+41c3622a5a3c686b91da,โรครากเน่าโคนเน่า (ทุเรียน),Disease,PlantGuide2019Reviewed
+3939089500693a808d25,ใบอ่อนเหี่ยวเหลือง แผลฉ่ำน้ำ เปลือกเน่าและน้ำเยิ้ม,Symptom,PlantGuide2019Reviewed
+2b0da01e4e52e6c97663,มอดเจาะลำต้นทุเรียน,Pest,PlantGuide2019Reviewed
+53058d0be751011198f1,ตัดแต่งส่วนเป็นโรคและเผานอกแปลง,Treatment,PlantGuide2019Reviewed
+863a2973790cdffdfde3,ใช้ชีวภัณฑ์เมื่อโรคไม่รุนแรง,Treatment,PlantGuide2019Reviewed
+e0b6329b9d3bd4095641,ขูดเปลือกและทาแผลเมื่อโรครุนแรง,Treatment,PlantGuide2019Reviewed
+d9e1c628e0b57dd0af5d,ขุดต้นตายไปเผานอกแปลงและจัดการดิน,Treatment,PlantGuide2019Reviewed
+6676f83ea96f918e6311,ฟอสอีทิล-อะลูมิเนียม,Chemical,PlantGuide2019Reviewed
+993d549aa6e757ef250a,เมทาแลกซิล,Chemical,PlantGuide2019Reviewed
+65172972a59ef0ba1ffe,เมทาแลกซิล+แมนโคเซบ,Chemical,PlantGuide2019Reviewed
+bcee22157a5cd9dbd4f7,คู่มือเกษตรกร: ความรู้ในการกำจัดโรคพืช (2562),Document,PlantGuide2019Reviewed
+d65502428967eb6581d7,การห่มดินแก้ดินเค็ม,Section,PlantGuide2019Reviewed
+dec076b8d3898c9e937f,การจัดการดินเปรี้ยว,Section,PlantGuide2019Reviewed
+38cda7da2ad2bcf01650,น้ำส้มควันไม้,Section,PlantGuide2019Reviewed
+a6f2b6576c0701eba181,โรคข้าวโพด,Section,PlantGuide2019Reviewed
+6505977ee57655627c44,แคงเกอร์ในมะนาว,Section,PlantGuide2019Reviewed
+8a28269434d5f86c227a,โรคพริก,Section,PlantGuide2019Reviewed
+cafc9abf77f2f7e69531,ราน้ำค้างฤดูหนาว,Section,PlantGuide2019Reviewed
+52429bebc165f8cda632,เชื้อราที่มากับฝน,Section,PlantGuide2019Reviewed
+8bd2b059376c1de89875,สูตรกำจัดวัชพืช,Section,PlantGuide2019Reviewed
+f2095af906f87f07c00a,รากเน่าโคนเน่าในทุเรียน,Section,PlantGuide2019Reviewed
+a022f058c5d63742df37,PDF หน้า 01,Page,PlantGuide2019Reviewed
+e868249cca8f02061089,PDF หน้า 02,Page,PlantGuide2019Reviewed
+6792e9b226f217857b5d,PDF หน้า 03,Page,PlantGuide2019Reviewed
+c3508d301a49574686c2,PDF หน้า 04,Page,PlantGuide2019Reviewed
+5b866052386ef63777fe,PDF หน้า 05,Page,PlantGuide2019Reviewed
+a5a4917caa6871088655,PDF หน้า 06,Page,PlantGuide2019Reviewed
+32019173e3114b8cbef2,PDF หน้า 07,Page,PlantGuide2019Reviewed
+e93f175e3e78e3ffb553,PDF หน้า 08,Page,PlantGuide2019Reviewed
+2e79cdc8c2002bf16288,PDF หน้า 09,Page,PlantGuide2019Reviewed
+0aeeeedb44941230f05d,PDF หน้า 10,Page,PlantGuide2019Reviewed
+b9883872c6468c035c89,PDF หน้า 11,Page,PlantGuide2019Reviewed
+42b550851ce041b32835,PDF หน้า 12,Page,PlantGuide2019Reviewed
+f445489077ac5c325245,PDF หน้า 13,Page,PlantGuide2019Reviewed
+2b9b44fca991782d734e,PDF หน้า 14,Page,PlantGuide2019Reviewed
+7ce2778f3c7b7ed611a5,PDF หน้า 15,Page,PlantGuide2019Reviewed
+a3d3ea2559648e31ffe2,PDF หน้า 16,Page,PlantGuide2019Reviewed
+25fc45cbb5addc80ba7a,PDF หน้า 17,Page,PlantGuide2019Reviewed
+80e3a7d3957da17e3916,PDF หน้า 18,Page,PlantGuide2019Reviewed
+72f39069056f82074d40,PDF หน้า 19,Page,PlantGuide2019Reviewed
+088e0a7077b2bf23d52f,PDF หน้า 20,Page,PlantGuide2019Reviewed
+ff79b033dffba184db0d,PDF หน้า 21,Page,PlantGuide2019Reviewed
+52dd419d5e4ca0ea2b81,PDF หน้า 22,Page,PlantGuide2019Reviewed
+6200bd2fe2e73ecf2759,PDF หน้า 23,Page,PlantGuide2019Reviewed
+f89f00fd7471bae16a09,PDF หน้า 24,Page,PlantGuide2019Reviewed
+a1ea0cd9201678901bf0,PDF หน้า 25,Page,PlantGuide2019Reviewed
+fb6d4b53402f208aaf5c,PDF หน้า 26,Page,PlantGuide2019Reviewed
+81f9733c80861bd54208,PDF หน้า 27,Page,PlantGuide2019Reviewed
+4c4fb54ef712c08a96eb,PDF หน้า 28,Page,PlantGuide2019Reviewed
+fe8eefd0e3f5b47bed28,PDF หน้า 29,Page,PlantGuide2019Reviewed
+a651e9bee0cd0bfc02eb,PDF หน้า 30,Page,PlantGuide2019Reviewed
+3afc91dbba73bdbc4994,PDF หน้า 31,Page,PlantGuide2019Reviewed
+ba2f1945ae9bbfcae9bc,PDF หน้า 32,Page,PlantGuide2019Reviewed
+728cb9e2105d91b2c807,PDF หน้า 33,Page,PlantGuide2019Reviewed
+ee019b3b23684505e338,PDF หน้า 34,Page,PlantGuide2019Reviewed
+660c9a32f4b7ec5a464c,PDF หน้า 35,Page,PlantGuide2019Reviewed
+bc5e509cada00c379717,PDF หน้า 36,Page,PlantGuide2019Reviewed
+cf8d9441253c6c2f8e8d,PDF หน้า 37,Page,PlantGuide2019Reviewed
+aba07f470ee3fbb268e7,PDF หน้า 38,Page,PlantGuide2019Reviewed
+b69c3c3287dab40f7e87,PDF หน้า 39,Page,PlantGuide2019Reviewed
+1fc455055cbdbb0a219d,PDF หน้า 40,Page,PlantGuide2019Reviewed
+d2bb7b730bb44aeaaba0,PDF หน้า 41,Page,PlantGuide2019Reviewed
+8fd1f122cca2ecdf6a95,PDF หน้า 42,Page,PlantGuide2019Reviewed
+7495d0e4e1b5a836671a,PDF หน้า 43,Page,PlantGuide2019Reviewed
+bd1b52bdb074e8ac53aa,PDF หน้า 44,Page,PlantGuide2019Reviewed
+b5afb9472f30842fd642,PDF หน้า 45,Page,PlantGuide2019Reviewed
+1c13775b5805298b3a49,PDF หน้า 46,Page,PlantGuide2019Reviewed
+30bd56fb9a7afbf3a991,PDF หน้า 47,Page,PlantGuide2019Reviewed
+c34adc98921c29287789,PDF หน้า 48,Page,PlantGuide2019Reviewed

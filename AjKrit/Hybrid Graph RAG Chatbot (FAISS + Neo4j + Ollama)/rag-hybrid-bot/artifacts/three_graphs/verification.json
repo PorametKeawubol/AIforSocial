@@ -1,0 +1,20 @@
+[
+  {
+    "variant": "model_i",
+    "nodes": 150,
+    "relationships": 120,
+    "verified": true
+  },
+  {
+    "variant": "model_ii",
+    "nodes": 160,
+    "relationships": 254,
+    "verified": true
+  },
+  {
+    "variant": "model_iii",
+    "nodes": 31,
+    "relationships": 29,
+    "verified": true
+  }
+]

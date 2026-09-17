@@ -1,0 +1,92 @@
+{
+  "page": 24,
+  "facts": [
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อรา",
+      "object_type": "Pathogen",
+      "evidence": "สาเหตุมาจากเชื้อรา"
+    },
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "จุดฉ่ำน้ำรูปวงรีหรือรูปไข่",
+      "object_type": "Symptom",
+      "evidence": "พริกจะเป็นจุดฉ่ำน้ำรูปวงรีหรือรูปไข่"
+    },
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "แผลบุ๋มลึกเป็นสีน้ำตาล",
+      "object_type": "Symptom",
+      "evidence": "และแผลจะบุ๋มลึกเป็นสีน้ำตาล"
+    },
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "จุดสีดำเรียงซ้อนกันในแผล",
+      "object_type": "Symptom",
+      "evidence": "และมีจุดสีดำเรียงซ้อนกันในแผล"
+    },
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "มีเมือกสีส้มอ่อน",
+      "object_type": "Symptom",
+      "evidence": "และแผลอาจมีเมือกสีส้มอ่อน"
+    },
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ผลพริกโค้งงอหรือหดย่นคล้ายกุ้งแห้ง",
+      "object_type": "Symptom",
+      "evidence": "ผลพริกจะโค้งงอหรือหดย่นคล้ายกุ้งแห้ง"
+    },
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "กิ่งแห้ง",
+      "object_type": "Symptom",
+      "evidence": "ในขั้นรุนแรงจะทำให้กิ่งแห้ง"
+    },
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การเลือกเมล็ดพันธุ์ที่ไม่เป็นโรค",
+      "object_type": "Treatment",
+      "evidence": "ควรเลือกเมล็ดพันธุ์ที่ไม่เป็นโรค"
+    },
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การคลุกเมล็ดพันธุ์ด้วยสารแมนโคเซบหรือคาร์เบ็นดาซิม",
+      "object_type": "Treatment",
+      "evidence": "ควรเลือกเมล็ดพันธุ์ที่ไม่เป็นโรค คลุกเมล็ดพันธุ์ ด้วยสารเคมี เช่น สารแมนโคเซบหรือสารคาร์เบ็นดาซิม"
+    },
+    {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การแช่เมล็ดพันธุ์ในน้ำอุ่นอุณหภูมิ 50 องศาเซลเซียส นาน 30 นาที",
+      "object_type": "Treatment",
+      "evidence": "หรือแช่ เมล็ดพันธุ์ในน้ำอุ่นอุณหภูมิ 50 องศาเซลเซียส นาน 30 นาที"
+    }
+  ],
+  "timing": {
+    "seconds": 27.521,
+    "model": "qwen3.5:9b",
+    "eval_count": 875,
+    "eval_duration": 26500117000,
+    "prompt_eval_count": 727
+  }
+}

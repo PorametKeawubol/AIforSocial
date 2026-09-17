@@ -1,0 +1,76 @@
+{
+  "page": 42,
+  "facts": [
+    {
+      "subject": "พืช",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคราแป้ง",
+      "object_type": "Disease",
+      "evidence": "ควรระวัง โรคราแป้ง"
+    },
+    {
+      "subject": "พืช",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคน้ำค้าง",
+      "object_type": "Disease",
+      "evidence": "ควรระวัง โรคราแป้ง โรคราน้ำค้าง"
+    },
+    {
+      "subject": "พืช",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคใบจุด",
+      "object_type": "Disease",
+      "evidence": "ควรระวัง โรคราแป้ง โรคราน้ำค้าง โรคใบจุด"
+    },
+    {
+      "subject": "พืช",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคแอนแทรกโนส",
+      "object_type": "Disease",
+      "evidence": "ควรระวัง โรคราแป้ง โรคราน้ำค้าง โรคใบจุด และโรคแอนแทรกโนส"
+    },
+    {
+      "subject": "โรครากเน่าโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "เชื้อราไตรโคเดอร์มา",
+      "object_type": "Treatment",
+      "evidence": "ถ้าเป็นไม่มาก ใช้เชื้อราไตรโคเดอร์มา"
+    },
+    {
+      "subject": "โรครากเน่าโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "ปุ๋ยหมัก ปุ๋ยคอก",
+      "object_type": "Treatment",
+      "evidence": "นำไตรโคเดอร์มา 1 ส่วน คลุกเคล้าผสมกับปุ๋ยหมัก ปุ๋ยคอก"
+    },
+    {
+      "subject": "โรครากเน่าโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "หินแร่ภูเขาไฟพูมิซซัลเฟอร์",
+      "object_type": "Treatment",
+      "evidence": "อาจจะบวกหินแร่ ภูเขาไฟพูมิซซัลเฟอร์เพิ่มอีก"
+    },
+    {
+      "subject": "ฤดูฝน",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "โรคเชื้อรา",
+      "object_type": "Disease",
+      "evidence": "พืชของท่านก็จะปลอดภัยต่อโรคเชื้อรา ที่มากับฤดูฝน"
+    }
+  ],
+  "timing": {
+    "seconds": 21.249,
+    "model": "qwen3.5:9b",
+    "eval_count": 664,
+    "eval_duration": 19947878000,
+    "prompt_eval_count": 773
+  }
+}

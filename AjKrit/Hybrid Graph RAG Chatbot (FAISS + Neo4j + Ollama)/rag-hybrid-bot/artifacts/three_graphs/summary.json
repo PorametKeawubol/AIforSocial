@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Model I · langchain_neo4j.Neo4jGraph",
+    "method": "Actual Neo4jGraph.query ingestion; cached Qwen3.5 9B extraction from all pages. Adapted schema-controlled extraction replaces LLMGraphTransformer. No source-review additions.",
+    "model": "qwen3.5:9b",
+    "nodes": 150,
+    "relationships": 120,
+    "neo4j_label": "WorksheetModelI",
+    "source_pages": 48
+  },
+  {
+    "title": "Model II · GraphDatabase + ThaiNameTagger",
+    "method": "Real ThaiNameTagger 1.4 CPU NER and regex. Nearby entities connected as CO_OCCURS_WITH; this is not a factual disease/location relation. Worksheet software dictionary has no relevance to plant PDF and is omitted. Final BIO entity is flushed.",
+    "model": "ThaiNER 1.4 CRF",
+    "nodes": 160,
+    "relationships": 254,
+    "neo4j_label": "WorksheetModelII",
+    "source_pages": 48
+  },
+  {
+    "title": "Model III · Neo4j_Create plant disease schema",
+    "method": "New Qwen3.5 9B extraction using crop/disease/pathogen/symptom/treatment schema, all 48 pages; explicit-name validation. GraphDatabase ingestion. No manually added facts.",
+    "model": "qwen3.5:9b",
+    "nodes": 31,
+    "relationships": 29,
+    "neo4j_label": "WorksheetModelIII",
+    "source_pages": 48
+  }
+]

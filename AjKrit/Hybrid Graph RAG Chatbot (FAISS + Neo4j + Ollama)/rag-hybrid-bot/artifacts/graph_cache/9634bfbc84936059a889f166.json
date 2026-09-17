@@ -1,0 +1,84 @@
+{
+  "page": 18,
+  "facts": [
+    {
+      "subject": "โรคราน้ำค้าง",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ลายสีเขียวอ่อนหรือสีเหลืองอ่อนสลับกับสีเขียวแก่เป็นทาง",
+      "object_type": "Symptom",
+      "evidence": "ใบข้าวโพดจะมีลายสีเขียวอ่อนหรือสีเหลืองอ่อนสลับกับสีเขียวแก่เป็นทาง"
+    },
+    {
+      "subject": "โรคราน้ำค้าง",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ผงสปอร์สีขาวๆ เป็นจำนวนมากบริเวณใต้ใบ",
+      "object_type": "Symptom",
+      "evidence": "ในเวลาเช้าที่อากาศค่อนข้างเย็นจะพบผงสปอร์สีขาวๆ เป็นจำนวนมาก บริเวณใต้ใบ"
+    },
+    {
+      "subject": "โรคราน้ำค้าง",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "สารเคมีเมทาแล็กซิล",
+      "object_type": "Treatment",
+      "evidence": "ควรคลุกเมล็ดด้วยสารเคมีเมทาแล็กซิล อัตรา 7 กรัม/เมล็ด 1 กิโลกรัม"
+    },
+    {
+      "subject": "โรคราน้ำค้าง",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "สารไดเมโทมอร์ฟ",
+      "object_type": "Treatment",
+      "evidence": "หรือสารไดเมโทมอร์ฟ อัตรา 20 กรัม/เมล็ด 1 กิโลกรัม"
+    },
+    {
+      "subject": "โรคราน้ำค้าง",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "การถอนและเผาทำลายทันที",
+      "object_type": "Treatment",
+      "evidence": "ถ้าพบข้าวโพดเริ่มแสดงอาการของโรคให้ถอนและเผาทำลายทันที"
+    },
+    {
+      "subject": "โรคโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ใบไหม้บริเวณปลายใบมาที่โคนใบ",
+      "object_type": "Symptom",
+      "evidence": "สังเกตได้จากอาการใบไหม้บริเวณปลายใบมาที่โคนใบ"
+    },
+    {
+      "subject": "โรคโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ยอดข้าวโพดมีสีซีด เหี่ยวเฉา",
+      "object_type": "Symptom",
+      "evidence": "ยอดข้าวโพดมีสีซีด เหี่ยวเฉา"
+    },
+    {
+      "subject": "โรคโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "บริเวณข้อที่อยู่เหนือดินมีรอยช้ำสีน้ำตาล",
+      "object_type": "Symptom",
+      "evidence": "บริเวณข้อที่อยู่เหนือดินมีรอยช้ำสีน้ำตาล"
+    },
+    {
+      "subject": "โรคโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "การถอนแล้วเผาทำลายต้นที่เป็นโรคทิ้งทันที",
+      "object_type": "Treatment",
+      "evidence": "และใส่ปูนขาวบริเวณที่พบโรค ควรปลูกข้าวโพดบริเวณที่มีการระบายน้ำได้ดี ไม่ท่วมขัง หลีกเลี่ยงการปลูกพืชหนาแน่นและการให้ปุ๋ยไนโตรเจนปริมาณสูง เพิ่มอินทรียวัตถุสูงกว่า 1.5% เพื่อให้มีการแข่งขันของจุลินทรีย์ปฏิปักษ์ต่อเชื้อโรค"
+    }
+  ],
+  "timing": {
+    "seconds": 27.097,
+    "model": "qwen3.5:9b",
+    "eval_count": 856,
+    "eval_duration": 25792932000,
+    "prompt_eval_count": 785
+  }
+}

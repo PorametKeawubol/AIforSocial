@@ -1,0 +1,76 @@
+{
+  "page": 46,
+  "facts": [
+    {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรครากเน่าโคนเน่า",
+      "object_type": "Disease",
+      "evidence": "ดูแลทุเรียนอย่างไร? เมื่อเป็น \"โรครากเน่าโคนเน่า\" ในช่วงที่อากาศแปรปรวน ปริมาณน้ำฝนมาก และฝนตกอย่างต่อเนื่อง ทำให้เกิดความชื้นในอากาศสูง"
+    },
+    {
+      "subject": "ใบอ่อน",
+      "subject_type": "Symptom",
+      "relation": "EXHIBITS",
+      "object": "เน่า",
+      "object_type": "Symptom",
+      "evidence": "การเข้าทำลายของโรคเริ่มที่ใบและกิ่งอ่อนมีอาการเน่า"
+    },
+    {
+      "subject": "ใบอ่อน",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "เหี่ยวเหลือง",
+      "object_type": "Symptom",
+      "evidence": "การเข้าทำลายของโรคเริ่มที่ใบและกิ่งอ่อนมีอาการเน่า ใบอ่อน เหี่ยวเหลือง"
+    },
+    {
+      "subject": "เส้นใบ",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "สีน้ำตาลดำ",
+      "object_type": "Symptom",
+      "evidence": "และเปลี่ยนเป็นสีน้ำตาลดำ เส้นใบมีสีน้ำตาลดำ"
+    },
+    {
+      "subject": "กิ่ง ลำต้น และโคนต้น",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "จุดฉ่ำน้ำสีน้ำตาล",
+      "object_type": "Symptom",
+      "evidence": "กิ่ง ลำต้น และโคนต้นมีจุดฉ่ำน้ำสีน้ำตาล"
+    },
+    {
+      "subject": "เปลือก",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "เน่า",
+      "object_type": "Symptom",
+      "evidence": "เมื่อถากเปลือกจะพบว่าเปลือกเน่า"
+    },
+    {
+      "subject": "เนื้อไม้",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "สีน้ำตาล",
+      "object_type": "Symptom",
+      "evidence": "ส่วนที่เน่ามีกลิ่นหืน แผลเน่าจะลุกลามรวดเร็ว มักพบโรคร่วมกับการเข้าทำลายของมอดเจาะลำต้นทุเรียน และจะระบาดในช่วงฤดูฝนที่มีฝนตกชุกติดต่อกัน"
+    },
+    {
+      "subject": "โรค",
+      "subject_type": "Disease",
+      "relation": "RELATED_TO",
+      "object": "มอดเจาะลำต้นทุเรียน",
+      "object_type": "Pathogen",
+      "evidence": "มักพบโรคร่วมกับการเข้าทำลายของมอดเจาะลำต้นทุเรียน"
+    }
+  ],
+  "timing": {
+    "seconds": 22.3,
+    "model": "qwen3.5:9b",
+    "eval_count": 702,
+    "eval_duration": 21117717000,
+    "prompt_eval_count": 744
+  }
+}

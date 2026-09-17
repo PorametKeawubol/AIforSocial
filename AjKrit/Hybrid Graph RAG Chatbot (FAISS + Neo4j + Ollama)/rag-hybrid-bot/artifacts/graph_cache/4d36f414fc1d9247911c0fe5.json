@@ -1,0 +1,76 @@
+{
+  "page": 41,
+  "facts": [
+    {
+      "subject": "รากเน่า",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อราพิเทียม",
+      "object_type": "Pathogen",
+      "evidence": "เช่น เชื้อราพิเทียม ทำให้เกิดรากเน่า โคนเน่า โรคยอดเน่าของต้นกล้าในพืชไร่"
+    },
+    {
+      "subject": "โคนเน่า",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อราพิเทียม",
+      "object_type": "Pathogen",
+      "evidence": "เช่น เชื้อราพิเทียม ทำให้เกิดรากเน่า โคนเน่า โรคยอดเน่าของต้นกล้าในพืชไร่"
+    },
+    {
+      "subject": "โรคยอดเน่า",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อราพิเทียม",
+      "object_type": "Pathogen",
+      "evidence": "เช่น เชื้อราพิเทียม ทำให้เกิดรากเน่า โคนเน่า โรคยอดเน่าของต้นกล้าในพืชไร่"
+    },
+    {
+      "subject": "โรครากเน่าโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อราไฟทอฟทอรา",
+      "object_type": "Pathogen",
+      "evidence": "เชื้อราไฟทอปทอรา ทำให้เกิดโรครากเน่าโคนเน่าในไม้ผล"
+    },
+    {
+      "subject": "โรคกล้าไหม้",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อราสเคลอโรเทียม",
+      "object_type": "Pathogen",
+      "evidence": "เชื้อรา สเคลอโรเทียม ทำให้เกิดโรคกล้าไหม้"
+    },
+    {
+      "subject": "โรคเหี่ยวในพืชผัก",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "ราเม็ดผักกาด",
+      "object_type": "Pathogen",
+      "evidence": "ราเม็ดผักกาด โรคเหี่ยวในพืชผัก"
+    },
+    {
+      "subject": "โรคเหี่ยวในไม้ดอก",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อราฟูซาเรียม",
+      "object_type": "Pathogen",
+      "evidence": "เชื้อราฟูซาเรียม ทำให้เกิดโรคเหี่ยวในไม้ดอก"
+    },
+    {
+      "subject": "โรคเน่าคอดิน",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อราไรซ็อกโทเนีย",
+      "object_type": "Pathogen",
+      "evidence": "เชื้อราไรซ็อกโทเนีย ทำให้เกิดโรคเน่าคอดิน"
+    }
+  ],
+  "timing": {
+    "seconds": 22.923,
+    "model": "qwen3.5:9b",
+    "eval_count": 716,
+    "eval_duration": 21723398000,
+    "prompt_eval_count": 715
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Model I · langchain_neo4j.Neo4jGraph",
+  "method": "Actual Neo4jGraph.query ingestion; cached Qwen3.5 9B extraction from all pages. Adapted schema-controlled extraction replaces LLMGraphTransformer. No source-review additions.",
+  "model": "qwen3.5:9b",
+  "nodes": 150,
+  "relationships": 120,
+  "neo4j_label": "WorksheetModelI",
+  "source_pages": 48
+}

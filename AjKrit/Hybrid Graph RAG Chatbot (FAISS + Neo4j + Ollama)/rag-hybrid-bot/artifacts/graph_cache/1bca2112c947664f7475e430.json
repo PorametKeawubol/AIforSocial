@@ -1,0 +1,76 @@
+{
+  "page": 6,
+  "facts": [
+    {
+      "subject": "วันดินโลก",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "วันที่ 5 ธันวาคมของทุกปี",
+      "object_type": "Topic",
+      "evidence": "เมื่อปี 2556 ที่ประชุมใหญ่สมัชชา สหประชาชาติ มีมติให้วันที่ 5 ธันวาคมของทุกปี เป็น “วันดินโลก”"
+    },
+    {
+      "subject": "ปีแห่งดินสากล",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ปี 2558",
+      "object_type": "Topic",
+      "evidence": "และต่อมาในปี 2558 กำหนดให้เป็น “ปีแห่งดินสากล”"
+    },
+    {
+      "subject": "การห่มดิน",
+      "subject_type": "Treatment",
+      "relation": "PREVENTED_BY",
+      "object": "การชะล้าง พังทลายของดิน",
+      "object_type": "Symptom",
+      "evidence": "เพื่อให้ดินมีความชุ่มชื้น จุลินทรีย์ทำงานได้ดี ส่งผลให้ดินทำการเกษตรได้อย่างมีประสิทธิภาพ ป้องกัน การชะล้าง พังทลายของดิน"
+    },
+    {
+      "subject": "การห่มดิน",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "การใช้ฟางและเศษใบไม้มาห่มดิน",
+      "object_type": "Topic",
+      "evidence": "เช่น ใช้ฟางและ เศษใบไม้มาห่มดิน"
+    },
+    {
+      "subject": "การห่มดิน",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "การใช้พรมใยปาล์มซึ่งทำมาจากปาล์มที่ผ่านการรีดน้ำมันแล้ว",
+      "object_type": "Topic",
+      "evidence": "เช่น ใช้ฟางและ เศษใบไม้มาห่มดิน การใช้พรมใยปาล์มซึ่งทำ มาจากปาล์มที่ผ่านการรีดน้ำมันแล้ว"
+    },
+    {
+      "subject": "การห่มดิน",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "การใช้ทะลายปาล์มมาตะกุยให้เป็นเส้นๆ ก่อนจะเอาไปอัดให้เป็นแผ่น เป็นผ้าห่มดิน",
+      "object_type": "Topic",
+      "evidence": "เริ่มจาก การนำทะลายปาล์มมาตะกุยให้เป็นเส้นๆ ก่อนจะเอาไปอัดให้เป็นแผ่น เป็นผ้าห่มดิน"
+    },
+    {
+      "subject": "การห่มดิน",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "ช่วยคลุมหน้าดินไม่ให้วัชพืชขึ้นรบกวนต้นไม้พืชหลัก",
+      "object_type": "Topic",
+      "evidence": "นอกจากประโยชน์ที่กล่าวไปแล้ว การห่มดิน ยังจะช่วยคลุมหน้าดินไม่ให้วัชพืชขึ้นรบกวน ต้นไม้พืชหลักอีกด้วย"
+    },
+    {
+      "subject": "การปรับปรุงดินก่อนการเพาะปลูก",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "เพิ่มอินทรียวัตถุให้กับดิน",
+      "object_type": "Topic",
+      "evidence": "การห่มดินถือเป็นวิธีการที่เพิ่มอินทรีย วัตถุให้กับดิน หรือเป็นการปรับปรุงดินก่อน การเพาะปลูก"
+    }
+  ],
+  "timing": {
+    "seconds": 25.374,
+    "model": "qwen3.5:9b",
+    "eval_count": 794,
+    "eval_duration": 23855087000,
+    "prompt_eval_count": 898
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "status": "preview_only_no_deletion",
+  "counts": {
+    "all_nodes": 10323,
+    "keep_nodes": 78,
+    "all_relationships": 27639,
+    "keep_relationships": 81
+  },
+  "unrelated_labels": [
+    {
+      "labels": [
+        "Disease"
+      ],
+      "count": 4
+    },
+    {
+      "labels": [
+        "Symptom"
+      ],
+      "count": 4
+    },
+    {
+      "labels": [
+        "Treatment"
+      ],
+      "count": 3
+    },
+    {
+      "labels": [
+        "Crop"
+      ],
+      "count": 1
+    },
+    {
+      "labels": [
+        "Pest"
+      ],
+      "count": 1
+    },
+    {
+      "labels": [
+        "Fertilizer"
+      ],
+      "count": 1
+    },
+    {
+      "labels": [
+        "Course"
+      ],
+      "count": 1
+    },
+    {
+      "labels": [
+        "CLO"
+      ],
+      "count": 1
+    },
+    {
+      "labels": [
+        "PLO"
+      ],
+      "count": 1
+    },
+    {
+      "labels": [
+        "Assessment"
+      ],
+      "count": 1
+    },
+    {
+      "labels": [
+        "Lab5Metadata"
+      ],
+      "count": 2
+    },
+    {
+      "labels": [
+        "AttackEntity",
+        "Group"
+      ],
+      "count": 176
+    },
+    {
+      "labels": [
+        "AttackEntity",
+        "Malware"
+      ],
+      "count": 730
+    },
+    {
+      "labels": [
+        "AttackEntity",
+        "Mitigation"
+      ],
+      "count": 44
+    },
+    {
+      "labels": [
+        "AttackEntity",
+        "Technique"
+      ],
+      "count": 697
+    },
+    {
+      "labels": [
+        "AttackEntity",
+        "Tool"
+      ],
+      "count": 95
+    },
+    {
+      "labels": [
+        "Lab5Chunk",
+        "Chunk"
+      ],
+      "count": 3983
+    },
+    {
+      "labels": [
+        "Chunk",
+        "Lab5BGEChunk"
+      ],
+      "count": 4500
+    }
+  ],
+  "backup": "unrelated-backup.pickle.gz",
+  "backup_readback_counts": {
+    "node": 10245,
+    "relationship": 27558
+  },
+  "sha256": "3ecd48b4806b12ac390a2dcf0d2a807c86d39158798bd4aaf9129b4a75eca1fa",
+  "scope": "Delete nodes without Task1Reviewed label and attached relationships, after explicit confirmation",
+  "restore_note": "Trusted locally created pickle stream; preserves Neo4j temporal and vector property types. Never load an untrusted replacement."
+}

@@ -1,0 +1,76 @@
+{
+  "page": 8,
+  "facts": [
+    {
+      "subject": "ถั่วเขียว",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคพืชทั่วไป",
+      "object_type": "Disease",
+      "evidence": "เมื่อถั่วเขียวเจริญเติบโตขึ้น จะทำให้มีการปกคลุมดิน อีกชั้นรวมถึงฟางข้าว ทำให้แสงแดดไม่สามารถส่องถึงพื้นดินได้"
+    },
+    {
+      "subject": "การปลูกถั่วเขียวร่วมกับฟางข้าว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ความชื้นในดิน",
+      "object_type": "Topic",
+      "evidence": "นำมาปกคลุมดินไว้เพื่อรักษาความชื้น ในดินไม่ให้ระเหยออกไป"
+    },
+    {
+      "subject": "การปลูกถั่วเขียวร่วมกับฟางข้าว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ธาตุอาหารในดิน",
+      "object_type": "Topic",
+      "evidence": "ดินที่อยู่ใต้ฟางข้าวและถั่วเขียวจึงมีความอุดมสมบูรณ์ ทั้งธาตุอาหาร"
+    },
+    {
+      "subject": "การปลูกถั่วเขียวร่วมกับฟางข้าว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ความเค็มในดิน",
+      "object_type": "Topic",
+      "evidence": "และไม่ดูดความเค็มนขึ้นมา"
+    },
+    {
+      "subject": "ฟางข้าว",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคพืชทั่วไป",
+      "object_type": "Disease",
+      "evidence": "ถ้าเป็นฟางข้าวจะให้ผล ดีที่สุด นำมาปกคลุมดินไว้"
+    },
+    {
+      "subject": "การปลูกถั่วเขียวร่วมกับฟางข้าว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "แสงแดดส่องถึงพื้นดิน",
+      "object_type": "Topic",
+      "evidence": "ทำให้แสงแดดไม่สามารถส่องถึงพื้นดินได้"
+    },
+    {
+      "subject": "การปลูกถั่วเขียวร่วมกับฟางข้าว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ความอุดมสมบูรณ์ของดิน",
+      "object_type": "Topic",
+      "evidence": "ดินที่อยู่ใต้ฟางข้าวและถั่วเขียวจึงมีความอุดมสมบูรณ์"
+    },
+    {
+      "subject": "การปลูกถั่วเขียวร่วมกับฟางข้าว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "การรักษาความชื้นในดิน",
+      "object_type": "Topic",
+      "evidence": "นำมาปกคลุมดินไว้เพื่อรักษาความชื้น ในดินไม่ให้ระเหยออกไป"
+    }
+  ],
+  "timing": {
+    "seconds": 21.144,
+    "model": "qwen3.5:9b",
+    "eval_count": 679,
+    "eval_duration": 20576539000,
+    "prompt_eval_count": 699
+  }
+}

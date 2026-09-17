@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "nodes": 78,
+  "relationships": 81,
+  "cases": 16,
+  "labels": {
+    "Case": 16,
+    "Document": 34,
+    "Organization": 4,
+    "PersonRole": 4,
+    "Evidence": 17,
+    "Contact": 3
+  },
+  "relationship_types": {
+    "HAS_SUPPORTING_EVIDENCE": 64,
+    "HANDLED_BY": 6,
+    "NOT_HANDLED_BY": 1,
+    "ISSUES": 1,
+    "CONTACT_VIA": 3,
+    "CERTIFIED_BY": 3,
+    "ABOUT_DOCUMENT": 3
+  },
+  "connected_components": [
+    62,
+    5,
+    4,
+    4,
+    3
+  ],
+  "checks": [
+    "unique IDs and concept names",
+    "no repeated semantic relationship",
+    "all 16 scoped cases",
+    "allowed relation direction and target type",
+    "all evidence spans found in referenced pages",
+    "section/page consistency",
+    "no isolated nodes"
+  ],
+  "limitation": "Agent source review; not independent human evaluation. No claim of full-PDF coverage or current legal validity."
+}

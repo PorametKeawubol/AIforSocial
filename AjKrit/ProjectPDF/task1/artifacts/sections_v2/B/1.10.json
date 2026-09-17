@@ -1,0 +1,140 @@
+{
+  "fingerprint": "8bd108711155179347588ab3",
+  "version": "sections-v2.1",
+  "section": "1.10",
+  "embedding": {
+    "embedding": "intfloat/multilingual-e5-large",
+    "cache_fingerprint": "9b882512de0f253f50f6018d",
+    "aggregation": "max of existing per-page ontology hints across section pages",
+    "hints": [
+      "เอกสารประกอบการแจ้งความ",
+      "หลักฐานเกี่ยวกับเหตุการณ์",
+      "หน่วยงานรับแจ้งเรื่อง",
+      "เจ้าหน้าที่รับผิดชอบ"
+    ]
+  },
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "seconds": 40.45673586700286,
+  "attempt": 1,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T17:10:09.106586507Z",
+    "message": {
+      "content": "{\"edges\":[[\"HAS_SUPPORTING_EVIDENCE\",\"หนังสือสำคัญหรือหลักฐานที่แสดงว่ามีการมอบหมายทรัพย์ให้ไปจัดการอย่างใดอย่างหนึ่ง\",\"Document\",\"ผู้เสียหาย\",130,131,\"\"],[\"HAS_SUPPORTING_EVIDENCE\",\"ใบสำคัญแสดงการเป็นเจ้าของทรัพย์สิน\",\"Document\",\"ผู้เสียหาย\",132,132,\"\"],[\"HAS_SUPPORTING_EVIDENCE\",\"สำเนาหรือคำสั่งศาล หรือพินัยกรรม\",\"Document\",\"ผู้เสียหาย\",\"ในกรณีผู้กระทำผิดเป็นผู้จัดการทรัพย์สินผู้อื่นตามคำสั่งของศาลหรือพินัยกรรม\",133,135]]}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 40456068340,
+    "load_duration": 210564986,
+    "prompt_eval_count": 791,
+    "prompt_eval_duration": 4390517000,
+    "eval_count": 124,
+    "eval_duration": 35820347000
+  },
+  "parse_ok": true,
+  "truncated": false,
+  "accepted": [
+    {
+      "section": "1.10",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "สำเนาหรือคำสั่งศาลหรือพินัยกรรม",
+      "raw_name": "สำเนาหรือคำสั่งศาล หรือพินัยกรรม",
+      "type": "Document",
+      "owner": "ผู้เสียหาย",
+      "condition": "ในกรณีผู้กระทำผิดเป็นผู้จัดการทรัพย์สินผู้อื่นตามคำสั่งของศาลหรือพินัยกรรม",
+      "start_line": 133,
+      "end_line": 135,
+      "evidence": "(3) สำเนาหรือคำสั่งศาล หรือพินัยกรรม\nในกรณีผู้กระทำผิดเป็นผู้จัดการทรัพย์สินผู้อื่นตาม\nคำสั่งของศาลหรือพินัยกรรม",
+      "pdf_pages": [
+        28
+      ],
+      "printed_pages": [
+        15
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_compound_entity"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    }
+  ],
+  "rejected": [
+    {
+      "row": [
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือสำคัญหรือหลักฐานที่แสดงว่ามีการมอบหมายทรัพย์ให้ไปจัดการอย่างใดอย่างหนึ่ง",
+        "Document",
+        "ผู้เสียหาย",
+        130,
+        131,
+        ""
+      ],
+      "reason": "entity_not_in_evidence"
+    },
+    {
+      "row": [
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบสำคัญแสดงการเป็นเจ้าของทรัพย์สิน",
+        "Document",
+        "ผู้เสียหาย",
+        132,
+        132,
+        ""
+      ],
+      "reason": "entity_not_in_evidence"
+    }
+  ],
+  "initial_validation": {
+    "accepted": [
+      {
+        "section": "1.10",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "สำเนาหรือคำสั่งศาลหรือพินัยกรรม",
+        "raw_name": "สำเนาหรือคำสั่งศาล หรือพินัยกรรม",
+        "type": "Document",
+        "owner": "ผู้เสียหาย",
+        "condition": "ในกรณีผู้กระทำผิดเป็นผู้จัดการทรัพย์สินผู้อื่นตามคำสั่งของศาลหรือพินัยกรรม",
+        "start_line": 133,
+        "end_line": 135,
+        "evidence": "(3) สำเนาหรือคำสั่งศาล หรือพินัยกรรม\nในกรณีผู้กระทำผิดเป็นผู้จัดการทรัพย์สินผู้อื่นตาม\nคำสั่งของศาลหรือพินัยกรรม",
+        "pdf_pages": [
+          28
+        ],
+        "printed_pages": [
+          15
+        ],
+        "review_flags": [
+          "check_compound_entity"
+        ],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      }
+    ],
+    "rejected": [
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "หนังสือสำคัญหรือหลักฐานที่แสดงว่ามีการมอบหมายทรัพย์ให้ไปจัดการอย่างใดอย่างหนึ่ง",
+          "Document",
+          "ผู้เสียหาย",
+          130,
+          131,
+          ""
+        ],
+        "reason": "schema"
+      },
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "ใบสำคัญแสดงการเป็นเจ้าของทรัพย์สิน",
+          "Document",
+          "ผู้เสียหาย",
+          132,
+          132,
+          ""
+        ],
+        "reason": "schema"
+      }
+    ]
+  },
+  "validator_version": "v2.2-unique-nearby-grounding-repair"
+}

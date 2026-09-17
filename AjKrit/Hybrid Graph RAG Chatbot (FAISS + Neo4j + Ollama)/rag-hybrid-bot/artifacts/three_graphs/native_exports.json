@@ -1,0 +1,68 @@
+[
+  {
+    "model": "model_i",
+    "format": "svg",
+    "filename": "graph_export.svg",
+    "original_filename": "visualisation.svg",
+    "bytes": 155358,
+    "nodes": 150,
+    "relationships": 120,
+    "method": "Neo4j Browser Download menu",
+    "query": "MATCH (n {visual_variant: 'model_i'}) OPTIONAL MATCH p=(n)-[]->({visual_variant: 'model_i'}) RETURN n,p"
+  },
+  {
+    "model": "model_i",
+    "format": "png",
+    "filename": "graph_export.png",
+    "original_filename": "visualisation.png",
+    "bytes": 112227,
+    "nodes": 150,
+    "relationships": 120,
+    "method": "Neo4j Browser Download menu",
+    "query": "MATCH (n {visual_variant: 'model_i'}) OPTIONAL MATCH p=(n)-[]->({visual_variant: 'model_i'}) RETURN n,p"
+  },
+  {
+    "model": "model_ii",
+    "format": "svg",
+    "filename": "graph_export.svg",
+    "original_filename": "visualisation.svg",
+    "bytes": 237275,
+    "nodes": 160,
+    "relationships": 254,
+    "method": "Neo4j Browser Download menu",
+    "query": "MATCH (n {visual_variant: 'model_ii'}) OPTIONAL MATCH p=(n)-[]->({visual_variant: 'model_ii'}) RETURN n,p"
+  },
+  {
+    "model": "model_ii",
+    "format": "png",
+    "filename": "graph_export.png",
+    "original_filename": "visualisation.png",
+    "bytes": 117071,
+    "nodes": 160,
+    "relationships": 254,
+    "method": "Neo4j Browser Download menu",
+    "query": "MATCH (n {visual_variant: 'model_ii'}) OPTIONAL MATCH p=(n)-[]->({visual_variant: 'model_ii'}) RETURN n,p"
+  },
+  {
+    "model": "model_iii",
+    "format": "svg",
+    "filename": "graph_export.svg",
+    "original_filename": "visualisation.svg",
+    "bytes": 35159,
+    "nodes": 31,
+    "relationships": 29,
+    "method": "Neo4j Browser Download menu",
+    "query": "MATCH (n {visual_variant: 'model_iii'}) OPTIONAL MATCH p=(n)-[]->({visual_variant: 'model_iii'}) RETURN n,p"
+  },
+  {
+    "model": "model_iii",
+    "format": "png",
+    "filename": "graph_export.png",
+    "original_filename": "visualisation.png",
+    "bytes": 89084,
+    "nodes": 31,
+    "relationships": 29,
+    "method": "Neo4j Browser Download menu",
+    "query": "MATCH (n {visual_variant: 'model_iii'}) OPTIONAL MATCH p=(n)-[]->({visual_variant: 'model_iii'}) RETURN n,p"
+  }
+]

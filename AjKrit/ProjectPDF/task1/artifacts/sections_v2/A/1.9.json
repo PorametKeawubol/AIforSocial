@@ -1,0 +1,139 @@
+{
+  "fingerprint": "979d01c0b4fe0b2559f6b467",
+  "version": "sections-v2.1",
+  "section": "1.9",
+  "embedding": {
+    "embedding": "BAAI/bge-m3",
+    "cache_fingerprint": "1c7299b69943dd6662be8fb7",
+    "aggregation": "max of existing per-page ontology hints across section pages",
+    "hints": [
+      "เอกสารประกอบการแจ้งความ",
+      "หน่วยงานรับแจ้งเรื่อง",
+      "หลักฐานเกี่ยวกับเหตุการณ์",
+      "ช่องทางโทรศัพท์ติดต่อ"
+    ]
+  },
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "seconds": 24.00052055999913,
+  "attempt": 1,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T16:52:26.41662897Z",
+    "message": {
+      "content": "{\"edges\":[[\"HAS_SUPPORTING_EVIDENCE\",\"หนังสือหรือหลักฐานต่างๆ ที่เกี่ยวกับการถูกฉ้อโกง\",\"Document\",\"ผู้เสียหาย\",\"\",125,126],[\"HAS_SUPPORTING_EVIDENCE\",\"หลักฐานแสดงการเป็นเจ้าของหรือผู้ครอบครองทรัพย์\",\"Evidence\",\"ผู้เสียหาย\",\"\",127,128]]}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 23999919861,
+    "load_duration": 197954080,
+    "prompt_eval_count": 689,
+    "prompt_eval_duration": 3186174000,
+    "eval_count": 68,
+    "eval_duration": 20322859000
+  },
+  "parse_ok": true,
+  "truncated": false,
+  "accepted": [
+    {
+      "section": "1.9",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "หนังสือหรือหลักฐานต่างๆที่เกี่ยวกับการถูกฉ้อโกง",
+      "raw_name": "หนังสือหรือหลักฐานต่างๆ ที่เกี่ยวกับการถูกฉ้อโกง",
+      "type": "Document",
+      "owner": "ผู้เสียหาย",
+      "condition": "",
+      "start_line": 125,
+      "end_line": 126,
+      "evidence": "(1) หนังสือหรือหลักฐานต่างๆ ที่เกี่ยวกับ\nการถูกฉ้อโกง",
+      "pdf_pages": [
+        27
+      ],
+      "printed_pages": [
+        14
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context",
+        "check_compound_entity"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.9",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "หลักฐานแสดงการเป็นเจ้าของหรือผู้ครอบครองทรัพย์",
+      "raw_name": "หลักฐานแสดงการเป็นเจ้าของหรือผู้ครอบครองทรัพย์",
+      "type": "Evidence",
+      "owner": "ผู้เสียหาย",
+      "condition": "",
+      "start_line": 127,
+      "end_line": 128,
+      "evidence": "(2) หลักฐานแสดงการเป็นเจ้าของหรือ\nผู้ครอบครองทรัพย์",
+      "pdf_pages": [
+        27
+      ],
+      "printed_pages": [
+        14
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context",
+        "check_compound_entity"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    }
+  ],
+  "rejected": [],
+  "initial_validation": {
+    "accepted": [
+      {
+        "section": "1.9",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "หนังสือหรือหลักฐานต่างๆที่เกี่ยวกับการถูกฉ้อโกง",
+        "raw_name": "หนังสือหรือหลักฐานต่างๆ ที่เกี่ยวกับการถูกฉ้อโกง",
+        "type": "Document",
+        "owner": "ผู้เสียหาย",
+        "condition": "",
+        "start_line": 125,
+        "end_line": 126,
+        "evidence": "(1) หนังสือหรือหลักฐานต่างๆ ที่เกี่ยวกับ\nการถูกฉ้อโกง",
+        "pdf_pages": [
+          27
+        ],
+        "printed_pages": [
+          14
+        ],
+        "review_flags": [
+          "check_condition_context",
+          "check_compound_entity"
+        ],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.9",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "หลักฐานแสดงการเป็นเจ้าของหรือผู้ครอบครองทรัพย์",
+        "raw_name": "หลักฐานแสดงการเป็นเจ้าของหรือผู้ครอบครองทรัพย์",
+        "type": "Evidence",
+        "owner": "ผู้เสียหาย",
+        "condition": "",
+        "start_line": 127,
+        "end_line": 128,
+        "evidence": "(2) หลักฐานแสดงการเป็นเจ้าของหรือ\nผู้ครอบครองทรัพย์",
+        "pdf_pages": [
+          27
+        ],
+        "printed_pages": [
+          14
+        ],
+        "review_flags": [
+          "check_condition_context",
+          "check_compound_entity"
+        ],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      }
+    ],
+    "rejected": []
+  },
+  "validator_version": "v2.2-unique-nearby-grounding-repair"
+}

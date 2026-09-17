@@ -1,0 +1,76 @@
+{
+  "page": 32,
+  "facts": [
+    {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "TEV (Tobacco etch virus)",
+      "object_type": "Pathogen",
+      "evidence": "โรคใบด่างที่เกิดจากเชื้อไวรัส TEV"
+    },
+    {
+      "subject": "เส้นใบ",
+      "subject_type": "Symptom",
+      "relation": "EXHIBITS",
+      "object": "ใส เป็นแถบ",
+      "object_type": "Symptom",
+      "evidence": "เกิดอาการเส้นใบมีลักษณะใส เป็นแถบ"
+    },
+    {
+      "subject": "ผลพริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคใบด่าง",
+      "object_type": "Disease",
+      "evidence": "เกิดอาการเส้นใบมีลักษณะใส เป็นแถบ ใบและผลด่างเป็นวงซ้อน"
+    },
+    {
+      "subject": "เนื้อเยื่อพืช",
+      "subject_type": "Symptom",
+      "relation": "EXHIBITS",
+      "object": "สีเหลือง",
+      "object_type": "Symptom",
+      "evidence": "ส่วนเนื้อเยื่อเป็นวงแห้ง สีเหลือง"
+    },
+    {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เพลี้ยอ่อน",
+      "object_type": "Pathogen",
+      "evidence": "มีเพลี้ยอ่อนเป็นพาหะนำโรค"
+    },
+    {
+      "subject": "ต้นพริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคใบหงิกเหลือง",
+      "object_type": "Disease",
+      "evidence": "เกิดจากเชื้อไวรัสใบหงิกเหลือง ที่ทำให้ ใบพริกด่างเหลือง"
+    },
+    {
+      "subject": "โรคใบหงิกเหลือง",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "แมลงหวี่ขาว",
+      "object_type": "Pathogen",
+      "evidence": "โรคนี้มีแมลงหวี่ขาวเป็นพาหะ"
+    },
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคใบหงิกเหลือง",
+      "object_type": "Disease",
+      "evidence": "พบระบาดมากในช่วงฤดูแล้ง โดยมีพืชอาศัยหลายชนิด เช่น กระเจี๊ยบมอญ แตงกวา พืชตระกูลถั่วบางชนิด บวบเหลี่ยม พริก ฟักเขียว"
+    }
+  ],
+  "timing": {
+    "seconds": 21.521,
+    "model": "qwen3.5:9b",
+    "eval_count": 669,
+    "eval_duration": 20228228000,
+    "prompt_eval_count": 783
+  }
+}

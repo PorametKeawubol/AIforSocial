@@ -1,0 +1,11 @@
+{
+  "page": 3,
+  "content": "{\n  \"facts\": []\n}",
+  "timing": {
+    "seconds": 1.803,
+    "model": "qwen3.5:9b",
+    "eval_count": 15,
+    "eval_duration": 431345000,
+    "prompt_eval_count": 760
+  }
+}

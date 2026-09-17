@@ -1,0 +1,5 @@
+.venv/
+.env
+__pycache__/
+artifacts/*.npy
+artifacts/neo4j-cleanup/*.gz

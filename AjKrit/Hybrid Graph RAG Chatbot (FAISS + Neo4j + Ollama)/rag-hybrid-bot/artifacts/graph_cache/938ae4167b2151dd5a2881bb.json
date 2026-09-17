@@ -1,0 +1,76 @@
+{
+  "page": 11,
+  "facts": [
+    {
+      "subject": "นาข้าว",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "อาการบ้าใบ",
+      "object_type": "Symptom",
+      "evidence": "หากเป็นนาข้าว ใบข้าวจะมีสีเขียวสวยงามมีใบข้าวจำนวนมาก เรียกว่า อาการบ้าใบ"
+    },
+    {
+      "subject": "ดินเปรี้ยว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "กรดจัด",
+      "object_type": "Topic",
+      "evidence": "การสังเกตดินเปรี้ยวหรือเป็นกรดจัด"
+    },
+    {
+      "subject": "สวน",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "สีและเส้นใบไม่เสมอกัน",
+      "object_type": "Symptom",
+      "evidence": "หากเป็นสวน จะสังเกตได้จากสีและเส้นใบไม่เสมอกัน"
+    },
+    {
+      "subject": "ดินเปรี้ยว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "การเพิ่มผลผลิต",
+      "object_type": "Topic",
+      "evidence": "ในการเพาะปลูกจะช่วยเพิ่ม ผลผลิตให้กับเกษตรกร"
+    },
+    {
+      "subject": "ดินเปรี้ยว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "การลดต้นทุนการผลิต",
+      "object_type": "Topic",
+      "evidence": "ในการเพาะปลูกจะช่วยเพิ่ม ผลผลิตให้กับเกษตรกรแล้ว ยังช่วยลด ต้นทุน การผลิตอีกด้วย"
+    },
+    {
+      "subject": "ดินเปรี้ยว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "การใช้สารเคมี",
+      "object_type": "Treatment",
+      "evidence": "เพราะถ้าดินมีความอุดมสมบูรณ์ การใช้สารเคมีก็ไม่จำเป็นนัก"
+    },
+    {
+      "subject": "การแก้ปัญหาดินเปรี้ยว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "การใช้ปุ๋ยเคมีน้อยลง",
+      "object_type": "Treatment",
+      "evidence": "เมื่อแก้ไขปัญหา แล้ว จะต้องลดปริมาณการใช้ปุ๋ยเคมีลง"
+    },
+    {
+      "subject": "ดินเปรี้ยว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "การเกิดดินเค็ม",
+      "object_type": "Disease",
+      "evidence": "เพื่อป้องกัน ปัญหาการเกิดดินเปรี้ยวและเค็มไม่ให้เกิดขึ้นอีก"
+    }
+  ],
+  "timing": {
+    "seconds": 19.578,
+    "model": "qwen3.5:9b",
+    "eval_count": 630,
+    "eval_duration": 19118356000,
+    "prompt_eval_count": 679
+  }
+}

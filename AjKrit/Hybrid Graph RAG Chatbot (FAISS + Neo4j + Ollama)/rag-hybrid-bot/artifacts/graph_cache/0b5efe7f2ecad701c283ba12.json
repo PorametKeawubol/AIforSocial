@@ -1,0 +1,76 @@
+{
+  "page": 13,
+  "facts": [
+    {
+      "subject": "ดิน",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "สารปรับปรุงดิน",
+      "object_type": "Treatment",
+      "evidence": "เมื่อนำไปใช้ประโยชน์ทางการเกษตรจะมีคุณสมบัติ เช่น เป็นสารปรับปรุงดิน"
+    },
+    {
+      "subject": "ศัตรูพืช",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "น้ำส้มควันไม้",
+      "object_type": "Treatment",
+      "evidence": "เมื่อนำไปใช้ประโยชน์ทางการเกษตรจะมีคุณสมบัติ เช่น เป็นสารป้องกันกำจัดศัตรูพืช"
+    },
+    {
+      "subject": "พืช",
+      "subject_type": "Crop",
+      "relation": "RELATED_TO",
+      "object": "น้ำส้มควันไม้",
+      "object_type": "Treatment",
+      "evidence": "เมื่อนำไปใช้ประโยชน์ทางการเกษตรจะมีคุณสมบัติ เช่น เป็นสารเร่งการเติบโตของพืช"
+    },
+    {
+      "subject": "น้ำมันเบา",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "น้ำส้มควันไม้",
+      "object_type": "Treatment",
+      "evidence": "แยกตัวเป็น 3 ชั้น คือ น้ำมันเบา (ลอยอยู่ผิวน้ำ) น้ำส้มไม้ และน้ำมันทาร์"
+    },
+    {
+      "subject": "น้ำส้มไม้",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "น้ำส้มควันไม้",
+      "object_type": "Treatment",
+      "evidence": "แยกตัวเป็น 3 ชั้น คือ น้ำมันเบา (ลอยอยู่ผิวน้ำ) น้ำส้มไม้ และน้ำมันทาร์"
+    },
+    {
+      "subject": "น้ำมันทาร์",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "น้ำส้มควันไม้",
+      "object_type": "Treatment",
+      "evidence": "แยกตัวเป็น 3 ชั้น คือ น้ำมันเบา (ลอยอยู่ผิวน้ำ) น้ำส้มไม้ และน้ำมันทาร์"
+    },
+    {
+      "subject": "สารดับกลิ่นตัว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "น้ำส้มควันไม้",
+      "object_type": "Treatment",
+      "evidence": "มีการนำน้ำส้มควันไม้ไปใช้ประโยชน์ในอุตสาหกรรม เช่น ใช้ผลิต สารดับกลิ่นตัว"
+    },
+    {
+      "subject": "สารปรับผิวนุ่ม",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "น้ำส้มควันไม้",
+      "object_type": "Treatment",
+      "evidence": "มีการนำน้ำส้มควันไม้ไปใช้ประโยชน์ในอุตสาหกรรม เช่น ใช้ผลิต สารปรับผิวนุ่ม"
+    }
+  ],
+  "timing": {
+    "seconds": 21.686,
+    "model": "qwen3.5:9b",
+    "eval_count": 671,
+    "eval_duration": 20449918000,
+    "prompt_eval_count": 676
+  }
+}

@@ -1,0 +1,444 @@
+{
+  "thresholds": {
+    "0.35": {
+      "status": "Success",
+      "refined_context": [
+        "Aspirin inhibits COX-2",
+        "COX-2 causes Inflammation"
+      ],
+      "item_similarities": [
+        0.9999269619836151,
+        0.9976610249376454,
+        0.2559939058231545
+      ],
+      "context_embedding": [
+        0.15000000000000002,
+        0.75,
+        0.8500000000000001,
+        0.75
+      ],
+      "verification_score": 0.9992554211008375,
+      "similarities": {
+        "sim_qc": 0.9991593104861168,
+        "sim_ca": 0.9995511201385682,
+        "sim_qa": 0.9988562442548174
+      },
+      "final_response": "Aspirin inhibits COX-2 | COX-2 causes Inflammation",
+      "reason": null,
+      "constructed_prompt": "[System: Use only the supplied context]\n[Context: Aspirin inhibits COX-2 | COX-2 causes Inflammation]\n[Query: Explain the path in the illustrative graph.]"
+    },
+    "0.7": {
+      "status": "Success",
+      "refined_context": [
+        "Aspirin inhibits COX-2",
+        "COX-2 causes Inflammation"
+      ],
+      "item_similarities": [
+        0.9999269619836151,
+        0.9976610249376454,
+        0.2559939058231545
+      ],
+      "context_embedding": [
+        0.15000000000000002,
+        0.75,
+        0.8500000000000001,
+        0.75
+      ],
+      "verification_score": 0.9992554211008375,
+      "similarities": {
+        "sim_qc": 0.9991593104861168,
+        "sim_ca": 0.9995511201385682,
+        "sim_qa": 0.9988562442548174
+      },
+      "final_response": "Aspirin inhibits COX-2 | COX-2 causes Inflammation",
+      "reason": null,
+      "constructed_prompt": "[System: Use only the supplied context]\n[Context: Aspirin inhibits COX-2 | COX-2 causes Inflammation]\n[Query: Explain the path in the illustrative graph.]"
+    }
+  },
+  "hallucination": {
+    "status": "Verification Failed",
+    "refined_context": [
+      "Aspirin inhibits COX-2",
+      "COX-2 causes Inflammation"
+    ],
+    "item_similarities": [
+      0.9999269619836151,
+      0.9976610249376454,
+      0.2559939058231545
+    ],
+    "context_embedding": [
+      0.15000000000000002,
+      0.75,
+      0.8500000000000001,
+      0.75
+    ],
+    "verification_score": 0.5689492822888566,
+    "similarities": {
+      "sim_qc": 0.9991593104861168,
+      "sim_ca": 0.2952169423244471,
+      "sim_qa": 0.2559939058231545
+    },
+    "final_response": "Cannot verify the answer from the available context.",
+    "reason": "Verification score below 0.60",
+    "constructed_prompt": "[System: Use only the supplied context]\n[Context: Aspirin inhibits COX-2 | COX-2 causes Inflammation]\n[Query: Explain the path in the illustrative graph.]"
+  },
+  "incomplete_recovery": {
+    "status": "Success",
+    "refined_context": [
+      "Aspirin inhibits COX-2",
+      "COX-2 causes Inflammation"
+    ],
+    "item_similarities": [
+      0.9999269619836151,
+      0.9976610249376454
+    ],
+    "context_embedding": [
+      0.15000000000000002,
+      0.75,
+      0.8500000000000001,
+      0.75
+    ],
+    "verification_score": 0.9992554211008375,
+    "similarities": {
+      "sim_qc": 0.9991593104861168,
+      "sim_ca": 0.9995511201385682,
+      "sim_qa": 0.9988562442548174
+    },
+    "final_response": "Aspirin inhibits COX-2 | COX-2 causes Inflammation",
+    "reason": null,
+    "constructed_prompt": "[System: Use only the supplied context]\n[Context: Aspirin inhibits COX-2 | COX-2 causes Inflammation]\n[Query: Explain the path in the illustrative graph.]",
+    "attempts": 2,
+    "retries": 1,
+    "exhausted": false,
+    "history": [
+      {
+        "attempt": 0,
+        "weights": [
+          0.10537958086967453,
+          0.16860671747515846,
+          0.726013701655167
+        ],
+        "source": "supplied initial context",
+        "called_experts": [],
+        "raw_contexts": [
+          "Aspirin inhibits COX-2"
+        ],
+        "status": "Insufficient Context",
+        "refined_context": [
+          "Aspirin inhibits COX-2"
+        ],
+        "item_similarities": [
+          0.9999269619836151
+        ],
+        "context_embedding": null,
+        "verification_score": null,
+        "similarities": null,
+        "final_response": "Cannot verify the answer from the available context.",
+        "reason": "Required directed path is missing",
+        "constructed_prompt": null
+      },
+      {
+        "attempt": 1,
+        "weights": [
+          0.08781631739139542,
+          0.14050559789596537,
+          0.7716780847126391
+        ],
+        "source": "Step 1 experts",
+        "called_experts": [
+          "Subgraph"
+        ],
+        "raw_contexts": [
+          "Aspirin inhibits COX-2",
+          "COX-2 causes Inflammation"
+        ],
+        "status": "Success",
+        "refined_context": [
+          "Aspirin inhibits COX-2",
+          "COX-2 causes Inflammation"
+        ],
+        "item_similarities": [
+          0.9999269619836151,
+          0.9976610249376454
+        ],
+        "context_embedding": [
+          0.15000000000000002,
+          0.75,
+          0.8500000000000001,
+          0.75
+        ],
+        "verification_score": 0.9992554211008375,
+        "similarities": {
+          "sim_qc": 0.9991593104861168,
+          "sim_ca": 0.9995511201385682,
+          "sim_qa": 0.9988562442548174
+        },
+        "final_response": "Aspirin inhibits COX-2 | COX-2 causes Inflammation",
+        "reason": null,
+        "constructed_prompt": "[System: Use only the supplied context]\n[Context: Aspirin inhibits COX-2 | COX-2 causes Inflammation]\n[Query: Explain the path in the illustrative graph.]"
+      }
+    ]
+  },
+  "verification_recovery": {
+    "status": "Success",
+    "refined_context": [
+      "Aspirin inhibits COX-2",
+      "COX-2 causes Inflammation"
+    ],
+    "item_similarities": [
+      0.9999269619836151,
+      0.9976610249376454
+    ],
+    "context_embedding": [
+      0.15000000000000002,
+      0.75,
+      0.8500000000000001,
+      0.75
+    ],
+    "verification_score": 0.9992554211008375,
+    "similarities": {
+      "sim_qc": 0.9991593104861168,
+      "sim_ca": 0.9995511201385682,
+      "sim_qa": 0.9988562442548174
+    },
+    "final_response": "Aspirin inhibits COX-2 | COX-2 causes Inflammation",
+    "reason": null,
+    "constructed_prompt": "[System: Use only the supplied context]\n[Context: Aspirin inhibits COX-2 | COX-2 causes Inflammation]\n[Query: Explain the path in the illustrative graph.]",
+    "attempts": 2,
+    "retries": 1,
+    "exhausted": false,
+    "history": [
+      {
+        "attempt": 0,
+        "weights": [
+          0.10537958086967453,
+          0.16860671747515846,
+          0.726013701655167
+        ],
+        "source": "Step 1 experts",
+        "called_experts": [
+          "Subgraph"
+        ],
+        "raw_contexts": [
+          "Aspirin inhibits COX-2",
+          "COX-2 causes Inflammation"
+        ],
+        "status": "Verification Failed",
+        "refined_context": [
+          "Aspirin inhibits COX-2",
+          "COX-2 causes Inflammation"
+        ],
+        "item_similarities": [
+          0.9999269619836151,
+          0.9976610249376454
+        ],
+        "context_embedding": [
+          0.15000000000000002,
+          0.75,
+          0.8500000000000001,
+          0.75
+        ],
+        "verification_score": 0.5689492822888566,
+        "similarities": {
+          "sim_qc": 0.9991593104861168,
+          "sim_ca": 0.2952169423244471,
+          "sim_qa": 0.2559939058231545
+        },
+        "final_response": "Cannot verify the answer from the available context.",
+        "reason": "Verification score below 0.60",
+        "constructed_prompt": "[System: Use only the supplied context]\n[Context: Aspirin inhibits COX-2 | COX-2 causes Inflammation]\n[Query: Explain the path in the illustrative graph.]"
+      },
+      {
+        "attempt": 1,
+        "weights": [
+          0.08781631739139542,
+          0.14050559789596537,
+          0.7716780847126391
+        ],
+        "source": "Step 1 experts",
+        "called_experts": [
+          "Subgraph"
+        ],
+        "raw_contexts": [
+          "Aspirin inhibits COX-2",
+          "COX-2 causes Inflammation"
+        ],
+        "status": "Success",
+        "refined_context": [
+          "Aspirin inhibits COX-2",
+          "COX-2 causes Inflammation"
+        ],
+        "item_similarities": [
+          0.9999269619836151,
+          0.9976610249376454
+        ],
+        "context_embedding": [
+          0.15000000000000002,
+          0.75,
+          0.8500000000000001,
+          0.75
+        ],
+        "verification_score": 0.9992554211008375,
+        "similarities": {
+          "sim_qc": 0.9991593104861168,
+          "sim_ca": 0.9995511201385682,
+          "sim_qa": 0.9988562442548174
+        },
+        "final_response": "Aspirin inhibits COX-2 | COX-2 causes Inflammation",
+        "reason": null,
+        "constructed_prompt": "[System: Use only the supplied context]\n[Context: Aspirin inhibits COX-2 | COX-2 causes Inflammation]\n[Query: Explain the path in the illustrative graph.]"
+      }
+    ]
+  },
+  "persistent_failure": {
+    "status": "Verification Failed",
+    "refined_context": [
+      "Aspirin inhibits COX-2",
+      "COX-2 causes Inflammation"
+    ],
+    "item_similarities": [
+      0.9999269619836151,
+      0.9976610249376454
+    ],
+    "context_embedding": [
+      0.15000000000000002,
+      0.75,
+      0.8500000000000001,
+      0.75
+    ],
+    "verification_score": 0.5689492822888566,
+    "similarities": {
+      "sim_qc": 0.9991593104861168,
+      "sim_ca": 0.2952169423244471,
+      "sim_qa": 0.2559939058231545
+    },
+    "final_response": "Cannot verify the answer from the available context.",
+    "reason": "Verification score below 0.60",
+    "constructed_prompt": "[System: Use only the supplied context]\n[Context: Aspirin inhibits COX-2 | COX-2 causes Inflammation]\n[Query: Explain the path in the illustrative graph.]",
+    "attempts": 3,
+    "retries": 2,
+    "exhausted": true,
+    "history": [
+      {
+        "attempt": 0,
+        "weights": [
+          0.10537958086967453,
+          0.16860671747515846,
+          0.726013701655167
+        ],
+        "source": "Step 1 experts",
+        "called_experts": [
+          "Subgraph"
+        ],
+        "raw_contexts": [
+          "Aspirin inhibits COX-2",
+          "COX-2 causes Inflammation"
+        ],
+        "status": "Verification Failed",
+        "refined_context": [
+          "Aspirin inhibits COX-2",
+          "COX-2 causes Inflammation"
+        ],
+        "item_similarities": [
+          0.9999269619836151,
+          0.9976610249376454
+        ],
+        "context_embedding": [
+          0.15000000000000002,
+          0.75,
+          0.8500000000000001,
+          0.75
+        ],
+        "verification_score": 0.5689492822888566,
+        "similarities": {
+          "sim_qc": 0.9991593104861168,
+          "sim_ca": 0.2952169423244471,
+          "sim_qa": 0.2559939058231545
+        },
+        "final_response": "Cannot verify the answer from the available context.",
+        "reason": "Verification score below 0.60",
+        "constructed_prompt": "[System: Use only the supplied context]\n[Context: Aspirin inhibits COX-2 | COX-2 causes Inflammation]\n[Query: Explain the path in the illustrative graph.]"
+      },
+      {
+        "attempt": 1,
+        "weights": [
+          0.08781631739139542,
+          0.14050559789596537,
+          0.7716780847126391
+        ],
+        "source": "Step 1 experts",
+        "called_experts": [
+          "Subgraph"
+        ],
+        "raw_contexts": [
+          "Aspirin inhibits COX-2",
+          "COX-2 causes Inflammation"
+        ],
+        "status": "Verification Failed",
+        "refined_context": [
+          "Aspirin inhibits COX-2",
+          "COX-2 causes Inflammation"
+        ],
+        "item_similarities": [
+          0.9999269619836151,
+          0.9976610249376454
+        ],
+        "context_embedding": [
+          0.15000000000000002,
+          0.75,
+          0.8500000000000001,
+          0.75
+        ],
+        "verification_score": 0.5689492822888566,
+        "similarities": {
+          "sim_qc": 0.9991593104861168,
+          "sim_ca": 0.2952169423244471,
+          "sim_qa": 0.2559939058231545
+        },
+        "final_response": "Cannot verify the answer from the available context.",
+        "reason": "Verification score below 0.60",
+        "constructed_prompt": "[System: Use only the supplied context]\n[Context: Aspirin inhibits COX-2 | COX-2 causes Inflammation]\n[Query: Explain the path in the illustrative graph.]"
+      },
+      {
+        "attempt": 2,
+        "weights": [
+          0.07318026449282952,
+          0.1170879982466378,
+          0.8097317372605327
+        ],
+        "source": "Step 1 experts",
+        "called_experts": [
+          "Subgraph"
+        ],
+        "raw_contexts": [
+          "Aspirin inhibits COX-2",
+          "COX-2 causes Inflammation"
+        ],
+        "status": "Verification Failed",
+        "refined_context": [
+          "Aspirin inhibits COX-2",
+          "COX-2 causes Inflammation"
+        ],
+        "item_similarities": [
+          0.9999269619836151,
+          0.9976610249376454
+        ],
+        "context_embedding": [
+          0.15000000000000002,
+          0.75,
+          0.8500000000000001,
+          0.75
+        ],
+        "verification_score": 0.5689492822888566,
+        "similarities": {
+          "sim_qc": 0.9991593104861168,
+          "sim_ca": 0.2952169423244471,
+          "sim_qa": 0.2559939058231545
+        },
+        "final_response": "Cannot verify the answer from the available context.",
+        "reason": "Verification score below 0.60",
+        "constructed_prompt": "[System: Use only the supplied context]\n[Context: Aspirin inhibits COX-2 | COX-2 causes Inflammation]\n[Query: Explain the path in the illustrative graph.]"
+      }
+    ]
+  }
+}

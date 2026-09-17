@@ -1,0 +1,124 @@
+section,relation,target,type,owner,condition,pdf_pages,start_line,end_line,evidence,review_flags
+1.1,HAS_SUPPORTING_EVIDENCE,บัตรประจำตัวประชาชน,Document,ผู้แจ้ง,,[21],2,2,(1) บัตรประจำตัวประชาชน หรือใบแทนฯ ,"['owner_not_literal_in_section_verify_semantics', 'check_condition_context']"
+1.1,HAS_SUPPORTING_EVIDENCE,ใบแทนบัตรประจำตัวประชาชน,Document,ผู้แจ้ง,,[21],2,2,(1) บัตรประจำตัวประชาชน หรือใบแทนฯ ,"['owner_not_literal_in_section_verify_semantics', 'check_condition_context']"
+1.1,HAS_SUPPORTING_EVIDENCE,บัตรประจำตัวข้าราชการ,Document,ผู้แจ้ง,,[21],3,3,หรือบัตรประจำตัวข้าราชการ หรือใบสำคัญประจำตัว,"['owner_not_literal_in_section_verify_semantics', 'check_condition_context']"
+1.1,HAS_SUPPORTING_EVIDENCE,ใบสำคัญประจำตัวคนต่างด้าว,Document,ผู้แจ้ง,,[21],3,4,"หรือบัตรประจำตัวข้าราชการ หรือใบสำคัญประจำตัว
+คนต่างด้าว หรือหนังสือเดินทาง (Passport) สำหรับ","['owner_not_literal_in_section_verify_semantics', 'check_condition_context']"
+1.1,HAS_SUPPORTING_EVIDENCE,หนังสือเดินทาง,Document,ชาวต่างประเทศที่เดินทางเข้ามาภายในประเทศ,,[21],4,5,"คนต่างด้าว หรือหนังสือเดินทาง (Passport) สำหรับ
+ชาวต่างประเทศที่เดินทางเข้ามาภายในประเทศ",['check_condition_context']
+1.1,HAS_SUPPORTING_EVIDENCE,สำเนาทะเบียนบ้าน,Document,ผู้แจ้ง,,[21],6,6,(2) สำเนาทะเบียนบ้าน,['owner_not_literal_in_section_verify_semantics']
+1.1,HAS_SUPPORTING_EVIDENCE,ใบสำคัญแสดงการเป็นผู้แทนโดยชอบธรรมของผู้เยาว์,Document,ตัวแทนของผู้อื่น,ในกรณีร้องทุกข์ (แจ้งความ) โดยเป็นตัวแทนของผู้อื่น,[21],7,10,"(3) ในกรณีร้องทุกข์ (แจ้งความ) โดยเป็น
+ตัวแทนของผู้อื่น ให้นำหลักฐานติดตัวไปด้วย คือ
+- ใบสำ คั ญ แสดงการเป็ น ผู ้ แ ทน
+โดยชอบธรรมของผู้เยาว์ หรือ",[]
+1.1,HAS_SUPPORTING_EVIDENCE,ใบสำคัญแสดงการเป็นผู้อนุบาลของผู้ไร้ความสามารถ,Document,ตัวแทนของผู้อื่น,ในกรณีร้องทุกข์ (แจ้งความ) โดยเป็นตัวแทนของผู้อื่น,[21],7,12,"(3) ในกรณีร้องทุกข์ (แจ้งความ) โดยเป็น
+ตัวแทนของผู้อื่น ให้นำหลักฐานติดตัวไปด้วย คือ
+- ใบสำ คั ญ แสดงการเป็ น ผู ้ แ ทน
+โดยชอบธรรมของผู้เยาว์ หรือ
+- ใบสำคัญแสดงการเป็นผู้อนุบาลของ
+ผู้ไร้ความสามารถ (ตามคำสั่งศาล)",[]
+1.1,HAS_SUPPORTING_EVIDENCE,สูติบัตร,Document,บุพการีหรือผู้สืบสันดานหรือสามีหรือภรรยา,กรณีที่ผู้เสียหายถูกทำร้ายถึงตายหรือบาดเจ็บจนไม่สามารถจัดการเองได้,[21],13,16,"- ในกรณีที่ผู้เสียหายถูกทำร้ายถึงตาย
+หรือบาดเจ็บจนไม่สามารถจัดการเองได้ ให้นำ� หลักฐาน
+ซึ่งแสดงว่าเป็นบุพการีหรือผู้สืบสันดานหรือสามีหรือ
+ภรรยา (ซึ่งได้จดทะเบียน, สูติบัตร, ใบทะเบียนสมรส",[]
+1.1,HAS_SUPPORTING_EVIDENCE,ใบทะเบียนสมรส,Document,สามีหรือภรรยา,กรณีที่ผู้เสียหายถูกทำร้ายถึงตายหรือบาดเจ็บจนไม่สามารถจัดการเองได้,[21],13,17,"- ในกรณีที่ผู้เสียหายถูกทำร้ายถึงตาย
+หรือบาดเจ็บจนไม่สามารถจัดการเองได้ ให้นำ� หลักฐาน
+ซึ่งแสดงว่าเป็นบุพการีหรือผู้สืบสันดานหรือสามีหรือ
+ภรรยา (ซึ่งได้จดทะเบียน, สูติบัตร, ใบทะเบียนสมรส
+ฯลฯ) มาแสดงต่อเจ้าหน้าที่ตำรวจ",[]
+1.1,HAS_SUPPORTING_EVIDENCE,หนังสือมอบอำนาจของนิติบุคคล,Document,ผู้แทนของนิติบุคคล,ในกรณีที่เป็นผู้แทนของนิติบุคคล,[22],21,23,"- ในกรณีที่เป็นผู้แทนของนิติบุคคล
+ให้นำหนังสือมอบอำนาจของนิติบุคคลเป็นหลักฐาน
+รวมทั้งติดอากรแสตมป์ 5 บาท และหนังสือรับรอง",[]
+1.2,HANDLED_BY,สำนักงานทะเบียน,Organization,ผู้หาย,,[22],27,29,"(1) เมื่อบัตรหายหรือถูกทำลาย ให้แจ้งต่อ
+พนักงานเจ้าหน้าที่ที่สำนักงานทะเบียนที่ประสงค์
+จะทำบัตร (ไม่ต้องแจ้งความต่อเจ้าหน้าที่ตำรวจ)","['owner_not_literal_in_section_verify_semantics', 'check_condition_context']"
+1.2,NOT_HANDLED_BY,เจ้าหน้าที่ตำรวจ,PersonRole,ผู้หาย,,[22],29,29,จะทำบัตร (ไม่ต้องแจ้งความต่อเจ้าหน้าที่ตำรวจ),['owner_not_literal_in_section_verify_semantics']
+1.2,HAS_SUPPORTING_EVIDENCE,สำเนาทะเบียนบ้าน,Document,ผู้หาย,,[22],30,32,"(2) หลักฐานที่ต้องนำไปแสดงต่อเจ้าหน้าที่
+สำนักงานทะเบียน
+- สำเนาทะเบียนบ้าน",['owner_not_literal_in_section_verify_semantics']
+1.2,HAS_SUPPORTING_EVIDENCE,ใบอนุญาตขับรถ,Document,ผู้หาย,ถ้ามี,[22],33,34,"- เอกสารทีม่ รี ปู ถ่ายของผูข้ อมีบตั ร เช่น
+ใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี) หาก",['owner_not_literal_in_section_verify_semantics']
+1.2,HAS_SUPPORTING_EVIDENCE,ใบสุทธิ,Document,ผู้หาย,ถ้ามี,[22],33,34,"- เอกสารทีม่ รี ปู ถ่ายของผูข้ อมีบตั ร เช่น
+ใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี) หาก",['owner_not_literal_in_section_verify_semantics']
+1.2,HAS_SUPPORTING_EVIDENCE,หนังสือเดินทาง,Document,ผู้หาย,ถ้ามี,[22],33,34,"- เอกสารทีม่ รี ปู ถ่ายของผูข้ อมีบตั ร เช่น
+ใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี) หาก",['owner_not_literal_in_section_verify_semantics']
+1.2,CERTIFIED_BY,เจ้าบ้าน,PersonRole,ผู้หาย,หากไม่มีเอกสารที่มีรูปถ่าย,[22],35,36,"ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน
+ผู้ใหญ่บ้าน ไปให้การรับรอง",['owner_not_literal_in_section_verify_semantics']
+1.2,CERTIFIED_BY,กำนัน,PersonRole,ผู้หาย,หากไม่มีเอกสารที่มีรูปถ่าย,[22],35,36,"ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน
+ผู้ใหญ่บ้าน ไปให้การรับรอง",['owner_not_literal_in_section_verify_semantics']
+1.2,CERTIFIED_BY,ผู้ใหญ่บ้าน,PersonRole,ผู้หาย,หากไม่มีเอกสารที่มีรูปถ่าย,[22],35,36,"ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน
+ผู้ใหญ่บ้าน ไปให้การรับรอง",['owner_not_literal_in_section_verify_semantics']
+1.3,ABOUT_DOCUMENT,ใบอนุญาตขับรถ,Document,ผู้หาย,,[24],65,65,"เช่น ใบอนุญาตขับขี่รถยนต์, จักรยานยนต์, ",['owner_not_literal_in_section_verify_semantics']
+1.3,ABOUT_DOCUMENT,โฉนดที่ดิน,Document,ผู้หาย,,[24],66,66,"โฉนดที่ดิน, ใบสำคัญประจำตัวคนต่างด้าว ฯลฯ ",['owner_not_literal_in_section_verify_semantics']
+1.3,ABOUT_DOCUMENT,ใบสำคัญประจำตัวคนต่างด้าว,Document,ผู้หาย,,[24],66,66,"โฉนดที่ดิน, ใบสำคัญประจำตัวคนต่างด้าว ฯลฯ ",['owner_not_literal_in_section_verify_semantics']
+1.3,HANDLED_BY,สถานีตำรวจท้องที่ที่หาย,Organization,ผู้หาย,,[24],68,69,"(1) ยื่นคำร้องแจ้งว่าเอกสารดังกล่าวหาย
+ต่อสถานีตำรวจท้องที่ที่หาย",['owner_not_literal_in_section_verify_semantics']
+1.3,ISSUES,บันทึกประจำวัน,Document,เจ้าพนักงานตำรวจ,,[24],70,71,"(2) เจ้ า พนั ก งานตำ รวจจะสอบสวนว่ า
+หายจริงหรือไม่ แล้วลงบันทึกประจำวันไว้เป็นหลักฐาน",['check_condition_context']
+1.3,ISSUES,หลักฐานการแจ้งความเอกสารหาย,Document,เจ้าพนักงานตำรวจ,,[24],72,74,"(3) เจ้าพนักงานตำรวจจะออกหลักฐาน
+การแจ้งความเอกสารหายเพือ่ ให้ทา่ นนำไปยังหน่วยงาน
+ที่เกี่ยวข้องเพื่อดำเนินการต่อไป",[]
+1.4,HAS_SUPPORTING_EVIDENCE,บัตรประจำตัวผู้หาย,Document,ผู้หาย,ถ้ามี,[25],80,80,(1) บัตรประจำตัวผู้หาย (ถ้ามี),[]
+1.4,HAS_SUPPORTING_EVIDENCE,สำเนาทะเบียนบ้าน,Document,ผู้หาย,ถ้ามี,[25],81,81,(2) สำเนาทะเบียนบ้านของผู้หาย (ถ้ามี),[]
+1.4,HAS_SUPPORTING_EVIDENCE,ภาพถ่าย,Evidence,ผู้หาย,ปัจจุบัน,[25],82,82,(3) ภาพถ่ายคนหาย (ภาพถ่ายทีเ่ ป็นปัจจุบนั ),[]
+1.4,HAS_SUPPORTING_EVIDENCE,สูติบัตร,Document,ผู้หาย,ถ้ามี,[25],83,84,"(4) ใบสำคัญทางราชการ เช่น ใบเกิด,
+ใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)",[]
+1.4,HAS_SUPPORTING_EVIDENCE,ใบสำคัญทหาร,Document,ผู้หาย,ถ้ามี,[25],83,84,"(4) ใบสำคัญทางราชการ เช่น ใบเกิด,
+ใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)",[]
+1.5,CONTACT_VIA,191,Contact,ผู้แจ้งความ,,[25],88,88,แจ้งทาง 191 หรือ แจ้ง 1192 แล้วจึงนำหลักฐาน,"['owner_not_literal_in_section_verify_semantics', 'check_condition_context']"
+1.5,CONTACT_VIA,1192,Contact,ผู้แจ้งความ,,[25],88,88,แจ้งทาง 191 หรือ แจ้ง 1192 แล้วจึงนำหลักฐาน,"['owner_not_literal_in_section_verify_semantics', 'check_condition_context']"
+1.5,HANDLED_BY,เจ้าหน้าที่ตำรวจ,PersonRole,ผู้แจ้งความ,,[25],89,89,ไปแจ้งความต่อเจ้าหน้าที่ตำรวจ คือ,['owner_not_literal_in_section_verify_semantics']
+1.5,HAS_SUPPORTING_EVIDENCE,ใบทะเบียนรถยนต์รถจักรยานยนต์เรือหรือพาหนะอื่นๆที่หาย,Document,ผู้แจ้งความ,,[25],90,91,"(1) ใบทะเบียนรถยนต์ รถจักรยานยนต์ เรือ 
+หรือพาหนะอื่น ๆ ที่หาย","['owner_not_literal_in_section_verify_semantics', 'check_condition_context', 'check_compound_entity']"
+1.5,HAS_SUPPORTING_EVIDENCE,หนังสือรับรองบริษัท,Document,ตัวแทนนิติบุคคล,ถ้ายานพาหนะดังกล่าวเป็นของนิติบุคคล เป็นตัวแทนห้างร้าน บริษัท,[26],96,96,นั้นๆ ไป รวมทั้งหนังสือรับรองบริษัทด้วย,['owner_not_literal_in_section_verify_semantics']
+1.5,HAS_SUPPORTING_EVIDENCE,หนังสือเกี่ยวกับการติดต่อหรือเอกสารที่จะใช้เป็นพยานหลักฐานได้,Document,ผู้แจ้งความ,ถ้ามี,[26],97,98,"(4) หนังสือเกี่ยวกับการติดต่อหรือเอกสาร
+ที่จะใช้เป็นพยานหลักฐานได้ (ถ้ามี)","['owner_not_literal_in_section_verify_semantics', 'check_compound_entity']"
+1.6,HAS_SUPPORTING_EVIDENCE,ทะเบียนใบอนุญาตอาวุธปืน,Document,ผู้แจ้งความ,,[26],104,104,(1) ทะเบียนใบอนุญาตอาวุธปืน,['owner_not_literal_in_section_verify_semantics']
+1.6,HAS_SUPPORTING_EVIDENCE,ใบเสร็จรับเงินที่บริษัทห้างร้านขายปืนออกให้,Document,ผู้แจ้งความ,ถ้ามี,[26],105,106,"(2) ใบเสร็จรับเงินที่บริษัทห้างร้านขายปืน
+ออกให้ (ถ้ามี)",['owner_not_literal_in_section_verify_semantics']
+1.7,HAS_SUPPORTING_EVIDENCE,ใบเสร็จรับเงินซื้อขาย,Document,ผู้หาย,,[26],108,109,"(1) ใบเสร็จรับเงินซื้อขาย หรือหลักฐาน
+การแสดงการซื้อขายทรัพย์สินนั้น","['owner_not_literal_in_section_verify_semantics', 'check_condition_context']"
+1.7,HAS_SUPPORTING_EVIDENCE,หลักฐานการแสดงการซื้อขายทรัพย์สิน,Document,ผู้หาย,,[26],108,109,"(1) ใบเสร็จรับเงินซื้อขาย หรือหลักฐาน
+การแสดงการซื้อขายทรัพย์สินนั้น","['owner_not_literal_in_section_verify_semantics', 'check_condition_context']"
+1.7,HAS_SUPPORTING_EVIDENCE,รูปพรรณทรัพย์,Evidence,ผู้หาย,ถ้ามี,[26],110,111,"(2) รูปพรรณทรัพย์สนิ นัน้ ๆ เช่น หมายเลข
+เครื่อง ฯลฯ (ถ้ามี)",['owner_not_literal_in_section_verify_semantics']
+1.7,HAS_SUPPORTING_EVIDENCE,ตำหนิหรือลักษณะพิเศษต่างๆ,Evidence,ผู้หาย,,[26],112,112,(3) ตำหนิหรือลักษณะพิเศษต่าง ๆ,"['owner_not_literal_in_section_verify_semantics', 'check_condition_context', 'check_compound_entity']"
+1.7,HAS_SUPPORTING_EVIDENCE,เอกสารสำคัญต่างๆที่เกี่ยวข้อง,Document,ผู้หาย,เท่าที่มี,[26],113,113,(4) เอกสารสำคัญต่าง ๆ ที่เกี่ยวข้องเท่าที่มี,['owner_not_literal_in_section_verify_semantics']
+1.8,HAS_SUPPORTING_EVIDENCE,โฉนด,Document,ผู้เสียหาย,,[27],119,119,(1) ใบสำคัญตัวจริง เช่น โฉนด แบบ น.ส.3 ,['owner_not_literal_in_section_verify_semantics']
+1.8,HAS_SUPPORTING_EVIDENCE,แบบน.ส.3,Document,ผู้เสียหาย,,[27],119,119,(1) ใบสำคัญตัวจริง เช่น โฉนด แบบ น.ส.3 ,['owner_not_literal_in_section_verify_semantics']
+1.8,HAS_SUPPORTING_EVIDENCE,แบบส.ค.1,Document,ผู้เสียหาย,,[27],120,120,แบบ ส.ค.1 หนังสือสัญญา ใบเสร็จรับเงิน เป็นต้น,['owner_not_literal_in_section_verify_semantics']
+1.8,HAS_SUPPORTING_EVIDENCE,หนังสือสัญญา,Document,ผู้เสียหาย,,[27],120,120,แบบ ส.ค.1 หนังสือสัญญา ใบเสร็จรับเงิน เป็นต้น,['owner_not_literal_in_section_verify_semantics']
+1.8,HAS_SUPPORTING_EVIDENCE,ใบเสร็จรับเงิน,Document,ผู้เสียหาย,,[27],120,120,แบบ ส.ค.1 หนังสือสัญญา ใบเสร็จรับเงิน เป็นต้น,['owner_not_literal_in_section_verify_semantics']
+1.8,HAS_SUPPORTING_EVIDENCE,หนังสือที่ปลอมแปลง,Evidence,ผู้เสียหาย,,[27],121,121,(2) หนังสือที่ปลอมแปลง,['owner_not_literal_in_section_verify_semantics']
+1.8,HAS_SUPPORTING_EVIDENCE,ตัวอย่างตราที่ใช้ประทับหรือลายเซ็นในหนังสือ,Evidence,ผู้เสียหาย,,[27],122,123,"(3) ตัวอย่างตราที่ใช้ประทับหรือลายเซ็น
+ในหนังสือ","['owner_not_literal_in_section_verify_semantics', 'check_condition_context', 'check_compound_entity']"
+1.9,HAS_SUPPORTING_EVIDENCE,หนังสือหรือหลักฐานต่างๆที่เกี่ยวกับการถูกฉ้อโกง,Document,ผู้เสียหาย,,[27],125,126,"(1) หนังสือหรือหลักฐานต่างๆ ที่เกี่ยวกับ
+การถูกฉ้อโกง","['owner_not_literal_in_section_verify_semantics', 'check_condition_context', 'check_compound_entity']"
+1.9,HAS_SUPPORTING_EVIDENCE,หลักฐานแสดงการเป็นเจ้าของหรือผู้ครอบครองทรัพย์,Document,ผู้เสียหาย,,[27],127,128,"(2) หลักฐานแสดงการเป็นเจ้าของหรือ
+ผู้ครอบครองทรัพย์","['owner_not_literal_in_section_verify_semantics', 'check_condition_context', 'check_compound_entity']"
+1.10,HAS_SUPPORTING_EVIDENCE,สำเนาหรือคำสั่งศาลหรือพินัยกรรม,Document,ผู้เสียหาย,ในกรณีผู้กระทำผิดเป็นผู้จัดการทรัพย์สินผู้อื่นตามคำสั่งของศาลหรือพินัยกรรม,[28],133,135,"(3) สำเนาหรือคำสั่งศาล หรือพินัยกรรม
+ในกรณีผู้กระทำผิดเป็นผู้จัดการทรัพย์สินผู้อื่นตาม
+คำสั่งของศาลหรือพินัยกรรม","['owner_not_literal_in_section_verify_semantics', 'check_compound_entity']"
+1.11,HAS_SUPPORTING_EVIDENCE,ใบสำคัญติดต่อซื้อขาย,Document,ผู้เสียหาย,,[28],139,140,"ใบสำคัญติดต่อซื้อ ขาย เช่า ยืม หรือฝาก
+(2) ใบสำ คั ญ ที่ บ ริ ษั ท ห้ า งร้ า นออกให้","['owner_not_literal_in_section_verify_semantics', 'check_condition_context']"
+1.11,HAS_SUPPORTING_EVIDENCE,ใบสำคัญที่บริษัทห้างร้านออกให้,Document,ผู้เสียหาย,ระบุรูปพรรณ ยี่ห้อ สี ขนาด น้ำหนัก และเลขหมายประจำตัวทรัพย์,[28],140,142,"(2) ใบสำ คั ญ ที่ บ ริ ษั ท ห้ า งร้ า นออกให้
+โดยระบุรปู พรรณ ยีห่ อ้ สี ขนาด นำ้ หนัก และเลขหมาย
+ประจำตัวทรัพย์นั้น",['owner_not_literal_in_section_verify_semantics']
+1.12,HAS_SUPPORTING_EVIDENCE,หลักฐานหรือสิ่งของที่เสียหายเท่าที่มีหรือเท่าที่นำไปได้,Evidence,ผู้เสียหาย,,[28],146,147,"(2) หลักฐานหรือสิ่งของที่เสียหายเท่าที่มี
+หรือเท่าที่นำไปได้","['owner_not_literal_in_section_verify_semantics', 'check_condition_context', 'check_compound_entity']"
+1.13,HAS_SUPPORTING_EVIDENCE,สำเนาทะเบียนบ้าน,Document,ผู้เยาว์,,[29],153,153,(1) สำเนาทะเบียนบ้านของผู้เยาว์,[]
+1.13,HAS_SUPPORTING_EVIDENCE,สูติบัตร,Document,ผู้เยาว์,,[29],154,154,(2) ใบเกิดของผู้เยาว์ (สูติบัตร),[]
+1.13,HAS_SUPPORTING_EVIDENCE,ภาพถ่าย,Evidence,ผู้เยาว์,,[29],155,155,(3) รูปถ่ายของผู้เยาว์,[]
+1.13,HAS_SUPPORTING_EVIDENCE,หลักฐานสำคัญอื่นๆที่เกี่ยวกับผู้เยาว์,Document,ผู้เยาว์,ถ้ามี,[29],156,157,"(4) หลักฐานสำคัญอื่น ๆ ที่เกี่ยวกับผู้เยาว์ 
+(ถ้ามี)",[]
+1.14,HAS_SUPPORTING_EVIDENCE,เสื้อผ้าของผู้ที่ถูกข่มขืนฯซึ่งมีคราบอสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืน,Evidence,ผู้เสียหาย,,[29],159,160,"(1) เสื้อผ้าของผู้ที่ถูกข่มขืนฯ ซึ่งมีคราบ
+อสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืนและ","['check_condition_context', 'check_compound_entity']"
+1.14,HAS_SUPPORTING_EVIDENCE,สิ่งของต่างๆของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ,Evidence,ผู้เสียหาย,,[29],161,162,"สิ่งของต่างๆ ของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ
+(2) บัตรประจำตัวประชาชนและสำเนา",[]
+1.14,HAS_SUPPORTING_EVIDENCE,บัตรประจำตัวประชาชน,Document,ผู้เสียหาย,,[29],162,163,"(2) บัตรประจำตัวประชาชนและสำเนา
+ทะเบียนบ้านของผู้เสียหาย",[]
+1.14,HAS_SUPPORTING_EVIDENCE,สำเนาทะเบียนบ้าน,Document,ผู้เสียหาย,,[29],162,163,"(2) บัตรประจำตัวประชาชนและสำเนา
+ทะเบียนบ้านของผู้เสียหาย",[]
+1.14,HAS_SUPPORTING_EVIDENCE,ที่อยู่ของผู้ต้องสงสัย,Evidence,ผู้เสียหาย,ถ้ามี,[29],164,165,"(3) รูปถ่าย หรือที่อยู่ของผู้ต้องสงสัย 
+ตลอดจนหลักฐานอื่น ๆ (ถ้ามี)",[]
+1.16,HAS_SUPPORTING_EVIDENCE,เช็ค,Document,ผู้เสียหาย,,[30],178,178,(1) เช็คที่ยึดไว้,['owner_not_literal_in_section_verify_semantics']

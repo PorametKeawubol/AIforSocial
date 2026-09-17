@@ -1,0 +1,7 @@
+{
+  "imported": true,
+  "nodes": 79,
+  "relationships": 97,
+  "all_nodes_reachable_from_source_within_two_hops": 79,
+  "idempotent_design": "MERGE nodes and HAS_SECTION; reviewed relationships matched by stable id"
+}

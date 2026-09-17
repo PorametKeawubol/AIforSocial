@@ -1,0 +1,223 @@
+<!doctype html><html lang="th"><meta charset="utf-8"><style>body{font-family:"Noto Sans Thai",Tahoma,sans-serif;background:#eff5f2;color:#17352d;margin:0;padding:40px;line-height:1.7}main{max-width:1200px;margin:auto}h1{font-size:32px}h2{color:#207359}article{background:white;padding:28px;border-radius:18px;margin:22px 0;border:1px solid #d9e6df}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}table{width:100%;border-collapse:collapse}td,th{border-bottom:1px solid #d9e6df;padding:10px;text-align:left}.tag{color:#267454;font-weight:bold}a{color:#207359}td{font-size:13px;overflow-wrap:anywhere}table{table-layout:fixed}</style><main><h1>Model II · GraphDatabase + ThaiNameTagger</h1><p>160 nodes · 254 relationships · PDF 48 pages</p><p>Real ThaiNameTagger 1.4 CPU NER and regex. Nearby entities connected as CO_OCCURS_WITH; this is not a factual disease/location relation. Worksheet software dictionary has no relevance to plant PDF and is omitted. Final BIO entity is flushed.</p><p>Graph screenshot shows up to 18 relationships; CSV and JSON contain all records.</p><img src="neo4j_graph.png" style="width:100%"><h2>Table — Neo4j export</h2><table><thead><tr><th>subject</th><th>relation</th><th>object</th><th>page</th><th>method</th></tr></thead><tbody><tr><td>1413
+	
+	Website</td><td>CO_OCCURS_WITH</td><td>www.pidthong.org</td><td>2</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>กรุงเทพมหานคร</td><td>CO_OCCURS_WITH</td><td>1413
+	
+	Website</td><td>2</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>กรุงเทพมหานคร</td><td>CO_OCCURS_WITH</td><td>www.pidthong.org</td><td>2</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ถนนพระราม</td><td>CO_OCCURS_WITH</td><td>แขวงปทุมวัน</td><td>2</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ถนนพระราม</td><td>CO_OCCURS_WITH</td><td>เขตปทุมวัน</td><td>2</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ปีที่พิมพ์ 	
+สิงหาคม</td><td>CO_OCCURS_WITH</td><td>ถนนพระราม</td><td>2</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ปีที่พิมพ์ 	
+สิงหาคม</td><td>CO_OCCURS_WITH</td><td>สถาบันส่งเสริมและพัฒนากิจกรรมปิดทองหลังพระ</td><td>2</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สถาบันส่งเสริมและพัฒนากิจกรรมปิดทองหลังพระ</td><td>CO_OCCURS_WITH</td><td>ถนนพระราม</td><td>2</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สถาบันส่งเสริมและพัฒนากิจกรรมปิดทองหลังพระ</td><td>CO_OCCURS_WITH</td><td>แขวงปทุมวัน</td><td>2</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เขตปทุมวัน</td><td>CO_OCCURS_WITH</td><td>1413
+	
+	Website</td><td>2</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เขตปทุมวัน</td><td>CO_OCCURS_WITH</td><td>กรุงเทพมหานคร</td><td>2</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>แขวงปทุมวัน</td><td>CO_OCCURS_WITH</td><td>กรุงเทพมหานคร</td><td>2</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>แขวงปทุมวัน</td><td>CO_OCCURS_WITH</td><td>เขตปทุมวัน</td><td>2</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>กาฬสินธุ์</td><td>CO_OCCURS_WITH</td><td>เพชรบุรี</td><td>3</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>กาฬสินธุ์</td><td>CO_OCCURS_WITH</td><td>อุทัยธานี</td><td>3</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>จังหวัดน่าน</td><td>CO_OCCURS_WITH</td><td>อุดรธานี</td><td>3</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>จังหวัดน่าน</td><td>CO_OCCURS_WITH</td><td>กาฬสินธุ์</td><td>3</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สถาบันส่งเสริมและพัฒนากิจกรรมปิดทองหลังพระ</td><td>CO_OCCURS_WITH</td><td>อุดรธานี</td><td>3</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สถาบันส่งเสริมและพัฒนากิจกรรมปิดทองหลังพระ</td><td>CO_OCCURS_WITH</td><td>จังหวัดน่าน</td><td>3</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>อุดรธานี</td><td>CO_OCCURS_WITH</td><td>กาฬสินธุ์</td><td>3</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>อุดรธานี</td><td>CO_OCCURS_WITH</td><td>อุทัยธานี</td><td>3</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>อุทัยธานี</td><td>CO_OCCURS_WITH</td><td>เพชรบุรี</td><td>3</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ทฤษฏีการห่มดิน</td><td>CO_OCCURS_WITH</td><td>โรคแคงเกอร์”</td><td>4</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ทฤษฏีการห่มดิน</td><td>CO_OCCURS_WITH</td><td>โรครากเน่าโคนเน่า</td><td>4</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>โรครากเน่าโคนเน่า</td><td>CO_OCCURS_WITH</td><td>โรคแคงเกอร์”</td><td>4</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>โรครากเน่าโคนเน่า</td><td>CO_OCCURS_WITH</td><td>16
+38
+46
+9
+20
+41
+12
+23
+43
+ÕÁ¤àÂ‰Ø»
+หลากหลาย</td><td>4</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>โรคแคงเกอร์”</td><td>CO_OCCURS_WITH</td><td>16
+38
+46
+9
+20
+41
+12
+23
+43
+ÕÁ¤àÂ‰Ø»
+หลากหลาย</td><td>4</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>พระบาทสมเด็จ 
+พระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดช
+มหาราช บรมนาถบพิตร</td><td>CO_OCCURS_WITH</td><td>ไทย</td><td>6</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>พระบาทสมเด็จ 
+พระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดช
+มหาราช บรมนาถบพิตร</td><td>CO_OCCURS_WITH</td><td>สหประชาชาติ</td><td>6</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สหประชาชาติ</td><td>CO_OCCURS_WITH</td><td>ไทย</td><td>6</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ไทยเป็นอย่างมาก</td><td>CO_OCCURS_WITH</td><td>พระบาทสมเด็จ 
+พระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดช
+มหาราช บรมนาถบพิตร</td><td>6</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ไทยเป็นอย่างมาก</td><td>CO_OCCURS_WITH</td><td>สหประชาชาติ</td><td>6</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>หมักชีวภาพรส
+จืด</td><td>CO_OCCURS_WITH</td><td>ปุ๋ยน้ำรสจืด</td><td>8</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ปุ๋ยน้ำรสจืด</td><td>CO_OCCURS_WITH</td><td>หมักสมุนไพร
+รสจืด</td><td>10</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>หมักสมุนไพรรสจืดผสมน้ำ อัตราส่วน</td><td>CO_OCCURS_WITH</td><td>ปุ๋ยน้ำรสจืด</td><td>10</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>หมักสมุนไพรรสจืดผสมน้ำ อัตราส่วน</td><td>CO_OCCURS_WITH</td><td>โดยการนำน้ำมาหมักสมุนไพรรส
+จืด</td><td>10</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>โดยการนำน้ำมาหมักสมุนไพรรส
+จืด</td><td>CO_OCCURS_WITH</td><td>หมักสมุนไพร
+รสจืด</td><td>10</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>โดยการนำน้ำมาหมักสมุนไพรรส
+จืด</td><td>CO_OCCURS_WITH</td><td>ปุ๋ยน้ำรสจืด</td><td>10</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>3 เดือน</td><td>CO_OCCURS_WITH</td><td>ลอยอยู่ผิวน้ำ</td><td>13</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>10 วัน</td><td>CO_OCCURS_WITH</td><td>7-15 วัน</td><td>14</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>10 วัน</td><td>CO_OCCURS_WITH</td><td>15 วัน</td><td>14</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>15 วัน</td><td>CO_OCCURS_WITH</td><td>20 วัน</td><td>14</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7-15 วัน</td><td>CO_OCCURS_WITH</td><td>20 วัน</td><td>14</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7-15 วัน</td><td>CO_OCCURS_WITH</td><td>15 วัน</td><td>14</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>10 วัน</td><td>CO_OCCURS_WITH</td><td>15 วัน</td><td>15</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>10 วัน</td><td>CO_OCCURS_WITH</td><td>20 วัน</td><td>15</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>15 วัน</td><td>CO_OCCURS_WITH</td><td>20 วัน</td><td>15</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>2%</td><td>CO_OCCURS_WITH</td><td>25%</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>2%</td><td>CO_OCCURS_WITH</td><td>ไดพีโนโคนาโซล</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>25%</td><td>CO_OCCURS_WITH</td><td>ซีซี</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>25%</td><td>CO_OCCURS_WITH</td><td>แมนโคเซบ</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7 วัน</td><td>CO_OCCURS_WITH</td><td>2%</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7 วัน</td><td>CO_OCCURS_WITH</td><td>น้ำตาลแดง</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ซีซี</td><td>CO_OCCURS_WITH</td><td>80%</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ซีซี</td><td>CO_OCCURS_WITH</td><td>แมนโคเซบ</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ซีซี/น้ำ 20</td><td>CO_OCCURS_WITH</td><td>ไดฟีโนโคนาโซล</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ซีซี/น้ำ 20</td><td>CO_OCCURS_WITH</td><td>ลิตร 
+โพรพิโคนาโซล</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>น้ำตาลแดง</td><td>CO_OCCURS_WITH</td><td>ไดพีโนโคนาโซล</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>น้ำตาลแดง</td><td>CO_OCCURS_WITH</td><td>2%</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ลิตร 
+โพรพิโคนาโซล</td><td>CO_OCCURS_WITH</td><td>7 วัน</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ลิตร 
+โพรพิโคนาโซล</td><td>CO_OCCURS_WITH</td><td>ไดฟีโนโคนาโซล</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>อะโซซิสโตรบิน+ 
+ไดฟีโนโคนาโซล</td><td>CO_OCCURS_WITH</td><td>ลิตร 
+โพรพิโคนาโซล</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>อะโซซิสโตรบิน+ 
+ไดฟีโนโคนาโซล</td><td>CO_OCCURS_WITH</td><td>ซีซี/น้ำ 20</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>แมนโคเซบ</td><td>CO_OCCURS_WITH</td><td>80%</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ไดพีโนโคนาโซล</td><td>CO_OCCURS_WITH</td><td>ซีซี</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ไดพีโนโคนาโซล</td><td>CO_OCCURS_WITH</td><td>25%</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ไดฟีโนโคนาโซล</td><td>CO_OCCURS_WITH</td><td>7 วัน</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ไดฟีโนโคนาโซล</td><td>CO_OCCURS_WITH</td><td>น้ำตาลแดง</td><td>17</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>1.5%</td><td>CO_OCCURS_WITH</td><td>ข้อที่อยู่ 
+เหนือดิน
+มีรอยช้ำ
+สีน้ำตาล</td><td>18</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>1.5%</td><td>CO_OCCURS_WITH</td><td>ข้อที่อยู่ 
+เหนือดิน
+มีรอยช้ำ
+สีน้ำตาล</td><td>18</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ซีซี/เมล็ด</td><td>CO_OCCURS_WITH</td><td>1.5%</td><td>18</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ซีซี/เมล็ด</td><td>CO_OCCURS_WITH</td><td>สารไดเมโทมอร์ฟ</td><td>18</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สารไดเมโทมอร์ฟ</td><td>CO_OCCURS_WITH</td><td>1.5%</td><td>18</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สารไดเมโทมอร์ฟ</td><td>CO_OCCURS_WITH</td><td>ข้อที่อยู่ 
+เหนือดิน
+มีรอยช้ำ
+สีน้ำตาล</td><td>18</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ใบข้าวโพดจะมีลายสีเขียวอ่อน</td><td>CO_OCCURS_WITH</td><td>สารไดเมโทมอร์ฟ</td><td>18</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ใบข้าวโพดจะมีลายสีเขียวอ่อน</td><td>CO_OCCURS_WITH</td><td>ซีซี/เมล็ด</td><td>18</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ด่างลายเขียวซีด
+สลับเขียวเข้ม</td><td>CO_OCCURS_WITH</td><td>ยอดอ่อน
+มีสีเหลืองซีด</td><td>19</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ด่างลายเขียวซีด
+สลับเขียวเข้ม</td><td>CO_OCCURS_WITH</td><td>กาบใบมีสี
+เขียวอ่อน</td><td>19</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ยอดอ่อน
+มีสีเหลืองซีด</td><td>CO_OCCURS_WITH</td><td>กาบใบมีสี
+เขียวอ่อน</td><td>19</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>จ.เชียงราย</td><td>CO_OCCURS_WITH</td><td>แคงเกอร์ในมะนาว</td><td>20</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>จ.เชียงราย</td><td>CO_OCCURS_WITH</td><td>โรคแคงเกอร์ในมะนาว</td><td>20</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ต.แม่อ้อ</td><td>CO_OCCURS_WITH</td><td>จ.เชียงราย</td><td>20</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ต.แม่อ้อ</td><td>CO_OCCURS_WITH</td><td>อ.พาน</td><td>20</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>นายสิรภพ สิทธิปัญญา เจ้าของสวนมะนาวเมืองพาน บ้านใหม่ 
+เจริญ</td><td>CO_OCCURS_WITH</td><td>ต.แม่อ้อ</td><td>20</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>นายสิรภพ สิทธิปัญญา เจ้าของสวนมะนาวเมืองพาน บ้านใหม่ 
+เจริญ</td><td>CO_OCCURS_WITH</td><td>หมู่ 12</td><td>20</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ปราบโรคแคงเกอร์
+โรคร้ายในมะนาว
+โรคแคงเกอร์</td><td>CO_OCCURS_WITH</td><td>หมู่ 12</td><td>20</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ปราบโรคแคงเกอร์
+โรคร้ายในมะนาว
+โรคแคงเกอร์</td><td>CO_OCCURS_WITH</td><td>นายสิรภพ สิทธิปัญญา เจ้าของสวนมะนาวเมืองพาน บ้านใหม่ 
+เจริญ</td><td>20</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>หมู่ 12</td><td>CO_OCCURS_WITH</td><td>อ.พาน</td><td>20</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>หมู่ 12</td><td>CO_OCCURS_WITH</td><td>ต.แม่อ้อ</td><td>20</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>อ.พาน</td><td>CO_OCCURS_WITH</td><td>จ.เชียงราย</td><td>20</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>อ.พาน</td><td>CO_OCCURS_WITH</td><td>แคงเกอร์ในมะนาว</td><td>20</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>แคงเกอร์ในมะนาว</td><td>CO_OCCURS_WITH</td><td>โรคแคงเกอร์ในมะนาว</td><td>20</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>10 นาที</td><td>CO_OCCURS_WITH</td><td>5-10 นาที</td><td>21</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>10 นาที</td><td>CO_OCCURS_WITH</td><td>21
+	 วิธีที่ 1
+	 วัตถุดิบที่ใช้ 
+	 1.	ปูนกินหมาก 2 ขีด
+	 2.	น้ำเปล่า 20 ลิตร
+	 วิธีใช้</td><td>21</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>21
+	 วิธีที่ 1
+	 วัตถุดิบที่ใช้ 
+	 1.	ปูนกินหมาก 2 ขีด
+	 2.	น้ำเปล่า 20 ลิตร
+	 วิธีใช้</td><td>CO_OCCURS_WITH</td><td>5-10 นาที</td><td>21</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>21
+	 วิธีที่ 1
+	 วัตถุดิบที่ใช้ 
+	 1.	ปูนกินหมาก 2 ขีด
+	 2.	น้ำเปล่า 20 ลิตร
+	 วิธีใช้</td><td>CO_OCCURS_WITH</td><td>3 วัน</td><td>21</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>5-10 นาที</td><td>CO_OCCURS_WITH</td><td>3 วัน</td><td>21</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>10 นาที</td><td>CO_OCCURS_WITH</td><td>น้ำปูนใส</td><td>22</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>10 นาที</td><td>CO_OCCURS_WITH</td><td>15-20 นาที</td><td>22</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>100 ลิตร
+ปูนขาวก่อสร้าง</td><td>CO_OCCURS_WITH</td><td>น้ำปูนใส</td><td>22</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>100 ลิตร
+ปูนขาวก่อสร้าง</td><td>CO_OCCURS_WITH</td><td>10 นาที</td><td>22</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>15-20 นาที</td><td>CO_OCCURS_WITH</td><td>7 วัน</td><td>22</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>15-20 นาที</td><td>CO_OCCURS_WITH</td><td>แคงเกอร์</td><td>22</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7 วัน</td><td>CO_OCCURS_WITH</td><td>แคงเกอร์</td><td>22</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>น้ำปูนใส</td><td>CO_OCCURS_WITH</td><td>7 วัน</td><td>22</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>น้ำปูนใส</td><td>CO_OCCURS_WITH</td><td>15-20 นาที</td><td>22</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>น้ำปูนใสเสี่อมสภาพ</td><td>CO_OCCURS_WITH</td><td>100 ลิตร
+ปูนขาวก่อสร้าง</td><td>22</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>น้ำปูนใสเสี่อมสภาพ</td><td>CO_OCCURS_WITH</td><td>10 นาที</td><td>22</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สารคาร์เบ็นดาซิม</td><td>CO_OCCURS_WITH</td><td>30 นาที</td><td>24</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>แผลอาจมีเมือกสีส้มอ่อน ผลพริก</td><td>CO_OCCURS_WITH</td><td>สารคาร์เบ็นดาซิม</td><td>24</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>แผลอาจมีเมือกสีส้มอ่อน ผลพริก</td><td>CO_OCCURS_WITH</td><td>30 นาที</td><td>24</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>โรคแอนแทร็กโนสห</td><td>CO_OCCURS_WITH</td><td>สารคาร์เบ็นดาซิม</td><td>24</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>โรคแอนแทร็กโนสห</td><td>CO_OCCURS_WITH</td><td>แผลอาจมีเมือกสีส้มอ่อน ผลพริก</td><td>24</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ยอดอ่อน ใบอ่อน ตาดอก</td><td>CO_OCCURS_WITH</td><td>สารไทอะเบน
+ดาโซล</td><td>25</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ยอดอ่อน ใบอ่อน ตาดอก</td><td>CO_OCCURS_WITH</td><td>สารไตรโฟรีน 
+สารประกอบทองแดง</td><td>25</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สารไตรโฟรีน 
+สารประกอบทองแดง</td><td>CO_OCCURS_WITH</td><td>สารไทอะเบน
+ดาโซล</td><td>25</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สารไตรโฟรีน 
+สารประกอบทองแดง</td><td>CO_OCCURS_WITH</td><td>หมัก
+สมุนไพรกำจัด
+เว้นระยะ</td><td>25</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สารไทอะเบน
+ดาโซล</td><td>CO_OCCURS_WITH</td><td>หมัก
+สมุนไพรกำจัด
+เว้นระยะ</td><td>25</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เชื้อราฟูซาเรียม 
+	 ออกซิสปอรัม
+โรคนี้</td><td>CO_OCCURS_WITH</td><td>เมตาแลกซิลหรือสารอีทริไดอะโซล</td><td>26</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เชื้อราฟูซาเรียม 
+	 ออกซิสปอรัม
+โรคนี้</td><td>CO_OCCURS_WITH</td><td>สารพีซีเอ็นบีผสมอีทริไดอะโซล</td><td>26</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เมตาแลกซิลหรือสารอีทริไดอะโซล</td><td>CO_OCCURS_WITH</td><td>สารพีซีเอ็นบีผสมอีทริไดอะโซล</td><td>26</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เชื้อราไตรโคเดอร์มา</td><td>CO_OCCURS_WITH</td><td>สารเมทาแลกซิล</td><td>27</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เชื้อราไฟทอฟทอรา
+	 แคพไซไค
+	 ลักษณะอาการ</td><td>CO_OCCURS_WITH</td><td>เชื้อราไตรโคเดอร์มา</td><td>27</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เชื้อราไฟทอฟทอรา
+	 แคพไซไค
+	 ลักษณะอาการ</td><td>CO_OCCURS_WITH</td><td>สารเมทาแลกซิล</td><td>27</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>30 
+นาที</td><td>CO_OCCURS_WITH</td><td>ผงจุลินทรีย์บาซิลลัส ซับติลิส</td><td>29</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>30 
+นาที</td><td>CO_OCCURS_WITH</td><td>เชื้อราไตรโคเดอร์มา 
+ฮาร์เซียนัม</td><td>29</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7 วัน</td><td>CO_OCCURS_WITH</td><td>30 
+นาที</td><td>29</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7 วัน</td><td>CO_OCCURS_WITH</td><td>น้ำ
+อุ่นอุณหภูมิ 50</td><td>29</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>น้ำ
+อุ่นอุณหภูมิ 50</td><td>CO_OCCURS_WITH</td><td>30 
+นาที</td><td>29</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>น้ำ
+อุ่นอุณหภูมิ 50</td><td>CO_OCCURS_WITH</td><td>เชื้อราไตรโคเดอร์มา 
+ฮาร์เซียนัม</td><td>29</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ผงจุลินทรีย์บาซิลลัส ซับติลิส</td><td>CO_OCCURS_WITH</td><td>เทอร์ราคลอร์</td><td>29</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ผงจุลินทรีย์บาซิลลัส ซับติลิส</td><td>CO_OCCURS_WITH</td><td>สารเทอร์ราคลอร์ 
+ซูเปอร์-เอกซ์</td><td>29</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สารเทอร์ราคลอร์ 
+ซูเปอร์-เอกซ์</td><td>CO_OCCURS_WITH</td><td>เชื้อราไตรโคเดอร์มา
+แช่เมล็ดพันธุ์</td><td>29</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สารเทอร์ราคลอร์ 
+ซูเปอร์-เอกซ์</td><td>CO_OCCURS_WITH</td><td>เชื้อราไตรโคเดอร์มา
+แช่เมล็ดพันธุ์</td><td>29</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เชื้อราไตรโคเดอร์มา 
+ฮาร์เซียนัม</td><td>CO_OCCURS_WITH</td><td>เทอร์ราคลอร์</td><td>29</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เชื้อราไตรโคเดอร์มา 
+ฮาร์เซียนัม</td><td>CO_OCCURS_WITH</td><td>ผงจุลินทรีย์บาซิลลัส ซับติลิส</td><td>29</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เทอร์ราคลอร์</td><td>CO_OCCURS_WITH</td><td>เชื้อราไตรโคเดอร์มา
+แช่เมล็ดพันธุ์</td><td>29</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เทอร์ราคลอร์</td><td>CO_OCCURS_WITH</td><td>สารเทอร์ราคลอร์ 
+ซูเปอร์-เอกซ์</td><td>29</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เทอร์ราคลอร์</td><td>CO_OCCURS_WITH</td><td>เชื้อราไตรโคเดอร์มา
+แช่เมล็ดพันธุ์</td><td>29</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เทอร์ราคลอร์</td><td>CO_OCCURS_WITH</td><td>สารเทอร์ราคลอร์ 
+ซูเปอร์-เอกซ์</td><td>29</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ใบด่าง มีสีเขียวอ่อนสลับสีเขียวเข้ม</td><td>CO_OCCURS_WITH</td><td>ใบเล็กลง ผลมีจุดสีเหลืองซีด ผิวผลหยาบ 
+ผลมีรูปร่างผิดปกติ</td><td>31</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>2 สัปดาห์</td><td>CO_OCCURS_WITH</td><td>โดยมีพืชอาศัย
+หลายชนิด เช่น กระเจี๊ยบมอญ แตงกวา พืช
+ตระกูลถั่วบางชนิด บวบเหลี่ยม พริก ฟักเขียว 
+ฟักทอง มะเขือเทศ มะระจีน กะทกรก ครอบ
+จักรวาล พันงูเขียว มะเขือยักษ์ ไม้กวาด 
+สาบแร้งสาบกา ผักแครด</td><td>32</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สารอิมิดาโคลพริด สารคาร์โบซัลแฟน สารอะซีเฟต สารไบเฟนทริน</td><td>CO_OCCURS_WITH</td><td>หมักสมุนไพรกำจัดแมลงหวี่ขาว</td><td>33</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ชิด
+กันจนเกินไป</td><td>CO_OCCURS_WITH</td><td>เบโนมิล</td><td>34</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>แผลสีน้ำตาลอ่อน กลางแผลสีเทา</td><td>CO_OCCURS_WITH</td><td>ชิด
+กันจนเกินไป</td><td>34</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>แผลสีน้ำตาลอ่อน กลางแผลสีเทา</td><td>CO_OCCURS_WITH</td><td>เบโนมิล</td><td>34</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7 วัน</td><td>CO_OCCURS_WITH</td><td>สารฟอสฟอริกแอซิด</td><td>35</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7 วัน</td><td>CO_OCCURS_WITH</td><td>เชื้อราไตรโคเดอร์มา และแบคทีเรีย
+บาซิลลัส ซับทีลิส หรือสารเมทาแล็กซิล</td><td>35</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สารฟอสฟอริกแอซิด</td><td>CO_OCCURS_WITH</td><td>ฉีดสารเดอโรซาน</td><td>35</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สารฟอสฟอริกแอซิด</td><td>CO_OCCURS_WITH</td><td>สารรอฟรัส</td><td>35</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สารรอฟรัส</td><td>CO_OCCURS_WITH</td><td>ฉีดสารเดอโรซาน</td><td>35</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เชื้อราไตรโคเดอร์มา และแบคทีเรีย
+บาซิลลัส ซับทีลิส หรือสารเมทาแล็กซิล</td><td>CO_OCCURS_WITH</td><td>สารฟอสฟอริกแอซิด</td><td>35</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เชื้อราไตรโคเดอร์มา และแบคทีเรีย
+บาซิลลัส ซับทีลิส หรือสารเมทาแล็กซิล</td><td>CO_OCCURS_WITH</td><td>สารรอฟรัส</td><td>35</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>5 เซนติเมตร</td><td>CO_OCCURS_WITH</td><td>8 ชั่วโมง</td><td>37</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>5 เซนติเมตร</td><td>CO_OCCURS_WITH</td><td>7 วัน</td><td>37</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7 วัน</td><td>CO_OCCURS_WITH</td><td>ปอเทือง</td><td>37</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>8 ชั่วโมง</td><td>CO_OCCURS_WITH</td><td>ปอเทือง</td><td>37</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>8 ชั่วโมง</td><td>CO_OCCURS_WITH</td><td>7 วัน</td><td>37</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สำโรงเย็น
+	 การป้องกัน</td><td>CO_OCCURS_WITH</td><td>5 เซนติเมตร</td><td>37</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สำโรงเย็น
+	 การป้องกัน</td><td>CO_OCCURS_WITH</td><td>8 ชั่วโมง</td><td>37</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>อภิชาติ ศรีสะอาด</td><td>CO_OCCURS_WITH</td><td>5 เซนติเมตร</td><td>37</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>อภิชาติ ศรีสะอาด</td><td>CO_OCCURS_WITH</td><td>สำโรงเย็น
+	 การป้องกัน</td><td>37</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ประเทศไทย</td><td>CO_OCCURS_WITH</td><td>ภาคตะวันออกเฉียงเหนือ</td><td>38</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ประเทศไทย</td><td>CO_OCCURS_WITH</td><td>ภาคเหนือ</td><td>38</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ภาคเหนือ</td><td>CO_OCCURS_WITH</td><td>ภาคตะวันออกเฉียงเหนือ</td><td>38</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7-10 วัน</td><td>CO_OCCURS_WITH</td><td>www.rakbankerd.com</td><td>40</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>จ.สงขลา</td><td>CO_OCCURS_WITH</td><td>ช่วงเช้า</td><td>40</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>จ.สงขลา</td><td>CO_OCCURS_WITH</td><td>ซีซี</td><td>40</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ช่วงเช้า</td><td>CO_OCCURS_WITH</td><td>7-10 วัน</td><td>40</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ช่วงเช้า</td><td>CO_OCCURS_WITH</td><td>ซีซี</td><td>40</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ซีซี</td><td>CO_OCCURS_WITH</td><td>www.rakbankerd.com</td><td>40</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ซีซี</td><td>CO_OCCURS_WITH</td><td>7-10 วัน</td><td>40</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ต.บ้านขาว</td><td>CO_OCCURS_WITH</td><td>อ.ระโนด</td><td>40</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ต.บ้านขาว</td><td>CO_OCCURS_WITH</td><td>จ.สงขลา</td><td>40</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>นายสมปอง ฉิมดำ</td><td>CO_OCCURS_WITH</td><td>อ.ระโนด</td><td>40</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>นายสมปอง ฉิมดำ</td><td>CO_OCCURS_WITH</td><td>ต.บ้านขาว</td><td>40</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>อ.ระโนด</td><td>CO_OCCURS_WITH</td><td>จ.สงขลา</td><td>40</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>อ.ระโนด</td><td>CO_OCCURS_WITH</td><td>ช่วงเช้า</td><td>40</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>พิเทียม ทำให้เกิดรากเน่า โคนเน่า</td><td>CO_OCCURS_WITH</td><td>เชื้อราไฟทอฟทอรา ทำให้เกิดโรครากเน่าโคนเน่าในไม้ผล เชื้อรา 
+สเคลอโรเทียม</td><td>41</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>พิเทียม ทำให้เกิดรากเน่า โคนเน่า</td><td>CO_OCCURS_WITH</td><td>เชื้อราฟูซาเรียม</td><td>41</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เชื้อราฟูซาเรียม</td><td>CO_OCCURS_WITH</td><td>เชื้อราไรซ็อกโทเนีย</td><td>41</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เชื้อราไฟทอฟทอรา ทำให้เกิดโรครากเน่าโคนเน่าในไม้ผล เชื้อรา 
+สเคลอโรเทียม</td><td>CO_OCCURS_WITH</td><td>เชื้อราฟูซาเรียม</td><td>41</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เชื้อราไฟทอฟทอรา ทำให้เกิดโรครากเน่าโคนเน่าในไม้ผล เชื้อรา 
+สเคลอโรเทียม</td><td>CO_OCCURS_WITH</td><td>เชื้อราไรซ็อกโทเนีย</td><td>41</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ชมรมเกษตรปลอดสารพิษ
+นำเชื้อราไตรโคเดอร์มามาโรย</td><td>CO_OCCURS_WITH</td><td>หว่านรอบทรงพุ่ม
+นำไตรโคเดอร์มาผสม</td><td>42</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เชื้อราไตรโคเดอร์มา</td><td>CO_OCCURS_WITH</td><td>ไตรโคเดอร์มา</td><td>42</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เชื้อราไตรโคเดอร์มา</td><td>CO_OCCURS_WITH</td><td>ชมรมเกษตรปลอดสารพิษ
+นำเชื้อราไตรโคเดอร์มามาโรย</td><td>42</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>แอนแทรกโนส</td><td>CO_OCCURS_WITH</td><td>เชื้อราไตรโคเดอร์มา</td><td>42</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>แอนแทรกโนส</td><td>CO_OCCURS_WITH</td><td>ไตรโคเดอร์มา</td><td>42</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ไตรโคเดอร์มา</td><td>CO_OCCURS_WITH</td><td>ชมรมเกษตรปลอดสารพิษ
+นำเชื้อราไตรโคเดอร์มามาโรย</td><td>42</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ไตรโคเดอร์มา</td><td>CO_OCCURS_WITH</td><td>หว่านรอบทรงพุ่ม
+นำไตรโคเดอร์มาผสม</td><td>42</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>2 วัน</td><td>CO_OCCURS_WITH</td><td>สูตรที่ 2 สูตรน้ำหัวผักกาด
+	 (หัวไชเท้า) 
+	 วัตถุดิบ
+	 •	 น้ำหัวผักกาด 1 ส่วน
+	 •	 น้ำมะพร้าวอ่อน 1 ส่วน 
+	 •	 ผงกลูโคส</td><td>44</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>2 วัน</td><td>CO_OCCURS_WITH</td><td>7 วัน</td><td>44</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>44
+	 สูตรที่ 1 สูตรน้ำส้มสายชู 
+	 วัตถุดิบ 
+	 •	น้ำส้มสายชู 3 ลิตร 
+	 •	เกลือแกง 2 ถ้วย 
+	 •	น้ำยาล้างจาน 1 ถ้วย 
+	 วิธีนำไปใช้ 
+	 •	ละลาย</td><td>CO_OCCURS_WITH</td><td>สูตรที่ 2 สูตรน้ำหัวผักกาด
+	 (หัวไชเท้า) 
+	 วัตถุดิบ
+	 •	 น้ำหัวผักกาด 1 ส่วน
+	 •	 น้ำมะพร้าวอ่อน 1 ส่วน 
+	 •	 ผงกลูโคส</td><td>44</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>44
+	 สูตรที่ 1 สูตรน้ำส้มสายชู 
+	 วัตถุดิบ 
+	 •	น้ำส้มสายชู 3 ลิตร 
+	 •	เกลือแกง 2 ถ้วย 
+	 •	น้ำยาล้างจาน 1 ถ้วย 
+	 วิธีนำไปใช้ 
+	 •	ละลาย</td><td>CO_OCCURS_WITH</td><td>2 วัน</td><td>44</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7 วัน</td><td>CO_OCCURS_WITH</td><td>น้ำส้มสายชู
+เกลือแกง
+น้ำยาล้างจาน
+ละลายส่วนผสม</td><td>44</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7 วัน</td><td>CO_OCCURS_WITH</td><td>ซีซี ต่อน้ำ 20</td><td>44</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ซีซี ต่อน้ำ 20</td><td>CO_OCCURS_WITH</td><td>1 คืน</td><td>44</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ซีซี ต่อน้ำ 20</td><td>CO_OCCURS_WITH</td><td>น้ำส้มสายชู
+เกลือแกง
+น้ำยาล้างจาน
+ละลายส่วนผสม</td><td>44</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>น้ำส้มสายชู
+เกลือแกง
+น้ำยาล้างจาน
+ละลายส่วนผสม</td><td>CO_OCCURS_WITH</td><td>1 คืน</td><td>44</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สูตรที่ 2 สูตรน้ำหัวผักกาด
+	 (หัวไชเท้า) 
+	 วัตถุดิบ
+	 •	 น้ำหัวผักกาด 1 ส่วน
+	 •	 น้ำมะพร้าวอ่อน 1 ส่วน 
+	 •	 ผงกลูโคส</td><td>CO_OCCURS_WITH</td><td>7 วัน</td><td>44</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สูตรที่ 2 สูตรน้ำหัวผักกาด
+	 (หัวไชเท้า) 
+	 วัตถุดิบ
+	 •	 น้ำหัวผักกาด 1 ส่วน
+	 •	 น้ำมะพร้าวอ่อน 1 ส่วน 
+	 •	 ผงกลูโคส</td><td>CO_OCCURS_WITH</td><td>ซีซี ต่อน้ำ 20</td><td>44</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>3 วัน</td><td>CO_OCCURS_WITH</td><td>วัชพืช
+เกลือแกง
+น้ำเปล่า
+ปุ๋ย</td><td>45</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>3 วัน</td><td>CO_OCCURS_WITH</td><td>www.postsod.com/rid-grass-agriculture
+หมายเหตุ</td><td>45</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>45
+	 สูตรที่  3 สูตรเกลือ  
+	 วัตถุดิบ
+	 •	 เกลือ 2 กิโลกรัม
+	 •	 ปุ๋ย</td><td>CO_OCCURS_WITH</td><td>นาข้าวที่มีต้นข้าวสูง
+เหนือหัวเข่า</td><td>45</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>45
+	 สูตรที่  3 สูตรเกลือ  
+	 วัตถุดิบ
+	 •	 เกลือ 2 กิโลกรัม
+	 •	 ปุ๋ย</td><td>CO_OCCURS_WITH</td><td>3 วัน</td><td>45</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>www.postsod.com/rid-grass-agriculture
+หมายเหตุ</td><td>CO_OCCURS_WITH</td><td>วัชพืช
+เกลือแกง
+น้ำเปล่า
+ปุ๋ย</td><td>45</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>นาข้าวที่มีต้นข้าวสูง
+เหนือหัวเข่า</td><td>CO_OCCURS_WITH</td><td>www.postsod.com/rid-grass-agriculture
+หมายเหตุ</td><td>45</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>นาข้าวที่มีต้นข้าวสูง
+เหนือหัวเข่า</td><td>CO_OCCURS_WITH</td><td>3 วัน</td><td>45</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>โรครากเน่าโคนเน่า</td><td>CO_OCCURS_WITH</td><td>กิ่งอ่อนมีอาการเน่า ใบอ่อน
+เหี่ยวเหลือง มีจุดแผลสีน้ำตาลอ่อนฉ่ำน้ำ</td><td>46</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>10-20</td><td>CO_OCCURS_WITH</td><td>ซีซีต่อน้ำ 20</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>25%</td><td>CO_OCCURS_WITH</td><td>เชื้อราไตรโคเดอร์มา 
+ฮาร์เซียนัม</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>25%</td><td>CO_OCCURS_WITH</td><td>30-50 
+กรัมต่อน้ำ</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>30 วัน</td><td>CO_OCCURS_WITH</td><td>30-50 กรัมต่อน้ำ 20 ลิตร</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>30 วัน</td><td>CO_OCCURS_WITH</td><td>80%</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>30-50 
+กรัมต่อน้ำ</td><td>CO_OCCURS_WITH</td><td>เชื้อราไตรโคเดอร์มา 
+ฮาร์เซียนัม</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>30-50 
+กรัมต่อน้ำ</td><td>CO_OCCURS_WITH</td><td>10-20</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>30-50 กรัมต่อน้ำ 20 ลิตร</td><td>CO_OCCURS_WITH</td><td>7 วัน</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>30-50 กรัมต่อน้ำ 20 ลิตร</td><td>CO_OCCURS_WITH</td><td>25%</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>40%</td><td>CO_OCCURS_WITH</td><td>30 วัน</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>40%</td><td>CO_OCCURS_WITH</td><td>80%</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7 วัน</td><td>CO_OCCURS_WITH</td><td>25%</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7 วัน</td><td>CO_OCCURS_WITH</td><td>30-50 
+กรัมต่อน้ำ</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>80%</td><td>CO_OCCURS_WITH</td><td>30-50 กรัมต่อน้ำ 20 ลิตร</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>80%</td><td>CO_OCCURS_WITH</td><td>7 วัน</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>ซีซีต่อน้ำ 20</td><td>CO_OCCURS_WITH</td><td>ฟอสโฟนิก</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สโฟนิก</td><td>CO_OCCURS_WITH</td><td>40%</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สโฟนิก</td><td>CO_OCCURS_WITH</td><td>30 วัน</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เชื้อราไตรโคเดอร์มา 
+ฮาร์เซียนัม</td><td>CO_OCCURS_WITH</td><td>ซีซีต่อน้ำ 20</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>เชื้อราไตรโคเดอร์มา 
+ฮาร์เซียนัม</td><td>CO_OCCURS_WITH</td><td>10-20</td><td>47</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>25%</td><td>CO_OCCURS_WITH</td><td>50-60 กรัมต่อน้ำ</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>25%</td><td>CO_OCCURS_WITH</td><td>สารเมทาแลกซิล+ 
+แมนโคเซบ</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>30-50 กรัมต่อน้ำ 20 ลิตร</td><td>CO_OCCURS_WITH</td><td>การใช้ฟอสโฟนิก</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>30-50 กรัมต่อน้ำ 20 ลิตร</td><td>CO_OCCURS_WITH</td><td>40%</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>40%</td><td>CO_OCCURS_WITH</td><td>คลอร์ไพริฟอส</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>40%</td><td>CO_OCCURS_WITH</td><td>40 มิลลิลิตรต่อน้ำ</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>50-60 กรัมต่อน้ำ</td><td>CO_OCCURS_WITH</td><td>65%</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>50-60 กรัมต่อน้ำ</td><td>CO_OCCURS_WITH</td><td>สารเมทาแลกซิล+ 
+แมนโคเซบ</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>65%</td><td>CO_OCCURS_WITH</td><td>7 วัน</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>65%</td><td>CO_OCCURS_WITH</td><td>30-50 กรัมต่อน้ำ 20 ลิตร</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7 วัน</td><td>CO_OCCURS_WITH</td><td>การใช้ฟอสโฟนิก</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>7 วัน</td><td>CO_OCCURS_WITH</td><td>30-50 กรัมต่อน้ำ 20 ลิตร</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>80%</td><td>CO_OCCURS_WITH</td><td>25%</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>80%</td><td>CO_OCCURS_WITH</td><td>สารเมทาแลกซิล</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>www.kasetkaoklai.com</td><td>CO_OCCURS_WITH</td><td>80%</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>www.kasetkaoklai.com</td><td>CO_OCCURS_WITH</td><td>กรมวิชาการเกษตร</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>กรมวิชาการเกษตร</td><td>CO_OCCURS_WITH</td><td>80%</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>กรมวิชาการเกษตร</td><td>CO_OCCURS_WITH</td><td>สารเมทาแลกซิล</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>การใช้ฟอสโฟนิก</td><td>CO_OCCURS_WITH</td><td>คลอร์ไพริฟอส</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>การใช้ฟอสโฟนิก</td><td>CO_OCCURS_WITH</td><td>40%</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>คลอร์ไพริฟอส</td><td>CO_OCCURS_WITH</td><td>40 มิลลิลิตรต่อน้ำ</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สารเมทาแลกซิล</td><td>CO_OCCURS_WITH</td><td>25%</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สารเมทาแลกซิล</td><td>CO_OCCURS_WITH</td><td>50-60 กรัมต่อน้ำ</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สารเมทาแลกซิล+ 
+แมนโคเซบ</td><td>CO_OCCURS_WITH</td><td>65%</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr><tr><td>สารเมทาแลกซิล+ 
+แมนโคเซบ</td><td>CO_OCCURS_WITH</td><td>7 วัน</td><td>48</td><td>ThaiNameTagger + regex; co-occurrence only</td></tr></tbody></table></main></html>

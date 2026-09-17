@@ -1,0 +1,76 @@
+{
+  "page": 29,
+  "facts": [
+    {
+      "subject": "โรครากเน่าและโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "ราเมล็ดผักกาด",
+      "object_type": "Pathogen",
+      "evidence": "โรคนี้มีสาเหตุเกิดจากราเมล็ด ผักกาด"
+    },
+    {
+      "subject": "โรครากเน่าและโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ใบเหลือง เหี่ยว ร่วง และยืนต้นตาย",
+      "object_type": "Symptom",
+      "evidence": "ทำให้ต้นกล้าเน่า หรือทำให้ต้น ที่เจริญเติบโตแล้วเกิดอาการใบเหลือง เหี่ยว ร่วง และยืนต้นตาย"
+    },
+    {
+      "subject": "โรครากเน่าและโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การไถพลิกดินและตากดินไว้อย่างน้อย 7 วัน",
+      "object_type": "Treatment",
+      "evidence": "จึง ไถพลิกดิน และตากดินไว้อย่างน้อย 7 วัน เพื่อฆ่าเชื้อโรคที่อาจตกค้างอยู่ในดิน"
+    },
+    {
+      "subject": "โรครากเน่าและโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การปลูกพืชหมุนเวียน",
+      "object_type": "Treatment",
+      "evidence": "ควรปลูกพืช หมุนเวียน ก่อนปลูกพริกรอบต่อไป"
+    },
+    {
+      "subject": "โรครากเน่าและโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การใส่ปูนขาวและอินทรียวัตถุให้ดิน",
+      "object_type": "Treatment",
+      "evidence": "ใส่ปูนขาวและ อินทรียวัตถุให้ดิน เพื่อปรับสภาพดิน"
+    },
+    {
+      "subject": "โรครากเน่าและโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การแช่เมล็ดพันธุ์ในน้ำอุ่นอุณหภูมิ 50 องศาเซลเซียส นานประมาณ 30 นาที",
+      "object_type": "Treatment",
+      "evidence": "แช่เมล็ดพันธุ์ในน้ำ อุ่นอุณหภูมิ 50 องศาเซลเซียส นานประมาณ 30 นาที"
+    },
+    {
+      "subject": "โรครากเน่าและโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การคลุกสารป้องกันและกำจัดเชื้อรา",
+      "object_type": "Treatment",
+      "evidence": "และ/หรือคลุกสารป้องกันและกำจัดเชื้อ รา"
+    },
+    {
+      "subject": "โรครากเน่าและโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "การถอนต้นพริกไปเผาทำลายแล้วขุดดินบริเวณหลุมปลูกออกไปนอกแปลง",
+      "object_type": "Treatment",
+      "evidence": "โดยการถอนต้นพริกไปเผา ทำลาย จากนั้นขุดดินบริเวณหลุมปลูกออกไปนอกแปลง"
+    }
+  ],
+  "timing": {
+    "seconds": 25.624,
+    "model": "qwen3.5:9b",
+    "eval_count": 792,
+    "eval_duration": 24112964000,
+    "prompt_eval_count": 875
+  }
+}

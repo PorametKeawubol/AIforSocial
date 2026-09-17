@@ -1,0 +1,19 @@
+# Install CPU torch first if GPU acceleration is reserved for Ollama:
+# pip install torch --index-url https://download.pytorch.org/whl/cpu
+sentence-transformers>=6,<7
+faiss-cpu>=1.12,<2
+pymupdf>=1.26,<2
+neo4j>=5.26,<7
+python-dotenv>=1,<2
+fastapi>=0.115,<1
+uvicorn>=0.34,<1
+httpx>=0.28,<1
+pydantic>=2.10,<3
+pythainlp>=5,<6
+rank-bm25==0.2.2
+playwright>=1.50,<2
+pytest>=8,<10
+
+# Separate worksheet graph exports
+langchain-neo4j>=0.10,<1
+python-crfsuite>=0.9,<1

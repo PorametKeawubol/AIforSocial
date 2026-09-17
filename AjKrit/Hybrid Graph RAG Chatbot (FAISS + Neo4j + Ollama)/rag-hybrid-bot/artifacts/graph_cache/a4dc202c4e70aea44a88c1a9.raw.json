@@ -1,0 +1,11 @@
+{
+  "page": 19,
+  "content": "{\n  \"facts\": [\n    {\n      \"subject\": \"โรคใบด่าง\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"CAUSED_BY\",\n      \"object\": \"ไวรัส\",\n      \"object_type\": \"Pathogen\",\n      \"evidence\": \"สาเหตุเกิดจาก \\\"ไวรัส\\\"\"\n    },\n    {\n      \"subject\": \"โรคใบด่าง\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"EXHIBITS\",\n      \"object\": \"ลายเขียวซีดสลับเขียวเข้ม\",\n      \"object_type\": \"Symptom\",\n      \"evidence\": \"ข้าวโพดจะแสดงอาการใบด่างลายเขียวซีดสลับเขียวเข้ม\"\n    },\n    {\n      \"subject\": \"โรคใบด่าง\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"EXHIBITS\",\n      \"object\": \"ประจุดเหลือง\",\n      \"object_type\": \"Symptom\",\n      \"evidence\": \"หรืออาการด่างประจุดเหลือง\"\n    },\n    {\n      \"subject\": \"โรคใบด่าง\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"EXHIBITS\",\n      \"object\": \"ต้นแคระแกร็น\",\n      \"object_type\": \"Symptom\",\n      \"evidence\": \"ถ้าอาการโรครุนแรงต้นข้าวโพดจะแห้งตายขณะยังเล็ก\"\n    },\n    {\n      \"subject\": \"โรคใบด่าง\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"TREATED_BY\",\n      \"object\": \"กำจัดเพลี้ยอ่อน\",\n      \"object_type\": \"Treatment\",\n      \"evidence\": \"การป้องกัน ให้กำจัดเพลี้ยอ่อนซึ่งเป็นตัวแมลงพาหะนำโรค\"\n    },\n    {\n      \"subject\": \"โรคใบด่าง\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"PREVENTED_BY\",\n      \"object\": \"ปลูกข้าวโพดพันธุ์ต้านทาน\",\n      \"object_type\": \"Treatment\",\n      \"evidence\": \"ปลูกข้าวโพดพันธุ์ต้านทาน\"\n    },\n    {\n      \"subject\": \"โรคใบด่าง\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"PREVENTED_BY\",\n      \"object\": \"ปลูกพืชหมุนเวียน\",\n      \"object_type\": \"Treatment\",\n      \"evidence\": \"ปลูกพืชหมุนเวียน\"\n    },\n    {\n      \"subject\": \"เพลี้ยอ่อน\",\n      \"subject_type\": \"Pathogen\",\n      \"relation\": \"RELATED_TO\",\n      \"object\": \"โรคใบด่าง\",\n      \"object_type\": \"Disease\",\n      \"evidence\": \"ให้กำจัดเพลี้ยอ่อนซึ่งเป็นตัวแมลงพาหะนำโรค\"\n    }\n  ]\n}",
+  "timing": {
+    "seconds": 20.861,
+    "model": "qwen3.5:9b",
+    "eval_count": 636,
+    "eval_duration": 19333478000,
+    "prompt_eval_count": 674
+  }
+}

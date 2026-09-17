@@ -1,0 +1,164 @@
+Styles have been reset to default
+Undo
+Query
+connection status: connected
+Instance:
+neo4j://localhost:7688
+. Click to open instance menu
+Database:
+neo4j
+. Click to open database menu
+User:
+neo4j
+. Click to open database user menu
+Connect your instance to Aura console for more tools and features
+Database overview
+Saved Cypher
+History
+Cypher reference
+Parameters
+Settings
+Database information
+Nodes (1,335)
+*
+Activity
+Application
+Benefit
+Biocontrol
+Chemical
+Condition
+Crop
+Disease
+DiseaseGroup
+Document
+Duration
+Environment
+Fertilizer
+GrowthStage
+LAW
+LEN
+LOCATION
+Material
+MONEY
+Show all nodes (25 more)
+Relationships (2,347)
+*
+APPLIED_TO
+CAUSED_BY
+CO_OCCURS_WITH
+COVERS
+EVIDENCED_BY
+EXHIBITS
+HAS_APPLICATION
+HAS_BENEFIT
+HAS_CONDITION
+HAS_DISEASE
+HAS_DURATION
+HAS_ENVIRONMENT
+HAS_GROWTH_STAGE
+HAS_HOST
+HAS_PAGE
+HAS_PREPARATION
+HAS_PURPOSE
+HAS_SEASON
+HAS_SECTION
+Show all relationships (16 more)
+Property keys
+aliases
+assertion
+assertion_layer
+condition
+context
+dataset
+dilution_as_printed
+evidence
+evidence_note
+filename
+id
+kind
+layer
+method
+name
+number
+object
+origin
+page
+page_count
+Show all property keys (13 more)
+Last update:
+ 6:34:48 PM 
+1
+2
+3
+4
+5
+// กราฟความสัมพันธ์เชิงเนื้อหาทั้งหมด
+MATCH p=(s:PlantGuide2019Reviewed)-[r]->(t:PlantGuide2019Reviewed)
+WHERE r.id IN ["f0f9db6fd80002e582a1", "3e859cb15344e6baa37c", "37614fd3e94bbd2717d4", "2be6cb147f63f9e4fd24", "8564c6a042a127129053", "ca91d372b64d7afb227e", "0f294a8efaeb52cd21d9", "86a42ffdfc3200aa36c7", "c5663f4d5b25fbf4c061", "8ab95868b4a34ba41f3a", "78f4deb9b5db449d23a7", "996f8c8332c94178d479", "1b02c5a717a664e7fdb7", "dbc3f6b601c66e99a858", "64eb68a351163d358690", "dfa771dd3b1d1b82e667", "ac0fd06e205815d1ae90", "1dac2f51071698fed54e", "19ee6f2260e09c666fff", "586333859bb6620367c5", "482d2a564be02a70a8f7", "1251a9c9f3b76e6fe955", "067869678a42479b75a3", "b7dc0d9d8411b84cd6bb", "71717668fb853a143c4f", "fb519cb8ebc68abd292d", "909acc6c24e48e53087f", "6feae1c7bc3c63647ef6", "9815ee2f550452f7607e", "c96c36a2f56e07deeb91", "cfe258827ddf227fd9a0", "2c386a0c071d9d4c5697", "e20e887b2f9377323e2f", "4121d73e6cf2fae58285", "4c6725f34f8760e27c3a", "a36171c6b0841fe07fde", "b36dc3b12f0d8adc6eb2", "73adf2ac27f4c2b56f66", "f3d49011be0763482281", "09371032586a10ce9f5f", "58be2f269ffa15da0180", "343511303d3c4a6a0be0", "5c8767ac36213f813fd7", "637ed6fae42fd7b49b4a", "f2c6bb19a2227782b6e1", "1dfaa4e5c20cfab6b07b", "c9c4cf8e6db4ab252cca", "27f14b12fff1e4862393", "0a98242bbc880f30c64b", "e730dc87df1443ee58ad", "376ae715319f55d77b54", "3825e4883fd3b18a2041", "7a786a1f410e1703e67e", "343fd2b95ade1a3192e9", "dd927692abc01704338d", "c1a9d9b04f53f659b7b4", "e62fac62dfeb70e5882f", "096d40c51b672afb3c47", "7e804a5f6c3ec35e07e6", "ad632cd41b070af420ac", "5eeaf0658f8864698a3d", "b1778a6986a2b32a9166", "8a12aa21fc8d10ffd828", "f0cac8d5f0842c5c7b07", "b96ace7c2b025cc8518a", "f10d7f132870c02bce78", "a4ab689461eccb16de05", "bbfab4363ce7ad755337", "1a2e72584ca89ec879fa", "248e86562f707a49ecab", "9b3dc479b7944a97ed5a", "51f8484d05ac250b839f", "88707a5b73d471da93e6", "504a10d578b5c3bb76aa", "e8cdbe522994a5bd3a86", "ae9001e5a0002cb4424f", "6db24286bda5ab2d2b72", "01495231d06f7f68da63", "52ae6968c7e961526d73", "fc40fbbfb10a6ed779b2", "e1e727d48eb292657b21", "88030b26c8c71958773d", "e174e822090c3f11f1ea", "f442ef97a7061c83155d", "7c4426fed96f57340520", "18d61380bc3eda494b26", "98239a127bfe1d9d2b39", "d3a932c4be0f147c3d81", "c74df0a80e1f10feb5ff", "62ce1a37553c6f2bcbfb", "d23e125db367825730d6", "e78296e89285b421c56a", "2e8ebc3a24590df26195", "57d37b3c2718255b2442", "89e880e626da4d1c19cc", "757e3435dfbb0fc0cdc5", "a722be7a5022b5790690", "472be53c5fc87e01d0e5", "4de5428e0406774c0c59", "c7eeba712a76b2802070", "c6a99033cddf64d864d4", "852dcc955bf04f4f8af5", "b2cf94472f43de0e7db0", "38da773b10b4a6909d1d", "5e2c0c098f41d8f88045", "4c70ddf8cf297a1ad83d", "ba5676cd4c7f7a7eb6d8", "b773620bebc7d95c0f50", "27ccf74ef0281309295f", "ec2325605dc46009ddb1", "bcff7af4c4a3c224507d", "2e4ffaaa0a3d8b26971b", "8ca6cac9b2bc9abf5157", "67a59f8f72f97fe5ffb8", "ade665ac9750c4d0b5f2", "7407fea72324a4ab0a98", "b10ac3143b76b4d30a20", "3f48326b240235a9d09d", "ca49bd6afa3bd145e7e4", "96e135c468b2bcee35da", "5797f9d5217c651a2abc", "41e48577009b6d9164f2", "3076acb30e28c9ab1dd0", "a3c628a88341cb52a435", "1d88ea71a0b16399e097", "705e9735d2ea924545e8", "804e383b13aedbd57e04", "745341d0779926c6175b", "51d64a0f19a61d294072", "d38df9fa0d2824b15d50", "0fd97cc03954a429db8a", "f8682c9cc041e200bc44", "292cc2ade9be8fbb573c", "e857b8986acce3a6308b", "875589962fb02970a9bc", "143df57ab4030bf9b5ca", "87ee8a0b99a90a552a53", "af52d4cd71a3e4093e90", "c5eecd149e9f25860368", "c3c8d4b2ba234cc75c93", "7e41c8596436c8c11ff9", "44ad8ef73917e0f3bf41", "fb5fcc6022c47ece990a", "7943c450ecdbea057765", "a1d3cd37fde9637b8d3d", "573af05c6e7739567f8f", "3a581f43b535edfed1dc", "9b45823cb989d7eb6fbd", "6b044ea8072f7ab84ad1", "6dfc21c9453d2730e567", "e9f761f57e984c0069d3", "7d0457c927dd08981c86", "b6151450cceeed46e276", "6eedabde22b45483b520", "29f7d774f4dc360188d1", "8faab2226c0b21ee6a12", "0869147509cc413711f5", "2e5f5339ecad1d73e929", "5cad8fa4f801a12a1937", "253c36d1c711a080b95f", "90448ef39a4fc557b51b", "dd01d5ec921a41d1c1e9", "8918ff0e1ffde2542744", "27f56a36cf184c3d4b9d", "763d7bc956c6c1ff0a1f", "8b1ef14b5da486d8505b", "346512f3a874416c29e2", "2d400a32431c319fe9d4", "2b51ad9c46b88d3822d4", "d778a6dc230a88e2e37e", "706f63d59a6fa43a3cd9", "99145390b65b88e40718", "0279f3b3c1b318d26e6e", "120e5477f18f3dae863b", "90f40f04f473b75120a0", "0d229f9b5e80e0b9acb9", "74f059bf0a38be88c188", "912b76c6754f3fc238ea", "59463f009a9e225e100c", "7df1ce9c90fadddd3ae2", "18eeb24c1601b68ea937", "00569afd468d908079f4", "621820bf889b47d7b2fa", "18d6c9558ca33687c6fe", "be611e056ec620d814d4", "53b7663dfc7559358d4d", "ab3b8586b5b536f92e78", "3bc27fb62624d002b54c", "9a2371766382dd486f29", "11208736c7961d9200cd", "2a7839409b7113e61875", "9c643b4eecb52ac6ff40", "3d3d3566cdf1c7c7ca1b", "25b3f5aa2162ccdcf1c5", "6d4920e6b629cf4a07fd", "6a94ef106dcf43914232", "b519e272ee839bdbb411", "f7e62e75549a89ea2fdc", "4a7dc34ed76ba879fbd7", "515e0d8467d653b2431c", "462b181f577dbeda63f7", "443415e441b725d36c3e", "f1fdb81058b7b3d92cb5", "3fa11b5206ed9b531eab", "74e5032ebdd4329cab84", "88c09d78c116e738c282", "7596c98d036f554b68a1", "1ec169c8f2e19b4d7f8f", "36ab49912f8b65cd1bda", "4b41501eea7731912db8", "747283a617a25ba59558", "8ce16d2f36d47b46ca39", "2733352b27f648822257", "57f3075866df61339299", "2bc5e968086b22ebba1c", "59bc36dd600985a486dc", "2e36e2ece7d8af654ca2", "0db422bb9d940938541b", "2a4a7d0bf8087aac9af6", "29fa78c5eee3e9b1e8bb", "616264aeb679d1b08d06", "9f5817ddfc1a5285018a", "845ee0fb62c1674d56d6", "3b4ed3254cbfa345270d", "31f7c83d2e63007f816d", "b9ba7f895b1ae11bbb0a", "1790a4c27e4c03700990", "c47eaa228b460cf2866f", "d474c608f9ffcd6616f7", "f491730636a51b652633", "faf9a96527a3081c08c2", "5a34c7ab8fcc62c86a73", "f90aea52c9387c596c85", "f44ff4c1e30f2eb2b1d2", "abc9e454b5d6866db3da", "0a19222e4dc5f9902de3", "1eb6d884d480ee5500ea", "d94912b7566fbd730570", "27312600309ee2f56202", "91b9f01ff703d78b3f45", "4771f1dccdedb30a3e85", "b161372374757dbaeec4", "a6b5bff55843ce7ba09b", "f8d649c48e67e6682cee", "3287ab65999121d8d01d", "877fae2bf0f3211b167a", "41f7bff85392f80c0139", "2a1c003835d82c81da89", "f05b67f47ca9f6411f5a", "c713e7f97926dd0d27e1", "995bd8bca3c24d184a61", "7a6a726d87da1f2c3f49", "21883011ba608f324a6e", "c2cb26bd3f9b9b6b4b8f", "befb3cb72f1e76bae5ee", "583feef70eadbafce652", "414cbae25d494d714877", "b6eea6082ffaccd1ab1a", "7474a4874f5a9bc6ed4d", "c31043e4eb3a42bd77c9", "a920a311a9a3756c7af6", "c4c9b90694b677d986fa", "53a27e33155bd2e4bf23"]
+RETURN p;
+
+
+Fullscreen frame
+1
+2
+3
+// กราฟความสัมพันธ์เชิงเนื้อหาทั้งหมด
+MATCH p=(s:PlantGuide2019Reviewed)-[r]->(t:PlantGuide2019Reviewed)
+WHERE r.id IN ["f0f9db6fd80002e582a1", "3e859cb15344e6baa37c", "37614fd3e94bbd2717d4", "2be6cb147f63f9e4fd24", "8564c6a042a127129053", "ca91d372b64d7afb227e", "0f294a8efaeb52cd21d9", "86a42ffdfc3200aa36c7", "c5663f4d5b25fbf4c061", "8ab95868b4a34ba41f3a", "78f4deb9b5db449d23a7", "996f8c8332c94178d479", "1b02c5a717a664e7fdb7", "dbc3f6b601c66e99a858", "64eb68a351163d358690", "dfa771dd3b1d1b82e667", "ac0fd06e205815d1ae90", "1dac2f51071698fed54e", "19ee6f2260e09c666fff", "586333859bb6620367c5", "482d2a564be02a70a8f7", "1251a9c9f3b76e6fe955", "067869678a42479b75a3", "b7dc0d9d8411b84cd6bb", "71717668fb853a143c4f", "fb519cb8ebc68abd292d", "909acc6c24e48e53087f", "6feae1c7bc3c63647ef6", "9815ee2f550452f7607e", "c96c36a2f56e07deeb91", "cfe258827ddf227fd9a0", "2c386a0c071d9d4c5697", "e20e887b2f9377323e2f", "4121d73e6cf2fae58285", "4c6725f34f8760e27c3a", "a36171c6b0841fe07fde", "b36dc3b12f0d8adc6eb2", "73adf2ac27f4c2b56f66", "f3d49011be0763482281", "09371032586a10ce9f5f", "58be2f269ffa15da0180", "343511303d3c4a6a0be0", "5c8767ac36213f813fd7", "637ed6fae42fd7b49b4a", "f2c6bb19a2227782b6e1", "1dfaa4e5c20cfab6b07b", "c9c4cf8e6db4ab252cca", "27f14b12fff1e4862393", "0a98242bbc880f30c64b", "e730dc87df1443ee58ad", "376ae715319f55d77b54", "3825e4883fd3b18a2041", "7a786a1f410e1703e67e", "343fd2b95ade1a3192e9", "dd927692abc01704338d", "c1a9d9b04f53f659b7b4", "e62fac62dfeb70e5882f", "096d40c51b672afb3c47", "7e804a5f6c3ec35e07e6", "ad632cd41b070af420ac", "5eeaf0658f8864698a3d", "b1778a6986a2b32a9166", "8a12aa21fc8d10ffd828", "f0cac8d5f0842c5c7b07", "b96ace7c2b025cc8518a", "f10d7f132870c02bce78", "a4ab689461eccb16de05", "bbfab4363ce7ad755337", "1a2e72584ca89ec879fa", "248e86562f707a49ecab", "9b3dc479b7944a97ed5a", "51f8484d05ac250b839f", "88707a5b73d471da93e6", "504a10d578b5c3bb76aa", "e8cdbe522994a5bd3a86", "ae9001e5a0002cb4424f", "6db24286bda5ab2d2b72", "01495231d06f7f68da63", "52ae6968c7e961526d73", "fc40fbbfb10a6ed779b2", "e1e727d48eb292657b21", "88030b26c8c71958773d", "e174e822090c3f11f1ea", "f442ef97a7061c83155d", "7c4426fed96f57340520", "18d61380bc3eda494b26", "98239a127bfe1d9d2b39", "d3a932c4be0f147c3d81", "c74df0a80e1f10feb5ff", "62ce1a37553c6f2bcbfb", "d23e125db367825730d6", "e78296e89285b421c56a", "2e8ebc3a24590df26195", "57d37b3c2718255b2442", "89e880e626da4d1c19cc", "757e3435dfbb0fc0cdc5", "a722be7a5022b5790690", "472be53c5fc87e01d0e5", "4de5428e0406774c0c59", "c7eeba712a76b2802070", "c6a99033cddf64d864d4", "852dcc955bf04f4f8af5", "b2cf94472f43de0e7db0", "38da773b10b4a6909d1d", "5e2c0c098f41d8f88045", "4c70ddf8cf297a1ad83d", "ba5676cd4c7f7a7eb6d8", "b773620bebc7d95c0f50", "27ccf74ef0281309295f", "ec2325605dc46009ddb1", "bcff7af4c4a3c224507d", "2e4ffaaa0a3d8b26971b", "8ca6cac9b2bc9abf5157", "67a59f8f72f97fe5ffb8", "ade665ac9750c4d0b5f2", "7407fea72324a4ab0a98", "b10ac3143b76b4d30a20", "3f48326b240235a9d09d", "ca49bd6afa3bd145e7e4", "96e135c468b2bcee35da", "5797f9d5217c651a2abc", "41e48577009b6d9164f2", "3076acb30e28c9ab1dd0", "a3c628a88341cb52a435", "1d88ea71a0b16399e097", "705e9735d2ea924545e8", "804e383b13aedbd57e04", "745341d0779926c6175b", "51d64a0f19a61d294072", "d38df9fa0d2824b15d50", "0fd97cc03954a429db8a", "f8682c9cc041e200bc44", "292cc2ade9be8fbb573c", "e857b8986acce3a6308b", "875589962fb02970a9bc", "143df57ab4030bf9b5ca", "87ee8a0b99a90a552a53", "af52d4cd71a3e4093e90", "c5eecd149e9f25860368", "c3c8d4b2ba234cc75c93", "7e41c8596436c8c11ff9", "44ad8ef73917e0f3bf41", "fb5fcc6022c47ece990a", "7943c450ecdbea057765", "a1d3cd37fde9637b8d3d", "573af05c6e7739567f8f", "3a581f43b535edfed1dc", "9b45823cb989d7eb6fbd", "6b044ea8072f7ab84ad1", "6dfc21c9453d2730e567", "e9f761f57e984c0069d3", "7d0457c927dd08981c86", "b6151450cceeed46e276", "6eedabde22b45483b520", "29f7d774f4dc360188d1", "8faab2226c0b21ee6a12", "0869147509cc413711f5", "2e5f5339ecad1d73e929", "5cad8fa4f801a12a1937", "253c36d1c711a080b95f", "90448ef39a4fc557b51b", "dd01d5ec921a41d1c1e9", "8918ff0e1ffde2542744", "27f56a36cf184c3d4b9d", "763d7bc956c6c1ff0a1f", "8b1ef14b5da486d8505b", "346512f3a874416c29e2", "2d400a32431c319fe9d4", "2b51ad9c46b88d3822d4", "d778a6dc230a88e2e37e", "706f63d59a6fa43a3cd9", "99145390b65b88e40718", "0279f3b3c1b318d26e6e", "120e5477f18f3dae863b", "90f40f04f473b75120a0", "0d229f9b5e80e0b9acb9", "74f059bf0a38be88c188", "912b76c6754f3fc238ea", "59463f009a9e225e100c", "7df1ce9c90fadddd3ae2", "18eeb24c1601b68ea937", "00569afd468d908079f4", "621820bf889b47d7b2fa", "18d6c9558ca33687c6fe", "be611e056ec620d814d4", "53b7663dfc7559358d4d", "ab3b8586b5b536f92e78", "3bc27fb62624d002b54c", "9a2371766382dd486f29", "11208736c7961d9200cd", "2a7839409b7113e61875", "9c643b4eecb52ac6ff40", "3d3d3566cdf1c7c7ca1b", "25b3f5aa2162ccdcf1c5", "6d4920e6b629cf4a07fd", "6a94ef106dcf43914232", "b519e272ee839bdbb411", "f7e62e75549a89ea2fdc", "4a7dc34ed76ba879fbd7", "515e0d8467d653b2431c", "462b181f577dbeda63f7", "443415e441b725d36c3e", "f1fdb81058b7b3d92cb5", "3fa11b5206ed9b531eab", "74e5032ebdd4329cab84", "88c09d78c116e738c282", "7596c98d036f554b68a1", "1ec169c8f2e19b4d7f8f", "36ab49912f8b65cd1bda", "4b41501eea7731912db8", "747283a617a25ba59558", "8ce16d2f36d47b46ca39", "2733352b27f648822257", "57f3075866df61339299", "2bc5e968086b22ebba1c", "59bc36dd600985a486dc", "2e36e2ece7d8af654ca2", "0db422bb9d940938541b", "2a4a7d0bf8087aac9af6", "29fa78c5eee3e9b1e8bb", "616264aeb679d1b08d06", "9f5817ddfc1a5285018a", "845ee0fb62c1674d56d6", "3b4ed3254cbfa345270d", "31f7c83d2e63007f816d", "b9ba7f895b1ae11bbb0a", "1790a4c27e4c03700990", "c47eaa228b460cf2866f", "d474c608f9ffcd6616f7", "f491730636a51b652633", "faf9a96527a3081c08c2", "5a34c7ab8fcc62c86a73", "f90aea52c9387c596c85", "f44ff4c1e30f2eb2b1d2", "abc9e454b5d6866db3da", "0a19222e4dc5f9902de3", "1eb6d884d480ee5500ea", "d94912b7566fbd730570", "27312600309ee2f56202", "91b9f01ff703d78b3f45", "4771f1dccdedb30a3e85", "b161372374757dbaeec4", "a6b5bff55843ce7ba09b", "f8d649c48e67e6682cee", "3287ab65999121d8d01d", "877fae2bf0f3211b167a", "41f7bff85392f80c0139", "2a1c003835d82c81da89", "f05b67f47ca9f6411f5a", "c713e7f97926dd0d27e1", "995bd8bca3c24d184a61", "7a6a726d87da1f2c3f49", "21883011ba608f324a6e", "c2cb26bd3f9b9b6b4b8f", "befb3cb72f1e76bae5ee", "583feef70eadbafce652", "414cbae25d494d714877", "b6eea6082ffaccd1ab1a", "7474a4874f5a9bc6ed4d", "c31043e4eb3a42bd77c9", "a920a311a9a3756c7af6", "c4c9b90694b677d986fa", "53a27e33155bd2e4bf23"]
+
+
+Graph
+Table
+Zoom to fit
+Results overview
+Nodes (207)
+* (207)
+Activity (5)
+Application (6)
+Benefit (3)
+Biocontrol (4)
+Chemical (3)
+Condition (1)
+Crop (19)
+Disease (25)
+DiseaseGroup (6)
+Duration (1)
+Environment (4)
+Fertilizer (2)
+GrowthStage (2)
+Material (18)
+Pathogen (17)
+Pest (4)
+PlantGuide2019Reviewed (207)
+Preparation (1)
+Purpose (6)
+Season (3)
+Soil (2)
+Symptom (23)
+Treatment (50)
+Variety (2)
+Relationships (263)
+* (263)
+APPLIED_TO (2)
+CAUSED_BY (26)
+CO_OCCURS_WITH (1)
+HAS_APPLICATION (6)
+HAS_BENEFIT (3)
+HAS_CONDITION (1)
+HAS_DISEASE (29)
+HAS_DURATION (1)
+HAS_ENVIRONMENT (6)
+HAS_GROWTH_STAGE (2)
+HAS_HOST (5)
+HAS_PREPARATION (1)
+HAS_PURPOSE (6)
+HAS_SEASON (6)
+HAS_SYMPTOM (23)
+INCLUDES (9)
+IS_A (2)
+MANAGED_BY (87)
+TRANSMITTED_BY (6)
+USES (29)
+USES_BIOCONTROL (9)
+USES_CHEMICAL (3)
+Started streaming 263 records after 2 ms and completed after 10 ms.

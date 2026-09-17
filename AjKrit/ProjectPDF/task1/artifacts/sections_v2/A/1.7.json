@@ -1,0 +1,266 @@
+{
+  "fingerprint": "7a289f48f063694959ff4e15",
+  "version": "sections-v2.1",
+  "section": "1.7",
+  "embedding": {
+    "embedding": "BAAI/bge-m3",
+    "cache_fingerprint": "1c7299b69943dd6662be8fb7",
+    "aggregation": "max of existing per-page ontology hints across section pages",
+    "hints": [
+      "เอกสารประกอบการแจ้งความ",
+      "หน่วยงานรับแจ้งเรื่อง",
+      "หลักฐานเกี่ยวกับเหตุการณ์",
+      "เจ้าหน้าที่รับผิดชอบ"
+    ]
+  },
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "seconds": 53.80590750900046,
+  "attempt": 1,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T16:50:39.537742011Z",
+    "message": {
+      "content": "{\"edges\":[[\"HAS_SUPPORTING_EVIDENCE\",\"ใบเสร็จรับเงินซื้อขาย\",\"Document\",\"ผู้หาย\",\"\",108,109],[\"HAS_SUPPORTING_EVIDENCE\",\"หลักฐานการแสดงการซื้อขายทรัพย์สิน\",\"Document\",\"ผู้หาย\",\"\",108,109],[\"HAS_SUPPORTING_EVIDENCE\",\"รูปพรรณทรัพย์\",\"Evidence\",\"ผู้หาย\",\"ถ้ามี\",110,111],[\"HAS_SUPPORTING_EVIDENCE\",\"ตำหนิหรือลักษณะพิเศษต่าง ๆ\",\"Evidence\",\"ผู้หาย\",\"\",112,112],[\"HAS_SUPPORTING_EVIDENCE\",\"เอกสารสำคัญต่าง ๆ ที่เกี่ยวข้อง\",\"Document\",\"ผู้หาย\",\"เท่าที่มี\",113,113]]}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 53805179426,
+    "load_duration": 199784564,
+    "prompt_eval_count": 931,
+    "prompt_eval_duration": 5935324000,
+    "eval_count": 147,
+    "eval_duration": 47612803000
+  },
+  "parse_ok": true,
+  "truncated": false,
+  "accepted": [
+    {
+      "section": "1.7",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "ใบเสร็จรับเงินซื้อขาย",
+      "raw_name": "ใบเสร็จรับเงินซื้อขาย",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "",
+      "start_line": 108,
+      "end_line": 109,
+      "evidence": "(1) ใบเสร็จรับเงินซื้อขาย หรือหลักฐาน\nการแสดงการซื้อขายทรัพย์สินนั้น",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.7",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "หลักฐานการแสดงการซื้อขายทรัพย์สิน",
+      "raw_name": "หลักฐานการแสดงการซื้อขายทรัพย์สิน",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "",
+      "start_line": 108,
+      "end_line": 109,
+      "evidence": "(1) ใบเสร็จรับเงินซื้อขาย หรือหลักฐาน\nการแสดงการซื้อขายทรัพย์สินนั้น",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.7",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "รูปพรรณทรัพย์",
+      "raw_name": "รูปพรรณทรัพย์",
+      "type": "Evidence",
+      "owner": "ผู้หาย",
+      "condition": "ถ้ามี",
+      "start_line": 110,
+      "end_line": 111,
+      "evidence": "(2) รูปพรรณทรัพย์สนิ นัน้ ๆ เช่น หมายเลข\nเครื่อง ฯลฯ (ถ้ามี)",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.7",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "ตำหนิหรือลักษณะพิเศษต่างๆ",
+      "raw_name": "ตำหนิหรือลักษณะพิเศษต่าง ๆ",
+      "type": "Evidence",
+      "owner": "ผู้หาย",
+      "condition": "",
+      "start_line": 112,
+      "end_line": 112,
+      "evidence": "(3) ตำหนิหรือลักษณะพิเศษต่าง ๆ",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context",
+        "check_compound_entity"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.7",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "เอกสารสำคัญต่างๆที่เกี่ยวข้อง",
+      "raw_name": "เอกสารสำคัญต่าง ๆ ที่เกี่ยวข้อง",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "เท่าที่มี",
+      "start_line": 113,
+      "end_line": 113,
+      "evidence": "(4) เอกสารสำคัญต่าง ๆ ที่เกี่ยวข้องเท่าที่มี",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    }
+  ],
+  "rejected": [],
+  "initial_validation": {
+    "accepted": [
+      {
+        "section": "1.7",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "ใบเสร็จรับเงินซื้อขาย",
+        "raw_name": "ใบเสร็จรับเงินซื้อขาย",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "",
+        "start_line": 108,
+        "end_line": 109,
+        "evidence": "(1) ใบเสร็จรับเงินซื้อขาย หรือหลักฐาน\nการแสดงการซื้อขายทรัพย์สินนั้น",
+        "pdf_pages": [
+          26
+        ],
+        "printed_pages": [
+          13
+        ],
+        "review_flags": [
+          "check_condition_context"
+        ],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.7",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "หลักฐานการแสดงการซื้อขายทรัพย์สิน",
+        "raw_name": "หลักฐานการแสดงการซื้อขายทรัพย์สิน",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "",
+        "start_line": 108,
+        "end_line": 109,
+        "evidence": "(1) ใบเสร็จรับเงินซื้อขาย หรือหลักฐาน\nการแสดงการซื้อขายทรัพย์สินนั้น",
+        "pdf_pages": [
+          26
+        ],
+        "printed_pages": [
+          13
+        ],
+        "review_flags": [
+          "check_condition_context"
+        ],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.7",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "รูปพรรณทรัพย์",
+        "raw_name": "รูปพรรณทรัพย์",
+        "type": "Evidence",
+        "owner": "ผู้หาย",
+        "condition": "ถ้ามี",
+        "start_line": 110,
+        "end_line": 111,
+        "evidence": "(2) รูปพรรณทรัพย์สนิ นัน้ ๆ เช่น หมายเลข\nเครื่อง ฯลฯ (ถ้ามี)",
+        "pdf_pages": [
+          26
+        ],
+        "printed_pages": [
+          13
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.7",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "ตำหนิหรือลักษณะพิเศษต่างๆ",
+        "raw_name": "ตำหนิหรือลักษณะพิเศษต่าง ๆ",
+        "type": "Evidence",
+        "owner": "ผู้หาย",
+        "condition": "",
+        "start_line": 112,
+        "end_line": 112,
+        "evidence": "(3) ตำหนิหรือลักษณะพิเศษต่าง ๆ",
+        "pdf_pages": [
+          26
+        ],
+        "printed_pages": [
+          13
+        ],
+        "review_flags": [
+          "check_condition_context",
+          "check_compound_entity"
+        ],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.7",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "เอกสารสำคัญต่างๆที่เกี่ยวข้อง",
+        "raw_name": "เอกสารสำคัญต่าง ๆ ที่เกี่ยวข้อง",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "เท่าที่มี",
+        "start_line": 113,
+        "end_line": 113,
+        "evidence": "(4) เอกสารสำคัญต่าง ๆ ที่เกี่ยวข้องเท่าที่มี",
+        "pdf_pages": [
+          26
+        ],
+        "printed_pages": [
+          13
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      }
+    ],
+    "rejected": []
+  },
+  "validator_version": "v2.2-unique-nearby-grounding-repair"
+}

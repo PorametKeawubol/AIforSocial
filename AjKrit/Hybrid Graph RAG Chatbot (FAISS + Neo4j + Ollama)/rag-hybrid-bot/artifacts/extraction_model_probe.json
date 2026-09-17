@@ -1,0 +1,12 @@
+{
+  "model": "qwen2.5:7b",
+  "page": 22,
+  "raw": "{\n  \"facts\": [\n    {\n      \"subject\": \"น้ำปูนใส\",\n      \"subject_type\": \"Treatment\",\n      \"relation\": \"TREATED_BY\",\n      \"object\": \"ปูนขาวก่อสร้าง\",\n      \"object_type\": \"Treatment\",\n      \"evidence\": \"นำปูนขาวก่อสร้างมาละลายน้ำ\"\n    },\n    {\n      \"subject\": \"มะนาว\",\n      \"subject_type\": \"Crop\",\n      \"relation\": \"TREATED_BY\",\n      \"object\": \"น้ำปูนใส\",\n      \"object_type\": \"Treatment\",\n      \"evidence\": \"ฉีดพ่นต้นมะนาวให้ทั่ว 7 วันครั้ง เพื่อป้องกันและกำจัดโรคแคงเกอร์\"\n    },\n    {\n      \"subject\": \"โรคแคงเกอร์\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"CAUSED_BY\",\n      \"object\": \"ไม่ระบุ\",\n      \"object_type\": \"Topic\",\n      \"evidence\": \"เพื่อป้องกันและกำจัดโรคแคงเกอร์\"\n    }\n  ]\n}",
+  "timing": {
+    "seconds": 30.747,
+    "model": "qwen2.5:7b",
+    "eval_count": 261,
+    "eval_duration": 6711160000,
+    "prompt_eval_count": 841
+  }
+}

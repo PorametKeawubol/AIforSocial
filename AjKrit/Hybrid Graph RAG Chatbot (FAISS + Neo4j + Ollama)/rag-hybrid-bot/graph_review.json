@@ -1,0 +1,74 @@
+{
+  "source_sha256": "a234df1a468da4ea3fbc48f9617d8a42bfe56948ae9438234c92cc39b6591d49",
+  "reviewer": "Codex source review",
+  "exclude": {
+    "c5f966df27392a633b4c3829": "Generic heading was treated as a disease name; reduced yield is an outcome.",
+    "a0f5abe7dd153b3da29a2e5d": "Low selling price is an economic outcome, not a disease symptom.",
+    "df515bcf1c517f7d5fee849c": "Early outbreak stage is not a symptom.",
+    "823e2b679fea8350b3eafadf": "Entry through wounds is a route of infection, not a symptom.",
+    "91be09de968602140c0252e9": "Contact transmission is not a symptom.",
+    "e39e1807aaa78d73d423f6d2": "Aphids are transmission vectors; the stated cause is a virus.",
+    "7bf5536be86c72e7e0870ce1": "Aphids are transmission vectors; the stated cause is TEV.",
+    "feb82e24e5132e2e78a79192": "Whiteflies are transmission vectors; the stated cause is a virus.",
+    "a6ba8613c0795e5af477ba87": "The source uses compost as a carrier mixture with Trichoderma, not a standalone treatment.",
+    "8eade18d3f1ed4d0ebe09b5e": "Optional ingredient in a mixture was asserted as a standalone treatment.",
+    "c71de59d7af9e54a9dca7582": "Generic word disease does not identify the disease entity.",
+    "09ec9749b99969f5b381e048": "Disease severity heading was incorrectly treated as the name of a disease."
+  },
+  "additions": [
+    {
+      "subject": "มะนาว",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคแคงเกอร์",
+      "object_type": "Disease",
+      "page": 20,
+      "evidence": "โรคแคงเกอร์ เป็นโรคที่เกิดจากเชื้อแบคทีเรียเข้าทำลาย \nทางบาดแผลของพืช โดยเฉพาะพืชตระกูลส้ม เช่น ส้มเขียวหวาน \nส้มโอ มะนาว เป็นต้น ซึ่งระบาดมากในช่วงที่มีลมฝนแรง ถ้าระบาด \nมากๆ อาจทำให้ผลผลิตลดลง ขายไม่ได้ราคา"
+    },
+    {
+      "subject": "ส้มโอ",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคแคงเกอร์",
+      "object_type": "Disease",
+      "page": 20,
+      "evidence": "โรคแคงเกอร์ เป็นโรคที่เกิดจากเชื้อแบคทีเรียเข้าทำลาย \nทางบาดแผลของพืช โดยเฉพาะพืชตระกูลส้ม เช่น ส้มเขียวหวาน \nส้มโอ มะนาว เป็นต้น ซึ่งระบาดมากในช่วงที่มีลมฝนแรง ถ้าระบาด \nมากๆ อาจทำให้ผลผลิตลดลง ขายไม่ได้ราคา"
+    },
+    {
+      "subject": "ส้มเขียวหวาน",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคแคงเกอร์",
+      "object_type": "Disease",
+      "page": 20,
+      "evidence": "โรคแคงเกอร์ เป็นโรคที่เกิดจากเชื้อแบคทีเรียเข้าทำลาย \nทางบาดแผลของพืช โดยเฉพาะพืชตระกูลส้ม เช่น ส้มเขียวหวาน \nส้มโอ มะนาว เป็นต้น ซึ่งระบาดมากในช่วงที่มีลมฝนแรง ถ้าระบาด \nมากๆ อาจทำให้ผลผลิตลดลง ขายไม่ได้ราคา"
+    },
+    {
+      "subject": "โรคแคงเกอร์",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "น้ำปูนใส",
+      "object_type": "Treatment",
+      "page": 22,
+      "evidence": "นำปูนขาวก่อสร้างมาละลายน้ำ \nทิ้งไว้ประมาณ 15-20 นาที ให้นอนก้น \nจากนั้นให้กรองเอาเฉพาะน้ำปูนใส\nประมาณ 2 ลิตร ผสมกับน้ำเปล่า 100 \nลิตร ฉีดพ่นต้นมะนาวให้ทั่ว 7 วันครั้ง\nเพื่อป้องกันและกำจัดโรคแคงเกอร์ \nที่กำลังระบาด"
+    },
+    {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรครากเน่าโคนเน่า",
+      "object_type": "Disease",
+      "page": 46,
+      "evidence": "ดูแลทุเรียนอย่างไร? เมื่อเป็น\n“โรครากเน่าโคนเน่า”\nในช่วงที่อากาศแปรปรวน ปริมาณน้ำฝนมาก \nและฝนตกอย่างต่อเนื่อง ทำให้เกิดความชื้นในอากาศสูง \nเกษตรกรหาโอกาสในการจัดการสวนและพ่นสารเคมี\nไม่ได้ตามกำหนดเวลา ทำให้ “โรครากเน่าโคนเน่า” \nรุกระบาดสวนทุเรียน ผลผลิตเสียหาย เกษตรกรสวน\nทุเรียนต้องใช้วิธีป้องกันกำจัดอย่างถูกต้องและเหมาะสม ช่วยแก้\nปัญหาตรงจุด ลดความเสียหายของผลผลิต หยุดวงจรการระบาดของ\nโรครากเน่าโคนเน่าได้ผลจริง"
+    },
+    {
+      "subject": "โรครากเน่าโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ใบอ่อนเหี่ยวเหลือง",
+      "object_type": "Symptom",
+      "page": 46,
+      "evidence": "การเข้าทำลายของโรคเริ่มที่ใบและกิ่งอ่อนมีอาการเน่า ใบอ่อน\nเหี่ยวเหลือง มีจุดแผลสีน้ำตาลอ่อนฉ่ำน้ำ และเปลี่ยนเป็นสีน้ำตาลดำ \nเส้นใบมีสีน้ำตาลดำ กิ่ง ลำต้น และโคนต้นมีจุดฉ่ำน้ำสีน้ำตาล และ\nมีน้ำเยิ้มออกมาในช่วงเช้า เมื่อถากเปลือกจะพบว่าเปลือกเน่า เนื้อไม้ \nเป็นสีน้ำตาล ส่วนที่เน่ามีกลิ่นหืน แผลเน่าจะลุกลามรวดเร็ว มักพบ\nโรคร่วมกับการเข้าทำลายของมอดเจาะลำต้นทุเรียน และจะระบาด\nในช่วงฤดูฝนที่มีฝนตกชุกติดต่อกัน"
+    }
+  ]
+}

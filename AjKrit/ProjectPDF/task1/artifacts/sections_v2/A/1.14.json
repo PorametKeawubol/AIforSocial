@@ -1,0 +1,277 @@
+{
+  "fingerprint": "0308866b5f198cd35c6cb475",
+  "version": "sections-v2.1",
+  "section": "1.14",
+  "embedding": {
+    "embedding": "BAAI/bge-m3",
+    "cache_fingerprint": "1c7299b69943dd6662be8fb7",
+    "aggregation": "max of existing per-page ontology hints across section pages",
+    "hints": [
+      "เอกสารประกอบการแจ้งความ",
+      "หน่วยงานรับแจ้งเรื่อง",
+      "หลักฐานเกี่ยวกับเหตุการณ์",
+      "ช่องทางโทรศัพท์ติดต่อ"
+    ]
+  },
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "seconds": 81.21294443499937,
+  "attempt": 1,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T16:56:58.632953824Z",
+    "message": {
+      "content": "{\n\"edges\": [\n[\"HAS_SUPPORTING_EVIDENCE\", \"เสื้อผ้าของผู้ที่ถูกข่มขืนฯ ซึ่งมีคราบอสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืน\", \"Evidence\", \"ผู้เสียหาย\", \"\", 159, 160],\n[\"HAS_SUPPORTING_EVIDENCE\", \"สิ่งของต่างๆ ของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ\", \"Evidence\", \"ผู้เสียหาย\", \"\", 161, 162],\n[\"HAS_SUPPORTING_EVIDENCE\", \"บัตรประจำตัวประชาชน\", \"Document\", \"ผู้เสียหาย\", \"\", 162, 163],\n[\"HAS_SUPPORTING_EVIDENCE\", \"สำเนาทะเบียนบ้าน\", \"Document\", \"ผู้เสียหาย\", \"\", 162, 163],\n[\"HAS_SUPPORTING_EVIDENCE\", \"รูปถ่ายของผู้ต้องสงสัย\", \"Evidence\", \"ผู้เสียหาย\", \"ถ้ามี\", 164, 165],\n[\"HAS_SUPPORTING_EVIDENCE\", \"ที่อยู่ของผู้ต้องสงสัย\", \"Document\", \"ผู้เสียหาย\", \"ถ้ามี\", 164, 165]\n]\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 81212155762,
+    "load_duration": 215197525,
+    "prompt_eval_count": 836,
+    "prompt_eval_duration": 5635220000,
+    "eval_count": 250,
+    "eval_duration": 75309372000
+  },
+  "parse_ok": true,
+  "truncated": false,
+  "accepted": [
+    {
+      "section": "1.14",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "เสื้อผ้าของผู้ที่ถูกข่มขืนฯซึ่งมีคราบอสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืน",
+      "raw_name": "เสื้อผ้าของผู้ที่ถูกข่มขืนฯ ซึ่งมีคราบอสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืน",
+      "type": "Evidence",
+      "owner": "ผู้เสียหาย",
+      "condition": "",
+      "start_line": 159,
+      "end_line": 160,
+      "evidence": "(1) เสื้อผ้าของผู้ที่ถูกข่มขืนฯ ซึ่งมีคราบ\nอสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืนและ",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "review_flags": [
+        "check_condition_context",
+        "check_compound_entity"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.14",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "สิ่งของต่างๆของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ",
+      "raw_name": "สิ่งของต่างๆ ของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ",
+      "type": "Evidence",
+      "owner": "ผู้เสียหาย",
+      "condition": "",
+      "start_line": 161,
+      "end_line": 162,
+      "evidence": "สิ่งของต่างๆ ของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ\n(2) บัตรประจำตัวประชาชนและสำเนา",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.14",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "บัตรประจำตัวประชาชน",
+      "raw_name": "บัตรประจำตัวประชาชน",
+      "type": "Document",
+      "owner": "ผู้เสียหาย",
+      "condition": "",
+      "start_line": 162,
+      "end_line": 163,
+      "evidence": "(2) บัตรประจำตัวประชาชนและสำเนา\nทะเบียนบ้านของผู้เสียหาย",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.14",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "สำเนาทะเบียนบ้าน",
+      "raw_name": "สำเนาทะเบียนบ้าน",
+      "type": "Document",
+      "owner": "ผู้เสียหาย",
+      "condition": "",
+      "start_line": 162,
+      "end_line": 163,
+      "evidence": "(2) บัตรประจำตัวประชาชนและสำเนา\nทะเบียนบ้านของผู้เสียหาย",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.14",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "ที่อยู่ของผู้ต้องสงสัย",
+      "raw_name": "ที่อยู่ของผู้ต้องสงสัย",
+      "type": "Document",
+      "owner": "ผู้เสียหาย",
+      "condition": "ถ้ามี",
+      "start_line": 164,
+      "end_line": 165,
+      "evidence": "(3) รูปถ่าย หรือที่อยู่ของผู้ต้องสงสัย \nตลอดจนหลักฐานอื่น ๆ (ถ้ามี)",
+      "pdf_pages": [
+        29
+      ],
+      "printed_pages": [
+        16
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    }
+  ],
+  "rejected": [
+    {
+      "row": [
+        "HAS_SUPPORTING_EVIDENCE",
+        "รูปถ่ายของผู้ต้องสงสัย",
+        "Evidence",
+        "ผู้เสียหาย",
+        "ถ้ามี",
+        164,
+        165
+      ],
+      "reason": "entity_not_in_evidence"
+    }
+  ],
+  "initial_validation": {
+    "accepted": [
+      {
+        "section": "1.14",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "เสื้อผ้าของผู้ที่ถูกข่มขืนฯซึ่งมีคราบอสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืน",
+        "raw_name": "เสื้อผ้าของผู้ที่ถูกข่มขืนฯ ซึ่งมีคราบอสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืน",
+        "type": "Evidence",
+        "owner": "ผู้เสียหาย",
+        "condition": "",
+        "start_line": 159,
+        "end_line": 160,
+        "evidence": "(1) เสื้อผ้าของผู้ที่ถูกข่มขืนฯ ซึ่งมีคราบ\nอสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืนและ",
+        "pdf_pages": [
+          29
+        ],
+        "printed_pages": [
+          16
+        ],
+        "review_flags": [
+          "check_condition_context",
+          "check_compound_entity"
+        ],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.14",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "สิ่งของต่างๆของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ",
+        "raw_name": "สิ่งของต่างๆ ของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ",
+        "type": "Evidence",
+        "owner": "ผู้เสียหาย",
+        "condition": "",
+        "start_line": 161,
+        "end_line": 162,
+        "evidence": "สิ่งของต่างๆ ของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ\n(2) บัตรประจำตัวประชาชนและสำเนา",
+        "pdf_pages": [
+          29
+        ],
+        "printed_pages": [
+          16
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.14",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "บัตรประจำตัวประชาชน",
+        "raw_name": "บัตรประจำตัวประชาชน",
+        "type": "Document",
+        "owner": "ผู้เสียหาย",
+        "condition": "",
+        "start_line": 162,
+        "end_line": 163,
+        "evidence": "(2) บัตรประจำตัวประชาชนและสำเนา\nทะเบียนบ้านของผู้เสียหาย",
+        "pdf_pages": [
+          29
+        ],
+        "printed_pages": [
+          16
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.14",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "สำเนาทะเบียนบ้าน",
+        "raw_name": "สำเนาทะเบียนบ้าน",
+        "type": "Document",
+        "owner": "ผู้เสียหาย",
+        "condition": "",
+        "start_line": 162,
+        "end_line": 163,
+        "evidence": "(2) บัตรประจำตัวประชาชนและสำเนา\nทะเบียนบ้านของผู้เสียหาย",
+        "pdf_pages": [
+          29
+        ],
+        "printed_pages": [
+          16
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.14",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "ที่อยู่ของผู้ต้องสงสัย",
+        "raw_name": "ที่อยู่ของผู้ต้องสงสัย",
+        "type": "Document",
+        "owner": "ผู้เสียหาย",
+        "condition": "ถ้ามี",
+        "start_line": 164,
+        "end_line": 165,
+        "evidence": "(3) รูปถ่าย หรือที่อยู่ของผู้ต้องสงสัย \nตลอดจนหลักฐานอื่น ๆ (ถ้ามี)",
+        "pdf_pages": [
+          29
+        ],
+        "printed_pages": [
+          16
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      }
+    ],
+    "rejected": [
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "รูปถ่ายของผู้ต้องสงสัย",
+          "Evidence",
+          "ผู้เสียหาย",
+          "ถ้ามี",
+          164,
+          165
+        ],
+        "reason": "entity_not_in_evidence"
+      }
+    ]
+  },
+  "validator_version": "v2.2-unique-nearby-grounding-repair"
+}

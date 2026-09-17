@@ -1,0 +1,14 @@
+{
+  "A": {
+    "nodes": 81,
+    "relationships": 99,
+    "raw_v2_candidates": 64,
+    "candidate_matches": 55
+  },
+  "B": {
+    "nodes": 81,
+    "relationships": 99,
+    "raw_v2_candidates": 67,
+    "candidate_matches": 58
+  }
+}

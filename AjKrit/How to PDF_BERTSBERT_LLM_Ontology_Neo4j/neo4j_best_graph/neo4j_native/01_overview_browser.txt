@@ -1,0 +1,138 @@
+Styles have been reset to default
+Undo
+Query
+connection status: connected
+Instance:
+neo4j://localhost:7688
+. Click to open instance menu
+Database:
+neo4j
+. Click to open database menu
+User:
+neo4j
+. Click to open database user menu
+Connect your instance to Aura console for more tools and features
+Database overview
+Saved Cypher
+History
+Cypher reference
+Parameters
+Settings
+Database information
+Nodes (1,335)
+*
+Activity
+Application
+Benefit
+Biocontrol
+Chemical
+Condition
+Crop
+Disease
+DiseaseGroup
+Document
+Duration
+Environment
+Fertilizer
+GrowthStage
+LAW
+LEN
+LOCATION
+Material
+MONEY
+Show all nodes (25 more)
+Relationships (2,347)
+*
+APPLIED_TO
+CAUSED_BY
+CO_OCCURS_WITH
+COVERS
+EVIDENCED_BY
+EXHIBITS
+HAS_APPLICATION
+HAS_BENEFIT
+HAS_CONDITION
+HAS_DISEASE
+HAS_DURATION
+HAS_ENVIRONMENT
+HAS_GROWTH_STAGE
+HAS_HOST
+HAS_PAGE
+HAS_PREPARATION
+HAS_PURPOSE
+HAS_SEASON
+HAS_SECTION
+Show all relationships (16 more)
+Property keys
+aliases
+assertion
+assertion_layer
+condition
+context
+dataset
+dilution_as_printed
+evidence
+evidence_note
+filename
+id
+kind
+layer
+method
+name
+number
+object
+origin
+page
+page_count
+Show all property keys (13 more)
+Last update:
+ 6:33:44 PM 
+1
+2
+3
+4
+5
+// ภาพรวมความรู้ครบ 10 บท
+MATCH p=(s:PlantGuide2019Reviewed)-[r]->(t:PlantGuide2019Reviewed)
+WHERE r.id IN ["e62944e3797430dcf5fb", "536f821850761f926688", "f0f9db6fd80002e582a1", "b7405a35da16697ed0f0", "5911536d48d84152a5c5", "1dac2f51071698fed54e", "9262e2bfb434c2254b64", "1e68630b1f1234ef0c99", "482d2a564be02a70a8f7", "4b18db4ff931abedec96", "1237adc68b65ad42acf2", "5c8767ac36213f813fd7", "7ed03e969401f23a4567", "ad3de503994da3978a8e", "ad632cd41b070af420ac", "1e025f1db46e8fb4b639", "9ec867bc7568a57c1b99", "41e48577009b6d9164f2", "c341dc5591011bf6b1f7", "1556b554dcba31253856", "8ce16d2f36d47b46ca39", "68f06cc8baa9869278ab", "cf7fd3e961bc24bbeb87", "c47eaa228b460cf2866f", "b75bcb78fb784fda9fa6", "be708b1727e9bb96686d", "abc9e454b5d6866db3da", "16bab33d9c9a5cf09a21", "0bc48a007d8efd000271", "f05b67f47ca9f6411f5a"]
+RETURN p;
+
+
+Fullscreen frame
+1
+2
+3
+4
+5
+// ภาพรวมความรู้ครบ 10 บท
+MATCH p=(s:PlantGuide2019Reviewed)-[r]->(t:PlantGuide2019Reviewed)
+WHERE r.id IN ["e62944e3797430dcf5fb", "536f821850761f926688", "f0f9db6fd80002e582a1", "b7405a35da16697ed0f0", "5911536d48d84152a5c5", "1dac2f51071698fed54e", "9262e2bfb434c2254b64", "1e68630b1f1234ef0c99", "482d2a564be02a70a8f7", "4b18db4ff931abedec96", "1237adc68b65ad42acf2", "5c8767ac36213f813fd7", "7ed03e969401f23a4567", "ad3de503994da3978a8e", "ad632cd41b070af420ac", "1e025f1db46e8fb4b639", "9ec867bc7568a57c1b99", "41e48577009b6d9164f2", "c341dc5591011bf6b1f7", "1556b554dcba31253856", "8ce16d2f36d47b46ca39", "68f06cc8baa9869278ab", "cf7fd3e961bc24bbeb87", "c47eaa228b460cf2866f", "b75bcb78fb784fda9fa6", "be708b1727e9bb96686d", "abc9e454b5d6866db3da", "16bab33d9c9a5cf09a21", "0bc48a007d8efd000271", "f05b67f47ca9f6411f5a"]
+RETURN p;
+
+
+Graph
+Table
+Zoom to fit
+Results overview
+Nodes (31)
+* (31)
+Crop (5)
+Disease (4)
+DiseaseGroup (1)
+Document (1)
+Material (1)
+Pest (1)
+PlantGuide2019Reviewed (31)
+Preparation (1)
+Section (10)
+Soil (2)
+Treatment (5)
+Relationships (30)
+* (30)
+COVERS (10)
+HAS_DISEASE (5)
+HAS_PREPARATION (1)
+HAS_SECTION (10)
+INCLUDES (1)
+MANAGED_BY (3)
+Started streaming 30 records after 2 ms and completed after 5 ms.

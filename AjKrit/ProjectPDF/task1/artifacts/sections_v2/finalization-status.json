@@ -1,0 +1,6 @@
+{
+  "status": "structurally_validated_and_imported_requires_semantic_review",
+  "A": {"nodes": 70, "relationships": 64, "sections_with_edges": 15},
+  "B": {"nodes": 71, "relationships": 67, "sections_with_edges": 15},
+  "semantic_review_output": "../../final/graph.json"
+}

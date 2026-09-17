@@ -1,0 +1,1839 @@
+{
+  "reviewer": "agent manual source review, not blinded or independent human gold standard",
+  "checked_at": "2026-09-14T16:10:52.471192+00:00",
+  "scope": "All 108 accepted rows reviewed; all 32 rejected rows inspected for filtering effects. Qualitative decision, no precision/recall claims. Strict output checks differ from semantic correctness.",
+  "input_sha256": {
+    "A/page-21.json": "fe594a73fdb61c8b8225e576b400b1b2d6a3860a8d5f493d4f0e1080d712903f",
+    "A/page-22.json": "a7979c399be9a53680f43709d168af50133f3b53a7bfae4a7e4207b22327f472",
+    "A/page-23.json": "728cc2029adce1efeae5913968e2e5549211018a8b01a48aa79305c08ee1e270",
+    "A/page-24.json": "5403daa95138cb862aa49c133438cddafe734e7236ece0833e876e2631513a3e",
+    "A/page-25.json": "7c3db054305c8ab091e76ece9f9cd370e32a741b83a61b4095be0fa18efd62e7",
+    "A/page-26.json": "4b6a34059c006fa5fbb60d4bfbf0492d452589acbc223efb8a264ccba5e1fde8",
+    "A/page-27.json": "e5a91f75ce26b8a8d308bc7a88abf181505017ac75f7f3cb525d5d336d7bc0b2",
+    "A/page-28.json": "1b8195e46aab6680dab9ca7dd4ce101f6dcec1d8bc034c391b2826a71fee3b66",
+    "A/page-29.json": "a14db865806e934fdc80696f81bb5bda73a6509b4995ba5fbed84e0a7114e2bf",
+    "A/page-30.json": "14b563612b5242a6a8128307f0022d7cef16f7100c64acb38eb7cbe3b7d6bcef",
+    "B/page-21.json": "3e318967f16063bfe91127814d8fa5081d3ca8a669f93e27b4691e2cda5e0269",
+    "B/page-22.json": "ebb948d8bbad82e679739f5cfbbcbaf47e896ab39fa9f32fdb483d4e4f081986",
+    "B/page-23.json": "d6ddec303c9ee19a9ba6a1fa8c9b2799708ae845911a50693fd5dd453cbffc75",
+    "B/page-24.json": "5cf9853a31a4b01beeb96f3d8b33d16ba608f7a6e7e33b9db07bd4458a7ba4e8",
+    "B/page-25.json": "61916c74d819d0ce1d5b5b6f67f90781cc9cce0676075df8597d1f8860e431f1",
+    "B/page-26.json": "65c4fff4d93bbf395ae098dab732aa5b9e084ec0c4c0f848ad71ce4401dd7920",
+    "B/page-27.json": "5fa004303895b5ab8b2de7f97f22ed09408a74411e1234bbfa509c2e140e5915",
+    "B/page-28.json": "139e20d5b73b38560369ca4cca4be8f28f636cbc9409d318739d7a52bbdf4a59",
+    "B/page-29.json": "8200b495374a8e4ad64ef73793e81e184bc03155d02d67f8597d7f3c1c64ba60",
+    "B/page-30.json": "9135449d5e9e0954155bdd3e1d88be5ef470a66ab14f51b45489df48b4e1cf90"
+  },
+  "stats": {
+    "A": {
+      "pages": 10,
+      "accepted": 51,
+      "rejected": 17,
+      "covered_sections": [
+        "1.1",
+        "1.2",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6",
+        "1.7",
+        "1.8",
+        "1.9",
+        "1.10",
+        "1.11",
+        "1.13",
+        "1.14",
+        "1.16"
+      ],
+      "seconds": 1220.0,
+      "nonempty_condition_rows": 4,
+      "sections_count": 14
+    },
+    "B": {
+      "pages": 10,
+      "accepted": 57,
+      "rejected": 15,
+      "covered_sections": [
+        "1.1",
+        "1.2",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6",
+        "1.7",
+        "1.8",
+        "1.9",
+        "1.10",
+        "1.11",
+        "1.13",
+        "1.14",
+        "1.15",
+        "1.16"
+      ],
+      "seconds": 2625.4,
+      "nonempty_condition_rows": 9,
+      "sections_count": 15
+    }
+  },
+  "decision": "Prefer B as starting configuration for this 10-page run, with mandatory review; not proof of general embedding superiority. A retains two identity/representation documents omitted by B.",
+  "shared_omissions": [
+    "PDF23 district office and municipality both absent despite successful empty JSON",
+    "Section1.12 no accepted evidence in either run; raw generated rows were rejected by substring validator",
+    "Section1.10 entrustment and ownership evidence filtered out in both",
+    "PDF26 receipts, vehicle manual and contact documents largely filtered out in both"
+  ],
+  "ontology_limitation": "Prompt allowed only 4 relation types while reviewed ontology has 7. CERTIFIED_BY/ISSUES/ABOUT_DOCUMENT omissions cannot fairly be attributed solely to embedding models. Embeddings supply ontology hints, not graph retrieval or entity merging.",
+  "rows": [
+    {
+      "group": "A",
+      "pdf_page": 21,
+      "accepted_index": 0,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "บัตรประจำตัวประชาชน",
+        "Document",
+        "",
+        "บัตรประจำตัวประชาชน"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition field omits identity-document alternatives; source evidence may retain some wording"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 21,
+      "accepted_index": 1,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบแทนฯ",
+        "Document",
+        "",
+        "ใบแทนฯ"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition field omits identity-document alternatives; source evidence may retain some wording"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 21,
+      "accepted_index": 2,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "บัตรประจำตัวข้าราชการ",
+        "Document",
+        "",
+        "บัตรประจำตัวข้าราชการ"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition field omits identity-document alternatives; source evidence may retain some wording"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 21,
+      "accepted_index": 3,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบสำคัญประจำตัวคนต่างด้าว",
+        "Document",
+        "",
+        "ใบสำคัญประจำตัวคนต่างด้าว"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition field omits identity-document alternatives; source evidence may retain some wording"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 21,
+      "accepted_index": 4,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือเดินทาง (Passport)",
+        "Document",
+        "",
+        "หนังสือเดินทาง (Passport) สำหรับ ชาวต่างประเทศที่เดินทางเข้ามาภายในประเทศ"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition field omits foreign visitor applicability; evidence retains it"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 21,
+      "accepted_index": 5,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "สำเนาทะเบียนบ้าน",
+        "Document",
+        "",
+        "สำเนาทะเบียนบ้าน"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 21,
+      "accepted_index": 6,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบสำคัญแสดงการเป็นผู้แทนโดยชอบธรรมของผู้เยาว์",
+        "Document",
+        "",
+        "ใบสำ คั ญ แสดงการเป็ น ผู ้ แ ทน โดยชอบธรรมของผู้เยาว์"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition field omits acting as representative; target partly encodes role"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 21,
+      "accepted_index": 7,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบสำคัญแสดงการเป็นผู้อนุบาลของผู้ไร้ความสามารถ (ตามคำสั่งศาล)",
+        "Document",
+        "",
+        "ใบสำคัญแสดงการเป็นผู้อนุบาลของ ผู้ไร้ความสามารถ (ตามคำสั่งศาล)"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition field omits acting as representative; target partly encodes role"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 21,
+      "accepted_index": 8,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "สูติบัตร",
+        "Document",
+        "",
+        "สูติบัตร, ใบทะเบียนสมรส"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "omits special circumstance: injured/deceased person unable to act, and relationship-proof purpose"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 21,
+      "accepted_index": 9,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบทะเบียนสมรส",
+        "Document",
+        "",
+        "สูติบัตร, ใบทะเบียนสมรส"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "omits special circumstance: injured/deceased person unable to act, and relationship-proof purpose"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 22,
+      "accepted_index": 0,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบสำคัญแสดงการอนุญาตของสามีหรือภรรยา",
+        "Document",
+        "",
+        "ใบสำคัญแสดงการอนุญาตของสามี หรือภรรยา แล้วแต่กรณี ให้ร้องทุกข์แทน หรือเป็น ตัวแทนโดยสมบูรณ์"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition field omits representative/spouse/legal-entity circumstance"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 22,
+      "accepted_index": 1,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือมอบอำนาจของนิติบุคคล",
+        "Document",
+        "",
+        "ในกรณีที่เป็นผู้แทนของนิติบุคคล ให้นำหนังสือมอบอำนาจของนิติบุคคลเป็นหลักฐาน รวมทั้งติดอากรแสตมป์ 5 บาท และหนังสือรับรอง นิติบุคคลนั้นของกระทรวงพาณิชย์"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition field omits representative/spouse/legal-entity circumstance"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 22,
+      "accepted_index": 2,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือรับรองนิติบุคคลนั้นของกระทรวงพาณิชย์",
+        "Document",
+        "",
+        "ในกรณีที่เป็นผู้แทนของนิติบุคคล ให้นำหนังสือมอบอำนาจของนิติบุคคลเป็นหลักฐาน รวมทั้งติดอากรแสตมป์ 5 บาท และหนังสือรับรอง นิติบุคคลนั้นของกระทรวงพาณิชย์"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition field omits representative/spouse/legal-entity circumstance"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 22,
+      "accepted_index": 3,
+      "row": [
+        "1.2",
+        "HANDLED_BY",
+        "พนักงานเจ้าหน้าที่ที่สำนักงานทะเบียน",
+        "PersonRole",
+        "",
+        "เมื่อบัตรหายหรือถูกทำลาย ให้แจ้งต่อ พนักงานเจ้าหน้าที่ที่สำนักงานทะเบียนที่ประสงค์ จะทำบัตร (ไม่ต้องแจ้งความต่อเจ้าหน้าที่ตำรวจ)"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 22,
+      "accepted_index": 4,
+      "row": [
+        "1.2",
+        "NOT_HANDLED_BY",
+        "เจ้าหน้าที่ตำรวจ",
+        "PersonRole",
+        "",
+        "(ไม่ต้องแจ้งความต่อเจ้าหน้าที่ตำรวจ)"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 22,
+      "accepted_index": 5,
+      "row": [
+        "1.2",
+        "HAS_SUPPORTING_EVIDENCE",
+        "สำเนาทะเบียนบ้าน",
+        "Document",
+        "",
+        "หลักฐานที่ต้องนำไปแสดงต่อเจ้าหน้าที่ สำนักงานทะเบียน - สำเนาทะเบียนบ้าน"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 22,
+      "accepted_index": 6,
+      "row": [
+        "1.2",
+        "HAS_SUPPORTING_EVIDENCE",
+        "เจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน ผู้ใหญ่บ้าน ไปให้การรับรอง",
+        "PersonRole",
+        "",
+        "หาก ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน ผู้ใหญ่บ้าน ไปให้การรับรอง"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "PersonRole is a certifier, not a supporting evidence object; compound target; condition field empty. Prompt lacked CERTIFIED_BY relation"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 24,
+      "accepted_index": 0,
+      "row": [
+        "1.3",
+        "HANDLED_BY",
+        "สถานีตำรวจท้องที่ที่หาย",
+        "Organization",
+        "",
+        "ต่อสถานีตำรวจท้องที่ที่หาย"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 24,
+      "accepted_index": 1,
+      "row": [
+        "1.3",
+        "HANDLED_BY",
+        "เจ้าพนักงานตำรวจ",
+        "PersonRole",
+        "",
+        "เจ้าพนักงานตำรวจจะสอบสวนว่า หายจริงหรือไม่ แล้วลงบันทึกประจำวันไว้เป็นหลักฐาน"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 24,
+      "accepted_index": 2,
+      "row": [
+        "1.3",
+        "HAS_SUPPORTING_EVIDENCE",
+        "บันทึกประจำวัน",
+        "Evidence",
+        "",
+        "ลงบันทึกประจำวันไว้เป็นหลักฐาน"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "daily record is created during procedure, not evidence brought by citizen; relation direction in process is misrepresented. Prompt lacked output-document relation"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 25,
+      "accepted_index": 0,
+      "row": [
+        "1.4",
+        "HAS_SUPPORTING_EVIDENCE",
+        "บัตรประจำตัวผู้หาย (ถ้ามี)",
+        "Evidence",
+        "",
+        "บัตรประจำตัวผู้หาย (ถ้ามี)"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "document content mislabeled Evidence; some targets also combine multiple document examples",
+        "availability/current-photo condition embedded in entity instead of structured condition"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 25,
+      "accepted_index": 1,
+      "row": [
+        "1.4",
+        "HAS_SUPPORTING_EVIDENCE",
+        "สำเนาทะเบียนบ้านของผู้หาย (ถ้ามี)",
+        "Evidence",
+        "",
+        "สำเนาทะเบียนบ้านของผู้หาย (ถ้ามี)"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "document content mislabeled Evidence; some targets also combine multiple document examples",
+        "availability/current-photo condition embedded in entity instead of structured condition"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 25,
+      "accepted_index": 2,
+      "row": [
+        "1.4",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ภาพถ่ายคนหาย (ภาพถ่ายทีเ่ ป็นปัจจุบนั )",
+        "Evidence",
+        "",
+        "ภาพถ่ายคนหาย (ภาพถ่ายทีเ่ ป็นปัจจุบนั )"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "availability/current-photo condition embedded in entity instead of structured condition"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 25,
+      "accepted_index": 3,
+      "row": [
+        "1.4",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบสำคัญทางราชการ เช่น ใบเกิด, ใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)",
+        "Evidence",
+        "",
+        "ใบสำคัญทางราชการ เช่น ใบเกิด, ใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "document content mislabeled Evidence; some targets also combine multiple document examples",
+        "availability/current-photo condition embedded in entity instead of structured condition"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 25,
+      "accepted_index": 4,
+      "row": [
+        "1.4",
+        "CONTACT_VIA",
+        "ศูนย์ข ้อมูลคนหาย มูลนิธิกระจกเงา",
+        "Contact",
+        "",
+        "ศู น ย์ ข ้ อ มู ล คนหาย มู ล นิ ธิ ก ระจกเงา โทร. 08 0775 2673"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "organization name labeled Contact; telephone appears only in evidence, no telephone node"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 25,
+      "accepted_index": 5,
+      "row": [
+        "1.5",
+        "CONTACT_VIA",
+        "191",
+        "Contact",
+        "ทางเลือก",
+        "แจ้งทาง 191 หรือ แจ้ง 1192"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 25,
+      "accepted_index": 6,
+      "row": [
+        "1.5",
+        "CONTACT_VIA",
+        "1192",
+        "Contact",
+        "ทางเลือก",
+        "แจ้งทาง 191 หรือ แจ้ง 1192"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 25,
+      "accepted_index": 7,
+      "row": [
+        "1.5",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบทะเบียนรถยนต์ รถจักรยานยนต์ เรือ หรือพาหนะอื่ น ๆ ที่หาย",
+        "Evidence",
+        "",
+        "(1) ใบทะเบียนรถยนต์ รถจักรยานยนต์ เรือ \nหรือพาหนะอื่ น ๆ ที่หาย"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "document content mislabeled Evidence; some targets also combine multiple document examples"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 26,
+      "accepted_index": 0,
+      "row": [
+        "1.6",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ทะเบียนใบอนุญาตอาวุธปืน",
+        "Document",
+        "",
+        "(1) ทะเบียนใบอนุญาตอาวุธปืน"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 26,
+      "accepted_index": 1,
+      "row": [
+        "1.7",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ตำหนิหรือลักษณะพิเศษต่าง ๆ",
+        "Evidence",
+        "",
+        "(3) ตำหนิหรือลักษณะพิเศษต่าง ๆ"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 26,
+      "accepted_index": 2,
+      "row": [
+        "1.7",
+        "HAS_SUPPORTING_EVIDENCE",
+        "เอกสารสำคัญต่าง ๆ ที่เกี่ยวข้องเท่าที่มี",
+        "Document",
+        "",
+        "(4) เอกสารสำคัญต่าง ๆ ที่เกี่ยวข้องเท่าที่มี"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "availability condition embedded in entity name instead of condition property"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 27,
+      "accepted_index": 0,
+      "row": [
+        "1.7",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ร่องรอยหลักฐานในที่เกิดเหตุ",
+        "Evidence",
+        "",
+        "ให้รักษาร่องรอยหลักฐานในที่เกิดเหตุไว้"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "omits preserve-at-scene instruction; supporting evidence relation alone could imply transport"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 27,
+      "accepted_index": 1,
+      "row": [
+        "1.8",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบสำคัญตัวจริง เช่น โฉนด แบบ น.ส.3 แบบ ส.ค.1 หนังสือสัญญา ใบเสร็จรับเงิน",
+        "Document",
+        "",
+        "(1) ใบสำคัญตัวจริง เช่น โฉนด แบบ น.ส.3 \nแบบ ส.ค.1 หนังสือสัญญา ใบเสร็จรับเงิน เป็นต้น"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 27,
+      "accepted_index": 2,
+      "row": [
+        "1.8",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือที่ปลอมแปลง",
+        "Document",
+        "",
+        "(2) หนังสือที่ปลอมแปลง"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 27,
+      "accepted_index": 3,
+      "row": [
+        "1.8",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ตัวอย่างตราที่ใช้ประทับหรือลายเซ็นในหนังสือ",
+        "Evidence",
+        "",
+        "(3) ตัวอย่างตราที่ใช้ประทับหรือลายเซ็น\nในหนังสือ"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 27,
+      "accepted_index": 4,
+      "row": [
+        "1.9",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือหรือหลักฐานต่างๆ ที่เกี่ยวกับการถูกฉ้อโกง",
+        "Document",
+        "",
+        "(1) หนังสือหรือหลักฐานต่างๆ ที่เกี่ยวกับ\nการถูกฉ้อโกง"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "target combines documents and other fraud evidence; Document-only type narrows a broader source category"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 27,
+      "accepted_index": 5,
+      "row": [
+        "1.9",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หลักฐานแสดงการเป็นเจ้าของหรือผู้ครอบครองทรัพย์",
+        "Evidence",
+        "",
+        "(2) หลักฐานแสดงการเป็นเจ้าของหรือ\nผู้ครอบครองทรัพย์"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 28,
+      "accepted_index": 0,
+      "row": [
+        "1.10",
+        "HAS_SUPPORTING_EVIDENCE",
+        "สำเนาหรือคำสั่งศาล",
+        "Evidence",
+        "",
+        "(3) สำเนาหรือคำสั่งศาล หรือพินัยกรรม"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "court/will document mislabeled Evidence; omits conditional estate-manager circumstance and alternatives"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 28,
+      "accepted_index": 1,
+      "row": [
+        "1.10",
+        "HAS_SUPPORTING_EVIDENCE",
+        "พินัยกรรม",
+        "Evidence",
+        "",
+        "(3) สำเนาหรือคำสั่งศาล หรือพินัยกรรม"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "court/will document mislabeled Evidence; omits conditional estate-manager circumstance and alternatives"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 28,
+      "accepted_index": 2,
+      "row": [
+        "1.11",
+        "HAS_SUPPORTING_EVIDENCE",
+        "สัญญาใบเช่าซื้อ",
+        "Document",
+        "",
+        "(1) สั ญ ญาใบเช่ า ซื้ อ หรื อ สำ เนา หรื อ"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "omits original/copy/alternative-document choice"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 28,
+      "accepted_index": 3,
+      "row": [
+        "1.11",
+        "HAS_SUPPORTING_EVIDENCE",
+        "สำเนา",
+        "Document",
+        "",
+        "(1) สั ญ ญาใบเช่ า ซื้ อ หรื อ สำ เนา หรื อ"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "standalone สำเนา lacks what is copied; should model copy of hire-purchase contract, not generic document node"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 29,
+      "accepted_index": 0,
+      "row": [
+        "1.13",
+        "HAS_SUPPORTING_EVIDENCE",
+        "สำเนาทะเบียนบ้านของผู้เยาว์",
+        "Document",
+        "",
+        "สำเนาทะเบียนบ้านของผู้เยาว์"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 29,
+      "accepted_index": 1,
+      "row": [
+        "1.13",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบเกิดของผู้เยาว์ (สูติบัตร)",
+        "Document",
+        "",
+        "ใบเกิดของผู้เยาว์ (สูติบัตร)"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 29,
+      "accepted_index": 2,
+      "row": [
+        "1.13",
+        "HAS_SUPPORTING_EVIDENCE",
+        "รูปถ่ายของผู้เยาว์",
+        "Evidence",
+        "",
+        "รูปถ่ายของผู้เยาว์"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 29,
+      "accepted_index": 3,
+      "row": [
+        "1.13",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หลักฐานสำคัญอื่น ๆ ที่เกี่ยวกับผู้เยาว์",
+        "Evidence",
+        "ถ้ามี",
+        "หลักฐานสำคัญอื่น ๆ ที่เกี่ยวกับผู้เยาว์ (ถ้ามี)"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 29,
+      "accepted_index": 4,
+      "row": [
+        "1.14",
+        "HAS_SUPPORTING_EVIDENCE",
+        "เสื้อผ้าของผู้ที่ถูกข่มขืนฯ ซึ่งมีคราบอสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืนและสิ่งของต่างๆ ของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ",
+        "Evidence",
+        "",
+        "เสื้อผ้าของผู้ที่ถูกข่มขืนฯ ซึ่งมีคราบ อสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืนและ สิ่งของต่างๆ ของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "combines victim clothing and accused belongings into one entity; split for graph"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 29,
+      "accepted_index": 5,
+      "row": [
+        "1.14",
+        "HAS_SUPPORTING_EVIDENCE",
+        "บัตรประจำตัวประชาชนและสำเนาทะเบียนบ้านของผู้เสียหาย",
+        "Document",
+        "",
+        "บัตรประจำตัวประชาชนและสำเนา ทะเบียนบ้านของผู้เสียหาย"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "combines identity card and house-register copy into one entity; split for graph"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 29,
+      "accepted_index": 6,
+      "row": [
+        "1.14",
+        "HAS_SUPPORTING_EVIDENCE",
+        "รูปถ่าย หรือที่อยู่ของผู้ต้องสงสัย ตลอดจนหลักฐานอื่น ๆ",
+        "Evidence",
+        "ถ้ามี",
+        "รูปถ่าย หรือที่อยู่ของผู้ต้องสงสัย ตลอดจนหลักฐานอื่น ๆ (ถ้ามี)"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "combines photo/address/other evidence into one entity; retains availability but omits alternative in condition field"
+      ]
+    },
+    {
+      "group": "A",
+      "pdf_page": 30,
+      "accepted_index": 0,
+      "row": [
+        "1.16",
+        "HAS_SUPPORTING_EVIDENCE",
+        "เช็คที่ยึดไว้",
+        "Document",
+        "",
+        "เช็คที่ยึดไว้"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 30,
+      "accepted_index": 1,
+      "row": [
+        "1.16",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือทีธ่ นาคารแจ้งขัดข้องหรือปฏิเสธ การจ่ายเงิน",
+        "Document",
+        "",
+        "หนังสือทีธ่ นาคารแจ้งขัดข้องหรือปฏิเสธ การจ่ายเงิน"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "A",
+      "pdf_page": 30,
+      "accepted_index": 2,
+      "row": [
+        "1.16",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หลักฐานหรือเอกสารซึง่ เป็นมูลหนีแ้ หล่ง ที่มาของการจ่ายเช็ค เช่น หนังสือสัญญาซื้อขาย ฯลฯ",
+        "Evidence",
+        "",
+        "หลักฐานหรือเอกสารซึง่ เป็นมูลหนีแ้ หล่ง ที่มาของการจ่ายเช็ค เช่น หนังสือสัญญาซื้อขาย ฯลฯ"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "groups debt evidence and sale-contract example; Evidence/Document type choice depends on whether category or example is represented, not a clear comparative error"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 21,
+      "accepted_index": 0,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "บัตรประจำตัวประชาชน",
+        "Document",
+        "",
+        "บัตรประจำตัวประชาชน หรือใบแทนฯ"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition field omits identity-document alternatives; source evidence may retain some wording"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 21,
+      "accepted_index": 1,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "บัตรประจำตัวข้าราชการ",
+        "Document",
+        "",
+        "หรือบัตรประจำตัวข้าราชการ"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition field omits identity-document alternatives; source evidence may retain some wording"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 21,
+      "accepted_index": 2,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบสำคัญประจำตัวคนต่างด้าว",
+        "Document",
+        "",
+        "หรือใบสำคัญประจำตัว คนต่างด้าว"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition field omits identity-document alternatives; source evidence may retain some wording"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 21,
+      "accepted_index": 3,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือเดินทาง (Passport)",
+        "Document",
+        "สำหรับชาวต่างประเทศที่เดินทางเข้ามาภายในประเทศ",
+        "หรือหนังสือเดินทาง (Passport) สำหรับ ชาวต่างประเทศที่เดินทางเข้ามาภายในประเทศ"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "foreign visitor applicability retained, identity-document alternative not structured"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 21,
+      "accepted_index": 4,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "สำเนาทะเบียนบ้าน",
+        "Document",
+        "",
+        "สำเนาทะเบียนบ้าน"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 21,
+      "accepted_index": 5,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบสำคัญแสดงการเป็นผู้แทนโดยชอบธรรมของผู้เยาว์",
+        "Document",
+        "ในกรณีร้องทุกข์ (แจ้งความ) โดยเป็นตัวแทนของผู้อื่น",
+        "ใบสำ คั ญ แสดงการเป็ น ผู ้ แ ทน โดยชอบธรรมของผู้เยาว์"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 21,
+      "accepted_index": 6,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "สูติบัตร",
+        "Document",
+        "",
+        "สูติบัตร"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "omits special circumstance: injured/deceased person unable to act, and relationship-proof purpose"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 21,
+      "accepted_index": 7,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบทะเบียนสมรส",
+        "Document",
+        "",
+        "ใบทะเบียนสมรส"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "omits special circumstance: injured/deceased person unable to act, and relationship-proof purpose"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 22,
+      "accepted_index": 0,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบสำคัญแสดงการอนุญาตของสามีหรือภรรยา",
+        "Document",
+        "",
+        "ใบสำคัญแสดงการอนุญาตของสามี หรือภรรยา แล้วแต่กรณี ให้ร้องทุกข์แทน หรือเป็น ตัวแทนโดยสมบูรณ์"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition field omits representative/spouse/legal-entity circumstance"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 22,
+      "accepted_index": 1,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือมอบอำนาจของนิติบุคคล",
+        "Document",
+        "",
+        "ในกรณีที่เป็นผู้แทนของนิติบุคคล ให้นำหนังสือมอบอำนาจของนิติบุคคลเป็นหลักฐาน"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition field omits representative/spouse/legal-entity circumstance"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 22,
+      "accepted_index": 2,
+      "row": [
+        "1.1",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือรับรองนิติบุคคลนั้นของกระทรวงพาณิชย์",
+        "Document",
+        "",
+        "รวมทั้งติดอากรแสตมป์ 5 บาท และหนังสือรับรอง นิติบุคคลนั้นของกระทรวงพาณิชย์"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition field omits representative/spouse/legal-entity circumstance"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 22,
+      "accepted_index": 3,
+      "row": [
+        "1.2",
+        "HANDLED_BY",
+        "พนักงานเจ้าหน้าที่ที่สำนักงานทะเบียน",
+        "PersonRole",
+        "",
+        "เมื่อบัตรหายหรือถูกทำลาย ให้แจ้งต่อ พนักงานเจ้าหน้าที่ที่สำนักงานทะเบียนที่ประสงค์ จะทำบัตร (ไม่ต้องแจ้งความต่อเจ้าหน้าที่ตำรวจ)"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 22,
+      "accepted_index": 4,
+      "row": [
+        "1.2",
+        "NOT_HANDLED_BY",
+        "เจ้าหน้าที่ตำรวจ",
+        "PersonRole",
+        "",
+        "(ไม่ต้องแจ้งความต่อเจ้าหน้าที่ตำรวจ)"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 22,
+      "accepted_index": 5,
+      "row": [
+        "1.2",
+        "HAS_SUPPORTING_EVIDENCE",
+        "สำเนาทะเบียนบ้าน",
+        "Document",
+        "",
+        "หลักฐานที่ต้องนำไปแสดงต่อเจ้าหน้าที่ สำนักงานทะเบียน - สำเนาทะเบียนบ้าน"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 22,
+      "accepted_index": 6,
+      "row": [
+        "1.2",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบอนุญาตขับรถ",
+        "Document",
+        "",
+        "เอกสารทีม่ รี ปู ถ่ายของผูข้ อมีบตั ร เช่น ใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี)"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "optional photo-ID alternatives present in evidence but omitted from condition property"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 22,
+      "accepted_index": 7,
+      "row": [
+        "1.2",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบสุทธิ",
+        "Document",
+        "",
+        "เอกสารทีม่ รี ปู ถ่ายของผูข้ อมีบตั ร เช่น ใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี)"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "optional photo-ID alternatives present in evidence but omitted from condition property"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 22,
+      "accepted_index": 8,
+      "row": [
+        "1.2",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือเดินทาง",
+        "Document",
+        "",
+        "เอกสารทีม่ รี ปู ถ่ายของผูข้ อมีบตั ร เช่น ใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี)"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "optional photo-ID alternatives present in evidence but omitted from condition property"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 22,
+      "accepted_index": 9,
+      "row": [
+        "1.2",
+        "HAS_SUPPORTING_EVIDENCE",
+        "เจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน ผู้ใหญ่บ้าน ไปให้การรับรอง",
+        "PersonRole",
+        "",
+        "หาก ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน ผู้ใหญ่บ้าน ไปให้การรับรอง"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "PersonRole is a certifier, not a supporting evidence object; compound target; condition field empty. Prompt lacked CERTIFIED_BY relation"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 24,
+      "accepted_index": 0,
+      "row": [
+        "1.3",
+        "HAS_SUPPORTING_EVIDENCE",
+        "บันทึกประจำวัน",
+        "Evidence",
+        "",
+        "ลงบันทึกประจำวันไว้เป็นหลักฐาน"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "daily record is created during procedure, not evidence brought by citizen; relation direction in process is misrepresented. Prompt lacked output-document relation"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 24,
+      "accepted_index": 1,
+      "row": [
+        "1.3",
+        "HANDLED_BY",
+        "สถานีตำรวจท้องที่",
+        "Organization",
+        "",
+        "ยื่นคำร้องแจ้งว่าเอกสารดังกล่าวหาย ต่อสถานีตำรวจท้องที่ที่หาย"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 24,
+      "accepted_index": 2,
+      "row": [
+        "1.3",
+        "HANDLED_BY",
+        "เจ้าพนักงานตำรวจ",
+        "PersonRole",
+        "",
+        "เจ้าพนักงานตำรวจจะสอบสวนว่า หายจริงหรือไม่"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 25,
+      "accepted_index": 0,
+      "row": [
+        "1.4",
+        "HAS_SUPPORTING_EVIDENCE",
+        "บัตรประจำตัวผู้หาย",
+        "Evidence",
+        "ถ้ามี",
+        "บัตรประจำตัวผู้หาย (ถ้ามี)"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "document mislabeled Evidence; availability condition correctly extracted"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 25,
+      "accepted_index": 1,
+      "row": [
+        "1.4",
+        "HAS_SUPPORTING_EVIDENCE",
+        "สำเนาทะเบียนบ้านของผู้หาย",
+        "Evidence",
+        "ถ้ามี",
+        "สำเนาทะเบียนบ้านของผู้หาย (ถ้ามี)"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "document mislabeled Evidence; availability condition correctly extracted"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 25,
+      "accepted_index": 2,
+      "row": [
+        "1.4",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ภาพถ่ายคนหาย",
+        "Evidence",
+        "",
+        "ภาพถ่ายคนหาย (ภาพถ่ายทีเ่ ป็นปัจจุบนั )"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "current-photo condition present in evidence but omitted from condition property"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 25,
+      "accepted_index": 3,
+      "row": [
+        "1.4",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบสำคัญทางราชการ",
+        "Document",
+        "เช่น ใบเกิด, ใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)",
+        "ใบสำคัญทางราชการ เช่น ใบเกิด,\nใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "groups birth and military documents under umbrella; examples/availability retained but not separate nodes"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 25,
+      "accepted_index": 4,
+      "row": [
+        "1.4",
+        "CONTACT_VIA",
+        "ศูนย์ข้อมูลคนหาย มูลนิธิกระจกเงา",
+        "Organization",
+        "",
+        "ศู น ย์ ข ้ อ มู ล คนหาย มู ล นิ ธิ ก ระจกเงา\nโทร. 08 0775 2673"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "CONTACT_VIA points to Organization, inconsistent with reviewed Contact endpoint schema; channel meaning plausible but needs normalization"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 25,
+      "accepted_index": 5,
+      "row": [
+        "1.4",
+        "CONTACT_VIA",
+        "08 0775 2673",
+        "Contact",
+        "",
+        "โทร. 08 0775 2673"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 25,
+      "accepted_index": 6,
+      "row": [
+        "1.5",
+        "CONTACT_VIA",
+        "191",
+        "Contact",
+        "หรือ แจ้ง 1192 แล้วจึงนำหลักฐาน\nไปแจ้งความต่อเจ้าหน้าที่ตำรวจ คือ",
+        "แจ้งทาง 191 หรือ แจ้ง 1192 แล้วจึงนำหลักฐาน\nไปแจ้งความต่อเจ้าหน้าที่ตำรวจ คือ"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 25,
+      "accepted_index": 7,
+      "row": [
+        "1.5",
+        "CONTACT_VIA",
+        "1192",
+        "Contact",
+        "หรือ แจ้ง 1192 แล้วจึงนำหลักฐาน\nไปแจ้งความต่อเจ้าหน้าที่ตำรวจ คือ",
+        "แจ้งทาง 191 หรือ แจ้ง 1192 แล้วจึงนำหลักฐาน\nไปแจ้งความต่อเจ้าหน้าที่ตำรวจ คือ"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "condition for 1192 repeats 1192 instead of identifying 191 as alternative"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 25,
+      "accepted_index": 8,
+      "row": [
+        "1.5",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบทะเบียนรถยนต์ รถจักรยานยนต์ เรือ \nหรือพาหนะอื่น ๆ ที่หาย",
+        "Document",
+        "",
+        "(1) ใบทะเบียนรถยนต์ รถจักรยานยนต์ เรือ \nหรือพาหนะอื่น ๆ ที่หาย"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 25,
+      "accepted_index": 9,
+      "row": [
+        "1.5",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบเสร็จรับเงินหรือสัญญาซือ้ ขายเท่าทีม่ ี",
+        "Document",
+        "",
+        "(2) ใบเสร็จรับเงินหรือสัญญาซือ้ ขายเท่าทีม่ ี"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "receipt/contract alternatives and availability bundled into entity rather than separate nodes and condition"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 25,
+      "accepted_index": 10,
+      "row": [
+        "1.5",
+        "HANDLED_BY",
+        "เจ้าหน้าที่ตำรวจ",
+        "PersonRole",
+        "",
+        "ไปแจ้งความต่อเจ้าหน้าที่ตำรวจ คือ"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 26,
+      "accepted_index": 0,
+      "row": [
+        "1.5",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือรับรองบริษัท",
+        "Document",
+        "",
+        "รวมทั้งหนังสือรับรองบริษัทด้วย"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "legal-entity condition is on preceding page and omitted"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 26,
+      "accepted_index": 1,
+      "row": [
+        "1.6",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ทะเบียนใบอนุญาตอาวุธปืน",
+        "Document",
+        "",
+        "(1) ทะเบียนใบอนุญาตอาวุธปืน"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 26,
+      "accepted_index": 2,
+      "row": [
+        "1.7",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ตำหนิหรือลักษณะพิเศษต่าง ๆ",
+        "Evidence",
+        "",
+        "(3) ตำหนิหรือลักษณะพิเศษต่าง ๆ"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 26,
+      "accepted_index": 3,
+      "row": [
+        "1.7",
+        "HAS_SUPPORTING_EVIDENCE",
+        "เอกสารสำคัญต่าง ๆ ที่เกี่ยวข้องเท่าที่มี",
+        "Document",
+        "",
+        "(4) เอกสารสำคัญต่าง ๆ ที่เกี่ยวข้องเท่าที่มี"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "availability condition embedded in entity name instead of condition property"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 27,
+      "accepted_index": 0,
+      "row": [
+        "1.8",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบสำคัญตัวจริง เช่น โฉนด แบบ น.ส.3 แบบ ส.ค.1 หนังสือสัญญา ใบเสร็จรับเงิน",
+        "Document",
+        "",
+        "(1) ใบสำคัญตัวจริง เช่น โฉนด แบบ น.ส.3 \nแบบ ส.ค.1 หนังสือสัญญา ใบเสร็จรับเงิน เป็นต้น"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 27,
+      "accepted_index": 1,
+      "row": [
+        "1.8",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือที่ปลอมแปลง",
+        "Document",
+        "",
+        "(2) หนังสือที่ปลอมแปลง"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 27,
+      "accepted_index": 2,
+      "row": [
+        "1.8",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ตัวอย่างตราที่ใช้ประทับหรือลายเซ็นในหนังสือ",
+        "Evidence",
+        "",
+        "(3) ตัวอย่างตราที่ใช้ประทับหรือลายเซ็น\nในหนังสือ"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 27,
+      "accepted_index": 3,
+      "row": [
+        "1.9",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือหรือหลักฐานต่างๆ ที่เกี่ยวกับการถูกฉ้อโกง",
+        "Document",
+        "",
+        "(1) หนังสือหรือหลักฐานต่างๆ ที่เกี่ยวกับ\nการถูกฉ้อโกง"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "target combines documents and other fraud evidence; Document-only type narrows a broader source category"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 27,
+      "accepted_index": 4,
+      "row": [
+        "1.9",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หลักฐานแสดงการเป็นเจ้าของหรือผู้ครอบครองทรัพย์",
+        "Evidence",
+        "",
+        "(2) หลักฐานแสดงการเป็นเจ้าของหรือ\nผู้ครอบครองทรัพย์"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 28,
+      "accepted_index": 0,
+      "row": [
+        "1.10",
+        "HAS_SUPPORTING_EVIDENCE",
+        "สำเนาหรือคำสั่งศาล",
+        "Evidence",
+        "",
+        "(3) สำเนาหรือคำสั่งศาล หรือพินัยกรรม"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "court/will document mislabeled Evidence; omits conditional estate-manager circumstance and alternatives"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 28,
+      "accepted_index": 1,
+      "row": [
+        "1.10",
+        "HAS_SUPPORTING_EVIDENCE",
+        "พินัยกรรม",
+        "Evidence",
+        "",
+        "(3) สำเนาหรือคำสั่งศาล หรือพินัยกรรม"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "court/will document mislabeled Evidence; omits conditional estate-manager circumstance and alternatives"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 28,
+      "accepted_index": 2,
+      "row": [
+        "1.11",
+        "HAS_SUPPORTING_EVIDENCE",
+        "สัญญาใบเช่าซื้อ",
+        "Document",
+        "",
+        "(1) สั ญ ญาใบเช่ า ซื้ อ หรื อ สำ เนา หรื อ"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "omits original/copy/alternative-document choice"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 28,
+      "accepted_index": 3,
+      "row": [
+        "1.11",
+        "HAS_SUPPORTING_EVIDENCE",
+        "สำเนา",
+        "Document",
+        "",
+        "(1) สั ญ ญาใบเช่ า ซื้ อ หรื อ สำ เนา หรื อ"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "standalone สำเนา lacks what is copied; should model copy of hire-purchase contract, not generic document node"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 29,
+      "accepted_index": 0,
+      "row": [
+        "1.13",
+        "HAS_SUPPORTING_EVIDENCE",
+        "สำเนาทะเบียนบ้านของผู้เยาว์",
+        "Document",
+        "",
+        "สำเนาทะเบียนบ้านของผู้เยาว์"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 29,
+      "accepted_index": 1,
+      "row": [
+        "1.13",
+        "HAS_SUPPORTING_EVIDENCE",
+        "ใบเกิดของผู้เยาว์ (สูติบัตร)",
+        "Document",
+        "",
+        "ใบเกิดของผู้เยาว์ (สูติบัตร)"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 29,
+      "accepted_index": 2,
+      "row": [
+        "1.13",
+        "HAS_SUPPORTING_EVIDENCE",
+        "รูปถ่ายของผู้เยาว์",
+        "Evidence",
+        "",
+        "รูปถ่ายของผู้เยาว์"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 29,
+      "accepted_index": 3,
+      "row": [
+        "1.13",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หลักฐานสำคัญอื่น ๆ ที่เกี่ยวกับผู้เยาว์",
+        "Evidence",
+        "ถ้ามี",
+        "หลักฐานสำคัญอื่น ๆ ที่เกี่ยวกับผู้เยาว์ (ถ้ามี)"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 29,
+      "accepted_index": 4,
+      "row": [
+        "1.14",
+        "HAS_SUPPORTING_EVIDENCE",
+        "เสื้อผ้าของผู้ที่ถูกข่มขืนฯ ซึ่งมีคราบอสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืนและสิ่งของต่างๆ ของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ",
+        "Evidence",
+        "",
+        "เสื้อผ้าของผู้ที่ถูกข่มขืนฯ ซึ่งมีคราบ อสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืนและ สิ่งของต่างๆ ของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "combines victim clothing and accused belongings into one entity; split for graph"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 29,
+      "accepted_index": 5,
+      "row": [
+        "1.14",
+        "HAS_SUPPORTING_EVIDENCE",
+        "บัตรประจำตัวประชาชนและสำเนาทะเบียนบ้านของผู้เสียหาย",
+        "Document",
+        "",
+        "บัตรประจำตัวประชาชนและสำเนา ทะเบียนบ้านของผู้เสียหาย"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "combines identity card and house-register copy into one entity; split for graph"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 29,
+      "accepted_index": 6,
+      "row": [
+        "1.14",
+        "HAS_SUPPORTING_EVIDENCE",
+        "รูปถ่าย หรือที่อยู่ของผู้ต้องสงสัย ตลอดจนหลักฐานอื่น ๆ",
+        "Evidence",
+        "ถ้ามี",
+        "รูปถ่าย หรือที่อยู่ของผู้ต้องสงสัย ตลอดจนหลักฐานอื่น ๆ (ถ้ามี)"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "combines photo/address/other evidence into one entity; retains availability but omits alternative in condition field"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 30,
+      "accepted_index": 0,
+      "row": [
+        "1.15",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หลักฐานต่างๆ ที่ตกอยู่ในที่เกิดเหตุ",
+        "Evidence",
+        "",
+        "หลักฐานต่างๆ ที่ตกอยู่ในที่เกิดเหตุ"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "omits source circumstance: scene evidence at risk of loss/damage; does not preserve handling context"
+      ]
+    },
+    {
+      "group": "B",
+      "pdf_page": 30,
+      "accepted_index": 1,
+      "row": [
+        "1.15",
+        "HANDLED_BY",
+        "เจ้าหน้าที่ตำรวจ",
+        "PersonRole",
+        "",
+        "แจ้งเจ้าหน้าทีต่ ำ� รวจหรือนำมามอบ เจ้าหน้าที่ตำรวจ"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 30,
+      "accepted_index": 2,
+      "row": [
+        "1.16",
+        "HAS_SUPPORTING_EVIDENCE",
+        "เช็คที่ยึดไว้",
+        "Document",
+        "",
+        "(1) เช็คที่ยึดไว้"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 30,
+      "accepted_index": 3,
+      "row": [
+        "1.16",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หนังสือทีธ่ นาคารแจ้งขัดข้องหรือปฏิเสธ การจ่ายเงิน",
+        "Document",
+        "",
+        "(2) หนังสือทีธ่ นาคารแจ้งขัดข้องหรือปฏิเสธ การจ่ายเงิน"
+      ],
+      "review": "no_specific_issue_identified",
+      "notes": []
+    },
+    {
+      "group": "B",
+      "pdf_page": 30,
+      "accepted_index": 4,
+      "row": [
+        "1.16",
+        "HAS_SUPPORTING_EVIDENCE",
+        "หลักฐานหรือเอกสารซึง่ เป็นมูลหนีแ้ หล่ง ที่มาของการจ่ายเช็ค เช่น หนังสือสัญญาซื้อขาย ฯลฯ",
+        "Document",
+        "",
+        "(3) หลักฐานหรือเอกสารซึง่ เป็นมูลหนีแ้ หล่ง ที่มาของการจ่ายเช็ค เช่น หนังสือสัญญาซื้อขาย ฯลฯ"
+      ],
+      "review": "needs_revision",
+      "notes": [
+        "groups debt evidence and sale-contract example; Evidence/Document type choice depends on whether category or example is represented, not a clear comparative error"
+      ]
+    }
+  ]
+}

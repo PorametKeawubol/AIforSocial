@@ -1,0 +1,84 @@
+{
+  "page": 11,
+  "facts": [
+    {
+      "subject": "นาข้าว",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "อาการบ้าใบ",
+      "object_type": "Symptom",
+      "evidence": "หากเป็นนาข้าว ใบข้าวจะมีสีเขียวสวยงามมีใบข้าวจำนวนมาก เรียกว่า อาการบ้าใบ"
+    },
+    {
+      "subject": "ดินเปรี้ยวหรือเป็นกรดจัด",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "อาการบ้าใบ",
+      "object_type": "Symptom",
+      "evidence": "แสดงว่า ดินเปรี้ยวเป็นกรดจัด"
+    },
+    {
+      "subject": "สวน",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "สีและเส้นใบไม่เสมอกัน",
+      "object_type": "Symptom",
+      "evidence": "หากเป็นสวน จะสังเกตได้จากสีและเส้นใบไม่เสมอกัน"
+    },
+    {
+      "subject": "ต้นไม้ชนิดนั้นๆ",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "สีใบไม่เขียว ไม่เป็นปกติของต้นไม้ชนิดนั้นๆ",
+      "object_type": "Symptom",
+      "evidence": "ใบไม่ค่อยสวย สีใบไม่เขียว ไม่เป็นปกติของต้นไม้ชนิดนั้นๆ"
+    },
+    {
+      "subject": "การแก้ปัญหาดินเปรี้ยว",
+      "subject_type": "Treatment",
+      "relation": "PREVENTED_BY",
+      "object": "การใช้สารเคมี",
+      "object_type": "Topic",
+      "evidence": "โดยไม่ต้องใช้สารใดๆ"
+    },
+    {
+      "subject": "การแก้ปัญหาดินเปรี้ยวในการเพาะปลูก",
+      "subject_type": "Treatment",
+      "relation": "CAUSED_BY",
+      "object": "เพิ่มผลผลิตให้กับเกษตรกร",
+      "object_type": "Topic",
+      "evidence": "การแก้ไขปัญหาดินเปรี้ยวในการเพาะปลูกจะช่วยเพิ่ม ผลผลิตให้กับเกษตรกร"
+    },
+    {
+      "subject": "การแก้ปัญหาดินเปรี้ยว",
+      "subject_type": "Treatment",
+      "relation": "CAUSED_BY",
+      "object": "ลดต้นทุนการผลิต",
+      "object_type": "Topic",
+      "evidence": "ช่วยลดต้นทุน การผลิตอีกด้วย"
+    },
+    {
+      "subject": "ดินมีความอุดมสมบูรณ์",
+      "subject_type": "Condition",
+      "relation": "CAUSED_BY",
+      "object": "การใช้สารเคมีไม่จำเป็นนัก",
+      "object_type": "Topic",
+      "evidence": "ถ้าดินมีความอุดมสมบูรณ์ การใช้สารเคมีก็ไม่จำเป็นนัก"
+    },
+    {
+      "subject": "การแก้ปัญหาดินเปรี้ยวแล้ว",
+      "subject_type": "Treatment",
+      "relation": "CAUSED_BY",
+      "object": "ลดปริมาณการใช้ปุ๋ยเคมีลง",
+      "object_type": "Topic",
+      "evidence": "เมื่อแก้ไขปัญหา แล้ว จะต้องลดปริมาณการใช้ปุ๋ยเคมีลง"
+    }
+  ],
+  "timing": {
+    "seconds": 22.889,
+    "model": "qwen3.5:9b",
+    "eval_count": 729,
+    "eval_duration": 21557682000,
+    "prompt_eval_count": 586
+  }
+}

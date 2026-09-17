@@ -1,0 +1,76 @@
+{
+  "page": 27,
+  "facts": [
+    {
+      "subject": "ดิน",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "จุลินทรีย์ในดิน",
+      "object_type": "Topic",
+      "evidence": "เพิ่มจุลินทรีย์ในดินด้วยการใส่ปูนขาว"
+    },
+    {
+      "subject": "โรคเหี่ยว",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อราไฟทอฟทอรา",
+      "object_type": "Pathogen",
+      "evidence": "โรคเหี่ยวที่เกิดจากเชื้อราไฟทอปธอรา"
+    },
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคเหี่ยว",
+      "object_type": "Disease",
+      "evidence": "หลีกเลี่ยงการปลูกพริกซ้ำที่เดิมเป็นเวลานาน"
+    },
+    {
+      "subject": "ดิน",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ความเป็นกรดเป็นด่างของดิน",
+      "object_type": "Topic",
+      "evidence": "ปรับสภาพความเป็นกรดเป็นด่างของดิน"
+    },
+    {
+      "subject": "โรคเหี่ยว",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "โคนต้นและรากจะเน่าเกิดอาการเหี่ยวในระยะติดผล ผลมีลักษณะฉ่ำน้ำ เนื้อผลเป็นสีดำ ในขั้นรุนแรงจะเข้าทำลายเมล็ด และยืนต้นตาย",
+      "object_type": "Symptom",
+      "evidence": "ลักษณะอาการของโรค โคนต้นและรากจะเน่า เกิดอาการเหี่ยวในระยะติดผล ผลมีลักษณะฉ่ำน้ำ เนื้อผลเป็นสีดำ ในขั้นรุนแรงจะเข้าทำลายเมล็ด และยืนต้นตาย"
+    },
+    {
+      "subject": "ดิน",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "อินทรียวัตถุ",
+      "object_type": "Topic",
+      "evidence": "และใส่อินทรียวัตถุในอัตรา 2 ถึง 4 ตันต่อไร่"
+    },
+    {
+      "subject": "โรคเหี่ยว",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "สารเมทาแลกซิล หรือสารฟอสอีทิล-อะลูมิเนียม",
+      "object_type": "Treatment",
+      "evidence": "และพ่นสารเคมีป้องกันกำจัดโรค เช่น สารเมทาแลกซิล หรือสารฟอสอีทิล-อะลูมิเนียม"
+    },
+    {
+      "subject": "ดิน",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "เชื้อราไตรโคเดอร์มา",
+      "object_type": "Pathogen",
+      "evidence": "ผสมเชื้อจุลินทรีย์ปฏิปักษ์ เช่น เชื้อราไตรโคเดอร์มา"
+    }
+  ],
+  "timing": {
+    "seconds": 22.949,
+    "model": "qwen3.5:9b",
+    "eval_count": 711,
+    "eval_duration": 21554571000,
+    "prompt_eval_count": 811
+  }
+}

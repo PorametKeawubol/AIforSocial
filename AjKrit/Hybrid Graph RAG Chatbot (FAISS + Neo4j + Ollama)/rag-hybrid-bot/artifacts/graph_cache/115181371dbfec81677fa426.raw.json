@@ -1,0 +1,11 @@
+{
+  "page": 42,
+  "content": "{\n  \"facts\": [\n    {\n      \"subject\": \"พืช\",\n      \"subject_type\": \"Crop\",\n      \"relation\": \"HAS_DISEASE\",\n      \"object\": \"โรคราแป้ง\",\n      \"object_type\": \"Disease\",\n      \"evidence\": \"ควรระวัง โรคราแป้ง\"\n    },\n    {\n      \"subject\": \"พืช\",\n      \"subject_type\": \"Crop\",\n      \"relation\": \"HAS_DISEASE\",\n      \"object\": \"โรคน้ำค้าง\",\n      \"object_type\": \"Disease\",\n      \"evidence\": \"ควรระวัง โรคราแป้ง โรคราน้ำค้าง\"\n    },\n    {\n      \"subject\": \"พืช\",\n      \"subject_type\": \"Crop\",\n      \"relation\": \"HAS_DISEASE\",\n      \"object\": \"โรคใบจุด\",\n      \"object_type\": \"Disease\",\n      \"evidence\": \"ควรระวัง โรคราแป้ง โรคราน้ำค้าง โรคใบจุด\"\n    },\n    {\n      \"subject\": \"พืช\",\n      \"subject_type\": \"Crop\",\n      \"relation\": \"HAS_DISEASE\",\n      \"object\": \"โรคแอนแทรกโนส\",\n      \"object_type\": \"Disease\",\n      \"evidence\": \"ควรระวัง โรคราแป้ง โรคราน้ำค้าง โรคใบจุด และโรคแอนแทรกโนส\"\n    },\n    {\n      \"subject\": \"โรครากเน่าโคนเน่า\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"TREATED_BY\",\n      \"object\": \"เชื้อราไตรโคเดอร์มา\",\n      \"object_type\": \"Treatment\",\n      \"evidence\": \"ถ้าเป็นไม่มาก ใช้เชื้อราไตรโคเดอร์มา\"\n    },\n    {\n      \"subject\": \"โรครากเน่าโคนเน่า\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"TREATED_BY\",\n      \"object\": \"ปุ๋ยหมัก ปุ๋ยคอก\",\n      \"object_type\": \"Treatment\",\n      \"evidence\": \"นำไตรโคเดอร์มา 1 ส่วน คลุกเคล้าผสมกับปุ๋ยหมัก ปุ๋ยคอก\"\n    },\n    {\n      \"subject\": \"โรครากเน่าโคนเน่า\",\n      \"subject_type\": \"Disease\",\n      \"relation\": \"TREATED_BY\",\n      \"object\": \"หินแร่ภูเขาไฟพูมิซซัลเฟอร์\",\n      \"object_type\": \"Treatment\",\n      \"evidence\": \"อาจจะบวกหินแร่ ภูเขาไฟพูมิซซัลเฟอร์เพิ่มอีก\"\n    },\n    {\n      \"subject\": \"ฤดูฝน\",\n      \"subject_type\": \"Topic\",\n      \"relation\": \"RELATED_TO\",\n      \"object\": \"โรคเชื้อรา\",\n      \"object_type\": \"Disease\",\n      \"evidence\": \"พืชของท่านก็จะปลอดภัยต่อโรคเชื้อรา ที่มากับฤดูฝน\"\n    }\n  ]\n}",
+  "timing": {
+    "seconds": 21.249,
+    "model": "qwen3.5:9b",
+    "eval_count": 664,
+    "eval_duration": 19947878000,
+    "prompt_eval_count": 773
+  }
+}

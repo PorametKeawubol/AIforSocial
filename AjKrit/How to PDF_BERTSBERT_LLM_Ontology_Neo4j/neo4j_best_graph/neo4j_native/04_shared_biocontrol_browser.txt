@@ -1,0 +1,129 @@
+Styles have been reset to default
+Undo
+Query
+connection status: connected
+Instance:
+neo4j://localhost:7688
+. Click to open instance menu
+Database:
+neo4j
+. Click to open database menu
+User:
+neo4j
+. Click to open database user menu
+Connect your instance to Aura console for more tools and features
+Database overview
+Saved Cypher
+History
+Cypher reference
+Parameters
+Settings
+Database information
+Nodes (1,335)
+*
+Activity
+Application
+Benefit
+Biocontrol
+Chemical
+Condition
+Crop
+Disease
+DiseaseGroup
+Document
+Duration
+Environment
+Fertilizer
+GrowthStage
+LAW
+LEN
+LOCATION
+Material
+MONEY
+Show all nodes (25 more)
+Relationships (2,347)
+*
+APPLIED_TO
+CAUSED_BY
+CO_OCCURS_WITH
+COVERS
+EVIDENCED_BY
+EXHIBITS
+HAS_APPLICATION
+HAS_BENEFIT
+HAS_CONDITION
+HAS_DISEASE
+HAS_DURATION
+HAS_ENVIRONMENT
+HAS_GROWTH_STAGE
+HAS_HOST
+HAS_PAGE
+HAS_PREPARATION
+HAS_PURPOSE
+HAS_SEASON
+HAS_SECTION
+Show all relationships (16 more)
+Property keys
+aliases
+assertion
+assertion_layer
+condition
+context
+dataset
+dilution_as_printed
+evidence
+evidence_note
+filename
+id
+kind
+layer
+method
+name
+number
+object
+origin
+page
+page_count
+Show all property keys (13 more)
+Last update:
+ 6:34:32 PM 
+1
+2
+3
+4
+5
+// จุดเชื่อมข้ามพืช: ชีวภัณฑ์ร่วมกัน
+MATCH p=(s:PlantGuide2019Reviewed)-[r]->(t:PlantGuide2019Reviewed)
+WHERE r.id IN ["bcff7af4c4a3c224507d", "ca49bd6afa3bd145e7e4", "96e135c468b2bcee35da", "5797f9d5217c651a2abc", "f05b67f47ca9f6411f5a", "befb3cb72f1e76bae5ee", "b6eea6082ffaccd1ab1a", "7474a4874f5a9bc6ed4d"]
+RETURN p;
+
+
+Fullscreen frame
+1
+2
+3
+4
+5
+// จุดเชื่อมข้ามพืช: ชีวภัณฑ์ร่วมกัน
+MATCH p=(s:PlantGuide2019Reviewed)-[r]->(t:PlantGuide2019Reviewed)
+WHERE r.id IN ["bcff7af4c4a3c224507d", "ca49bd6afa3bd145e7e4", "96e135c468b2bcee35da", "5797f9d5217c651a2abc", "f05b67f47ca9f6411f5a", "befb3cb72f1e76bae5ee", "b6eea6082ffaccd1ab1a", "7474a4874f5a9bc6ed4d"]
+RETURN p;
+
+
+Graph
+Table
+Zoom to fit
+Results overview
+Nodes (8)
+* (8)
+Biocontrol (2)
+Crop (2)
+Disease (2)
+PlantGuide2019Reviewed (8)
+Treatment (2)
+Relationships (8)
+* (8)
+HAS_DISEASE (2)
+MANAGED_BY (2)
+USES_BIOCONTROL (4)
+Started streaming 8 records after 1 ms and completed after 2 ms.

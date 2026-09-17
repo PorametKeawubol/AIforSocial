@@ -1,0 +1,1159 @@
+{
+  "authorship": "Agent manual review of extracted source, not independent human gold standard",
+  "scope": "Case-document/evidence/contact/handler relations; excludes penalties, time limits, detailed procedural actions",
+  "case_names": {
+    "1.1": "เอกสารสำหรับติดต่อสถานีตำรวจ",
+    "1.2": "บัตรประจำตัวประชาชนหายหรือถูกทำลาย",
+    "1.3": "แจ้งความเอกสารสำคัญหาย",
+    "1.4": "แจ้งความคนหาย",
+    "1.5": "แจ้งความรถหรือเรือหาย",
+    "1.6": "แจ้งความอาวุธปืนหาย",
+    "1.7": "แจ้งความทรัพย์สินหาย",
+    "1.8": "แจ้งความถูกปลอมแปลงเอกสาร",
+    "1.9": "แจ้งความถูกฉ้อโกงทรัพย์",
+    "1.10": "แจ้งความถูกยักยอกทรัพย์",
+    "1.11": "แจ้งความถูกยักยอกทรัพย์เกี่ยวกับการเช่าซื้อ",
+    "1.12": "แจ้งความทำให้เสียทรัพย์",
+    "1.13": "แจ้งความพรากผู้เยาว์",
+    "1.14": "แจ้งความถูกข่มขืนกระทำชำเรา",
+    "1.15": "แจ้งความถูกทำร้ายร่างกายและเหตุฆ่าคนตาย",
+    "1.16": "แจ้งความจ่ายเช็คโดยไม่มีเงิน"
+  },
+  "items": [
+    {
+      "section": "1.1",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "บัตรประจำตัวประชาชน",
+      "type": "Document",
+      "condition": "เอกสารระบุตัวตนทางเลือก",
+      "owner": "",
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "บัตรประจำตัวประชาชน หรือใบแทนฯ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.1",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ใบแทนบัตรประจำตัวประชาชน",
+      "type": "Document",
+      "condition": "เอกสารระบุตัวตนทางเลือก",
+      "owner": "",
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "บัตรประจำตัวประชาชน หรือใบแทนฯ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.1",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "บัตรประจำตัวข้าราชการ",
+      "type": "Document",
+      "condition": "เอกสารระบุตัวตนทางเลือก",
+      "owner": "",
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "หรือบัตรประจำตัวข้าราชการ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.1",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ใบสำคัญประจำตัวคนต่างด้าว",
+      "type": "Document",
+      "condition": "เอกสารระบุตัวตนทางเลือก",
+      "owner": "",
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "หรือใบสำคัญประจำตัว\nคนต่างด้าว",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.1",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หนังสือเดินทาง",
+      "type": "Document",
+      "condition": "สำหรับชาวต่างประเทศ; เอกสารระบุตัวตนทางเลือก",
+      "owner": "",
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "หรือหนังสือเดินทาง (Passport) สำหรับ\nชาวต่างประเทศที่เดินทางเข้ามาภายในประเทศ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.1",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "สำเนาทะเบียนบ้าน",
+      "type": "Document",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "(2) สำเนาทะเบียนบ้าน",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.1",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ใบสำคัญแสดงการเป็นผู้แทนโดยชอบธรรมของผู้เยาว์",
+      "type": "Document",
+      "condition": "กรณีร้องทุกข์แทนผู้เยาว์",
+      "owner": "",
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "ใบสำ คั ญ แสดงการเป็ น ผู ้ แ ทน\nโดยชอบธรรมของผู้เยาว์ หรือ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.1",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ใบสำคัญแสดงการเป็นผู้อนุบาล",
+      "type": "Document",
+      "condition": "กรณีร้องทุกข์แทนผู้ไร้ความสามารถ",
+      "owner": "",
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "ใบสำคัญแสดงการเป็นผู้อนุบาลของ\nผู้ไร้ความสามารถ (ตามคำสั่งศาล)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.1",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "สูติบัตร",
+      "type": "Document",
+      "condition": "ผู้เสียหายถึงตายหรือบาดเจ็บจนจัดการเองไม่ได้; หลักฐานความสัมพันธ์",
+      "owner": "",
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "ภรรยา (ซึ่งได้จดทะเบียน, สูติบัตร, ใบทะเบียนสมรส",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.1",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ใบทะเบียนสมรส",
+      "type": "Document",
+      "condition": "ผู้เสียหายถึงตายหรือบาดเจ็บจนจัดการเองไม่ได้; หลักฐานความสัมพันธ์",
+      "owner": "",
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "ภรรยา (ซึ่งได้จดทะเบียน, สูติบัตร, ใบทะเบียนสมรส",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.1",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ใบสำคัญแสดงการอนุญาตของสามีหรือภรรยา",
+      "type": "Document",
+      "condition": "ร้องทุกข์แทน แล้วแต่กรณี",
+      "owner": "",
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "ใบสำคัญแสดงการอนุญาตของสามี\nหรือภรรยา แล้วแต่กรณี ให้ร้องทุกข์แทน",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.1",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หนังสือมอบอำนาจ",
+      "type": "Document",
+      "condition": "ผู้แทนของนิติบุคคล",
+      "owner": "",
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "ในกรณีที่เป็นผู้แทนของนิติบุคคล\nให้นำหนังสือมอบอำนาจของนิติบุคคลเป็นหลักฐาน",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.1",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หนังสือรับรองนิติบุคคล",
+      "type": "Document",
+      "condition": "ผู้แทนของนิติบุคคล",
+      "owner": "",
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "รวมทั้งติดอากรแสตมป์ 5 บาท และหนังสือรับรอง\nนิติบุคคลนั้นของกระทรวงพาณิชย์",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.2",
+      "relation": "HANDLED_BY",
+      "target": "สำนักงานทะเบียน",
+      "type": "Organization",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "ให้แจ้งต่อ\nพนักงานเจ้าหน้าที่ที่สำนักงานทะเบียนที่ประสงค์\nจะทำบัตร",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.2",
+      "relation": "NOT_HANDLED_BY",
+      "target": "เจ้าหน้าที่ตำรวจ",
+      "type": "PersonRole",
+      "condition": "เฉพาะการแจ้งบัตรหาย/ถูกทำลายเพื่อทำบัตร",
+      "owner": "",
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "ไม่ต้องแจ้งความต่อเจ้าหน้าที่ตำรวจ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.2",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "สำเนาทะเบียนบ้าน",
+      "type": "Document",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "หลักฐานที่ต้องนำไปแสดงต่อเจ้าหน้าที่\nสำนักงานทะเบียน\n - สำเนาทะเบียนบ้าน",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.2",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ใบอนุญาตขับรถ",
+      "type": "Document",
+      "condition": "ตัวอย่างเอกสารมีรูปถ่าย ถ้ามี",
+      "owner": "",
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "ใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.2",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ใบสุทธิ",
+      "type": "Document",
+      "condition": "ตัวอย่างเอกสารมีรูปถ่าย ถ้ามี",
+      "owner": "",
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "ใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.2",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หนังสือเดินทาง",
+      "type": "Document",
+      "condition": "ตัวอย่างเอกสารมีรูปถ่าย ถ้ามี",
+      "owner": "",
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "ใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.2",
+      "relation": "HANDLED_BY",
+      "target": "ที่ว่าการอำเภอ",
+      "type": "Organization",
+      "condition": "สถานที่ทำบัตร ทางเลือก",
+      "owner": "",
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "สามารถทำได้ที่ที่ว่าการอำเภอ และ\nเทศบาลทั่วประเทศ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.2",
+      "relation": "HANDLED_BY",
+      "target": "เทศบาล",
+      "type": "Organization",
+      "condition": "สถานที่ทำบัตร ทางเลือก",
+      "owner": "",
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "สามารถทำได้ที่ที่ว่าการอำเภอ และ\nเทศบาลทั่วประเทศ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.3",
+      "relation": "HANDLED_BY",
+      "target": "สถานีตำรวจ",
+      "type": "Organization",
+      "condition": "สถานีตำรวจท้องที่ที่เอกสารหาย",
+      "owner": "",
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "ยื่นคำร้องแจ้งว่าเอกสารดังกล่าวหาย\nต่อสถานีตำรวจท้องที่ที่หาย",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.3",
+      "relation": "ISSUES",
+      "target": "หลักฐานการแจ้งความเอกสารหาย",
+      "type": "Document",
+      "condition": "เอกสารผลลัพธ์จากการแจ้งความ",
+      "owner": "",
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "เจ้าพนักงานตำรวจจะออกหลักฐาน\nการแจ้งความเอกสารหาย",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.4",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "บัตรประจำตัวผู้หาย",
+      "type": "Document",
+      "condition": "ถ้ามี",
+      "owner": "ผู้หาย",
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "บัตรประจำตัวผู้หาย (ถ้ามี)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.4",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "สำเนาทะเบียนบ้าน",
+      "type": "Document",
+      "condition": "ถ้ามี",
+      "owner": "ผู้หาย",
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "สำเนาทะเบียนบ้านของผู้หาย (ถ้ามี)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.4",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ภาพถ่าย",
+      "type": "Evidence",
+      "condition": "ภาพถ่ายที่เป็นปัจจุบัน",
+      "owner": "ผู้หาย",
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "ภาพถ่ายคนหาย (ภาพถ่ายทีเ่ ป็นปัจจุบนั )",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.4",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "สูติบัตร",
+      "type": "Document",
+      "condition": "ตัวอย่างใบสำคัญทางราชการ ถ้ามี",
+      "owner": "ผู้หาย",
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "ใบสำคัญทางราชการ เช่น ใบเกิด,\nใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.4",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ใบสำคัญทหาร",
+      "type": "Document",
+      "condition": "ถ้ามี",
+      "owner": "ผู้หาย",
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "ใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.4",
+      "relation": "CONTACT_VIA",
+      "target": "0807752673",
+      "type": "Contact",
+      "condition": "ศูนย์ข้อมูลคนหาย มูลนิธิกระจกเงา ตามเอกสาร",
+      "owner": "",
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "โทร. 08 0775 2673",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.5",
+      "relation": "CONTACT_VIA",
+      "target": "191",
+      "type": "Contact",
+      "condition": "191 หรือ 1192 แล้วจึงนำหลักฐานไปแจ้งตำรวจ",
+      "owner": "",
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "แจ้งทาง 191 หรือ แจ้ง 1192 แล้วจึงนำหลักฐาน",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.5",
+      "relation": "CONTACT_VIA",
+      "target": "1192",
+      "type": "Contact",
+      "condition": "191 หรือ 1192 แล้วจึงนำหลักฐานไปแจ้งตำรวจ",
+      "owner": "",
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "แจ้งทาง 191 หรือ แจ้ง 1192 แล้วจึงนำหลักฐาน",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.5",
+      "relation": "HANDLED_BY",
+      "target": "เจ้าหน้าที่ตำรวจ",
+      "type": "PersonRole",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "ไปแจ้งความต่อเจ้าหน้าที่ตำรวจ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.5",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ใบทะเบียนยานพาหนะ",
+      "type": "Document",
+      "condition": "ตามประเภทพาหนะที่หาย",
+      "owner": "",
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "ใบทะเบียนรถยนต์ รถจักรยานยนต์ เรือ \nหรือพาหนะอื่น ๆ ที่หาย",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.5",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ใบเสร็จรับเงิน",
+      "type": "Document",
+      "condition": "หรือสัญญาซื้อขาย เท่าที่มี",
+      "owner": "",
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "ใบเสร็จรับเงินหรือสัญญาซือ้ ขายเท่าทีม่ ี",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.5",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "สัญญาซื้อขาย",
+      "type": "Document",
+      "condition": "หรือใบเสร็จรับเงิน เท่าที่มี",
+      "owner": "",
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "ใบเสร็จรับเงินหรือสัญญาซือ้ ขายเท่าทีม่ ี",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.5",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หนังสือมอบอำนาจ",
+      "type": "Document",
+      "condition": "กรณีเป็นยานพาหนะของนิติบุคคล/ตัวแทนห้างร้านบริษัท",
+      "owner": "",
+      "pdf_pages": [
+        25,
+        26
+      ],
+      "evidence": "มอบอำนาจจากเจ้าของหรือผูจ้ ดั การของห้างร้าน บริษทั",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.5",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หนังสือรับรองบริษัท",
+      "type": "Document",
+      "condition": "กรณีนิติบุคคล ต่อจาก PDF 25",
+      "owner": "",
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "นั้นๆ ไป รวมทั้งหนังสือรับรองบริษัทด้วย",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.5",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หนังสือเกี่ยวกับการติดต่อ",
+      "type": "Document",
+      "condition": "ถ้ามี",
+      "owner": "",
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "หนังสือเกี่ยวกับการติดต่อหรือเอกสาร\nที่จะใช้เป็นพยานหลักฐานได้ (ถ้ามี)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.5",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หนังสือคู่มือประจำตัวรถ",
+      "type": "Document",
+      "condition": "ถ้ามี; ถ้าไม่มีให้จำข้อมูลรูปพรรณและหมายเลขตามข้อความ",
+      "owner": "",
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "หนังสือคูม่ อื ประจำตัวรถ หรือยานพาหนะ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.6",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ทะเบียนใบอนุญาตอาวุธปืน",
+      "type": "Document",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "ทะเบียนใบอนุญาตอาวุธปืน",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.6",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ใบเสร็จรับเงิน",
+      "type": "Document",
+      "condition": "จากผู้ขายปืน ถ้ามี",
+      "owner": "",
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "ใบเสร็จรับเงินที่บริษัทห้างร้านขายปืน\nออกให้ (ถ้ามี)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.7",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ใบเสร็จรับเงิน",
+      "type": "Document",
+      "condition": "หรือหลักฐานแสดงการซื้อขาย",
+      "owner": "",
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "ใบเสร็จรับเงินซื้อขาย หรือหลักฐาน\nการแสดงการซื้อขายทรัพย์สินนั้น",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.7",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "รูปพรรณทรัพย์สิน",
+      "type": "Evidence",
+      "condition": "ถ้ามี",
+      "owner": "",
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "รูปพรรณทรัพย์สนิ นัน้ ๆ เช่น หมายเลข\nเครื่อง ฯลฯ (ถ้ามี)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.7",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ตำหนิหรือลักษณะพิเศษ",
+      "type": "Evidence",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "ตำหนิหรือลักษณะพิเศษต่าง ๆ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.7",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "เอกสารที่เกี่ยวข้อง",
+      "type": "Document",
+      "condition": "เท่าที่มี",
+      "owner": "",
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "เอกสารสำคัญต่าง ๆ ที่เกี่ยวข้องเท่าที่มี",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.8",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ใบสำคัญตัวจริง",
+      "type": "Document",
+      "condition": "ตัวอย่างตามประเภทเอกสารที่ถูกปลอมแปลง",
+      "owner": "",
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "ใบสำคัญตัวจริง เช่น โฉนด แบบ น.ส.3 \nแบบ ส.ค.1 หนังสือสัญญา ใบเสร็จรับเงิน เป็นต้น",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.8",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หนังสือที่ปลอมแปลง",
+      "type": "Document",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "หนังสือที่ปลอมแปลง",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.8",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ตัวอย่างตราประทับหรือลายเซ็น",
+      "type": "Evidence",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "ตัวอย่างตราที่ใช้ประทับหรือลายเซ็น\nในหนังสือ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.9",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หลักฐานการถูกฉ้อโกง",
+      "type": "Evidence",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "หนังสือหรือหลักฐานต่างๆ ที่เกี่ยวกับ\nการถูกฉ้อโกง",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.9",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หลักฐานความเป็นเจ้าของหรือผู้ครอบครองทรัพย์",
+      "type": "Evidence",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "หลักฐานแสดงการเป็นเจ้าของหรือ\nผู้ครอบครองทรัพย์",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.10",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หลักฐานการมอบหมายทรัพย์",
+      "type": "Evidence",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "หนังสือสำคัญหรือหลักฐานที่แสดงว่า\nได้มกี ารมอบหมายทรัพย์ให้ไปจัดการอย่างใดอย่างหนึง่",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.10",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หลักฐานความเป็นเจ้าของทรัพย์",
+      "type": "Evidence",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "ใบสำคัญแสดงการเป็นเจ้าของทรัพย์สนิ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.10",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "คำสั่งศาลหรือพินัยกรรม",
+      "type": "Document",
+      "condition": "กรณีผู้กระทำผิดเป็นผู้จัดการทรัพย์ตามคำสั่งศาลหรือพินัยกรรม",
+      "owner": "",
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "สำเนาหรือคำสั่งศาล หรือพินัยกรรม\nในกรณีผู้กระทำผิดเป็นผู้จัดการทรัพย์สินผู้อื่นตาม\nคำสั่งของศาลหรือพินัยกรรม",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.11",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "สัญญาเช่าซื้อ",
+      "type": "Document",
+      "condition": "ต้นฉบับหรือสำเนาหรือใบสำคัญติดต่อซื้อขายเช่ายืมฝาก",
+      "owner": "",
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "สั ญ ญาใบเช่ า ซื้ อ หรื อ สำ เนา หรื อ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.11",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ใบสำคัญระบุรูปพรรณทรัพย์",
+      "type": "Document",
+      "condition": "รายละเอียดรูปพรรณ ยี่ห้อ สี ขนาด น้ำหนัก เลขหมายประจำตัวทรัพย์",
+      "owner": "",
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "ใบสำ คั ญ ที่ บ ริ ษั ท ห้ า งร้ า นออกให้",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.12",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หลักฐานความเป็นเจ้าของหรือผู้ครอบครองทรัพย์",
+      "type": "Evidence",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "หลักฐานต่าง ๆ แสดงการเป็นเจ้าของ\nหรือผู้ครอบครองทรัพย์นั้น",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.12",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "สิ่งของที่เสียหาย",
+      "type": "Evidence",
+      "condition": "เท่าที่มีหรือนำไปได้; ของใหญ่/เคลื่อนที่ไม่ได้ให้เก็บรักษา",
+      "owner": "",
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "หลักฐานหรือสิ่งของที่เสียหายเท่าที่มี\nหรือเท่าที่นำไปได้",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.13",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "สำเนาทะเบียนบ้าน",
+      "type": "Document",
+      "condition": "",
+      "owner": "ผู้เยาว์",
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "สำเนาทะเบียนบ้านของผู้เยาว์",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.13",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "สูติบัตร",
+      "type": "Document",
+      "condition": "",
+      "owner": "ผู้เยาว์",
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "ใบเกิดของผู้เยาว์ (สูติบัตร)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.13",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ภาพถ่าย",
+      "type": "Evidence",
+      "condition": "",
+      "owner": "ผู้เยาว์",
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "รูปถ่ายของผู้เยาว์",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.13",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หลักฐานเกี่ยวกับผู้เยาว์",
+      "type": "Evidence",
+      "condition": "ถ้ามี",
+      "owner": "ผู้เยาว์",
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "หลักฐานสำคัญอื่น ๆ ที่เกี่ยวกับผู้เยาว์ \n(ถ้ามี)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.14",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "เสื้อผ้าที่มีร่องรอยเหตุการณ์",
+      "type": "Evidence",
+      "condition": "ตามที่ปรากฏในเอกสาร",
+      "owner": "ผู้เสียหาย",
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "เสื้อผ้าของผู้ที่ถูกข่มขืนฯ ซึ่งมีคราบ\nอสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืน",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.14",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "สิ่งของผู้ต้องหาในที่เกิดเหตุ",
+      "type": "Evidence",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "สิ่งของต่างๆ ของผู้ต้องหาที่ตกอยู่ในสถานที่เกิดเหตุ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.14",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "บัตรประจำตัวประชาชน",
+      "type": "Document",
+      "condition": "",
+      "owner": "ผู้เสียหาย",
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "บัตรประจำตัวประชาชนและสำเนา\nทะเบียนบ้านของผู้เสียหาย",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.14",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "สำเนาทะเบียนบ้าน",
+      "type": "Document",
+      "condition": "",
+      "owner": "ผู้เสียหาย",
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "บัตรประจำตัวประชาชนและสำเนา\nทะเบียนบ้านของผู้เสียหาย",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.14",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ภาพถ่าย",
+      "type": "Evidence",
+      "condition": "รูปถ่ายหรือที่อยู่ ถ้ามี",
+      "owner": "ผู้ต้องสงสัย",
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "รูปถ่าย หรือที่อยู่ของผู้ต้องสงสัย \nตลอดจนหลักฐานอื่น ๆ (ถ้ามี)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.14",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "ที่อยู่ผู้ต้องสงสัย",
+      "type": "Evidence",
+      "condition": "รูปถ่ายหรือที่อยู่ ถ้ามี",
+      "owner": "ผู้ต้องสงสัย",
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "รูปถ่าย หรือที่อยู่ของผู้ต้องสงสัย \nตลอดจนหลักฐานอื่น ๆ (ถ้ามี)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.15",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "พยานหลักฐานในที่เกิดเหตุ",
+      "type": "Evidence",
+      "condition": "กรณีหลักฐานเสี่ยงสูญหาย/เสียหาย ให้แจ้งหรือนำมามอบตำรวจ",
+      "owner": "",
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "ที่คนร้ายทิ้งไว้ในสถานที่เกิดเหตุ ตลอดจนพยาน\nหลักฐานต่างๆ ที่ตกอยู่ในที่เกิดเหตุหากปล่อยทิ้งไว้จะ\nสูญหาย",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.15",
+      "relation": "HANDLED_BY",
+      "target": "เจ้าหน้าที่ตำรวจ",
+      "type": "PersonRole",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "เจ้าหน้าที่ตำรวจ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.16",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "เช็ค",
+      "type": "Document",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "เช็คที่ยึดไว้",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.16",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หนังสือธนาคารปฏิเสธการจ่ายเงิน",
+      "type": "Document",
+      "condition": "",
+      "owner": "",
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "หนังสือทีธ่ นาคารแจ้งขัดข้องหรือปฏิเสธ\nการจ่ายเงิน",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.16",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "สัญญาซื้อขาย",
+      "type": "Document",
+      "condition": "ตัวอย่างหลักฐานมูลหนี้ที่มาของการจ่ายเช็ค",
+      "owner": "",
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "หลักฐานหรือเอกสารซึง่ เป็นมูลหนีแ้ หล่ง\nที่มาของการจ่ายเช็ค เช่น หนังสือสัญญาซื้อขาย ฯลฯ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.2",
+      "relation": "CERTIFIED_BY",
+      "target": "เจ้าบ้าน",
+      "type": "PersonRole",
+      "condition": "กรณีไม่มีเอกสารมีรูปถ่าย; บุคคลรับรองทางเลือก",
+      "owner": "",
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน\nผู้ใหญ่บ้าน ไปให้การรับรอง",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.2",
+      "relation": "CERTIFIED_BY",
+      "target": "กำนัน",
+      "type": "PersonRole",
+      "condition": "กรณีไม่มีเอกสารมีรูปถ่าย; บุคคลรับรองทางเลือก",
+      "owner": "",
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน\nผู้ใหญ่บ้าน ไปให้การรับรอง",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.2",
+      "relation": "CERTIFIED_BY",
+      "target": "ผู้ใหญ่บ้าน",
+      "type": "PersonRole",
+      "condition": "กรณีไม่มีเอกสารมีรูปถ่าย; บุคคลรับรองทางเลือก",
+      "owner": "",
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน\nผู้ใหญ่บ้าน ไปให้การรับรอง",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.3",
+      "relation": "ABOUT_DOCUMENT",
+      "target": "ใบอนุญาตขับรถ",
+      "type": "Document",
+      "condition": "ตัวอย่างเอกสารที่หาย ไม่ใช่เอกสารที่ต้องนำไป",
+      "owner": "",
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "ใบอนุญาตขับขี่รถยนต์, จักรยานยนต์",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.3",
+      "relation": "ABOUT_DOCUMENT",
+      "target": "โฉนดที่ดิน",
+      "type": "Document",
+      "condition": "ตัวอย่างเอกสารที่หาย ไม่ใช่เอกสารที่ต้องนำไป",
+      "owner": "",
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "โฉนดที่ดิน",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.3",
+      "relation": "ABOUT_DOCUMENT",
+      "target": "ใบสำคัญประจำตัวคนต่างด้าว",
+      "type": "Document",
+      "condition": "ตัวอย่างเอกสารที่หาย ไม่ใช่เอกสารที่ต้องนำไป",
+      "owner": "",
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "ใบสำคัญประจำตัวคนต่างด้าว",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.5",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "รูปพรรณยานพาหนะ",
+      "type": "Evidence",
+      "condition": "กรณีไม่มีหนังสือคู่มือรถ; ตามข้อมูลที่มี",
+      "owner": "",
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "คู่มือรถให้จำยี่ห้อ สี แบบ หมายเลขประจำเครื่องและ\nตัวรถไปด้วย (ถ้ามี)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.14",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "หลักฐานอื่นเกี่ยวกับเหตุการณ์",
+      "type": "Evidence",
+      "condition": "ถ้ามี",
+      "owner": "",
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "ตลอดจนหลักฐานอื่น ๆ (ถ้ามี)",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    },
+    {
+      "section": "1.15",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "target": "รายละเอียดเหตุการณ์",
+      "type": "Evidence",
+      "condition": "เท่าที่สามารถแจ้งได้",
+      "owner": "",
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "รายละเอียดต่าง ๆ เท่าที่สามารถบอก\nให้เจ้าหน้าที่ตำรวจได้ทราบ",
+      "review": "agent_source_review",
+      "provenance": "manual_reference_not_llm_output"
+    }
+  ]
+}

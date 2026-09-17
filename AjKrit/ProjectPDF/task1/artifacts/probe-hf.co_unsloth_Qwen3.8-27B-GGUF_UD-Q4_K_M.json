@@ -1,0 +1,71 @@
+[
+  {
+    "input": "การแจ้งความคนหาย สามารถแจ้งได้ตลอดเวลา ไม่จำเป็นต้องรอเวลาให้ครบ 24 ชั่วโมง",
+    "response": {
+      "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "created_at": "2026-09-14T08:26:47.735960409Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"relations\": [\n    {\n      \"evidence\": \"สามารถแจ้งได้ตลอดเวลา\",\n      \"relation\": \"สามารถดำเนินการได้\",\n      \"source\": \"การแจ้งความคนหาย\",\n      \"target\": \"ตลอดเวลา\"\n    },\n    {\n      \"evidence\": \"ไม่จำเป็นต้องรอเวลาให้ครบ 24 ชั่วโมง\",\n      \"relation\": \"ไม่จำเป็นต้องรอ\",\n      \"source\": \"การแจ้งความคนหาย\",\n      \"target\": \"เวลาให้ครบ 24 ชั่วโมง\"\n    }\n  ]\n}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 69000610860,
+      "load_duration": 28537503925,
+      "prompt_eval_count": 103,
+      "prompt_eval_duration": 4611407000,
+      "eval_count": 121,
+      "eval_duration": 35700184000
+    },
+    "wall_seconds": 69.05570788300065,
+    "json_and_evidence_valid": true,
+    "semantic_review_required": true,
+    "tokens_per_second": 3.389338273438591
+  },
+  {
+    "input": "กรณีบัตรหายหรือถูกทำลาย ไม่ต้องแจ้งความต่อเจ้าหน้าที่ตำรวจ ให้แจ้งต่อพนักงานเจ้าหน้าที่ที่สำนักงานทะเบียน",
+    "response": {
+      "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "created_at": "2026-09-14T08:27:31.479098016Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"relations\": [\n    {\n      \"evidence\": \"ไม่ต้องแจ้งความต่อเจ้าหน้าที่ตำรวจ\",\n      \"relation\": \"ไม่จำเป็นต้องทำ\",\n      \"source\": \"กรณีบัตรหายหรือถูกทำลาย\",\n      \"target\": \"แจ้งความต่อเจ้าหน้าที่ตำรวจ\"\n    },\n    {\n      \"evidence\": \"ให้แจ้งต่อพนักงานเจ้าหน้าที่ที่สำนักงานทะเบียน\",\n      \"relation\": \"ต้องดำเนินการโดย\",\n      \"source\": \"กรณีบัตรหายหรือถูกทำลาย\",\n      \"target\": \"แจ้งต่อพนักงานเจ้าหน้าที่ที่สำนักงานทะเบียน\"\n    }\n  ]\n}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 43690276929,
+      "load_duration": 285987884,
+      "prompt_eval_count": 104,
+      "prompt_eval_duration": 3271837000,
+      "eval_count": 127,
+      "eval_duration": 39923263000
+    },
+    "wall_seconds": 43.698152416000084,
+    "json_and_evidence_valid": true,
+    "semantic_review_required": true,
+    "tokens_per_second": 3.181102706960601
+  },
+  {
+    "input": "แจ้งความรถหรือเรือหาย แจ้งทาง 191 หรือ แจ้ง 1192 แล้วจึงนำหลักฐานไปแจ้งความต่อเจ้าหน้าที่ตำรวจ",
+    "response": {
+      "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+      "created_at": "2026-09-14T08:28:18.452383254Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"relations\": [\n    {\n      \"evidence\": \"แจ้งความรถหรือเรือหาย\",\n      \"relation\": \"เป็นกรณีที่ต้องดำเนินการตามขั้นตอน\",\n      \"source\": \"การแจ้งความรถหรือเรือหาย\",\n      \"target\": \"การแจ้งความ\"\n    },\n    {\n      \"evidence\": \"แจ้งทาง 191 หรือ แจ้ง 1192 แล้วจึงนำหลักฐานไปแจ้งความต่อเจ้าหน้าที่ตำรวจ\",\n      \"relation\": \"ต้องดำเนินการก่อน (เงื่อนไขลำดับขั้นตอน)\",\n      \"source\": \"การแจ้งความรถหรือเรือหาย\",\n      \"target\": \"การนำหลักฐานไปแจ้งความต่อเจ้าหน้าที่ตำรวจ\"\n    }\n  ]\n}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 46971866567,
+      "load_duration": 203542753,
+      "prompt_eval_count": 113,
+      "prompt_eval_duration": 1597119000,
+      "eval_count": 151,
+      "eval_duration": 44968745000
+    },
+    "wall_seconds": 46.97936568299974,
+    "json_and_evidence_valid": true,
+    "semantic_review_required": true,
+    "tokens_per_second": 3.357887795178629
+  }
+]

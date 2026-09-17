@@ -1,0 +1,76 @@
+{
+  "page": 10,
+  "facts": [
+    {
+      "subject": "ดินเปรี้ยว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ปุ๋ยเคมี",
+      "object_type": "Treatment",
+      "evidence": "ดินเปรี้ยวหรือดินเป็นกรดเกิดจากเกษตรกร มีการใช้ปุ๋ยเคมีในแปลงการเกษตรมากขึ้น"
+    },
+    {
+      "subject": "ดินเปรี้ยว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "สารชีวภาพ",
+      "object_type": "Treatment",
+      "evidence": "แล้วเปลี่ยนมาใช้ปุ๋ยอินทรีย์ สารชีวภาพในการกำจัดแมลง"
+    },
+    {
+      "subject": "ดินเปรี้ยวหรือดินเค็ม",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "มูลวัวควาย",
+      "object_type": "Treatment",
+      "evidence": "กรณีที่ดินเปรี้ยวหรือดินเค็มเกิดจากการมีอินทรียวัตถุมากเกินไป ทำให้ดินย่อยสลายไม่ทัน เช่น บริเวณที่มีวัวหรือควายลงไปนอน จะทำให้มีมูลวัวควายจำนวนมาก"
+    },
+    {
+      "subject": "น้ำหมักสมุนไพรรสจืด",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "ดินเปรี้ยว",
+      "object_type": "Topic",
+      "evidence": "การแก้ปัญหาดินเปรี้ยว ให้ทำการล้างดินด้วยน้ำหมักสมุนไพรรสจืดผสมน้ำ"
+    },
+    {
+      "subject": "น้ำหมักสมุนไพรรสจืด",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "ความเปรี้ยวของดิน",
+      "object_type": "Topic",
+      "evidence": "เพื่อชะล้างความเปรี้ยวและความเค็มของดิน ให้ลดหรือเจือจางลง"
+    },
+    {
+      "subject": "น้ำหมักสมุนไพรรสจืด",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "ความเค็มของดิน",
+      "object_type": "Topic",
+      "evidence": "เพื่อชะล้างความเปรี้ยวและความเค็มของดิน ให้ลดหรือเจือจางลง"
+    },
+    {
+      "subject": "น้ำหมักสมุนไพรรสจืดผสมน้ำ",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "แปลงเกษตร",
+      "object_type": "Topic",
+      "evidence": "โดยการนำน้ำมาหมักสมุนไพรรสจืด (ปุ๋ยน้ำรสจืด) มารดให้ทั่ว เป็นวิธีดีที่สุดและเร็วที่สุดในการแก้ปัญหาดินเปรี้ยว"
+    },
+    {
+      "subject": "ดินเปรี้ยวหรือดินเป็นกรด",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ไนโตรเจน ฟอสฟอรัส โพแทสเซียม",
+      "object_type": "Treatment",
+      "evidence": "ซึ่งในปุ๋ยนั้น จะประกอบไปด้วย ไนโตรเจน ฟอสฟอรัส โพแทสเซียม โดยสารเคมีเหล่านี้ล้วนแต่มีคุณสมบัติเป็นกรดทั้งสิ้น"
+    }
+  ],
+  "timing": {
+    "seconds": 24.323,
+    "model": "qwen3.5:9b",
+    "eval_count": 754,
+    "eval_duration": 22886947000,
+    "prompt_eval_count": 817
+  }
+}

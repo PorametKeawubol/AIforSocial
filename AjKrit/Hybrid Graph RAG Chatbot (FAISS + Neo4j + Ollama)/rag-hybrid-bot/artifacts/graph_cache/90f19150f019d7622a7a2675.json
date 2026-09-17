@@ -1,0 +1,76 @@
+{
+  "page": 15,
+  "facts": [
+    {
+      "subject": "ดิน",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "จุลินทรีย์ที่ไม่เป็นประโยชน์",
+      "object_type": "Pathogen",
+      "evidence": "พ่นลงดิน เพื่อฆ่าเชื้อจุลินทรีย์ ที่ไม่เป็นประโยชน์"
+    },
+    {
+      "subject": "ดิน",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "แมลงในดิน",
+      "object_type": "Pathogen",
+      "evidence": "พ่นลงดิน เพื่อฆ่าเชื้อจุลินทรีย์ ที่ไม่เป็นประโยชน์ และแมลงในดิน"
+    },
+    {
+      "subject": "การปลูกพืช",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "การทำก่อนการปลูก 10 วัน",
+      "object_type": "Treatment",
+      "evidence": "ทำก่อนการปลูก พ่นลงดิน เพื่อฆ่าเชื้อจุลินทรีย์"
+    },
+    {
+      "subject": "พืช",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรครา",
+      "object_type": "Disease",
+      "evidence": "ราดโคนต้น รักษาโรครา โรคเน่า"
+    },
+    {
+      "subject": "พืช",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคเน่า",
+      "object_type": "Disease",
+      "evidence": "ราดโคนต้น รักษาโรครา โรคเน่า"
+    },
+    {
+      "subject": "พืช",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "เชื้อรา",
+      "object_type": "Disease",
+      "evidence": "พ่นใส่ใบ และดินรอบๆ ต้น ไล่แมลง ป้องกันเชื้อรา"
+    },
+    {
+      "subject": "พืช",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "แมลงวางไข่",
+      "object_type": "Disease",
+      "evidence": "ป้องกัน แมลงวางไข่"
+    },
+    {
+      "subject": "การเก็บเกี่ยว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "เพิ่มน้ำตาลในผลไม้ 20 วันก่อนเก็บเกี่ยว",
+      "object_type": "Treatment",
+      "evidence": "พ่นอีกครั้ง ก่อนเก็บเกี่ยว 20 วัน เพื่อเพิ่มน้ำตาลในผลไม้"
+    }
+  ],
+  "timing": {
+    "seconds": 20.043,
+    "model": "qwen3.5:9b",
+    "eval_count": 627,
+    "eval_duration": 19045960000,
+    "prompt_eval_count": 654
+  }
+}

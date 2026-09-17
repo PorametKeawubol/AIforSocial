@@ -1,0 +1,9 @@
+{
+  "model": "BAAI/bge-m3",
+  "dimension": 1024,
+  "vectors": 58,
+  "normalized": true,
+  "index": "IndexFlatIP",
+  "chunks_sha256": "dd9d97722c09bee0eeb998269b0a2bd335260b0abf4b037e5c0b1cb2a5d4931e",
+  "seconds": 38.45
+}

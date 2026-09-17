@@ -1,0 +1,132 @@
+{
+  "fingerprint": "790f1ecd5ec0c99dcadfd343",
+  "version": "sections-v2.1",
+  "section": "1.3",
+  "embedding": {
+    "embedding": "BAAI/bge-m3",
+    "cache_fingerprint": "1c7299b69943dd6662be8fb7",
+    "aggregation": "max of existing per-page ontology hints across section pages",
+    "hints": [
+      "หน่วยงานรับแจ้งเรื่อง",
+      "เอกสารประกอบการแจ้งความ",
+      "เจ้าหน้าที่รับผิดชอบ",
+      "ช่องทางโทรศัพท์ติดต่อ"
+    ]
+  },
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "seconds": 28.223359410998455,
+  "attempt": 1,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T16:45:35.775158765Z",
+    "message": {
+      "content": "{\n\"edges\": [\n[\"ISSUES\", \"บันทึกประจำวัน\", \"Document\", \"ผู้แจ้งความ\", \"\", 70, 71],\n[\"ISSUES\", \"หลักฐานการแจ้งความเอกสารหาย\", \"Document\", \"ผู้แจ้งความ\", \"\", 72, 74]\n]\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 28222672440,
+    "load_duration": 205402685,
+    "prompt_eval_count": 929,
+    "prompt_eval_duration": 6095540000,
+    "eval_count": 67,
+    "eval_duration": 21543733000
+  },
+  "parse_ok": true,
+  "truncated": false,
+  "accepted": [
+    {
+      "section": "1.3",
+      "relation": "ISSUES",
+      "name": "บันทึกประจำวัน",
+      "raw_name": "บันทึกประจำวัน",
+      "type": "Document",
+      "owner": "ผู้แจ้งความ",
+      "condition": "",
+      "start_line": 70,
+      "end_line": 71,
+      "evidence": "(2) เจ้ า พนั ก งานตำ รวจจะสอบสวนว่ า\nหายจริงหรือไม่ แล้วลงบันทึกประจำวันไว้เป็นหลักฐาน",
+      "pdf_pages": [
+        24
+      ],
+      "printed_pages": [
+        11
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.3",
+      "relation": "ISSUES",
+      "name": "หลักฐานการแจ้งความเอกสารหาย",
+      "raw_name": "หลักฐานการแจ้งความเอกสารหาย",
+      "type": "Document",
+      "owner": "ผู้แจ้งความ",
+      "condition": "",
+      "start_line": 72,
+      "end_line": 74,
+      "evidence": "(3) เจ้าพนักงานตำรวจจะออกหลักฐาน\nการแจ้งความเอกสารหายเพือ่ ให้ทา่ นนำไปยังหน่วยงาน\nที่เกี่ยวข้องเพื่อดำเนินการต่อไป",
+      "pdf_pages": [
+        24
+      ],
+      "printed_pages": [
+        11
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    }
+  ],
+  "rejected": [],
+  "initial_validation": {
+    "accepted": [
+      {
+        "section": "1.3",
+        "relation": "ISSUES",
+        "name": "บันทึกประจำวัน",
+        "raw_name": "บันทึกประจำวัน",
+        "type": "Document",
+        "owner": "ผู้แจ้งความ",
+        "condition": "",
+        "start_line": 70,
+        "end_line": 71,
+        "evidence": "(2) เจ้ า พนั ก งานตำ รวจจะสอบสวนว่ า\nหายจริงหรือไม่ แล้วลงบันทึกประจำวันไว้เป็นหลักฐาน",
+        "pdf_pages": [
+          24
+        ],
+        "printed_pages": [
+          11
+        ],
+        "review_flags": [
+          "check_condition_context"
+        ],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.3",
+        "relation": "ISSUES",
+        "name": "หลักฐานการแจ้งความเอกสารหาย",
+        "raw_name": "หลักฐานการแจ้งความเอกสารหาย",
+        "type": "Document",
+        "owner": "ผู้แจ้งความ",
+        "condition": "",
+        "start_line": 72,
+        "end_line": 74,
+        "evidence": "(3) เจ้าพนักงานตำรวจจะออกหลักฐาน\nการแจ้งความเอกสารหายเพือ่ ให้ทา่ นนำไปยังหน่วยงาน\nที่เกี่ยวข้องเพื่อดำเนินการต่อไป",
+        "pdf_pages": [
+          24
+        ],
+        "printed_pages": [
+          11
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      }
+    ],
+    "rejected": []
+  },
+  "validator_version": "v2.2-unique-nearby-grounding-repair"
+}

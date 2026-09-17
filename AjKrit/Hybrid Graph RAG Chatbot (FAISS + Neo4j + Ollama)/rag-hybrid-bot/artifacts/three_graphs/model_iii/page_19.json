@@ -1,0 +1,11 @@
+{
+  "page": 19,
+  "raw": "{\n  \"entities\": [\n    {\n      \"crop\": \"ข้าวโพด\",\n      \"disease\": \"โรคใบด่าง\",\n      \"pathogen\": null,\n      \"symptom\": null,\n      \"treatment\": null\n    }\n  ]\n}",
+  "timing": {
+    "seconds": 3.004,
+    "model": "qwen3.5:9b",
+    "eval_count": 64,
+    "eval_duration": 1875610000,
+    "prompt_eval_count": 529
+  }
+}

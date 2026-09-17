@@ -1,0 +1,1262 @@
+[
+  {
+    "subject": "วันดินโลก",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "วันที่ 5 ธันวาคมของทุกปี",
+    "object_type": "Topic",
+    "page": 6,
+    "evidence": "เมื่อปี 2556 ที่ประชุมใหญ่สมัชชา \nสหประชาชาติ มีมติให้วันที่ 5 ธันวาคมของทุกปี \nเป็น “วันดินโลก”",
+    "origin": "model"
+  },
+  {
+    "subject": "ปีแห่งดินสากล",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "ปี 2558",
+    "object_type": "Topic",
+    "page": 6,
+    "evidence": "และต่อมาในปี 2558 กำหนด \nให้เป็น “ปีแห่งดินสากล”",
+    "origin": "model"
+  },
+  {
+    "subject": "การห่มดิน",
+    "subject_type": "Treatment",
+    "relation": "RELATED_TO",
+    "object": "การใช้พรมใยปาล์มซึ่งทำมาจากปาล์มที่ผ่านการรีดน้ำมันแล้ว",
+    "object_type": "Topic",
+    "page": 6,
+    "evidence": "เช่น ใช้ฟางและ \nเศษใบไม้มาห่มดิน การใช้พรมใยปาล์มซึ่งทำ \nมาจากปาล์มที่ผ่านการรีดน้ำมันแล้ว",
+    "origin": "model"
+  },
+  {
+    "subject": "การห่มดิน",
+    "subject_type": "Treatment",
+    "relation": "RELATED_TO",
+    "object": "ช่วยคลุมหน้าดินไม่ให้วัชพืชขึ้นรบกวนต้นไม้พืชหลัก",
+    "object_type": "Topic",
+    "page": 6,
+    "evidence": "นอกจากประโยชน์ที่กล่าวไปแล้ว การห่มดิน\nยังจะช่วยคลุมหน้าดินไม่ให้วัชพืชขึ้นรบกวน\nต้นไม้พืชหลักอีกด้วย",
+    "origin": "model"
+  },
+  {
+    "subject": "การปรับปรุงดินก่อนการเพาะปลูก",
+    "subject_type": "Treatment",
+    "relation": "RELATED_TO",
+    "object": "เพิ่มอินทรียวัตถุให้กับดิน",
+    "object_type": "Topic",
+    "page": 6,
+    "evidence": "การห่มดินถือเป็นวิธีการที่เพิ่มอินทรีย\nวัตถุให้กับดิน หรือเป็นการปรับปรุงดินก่อน\nการเพาะปลูก",
+    "origin": "model"
+  },
+  {
+    "subject": "การห่มดิน",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "จุลินทรีย์ในดิน",
+    "object_type": "Pathogen",
+    "page": 7,
+    "evidence": "การห่มดินเพื่อให้\nจุลินทรีย์ในดินมีความอุดมสมบูรณ์",
+    "origin": "model"
+  },
+  {
+    "subject": "เปลือยดินไว้",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "จุลินทรีย์ตาย",
+    "object_type": "Symptom",
+    "page": 7,
+    "evidence": "ถ้าเปลือย \nดินไว้ จะทำให้จุลินทรีย์ตาย",
+    "origin": "model"
+  },
+  {
+    "subject": "การแก้ปัญหาดินเค็ม",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "ทฤษฏีการห่มดิน",
+    "object_type": "Topic",
+    "page": 7,
+    "evidence": "การแก้ปัญหาดินเค็มด้วยทฤษฏีการห่มดิน",
+    "origin": "model"
+  },
+  {
+    "subject": "ดินเปรี้ยว",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "ปุ๋ยเคมี",
+    "object_type": "Treatment",
+    "page": 10,
+    "evidence": "ดินเปรี้ยวหรือดินเป็นกรดเกิดจากเกษตรกร \nมีการใช้ปุ๋ยเคมีในแปลงการเกษตรมากขึ้น",
+    "origin": "model"
+  },
+  {
+    "subject": "ดินเปรี้ยว",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "สารชีวภาพ",
+    "object_type": "Treatment",
+    "page": 10,
+    "evidence": "แล้วเปลี่ยนมาใช้ปุ๋ยอินทรีย์ \nสารชีวภาพในการกำจัดแมลง",
+    "origin": "model"
+  },
+  {
+    "subject": "ดินเปรี้ยวหรือดินเค็ม",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "มูลวัวควาย",
+    "object_type": "Treatment",
+    "page": 10,
+    "evidence": "กรณีที่ดินเปรี้ยวหรือดินเค็มเกิดจากการมี\nอินทรียวัตถุมากเกินไป ทำให้ดินย่อยสลายไม่ทัน เช่น \nบริเวณที่มีวัวหรือควายลงไปนอน จะทำให้มีมูลวัวควาย \nจำนวนมาก",
+    "origin": "model"
+  },
+  {
+    "subject": "น้ำหมักสมุนไพรรสจืด",
+    "subject_type": "Treatment",
+    "relation": "RELATED_TO",
+    "object": "ดินเปรี้ยว",
+    "object_type": "Topic",
+    "page": 10,
+    "evidence": "การแก้ปัญหาดินเปรี้ยว ให้ทำการล้างดินด้วย \nน้ำหมักสมุนไพรรสจืดผสมน้ำ",
+    "origin": "model"
+  },
+  {
+    "subject": "น้ำหมักสมุนไพรรสจืด",
+    "subject_type": "Treatment",
+    "relation": "RELATED_TO",
+    "object": "ความเค็มของดิน",
+    "object_type": "Topic",
+    "page": 10,
+    "evidence": "เพื่อชะล้างความเปรี้ยวและความเค็มของดิน \nให้ลดหรือเจือจางลง",
+    "origin": "model"
+  },
+  {
+    "subject": "ดินเปรี้ยวหรือดินเป็นกรด",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "ไนโตรเจน ฟอสฟอรัส โพแทสเซียม",
+    "object_type": "Treatment",
+    "page": 10,
+    "evidence": "ซึ่งในปุ๋ยนั้น\nจะประกอบไปด้วย ไนโตรเจน ฟอสฟอรัส โพแทสเซียม  \nโดยสารเคมีเหล่านี้ล้วนแต่มีคุณสมบัติเป็นกรดทั้งสิ้น",
+    "origin": "model"
+  },
+  {
+    "subject": "ดินเปรี้ยว",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "กรดจัด",
+    "object_type": "Topic",
+    "page": 11,
+    "evidence": "การสังเกตดินเปรี้ยวหรือเป็นกรดจัด",
+    "origin": "model"
+  },
+  {
+    "subject": "ดินเปรี้ยว",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "การใช้สารเคมี",
+    "object_type": "Treatment",
+    "page": 11,
+    "evidence": "เพราะถ้าดินมีความอุดมสมบูรณ์ \nการใช้สารเคมีก็ไม่จำเป็นนัก",
+    "origin": "model"
+  },
+  {
+    "subject": "ดิน",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "สารปรับปรุงดิน",
+    "object_type": "Treatment",
+    "page": 13,
+    "evidence": "เมื่อนำไปใช้\nประโยชน์ทางการเกษตรจะมีคุณสมบัติ เช่น เป็นสารปรับปรุงดิน",
+    "origin": "model"
+  },
+  {
+    "subject": "น้ำมันเบา",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "น้ำส้มควันไม้",
+    "object_type": "Treatment",
+    "page": 13,
+    "evidence": "แยกตัวเป็น 3 ชั้น คือ น้ำมันเบา (ลอยอยู่ผิวน้ำ) น้ำส้มไม้ และ\nน้ำมันทาร์",
+    "origin": "model"
+  },
+  {
+    "subject": "น้ำส้มไม้",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "น้ำส้มควันไม้",
+    "object_type": "Treatment",
+    "page": 13,
+    "evidence": "แยกตัวเป็น 3 ชั้น คือ น้ำมันเบา (ลอยอยู่ผิวน้ำ) น้ำส้มไม้ และ\nน้ำมันทาร์",
+    "origin": "model"
+  },
+  {
+    "subject": "น้ำมันทาร์",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "น้ำส้มควันไม้",
+    "object_type": "Treatment",
+    "page": 13,
+    "evidence": "แยกตัวเป็น 3 ชั้น คือ น้ำมันเบา (ลอยอยู่ผิวน้ำ) น้ำส้มไม้ และ\nน้ำมันทาร์",
+    "origin": "model"
+  },
+  {
+    "subject": "สารดับกลิ่นตัว",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "น้ำส้มควันไม้",
+    "object_type": "Treatment",
+    "page": 13,
+    "evidence": "มีการนำน้ำส้มควันไม้ไปใช้ประโยชน์ในอุตสาหกรรม เช่น ใช้ผลิต \nสารดับกลิ่นตัว",
+    "origin": "model"
+  },
+  {
+    "subject": "ดิน",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "จุลินทรีย์ที่ไม่เป็นประโยชน์",
+    "object_type": "Pathogen",
+    "page": 15,
+    "evidence": "พ่นลงดิน\nเพื่อฆ่าเชื้อจุลินทรีย์\nที่ไม่เป็นประโยชน์",
+    "origin": "model"
+  },
+  {
+    "subject": "ดิน",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "แมลงในดิน",
+    "object_type": "Pathogen",
+    "page": 15,
+    "evidence": "พ่นลงดิน\nเพื่อฆ่าเชื้อจุลินทรีย์\nที่ไม่เป็นประโยชน์\nและแมลงในดิน",
+    "origin": "model"
+  },
+  {
+    "subject": "พืช",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรครา",
+    "object_type": "Disease",
+    "page": 15,
+    "evidence": "ราดโคนต้น\nรักษาโรครา โรคเน่า",
+    "origin": "model"
+  },
+  {
+    "subject": "พืช",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรคเน่า",
+    "object_type": "Disease",
+    "page": 15,
+    "evidence": "ราดโคนต้น\nรักษาโรครา โรคเน่า",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบไหม้แผลใหญ่",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "เชื้อรา",
+    "object_type": "Pathogen",
+    "page": 17,
+    "evidence": "มีสาเหตุมาจากเชื้อรา",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบไหม้แผลใหญ่",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "มีแผลขนาดเล็กสีคล้ายฟางข้าวบนใบข้าวโพด และขยายใหญ่ขึ้นเป็นสีเทาหรือสีน้ำตาลอ่อน ยาวตามใบข้าวโพด ทำให้ ใบข้าวโพดแห้งตาย",
+    "object_type": "Symptom",
+    "page": 17,
+    "evidence": "อาการเริ่ม คือ \nมีแผลขนาดเล็กสีคล้ายฟางข้าวบนใบ\nข้าวโพด และขยายใหญ่ขึ้นเป็นสีเทาหรือ \nสีน้ำตาลอ่อน ยาวตามใบข้าวโพด  ทำให้ \nใบข้าวโพดแห้งตาย",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบไหม้แผลใหญ่",
+    "subject_type": "Disease",
+    "relation": "PREVENTED_BY",
+    "object": "ใส่ปุ๋ย ไนโตรเจนปริมาณสูง",
+    "object_type": "Treatment",
+    "page": 17,
+    "evidence": "วิธีป้องกัน คือ ใส่ปุ๋ย \nไนโตรเจนปริมาณสูง",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบไหม้แผลใหญ่",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "สารป้องกันกำจัดโรคพืช อะโซซิสโตรบิน+ ไดฟีโนโคนาโซล อัตรา 15 ซีซี/น้ำ 20 ลิตร โพรพิโคนาโซล อัตรา 20 ซีซี/น้ำ 20 ลิตร โพรพิโคนาโซล+ไดฟีโนโคนาโซล อัตรา 5 ซีซี/น้ำ 20 ลิตร",
+    "object_type": "Treatment",
+    "page": 17,
+    "evidence": "เมื่อพบโรคให้พ่นด้วย \nสารป้องกันกำจัดโรคพืช อะโซซิสโตรบิน+ \nไดฟีโนโคนาโซล อัตรา 15 ซีซี/น้ำ 20 ลิตร \nโพรพิโคนาโซล อัตรา 20 ซีซี/น้ำ 20 ลิตร \nโพรพิโคนาโซล+ไดฟีโนโคนาโซล อัตรา \n5 ซีซี/น้ำ 20 ลิตร",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบไหม้แผลใหญ่",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "พ่นห่างกัน 7 วัน ไม่ควรใช้สารชนิดเดียวกันเกิน 3 ครั้ง เพราะจะทำให้เชื้อสาเหตุเกิดการดื้อยา",
+    "object_type": "Treatment",
+    "page": 17,
+    "evidence": "พ่น 3 ครั้ง พ่นห่างกัน 7 วัน \nไม่ควรใช้สารชนิดเดียวกันเกิน 3 ครั้ง \nเพราะจะทำให้เชื้อสาเหตุเกิดการดื้อยา",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคราสนิม",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ใบข้าวโพดจะเป็นจุดนูนบนใบและใต้ใบ มีสีน้ำตาลอ่อนและเปลี่ยนเป็นน้ำตาลแดง เมื่อจุดนูนแตกมีผงสีคล้ายสนิม",
+    "object_type": "Symptom",
+    "page": 17,
+    "evidence": "อาการ คือ ใบข้าวโพดจะเป็นจุดนูนบนใบ \nและใต้ใบ มีสีน้ำตาลอ่อนและเปลี่ยนเป็น\nน้ำตาลแดง เมื่อจุดนูนแตกมีผงสีคล้ายสนิม",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคราสนิม",
+    "subject_type": "Disease",
+    "relation": "RELATED_TO",
+    "object": "ฤดูฝน",
+    "object_type": "Topic",
+    "page": 17,
+    "evidence": "ซึ่งโรคนี้มักระบาดในฤดูฝน",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคราสนิม",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "สารไดพีโนโคนาโซล 25% อัตรา 20-30 ซีซี ต่อ น้ำ 20 ลิตร หรือแมนโคเซบ 80% อัตรา 40 กรัม ต่อน้ำ 20 ลิตร พ่นทุก 7 วัน จำนวน 2-4 ครั้ง",
+    "object_type": "Treatment",
+    "page": 17,
+    "evidence": "ให้พ่นด้วยสาร\nไดพีโนโคนาโซล 25% อัตรา 20-30 ซีซี ต่อ \nน้ำ 20 ลิตร หรือแมนโคเซบ 80% อัตรา 40 กรัม \nต่อน้ำ 20 ลิตร พ่นทุก 7 วัน จำนวน 2-4 ครั้ง",
+    "origin": "model"
+  },
+  {
+    "subject": "ข้าวโพด",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรคราน้ำค้างหรือโรคใบลาย",
+    "object_type": "Disease",
+    "page": 18,
+    "evidence": "โรคราน้ำค้างหรือโรคใบลาย \n\t ใบข้าวโพดจะมีลายสีเขียวอ่อนหรือสีเหลือง\nอ่อนสลับกับสีเขียวแก่เป็นทาง",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคราน้ำค้างหรือโรคใบลาย",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ผงสปอร์สีขาวๆ เป็นจำนวนมากบริเวณใต้ใบ",
+    "object_type": "Symptom",
+    "page": 18,
+    "evidence": "ในเวลาเช้าที่อากาศ\nค่อนข้างเย็นจะพบผงสปอร์สีขาวๆ เป็นจำนวนมาก\nบริเวณใต้ใบ",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคราน้ำค้างหรือโรคใบลาย",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ดอกตัวผู้จะหงิกงอ ไม่เจริญเต็มที่",
+    "object_type": "Symptom",
+    "page": 18,
+    "evidence": "ดอกตัวผู้จะหงิกงอ ไม่เจริญเต็มที่ ส่วน\nดอกตัวเมียจะไม่เจริญเติบโตหรือเติบโตมากเกินไป",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคราน้ำค้างหรือโรคใบลาย",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "สารไดเมโทมอร์ฟ อัตรา 20 กรัม/เมล็ด 1 กิโลกรัม",
+    "object_type": "Treatment",
+    "page": 18,
+    "evidence": "หรือสารไดเมโทมอร์ฟ อัตรา \n20 กรัม/เมล็ด 1 กิโลกรัม ก่อนปลูก",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคโคนเน่า",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ยอดข้าวโพดมีสีซีด เหี่ยวเฉา ต่อมาจะไหม้ลุกลามเป็นยอดเน่า",
+    "object_type": "Symptom",
+    "page": 18,
+    "evidence": "สังเกตได้จากอาการใบไหม้บริเวณปลายใบมาที่โคนใบ ยอด\nข้าวโพดมีสีซีด เหี่ยวเฉา",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบด่าง",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ลายเขียวซีดสลับเขียวเข้ม",
+    "object_type": "Symptom",
+    "page": 19,
+    "evidence": "ข้าวโพดจะแสดงอาการใบด่างลายเขียวซีด\nสลับเขียวเข้ม",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบด่าง",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ประจุดเหลือง",
+    "object_type": "Symptom",
+    "page": 19,
+    "evidence": "หรืออาการด่างประจุดเหลือง",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบด่าง",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ต้นแคระแกร็น",
+    "object_type": "Symptom",
+    "page": 19,
+    "evidence": "ถ้าอาการโรครุนแรงต้นข้าวโพด\nจะแห้งตายขณะยังเล็ก",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบด่าง",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "กำจัดเพลี้ยอ่อน",
+    "object_type": "Treatment",
+    "page": 19,
+    "evidence": "การป้องกัน ให้กำจัดเพลี้ยอ่อนซึ่ง\nเป็นตัวแมลงพาหะนำโรค",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบด่าง",
+    "subject_type": "Disease",
+    "relation": "PREVENTED_BY",
+    "object": "ปลูกข้าวโพดพันธุ์ต้านทาน",
+    "object_type": "Treatment",
+    "page": 19,
+    "evidence": "ปลูกข้าวโพดพันธุ์ต้านทาน",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบด่าง",
+    "subject_type": "Disease",
+    "relation": "PREVENTED_BY",
+    "object": "ปลูกพืชหมุนเวียน",
+    "object_type": "Treatment",
+    "page": 19,
+    "evidence": "ปลูกพืชหมุนเวียน",
+    "origin": "model"
+  },
+  {
+    "subject": "เพลี้ยอ่อน",
+    "subject_type": "Pathogen",
+    "relation": "RELATED_TO",
+    "object": "โรคใบด่าง",
+    "object_type": "Disease",
+    "page": 19,
+    "evidence": "ให้กำจัดเพลี้ยอ่อนซึ่ง\nเป็นตัวแมลงพาหะนำโรค",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคแคงเกอร์",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "เชื้อแบคทีเรีย",
+    "object_type": "Pathogen",
+    "page": 20,
+    "evidence": "โรคแคงเกอร์ เป็นโรคที่เกิดจากเชื้อแบคทีเรียเข้าทำลาย",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคแอนแทร็กโนส",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "เชื้อรา",
+    "object_type": "Pathogen",
+    "page": 24,
+    "evidence": "สาเหตุมาจากเชื้อรา",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคแอนแทร็กโนส",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "จุดฉ่ำน้ำรูปวงรีหรือรูปไข่",
+    "object_type": "Symptom",
+    "page": 24,
+    "evidence": "ข้อสังเกต คือ พริกจะ\nเป็นจุดฉ่ำน้ำรูปวงรีหรือรูปไข่",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคแอนแทร็กโนส",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "จุดสีดำเรียงซ้อนกันในแผล",
+    "object_type": "Symptom",
+    "page": 24,
+    "evidence": "และมีจุดสีดำเรียงซ้อนกันในแผล",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคแอนแทร็กโนส",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "เมือกสีส้มอ่อน",
+    "object_type": "Symptom",
+    "page": 24,
+    "evidence": "และแผลอาจมีเมือกสีส้มอ่อน",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคแอนแทร็กโนส",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "สารแมนโคเซบ",
+    "object_type": "Treatment",
+    "page": 24,
+    "evidence": "คลุกเมล็ดพันธุ์ \nด้วยสารเคมี เช่น สารแมนโคเซบ",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคแอนแทร็กโนส",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "น้ำหมักสมุนไพร",
+    "object_type": "Treatment",
+    "page": 24,
+    "evidence": "ควรพ่นสารเคมีหรือน้ำหมักสมุนไพร\nป้องกันโรค",
+    "origin": "model"
+  },
+  {
+    "subject": "พริก",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม ออกซิสปอรัม",
+    "object_type": "Disease",
+    "page": 26,
+    "evidence": "โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม \n\t ออกซิสปอรัม",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม ออกซิสปอรัม",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "เชื้อราฟูซาเรียม ออกซิสปอรัม",
+    "object_type": "Pathogen",
+    "page": 26,
+    "evidence": "โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม \n\t ออกซิสปอรัม",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม ออกซิสปอรัม",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "สารเมตาแลกซิลหรือสารอีทริไดอะโซล หรือสารพีซีเอ็นบีผสมอีทริไดอะโซล หรือสารชีวภัณฑ์ราดดินบริเวณที่ถอนต้นออกไป",
+    "object_type": "Treatment",
+    "page": 26,
+    "evidence": "ใช้สารเมตาแลกซิลหรือสารอีทริไดอะโซล \nหรือสารพีซีเอ็นบีผสมอีทริไดอะโซล หรือสารชีวภัณฑ์\nราดดินบริเวณที่ถอนต้นออกไป",
+    "origin": "model"
+  },
+  {
+    "subject": "ดิน",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "จุลินทรีย์ในดิน",
+    "object_type": "Topic",
+    "page": 27,
+    "evidence": "เพิ่มจุลินทรีย์ในดิน\nด้วยการใส่ปูนขาว",
+    "origin": "model"
+  },
+  {
+    "subject": "พริก",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรคเหี่ยว",
+    "object_type": "Disease",
+    "page": 27,
+    "evidence": "หลีกเลี่ยงการปลูกพริกซ้ำที่เดิมเป็นเวลานาน",
+    "origin": "model"
+  },
+  {
+    "subject": "ดิน",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "ความเป็นกรดเป็นด่างของดิน",
+    "object_type": "Topic",
+    "page": 27,
+    "evidence": "ปรับสภาพความเป็นกรดเป็นด่าง\nของดิน",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคเหี่ยว",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "โคนต้นและรากจะเน่าเกิดอาการเหี่ยวในระยะติดผล ผลมีลักษณะฉ่ำน้ำ เนื้อผลเป็นสีดำ ในขั้นรุนแรงจะเข้าทำลายเมล็ด และยืนต้นตาย",
+    "object_type": "Symptom",
+    "page": 27,
+    "evidence": "ลักษณะอาการของโรค โคนต้นและรากจะเน่า \nเกิดอาการเหี่ยวในระยะติดผล ผลมีลักษณะฉ่ำน้ำ \nเนื้อผลเป็นสีดำ ในขั้นรุนแรงจะเข้าทำลายเมล็ด และ\nยืนต้นตาย",
+    "origin": "model"
+  },
+  {
+    "subject": "ดิน",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "อินทรียวัตถุ",
+    "object_type": "Topic",
+    "page": 27,
+    "evidence": "และใส่อินทรียวัตถุในอัตรา 2 ถึง 4 ตันต่อไร่",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคเหี่ยว",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "สารเมทาแลกซิล หรือสารฟอสอีทิล-อะลูมิเนียม",
+    "object_type": "Treatment",
+    "page": 27,
+    "evidence": "และพ่นสารเคมีป้องกัน\nกำจัดโรค เช่น สารเมทาแลกซิล หรือสารฟอสอีทิล-\nอะลูมิเนียม",
+    "origin": "model"
+  },
+  {
+    "subject": "ดิน",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "เชื้อราไตรโคเดอร์มา",
+    "object_type": "Pathogen",
+    "page": 27,
+    "evidence": "ผสมเชื้อจุลินทรีย์\nปฏิปักษ์ เช่น เชื้อราไตรโคเดอร์มา",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคเหี่ยว",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "เชื้อแบคทีเรีย",
+    "object_type": "Pathogen",
+    "page": 28,
+    "evidence": "โรคเหี่ยวที่เกิดจากเชื้อแบคทีเรีย",
+    "origin": "model"
+  },
+  {
+    "subject": "พืชหมุนเวียน",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "ข้าวโพด",
+    "object_type": "Crop",
+    "page": 28,
+    "evidence": "ปลูกพืชหมุนเวียน\nเช่น ข้าวโพด",
+    "origin": "model"
+  },
+  {
+    "subject": "พืชหมุนเวียน",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "ถั่ว",
+    "object_type": "Crop",
+    "page": 28,
+    "evidence": "ปลูกพืช\nหมุนเวียน เช่น ข้าวโพด หรือพืชตระกูลถั่ว",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคเหี่ยว",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ยอดและกิ่งใบจะลู่ลงในช่วงกลางวัน และฟื้นตัวในช่วงกลางคืน",
+    "object_type": "Symptom",
+    "page": 28,
+    "evidence": "ยอดและกิ่งใบจะลู่ลงในช่วง\nกลางวัน และฟื้นตัวในช่วงกลางคืน",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคเหี่ยว",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ยืนต้นตายขณะที่ใบยังเขียวอยู่ได้ภายใน 2 ถึง 3 วัน",
+    "object_type": "Symptom",
+    "page": 28,
+    "evidence": "จะเหี่ยวและยืนต้นตายขณะที่ใบยังเขียวอยู่ได้\nภายใน 2 ถึง 3 วัน",
+    "origin": "model"
+  },
+  {
+    "subject": "โรครากเน่าและโคนเน่า",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "ราเมล็ดผักกาด",
+    "object_type": "Pathogen",
+    "page": 29,
+    "evidence": "โรคนี้มีสาเหตุเกิดจากราเมล็ด \nผักกาด",
+    "origin": "model"
+  },
+  {
+    "subject": "โรครากเน่าและโคนเน่า",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ใบเหลือง เหี่ยว ร่วง และยืนต้นตาย",
+    "object_type": "Symptom",
+    "page": 29,
+    "evidence": "ทำให้ต้นกล้าเน่า หรือทำให้ต้น\nที่เจริญเติบโตแล้วเกิดอาการใบเหลือง \nเหี่ยว ร่วง และยืนต้นตาย",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบด่าง",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "PVY",
+    "object_type": "Pathogen",
+    "page": 31,
+    "evidence": "โรคใบด่างที่เกิดจากเชื้อไวรัส PVY \n\t (Potato virus Y)",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบด่าง",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "เส้นใบบวม ใส ใบด่าง หดย่น ต้นแคระแกร็น",
+    "object_type": "Symptom",
+    "page": 31,
+    "evidence": "เริ่มจากเส้นใบบวม ใส ใบด่าง หดย่น ต้นแคระแกร็น",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบด่างที่เกิดจากเชื้อไวรัส CMV (Cucumber mosaic virus)",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "มีสีเขียวอ่อนสลับสีเขียวเข้ม หรือ สีเหลือง หรือจุดเหลืองกระจายตามใบ ต้นแคระแกร็น ไม่ออกดอก ใบเล็กลง ผลมีจุดสีเหลืองซีด ผิวผลหยาบ ผลมีรูปร่างผิดปกติ",
+    "object_type": "Symptom",
+    "page": 31,
+    "evidence": "ทำให้ใบด่าง มีสีเขียวอ่อนสลับสีเขียวเข้ม หรือ \nสีเหลือง หรือจุดเหลืองกระจายตามใบ ต้นแคระแกร็น \nไม่ออกดอก ใบเล็กลง ผลมีจุดสีเหลืองซีด ผิวผลหยาบ \nผลมีรูปร่างผิดปกติ",
+    "origin": "model"
+  },
+  {
+    "subject": "การป้องกันและกำจัด",
+    "subject_type": "Treatment",
+    "relation": "RELATED_TO",
+    "object": "ถอนต้นและกำจัดเศษซากต้นพริกที่เป็นโรคไปเผาทำลาย กำจัดวัชพืชไม่ให้เป็นแหล่งอาศัยของเพลี้ยอ่อน",
+    "object_type": "Topic",
+    "page": 31,
+    "evidence": "ถอนต้นและกำจัดเศษ\nซากต้นพริกที่เป็นโรคไปเผาทำลาย กำจัดวัชพืชไม่ให้เป็น\nแหล่งอาศัยของเพลี้ยอ่อน",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบด่าง",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "TEV (Tobacco etch virus)",
+    "object_type": "Pathogen",
+    "page": 32,
+    "evidence": "โรคใบด่างที่เกิดจากเชื้อไวรัส TEV",
+    "origin": "model"
+  },
+  {
+    "subject": "ต้นพริก",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรคใบหงิกเหลือง",
+    "object_type": "Disease",
+    "page": 32,
+    "evidence": "เกิดจากเชื้อไวรัสใบหงิกเหลือง ที่ทำให้\nใบพริกด่างเหลือง",
+    "origin": "model"
+  },
+  {
+    "subject": "พริก",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรคใบหงิกเหลือง",
+    "object_type": "Disease",
+    "page": 32,
+    "evidence": "พบระบาดมากในช่วงฤดูแล้ง โดยมีพืชอาศัย\nหลายชนิด เช่น กระเจี๊ยบมอญ แตงกวา พืช\nตระกูลถั่วบางชนิด บวบเหลี่ยม พริก ฟักเขียว",
+    "origin": "model"
+  },
+  {
+    "subject": "พริก",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรคใบด่างจากเชื้อไวรัส CVMV",
+    "object_type": "Disease",
+    "page": 33,
+    "evidence": "ป้องกันและกำจัดโรคด้วยวิธีเดียวกันกับ\nโรคใบด่างที่เกิดจากเชื้อไวรัส CVMV",
+    "origin": "model"
+  },
+  {
+    "subject": "พริก",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรคใบด่างจากเชื้อไวรัส CVMV",
+    "object_type": "Disease",
+    "page": 33,
+    "evidence": "ป้องกันและกำจัดด้วยวิธีเดียวกับ\nโรคใบด่างจากเชื้อไวรัส CVMV",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบจุดตากบ",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "เชื้อรา",
+    "object_type": "Pathogen",
+    "page": 34,
+    "evidence": "มีเชื้อสาเหตุคือเชื้อรา",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบจุดตากบ",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "แผลวงกลมหรือทางยาว",
+    "object_type": "Symptom",
+    "page": 34,
+    "evidence": "ทำให้เกิดแผล\nวงกลมหรือทางยาว",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบจุดตากบ",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ขอบแผลสีน้ำตาลเข้ม",
+    "object_type": "Symptom",
+    "page": 34,
+    "evidence": "มีขอบแผลสีน้ำตาลเข้ม",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบจุดตากบ",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "เนื้อแผลสีน้ำตาลอ่อน",
+    "object_type": "Symptom",
+    "page": 34,
+    "evidence": "เนื้อ\nแผลสีน้ำตาลอ่อน",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบจุดตากบ",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "กลางแผลสีเทา หรือขาว",
+    "object_type": "Symptom",
+    "page": 34,
+    "evidence": "กลางแผลสีเทา หรือขาว",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบจุดตากบ",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "สารแมนโคเซบ",
+    "object_type": "Treatment",
+    "page": 34,
+    "evidence": "พ่นสารเคมีป้องกันและกำจัดโรค เช่น \nสารแมนโคเซบ",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคใบจุดตากบ",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "น้ำหมักสมุนไพร",
+    "object_type": "Treatment",
+    "page": 34,
+    "evidence": "หรือสาร\nเบโนมิล หรือน้ำหมักสมุนไพร",
+    "origin": "model"
+  },
+  {
+    "subject": "การปลูกพริก",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "อากาศถ่ายเทได้สะดวก",
+    "object_type": "Topic",
+    "page": 34,
+    "evidence": "เพื่อให้\nอากาศถ่ายเทได้สะดวก",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคลำต้นไหม้",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "เชื้อรา",
+    "object_type": "Pathogen",
+    "page": 35,
+    "evidence": "โรคนี้เป็นอีกโรคหนึ่งที่มีเชื้อราเป็นสาเหตุของ\nโรค",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคลำต้นไหม้",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "รอยไหม้สีดำบริเวณลำต้น",
+    "object_type": "Symptom",
+    "page": 35,
+    "evidence": "อาการเริ่มจากรอยไหม้สีดำบริเวณลำต้น",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคลำต้นไหม้",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "สารฟอสฟอริกแอซิด",
+    "object_type": "Treatment",
+    "page": 35,
+    "evidence": "หรือสารฟอสฟอริกแอซิด",
+    "origin": "model"
+  },
+  {
+    "subject": "โรครากปม",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "ไส้เดือนฝอย",
+    "object_type": "Pathogen",
+    "page": 36,
+    "evidence": "เกิดจากไส้เดือนฝอยใช้ปากแทง\nเนื้อเยื่อแล้วดูดน้ำเลี้ยงจากรากเป็น\nอาหาร",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคราแป้ง",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "เชื้อรา",
+    "object_type": "Pathogen",
+    "page": 36,
+    "evidence": "เกิดจากเชื้อรา มักระบาดในฤดูหนาว",
+    "origin": "model"
+  },
+  {
+    "subject": "โรครากปม",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "รากเป็นปมและเน่า",
+    "object_type": "Symptom",
+    "page": 36,
+    "evidence": "ทำให้ต้นพริกชะงักการเจริญ\nเติบโต ผลผลิตลดลงและขนาดเล็กลง \nรากเป็นปมและเน่า",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคราแป้ง",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ผงคล้ายแป้งสีขาวปกคลุมใบแก่",
+    "object_type": "Symptom",
+    "page": 36,
+    "evidence": "สังเกตเห็นอาการเริ่มต้น มีผงคล้ายแป้งสีขาว\nปกคลุมใบแก่",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคราแป้ง",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ต้นแห้งตาย",
+    "object_type": "Symptom",
+    "page": 36,
+    "evidence": "และดูดน้ำเลี้ยงทำให้เหลืองและต้นแห้งตาย",
+    "origin": "model"
+  },
+  {
+    "subject": "โรครากปม",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ใบเหลือง",
+    "object_type": "Symptom",
+    "page": 36,
+    "evidence": "รากเป็นปมและเน่า ต้นแคระแกร็น \nเหี่ยว ใบเหลือง",
+    "origin": "model"
+  },
+  {
+    "subject": "โรครากปม",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ต้นตายได้",
+    "object_type": "Symptom",
+    "page": 36,
+    "evidence": "จุลินทรีย์ที่เป็นสาเหตุ\nของโรคอื่นๆ เข้าทำลายต้น และต้นตาย\nได้",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคราแป้ง",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "สารไดโนแคป ไตรโฟรีน และเบโนมิล",
+    "object_type": "Treatment",
+    "page": 36,
+    "evidence": "และใช้สารไดโนแคป ไตรโฟรีน และเบโนมิล \nกำจัดเชื้อรา",
+    "origin": "model"
+  },
+  {
+    "subject": "พริก",
+    "subject_type": "Crop",
+    "relation": "RELATED_TO",
+    "object": "พืชตระกูลถั่ว เช่น ถั่วลิสง หรือปอเทือง",
+    "object_type": "Topic",
+    "page": 37,
+    "evidence": "ปลูกพืชตระกูลถั่ว \nเช่น ถั่วลิสง หรือปอเทือง ปลูกดาวเรือง\nและงา สลับกับพริก",
+    "origin": "model"
+  },
+  {
+    "subject": "พริก",
+    "subject_type": "Crop",
+    "relation": "RELATED_TO",
+    "object": "ดาวเรืองและงา",
+    "object_type": "Topic",
+    "page": 37,
+    "evidence": "ปลูกพืชตระกูลถั่ว \nเช่น ถั่วลิสง หรือปอเทือง ปลูกดาวเรือง\nและงา สลับกับพริก",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคราน้ำค้าง",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "กลุ่มเชื้อราเป็นผงสีขาวหรือเทา",
+    "object_type": "Symptom",
+    "page": 39,
+    "evidence": "วิธีการสังเกตง่ายๆ ว่าพืชของเราติดโรค \nราน้ำค้างหรือไม่ ให้ดูที่ใบของพืชจะมีกลุ่ม \nเชื้อราเป็นผงสีขาวหรือเทา",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคราน้ำค้าง",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "หลังใบจะเป็นสีเหลืองและเปลี่ยนเป็นสีน้ำตาลมีลักษณะเหลี่ยม",
+    "object_type": "Symptom",
+    "page": 39,
+    "evidence": "วิธีการสังเกตง่ายๆ ว่าพืชของเราติดโรค \nราน้ำค้างหรือไม่ ให้ดูที่ใบของพืชจะมีกลุ่ม \nเชื้อราเป็นผงสีขาวหรือเทา และหลังใบจะเป็น\nสีเหลือง และเปลี่ยนเป็นสีน้ำตาลมีลักษณะ\nเหลี่ยม",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคราน้ำค้าง",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "น้ำส้มควันไม้",
+    "object_type": "Treatment",
+    "page": 40,
+    "evidence": "หลังล้างใบพืชแล้ว ควรฉีดพ่นน้ำส้ม\nควันไม้ อัตรา 100 ซีซี ต่อน้ำเปล่า 12 \nลิตร",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคยอดเน่า",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "เชื้อราพิเทียม",
+    "object_type": "Pathogen",
+    "page": 41,
+    "evidence": "เช่น เชื้อรา\nพิเทียม ทำให้เกิดรากเน่า โคนเน่า โรคยอดเน่าของต้นกล้าในพืชไร่",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคกล้าไหม้",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "เชื้อราสเคลอโรเทียม",
+    "object_type": "Pathogen",
+    "page": 41,
+    "evidence": "เชื้อรา \nสเคลอโรเทียม ทำให้เกิดโรคกล้าไหม้",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคเหี่ยวในพืชผัก",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "ราเม็ดผักกาด",
+    "object_type": "Pathogen",
+    "page": 41,
+    "evidence": "ราเม็ดผักกาด โรคเหี่ยวในพืชผัก",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคเหี่ยวในไม้ดอก",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "เชื้อราฟูซาเรียม",
+    "object_type": "Pathogen",
+    "page": 41,
+    "evidence": "เชื้อราฟูซาเรียม ทำให้เกิดโรคเหี่ยวในไม้ดอก",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคเน่าคอดิน",
+    "subject_type": "Disease",
+    "relation": "CAUSED_BY",
+    "object": "เชื้อราไรซ็อกโทเนีย",
+    "object_type": "Pathogen",
+    "page": 41,
+    "evidence": "เชื้อราไรซ็อกโทเนีย \nทำให้เกิดโรคเน่าคอดิน",
+    "origin": "model"
+  },
+  {
+    "subject": "พืช",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรคราแป้ง",
+    "object_type": "Disease",
+    "page": 42,
+    "evidence": "ควรระวัง \nโรคราแป้ง",
+    "origin": "model"
+  },
+  {
+    "subject": "พืช",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรคใบจุด",
+    "object_type": "Disease",
+    "page": 42,
+    "evidence": "ควรระวัง \nโรคราแป้ง โรคราน้ำค้าง โรคใบจุด",
+    "origin": "model"
+  },
+  {
+    "subject": "พืช",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรคแอนแทรกโนส",
+    "object_type": "Disease",
+    "page": 42,
+    "evidence": "ควรระวัง \nโรคราแป้ง โรคราน้ำค้าง โรคใบจุด\nและโรคแอนแทรกโนส",
+    "origin": "model"
+  },
+  {
+    "subject": "โรครากเน่าโคนเน่า",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "เชื้อราไตรโคเดอร์มา",
+    "object_type": "Treatment",
+    "page": 42,
+    "evidence": "ถ้าเป็นไม่มาก ใช้เชื้อราไตรโคเดอร์มา",
+    "origin": "model"
+  },
+  {
+    "subject": "ฤดูฝน",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "โรคเชื้อรา",
+    "object_type": "Disease",
+    "page": 42,
+    "evidence": "พืช \nของท่านก็จะปลอดภัยต่อโรคเชื้อรา\nที่มากับฤดูฝน",
+    "origin": "model"
+  },
+  {
+    "subject": "สูตรน้ำส้มสายชู",
+    "subject_type": "Treatment",
+    "relation": "RELATED_TO",
+    "object": "วัชพืช",
+    "object_type": "Topic",
+    "page": 44,
+    "evidence": "บริเวณที่ต้องการกำจัดหญ้าหรือวัชพืช",
+    "origin": "model"
+  },
+  {
+    "subject": "สูตรน้ำหัวผักกาด",
+    "subject_type": "Treatment",
+    "relation": "RELATED_TO",
+    "object": "นาข้าว",
+    "object_type": "Topic",
+    "page": 44,
+    "evidence": "โดยใช้ในนาข้าวเมื่อข้าวยังเล็ก",
+    "origin": "model"
+  },
+  {
+    "subject": "การควบคุมในเบื้องต้น",
+    "subject_type": "Topic",
+    "relation": "RELATED_TO",
+    "object": "ตัดแต่งส่วนที่เป็นโรค นำไปเผาทำลายนอกแปลงปลูก",
+    "object_type": "Treatment",
+    "page": 47,
+    "evidence": "หากพบโรคให้ตัดแต่งส่วนที่เป็นโรค นำไปเผา\nทำลายนอกแปลงปลูก",
+    "origin": "model"
+  },
+  {
+    "subject": "ทุเรียน",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรคเข้าทำลายรุนแรง",
+    "object_type": "Disease",
+    "page": 48,
+    "evidence": "กรณีโรคเข้าทำลายรุนแรง\n\t ให้เกษตรกรถากหรือขูดผิวเปลือกบริเวณที่เป็น\nโรคออก",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคเข้าทำลายรุนแรง",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "ฟอสอีทิล-อะลูมิเนียม 80% ดับเบิลยูพี",
+    "object_type": "Treatment",
+    "page": 48,
+    "evidence": "จากนั้นทาแผลด้วยสารป้องกันกำจัดโรคพืช\nฟอสอีทิล-อะลูมิเนียม 80% ดับเบิลยูพี",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคเข้าทำลายรุนแรง",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "เมทาแลกซิล 25% ดับเบิลยูพี",
+    "object_type": "Treatment",
+    "page": 48,
+    "evidence": "หรือสารเมทาแลกซิล 25% ดับเบิลยูพี \nอัตรา 50-60 กรัมต่อน้ำ 1 ลิตร",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคเข้าทำลายรุนแรง",
+    "subject_type": "Disease",
+    "relation": "TREATED_BY",
+    "object": "เมทาแลกซิล+แมนโคเซบ 65% ดับเบิลยูพี",
+    "object_type": "Treatment",
+    "page": 48,
+    "evidence": "หรือสารเมทาแลกซิล+ \nแมนโคเซบ 65% ดับเบิลยูพี อัตรา 100 กรัมต่อน้ำ \n1 ลิตร",
+    "origin": "model"
+  },
+  {
+    "subject": "โรคเข้าทำลายรุนแรง",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ใบเหลืองทั้งต้น",
+    "object_type": "Symptom",
+    "page": 48,
+    "evidence": "หากพบใบเหลืองทั้งต้น ให้ราดดินด้วยสารป้องกัน\nกำจัดโรคพืชฟอสอีทิล-อะลูมิเนียม 80% ดับเบิลยูพี",
+    "origin": "model"
+  },
+  {
+    "subject": "มะนาว",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรคแคงเกอร์",
+    "object_type": "Disease",
+    "page": 20,
+    "evidence": "โรคแคงเกอร์ เป็นโรคที่เกิดจากเชื้อแบคทีเรียเข้าทำลาย \nทางบาดแผลของพืช โดยเฉพาะพืชตระกูลส้ม เช่น ส้มเขียวหวาน \nส้มโอ มะนาว เป็นต้น ซึ่งระบาดมากในช่วงที่มีลมฝนแรง ถ้าระบาด \nมากๆ อาจทำให้ผลผลิตลดลง ขายไม่ได้ราคา",
+    "origin": "codex_source_review"
+  },
+  {
+    "subject": "ส้มโอ",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรคแคงเกอร์",
+    "object_type": "Disease",
+    "page": 20,
+    "evidence": "โรคแคงเกอร์ เป็นโรคที่เกิดจากเชื้อแบคทีเรียเข้าทำลาย \nทางบาดแผลของพืช โดยเฉพาะพืชตระกูลส้ม เช่น ส้มเขียวหวาน \nส้มโอ มะนาว เป็นต้น ซึ่งระบาดมากในช่วงที่มีลมฝนแรง ถ้าระบาด \nมากๆ อาจทำให้ผลผลิตลดลง ขายไม่ได้ราคา",
+    "origin": "codex_source_review"
+  },
+  {
+    "subject": "ส้มเขียวหวาน",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรคแคงเกอร์",
+    "object_type": "Disease",
+    "page": 20,
+    "evidence": "โรคแคงเกอร์ เป็นโรคที่เกิดจากเชื้อแบคทีเรียเข้าทำลาย \nทางบาดแผลของพืช โดยเฉพาะพืชตระกูลส้ม เช่น ส้มเขียวหวาน \nส้มโอ มะนาว เป็นต้น ซึ่งระบาดมากในช่วงที่มีลมฝนแรง ถ้าระบาด \nมากๆ อาจทำให้ผลผลิตลดลง ขายไม่ได้ราคา",
+    "origin": "codex_source_review"
+  },
+  {
+    "subject": "โรคแคงเกอร์",
+    "subject_type": "Disease",
+    "relation": "PREVENTED_BY",
+    "object": "น้ำปูนใส",
+    "object_type": "Treatment",
+    "page": 22,
+    "evidence": "นำปูนขาวก่อสร้างมาละลายน้ำ \nทิ้งไว้ประมาณ 15-20 นาที ให้นอนก้น \nจากนั้นให้กรองเอาเฉพาะน้ำปูนใส\nประมาณ 2 ลิตร ผสมกับน้ำเปล่า 100 \nลิตร ฉีดพ่นต้นมะนาวให้ทั่ว 7 วันครั้ง\nเพื่อป้องกันและกำจัดโรคแคงเกอร์ \nที่กำลังระบาด",
+    "origin": "codex_source_review"
+  },
+  {
+    "subject": "ทุเรียน",
+    "subject_type": "Crop",
+    "relation": "HAS_DISEASE",
+    "object": "โรครากเน่าโคนเน่า",
+    "object_type": "Disease",
+    "page": 46,
+    "evidence": "ดูแลทุเรียนอย่างไร? เมื่อเป็น\n“โรครากเน่าโคนเน่า”\nในช่วงที่อากาศแปรปรวน ปริมาณน้ำฝนมาก \nและฝนตกอย่างต่อเนื่อง ทำให้เกิดความชื้นในอากาศสูง \nเกษตรกรหาโอกาสในการจัดการสวนและพ่นสารเคมี\nไม่ได้ตามกำหนดเวลา ทำให้ “โรครากเน่าโคนเน่า” \nรุกระบาดสวนทุเรียน ผลผลิตเสียหาย เกษตรกรสวน\nทุเรียนต้องใช้วิธีป้องกันกำจัดอย่างถูกต้องและเหมาะสม ช่วยแก้\nปัญหาตรงจุด ลดความเสียหายของผลผลิต หยุดวงจรการระบาดของ\nโรครากเน่าโคนเน่าได้ผลจริง",
+    "origin": "codex_source_review"
+  },
+  {
+    "subject": "โรครากเน่าโคนเน่า",
+    "subject_type": "Disease",
+    "relation": "EXHIBITS",
+    "object": "ใบอ่อนเหี่ยวเหลือง",
+    "object_type": "Symptom",
+    "page": 46,
+    "evidence": "การเข้าทำลายของโรคเริ่มที่ใบและกิ่งอ่อนมีอาการเน่า ใบอ่อน\nเหี่ยวเหลือง มีจุดแผลสีน้ำตาลอ่อนฉ่ำน้ำ และเปลี่ยนเป็นสีน้ำตาลดำ \nเส้นใบมีสีน้ำตาลดำ กิ่ง ลำต้น และโคนต้นมีจุดฉ่ำน้ำสีน้ำตาล และ\nมีน้ำเยิ้มออกมาในช่วงเช้า เมื่อถากเปลือกจะพบว่าเปลือกเน่า เนื้อไม้ \nเป็นสีน้ำตาล ส่วนที่เน่ามีกลิ่นหืน แผลเน่าจะลุกลามรวดเร็ว มักพบ\nโรคร่วมกับการเข้าทำลายของมอดเจาะลำต้นทุเรียน และจะระบาด\nในช่วงฤดูฝนที่มีฝนตกชุกติดต่อกัน",
+    "origin": "codex_source_review"
+  }
+]

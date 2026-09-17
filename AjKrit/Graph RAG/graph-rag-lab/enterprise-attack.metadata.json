@@ -1,0 +1,9 @@
+{
+  "source_url": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack.json",
+  "downloaded_at": "2026-09-08T06:33:19.201959+00:00",
+  "http_last_modified": null,
+  "sha256": "dc1639caa5501d720e280cf1cbd8fbe009884a0c9b3e6e9ed9d0c25166c3d8f4",
+  "bytes": 53835637,
+  "bundle_id": "bundle--6198013c-6f02-42a4-9713-38ea1301a1aa",
+  "object_count": 26086
+}

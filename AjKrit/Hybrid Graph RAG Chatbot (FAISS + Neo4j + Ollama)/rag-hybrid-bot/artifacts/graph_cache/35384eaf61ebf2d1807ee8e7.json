@@ -1,0 +1,76 @@
+{
+  "page": 26,
+  "facts": [
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม ออกซิสปอรัม",
+      "object_type": "Disease",
+      "evidence": "โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม ออกซิสปอรัม"
+    },
+    {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรครากเน่า",
+      "object_type": "Disease",
+      "evidence": "เริ่มจากเข้าทำลายส่วนรากหรือลำต้นที่ระดับคอดินหรือใต้ดิน เมื่อรากเน่า"
+    },
+    {
+      "subject": "โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม ออกซิสปอรัม",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อราฟูซาเรียม ออกซิสปอรัม",
+      "object_type": "Pathogen",
+      "evidence": "โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม ออกซิสปอรัม"
+    },
+    {
+      "subject": "โรครากเน่า",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ใบล่างจะเหลืองและลุกลามขึ้นด้านบน เหี่ยว และร่วง",
+      "object_type": "Symptom",
+      "evidence": "เมื่อรากเน่า ใบล่างจะเหลืองและลุกลามขึ้นด้านบน เหี่ยว และร่วง"
+    },
+    {
+      "subject": "โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม ออกซิสปอรัม",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "สารเมตาแลกซิลหรือสารอีทริไดอะโซล หรือสารพีซีเอ็นบีผสมอีทริไดอะโซล หรือสารชีวภัณฑ์ราดดินบริเวณที่ถอนต้นออกไป",
+      "object_type": "Treatment",
+      "evidence": "ใช้สารเมตาแลกซิลหรือสารอีทริไดอะโซล หรือสารพีซีเอ็นบีผสมอีทริไดอะโซล หรือสารชีวภัณฑ์ ราดดินบริเวณที่ถอนต้นออกไป"
+    },
+    {
+      "subject": "โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม ออกซิสปอรัม",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การปลูกพืชหมุนเวียน เช่น ข้าวโพด หรือพืชตระกูลถั่ว",
+      "object_type": "Treatment",
+      "evidence": "หากจำเป็นต้องปลูกซ้ำที่เดิม ควรปลูกพืชหมุนเวียน เช่น ข้าวโพด หรือพืชตระกูลถั่ว เป็นต้น"
+    },
+    {
+      "subject": "โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม ออกซิสปอรัม",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การไถพรวนดินเพื่อลดการสะสมเชื้อโรค",
+      "object_type": "Treatment",
+      "evidence": "แล้วไถพรวนดิน เพื่อลดการสะสมเชื้อโรค"
+    },
+    {
+      "subject": "โรครากเน่า",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ยืนต้นตาย",
+      "object_type": "Symptom",
+      "evidence": "อาการรุนแรงถึงขั้น ยืนต้นตาย"
+    }
+  ],
+  "timing": {
+    "seconds": 49.11,
+    "model": "qwen3.5:9b",
+    "eval_count": 831,
+    "eval_duration": 24803170000,
+    "prompt_eval_count": 790
+  }
+}

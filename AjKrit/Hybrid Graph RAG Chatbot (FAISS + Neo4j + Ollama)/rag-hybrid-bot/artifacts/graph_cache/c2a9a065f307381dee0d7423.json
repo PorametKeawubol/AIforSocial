@@ -1,0 +1,76 @@
+{
+  "page": 30,
+  "facts": [
+    {
+      "subject": "CVMV",
+      "subject_type": "Pathogen",
+      "relation": "CAUSED_BY",
+      "object": "โรคใบด่าง",
+      "object_type": "Disease",
+      "evidence": "โรคใบด่างที่เกิดจากเชื้อไวรัส CVMV (Chilli veinal mottle virus)"
+    },
+    {
+      "subject": "CVMV",
+      "subject_type": "Pathogen",
+      "relation": "EXHIBITS",
+      "object": "เนื้อใบด่างเขียวซีด",
+      "object_type": "Symptom",
+      "evidence": "เชื้อไวรัสชนิดนี้ทำให้เนื้อใบด่างเขียวซีด"
+    },
+    {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ปลายใบเล็กลีบ",
+      "object_type": "Symptom",
+      "evidence": "โดยเฉพาะส่วนของปลายใบ ขั้นรุนแรงใบจะเล็ก ลีบ"
+    },
+    {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ผลรูปร่างบิดเบี้ยว",
+      "object_type": "Symptom",
+      "evidence": "และผิวผลขรุขระ"
+    },
+    {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "แพร่เชื้อด้วยการสัมผัส",
+      "object_type": "Symptom",
+      "evidence": "แพร่เชื้อด้วยการสัมผัส"
+    },
+    {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เพลี้ยอ่อน",
+      "object_type": "Pathogen",
+      "evidence": "โดยมีเพลี้ยอ่อนเป็นแมลงพาหะ"
+    },
+    {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "การถอนต้นพริกที่เป็นโรคไปเผาทำลาย",
+      "object_type": "Treatment",
+      "evidence": "ถอนต้นพริกที่เป็นโรคใบด่างไปเผาทำลาย"
+    },
+    {
+      "subject": "เพลี้ยอ่อน",
+      "subject_type": "Pathogen",
+      "relation": "TREATED_BY",
+      "object": "สารสกัดจากพืช เช่น สะเดา หางไหล สาบเสือ ตะไคร้หอม และดาวเรือง",
+      "object_type": "Treatment",
+      "evidence": "ป้องกันและกำจัดเพลี้ยอ่อนด้วยการฉีดพ่นสารสกัดจากพืช เช่น สะเดา หางไหล สาบเสือ"
+    }
+  ],
+  "timing": {
+    "seconds": 21.56,
+    "model": "qwen3.5:9b",
+    "eval_count": 674,
+    "eval_duration": 20266480000,
+    "prompt_eval_count": 786
+  }
+}

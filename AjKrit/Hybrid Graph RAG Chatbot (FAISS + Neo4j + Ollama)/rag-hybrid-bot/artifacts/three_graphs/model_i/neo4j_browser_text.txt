@@ -1,0 +1,99 @@
+Query
+connection status: connected
+Instance:
+neo4j://localhost:7688
+. Click to open instance menu
+Database:
+neo4j
+. Click to open database menu
+User:
+neo4j
+. Click to open database user menu
+Connect your instance to Aura console for more tools and features
+Database overview
+Saved Cypher
+History
+Cypher reference
+Parameters
+Settings
+Database information
+Nodes (728)
+*
+RagChunk
+RagEntity
+RagFact
+RagPage
+WorksheetModelI
+WorksheetModelII
+WorksheetModelIII
+Relationships (1,065)
+*
+CAUSED_BY
+CO_OCCURS_WITH
+EVIDENCED_BY
+EXHIBITS
+HAS_DISEASE
+MENTIONS
+OBJECT
+PART_OF
+PREVENTED_BY
+RELATED_TO
+SUBJECT_OF
+TREATED_BY
+Property keys
+evidence
+id
+kind
+method
+name
+origin
+page
+relation
+source
+target
+text
+Last update:
+ 11:46:53 AM 
+neo4j$
+MATCH p=(s:WorksheetModelI)-[r]->(t:WorksheetModelI) RETURN p ORDER BY r.page DESC LIMIT 18
+neo4j$
+MATCH p=(s:WorksheetModelI)-[r]->(t:WorksheetModelI) RETURN p ORDER BY r.page DESC LIMIT 18
+Graph
+Table
+Raw
+Results overview
+Nodes (30)
+* (30)
+WorksheetModelI (30)
+Relationships (18)
+* (18)
+CAUSED_BY (5)
+EXHIBITS (1)
+HAS_DISEASE (4)
+RELATED_TO (4)
+TREATED_BY (4)
+Started streaming 18 records after 1 ms and completed after 3 ms.
+$
+:welcome
+Do more with Community Edition
+Connect in Aura for free access to:
+Rich graph exploration and dashboards
+Cloud storage for your queries
+Data import tooling
+AI copilots
+
+GUIDE
+
+Get to know the latest in Query/Browser
+Take a quick tour to learn about the latest features to help you be productive.
+
+DATASET
+
+Try Neo4j with the Movie Graph
+Dive into a fully-built graph example to kickstart your Neo4j journey. Discover key query patterns through a fun, familiar world of actors and films.
+Share your feedback
+Help us improve Browser/Query! Let us know what's working well and what could be better.
+Send feedback
+$
+:connect
+Connected to neo4j://localhost:7688

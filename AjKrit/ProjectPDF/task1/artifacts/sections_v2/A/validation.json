@@ -1,0 +1,434 @@
+{
+  "group": "A",
+  "complete_extraction": true,
+  "structural_checks_passed": true,
+  "semantic_review_complete": false,
+  "nodes": 70,
+  "relationships": 64,
+  "labels": {
+    "Case": 16,
+    "Document": 37,
+    "Organization": 1,
+    "PersonRole": 4,
+    "Evidence": 9,
+    "Contact": 3
+  },
+  "relationships_by_type": {
+    "HAS_SUPPORTING_EVIDENCE": 53,
+    "HANDLED_BY": 2,
+    "NOT_HANDLED_BY": 1,
+    "CERTIFIED_BY": 3,
+    "ISSUES": 2,
+    "CONTACT_VIA": 3
+  },
+  "sections_with_edges": 15,
+  "sections_without_edges": [
+    "1.15"
+  ],
+  "connected_component_sizes": [
+    37,
+    8,
+    6,
+    3,
+    3,
+    3,
+    3,
+    2,
+    2,
+    2,
+    1
+  ],
+  "shared_concept_nodes": 6,
+  "flags": [
+    {
+      "id": "1197e83cfb641d0283a1da22",
+      "section": "1.1",
+      "target": "บัตรประจำตัวประชาชน",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ]
+    },
+    {
+      "id": "040a405f75f5a54765a8ad69",
+      "section": "1.1",
+      "target": "ใบแทนบัตรประจำตัวประชาชน",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ]
+    },
+    {
+      "id": "7d5d03ff61aebf327cad7663",
+      "section": "1.1",
+      "target": "บัตรประจำตัวข้าราชการ",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ]
+    },
+    {
+      "id": "a695a6502f2cf5b7434ae0d2",
+      "section": "1.1",
+      "target": "ใบสำคัญประจำตัวคนต่างด้าว",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ]
+    },
+    {
+      "id": "e33071ce77570629688a010c",
+      "section": "1.1",
+      "target": "หนังสือเดินทาง",
+      "flags": [
+        "check_condition_context"
+      ]
+    },
+    {
+      "id": "fb4f5c87cf804c86e893f184",
+      "section": "1.1",
+      "target": "สำเนาทะเบียนบ้าน",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "7265a7dba02a7213532224d9",
+      "section": "1.2",
+      "target": "สำนักงานทะเบียน",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ]
+    },
+    {
+      "id": "992ca0fb0001ab1efc8d4b6b",
+      "section": "1.2",
+      "target": "เจ้าหน้าที่ตำรวจ",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "2ed64f7c9c87b6688ba22212",
+      "section": "1.2",
+      "target": "สำเนาทะเบียนบ้าน",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "bc34a1d9d6cf331ed80474d6",
+      "section": "1.2",
+      "target": "ใบอนุญาตขับรถ",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "f646cfc61e297671867b1495",
+      "section": "1.2",
+      "target": "ใบสุทธิ",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "ea760be2e2e3f0a7434944a4",
+      "section": "1.2",
+      "target": "หนังสือเดินทาง",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "f8882bec4057f6ce7c7a6b5e",
+      "section": "1.2",
+      "target": "เจ้าบ้าน",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "b28e178d5f772595891c653a",
+      "section": "1.2",
+      "target": "กำนัน",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "7f8d85e6d90f1500dd907d7d",
+      "section": "1.2",
+      "target": "ผู้ใหญ่บ้าน",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "527458b9c73ca10e7977d5a5",
+      "section": "1.3",
+      "target": "บันทึกประจำวัน",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ]
+    },
+    {
+      "id": "0047330d29da68975b1d3d97",
+      "section": "1.3",
+      "target": "หลักฐานการแจ้งความเอกสารหาย",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "581b6b86bcee7e1ad798f32b",
+      "section": "1.5",
+      "target": "191",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ]
+    },
+    {
+      "id": "df2eee94acaf725562acc67a",
+      "section": "1.5",
+      "target": "1192",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ]
+    },
+    {
+      "id": "61cc10d0f290fe7426b769f9",
+      "section": "1.5",
+      "target": "เจ้าหน้าที่ตำรวจ",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "dbd1308ae818b9776f40a051",
+      "section": "1.5",
+      "target": "ใบทะเบียนรถยนต์รถจักรยานยนต์เรือหรือพาหนะอื่นๆที่หาย",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context",
+        "check_compound_entity"
+      ]
+    },
+    {
+      "id": "6b519c3d0085afdb0bb6908c",
+      "section": "1.5",
+      "target": "หนังสือรับรองบริษัท",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "88f04355d9f1abb5c5ce2cc5",
+      "section": "1.5",
+      "target": "หนังสือเกี่ยวกับการติดต่อหรือเอกสารที่จะใช้เป็นพยานหลักฐานได้",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_compound_entity"
+      ]
+    },
+    {
+      "id": "c558a0df24a3009f193ef7ae",
+      "section": "1.6",
+      "target": "ทะเบียนใบอนุญาตอาวุธปืน",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "201847fa34becf67c7ac6832",
+      "section": "1.6",
+      "target": "ใบเสร็จรับเงินที่บริษัทห้างร้านขายปืนออกให้",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "8f0bac77756e6a3de8e374f5",
+      "section": "1.7",
+      "target": "ใบเสร็จรับเงินซื้อขาย",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ]
+    },
+    {
+      "id": "c87bc135366066462127d62b",
+      "section": "1.7",
+      "target": "หลักฐานการแสดงการซื้อขายทรัพย์สิน",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ]
+    },
+    {
+      "id": "981233b67464cc5fcec2a90a",
+      "section": "1.7",
+      "target": "รูปพรรณทรัพย์",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "78f0b96c6a512fb374ce3c23",
+      "section": "1.7",
+      "target": "ตำหนิหรือลักษณะพิเศษต่างๆ",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context",
+        "check_compound_entity"
+      ]
+    },
+    {
+      "id": "3474bac1198b99b33ec6c0ef",
+      "section": "1.7",
+      "target": "เอกสารสำคัญต่างๆที่เกี่ยวข้อง",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "553cca167ad47ba070bffaad",
+      "section": "1.8",
+      "target": "โฉนด",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "d5459c6368f55075fb1de089",
+      "section": "1.8",
+      "target": "แบบน.ส.3",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "abd468142fdf157c111fc199",
+      "section": "1.8",
+      "target": "แบบส.ค.1",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "3104a60576c50f72b576541b",
+      "section": "1.8",
+      "target": "หนังสือสัญญา",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "d7eb0315dc5221642848ee1b",
+      "section": "1.8",
+      "target": "ใบเสร็จรับเงิน",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "e1c795bdbad52f5eb3ea11b0",
+      "section": "1.8",
+      "target": "หนังสือที่ปลอมแปลง",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "5d32175cc5ccd78c0f7504ca",
+      "section": "1.8",
+      "target": "ตัวอย่างตราที่ใช้ประทับหรือลายเซ็นในหนังสือ",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context",
+        "check_compound_entity"
+      ]
+    },
+    {
+      "id": "02493f86f2b0a0966d6cd8ed",
+      "section": "1.9",
+      "target": "หนังสือหรือหลักฐานต่างๆที่เกี่ยวกับการถูกฉ้อโกง",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context",
+        "check_compound_entity"
+      ]
+    },
+    {
+      "id": "71df5d7ee5f946fdbd0d71fe",
+      "section": "1.9",
+      "target": "หลักฐานแสดงการเป็นเจ้าของหรือผู้ครอบครองทรัพย์",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context",
+        "check_compound_entity"
+      ]
+    },
+    {
+      "id": "15f5c239f9a46bac7826028a",
+      "section": "1.10",
+      "target": "สำเนาหรือคำสั่งศาลหรือพินัยกรรม",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_compound_entity"
+      ]
+    },
+    {
+      "id": "f15875b5040bd56729e221a4",
+      "section": "1.11",
+      "target": "ใบสำคัญติดต่อซื้อขาย",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ]
+    },
+    {
+      "id": "cceaa223a8bd8f41ebc4955e",
+      "section": "1.11",
+      "target": "ใบสำคัญที่บริษัทห้างร้านออกให้",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    },
+    {
+      "id": "0ea6f1a8ef32bfa61e4b6834",
+      "section": "1.12",
+      "target": "หลักฐานหรือสิ่งของที่เสียหายเท่าที่มีหรือเท่าที่นำไปได้",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context",
+        "check_compound_entity"
+      ]
+    },
+    {
+      "id": "279bad82dbcc5a3d25db71ce",
+      "section": "1.14",
+      "target": "เสื้อผ้าของผู้ที่ถูกข่มขืนฯซึ่งมีคราบอสุจิหรือรอยเปื้อนอย่างอื่นอันเกิดจากการข่มขืน",
+      "flags": [
+        "check_condition_context",
+        "check_compound_entity"
+      ]
+    },
+    {
+      "id": "6dedb37857e597d995959e56",
+      "section": "1.16",
+      "target": "เช็ค",
+      "flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ]
+    }
+  ],
+  "accepted_before_deduplication": 64,
+  "rejected": 16,
+  "llm_wall_seconds": 1098.6,
+  "note": "All 16 Case nodes are scaffolded from PDF headings. sections_with_edges measures model coverage; case count alone does not prove completeness."
+}

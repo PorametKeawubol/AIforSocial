@@ -1,0 +1,426 @@
+{
+  "fingerprint": "d0ecf7225999a7730773f248",
+  "version": "sections-v2.1",
+  "section": "1.2",
+  "embedding": {
+    "embedding": "intfloat/multilingual-e5-large",
+    "cache_fingerprint": "9b882512de0f253f50f6018d",
+    "aggregation": "max of existing per-page ontology hints across section pages",
+    "hints": [
+      "เอกสารประกอบการแจ้งความ",
+      "หน่วยงานรับแจ้งเรื่อง",
+      "เจ้าหน้าที่รับผิดชอบ",
+      "หลักฐานเกี่ยวกับเหตุการณ์"
+    ]
+  },
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "seconds": 107.71564930299974,
+  "attempt": 1,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T17:02:28.104205867Z",
+    "message": {
+      "content": "{\n\"edges\": [\n[\"HANDLED_BY\", \"สำนักงานทะเบียน\", \"Organization\", \"ผู้หาย\", \"\", 27, 29],\n[\"NOT_HANDLED_BY\", \"เจ้าหน้าที่ตำรวจ\", \"PersonRole\", \"ผู้หาย\", \"\", 29, 29],\n[\"HAS_SUPPORTING_EVIDENCE\", \"สำเนาทะเบียนบ้าน\", \"Document\", \"ผู้หาย\", \"\", 30, 32],\n[\"HAS_SUPPORTING_EVIDENCE\", \"ใบอนุญาตขับรถ\", \"Document\", \"ผู้หาย\", \"ถ้ามี\", 33, 34],\n[\"HAS_SUPPORTING_EVIDENCE\", \"ใบสุทธิ\", \"Document\", \"ผู้หาย\", \"ถ้ามี\", 33, 34],\n[\"HAS_SUPPORTING_EVIDENCE\", \"หนังสือเดินทาง\", \"Document\", \"ผู้หาย\", \"ถ้ามี\", 33, 34],\n[\"CERTIFIED_BY\", \"เจ้าบ้าน\", \"PersonRole\", \"ผู้หาย\", \"หากไม่มีเอกสารที่มีรูปถ่าย\", 35, 36],\n[\"CERTIFIED_BY\", \"กำนัน\", \"PersonRole\", \"ผู้หาย\", \"หากไม่มีเอกสารที่มีรูปถ่าย\", 35, 36],\n[\"CERTIFIED_BY\", \"ผู้ใหญ่บ้าน\", \"PersonRole\", \"ผู้หาย\", \"หากไม่มีเอกสารที่มีรูปถ่าย\", 35, 36]\n]\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 107714888143,
+    "load_duration": 203461622,
+    "prompt_eval_count": 2015,
+    "prompt_eval_duration": 18289681000,
+    "eval_count": 296,
+    "eval_duration": 88878273000
+  },
+  "parse_ok": true,
+  "truncated": false,
+  "accepted": [
+    {
+      "section": "1.2",
+      "relation": "HANDLED_BY",
+      "name": "สำนักงานทะเบียน",
+      "raw_name": "สำนักงานทะเบียน",
+      "type": "Organization",
+      "owner": "ผู้หาย",
+      "condition": "",
+      "start_line": 27,
+      "end_line": 29,
+      "evidence": "(1) เมื่อบัตรหายหรือถูกทำลาย ให้แจ้งต่อ\nพนักงานเจ้าหน้าที่ที่สำนักงานทะเบียนที่ประสงค์\nจะทำบัตร (ไม่ต้องแจ้งความต่อเจ้าหน้าที่ตำรวจ)",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics",
+        "check_condition_context"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.2",
+      "relation": "NOT_HANDLED_BY",
+      "name": "เจ้าหน้าที่ตำรวจ",
+      "raw_name": "เจ้าหน้าที่ตำรวจ",
+      "type": "PersonRole",
+      "owner": "ผู้หาย",
+      "condition": "",
+      "start_line": 29,
+      "end_line": 29,
+      "evidence": "จะทำบัตร (ไม่ต้องแจ้งความต่อเจ้าหน้าที่ตำรวจ)",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.2",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "สำเนาทะเบียนบ้าน",
+      "raw_name": "สำเนาทะเบียนบ้าน",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "",
+      "start_line": 30,
+      "end_line": 32,
+      "evidence": "(2) หลักฐานที่ต้องนำไปแสดงต่อเจ้าหน้าที่\nสำนักงานทะเบียน\n- สำเนาทะเบียนบ้าน",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.2",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "ใบอนุญาตขับรถ",
+      "raw_name": "ใบอนุญาตขับรถ",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "ถ้ามี",
+      "start_line": 33,
+      "end_line": 34,
+      "evidence": "- เอกสารทีม่ รี ปู ถ่ายของผูข้ อมีบตั ร เช่น\nใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี) หาก",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.2",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "ใบสุทธิ",
+      "raw_name": "ใบสุทธิ",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "ถ้ามี",
+      "start_line": 33,
+      "end_line": 34,
+      "evidence": "- เอกสารทีม่ รี ปู ถ่ายของผูข้ อมีบตั ร เช่น\nใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี) หาก",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.2",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "หนังสือเดินทาง",
+      "raw_name": "หนังสือเดินทาง",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "ถ้ามี",
+      "start_line": 33,
+      "end_line": 34,
+      "evidence": "- เอกสารทีม่ รี ปู ถ่ายของผูข้ อมีบตั ร เช่น\nใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี) หาก",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.2",
+      "relation": "CERTIFIED_BY",
+      "name": "เจ้าบ้าน",
+      "raw_name": "เจ้าบ้าน",
+      "type": "PersonRole",
+      "owner": "ผู้หาย",
+      "condition": "หากไม่มีเอกสารที่มีรูปถ่าย",
+      "start_line": 35,
+      "end_line": 36,
+      "evidence": "ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน\nผู้ใหญ่บ้าน ไปให้การรับรอง",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.2",
+      "relation": "CERTIFIED_BY",
+      "name": "กำนัน",
+      "raw_name": "กำนัน",
+      "type": "PersonRole",
+      "owner": "ผู้หาย",
+      "condition": "หากไม่มีเอกสารที่มีรูปถ่าย",
+      "start_line": 35,
+      "end_line": 36,
+      "evidence": "ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน\nผู้ใหญ่บ้าน ไปให้การรับรอง",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.2",
+      "relation": "CERTIFIED_BY",
+      "name": "ผู้ใหญ่บ้าน",
+      "raw_name": "ผู้ใหญ่บ้าน",
+      "type": "PersonRole",
+      "owner": "ผู้หาย",
+      "condition": "หากไม่มีเอกสารที่มีรูปถ่าย",
+      "start_line": 35,
+      "end_line": 36,
+      "evidence": "ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน\nผู้ใหญ่บ้าน ไปให้การรับรอง",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        9
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    }
+  ],
+  "rejected": [],
+  "initial_validation": {
+    "accepted": [
+      {
+        "section": "1.2",
+        "relation": "HANDLED_BY",
+        "name": "สำนักงานทะเบียน",
+        "raw_name": "สำนักงานทะเบียน",
+        "type": "Organization",
+        "owner": "ผู้หาย",
+        "condition": "",
+        "start_line": 27,
+        "end_line": 29,
+        "evidence": "(1) เมื่อบัตรหายหรือถูกทำลาย ให้แจ้งต่อ\nพนักงานเจ้าหน้าที่ที่สำนักงานทะเบียนที่ประสงค์\nจะทำบัตร (ไม่ต้องแจ้งความต่อเจ้าหน้าที่ตำรวจ)",
+        "pdf_pages": [
+          22
+        ],
+        "printed_pages": [
+          9
+        ],
+        "review_flags": [
+          "check_condition_context"
+        ],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.2",
+        "relation": "NOT_HANDLED_BY",
+        "name": "เจ้าหน้าที่ตำรวจ",
+        "raw_name": "เจ้าหน้าที่ตำรวจ",
+        "type": "PersonRole",
+        "owner": "ผู้หาย",
+        "condition": "",
+        "start_line": 29,
+        "end_line": 29,
+        "evidence": "จะทำบัตร (ไม่ต้องแจ้งความต่อเจ้าหน้าที่ตำรวจ)",
+        "pdf_pages": [
+          22
+        ],
+        "printed_pages": [
+          9
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.2",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "สำเนาทะเบียนบ้าน",
+        "raw_name": "สำเนาทะเบียนบ้าน",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "",
+        "start_line": 30,
+        "end_line": 32,
+        "evidence": "(2) หลักฐานที่ต้องนำไปแสดงต่อเจ้าหน้าที่\nสำนักงานทะเบียน\n- สำเนาทะเบียนบ้าน",
+        "pdf_pages": [
+          22
+        ],
+        "printed_pages": [
+          9
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.2",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "ใบอนุญาตขับรถ",
+        "raw_name": "ใบอนุญาตขับรถ",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "ถ้ามี",
+        "start_line": 33,
+        "end_line": 34,
+        "evidence": "- เอกสารทีม่ รี ปู ถ่ายของผูข้ อมีบตั ร เช่น\nใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี) หาก",
+        "pdf_pages": [
+          22
+        ],
+        "printed_pages": [
+          9
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.2",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "ใบสุทธิ",
+        "raw_name": "ใบสุทธิ",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "ถ้ามี",
+        "start_line": 33,
+        "end_line": 34,
+        "evidence": "- เอกสารทีม่ รี ปู ถ่ายของผูข้ อมีบตั ร เช่น\nใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี) หาก",
+        "pdf_pages": [
+          22
+        ],
+        "printed_pages": [
+          9
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.2",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "หนังสือเดินทาง",
+        "raw_name": "หนังสือเดินทาง",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "ถ้ามี",
+        "start_line": 33,
+        "end_line": 34,
+        "evidence": "- เอกสารทีม่ รี ปู ถ่ายของผูข้ อมีบตั ร เช่น\nใบอนุญาตขับรถ ใบสุทธิ หนังสือเดินทาง (ถ้ามี) หาก",
+        "pdf_pages": [
+          22
+        ],
+        "printed_pages": [
+          9
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.2",
+        "relation": "CERTIFIED_BY",
+        "name": "เจ้าบ้าน",
+        "raw_name": "เจ้าบ้าน",
+        "type": "PersonRole",
+        "owner": "ผู้หาย",
+        "condition": "หากไม่มีเอกสารที่มีรูปถ่าย",
+        "start_line": 35,
+        "end_line": 36,
+        "evidence": "ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน\nผู้ใหญ่บ้าน ไปให้การรับรอง",
+        "pdf_pages": [
+          22
+        ],
+        "printed_pages": [
+          9
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.2",
+        "relation": "CERTIFIED_BY",
+        "name": "กำนัน",
+        "raw_name": "กำนัน",
+        "type": "PersonRole",
+        "owner": "ผู้หาย",
+        "condition": "หากไม่มีเอกสารที่มีรูปถ่าย",
+        "start_line": 35,
+        "end_line": 36,
+        "evidence": "ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน\nผู้ใหญ่บ้าน ไปให้การรับรอง",
+        "pdf_pages": [
+          22
+        ],
+        "printed_pages": [
+          9
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.2",
+        "relation": "CERTIFIED_BY",
+        "name": "ผู้ใหญ่บ้าน",
+        "raw_name": "ผู้ใหญ่บ้าน",
+        "type": "PersonRole",
+        "owner": "ผู้หาย",
+        "condition": "หากไม่มีเอกสารที่มีรูปถ่าย",
+        "start_line": 35,
+        "end_line": 36,
+        "evidence": "ไม่มีให้นำเจ้าบ้านหรือบุคคลผู้น่าเชื่อถือ เช่น กำนัน\nผู้ใหญ่บ้าน ไปให้การรับรอง",
+        "pdf_pages": [
+          22
+        ],
+        "printed_pages": [
+          9
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      }
+    ],
+    "rejected": []
+  },
+  "validator_version": "v2.2-unique-nearby-grounding-repair"
+}

@@ -1,0 +1,3 @@
+https://medium.com/@matthewghannoum/simple-graph-database-setup-with-neo4j-and-docker-compose-061253593b5a
+
+https://neo4j.com/docs/cypher-manual/current/clauses/create/

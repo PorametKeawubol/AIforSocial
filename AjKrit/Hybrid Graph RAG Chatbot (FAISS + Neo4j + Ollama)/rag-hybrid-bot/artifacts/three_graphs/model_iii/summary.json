@@ -1,0 +1,9 @@
+{
+  "title": "Model III · Neo4j_Create plant disease schema",
+  "method": "New Qwen3.5 9B extraction using crop/disease/pathogen/symptom/treatment schema, all 48 pages; explicit-name validation. GraphDatabase ingestion. No manually added facts.",
+  "model": "qwen3.5:9b",
+  "nodes": 31,
+  "relationships": 29,
+  "neo4j_label": "WorksheetModelIII",
+  "source_pages": 48
+}

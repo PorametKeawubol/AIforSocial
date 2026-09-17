@@ -1,0 +1,57 @@
+{
+  "status": "both_complete_qualitative_review_complete",
+  "stats": {
+    "A": {
+      "pages": 10,
+      "accepted": 51,
+      "rejected": 17,
+      "covered_sections": [
+        "1.1",
+        "1.2",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6",
+        "1.7",
+        "1.8",
+        "1.9",
+        "1.10",
+        "1.11",
+        "1.13",
+        "1.14",
+        "1.16"
+      ],
+      "seconds": 1220.0,
+      "nonempty_condition_rows": 4,
+      "sections_count": 14
+    },
+    "B": {
+      "pages": 10,
+      "accepted": 57,
+      "rejected": 15,
+      "covered_sections": [
+        "1.1",
+        "1.2",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6",
+        "1.7",
+        "1.8",
+        "1.9",
+        "1.10",
+        "1.11",
+        "1.13",
+        "1.14",
+        "1.15",
+        "1.16"
+      ],
+      "seconds": 2625.4,
+      "nonempty_condition_rows": 9,
+      "sections_count": 15
+    }
+  },
+  "decision": "Prefer B as starting configuration for this 10-page run, with mandatory review; not proof of general embedding superiority. A retains two identity/representation documents omitted by B.",
+  "audit": "comparison-audit.json",
+  "displayed_graph": "Task1Reviewed remains manual source-reviewed graph, not raw B"
+}

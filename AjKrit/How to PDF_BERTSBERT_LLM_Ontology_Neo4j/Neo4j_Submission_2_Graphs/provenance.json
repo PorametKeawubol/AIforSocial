@@ -1,0 +1,18 @@
+[
+  {
+    "graph": "01_overview",
+    "nodes": 207,
+    "relationships": 263,
+    "method": "Unmodified screenshot and native SVG downloaded from Neo4j Browser",
+    "original_view": "05_full_semantic",
+    "screenshot_sha256": "18cebc13fb16bc37f350c9705352ee29149be973a27436e6b829004a89e1465c"
+  },
+  {
+    "graph": "02_detail",
+    "nodes": 18,
+    "relationships": 32,
+    "method": "Unmodified screenshot and native SVG downloaded from Neo4j Browser",
+    "original_view": "02_chili_virus_detail",
+    "screenshot_sha256": "32dbeff7f69b75302059b8d7c275d99b06d4e660b268b35897de1ddc4255bbd3"
+  }
+]

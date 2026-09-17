@@ -1,0 +1,245 @@
+{
+  "fingerprint": "06816c9bf09eae2c1fd2ef6a",
+  "version": "sections-v2.1",
+  "section": "1.4",
+  "embedding": {
+    "embedding": "intfloat/multilingual-e5-large",
+    "cache_fingerprint": "9b882512de0f253f50f6018d",
+    "aggregation": "max of existing per-page ontology hints across section pages",
+    "hints": [
+      "เอกสารประกอบการแจ้งความ",
+      "หน่วยงานรับแจ้งเรื่อง",
+      "หลักฐานเกี่ยวกับเหตุการณ์",
+      "เจ้าหน้าที่รับผิดชอบ"
+    ]
+  },
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "seconds": 59.34469266799897,
+  "attempt": 1,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T17:04:34.606956576Z",
+    "message": {
+      "content": "{\n\"edges\": [\n[\"HAS_SUPPORTING_EVIDENCE\", \"บัตรประจำตัวผู้หาย\", \"Document\", \"ผู้หาย\", \"ถ้ามี\", 80, 80],\n[\"HAS_SUPPORTING_EVIDENCE\", \"สำเนาทะเบียนบ้าน\", \"Document\", \"ผู้หาย\", \"ถ้ามี\", 81, 81],\n[\"HAS_SUPPORTING_EVIDENCE\", \"ภาพถ่ายคนหาย\", \"Evidence\", \"ผู้หาย\", \"ปัจจุบัน\", 82, 82],\n[\"HAS_SUPPORTING_EVIDENCE\", \"ใบเกิด\", \"Document\", \"ผู้หาย\", \"ถ้ามี\", 83, 84],\n[\"HAS_SUPPORTING_EVIDENCE\", \"ใบสำคัญทหาร\", \"Document\", \"ผู้หาย\", \"ถ้ามี\", 83, 84]\n]\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 59344035587,
+    "load_duration": 201550753,
+    "prompt_eval_count": 999,
+    "prompt_eval_duration": 6934048000,
+    "eval_count": 179,
+    "eval_duration": 51815180000
+  },
+  "parse_ok": true,
+  "truncated": false,
+  "accepted": [
+    {
+      "section": "1.4",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "บัตรประจำตัวผู้หาย",
+      "raw_name": "บัตรประจำตัวผู้หาย",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "ถ้ามี",
+      "start_line": 80,
+      "end_line": 80,
+      "evidence": "(1) บัตรประจำตัวผู้หาย (ถ้ามี)",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.4",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "สำเนาทะเบียนบ้าน",
+      "raw_name": "สำเนาทะเบียนบ้าน",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "ถ้ามี",
+      "start_line": 81,
+      "end_line": 81,
+      "evidence": "(2) สำเนาทะเบียนบ้านของผู้หาย (ถ้ามี)",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.4",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "ภาพถ่าย",
+      "raw_name": "ภาพถ่ายคนหาย",
+      "type": "Evidence",
+      "owner": "ผู้หาย",
+      "condition": "ปัจจุบัน",
+      "start_line": 82,
+      "end_line": 82,
+      "evidence": "(3) ภาพถ่ายคนหาย (ภาพถ่ายทีเ่ ป็นปัจจุบนั )",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.4",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "สูติบัตร",
+      "raw_name": "ใบเกิด",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "ถ้ามี",
+      "start_line": 83,
+      "end_line": 84,
+      "evidence": "(4) ใบสำคัญทางราชการ เช่น ใบเกิด,\nใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    },
+    {
+      "section": "1.4",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "ใบสำคัญทหาร",
+      "raw_name": "ใบสำคัญทหาร",
+      "type": "Document",
+      "owner": "ผู้หาย",
+      "condition": "ถ้ามี",
+      "start_line": 83,
+      "end_line": 84,
+      "evidence": "(4) ใบสำคัญทางราชการ เช่น ใบเกิด,\nใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        12
+      ],
+      "review_flags": [],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    }
+  ],
+  "rejected": [],
+  "initial_validation": {
+    "accepted": [
+      {
+        "section": "1.4",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "บัตรประจำตัวผู้หาย",
+        "raw_name": "บัตรประจำตัวผู้หาย",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "ถ้ามี",
+        "start_line": 80,
+        "end_line": 80,
+        "evidence": "(1) บัตรประจำตัวผู้หาย (ถ้ามี)",
+        "pdf_pages": [
+          25
+        ],
+        "printed_pages": [
+          12
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.4",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "สำเนาทะเบียนบ้าน",
+        "raw_name": "สำเนาทะเบียนบ้าน",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "ถ้ามี",
+        "start_line": 81,
+        "end_line": 81,
+        "evidence": "(2) สำเนาทะเบียนบ้านของผู้หาย (ถ้ามี)",
+        "pdf_pages": [
+          25
+        ],
+        "printed_pages": [
+          12
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.4",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "ภาพถ่าย",
+        "raw_name": "ภาพถ่ายคนหาย",
+        "type": "Evidence",
+        "owner": "ผู้หาย",
+        "condition": "ปัจจุบัน",
+        "start_line": 82,
+        "end_line": 82,
+        "evidence": "(3) ภาพถ่ายคนหาย (ภาพถ่ายทีเ่ ป็นปัจจุบนั )",
+        "pdf_pages": [
+          25
+        ],
+        "printed_pages": [
+          12
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.4",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "สูติบัตร",
+        "raw_name": "ใบเกิด",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "ถ้ามี",
+        "start_line": 83,
+        "end_line": 84,
+        "evidence": "(4) ใบสำคัญทางราชการ เช่น ใบเกิด,\nใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)",
+        "pdf_pages": [
+          25
+        ],
+        "printed_pages": [
+          12
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      },
+      {
+        "section": "1.4",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "ใบสำคัญทหาร",
+        "raw_name": "ใบสำคัญทหาร",
+        "type": "Document",
+        "owner": "ผู้หาย",
+        "condition": "ถ้ามี",
+        "start_line": 83,
+        "end_line": 84,
+        "evidence": "(4) ใบสำคัญทางราชการ เช่น ใบเกิด,\nใบสำคัญทหาร (ใบกองเกิน, กองหนุน) (ถ้ามี)",
+        "pdf_pages": [
+          25
+        ],
+        "printed_pages": [
+          12
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      }
+    ],
+    "rejected": []
+  },
+  "validator_version": "v2.2-unique-nearby-grounding-repair"
+}

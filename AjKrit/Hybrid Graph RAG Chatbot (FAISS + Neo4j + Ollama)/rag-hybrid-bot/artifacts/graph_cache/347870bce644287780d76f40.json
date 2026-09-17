@@ -1,0 +1,76 @@
+{
+  "page": 36,
+  "facts": [
+    {
+      "subject": "โรครากปม",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "ไส้เดือนฝอย",
+      "object_type": "Pathogen",
+      "evidence": "เกิดจากไส้เดือนฝอยใช้ปากแทงเนื้อเยื่อแล้วดูดน้ำเลี้ยงจากรากเป็นอาหาร"
+    },
+    {
+      "subject": "โรคราแป้ง",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อรา",
+      "object_type": "Pathogen",
+      "evidence": "เกิดจากเชื้อรา มักระบาดในฤดูหนาว"
+    },
+    {
+      "subject": "โรครากปม",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "รากเป็นปมและเน่า",
+      "object_type": "Symptom",
+      "evidence": "ทำให้ต้นพริกชะงักการเจริญเติบโต ผลผลิตลดลงและขนาดเล็กลง รากเป็นปมและเน่า"
+    },
+    {
+      "subject": "โรคราแป้ง",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ผงคล้ายแป้งสีขาวปกคลุมใบแก่",
+      "object_type": "Symptom",
+      "evidence": "สังเกตเห็นอาการเริ่มต้น มีผงคล้ายแป้งสีขาวปกคลุมใบแก่"
+    },
+    {
+      "subject": "โรคราแป้ง",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ต้นแห้งตาย",
+      "object_type": "Symptom",
+      "evidence": "และดูดน้ำเลี้ยงทำให้เหลืองและต้นแห้งตาย"
+    },
+    {
+      "subject": "โรครากปม",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ใบเหลือง",
+      "object_type": "Symptom",
+      "evidence": "รากเป็นปมและเน่า ต้นแคระแกร็น เหี่ยว ใบเหลือง"
+    },
+    {
+      "subject": "โรครากปม",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ต้นตายได้",
+      "object_type": "Symptom",
+      "evidence": "จุลินทรีย์ที่เป็นสาเหตุของโรคอื่นๆ เข้าทำลายต้น และต้นตายได้"
+    },
+    {
+      "subject": "โรคราแป้ง",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "สารไดโนแคป ไตรโฟรีน และเบโนมิล",
+      "object_type": "Treatment",
+      "evidence": "และใช้สารไดโนแคป ไตรโฟรีน และเบโนมิล กำจัดเชื้อรา"
+    }
+  ],
+  "timing": {
+    "seconds": 22.114,
+    "model": "qwen3.5:9b",
+    "eval_count": 696,
+    "eval_duration": 20950067000,
+    "prompt_eval_count": 708
+  }
+}

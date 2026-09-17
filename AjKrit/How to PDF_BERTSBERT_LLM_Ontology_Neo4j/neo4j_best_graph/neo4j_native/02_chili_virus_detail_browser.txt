@@ -1,0 +1,133 @@
+Styles have been reset to default
+Undo
+Query
+connection status: connected
+Instance:
+neo4j://localhost:7688
+. Click to open instance menu
+Database:
+neo4j
+. Click to open database menu
+User:
+neo4j
+. Click to open database user menu
+Connect your instance to Aura console for more tools and features
+Database overview
+Saved Cypher
+History
+Cypher reference
+Parameters
+Settings
+Database information
+Nodes (1,335)
+*
+Activity
+Application
+Benefit
+Biocontrol
+Chemical
+Condition
+Crop
+Disease
+DiseaseGroup
+Document
+Duration
+Environment
+Fertilizer
+GrowthStage
+LAW
+LEN
+LOCATION
+Material
+MONEY
+Show all nodes (25 more)
+Relationships (2,347)
+*
+APPLIED_TO
+CAUSED_BY
+CO_OCCURS_WITH
+COVERS
+EVIDENCED_BY
+EXHIBITS
+HAS_APPLICATION
+HAS_BENEFIT
+HAS_CONDITION
+HAS_DISEASE
+HAS_DURATION
+HAS_ENVIRONMENT
+HAS_GROWTH_STAGE
+HAS_HOST
+HAS_PAGE
+HAS_PREPARATION
+HAS_PURPOSE
+HAS_SEASON
+HAS_SECTION
+Show all relationships (16 more)
+Property keys
+aliases
+assertion
+assertion_layer
+condition
+context
+dataset
+dilution_as_printed
+evidence
+evidence_note
+filename
+id
+kind
+layer
+method
+name
+number
+object
+origin
+page
+page_count
+Show all property keys (13 more)
+Last update:
+ 6:34:00 PM 
+1
+2
+3
+4
+5
+// เจาะลึกพริก: ไวรัส 4 ชนิด เชื่อมด้วยเพลี้ยอ่อน
+MATCH p=(s:PlantGuide2019Reviewed)-[r]->(t:PlantGuide2019Reviewed)
+WHERE r.id IN ["41e48577009b6d9164f2", "3076acb30e28c9ab1dd0", "a3c628a88341cb52a435", "1d88ea71a0b16399e097", "705e9735d2ea924545e8", "804e383b13aedbd57e04", "745341d0779926c6175b", "51d64a0f19a61d294072", "292cc2ade9be8fbb573c", "e857b8986acce3a6308b", "875589962fb02970a9bc", "143df57ab4030bf9b5ca", "87ee8a0b99a90a552a53", "af52d4cd71a3e4093e90", "c5eecd149e9f25860368", "c3c8d4b2ba234cc75c93", "fb5fcc6022c47ece990a", "7943c450ecdbea057765", "a1d3cd37fde9637b8d3d", "573af05c6e7739567f8f", "3a581f43b535edfed1dc", "9b45823cb989d7eb6fbd", "6b044ea8072f7ab84ad1", "6dfc21c9453d2730e567", "e9f761f57e984c0069d3", "7d0457c927dd08981c86", "b6151450cceeed46e276", "6eedabde22b45483b520", "29f7d774f4dc360188d1", "8faab2226c0b21ee6a12", "0869147509cc413711f5", "2e5f5339ecad1d73e929"]
+RETURN p;
+
+
+Fullscreen frame
+1
+2
+3
+4
+5
+// เจาะลึกพริก: ไวรัส 4 ชนิด เชื่อมด้วยเพลี้ยอ่อน
+MATCH p=(s:PlantGuide2019Reviewed)-[r]->(t:PlantGuide2019Reviewed)
+WHERE r.id IN ["41e48577009b6d9164f2", "3076acb30e28c9ab1dd0", "a3c628a88341cb52a435", "1d88ea71a0b16399e097", "705e9735d2ea924545e8", "804e383b13aedbd57e04", "745341d0779926c6175b", "51d64a0f19a61d294072", "292cc2ade9be8fbb573c", "e857b8986acce3a6308b", "875589962fb02970a9bc", "143df57ab4030bf9b5ca", "87ee8a0b99a90a552a53", "af52d4cd71a3e4093e90", "c5eecd149e9f25860368", "c3c8d4b2ba234cc75c93", "fb5fcc6022c47ece990a", "7943c450ecdbea057765", "a1d3cd37fde9637b8d3d", "573af05c6e7739567f8f", "3a581f43b535edfed1dc", "9b45823cb989d7eb6fbd", "6b044ea8072f7ab84ad1", "6dfc21c9453d2730e567", "e9f761f57e984c0069d3", "7d0457c927dd08981c86", "b6151450cceeed46e276", "6eedabde22b45483b520", "29f7d774f4dc360188d1", "8faab2226c0b21ee6a12", "0869147509cc413711f5", "2e5f5339ecad1d73e929"]
+RETURN p;
+
+
+Graph
+Table
+Zoom to fit
+Results overview
+Nodes (18)
+* (18)
+Crop (1)
+Disease (4)
+Pathogen (4)
+Pest (1)
+PlantGuide2019Reviewed (18)
+Symptom (4)
+Treatment (4)
+Relationships (32)
+* (32)
+CAUSED_BY (4)
+HAS_DISEASE (4)
+HAS_SYMPTOM (4)
+MANAGED_BY (16)
+TRANSMITTED_BY (4)
+Started streaming 32 records after 1 ms and completed after 3 ms.

@@ -1,0 +1,11 @@
+{
+  "page": 41,
+  "raw": "{\n  \"entities\": [\n    {\n      \"crop\": null,\n      \"disease\": \"รากเน่า\",\n      \"pathogen\": \"เชื้อราพิเทียม\",\n      \"symptom\": \"โคนเน่า โรคยอดเน่าของต้นกล้าในพืชไร่\",\n      \"treatment\": null\n    },\n    {\n      \"crop\": null,\n      \"disease\": \"โรครากเน่าโคนเน่า\",\n      \"pathogen\": \"เชื้อราไฟทอฟทอรา\",\n      \"symptom\": null,\n      \"treatment\": null\n    },\n    {\n      \"crop\": null,\n      \"disease\": \"โรคกล้าไหม้\",\n      \"pathogen\": \"เชื้อราสเคลอโรเทียม\",\n      \"symptom\": null,\n      \"treatment\": null\n    },\n    {\n      \"crop\": null,\n      \"disease\": \"โรคเหี่ยวในพืชผัก\",\n      \"pathogen\": \"ราเม็ดผักกาด\",\n      \"symptom\": null,\n      \"treatment\": null\n    },\n    {\n      \"crop\": null,\n      \"disease\": \"โรคเหี่ยวในไม้ดอก\",\n      \"pathogen\": \"เชื้อราฟูซาเรียม\",\n      \"symptom\": null,\n      \"treatment\": null\n    }\n  ]\n}",
+  "timing": {
+    "seconds": 10.143,
+    "model": "qwen3.5:9b",
+    "eval_count": 308,
+    "eval_duration": 8975953000,
+    "prompt_eval_count": 592
+  }
+}

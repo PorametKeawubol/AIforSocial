@@ -1,0 +1,76 @@
+{
+  "page": 44,
+  "facts": [
+    {
+      "subject": "สูตรน้ำส้มสายชู",
+      "subject_type": "Treatment",
+      "relation": "TREATED_BY",
+      "object": "น้ำยาล้างจาน",
+      "object_type": "Treatment",
+      "evidence": "•\tละลายทุกอย่างให้เข้ากัน นำไปพ่น"
+    },
+    {
+      "subject": "สูตรน้ำส้มสายชู",
+      "subject_type": "Treatment",
+      "relation": "TREATED_BY",
+      "object": "เกลือแกง",
+      "object_type": "Topic",
+      "evidence": "•\tละลายทุกอย่างให้เข้ากัน นำไปพ่น"
+    },
+    {
+      "subject": "สูตรน้ำส้มสายชู",
+      "subject_type": "Treatment",
+      "relation": "TREATED_BY",
+      "object": "น้ำส้มสายชู",
+      "object_type": "Topic",
+      "evidence": "•\tละลายทุกอย่างให้เข้ากัน นำไปพ่น"
+    },
+    {
+      "subject": "สูตรน้ำหัวผักกาด",
+      "subject_type": "Treatment",
+      "relation": "TREATED_BY",
+      "object": "ผงกลูโคส",
+      "object_type": "Topic",
+      "evidence": "•\t นำส่วนผสมทั้งหมดผสมกัน หมักทิ้งไว้ 1 คืน"
+    },
+    {
+      "subject": "สูตรน้ำหัวผักกาด",
+      "subject_type": "Treatment",
+      "relation": "TREATED_BY",
+      "object": "น้ำมะพร้าวอ่อน",
+      "object_type": "Topic",
+      "evidence": "•\t นำส่วนผสมทั้งหมดผสมกัน หมักทิ้งไว้ 1 คืน"
+    },
+    {
+      "subject": "สูตรน้ำหัวผักกาด",
+      "subject_type": "Treatment",
+      "relation": "TREATED_BY",
+      "object": "น้ำหัวผักกาด",
+      "object_type": "Topic",
+      "evidence": "•\t นำส่วนผสมทั้งหมดผสมกัน หมักทิ้งไว้ 1 คืน"
+    },
+    {
+      "subject": "สูตรน้ำส้มสายชู",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "วัชพืช",
+      "object_type": "Topic",
+      "evidence": "บริเวณที่ต้องการกำจัดหญ้าหรือวัชพืช"
+    },
+    {
+      "subject": "สูตรน้ำหัวผักกาด",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "นาข้าว",
+      "object_type": "Topic",
+      "evidence": "โดยใช้ในนาข้าวเมื่อข้าวยังเล็ก"
+    }
+  ],
+  "timing": {
+    "seconds": 20.265,
+    "model": "qwen3.5:9b",
+    "eval_count": 631,
+    "eval_duration": 19003536000,
+    "prompt_eval_count": 816
+  }
+}

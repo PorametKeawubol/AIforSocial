@@ -1,0 +1,68 @@
+{
+  "page": 7,
+  "facts": [
+    {
+      "subject": "การห่มดิน",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "จุลินทรีย์ในดิน",
+      "object_type": "Pathogen",
+      "evidence": "การห่มดินเพื่อให้จุลินทรีย์ในดินมีความอุดมสมบูรณ์"
+    },
+    {
+      "subject": "เปลือยดินไว้",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "จุลินทรีย์ตาย",
+      "object_type": "Symptom",
+      "evidence": "ถ้าเปลือยดินไว้ จะทำให้จุลินทรีย์ตาย"
+    },
+    {
+      "subject": "การห่มดิน",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ต้นไม้เจริญเติบโตได้",
+      "object_type": "Crop",
+      "evidence": "และต้นไม้จะสามารถเจริญเติบโตได้"
+    },
+    {
+      "subject": "การแก้ปัญหาดินเค็ม",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ทฤษฏีการห่มดิน",
+      "object_type": "Topic",
+      "evidence": "การแก้ปัญหาดินเค็มด้วยทฤษฏีการห่มดิน"
+    },
+    {
+      "subject": "ขั้นที่ 1 การพรวนหน้าดิน",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "อากาศและน้ำถ่ายเทได้สะดวก",
+      "object_type": "Topic",
+      "evidence": "ทำการพรวนหน้าดินให้มีความร่วนซุย อากาศและน้ำถ่ายเทได้สะดวก"
+    },
+    {
+      "subject": "ขั้นที่ 2 การป้องกันความชื้นในดิน",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "ระบบนิเวศ",
+      "object_type": "Topic",
+      "evidence": "ป้องกันและรักษาความชื้นในดินโดยการโรยเมล็ดถั่วเขียวลงไปในดิน เพื่อช่วยรักษาระบบนิเวศ"
+    },
+    {
+      "subject": "ขั้นที่ 3 การปลูกพืชทนเค็ม",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "ข้าวหอมมะลิ 105 ข้าวแดงน้อย ถั่ว แค โรยผสมลงไปกับถั่วเขียว",
+      "object_type": "Crop",
+      "evidence": "หลังจากโรยถั่วเขียวเสร็จแล้วให้พืชพันธุ์ที่มีความทนเค็ม เช่น ข้าวหอม มะลิ 105 ข้าวแดงน้อย ถั่ว แค โรยผสมลงไป กับถั่วเขียว"
+    }
+  ],
+  "timing": {
+    "seconds": 19.826,
+    "model": "qwen3.5:9b",
+    "eval_count": 639,
+    "eval_duration": 19330813000,
+    "prompt_eval_count": 668
+  }
+}

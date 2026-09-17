@@ -1,0 +1,51 @@
+[
+  {
+    "query": "PaymentAPI มี dependency เชื่อมกับระบบไหนบ้าง?",
+    "destination": "graph_db",
+    "retrieved_context": [
+      "PaymentAPI CALLS AuthService",
+      "AuthService DEPLOYED_ON AuthPod-01"
+    ],
+    "expected_route": "graph_db",
+    "passed": true
+  },
+  {
+    "query": "ขอขั้นตอนการตั้งค่า deployment.yaml หน่อยครับ",
+    "destination": "vector_db",
+    "retrieved_context": "วิธีตั้งค่า deployment.yaml: ให้ระบุ memory limit อย่างน้อย 512Mi",
+    "expected_route": "vector_db",
+    "passed": true
+  },
+  {
+    "query": "เขียนฟังก์ชัน Python ลบตัวเลขซ้ำใน List",
+    "destination": "direct_llm",
+    "retrieved_context": "Response generated directly from Parametric Knowledge.",
+    "expected_route": "direct_llm",
+    "passed": true
+  },
+  {
+    "query": "ทำไม PaymentAPI ถึงทำงานล้มเหลว มันส่งผลกระทบไปที่ Pod ไหนบ้าง?",
+    "destination": "graph_db",
+    "retrieved_context": [
+      "PaymentAPI CALLS AuthService",
+      "AuthService DEPLOYED_ON AuthPod-01"
+    ],
+    "expected_route": "graph_db",
+    "passed": true
+  },
+  {
+    "query": "หากเจอสถานะ OOMKilled มีขั้นตอนการแก้ไขปัญหาในคู่มืออย่างไร?",
+    "destination": "vector_db",
+    "retrieved_context": "วิธีตั้งค่า deployment.yaml: ให้ระบุ memory limit อย่างน้อย 512Mi",
+    "expected_route": "vector_db",
+    "passed": true
+  },
+  {
+    "query": "เขียนฟังก์ชัน Python สำหรับเช็คว่า List มีค่าว่างหรือไม่",
+    "destination": "direct_llm",
+    "retrieved_context": "Response generated directly from Parametric Knowledge.",
+    "expected_route": "direct_llm",
+    "passed": true
+  }
+]
+ 

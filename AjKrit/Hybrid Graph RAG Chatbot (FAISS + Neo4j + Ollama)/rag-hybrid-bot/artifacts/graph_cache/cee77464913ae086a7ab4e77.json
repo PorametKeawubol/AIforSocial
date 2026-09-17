@@ -1,0 +1,76 @@
+{
+  "page": 34,
+  "facts": [
+    {
+      "subject": "โรคใบจุดตากบ",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อรา",
+      "object_type": "Pathogen",
+      "evidence": "มีเชื้อสาเหตุคือเชื้อรา"
+    },
+    {
+      "subject": "โรคใบจุดตากบ",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "แผลวงกลมหรือทางยาว",
+      "object_type": "Symptom",
+      "evidence": "ทำให้เกิดแผลวงกลมหรือทางยาว"
+    },
+    {
+      "subject": "โรคใบจุดตากบ",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ขอบแผลสีน้ำตาลเข้ม",
+      "object_type": "Symptom",
+      "evidence": "มีขอบแผลสีน้ำตาลเข้ม"
+    },
+    {
+      "subject": "โรคใบจุดตากบ",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "เนื้อแผลสีน้ำตาลอ่อน",
+      "object_type": "Symptom",
+      "evidence": "เนื้อแผลสีน้ำตาลอ่อน"
+    },
+    {
+      "subject": "โรคใบจุดตากบ",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "กลางแผลสีเทา หรือขาว",
+      "object_type": "Symptom",
+      "evidence": "กลางแผลสีเทา หรือขาว"
+    },
+    {
+      "subject": "โรคใบจุดตากบ",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "สารแมนโคเซบ",
+      "object_type": "Treatment",
+      "evidence": "พ่นสารเคมีป้องกันและกำจัดโรค เช่น สารแมนโคเซบ"
+    },
+    {
+      "subject": "โรคใบจุดตากบ",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "น้ำหมักสมุนไพร",
+      "object_type": "Treatment",
+      "evidence": "หรือสารเบโนมิล หรือน้ำหมักสมุนไพร"
+    },
+    {
+      "subject": "การปลูกพริก",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "อากาศถ่ายเทได้สะดวก",
+      "object_type": "Topic",
+      "evidence": "เพื่อให้อากาศถ่ายเทได้สะดวก"
+    }
+  ],
+  "timing": {
+    "seconds": 20.054,
+    "model": "qwen3.5:9b",
+    "eval_count": 620,
+    "eval_duration": 18771770000,
+    "prompt_eval_count": 734
+  }
+}

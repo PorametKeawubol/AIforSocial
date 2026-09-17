@@ -1,0 +1,11 @@
+{
+  "page": 25,
+  "raw": "{\n  \"entities\": [\n    {\n      \"crop\": \"พริก\",\n      \"disease\": \"โรคเน่าเปียก\",\n      \"pathogen\": null,\n      \"symptom\": null,\n      \"treatment\": null\n    }\n  ]\n}",
+  "timing": {
+    "seconds": 3.184,
+    "model": "qwen3.5:9b",
+    "eval_count": 69,
+    "eval_duration": 2018820000,
+    "prompt_eval_count": 542
+  }
+}

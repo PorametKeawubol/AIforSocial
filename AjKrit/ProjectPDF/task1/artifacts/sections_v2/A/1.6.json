@@ -1,0 +1,123 @@
+{
+  "fingerprint": "789aa44b23cbe45b61cb98a4",
+  "version": "sections-v2.1",
+  "section": "1.6",
+  "embedding": {
+    "embedding": "BAAI/bge-m3",
+    "cache_fingerprint": "1c7299b69943dd6662be8fb7",
+    "aggregation": "max of existing per-page ontology hints across section pages",
+    "hints": [
+      "เอกสารประกอบการแจ้งความ",
+      "หน่วยงานรับแจ้งเรื่อง",
+      "เจ้าหน้าที่รับผิดชอบ",
+      "หลักฐานเกี่ยวกับเหตุการณ์"
+    ]
+  },
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+  "seconds": 26.148222787000122,
+  "attempt": 1,
+  "response": {
+    "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M",
+    "created_at": "2026-09-14T16:49:45.727919508Z",
+    "message": {
+      "content": "{\"edges\":[[\"HAS_SUPPORTING_EVIDENCE\",\"ทะเบียนใบอนุญาตอาวุธปืน\",\"Document\",\"ผู้แจ้งความ\",104,104,\"\"],[\"HAS_SUPPORTING_EVIDENCE\",\"ใบเสร็จรับเงินที่บริษัทห้างร้านขายปืนออกให้\",\"Document\",\"ผู้แจ้งความ\",\"ถ้ามี\",105,106]]}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 26147303756,
+    "load_duration": 218243506,
+    "prompt_eval_count": 655,
+    "prompt_eval_duration": 3141954000,
+    "eval_count": 70,
+    "eval_duration": 22457255000
+  },
+  "parse_ok": true,
+  "truncated": false,
+  "accepted": [
+    {
+      "section": "1.6",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "ทะเบียนใบอนุญาตอาวุธปืน",
+      "raw_name": "ทะเบียนใบอนุญาตอาวุธปืน",
+      "type": "Document",
+      "owner": "ผู้แจ้งความ",
+      "condition": "",
+      "start_line": 104,
+      "end_line": 104,
+      "evidence": "(1) ทะเบียนใบอนุญาตอาวุธปืน",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization",
+      "schema_repair": "condition moved before the two integer line IDs; raw row preserved in response"
+    },
+    {
+      "section": "1.6",
+      "relation": "HAS_SUPPORTING_EVIDENCE",
+      "name": "ใบเสร็จรับเงินที่บริษัทห้างร้านขายปืนออกให้",
+      "raw_name": "ใบเสร็จรับเงินที่บริษัทห้างร้านขายปืนออกให้",
+      "type": "Document",
+      "owner": "ผู้แจ้งความ",
+      "condition": "ถ้ามี",
+      "start_line": 105,
+      "end_line": 106,
+      "evidence": "(2) ใบเสร็จรับเงินที่บริษัทห้างร้านขายปืน\nออกให้ (ถ้ามี)",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        13
+      ],
+      "review_flags": [
+        "owner_not_literal_in_section_verify_semantics"
+      ],
+      "provenance": "local_llm_plus_declared_alias_normalization"
+    }
+  ],
+  "rejected": [],
+  "initial_validation": {
+    "accepted": [
+      {
+        "section": "1.6",
+        "relation": "HAS_SUPPORTING_EVIDENCE",
+        "name": "ใบเสร็จรับเงินที่บริษัทห้างร้านขายปืนออกให้",
+        "raw_name": "ใบเสร็จรับเงินที่บริษัทห้างร้านขายปืนออกให้",
+        "type": "Document",
+        "owner": "ผู้แจ้งความ",
+        "condition": "ถ้ามี",
+        "start_line": 105,
+        "end_line": 106,
+        "evidence": "(2) ใบเสร็จรับเงินที่บริษัทห้างร้านขายปืน\nออกให้ (ถ้ามี)",
+        "pdf_pages": [
+          26
+        ],
+        "printed_pages": [
+          13
+        ],
+        "review_flags": [],
+        "provenance": "local_llm_plus_declared_alias_normalization"
+      }
+    ],
+    "rejected": [
+      {
+        "row": [
+          "HAS_SUPPORTING_EVIDENCE",
+          "ทะเบียนใบอนุญาตอาวุธปืน",
+          "Document",
+          "ผู้แจ้งความ",
+          104,
+          104,
+          ""
+        ],
+        "reason": "schema"
+      }
+    ]
+  },
+  "validator_version": "v2.2-unique-nearby-grounding-repair"
+}

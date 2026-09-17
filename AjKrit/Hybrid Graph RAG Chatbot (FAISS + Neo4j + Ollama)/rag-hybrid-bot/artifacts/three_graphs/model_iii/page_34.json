@@ -1,0 +1,11 @@
+{
+  "page": 34,
+  "raw": "{\n  \"entities\": [\n    {\n      \"crop\": \"พริก\",\n      \"disease\": \"โรคใบจุดตากบ\"\n    }\n  ]\n}",
+  "timing": {
+    "seconds": 2.332,
+    "model": "qwen3.5:9b",
+    "eval_count": 41,
+    "eval_duration": 1175144000,
+    "prompt_eval_count": 611
+  }
+}

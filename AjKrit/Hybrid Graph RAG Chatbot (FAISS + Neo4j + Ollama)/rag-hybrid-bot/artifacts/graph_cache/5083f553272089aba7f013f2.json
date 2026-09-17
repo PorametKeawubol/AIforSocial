@@ -1,0 +1,76 @@
+{
+  "page": 35,
+  "facts": [
+    {
+      "subject": "โรคลำต้นไหม้",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อรา",
+      "object_type": "Pathogen",
+      "evidence": "โรคนี้เป็นอีกโรคหนึ่งที่มีเชื้อราเป็นสาเหตุของโรค"
+    },
+    {
+      "subject": "โรคลำต้นไหม้",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "รอยไหม้สีดำบริเวณลำต้น",
+      "object_type": "Symptom",
+      "evidence": "อาการเริ่มจากรอยไหม้สีดำบริเวณลำต้น"
+    },
+    {
+      "subject": "โรคลำต้นไหม้",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การไถพลิกดินและตากทิ้งไว้อย่างน้อย 7 วัน",
+      "object_type": "Treatment",
+      "evidence": "ให้ไถพลิกดินและตากทิ้งไว้อย่างน้อย 7 วัน ก่อนทำแปลงปลูก"
+    },
+    {
+      "subject": "โรคลำต้นไหม้",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การจัดระบบระบายน้ำในแปลงปลูก",
+      "object_type": "Treatment",
+      "evidence": "จัดการระบบระบายในแปลงปลูก"
+    },
+    {
+      "subject": "โรคลำต้นไหม้",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "เชื้อราไตรโคเดอร์มา",
+      "object_type": "Pathogen",
+      "evidence": "ใช้เชื้อปฏิปักษ์ คือ เชื้อราไตรโคเดอร์มา"
+    },
+    {
+      "subject": "โรคลำต้นไหม้",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "แบคทีเรียบาซิลลัส ซับทีลิส",
+      "object_type": "Pathogen",
+      "evidence": "และแบคทีเรียบาซิลลัส ซับทีลิส"
+    },
+    {
+      "subject": "โรคลำต้นไหม้",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "สารเมทาแล็กซิล",
+      "object_type": "Treatment",
+      "evidence": "หรือสารเมตาแล็กซิล"
+    },
+    {
+      "subject": "โรคลำต้นไหม้",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "สารฟอสฟอริกแอซิด",
+      "object_type": "Treatment",
+      "evidence": "หรือสารฟอสฟอริกแอซิด"
+    }
+  ],
+  "timing": {
+    "seconds": 22.078,
+    "model": "qwen3.5:9b",
+    "eval_count": 684,
+    "eval_duration": 20694178000,
+    "prompt_eval_count": 828
+  }
+}

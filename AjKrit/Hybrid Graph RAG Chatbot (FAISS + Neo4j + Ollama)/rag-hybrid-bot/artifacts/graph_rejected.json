@@ -1,0 +1,1946 @@
+[
+  {
+    "page": 6,
+    "fact": {
+      "subject": "การห่มดิน",
+      "subject_type": "Treatment",
+      "relation": "PREVENTED_BY",
+      "object": "การชะล้าง พังทลายของดิน",
+      "object_type": "Symptom",
+      "evidence": "เพื่อให้ดินมีความ \nชุ่มชื้น จุลินทรีย์ทำงานได้ดี ส่งผลให้ดิน \nทำการเกษตรได้อย่างมีประสิทธิภาพ ป้องกัน\nการชะล้าง พังทลายของดิน"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 6,
+    "fact": {
+      "subject": "การห่มดิน",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "การใช้ฟางและเศษใบไม้มาห่มดิน",
+      "object_type": "Topic",
+      "evidence": "เช่น ใช้ฟางและ \nเศษใบไม้มาห่มดิน"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 6,
+    "fact": {
+      "subject": "การห่มดิน",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "การใช้ทะลายปาล์มมาตะกุยให้เป็นเส้นๆ ก่อนจะเอาไปอัดให้เป็นแผ่น เป็นผ้าห่มดิน",
+      "object_type": "Topic",
+      "evidence": "เริ่มจาก\nการนำทะลายปาล์มมาตะกุยให้เป็นเส้นๆ \nก่อนจะเอาไปอัดให้เป็นแผ่น เป็นผ้าห่มดิน"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 7,
+    "fact": {
+      "subject": "การห่มดิน",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ต้นไม้เจริญเติบโตได้",
+      "object_type": "Crop",
+      "evidence": "และต้นไม้จะสามารถเจริญเติบโตได้"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 7,
+    "fact": {
+      "subject": "ขั้นที่ 1 การพรวนหน้าดิน",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "อากาศและน้ำถ่ายเทได้สะดวก",
+      "object_type": "Topic",
+      "evidence": "ทำการพรวนหน้าดินให้\nมีความร่วนซุย อากาศและน้ำถ่ายเท\nได้สะดวก"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 7,
+    "fact": {
+      "subject": "ขั้นที่ 2 การป้องกันความชื้นในดิน",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "ระบบนิเวศ",
+      "object_type": "Topic",
+      "evidence": "ป้องกันและรักษาความชื้นในดิน\nโดยการโรยเมล็ดถั่วเขียวลงไปในดิน เพื่อช่วย\nรักษาระบบนิเวศ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 7,
+    "fact": {
+      "subject": "ขั้นที่ 3 การปลูกพืชทนเค็ม",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "ข้าวหอมมะลิ 105 ข้าวแดงน้อย ถั่ว แค โรยผสมลงไปกับถั่วเขียว",
+      "object_type": "Crop",
+      "evidence": "หลังจากโรยถั่วเขียวเสร็จแล้ว\nให้พืชพันธุ์ที่มีความทนเค็ม เช่น ข้าวหอม \nมะลิ 105 ข้าวแดงน้อย ถั่ว แค โรยผสมลงไป\nกับถั่วเขียว"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 8,
+    "fact": {
+      "subject": "ถั่วเขียว",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคพืชทั่วไป",
+      "object_type": "Disease",
+      "evidence": "เมื่อถั่วเขียวเจริญเติบโตขึ้น จะทำให้มีการปกคลุมดิน \nอีกชั้นรวมถึงฟางข้าว ทำให้แสงแดดไม่สามารถส่องถึงพื้นดินได้"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 8,
+    "fact": {
+      "subject": "การปลูกถั่วเขียวร่วมกับฟางข้าว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ความชื้นในดิน",
+      "object_type": "Topic",
+      "evidence": "นำมาปกคลุมดินไว้เพื่อรักษาความชื้น\nในดินไม่ให้ระเหยออกไป"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 8,
+    "fact": {
+      "subject": "การปลูกถั่วเขียวร่วมกับฟางข้าว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ธาตุอาหารในดิน",
+      "object_type": "Topic",
+      "evidence": "ดินที่อยู่ใต้ฟางข้าวและถั่วเขียวจึงมีความอุดมสมบูรณ์ ทั้งธาตุอาหาร"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 8,
+    "fact": {
+      "subject": "การปลูกถั่วเขียวร่วมกับฟางข้าว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ความเค็มในดิน",
+      "object_type": "Topic",
+      "evidence": "และไม่ดูดความเค็มนขึ้นมา"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 8,
+    "fact": {
+      "subject": "ฟางข้าว",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคพืชทั่วไป",
+      "object_type": "Disease",
+      "evidence": "ถ้าเป็นฟางข้าวจะให้ผล\nดีที่สุด นำมาปกคลุมดินไว้"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 8,
+    "fact": {
+      "subject": "การปลูกถั่วเขียวร่วมกับฟางข้าว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "แสงแดดส่องถึงพื้นดิน",
+      "object_type": "Topic",
+      "evidence": "ทำให้แสงแดดไม่สามารถส่องถึงพื้นดินได้"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 8,
+    "fact": {
+      "subject": "การปลูกถั่วเขียวร่วมกับฟางข้าว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ความอุดมสมบูรณ์ของดิน",
+      "object_type": "Topic",
+      "evidence": "ดินที่อยู่ใต้ฟางข้าวและถั่วเขียวจึงมีความอุดมสมบูรณ์"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 8,
+    "fact": {
+      "subject": "การปลูกถั่วเขียวร่วมกับฟางข้าว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "การรักษาความชื้นในดิน",
+      "object_type": "Topic",
+      "evidence": "นำมาปกคลุมดินไว้เพื่อรักษาความชื้น\nในดินไม่ให้ระเหยออกไป"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 10,
+    "fact": {
+      "subject": "น้ำหมักสมุนไพรรสจืด",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "ความเปรี้ยวของดิน",
+      "object_type": "Topic",
+      "evidence": "เพื่อชะล้างความเปรี้ยวและความเค็มของดิน \nให้ลดหรือเจือจางลง"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 10,
+    "fact": {
+      "subject": "น้ำหมักสมุนไพรรสจืดผสมน้ำ",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "แปลงเกษตร",
+      "object_type": "Topic",
+      "evidence": "โดยการนำน้ำมาหมักสมุนไพรรส\nจืด (ปุ๋ยน้ำรสจืด) มารดให้ทั่ว เป็นวิธีดีที่สุดและเร็วที่สุด\nในการแก้ปัญหาดินเปรี้ยว"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 11,
+    "fact": {
+      "subject": "นาข้าว",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "อาการบ้าใบ",
+      "object_type": "Symptom",
+      "evidence": "หากเป็นนาข้าว ใบข้าวจะมีสีเขียวสวยงาม\nมีใบข้าวจำนวนมาก เรียกว่า อาการบ้าใบ"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 11,
+    "fact": {
+      "subject": "สวน",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "สีและเส้นใบไม่เสมอกัน",
+      "object_type": "Symptom",
+      "evidence": "หากเป็นสวน จะสังเกตได้จากสีและเส้นใบ\nไม่เสมอกัน"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 11,
+    "fact": {
+      "subject": "ดินเปรี้ยว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "การเพิ่มผลผลิต",
+      "object_type": "Topic",
+      "evidence": "ในการเพาะปลูกจะช่วยเพิ่ม \nผลผลิตให้กับเกษตรกร"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 11,
+    "fact": {
+      "subject": "ดินเปรี้ยว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "การลดต้นทุนการผลิต",
+      "object_type": "Topic",
+      "evidence": "ในการเพาะปลูกจะช่วยเพิ่ม \nผลผลิตให้กับเกษตรกรแล้ว ยังช่วยลดต้นทุน \nการผลิตอีกด้วย"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 11,
+    "fact": {
+      "subject": "การแก้ปัญหาดินเปรี้ยว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "การใช้ปุ๋ยเคมีน้อยลง",
+      "object_type": "Treatment",
+      "evidence": "เมื่อแก้ไขปัญหา \nแล้ว จะต้องลดปริมาณการใช้ปุ๋ยเคมีลง"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 11,
+    "fact": {
+      "subject": "ดินเปรี้ยว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "การเกิดดินเค็ม",
+      "object_type": "Disease",
+      "evidence": "เพื่อป้องกัน\nปัญหาการเกิดดินเปรี้ยวและเค็มไม่ให้เกิดขึ้นอีก"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 13,
+    "fact": {
+      "subject": "ศัตรูพืช",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "น้ำส้มควันไม้",
+      "object_type": "Treatment",
+      "evidence": "เมื่อนำไปใช้ประโยชน์ทางการเกษตรจะมีคุณสมบัติ เช่น เป็นสารป้องกันกำจัดศัตรูพืช"
+    },
+    "reason": "quote not found or unsupported category"
+  },
+  {
+    "page": 13,
+    "fact": {
+      "subject": "พืช",
+      "subject_type": "Crop",
+      "relation": "RELATED_TO",
+      "object": "น้ำส้มควันไม้",
+      "object_type": "Treatment",
+      "evidence": "เมื่อนำไปใช้ประโยชน์ทางการเกษตรจะมีคุณสมบัติ เช่น เป็นสารเร่งการเติบโตของพืช"
+    },
+    "reason": "quote not found or unsupported category"
+  },
+  {
+    "page": 13,
+    "fact": {
+      "subject": "สารปรับผิวนุ่ม",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "น้ำส้มควันไม้",
+      "object_type": "Treatment",
+      "evidence": "มีการนำน้ำส้มควันไม้ไปใช้ประโยชน์ในอุตสาหกรรม เช่น ใช้ผลิต สารปรับผิวนุ่ม"
+    },
+    "reason": "quote not found or unsupported category"
+  },
+  {
+    "page": 14,
+    "fact": {
+      "subject": "น้ำส้มควันไม้",
+      "subject_type": "Treatment",
+      "relation": "TREATED_BY",
+      "object": "การเจือจางด้วยอัตราส่วน 1:20",
+      "object_type": "Topic",
+      "evidence": "เนื่องจากน้ำส้มควันไม้มีความเป็นกรดสูง ก่อนจะ\nนำไปใช้จึงควรจะนำมาเจือจางให้เกิดสภาวะที่เหมาะสม \nกับวัตถุประสงค์ของการใช้งาน"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 14,
+    "fact": {
+      "subject": "การพ่นลงดินด้วยอัตราส่วน 1:20",
+      "subject_type": "Topic",
+      "relation": "TREATED_BY",
+      "object": "น้ำส้มควันไม้เจือจาง 1:20",
+      "object_type": "Treatment",
+      "evidence": "อัตราส่วน 1:20 (ผสมน้ำ 20 เท่า) พ่นลงดิน เพื่อฆ่า\nเชื้อจุลินทรีย์ที่ไม่เป็นประโยชน์และแมลงในดิน"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 14,
+    "fact": {
+      "subject": "การพ่นลงดินด้วยอัตราส่วน 1:50",
+      "subject_type": "Topic",
+      "relation": "TREATED_BY",
+      "object": "น้ำส้มควันไม้เจือจาง 1:50",
+      "object_type": "Treatment",
+      "evidence": "อัตราส่วน 1:50 (ผสมน้ำ 50 เท่า) พ่นลงดิน เพื่อฆ่า\nเชื้อจุลินทรีย์ที่ทำลายพืช"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 14,
+    "fact": {
+      "subject": "การราดโคนต้นไม้ด้วยอัตราส่วน 1:100",
+      "subject_type": "Topic",
+      "relation": "TREATED_BY",
+      "object": "น้ำส้มควันไม้เจือจาง 1:100",
+      "object_type": "Treatment",
+      "evidence": "อัตราส่วน 1:100 (ผสมน้ำ 100 เท่า) ราดโคนต้นไม้\nรักษาโรคราและโรคเน่า"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 14,
+    "fact": {
+      "subject": "การพ่นใส่ใบไม้ด้วยอัตราส่วน 1:200",
+      "subject_type": "Topic",
+      "relation": "TREATED_BY",
+      "object": "น้ำส้มควันไม้เจือจาง 1:200",
+      "object_type": "Treatment",
+      "evidence": "อัตราส่วน 1:200 (ผสมน้ำ 200 เท่า) พ่นใส่ใบไม้ \nรวมทั้งพื้นดินรอบๆ ต้นพืช ทุกๆ 7-15 วัน เพื่อขับไล่แมลง \nป้องกันเชื้อรา"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 14,
+    "fact": {
+      "subject": "การพ่นผลอ่อนด้วยอัตราส่วน 1:500",
+      "subject_type": "Topic",
+      "relation": "TREATED_BY",
+      "object": "น้ำส้มควันไม้เจือจาง 1:500",
+      "object_type": "Treatment",
+      "evidence": "อัตราส่วน 1:500 (ผสมน้ำ 500 เท่า) พ่นผลอ่อน \nหลังจากติดผลแล้ว 15 วัน ช่วยขยายผลให้โตขึ้น"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 14,
+    "fact": {
+      "subject": "การพ่นด้วยอัตราส่วน 1:1000",
+      "subject_type": "Topic",
+      "relation": "TREATED_BY",
+      "object": "น้ำส้มควันไม้เจือจาง 1:1000",
+      "object_type": "Treatment",
+      "evidence": "อัตราส่วน 1:1000 (ผสมน้ำ 1000 เท่า) เป็นสารจับใบ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 14,
+    "fact": {
+      "subject": "การใช้สารเคมีกำจัดศัตรูพืช",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "การลดปริมาณการใช้สารเคมีลงมากกว่าครึ่ง",
+      "object_type": "Topic",
+      "evidence": "เนื่องจากสารเคมีจะสามารถออกฤทธิ์ได้ดีในสารละลาย \nที่เป็นกรดอ่อนๆ ช่วยเสริมประสิทธิภาพของสารเคมี ทำให้\nสามารถลดการใช้สารเคมีไปมากกว่าครึ่งด้วย"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 15,
+    "fact": {
+      "subject": "การปลูกพืช",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "การทำก่อนการปลูก 10 วัน",
+      "object_type": "Treatment",
+      "evidence": "ทำก่อนการปลูก\nพ่นลงดิน\nเพื่อฆ่าเชื้อจุลินทรีย์"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 15,
+    "fact": {
+      "subject": "พืช",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "เชื้อรา",
+      "object_type": "Disease",
+      "evidence": "พ่นใส่ใบ\nและดินรอบๆ ต้น\nไล่แมลง ป้องกันเชื้อรา"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 15,
+    "fact": {
+      "subject": "พืช",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "แมลงวางไข่",
+      "object_type": "Disease",
+      "evidence": "ป้องกัน\nแมลงวางไข่"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 15,
+    "fact": {
+      "subject": "การเก็บเกี่ยว",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "เพิ่มน้ำตาลในผลไม้ 20 วันก่อนเก็บเกี่ยว",
+      "object_type": "Treatment",
+      "evidence": "พ่นอีกครั้ง\nก่อนเก็บเกี่ยว 20 วัน\nเพื่อเพิ่มน้ำตาลในผลไม้"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 18,
+    "fact": {
+      "subject": "โรคราน้ำค้างหรือโรคใบลาย",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "สารเคมีเมทาแล็กซิล อัตรา 7 กรัม/เมล็ด 1 กิโลกรัม",
+      "object_type": "Treatment",
+      "evidence": "ควรคลุกเมล็ดด้วยสารเคมีเมทาแล็กซิล อัตรา 7 กรัม/เมล็ด 1 กิโลกรัม หรือสารเมตาแลกซิล-เอ็ม"
+    },
+    "reason": "quote not found or unsupported category"
+  },
+  {
+    "page": 18,
+    "fact": {
+      "subject": "ข้าวโพด",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคโคนเน่า",
+      "object_type": "Disease",
+      "evidence": "โรคราน้ำค้างหรือโรคใบลาย ใบข้าวโพดจะมีลายสีเขียวอ่อนหรือสีเหลืองอ่อนสลับกับสีเขียวแก่เป็นทาง ... โรคโคนเน่า สังเกตได้จากอาการใบไหม้บริเวณปลายใบมาที่โคนใบ"
+    },
+    "reason": "quote not found or unsupported category"
+  },
+  {
+    "page": 18,
+    "fact": {
+      "subject": "โรคโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การปลูกพืชหมุนเวียนในแหล่งที่เคยมีโรคระบาด",
+      "object_type": "Treatment",
+      "evidence": "เพิ่มอินทรียวัตถุสูงกว่า 1.5% เพื่อให้มีการแข่งขันของจุลินทรีย์ \nปฏิปักษ์ต่อเชื้อโรค ปลูกพืชหมุนเวียนในแหล่งที่เคยมีโรคระบาด"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 19,
+    "fact": {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "ไวรัส",
+      "object_type": "Pathogen",
+      "evidence": "สาเหตุเกิดจาก \"ไวรัส\""
+    },
+    "reason": "quote not found or unsupported category"
+  },
+  {
+    "page": 20,
+    "fact": {
+      "subject": "โรคร้าย",
+      "subject_type": "Disease",
+      "relation": "HAS_DISEASE",
+      "object": "โรคแคงเกอร์",
+      "object_type": "Disease",
+      "evidence": "ปราบโรคแคงเกอร์\nโรคร้ายในมะนาว"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 20,
+    "fact": {
+      "subject": "โรคแคงเกอร์ในมะนาว",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "วิธีที่ 1 และ วิธีที่ 2",
+      "object_type": "Treatment",
+      "evidence": "แนะนำ 2 วิธีที่ใช้ใน \nการปราบโรคนี้"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 20,
+    "fact": {
+      "subject": "โรคร้ายในมะนาว",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ระบาดมากในช่วงที่มีลมฝนแรง",
+      "object_type": "Symptom",
+      "evidence": "ซึ่งระบาด\nมากๆ ในช่วงที่มีลมฝนแรง"
+    },
+    "reason": "quote not found or unsupported category"
+  },
+  {
+    "page": 22,
+    "fact": {
+      "subject": "โรควัณโรค",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อรา",
+      "object_type": "Pathogen",
+      "evidence": "น้ำปูนพวกนี้เป็นด่าง \nจึงไม่ควรผสมรวมกับปุ๋ย ฮอร์โมน\nทางใบ สมุนไพรต่างๆ และสารเคมี \nทางใบที่เป็นกรด เพราะจะทำให้\nน้ำปูนใสเสี่อมสภาพ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 22,
+    "fact": {
+      "subject": "โรควัณโรค",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "น้ำปูนขาว",
+      "object_type": "Treatment",
+      "evidence": "นำปูนขาวก่อสร้างมาละลายน้ำ \nทิ้งไว้ประมาณ 15-20 นาที ให้นอนก้น \nจากนั้นให้กรองเอาเฉพาะน้ำปูนใส\nประมาณ 2 ลิตร ผสมกับน้ำเปล่า 100 \nลิตร ฉีดพ่นต้นมะนาวให้ทั่ว"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 22,
+    "fact": {
+      "subject": "โรควัณโรค",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การฉีดพ่นน้ำปูนขาวทุก 7 วัน",
+      "object_type": "Treatment",
+      "evidence": "เพื่อป้องกันและกำจัดโรคแคงเกอร์ \nที่กำลังระบาด\nนำปูนขาวมาละลายน้ำ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 22,
+    "fact": {
+      "subject": "โรควัณโรค",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "อาการใบเหลือง",
+      "object_type": "Symptom",
+      "evidence": "น้ำปูนพวกนี้เป็นด่าง \nจึงไม่ควรผสมรวมกับปุ๋ย ฮอร์โมน\nทางใบ สมุนไพรต่างๆ และสารเคมี \nทางใบที่เป็นกรด เพราะจะทำให้\nน้ำปูนใสเสี่อมสภาพ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 22,
+    "fact": {
+      "subject": "โรควัณโรค",
+      "subject_type": "Disease",
+      "relation": "HAS_DISEASE",
+      "object": "โรควัณโรค",
+      "object_type": "Disease",
+      "evidence": "เพื่อป้องกันและกำจัดโรคแคงเกอร์ \nที่กำลังระบาด\nนำปูนขาวมาละลายน้ำ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 22,
+    "fact": {
+      "subject": "โรควัณโรค",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อแบคทีเรีย",
+      "object_type": "Pathogen",
+      "evidence": "น้ำปูนพวกนี้เป็นด่าง \nจึงไม่ควรผสมรวมกับปุ๋ย ฮอร์โมน\nทางใบ สมุนไพรต่างๆ และสารเคมี \nทางใบที่เป็นกรด เพราะจะทำให้\nน้ำปูนใสเสี่อมสภาพ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 22,
+    "fact": {
+      "subject": "โรควัณโรค",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "อาการผลเน่า",
+      "object_type": "Symptom",
+      "evidence": "น้ำปูนพวกนี้เป็นด่าง \nจึงไม่ควรผสมรวมกับปุ๋ย ฮอร์โมน\nทางใบ สมุนไพรต่างๆ และสารเคมี \nทางใบที่เป็นกรด เพราะจะทำให้\nน้ำปูนใสเสี่อมสภาพ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 22,
+    "fact": {
+      "subject": "โรควัณโรค",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "การฉีดพ่นน้ำเปล่า 100 ลิตร ผสมปูนขาวก่อสร้าง 5 กิโลกรัม",
+      "object_type": "Treatment",
+      "evidence": "นำปูนขาวก่อสร้างมาละลายน้ำ \nทิ้งไว้ประมาณ 15-20 นาที ให้นอนก้น \nจากนั้นให้กรองเอาเฉพาะน้ำปูนใส\nประมาณ 2 ลิตร ผสมกับน้ำเปล่า 100 \nลิตร ฉีดพ่นต้นมะนาวให้ทั่ว"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 24,
+    "fact": {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "แผลบุ๋มลึกเป็นสีน้ำตาล",
+      "object_type": "Symptom",
+      "evidence": "และแผลจะบุ๋มลึก เป็นสีน้ำตาล"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 24,
+    "fact": {
+      "subject": "โรคแอนแทร็กโนส",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ผลพริกโค้งงอหรือหดย่นคล้ายกุ้งแห้ง",
+      "object_type": "Symptom",
+      "evidence": "ผลพริกจะโค้งงอ\nหรือหดย่นคล้ายกุ้งแห้ง"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 25,
+    "fact": {
+      "subject": "เน่าเปียก",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อรา",
+      "object_type": "Pathogen",
+      "evidence": "โรคนี้มีเชื้อราเป็นสาเหตุ"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 25,
+    "fact": {
+      "subject": "เน่าเปียก",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "เนื้อเยื่อของยอดอ่อน ใบอ่อน ตาดอก และดอกเน่าเละ เป็นสีน้ำตาลดำ",
+      "object_type": "Symptom",
+      "evidence": "ทำให้เนื้อเยื่อของ \nยอดอ่อน ใบอ่อน ตาดอก และดอกเน่าเละ เป็น \nสีน้ำตาลดำ"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 25,
+    "fact": {
+      "subject": "เน่าเปียก",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ใบไหม้ มีสีน้ำตาลดำอย่างรวดเร็ว",
+      "object_type": "Symptom",
+      "evidence": "ใบจะไหม้ \nมีสีน้ำตาลดำอย่างรวดเร็ว"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 25,
+    "fact": {
+      "subject": "เน่าเปียก",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ลุกลามจากยอดลงมา และลุกลามไปยัง ส่วนอื่นๆ",
+      "object_type": "Symptom",
+      "evidence": "โดยลุกลามจากยอดลงมา ใบจะไหม้ \nมีสีน้ำตาลดำอย่างรวดเร็ว และลุกลามไปยัง \nส่วนอื่นๆ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 25,
+    "fact": {
+      "subject": "เน่าเปียก",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "เว้นระยะปลูกที่เหมาะสม ไม่ปลูกต้นพริกชิดกันจนเกินไป ทำให้การระบายอากาศดี และมีความชื้นต่ำ",
+      "object_type": "Treatment",
+      "evidence": "เว้นระยะปลูกที่เหมาะสม ไม่ปลูก\nต้นพริกชิดกันจนเกินไป ทำให้การระบาย\nอากาศไม่ดี และมีความชื้นสูง"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 25,
+    "fact": {
+      "subject": "เน่าเปียก",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "ดูแลตัดแต่งทรงพุ่มของต้นพริกให้ดูโปร่ง และไม่แน่นทึบจนเกินไป",
+      "object_type": "Treatment",
+      "evidence": "ดูแลตัดแต่งทรงพุ่มของต้นพริกให้\nดูโปร่ง และไม่แน่นทึบจนเกินไป"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 25,
+    "fact": {
+      "subject": "เน่าเปียก",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "สารไตรโฟรีน สารประกอบทองแดง หรือสารไทอะเบนดาโซล ฉีดพ่นกำจัดโรค",
+      "object_type": "Treatment",
+      "evidence": "แล้วใช้สารเคมี เช่น สารไตรโฟรีน \nสารประกอบทองแดง หรือสารไทอะเบน\nดาโซล ฉีดพ่นกำจัดโรค"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 25,
+    "fact": {
+      "subject": "เน่าเปียก",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "น้ำหมักสมุนไพร",
+      "object_type": "Treatment",
+      "evidence": "หรือใช้น้ำหมัก\nสมุนไพรกำจัด"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 26,
+    "fact": {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรครากเน่า",
+      "object_type": "Disease",
+      "evidence": "เริ่มจากเข้าทำลายส่วนรากหรือลำต้นที่ระดับ\nคอดินหรือใต้ดิน เมื่อรากเน่า"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 26,
+    "fact": {
+      "subject": "โรครากเน่า",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ใบล่างจะเหลืองและลุกลามขึ้นด้านบน เหี่ยว และร่วง",
+      "object_type": "Symptom",
+      "evidence": "เมื่อรากเน่า ใบล่างจะเหลืองและ\nลุกลามขึ้นด้านบน เหี่ยว และร่วง"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 26,
+    "fact": {
+      "subject": "โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม ออกซิสปอรัม",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การปลูกพืชหมุนเวียน เช่น ข้าวโพด หรือพืชตระกูลถั่ว",
+      "object_type": "Treatment",
+      "evidence": "หากจำเป็นต้องปลูกซ้ำที่เดิม ควรปลูกพืชหมุนเวียน \nเช่น ข้าวโพด หรือพืชตระกูลถั่ว เป็นต้น"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 26,
+    "fact": {
+      "subject": "โรคเหี่ยวที่เกิดจากเชื้อราฟูซาเรียม ออกซิสปอรัม",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การไถพรวนดินเพื่อลดการสะสมเชื้อโรค",
+      "object_type": "Treatment",
+      "evidence": "แล้วไถพรวนดิน \nเพื่อลดการสะสมเชื้อโรค"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 26,
+    "fact": {
+      "subject": "โรครากเน่า",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ยืนต้นตาย",
+      "object_type": "Symptom",
+      "evidence": "อาการรุนแรงถึงขั้น \nยืนต้นตาย"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 27,
+    "fact": {
+      "subject": "โรคเหี่ยว",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อราไฟทอฟทอรา",
+      "object_type": "Pathogen",
+      "evidence": "โรคเหี่ยวที่เกิดจากเชื้อราไฟทอปธอรา"
+    },
+    "reason": "quote not found or unsupported category"
+  },
+  {
+    "page": 28,
+    "fact": {
+      "subject": "โรคเหี่ยว",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "อาการเหียวเขียวกระจายเป็นกลุ่มๆ",
+      "object_type": "Symptom",
+      "evidence": "ทำให้เกิดอาการเหี่ยวเขียว\nกระจายเป็นกลุ่มๆ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 28,
+    "fact": {
+      "subject": "โรคเหี่ยว",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "การถอนต้นที่เป็นโรคออกไปทำลายด้วยการเผาไถตากดิน",
+      "object_type": "Treatment",
+      "evidence": "ถอนต้นที่เป็นโรคออกไปทำลายด้วย\nการเผาไถตากดิน"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 28,
+    "fact": {
+      "subject": "โรคเหี่ยว",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "การใส่ปุ๋ยอินทรีย์เพื่อเพิ่มปริมาณจุลินทรีย์แข่งขันในดิน",
+      "object_type": "Treatment",
+      "evidence": "ใส่ปุ๋ยอินทรีย์\nเพื่อเพิ่มปริมาณจุลินทรีย์แข่งขันในดิน"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 29,
+    "fact": {
+      "subject": "โรครากเน่าและโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การไถพลิกดินและตากดินไว้อย่างน้อย 7 วัน",
+      "object_type": "Treatment",
+      "evidence": "จึง\nไถพลิกดิน และตากดินไว้อย่างน้อย 7 วัน เพื่อ\nฆ่าเชื้อโรคที่อาจตกค้างอยู่ในดิน"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 29,
+    "fact": {
+      "subject": "โรครากเน่าและโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การปลูกพืชหมุนเวียน",
+      "object_type": "Treatment",
+      "evidence": "ควรปลูกพืช\nหมุนเวียน ก่อนปลูกพริกรอบต่อไป"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 29,
+    "fact": {
+      "subject": "โรครากเน่าและโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การใส่ปูนขาวและอินทรียวัตถุให้ดิน",
+      "object_type": "Treatment",
+      "evidence": "ใส่ปูนขาวและ\nอินทรียวัตถุให้ดิน เพื่อปรับสภาพดิน"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 29,
+    "fact": {
+      "subject": "โรครากเน่าและโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การแช่เมล็ดพันธุ์ในน้ำอุ่นอุณหภูมิ 50 องศาเซลเซียส นานประมาณ 30 นาที",
+      "object_type": "Treatment",
+      "evidence": "แช่เมล็ดพันธุ์ในน้ำ\nอุ่นอุณหภูมิ 50 องศาเซลเซียส นานประมาณ 30 \nนาที"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 29,
+    "fact": {
+      "subject": "โรครากเน่าและโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การคลุกสารป้องกันและกำจัดเชื้อรา",
+      "object_type": "Treatment",
+      "evidence": "และ/หรือคลุกสารป้องกันและกำจัดเชื้อรา"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 29,
+    "fact": {
+      "subject": "โรครากเน่าและโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "การถอนต้นพริกไปเผาทำลายแล้วขุดดินบริเวณหลุมปลูกออกไปนอกแปลง",
+      "object_type": "Treatment",
+      "evidence": "โดยการถอนต้นพริกไปเผาทำลาย \nจากนั้นขุดดินบริเวณหลุมปลูกออกไปนอกแปลง"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 30,
+    "fact": {
+      "subject": "CVMV",
+      "subject_type": "Pathogen",
+      "relation": "CAUSED_BY",
+      "object": "โรคใบด่าง",
+      "object_type": "Disease",
+      "evidence": "โรคใบด่างที่เกิดจากเชื้อไวรัส \n\t CVMV (Chilli veinal mottle virus)"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 30,
+    "fact": {
+      "subject": "CVMV",
+      "subject_type": "Pathogen",
+      "relation": "EXHIBITS",
+      "object": "เนื้อใบด่างเขียวซีด",
+      "object_type": "Symptom",
+      "evidence": "เชื้อไวรัสชนิดนี้ทำให้เนื้อใบด่างเขียวซีด"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 30,
+    "fact": {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ปลายใบเล็กลีบ",
+      "object_type": "Symptom",
+      "evidence": "โดยเฉพาะส่วนของปลายใบ ขั้นรุนแรงใบจะเล็ก \nลีบ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 30,
+    "fact": {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ผลรูปร่างบิดเบี้ยว",
+      "object_type": "Symptom",
+      "evidence": "และผิวผลขรุขระ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 30,
+    "fact": {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "การถอนต้นพริกที่เป็นโรคไปเผาทำลาย",
+      "object_type": "Treatment",
+      "evidence": "ถอนต้นพริกที่เป็นโรคใบด่างไปเผาทำลาย"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 30,
+    "fact": {
+      "subject": "เพลี้ยอ่อน",
+      "subject_type": "Pathogen",
+      "relation": "TREATED_BY",
+      "object": "สารสกัดจากพืช เช่น สะเดา หางไหล สาบเสือ ตะไคร้หอม และดาวเรือง",
+      "object_type": "Treatment",
+      "evidence": "ป้องกันและกำจัดเพลี้ยอ่อนด้วยการฉีดพ่นสารสกัดจากพืช เช่น สะเดา หางไหล สาบเสือ"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 31,
+    "fact": {
+      "subject": "โรคใบด่างที่เกิดจากเชื้อไวรัส PVY (Potato virus Y)",
+      "subject_type": "Disease",
+      "relation": "HAS_DISEASE",
+      "object": "พืชอาศัย คือ ต้นยาสูบ และมะเขือเทศ",
+      "object_type": "Crop",
+      "evidence": "และมีพืชอาศัย คือ ต้นยาสูบ และมะเขือเทศ"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 31,
+    "fact": {
+      "subject": "โรคใบด่างที่เกิดจากเชื้อไวรัส CVMV",
+      "subject_type": "Disease",
+      "relation": "HAS_DISEASE",
+      "object": "เพลี้ยอ่อนเป็นแมลงพาหะเช่นเดียวกับโรคใบด่างที่เกิดจากเชื้อไวรัส PVY",
+      "object_type": "Pathogen",
+      "evidence": "มีเพลี้ย\nอ่อนเป็นแมลงพาหะเช่นเดียวกับโรคใบด่างที่เกิดจากเชื้อ\nไวรัส CVMV"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 31,
+    "fact": {
+      "subject": "โรคใบด่างที่เกิดจากเชื้อไวรัส CMV (Cucumber mosaic virus)",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เพลี้ยอ่อนเป็นพาหะนำโรค",
+      "object_type": "Pathogen",
+      "evidence": "และมักเกิดการระบาดร่วมกับพืชตระกูลแตง เพลี้ยอ่อนเป็นพาหะนำโรค"
+    },
+    "reason": "quote not found or unsupported category"
+  },
+  {
+    "page": 31,
+    "fact": {
+      "subject": "การป้องกันและกำจัดโรคใบด่างที่เกิดจากเชื้อไวรัส CVMV",
+      "subject_type": "Treatment",
+      "relation": "RELATED_TO",
+      "object": "ไม่ควรปลูกพริกสายพันธุ์ที่อ่อนแอ ไม่ทนต่อโรคร่วมกับพืชอาหารของเชื้อสาเหตุของโรคนี้ เช่น มันฝรั่ง ยาสูบ และมะเขือเทศ",
+      "object_type": "Topic",
+      "evidence": "ป้องกันและกำจัดด้วยวิธีเดียวกับโรคใบด่างที่เกิดจากเชื้อไวรัส CVMV ไม่ควรปลูกพริกสายพันธุ์ที่อ่อนแอ ไม่ทนต่อโรคร่วมกับพืชอาหารของเชื้อสาเหตุของโรคนี้ เช่น มันฝรั่ง ยาสูบ และมะเขือเทศ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 32,
+    "fact": {
+      "subject": "เส้นใบ",
+      "subject_type": "Symptom",
+      "relation": "EXHIBITS",
+      "object": "ใส เป็นแถบ",
+      "object_type": "Symptom",
+      "evidence": "เกิดอาการเส้นใบมีลักษณะใส เป็นแถบ"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 32,
+    "fact": {
+      "subject": "ผลพริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคใบด่าง",
+      "object_type": "Disease",
+      "evidence": "เกิดอาการเส้นใบมีลักษณะใส เป็นแถบ \nใบและผลด่างเป็นวงซ้อน"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 32,
+    "fact": {
+      "subject": "เนื้อเยื่อพืช",
+      "subject_type": "Symptom",
+      "relation": "EXHIBITS",
+      "object": "สีเหลือง",
+      "object_type": "Symptom",
+      "evidence": "ส่วนเนื้อเยื่อเป็นวงแห้ง\nสีเหลือง"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 33,
+    "fact": {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรควัณโรค (implied by context of virus)",
+      "object_type": "Disease",
+      "evidence": "กำจัดวัชพืชที่เป็นแหล่งอาศัยและสะสม \nของเชื้อไวรัส"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 33,
+    "fact": {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรควัณโรค (implied by context of virus)",
+      "object_type": "Disease",
+      "evidence": "ใช้แผ่นพลาสติกสีบรอนซ์คลุมแปลง\nเพื่อไล่แมลงและลดการระบาดของแมลงพาหะ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 33,
+    "fact": {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรควัณโรค (implied by context of virus)",
+      "object_type": "Disease",
+      "evidence": "กำจัดวัชพืชที่เป็นแหล่งอาศัยและสะสม \nของเชื้อไวรัส"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 33,
+    "fact": {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรควัณโรค (implied by context of virus)",
+      "object_type": "Disease",
+      "evidence": "ใช้แผ่นพลาสติกสีบรอนซ์คลุมแปลง\nเพื่อไล่แมลงและลดการระบาดของแมลงพาหะ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 33,
+    "fact": {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรควัณโรค (implied by context of virus)",
+      "object_type": "Disease",
+      "evidence": "กำจัดวัชพืชที่เป็นแหล่งอาศัยและสะสม \nของเชื้อไวรัส"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 33,
+    "fact": {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรควัณโรค (implied by context of virus)",
+      "object_type": "Disease",
+      "evidence": "ใช้แผ่นพลาสติกสีบรอนซ์คลุมแปลง\nเพื่อไล่แมลงและลดการระบาดของแมลงพาหะ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 35,
+    "fact": {
+      "subject": "โรคลำต้นไหม้",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การไถพลิกดินและตากทิ้งไว้อย่างน้อย 7 วัน",
+      "object_type": "Treatment",
+      "evidence": "ให้ไถพลิกดินและตากทิ้งไว้อย่างน้อย 7 วัน \nก่อนทำแปลงปลูก"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 35,
+    "fact": {
+      "subject": "โรคลำต้นไหม้",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การจัดระบบระบายน้ำในแปลงปลูก",
+      "object_type": "Treatment",
+      "evidence": "จัดการระบบระบายในแปลงปลูก"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 35,
+    "fact": {
+      "subject": "โรคลำต้นไหม้",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "เชื้อราไตรโคเดอร์มา",
+      "object_type": "Pathogen",
+      "evidence": "ใช้เชื้อ\nปฏิปักษ์ คือ เชื้อราไตรโคเดอร์มา"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 35,
+    "fact": {
+      "subject": "โรคลำต้นไหม้",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "แบคทีเรียบาซิลลัส ซับทีลิส",
+      "object_type": "Pathogen",
+      "evidence": "และแบคทีเรีย\nบาซิลลัส ซับทีลิส"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 35,
+    "fact": {
+      "subject": "โรคลำต้นไหม้",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "สารเมทาแล็กซิล",
+      "object_type": "Treatment",
+      "evidence": "หรือสารเมตาแล็กซิล"
+    },
+    "reason": "quote not found or unsupported category"
+  },
+  {
+    "page": 37,
+    "fact": {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "ไส้เดือนฝอย",
+      "object_type": "Disease",
+      "evidence": "หากพบการระบาดของไส้เดือนฝอย"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 37,
+    "fact": {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "TREATED_BY",
+      "object": "ปุ๋ยอินทรีย์ เช่น ปุ๋ยหมักหรือปุ๋ยคอก",
+      "object_type": "Treatment",
+      "evidence": "ใส่ปุ๋ย\nอินทรีย์ เช่น ปุ๋ยหมักหรือปุ๋ยคอก ช่วยลด \nปริมาณไส้เดือนฝอย"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 37,
+    "fact": {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "PREVENTED_BY",
+      "object": "การไถพลิกหน้าดิน ตากแดดทิ้งไว้ 7 วัน และเผาแกลบหรือฟางแห้งนาน 8 ชั่วโมง",
+      "object_type": "Treatment",
+      "evidence": "ก่อนและหลังปลูกควรไถพลิกหน้าดิน ทากแดดทิ้งไว้อย่างน้อย 7 วัน"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 37,
+    "fact": {
+      "subject": "ไส้เดือนฝอย",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "การไม่ไถพลิกหน้าดินและไม่ตากแดดทิ้งไว้ 7 วัน",
+      "object_type": "Topic",
+      "evidence": "หากพบการระบาดของไส้เดือนฝอย"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 37,
+    "fact": {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคพืชทั่วไป",
+      "object_type": "Disease",
+      "evidence": "หมั่นสำรวจแปลงปลูก หากพบ \nต้นที่เป็นโรค ให้ถอนไปเผาทำลาย"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 37,
+    "fact": {
+      "subject": "พริก",
+      "subject_type": "Crop",
+      "relation": "TREATED_BY",
+      "object": "การถอนและเผาทำลาย",
+      "object_type": "Treatment",
+      "evidence": "หากพบ \nต้นที่เป็นโรค ให้ถอนไปเผาทำลาย"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 39,
+    "fact": {
+      "subject": "โรคราน้ำค้าง",
+      "subject_type": "Disease",
+      "relation": "HAS_DISEASE",
+      "object": "พืชผักจำพวกแตง",
+      "object_type": "Crop",
+      "evidence": "โรคที่มักจะเกิดกับพืชในหน้าหนาวที่เป็น\nศัตรูตัวร้าย ซึ่งมักพบเจอบ่อยช่วงที่มีความชื้น\nในอากาศสูง อากาศหนาว น้ำค้างลงจัด และ \nฝนตกชุก คือ โรคราน้ำค้าง มักพบในพืชผัก \nจำพวกแตง"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 39,
+    "fact": {
+      "subject": "โรคราน้ำค้าง",
+      "subject_type": "Disease",
+      "relation": "HAS_DISEASE",
+      "object": "พืชในตระกูลผักกะหล่ำ",
+      "object_type": "Crop",
+      "evidence": "โรคที่มักจะเกิดกับพืชในหน้าหนาวที่เป็น\nศัตรูตัวร้าย ซึ่งมักพบเจอบ่อยช่วงที่มีความชื้น\nในอากาศสูง อากาศหนาว น้ำค้างลงจัด และ \nฝนตกชุก คือ โรคราน้ำค้าง มักพบในพืชผัก \nจำพวกแตง พืชในตระกูลผักกะหล่ำ"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 39,
+    "fact": {
+      "subject": "โรคราน้ำค้าง",
+      "subject_type": "Disease",
+      "relation": "HAS_DISEASE",
+      "object": "ข้าวโพดหวาน",
+      "object_type": "Crop",
+      "evidence": "โรคที่มักจะเกิดกับพืชในหน้าหนาวที่เป็น\nศัตรูตัวร้าย ซึ่งมักพบเจอบ่อยช่วงที่มีความชื้น\nในอากาศสูง อากาศหนาว น้ำค้างลงจัด และ \nฝนตกชุก คือ โรคราน้ำค้าง มักพบในพืชผัก \nจำพวกแตง พืชในตระกูลผักกะหล่ำ ข้าวโพด\nหวาน"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 39,
+    "fact": {
+      "subject": "โรคราน้ำค้าง",
+      "subject_type": "Disease",
+      "relation": "HAS_DISEASE",
+      "object": "ไม้ดอก",
+      "object_type": "Crop",
+      "evidence": "โรคที่มักจะเกิดกับพืชในหน้าหนาวที่เป็น\nศัตรูตัวร้าย ซึ่งมักพบเจอบ่อยช่วงที่มีความชื้น\nในอากาศสูง อากาศหนาว น้ำค้างลงจัด และ \nฝนตกชุก คือ โรคราน้ำค้าง มักพบในพืชผัก \nจำพวกแตง พืชในตระกูลผักกะหล่ำ ข้าวโพด\nหวาน และไม้ดอก"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 39,
+    "fact": {
+      "subject": "โรคราน้ำค้าง",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "แผลสีเหลืองที่ใบเลี้ยงในต้นอ่อน",
+      "object_type": "Symptom",
+      "evidence": "ส่วนใหญ่มักเกิดจากใบที่อยู่ด้านล่างก่อน แล้วลามมาด้านบน ในต้นอ่อนจะเริ่มมีแผลสีเหลืองที่ใบเลี้ยง"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 39,
+    "fact": {
+      "subject": "โรคราน้ำค้าง",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ผลผลิตลดลงและพืชเหี่ยวแห้งตายในที่สุดหากเป็นมากและไม่ได้รับการแก้ไข",
+      "object_type": "Symptom",
+      "evidence": "หากพืชเป็นโรคนี้จะส่งผล\nให้ผลผลิตลดลง ซึ่งหากเป็นมากและไม่ได้รับ\nการแก้ไข จะทำให้พืชเหี่ยวแห้งตายในที่สุด"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 40,
+    "fact": {
+      "subject": "โรคราน้ำค้าง",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "การล้างใบพืช",
+      "object_type": "Treatment",
+      "evidence": "เวลารดน้ำพืช \nให้รดจากส่วนบนของพุ่มลงด้านล่าง\nของต้น เรียกว่า “ล้างใบพืช” ในช่วงเช้า"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 40,
+    "fact": {
+      "subject": "โรคราน้ำค้าง",
+      "subject_type": "Disease",
+      "relation": "PREVENTED_BY",
+      "object": "การล้างใบพืชในช่วงเช้า",
+      "object_type": "Treatment",
+      "evidence": "เป็นหลักการของ นายสมปอง ฉิมดำ \nเกษตรกร ต.บ้านขาว อ.ระโนด จ.สงขลา \nได้แนะนำวิธีการป้องกันโรคราน้ำค้าง\nในพืชปลูก วิธีง่ายๆ โดยเวลารดน้ำพืช \nให้รดจากส่วนบนของพุ่มลงด้านล่าง\nของต้น เรียกว่า “ล้างใบพืช” ในช่วงเช้า"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 40,
+    "fact": {
+      "subject": "การฉีดพ่นน้ำส้มควันไม้",
+      "subject_type": "Treatment",
+      "relation": "TREATED_BY",
+      "object": "ทุก 7-10 วัน",
+      "object_type": "Topic",
+      "evidence": "หลังล้างใบพืชแล้ว ควรฉีดพ่นน้ำส้ม\nควันไม้ อัตรา 100 ซีซี ต่อน้ำเปล่า 12 \nลิตร ฉีดพ่นจากบนลงล่าง คลุมให้ทั่ว \nต้นพืช ทุก 7-10 วัน"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 40,
+    "fact": {
+      "subject": "การปลูกพืชตระกูลแตง",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "โรคราน้ำค้าง",
+      "object_type": "Disease",
+      "evidence": "ซึ่งวิธีนี้ \nใช้กับพืชตระกูลแตงและผักอื่นๆ แล้ว\nจะได้ผลดีมาก เมื่อปฏิบัติเป็นประจำ \nจะช่วยแก้ปัญหาเรื่องโรคราน้ำค้างได้"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 40,
+    "fact": {
+      "subject": "การปลูกผัก",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "โรคราน้ำค้าง",
+      "object_type": "Disease",
+      "evidence": "ซึ่งวิธีนี้ \nใช้กับพืชตระกูลแตงและผักอื่นๆ แล้ว\nจะได้ผลดีมาก เมื่อปฏิบัติเป็นประจำ \nจะช่วยแก้ปัญหาเรื่องโรคราน้ำค้างได้"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 40,
+    "fact": {
+      "subject": "การฉีดพ่นน้ำส้มควันไม้",
+      "subject_type": "Treatment",
+      "relation": "TREATED_BY",
+      "object": "จากบนลงล่าง คลุมให้ทั่วต้นพืช",
+      "object_type": "Topic",
+      "evidence": "หลังล้างใบพืชแล้ว ควรฉีดพ่นน้ำส้ม\nควันไม้ อัตรา 100 ซีซี ต่อน้ำเปล่า 12 \nลิตร ฉีดพ่นจากบนลงล่าง คลุมให้ทั่ว \nต้นพืช ทุก 7-10 วัน"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 40,
+    "fact": {
+      "subject": "การปลูกพืช",
+      "subject_type": "Topic",
+      "relation": "RELATED_TO",
+      "object": "ช่วงที่อากาศหนาวเย็นหรือน้ำค้างลงจัด",
+      "object_type": "Topic",
+      "evidence": "โดยเฉพาะในช่วง ที่อากาศหนาวเย็น หรือน้ำค้างลงจัด หลังล้างใบพืชแล้ว ควรฉีดพ่นน้ำส้ม ควันไม้"
+    },
+    "reason": "quote not found or unsupported category"
+  },
+  {
+    "page": 41,
+    "fact": {
+      "subject": "รากเน่า",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อราพิเทียม",
+      "object_type": "Pathogen",
+      "evidence": "เช่น เชื้อรา\nพิเทียม ทำให้เกิดรากเน่า โคนเน่า โรคยอดเน่าของต้นกล้าในพืชไร่"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 41,
+    "fact": {
+      "subject": "โคนเน่า",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อราพิเทียม",
+      "object_type": "Pathogen",
+      "evidence": "เช่น เชื้อรา\nพิเทียม ทำให้เกิดรากเน่า โคนเน่า โรคยอดเน่าของต้นกล้าในพืชไร่"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 41,
+    "fact": {
+      "subject": "โรครากเน่าโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เชื้อราไฟทอฟทอรา",
+      "object_type": "Pathogen",
+      "evidence": "เชื้อราไฟทอปทอรา ทำให้เกิดโรครากเน่าโคนเน่าในไม้ผล"
+    },
+    "reason": "quote not found or unsupported category"
+  },
+  {
+    "page": 42,
+    "fact": {
+      "subject": "พืช",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคน้ำค้าง",
+      "object_type": "Disease",
+      "evidence": "ควรระวัง \nโรคราแป้ง โรคราน้ำค้าง"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 44,
+    "fact": {
+      "subject": "สูตรน้ำส้มสายชู",
+      "subject_type": "Treatment",
+      "relation": "TREATED_BY",
+      "object": "น้ำยาล้างจาน",
+      "object_type": "Treatment",
+      "evidence": "•\tละลายทุกอย่างให้เข้ากัน นำไปพ่น"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 44,
+    "fact": {
+      "subject": "สูตรน้ำส้มสายชู",
+      "subject_type": "Treatment",
+      "relation": "TREATED_BY",
+      "object": "เกลือแกง",
+      "object_type": "Topic",
+      "evidence": "•\tละลายทุกอย่างให้เข้ากัน นำไปพ่น"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 44,
+    "fact": {
+      "subject": "สูตรน้ำส้มสายชู",
+      "subject_type": "Treatment",
+      "relation": "TREATED_BY",
+      "object": "น้ำส้มสายชู",
+      "object_type": "Topic",
+      "evidence": "•\tละลายทุกอย่างให้เข้ากัน นำไปพ่น"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 44,
+    "fact": {
+      "subject": "สูตรน้ำหัวผักกาด",
+      "subject_type": "Treatment",
+      "relation": "TREATED_BY",
+      "object": "ผงกลูโคส",
+      "object_type": "Topic",
+      "evidence": "•\t นำส่วนผสมทั้งหมดผสมกัน หมักทิ้งไว้ 1 คืน"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 44,
+    "fact": {
+      "subject": "สูตรน้ำหัวผักกาด",
+      "subject_type": "Treatment",
+      "relation": "TREATED_BY",
+      "object": "น้ำมะพร้าวอ่อน",
+      "object_type": "Topic",
+      "evidence": "•\t นำส่วนผสมทั้งหมดผสมกัน หมักทิ้งไว้ 1 คืน"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 44,
+    "fact": {
+      "subject": "สูตรน้ำหัวผักกาด",
+      "subject_type": "Treatment",
+      "relation": "TREATED_BY",
+      "object": "น้ำหัวผักกาด",
+      "object_type": "Topic",
+      "evidence": "•\t นำส่วนผสมทั้งหมดผสมกัน หมักทิ้งไว้ 1 คืน"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 46,
+    "fact": {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรครากเน่าโคนเน่า",
+      "object_type": "Disease",
+      "evidence": "ดูแลทุเรียนอย่างไร? เมื่อเป็น \"โรครากเน่าโคนเน่า\" ในช่วงที่อากาศแปรปรวน ปริมาณน้ำฝนมาก และฝนตกอย่างต่อเนื่อง ทำให้เกิดความชื้นในอากาศสูง"
+    },
+    "reason": "quote not found or unsupported category"
+  },
+  {
+    "page": 46,
+    "fact": {
+      "subject": "ใบอ่อน",
+      "subject_type": "Symptom",
+      "relation": "EXHIBITS",
+      "object": "เน่า",
+      "object_type": "Symptom",
+      "evidence": "การเข้าทำลายของโรคเริ่มที่ใบและกิ่งอ่อนมีอาการเน่า"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 46,
+    "fact": {
+      "subject": "ใบอ่อน",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "เหี่ยวเหลือง",
+      "object_type": "Symptom",
+      "evidence": "การเข้าทำลายของโรคเริ่มที่ใบและกิ่งอ่อนมีอาการเน่า ใบอ่อน\nเหี่ยวเหลือง"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 46,
+    "fact": {
+      "subject": "เส้นใบ",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "สีน้ำตาลดำ",
+      "object_type": "Symptom",
+      "evidence": "และเปลี่ยนเป็นสีน้ำตาลดำ \nเส้นใบมีสีน้ำตาลดำ"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 46,
+    "fact": {
+      "subject": "กิ่ง ลำต้น และโคนต้น",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "จุดฉ่ำน้ำสีน้ำตาล",
+      "object_type": "Symptom",
+      "evidence": "กิ่ง ลำต้น และโคนต้นมีจุดฉ่ำน้ำสีน้ำตาล"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 46,
+    "fact": {
+      "subject": "เปลือก",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "เน่า",
+      "object_type": "Symptom",
+      "evidence": "เมื่อถากเปลือกจะพบว่าเปลือกเน่า"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 46,
+    "fact": {
+      "subject": "เนื้อไม้",
+      "subject_type": "Crop",
+      "relation": "EXHIBITS",
+      "object": "สีน้ำตาล",
+      "object_type": "Symptom",
+      "evidence": "ส่วนที่เน่ามีกลิ่นหืน แผลเน่าจะลุกลามรวดเร็ว มักพบ\nโรคร่วมกับการเข้าทำลายของมอดเจาะลำต้นทุเรียน และจะระบาด\nในช่วงฤดูฝนที่มีฝนตกชุกติดต่อกัน"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 47,
+    "fact": {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "เชื้อราไตรโคเดอร์มาฮาร์เซียนัม",
+      "object_type": "Pathogen",
+      "evidence": "ใช้จุลินทรีย์ปฏิปักษ์แบบใช้เชื้อราไตรโคเดอร์มา \nฮาร์เซียนัม นำหัวเชื้อมาเพิ่มปริมาณในข้าวสุก"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 47,
+    "fact": {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "แบคทีเรียบาซิลลัส ซับทีลิส",
+      "object_type": "Pathogen",
+      "evidence": "แบบใช้เชื้อ\nแบคทีเรียบาซิลลัส ซับทีลิส ให้ใช้เข็มฉีดยาใส่สารละลาย\nของเชื้อ"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 47,
+    "fact": {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "TREATED_BY",
+      "object": "สารฟอสโฟนิก แอซิด 40% เอสแอล ผสมน้ำสะอาด อัตรา 1:1",
+      "object_type": "Treatment",
+      "evidence": "หากพบโรคให้ตัดแต่งส่วนที่เป็นโรค นำไปเผา\nทำลายนอกแปลงปลูก จากนั้นให้ฉีดด้วยสารฟอสโฟนิก \nแอซิด 40% เอสแอล ผสมน้ำสะอาด"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 47,
+    "fact": {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "TREATED_BY",
+      "object": "สารป้องกันกำจัดโรคพืชฟอสอีทิล-อะลูมิเนียม 80% ดับเบิลยูพี",
+      "object_type": "Treatment",
+      "evidence": "จากนั้นพ่นให้ทั่วทรงพุ่มด้วย\nสารป้องกันกำจัดโรคพืชฟอสอีทิล-อะลูมิเนียม 80% \nดับเบิลยูพี"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 47,
+    "fact": {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "TREATED_BY",
+      "object": "สารเมทาแลกซิล 25% ดับเบิลยูพี",
+      "object_type": "Treatment",
+      "evidence": "ใช้สลับกับสารเมทาแลกซิล 25% ดับเบิลยูพี อัตรา 30-50 \nกรัมต่อน้ำ 20 ลิตร"
+    },
+    "reason": "invalid relation endpoint types or disease name"
+  },
+  {
+    "page": 47,
+    "fact": {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "TREATED_BY",
+      "object": "ผงเชื้อแบคทีเรียบาซิลลัส ซับทีลิสผสมสารจับใบ",
+      "object_type": "Treatment",
+      "evidence": "โดยจะต้องผสมสารจับใบ อัตรา \n5 ซีซีต่อน้ำ 20 ลิตร ราดดินบริเวณโคนต้นด้วยผงเชื้อ"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 48,
+    "fact": {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "มอดเจาะกิ่ง",
+      "object_type": "Disease",
+      "evidence": "ถ้าพบกิ่งแห้งที่มีรอยเจาะทำลายของมอด ให้ตัด\nไปเผาไฟทิ้ง"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 48,
+    "fact": {
+      "subject": "มอดเจาะกิ่ง",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "คลอร์ไพริฟอส 40% อีซี",
+      "object_type": "Treatment",
+      "evidence": "ให้พ่น\nบนกิ่งใหญ่หรือลำต้นที่มีรูมอดเจาะด้วยสารฆ่าแมลง \nคลอร์ไพริฟอส 40% อีซี"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 48,
+    "fact": {
+      "subject": "โรคเข้าทำลายรุนแรงมาก",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "การขุดและเผาทำลายต้นทุเรียน",
+      "object_type": "Treatment",
+      "evidence": "ส่วนต้นทุเรียนที่เป็นโรครุนแรงมากหรือ \nยืนต้นแห้งตาย ให้ขุดออก แล้วนำไปเผาทำลาย \nนอกแปลง"
+    },
+    "reason": "entity name not found in source page"
+  },
+  {
+    "page": 20,
+    "fact": {
+      "subject": "โรคร้ายในมะนาว",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ผลผลิตลดลง",
+      "object_type": "Symptom",
+      "evidence": "ถ้าระบาด \nมากๆ อาจทำให้ผลผลิตลดลง",
+      "page": 20,
+      "source": "a234df1a468da4ea3fbc48f9617d8a42bfe56948ae9438234c92cc39b6591d49",
+      "id": "c5f966df27392a633b4c3829"
+    },
+    "reason": "Codex source review: Generic heading was treated as a disease name; reduced yield is an outcome."
+  },
+  {
+    "page": 20,
+    "fact": {
+      "subject": "โรคแคงเกอร์",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ขายไม่ได้ราคา",
+      "object_type": "Symptom",
+      "evidence": "ถ้าระบาด \nมากๆ อาจทำให้ผลผลิตลดลง ขายไม่ได้ราคา",
+      "page": 20,
+      "source": "a234df1a468da4ea3fbc48f9617d8a42bfe56948ae9438234c92cc39b6591d49",
+      "id": "a0f5abe7dd153b3da29a2e5d"
+    },
+    "reason": "Codex source review: Low selling price is an economic outcome, not a disease symptom."
+  },
+  {
+    "page": 20,
+    "fact": {
+      "subject": "โรคแคงเกอร์ในมะนาว",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "การระบาดในช่วงแรกๆ ของโรค",
+      "object_type": "Symptom",
+      "evidence": "โดย 2 วิธีนี้จะใช้ได้ผลกับการระบาดในช่วงแรกๆ \nของโรคแคงเกอร์ในมะนาว",
+      "page": 20,
+      "source": "a234df1a468da4ea3fbc48f9617d8a42bfe56948ae9438234c92cc39b6591d49",
+      "id": "df515bcf1c517f7d5fee849c"
+    },
+    "reason": "Codex source review: Early outbreak stage is not a symptom."
+  },
+  {
+    "page": 20,
+    "fact": {
+      "subject": "โรคร้ายในมะนาว",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "ทางบาดแผลของพืช",
+      "object_type": "Symptom",
+      "evidence": "เข้าทำลาย \nทางบาดแผลของพืช",
+      "page": 20,
+      "source": "a234df1a468da4ea3fbc48f9617d8a42bfe56948ae9438234c92cc39b6591d49",
+      "id": "823e2b679fea8350b3eafadf"
+    },
+    "reason": "Codex source review: Entry through wounds is a route of infection, not a symptom."
+  },
+  {
+    "page": 30,
+    "fact": {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "EXHIBITS",
+      "object": "แพร่เชื้อด้วยการสัมผัส",
+      "object_type": "Symptom",
+      "evidence": "แพร่เชื้อ\nด้วยการสัมผัส",
+      "page": 30,
+      "source": "a234df1a468da4ea3fbc48f9617d8a42bfe56948ae9438234c92cc39b6591d49",
+      "id": "91be09de968602140c0252e9"
+    },
+    "reason": "Codex source review: Contact transmission is not a symptom."
+  },
+  {
+    "page": 30,
+    "fact": {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เพลี้ยอ่อน",
+      "object_type": "Pathogen",
+      "evidence": "โดยมีเพลี้ยอ่อนเป็นแมลงพาหะ",
+      "page": 30,
+      "source": "a234df1a468da4ea3fbc48f9617d8a42bfe56948ae9438234c92cc39b6591d49",
+      "id": "e39e1807aaa78d73d423f6d2"
+    },
+    "reason": "Codex source review: Aphids are transmission vectors; the stated cause is a virus."
+  },
+  {
+    "page": 32,
+    "fact": {
+      "subject": "โรคใบด่าง",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "เพลี้ยอ่อน",
+      "object_type": "Pathogen",
+      "evidence": "มีเพลี้ย\nอ่อนเป็นพาหะนำโรค",
+      "page": 32,
+      "source": "a234df1a468da4ea3fbc48f9617d8a42bfe56948ae9438234c92cc39b6591d49",
+      "id": "7bf5536be86c72e7e0870ce1"
+    },
+    "reason": "Codex source review: Aphids are transmission vectors; the stated cause is TEV."
+  },
+  {
+    "page": 32,
+    "fact": {
+      "subject": "โรคใบหงิกเหลือง",
+      "subject_type": "Disease",
+      "relation": "CAUSED_BY",
+      "object": "แมลงหวี่ขาว",
+      "object_type": "Pathogen",
+      "evidence": "โรคนี้มีแมลงหวี่ขาวเป็นพาหะ",
+      "page": 32,
+      "source": "a234df1a468da4ea3fbc48f9617d8a42bfe56948ae9438234c92cc39b6591d49",
+      "id": "feb82e24e5132e2e78a79192"
+    },
+    "reason": "Codex source review: Whiteflies are transmission vectors; the stated cause is a virus."
+  },
+  {
+    "page": 42,
+    "fact": {
+      "subject": "โรครากเน่าโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "ปุ๋ยหมัก ปุ๋ยคอก",
+      "object_type": "Treatment",
+      "evidence": "นำไตรโคเดอร์มา 1 ส่วน คลุกเคล้า\nผสมกับปุ๋ยหมัก ปุ๋ยคอก",
+      "page": 42,
+      "source": "a234df1a468da4ea3fbc48f9617d8a42bfe56948ae9438234c92cc39b6591d49",
+      "id": "a6ba8613c0795e5af477ba87"
+    },
+    "reason": "Codex source review: The source uses compost as a carrier mixture with Trichoderma, not a standalone treatment."
+  },
+  {
+    "page": 42,
+    "fact": {
+      "subject": "โรครากเน่าโคนเน่า",
+      "subject_type": "Disease",
+      "relation": "TREATED_BY",
+      "object": "หินแร่ภูเขาไฟพูมิซซัลเฟอร์",
+      "object_type": "Treatment",
+      "evidence": "อาจจะบวกหินแร่ \nภูเขาไฟพูมิซซัลเฟอร์เพิ่มอีก",
+      "page": 42,
+      "source": "a234df1a468da4ea3fbc48f9617d8a42bfe56948ae9438234c92cc39b6591d49",
+      "id": "8eade18d3f1ed4d0ebe09b5e"
+    },
+    "reason": "Codex source review: Optional ingredient in a mixture was asserted as a standalone treatment."
+  },
+  {
+    "page": 46,
+    "fact": {
+      "subject": "โรค",
+      "subject_type": "Disease",
+      "relation": "RELATED_TO",
+      "object": "มอดเจาะลำต้นทุเรียน",
+      "object_type": "Pathogen",
+      "evidence": "มักพบ\nโรคร่วมกับการเข้าทำลายของมอดเจาะลำต้นทุเรียน",
+      "page": 46,
+      "source": "a234df1a468da4ea3fbc48f9617d8a42bfe56948ae9438234c92cc39b6591d49",
+      "id": "c71de59d7af9e54a9dca7582"
+    },
+    "reason": "Codex source review: Generic word disease does not identify the disease entity."
+  },
+  {
+    "page": 47,
+    "fact": {
+      "subject": "ทุเรียน",
+      "subject_type": "Crop",
+      "relation": "HAS_DISEASE",
+      "object": "โรคเข้าทำลายไม่รุนแรง",
+      "object_type": "Disease",
+      "evidence": "กรณีโรคเข้าทำลายไม่รุนแรง\n\t ใช้จุลินทรีย์ปฏิปักษ์แบบใช้เชื้อราไตรโคเดอร์มา \nฮาร์เซียนัม",
+      "page": 47,
+      "source": "a234df1a468da4ea3fbc48f9617d8a42bfe56948ae9438234c92cc39b6591d49",
+      "id": "09ec9749b99969f5b381e048"
+    },
+    "reason": "Codex source review: Disease severity heading was incorrectly treated as the name of a disease."
+  }
+]

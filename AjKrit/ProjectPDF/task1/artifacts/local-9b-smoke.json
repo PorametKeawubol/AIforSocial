@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.5:9b",
+  "created_at": "2026-09-14T08:01:49.555963544Z",
+  "message": {
+    "role": "assistant",
+    "content": "```json\n{\n  \"subject\": \"การแจ้งความ\",\n  \"relation\": \"ไม่ต้อง\",\n  \"object\": \"รอครบ 24 ชั่วโมง\"\n}\n```"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9582328903,
+  "load_duration": 8203414213,
+  "prompt_eval_count": 42,
+  "prompt_eval_duration": 173456000,
+  "eval_count": 40,
+  "eval_duration": 1137503000,
+  "wall_seconds": 9.59959626197815
+}
