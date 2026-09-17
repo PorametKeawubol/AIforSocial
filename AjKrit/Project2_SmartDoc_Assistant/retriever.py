@@ -262,7 +262,7 @@ class HybridRetriever:
             index_dir=index_dir,
         )
 
-    def search(self, question: str, top_k: int | None = None, candidate_k: int = 24) -> list[RetrievalResult]:
+    def search(self, question: str, top_k: int | None = None, candidate_k: int = 24, rerank_k: int = 6) -> list[RetrievalResult]:
         """Return fused results with dense/sparse ranks and optional cross-encoder scores."""
 
         question = question.strip()
@@ -323,12 +323,17 @@ class HybridRetriever:
 
         reranker = self._load_reranker()
         if reranker is not None and results:
-            pairs = [(question, result.chunk.text) for result in results[: max(requested_k * 2, 8)]]
+            # Keep enough candidates for complex questions requesting more than six hits.
+            pool = results[:max(requested_k, rerank_k)]
+            pairs = [(question, result.chunk.text) for result in pool]
             try:
                 scores = reranker.predict(pairs)
-                for result, score in zip(results, scores):
+                if len(scores) != len(pool) or not np.isfinite(scores).all():
+                    raise ValueError("Reranker returned invalid scores")
+                for result, score in zip(pool, scores):
                     result.rerank_score = float(score)
-                results.sort(key=lambda item: item.final_score, reverse=True)
+                # Cross-encoder scores and unscored RRF scores are not comparable.
+                results = sorted(pool, key=lambda item: item.final_score, reverse=True)
             except Exception as exc:
                 LOGGER.warning("Cross-encoder scoring failed; retaining RRF order: %s", exc)
         return results[:requested_k]

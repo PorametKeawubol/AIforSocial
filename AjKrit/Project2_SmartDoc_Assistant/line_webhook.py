@@ -168,7 +168,7 @@ def create_app(assistant: SmartDocAssistant, config: Settings):
             destination = source.get("groupId") or source.get("roomId") or source.get("userId")
             if not destination:
                 continue
-            # Ack immediately; Qwen3.8-27B may take tens of seconds on the target laptop.
+            # Navigation replies immediately; RAG acknowledges before background inference.
             reply_token = event.get("replyToken")
             navigation = ux.navigation("ถาม Assistant" if _is_greeting(text) else text)
             if navigation:
@@ -182,12 +182,13 @@ def create_app(assistant: SmartDocAssistant, config: Settings):
                         raise HTTPException(status_code=502, detail="LINE navigation delivery failed") from exc
                 continue
             key = conversation_key(source)
-            if reply_token:
+            clearing = text in ("ล้างประวัติ", "เริ่มใหม่")
+            if reply_token and not clearing:
                 try:
                     await _line_post(
                         LINE_REPLY_URL,
                         config.line_access_token,
-                        {"replyToken": reply_token, "messages": [{"type": "text", "text": "กำลังล้างประวัติครับ" if text in ("ล้างประวัติ", "เริ่มใหม่") else config.line_ack_text}]},
+                        {"replyToken": reply_token, "messages": [{"type": "text", "text": config.line_ack_text}]},
                     )
                 except Exception:
                     LOGGER.exception("LINE acknowledgement failed")

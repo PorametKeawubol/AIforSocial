@@ -16,12 +16,40 @@ from assistant import SmartDocAssistant
 from chat_history import ChatHistory, conversation_key, resolve_followup
 from config import settings
 from line_ux import CATEGORIES, LineUX, quick_reply, rich_menu_payload
-from line_webhook import create_app
+from line_webhook import create_app, LINE_REPLY_URL, LINE_PUSH_URL
 from llm import OllamaClient
 from models import AnswerResult, DocumentChunk, RetrievalResult
 
 
 class UXTests(unittest.TestCase):
+    def test_acknowledgement_without_loading(self):
+        for source_type in ("user", "group"):
+            with self.subTest(source_type=source_type), tempfile.TemporaryDirectory() as directory:
+                config = replace(settings, artifact_dir=Path(directory), line_channel_secret="test-secret", line_access_token="test-token")
+                assistant = Mock()
+                assistant.answer.return_value = AnswerResult(question="คนหาย", answer="คำตอบ", grounded=False)
+                with patch("line_webhook._line_post", new_callable=AsyncMock) as send:
+                    client = TestClient(create_app(assistant, config))
+                    def post(text, number):
+                        event = {"type": "message", "webhookEventId": str(number), "replyToken": "reply",
+                                 "source": {"type": source_type, "userId": "user", **({"groupId": "group"} if source_type == "group" else {})},
+                                 "message": {"type": "text", "text": text}}
+                        body = json.dumps({"events": [event]}).encode()
+                        signature = base64.b64encode(hmac.new(b"test-secret", body, hashlib.sha256).digest()).decode()
+                        return client.post("/callback", content=body, headers={"x-line-signature": signature})
+                    self.assertEqual(post("คนหาย", 1).status_code, 200)
+                    urls = [c.args[0] for c in send.call_args_list]
+                    self.assertEqual(urls, [LINE_REPLY_URL, LINE_PUSH_URL])
+                    self.assertEqual(send.call_args_list[0].args[2]["messages"][0]["text"], config.line_ack_text)
+                    self.assertEqual(assistant.answer.call_count, 1)
+                    send.reset_mock()
+                    self.assertEqual(post("สวัสดี", 2).status_code, 200)
+                    self.assertEqual([c.args[0] for c in send.call_args_list], [LINE_REPLY_URL])
+                    self.assertEqual(assistant.answer.call_count, 1)
+                    send.reset_mock()
+                    self.assertEqual(post("ล้างประวัติ", 3).status_code, 200)
+                    self.assertEqual([c.args[0] for c in send.call_args_list], [LINE_PUSH_URL])
+
     def test_history_persists_bounds_expires_and_clears(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "history.sqlite3"

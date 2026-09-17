@@ -4,16 +4,58 @@ import base64
 import hashlib
 import hmac
 import unittest
+from unittest.mock import Mock
+
+import numpy as np
 
 from assistant import SmartDocAssistant, _is_greeting
 from ingest import PageText, build_chunks, clean_text, recursive_character_split
 from line_webhook import verify_signature
 from llm import FALLBACK, OllamaClient, citation_sources, format_context
 from models import DocumentChunk, RetrievalResult
-from retriever import dynamic_top_k, expand_thai_query, reciprocal_rank_fusion, thai_tokens
+from retriever import HybridRetriever, dynamic_top_k, expand_thai_query, reciprocal_rank_fusion, thai_tokens
 
 
 class CoreTests(unittest.TestCase):
+    def _mock_retriever(self):
+        index, bm25 = Mock(), Mock()
+        index.search.return_value = (np.array([[.9 - i * .05 for i in range(8)]]), np.array([list(range(8))]))
+        bm25.get_scores.return_value = np.arange(8, 0, -1)
+        r = HybridRetriever([DocumentChunk(str(i), f"text {i}") for i in range(8)], "test", "test", index, bm25)
+        r._encoder = Mock()
+        r._encoder.encode.return_value = np.ones((1, 2), dtype="float32")
+        r._reranker = Mock()
+        r._reranker.predict.side_effect = lambda pairs: [-10. + i for i in range(len(pairs))]
+        return r
+
+    def test_rerank_default_six_does_not_mix_unscored_rrf(self):
+        r = self._mock_retriever()
+        hits = r.search("test", top_k=5)
+        self.assertEqual(len(r._reranker.predict.call_args.args[0]), 6)
+        self.assertEqual(len(hits), 5)
+        self.assertTrue(all(h.rerank_score is not None for h in hits))
+        self.assertEqual(hits[0].chunk.chunk_id, "5")
+
+    def test_rerank_pool_grows_for_requested_results(self):
+        r = self._mock_retriever()
+        self.assertEqual(len(r.search("test", top_k=8)), 8)
+        self.assertEqual(len(r._reranker.predict.call_args.args[0]), 8)
+
+    def test_rerank_failure_preserves_rrf_order(self):
+        r = self._mock_retriever()
+        r._reranker.predict.side_effect = RuntimeError("test failure")
+        hits = r.search("test", top_k=5)
+        self.assertEqual(hits[0].chunk.chunk_id, "0")
+        self.assertTrue(all(h.rerank_score is None for h in hits))
+
+    def test_invalid_rerank_scores_preserve_rrf_order(self):
+        r = self._mock_retriever()
+        r._reranker.predict.side_effect = None
+        r._reranker.predict.return_value = [float("nan")] * 6
+        hits = r.search("test", top_k=5)
+        self.assertEqual(hits[0].chunk.chunk_id, "0")
+        self.assertTrue(all(h.rerank_score is None for h in hits))
+
     def test_pdf_cleanup_is_conservative(self):
         text = "สํานักงานตํารวจ\nกdำหนด\n\n\nข้อความ"
         cleaned = clean_text(text)

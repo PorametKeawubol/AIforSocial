@@ -4,6 +4,14 @@ SmartDoc Assistant — คำสั่งรัน RAG + LINE UX + Chat History
 ไม่ต้อง build index หรือติดตั้ง Rich Menu ใหม่ทุกครั้ง
 ไฟล์นี้เป็นคู่มือ ให้คัดลอกเฉพาะคำสั่ง ไม่ใช่สคริปต์สำหรับ bash command.txt
 
+ค่าปัจจุบัน: Qwen qwen3.5:9b + BGE-M3 + BAAI/bge-reranker-v2-m3 + FAISS/BM25
+Rerank ค่าเริ่มต้น 6 chunks; ถ้า top_k เกิน 6 จะประเมินอย่างน้อยเท่ากับ top_k
+ไม่ต้องเพิ่ม RERANK_K ใน .env — ตอนนี้ค่าอยู่ใน HybridRetriever.search()
+หลังลด rerank ไม่ต้อง rebuild index; ต้อง restart webhook เพื่อโหลดโค้ดใหม่
+LINE RAG ใช้ข้อความรับคำถามจาก LINE_ACK_TEXT ใน .env ทั้งแชตส่วนตัวและกลุ่ม
+ปิด loading และข้อความแจ้งรอเกิน 30 วินาทีแล้ว; ตอบเสร็จส่งผ่าน Push ตามเดิม
+ทักทาย/เมนูตอบทันที; ล้างประวัติส่งข้อความยืนยันโดยไม่ส่ง acknowledgement ซ้ำ
+
 1. เข้า project — ใช้ absolute path นี้ในแต่ละ terminal เพื่อไม่เจอปัญหา cd ซ้ำ:
 cd /home/porametk/Desktop/AIforSocial/AIforSocial/AjKrit/Project2_SmartDoc_Assistant
 
@@ -32,8 +40,9 @@ curl http://127.0.0.1:11434/api/tags
 ollama list
 
 ดาวน์โหลดเฉพาะโมเดลที่ยังไม่มี — เลือกตัวที่จะใช้:
-ollama pull hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M
 ollama pull qwen3.5:9b
+# ทางเลือกสำหรับทดสอบ offline ไม่จำเป็นสำหรับ production
+ollama pull hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M
 คำสั่งดาวน์โหลดโมเดลต้องมีอินเทอร์เน็ตและพื้นที่ดิสก์เพียงพอ
 
 4. Terminal ทดสอบ: ทดลองถาม (CLI แต่ละคำสั่งเป็นคำถามเดี่ยว ไม่เก็บ chat history)
@@ -52,13 +61,14 @@ OLLAMA_MODEL=qwen3.5:9b \
 .venv/bin/python evaluate.py \
   --out artifacts/evaluation_retrieval.json
 
-# Full evaluation 9B รวม BERTScore และ LLM judge
+# Full evaluation ของระบบปัจจุบัน (rerank 6) รวม BERTScore และ LLM judge
+# ใช้ 420 tokens ให้ตรงกับ production; ไม่ทับผลก่อนลด rerank
 OLLAMA_MODEL=qwen3.5:9b \
 OLLAMA_TIMEOUT_SECONDS=180 \
-MAX_ANSWER_TOKENS=240 \
+MAX_ANSWER_TOKENS=420 \
   .venv/bin/python evaluate.py \
   --run-llm --bert-score --llm-judge \
-  --out artifacts/evaluation_9b.json
+  --out artifacts/evaluation_9b_rerank6.json
 
 # Full evaluation 27B — ใช้เวลานานมาก
 OLLAMA_MODEL=hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M \
@@ -69,7 +79,7 @@ OLLAMA_TIMEOUT_SECONDS=600 \
 แต่ละ evaluation จะสร้าง JSON, CSV และตาราง Markdown ตามชื่อ output
 ต้องเปิด Ollama ก่อน full evaluation; ไม่ควรรันพร้อมรับแชต LINE บนเครื่องเดียวกัน
 
-6. Terminal 2: เปิด LINE webhook — เลือกหนึ่งคำสั่ง แล้วเปิดค้างไว้:
+6. เปิด LINE webhook — เลือกแบบ service หรือแบบ terminal อย่างใดอย่างหนึ่ง:
 # ตอนนี้ webhook รันเป็น transient user-service smartdoc-webhook อยู่ ไม่ต้องเปิด uvicorn ซ้ำ
 # หลังแก้ .env ให้ใช้ restart; ดู log ด้วย journalctl; ไม่ได้ตั้งให้เปิดอัตโนมัติหลังบูต
 systemctl --user status smartdoc-webhook.service --no-pager
@@ -77,6 +87,18 @@ systemctl --user restart smartdoc-webhook.service
 journalctl --user -u smartdoc-webhook.service -n 50 --no-pager
 # ถ้าจะกลับไปรันแบบ terminal ตามคำสั่งข้างล่าง ให้หยุด service ก่อน
 systemctl --user stop smartdoc-webhook.service
+
+# เปิด user-service ใหม่หลังหยุด หรือหลัง reboot เมื่อ unit เดิมหายไป
+# รันจาก directory project ตามข้อ 1; ห้ามเปิดซ้ำหาก port 8000 ถูกใช้อยู่
+systemd-run --user --unit=smartdoc-webhook --collect \
+  --working-directory=/home/porametk/Desktop/AIforSocial/AIforSocial/AjKrit/Project2_SmartDoc_Assistant \
+  --property=Restart=on-failure --property=RestartSec=3 \
+  /home/porametk/Desktop/AIforSocial/AIforSocial/AjKrit/Project2_SmartDoc_Assistant/.venv/bin/uvicorn \
+  app:app --host 127.0.0.1 --port 8000
+เป็น transient service: ไม่เปิดเองหลัง reboot และ unit ถูกเก็บกวาดเมื่อหยุด
+restart ใช้เมื่อ unit ยังอยู่; หากขึ้น Unit not found ให้เปิดใหม่ด้วย systemd-run
+
+# ทางเลือกแบบ terminal: หยุด service ก่อน แล้วเลือกคำสั่ง uvicorn ด้านล่าง
 
 # ใช้โมเดลตาม OLLAMA_MODEL ใน .env
 .venv/bin/uvicorn app:app --host 127.0.0.1 --port 8000
@@ -88,7 +110,7 @@ OLLAMA_MODEL=hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M \
 ปรับ history ได้ใน .env:
 HISTORY_MAX_TURNS=4
 HISTORY_TTL_SECONDS=86400
-หลังแก้ .env หรือโค้ด ให้กด Ctrl+C ที่ terminal webhook แล้วรันใหม่
+หลังแก้ .env หรือโค้ด: ถ้าใช้ service ให้ restart; ถ้าใช้ terminal ให้ Ctrl+C แล้วรันใหม่
 ไม่ต้องเปิด webhook สองตัวบน port 8000 พร้อมกัน
 
 7. Terminal 3: เปิด Cloudflare tunnel
@@ -110,7 +132,7 @@ curl http://127.0.0.1:8000/health
 Rich Menu ติดตั้งแล้ว รันอีกเมื่อเปลี่ยนรูป/พื้นที่กด/การทำงานของปุ่ม
 สคริปต์อ่าน assets/richmenu_thaipol.png และแปลงรูปสำหรับอัปโหลดโดยไม่แก้ไฟล์ต้นฉบับ
 ผู้ใช้ที่มี per-user Rich Menu อาจยังเห็นเมนูเดิมแทน default
-หลังเปลี่ยนโค้ด ให้รีสตาร์ต uvicorn แล้วเปิดแชต LINE ใหม่
+หลังเปลี่ยนโค้ด ให้รีสตาร์ต webhook ตามรูปแบบที่เลือก แล้วเปิดแชต LINE ใหม่
 เลือกหมวดเพื่อดู Flex Carousel หรือพิมพ์คำถามได้เลย
 กด Quick Reply หรือถามต่อ เช่น ต้องเตรียมอะไร / ไปที่ไหน
 พิมพ์ ล้างประวัติ เพื่อเริ่มเรื่องใหม่
@@ -162,6 +184,14 @@ ollama pull ministral-3:8b
 # หากหยุดกลางทาง รันคำสั่งเดิมซ้ำได้ จะอ่าน checkpoint และทำต่อ
 # หากเปลี่ยนชุดคำถามหรือพารามิเตอร์ ให้แยก output ใหม่ เช่น
 .venv/bin/python benchmark_models.py --stage all --out artifacts/model_benchmark_v2
+
+# สำคัญหลังเปลี่ยน rerank: model_benchmark เดิมใช้ frozen_contexts ของรอบเก่า
+# รันคำสั่งเดิมจะใช้ checkpoint/คะแนนเดิม ไม่ใช่ประเมิน pipeline ใหม่
+# ถ้าจะสร้าง context และผลเปรียบเทียบใหม่ภายใต้ rerank 6 ให้ใช้ output แยก:
+.venv/bin/python benchmark_models.py --stage llms \
+  --out artifacts/model_benchmark_rerank6
+คำสั่งนี้รัน LLM ทั้ง 3 ตัวรวม 27B จึงใช้เวลานาน; ถ้าต้องการตรวจเฉพาะ production
+ให้ใช้ full evaluation 9B ในข้อ 5 แทน
 
 ผลลัพธ์: artifacts/model_benchmark/comparison.md, comparison.json, embeddings.csv, llms.csv
 rows.json และ *_answers.json เก็บผลรายคำถาม; frozen_contexts.json เก็บหลักฐานร่วม
