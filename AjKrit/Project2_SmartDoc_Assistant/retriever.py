@@ -272,7 +272,7 @@ class HybridRetriever:
             raise RuntimeError("Retriever is not built or loaded")
         requested_k = top_k or dynamic_top_k(question)
         candidate_k = max(candidate_k, requested_k * 4)
-        retrieval_question = expand_thai_query(question)
+        retrieval_question = expand_thai_query(question)    
         encoder = self._load_encoder()
         query_vector = encoder.encode(
             [retrieval_question], normalize_embeddings=True, convert_to_numpy=True

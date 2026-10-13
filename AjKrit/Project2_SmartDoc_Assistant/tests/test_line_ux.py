@@ -22,6 +22,15 @@ from models import AnswerResult, DocumentChunk, RetrievalResult
 
 
 class UXTests(unittest.TestCase):
+    def test_short_explanation_quick_reply_uses_context(self):
+        actions = [i["action"] for i in quick_reply()["items"]]
+        self.assertNotIn("เอกสารหาย", [a["label"] for a in actions])
+        short = next(a for a in actions if a["label"] == "อธิบายสั้นๆ")
+        self.assertEqual(short["text"], "อธิบายสั้นๆ หน่อย")
+        self.assertIn("คนหาย", resolve_followup(short["text"], [{"topic": "1.4 แจ้งความคนหาย"}]))
+        contextual = next(i["action"] for i in quick_reply("1.4 แจ้งความคนหาย")["items"] if i["action"]["label"] == "อธิบายสั้นๆ")
+        self.assertIn("แจ้งความคนหาย", contextual["text"])
+
     def test_acknowledgement_without_loading(self):
         for source_type in ("user", "group"):
             with self.subTest(source_type=source_type), tempfile.TemporaryDirectory() as directory:
